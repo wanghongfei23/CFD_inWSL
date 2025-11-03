@@ -1,5 +1,14 @@
 {
   "files.associations": {
-    "fstream": "cpp"
+    "fstream": "cpp",
+    "array": "cpp",
+    "type_traits": "cpp",
+    "vector": "cpp",
+    "algorithm": "cpp",
+    "span": "cpp",
+    "memory": "cpp",
+    "cmath": "cpp",
+    "map": "cpp",
+    "chrono": "cpp"
   }
 }

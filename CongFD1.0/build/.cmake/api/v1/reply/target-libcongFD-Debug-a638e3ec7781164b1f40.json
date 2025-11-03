@@ -50,7 +50,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -g -w -O3 -O3 -DNDEBUG -std=gnu++23"
+					"fragment" : " -g -w -O3 -g -std=gnu++23"
 				},
 				{
 					"backtrace" : 2,

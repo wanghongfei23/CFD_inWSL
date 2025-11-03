@@ -81,24 +81,24 @@ int main()
     // info->dim=1;
 
     // sod tube
-    // info->CFL = 0.5;
-    // info->endStep = 2;
-    // info->outputDt = 0.1;
-    // info->nCase = 0;
-    // info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
-    // info->iMax = { 101, 2, 2 };
-    // // info->iMax = { 1001, 2, 2 };
-    // info->dim = 1;
+    info->CFL = 0.5;
+    info->endStep = 2;
+    info->outputDt = 0.1;
+    info->nCase = 0;
+    info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
+    info->iMax = { 101, 2, 2 };
+    // info->iMax = { 1001, 2, 2 };
+    info->dim = 1;
 
     // lax sod tube
-    info->endStep=14;
-    info->outputDt=0.01;
-    info->CFL=0.5;
-    info->nCase=2;
-    info->calZone={-0.5,0.5,0,0,0,0};
-    info->iMax={201,2,2};
-    // info->iMax={2001,2,2};
-    info->dim=1;
+    // info->endStep=14;
+    // info->outputDt=0.01;
+    // info->CFL=0.5;
+    // info->nCase=2;
+    // info->calZone={-0.5,0.5,0,0,0,0};
+    // info->iMax={201,2,2};
+    // // info->iMax={2001,2,2};
+    // info->dim=1;
 
     // lax sod tube speed test
     // info->endStep=14;
