@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/mnt/d/ArchLinux/CongFD/utils/roefluxtest/build",
+  "command": "/usr/sbin/g++ -g -o CMakeFiles/roetest.dir/main.cpp.o -c /mnt/d/ArchLinux/CongFD/utils/roefluxtest/main.cpp",
+  "file": "/mnt/d/ArchLinux/CongFD/utils/roefluxtest/main.cpp",
+  "output": "CMakeFiles/roetest.dir/main.cpp.o"
+}
+]

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/mnt/d/ArchLinux/CongFD/utils/toTec1D/build",
+  "command": "/usr/sbin/g++ -g -o CMakeFiles/toTec1D.dir/main.cpp.o -c /mnt/d/ArchLinux/CongFD/utils/toTec1D/main.cpp",
+  "file": "/mnt/d/ArchLinux/CongFD/utils/toTec1D/main.cpp",
+  "output": "CMakeFiles/toTec1D.dir/main.cpp.o"
+}
+]

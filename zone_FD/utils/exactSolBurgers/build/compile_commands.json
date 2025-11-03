@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/mnt/d/ArchLinux/CongFD/utils/exactSolBurgers/build",
+  "command": "/usr/sbin/g++ -g -o CMakeFiles/exactSolBurgers.dir/main.cpp.o -c /mnt/d/ArchLinux/CongFD/utils/exactSolBurgers/main.cpp",
+  "file": "/mnt/d/ArchLinux/CongFD/utils/exactSolBurgers/main.cpp",
+  "output": "CMakeFiles/exactSolBurgers.dir/main.cpp.o"
+}
+]

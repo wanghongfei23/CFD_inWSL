@@ -1,0 +1,9 @@
+{
+    "cmake.sourceDirectory": "/mnt/d/ArchLinux/CongFD/utils/toTec1D",
+    "files.associations": {
+        "*.f90": "FortranFreeForm",
+        "iosfwd": "cpp",
+        "new": "cpp",
+        "fstream": "cpp"
+    }
+}

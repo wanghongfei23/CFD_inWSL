@@ -1,0 +1,12 @@
+# ninja log v5
+451	700	1714357068226404600	exactSolBurgers	98f3706cdb2081e7
+38	442	1714357067961518000	CMakeFiles/exactSolBurgers.dir/main2.cpp.o	31c3fe2a81840e20
+32	441	1714318788285780100	CMakeFiles/exactSolBurgers.dir/main.cpp.o	526a91f0c3b6f0ac
+58	504	1714982216094115100	CMakeFiles/exactSolBurgers.dir/main.cpp.o	526a91f0c3b6f0ac
+559	891	1714982216483431300	exactSolBurgers	7ab7a6723cd9ae62
+22	432	1714982254308249500	CMakeFiles/exactSolBurgers.dir/main.cpp.o	526a91f0c3b6f0ac
+440	681	1714982254574094400	exactSolBurgers	7ab7a6723cd9ae62
+48	508	1714982391119125900	CMakeFiles/exactSolBurgers.dir/main.cpp.o	526a91f0c3b6f0ac
+516	812	1714982391422497000	exactSolBurgers	7ab7a6723cd9ae62
+51	445	1714982815742090100	CMakeFiles/exactSolBurgers.dir/main.cpp.o	526a91f0c3b6f0ac
+459	704	1714982816002569000	exactSolBurgers	7ab7a6723cd9ae62
