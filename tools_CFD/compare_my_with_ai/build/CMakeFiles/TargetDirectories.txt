@@ -1,0 +1,3 @@
+/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/compare_my_with_ai/build/CMakeFiles/inter.dir
+/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/compare_my_with_ai/build/CMakeFiles/edit_cache.dir
+/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/compare_my_with_ai/build/CMakeFiles/rebuild_cache.dir

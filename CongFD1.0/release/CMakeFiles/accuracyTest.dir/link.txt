@@ -1,0 +1,1 @@
+/usr/sbin/c++  -g -w -O3 -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/accuracyTest.dir/link.d CMakeFiles/accuracyTest.dir/accuracyTest.cpp.o -o accuracyTest  src/liblibcongFD.a /usr/lib/libgomp.so /usr/lib/libpthread.a -lcgns

@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/compare_my_with_ai/build",
+  "command": "/usr/sbin/g++ -g -o CMakeFiles/inter.dir/main.cpp.o -c /home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/compare_my_with_ai/main.cpp",
+  "file": "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/compare_my_with_ai/main.cpp",
+  "output": "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/compare_my_with_ai/build/CMakeFiles/inter.dir/main.cpp.o"
+},
+{
+  "directory": "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/compare_my_with_ai/build",
+  "command": "/usr/sbin/g++ -g -o CMakeFiles/inter.dir/inter_scheme.cpp.o -c /home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/compare_my_with_ai/inter_scheme.cpp",
+  "file": "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/compare_my_with_ai/inter_scheme.cpp",
+  "output": "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/compare_my_with_ai/build/CMakeFiles/inter.dir/inter_scheme.cpp.o"
+}
+]

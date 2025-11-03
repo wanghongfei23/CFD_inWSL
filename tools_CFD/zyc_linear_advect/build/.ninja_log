@@ -1,0 +1,5 @@
+# ninja log v6
+1	1857	1762177070137321965	CMakeFiles/wcns_convection_without_time.dir/without_time.cpp.o	397af98ab714b0e
+1	1874	1762177070137321965	CMakeFiles/wcns_convection.dir/with_time.cpp.o	6dcc357929c2fc8
+1857	2024	1762177071993321950	wcns_convection_without_time	4ed287d19c4d6e88
+1874	2041	1762177072009321949	wcns_convection	db49fab441f43610
