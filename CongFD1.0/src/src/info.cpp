@@ -132,13 +132,72 @@ static std::map<InterMethod,std::string> disStr={
     {FIRSTORDER,"FIRSTORDER"},
     {MUSCL,"MUSCL"},
     {WCNS5,"WCNS5"},
-    {WCNSZ5,"WCNSZ5"}
+    {WCNSZ5,"WCNSZ5"},
+    // 【王鸿飞】begin-1命名
+    {WHFTCNSA,"WHFTCNSA"},
+    {WHFTCNSAF002,"WHFTCNSAF002"}
+    // 【王鸿飞】end-1命名
+};
+
+// 新命名系统
+
+// 定义静态映射表，将算例映射到字符串
+static std::map<int,std::string> exampleStr1D={
+    {0,"Sod"},
+    {1,"ShuOsher"},
+    {2,"Lax"},
+    {3,"sedov"},
+    {4,"Woodward_Colella"},
+    {5,"Double_sparse_wave"}
+};
+
+static std::map<int,std::string> exampleStr2D={
+    {0,"2D_Riemann_1"},
+    {1,"2D_Riemann_2_vortex"},
+    {2,"implosion"},
+    {3,"RTI"},
+    {4,"Double_Mach"},
+    {5,"2D_Riemann_3_another"},
+    {6,"KHI"}
 };
 
 std::string Info::filename()
 {
-    return fluxStr[eqType]+disStr[spMethod]+std::format("t={:.4f}.cgns",t);
+    // 字符串拼接，包含空间离散方法、插值方法、算例信息和当前时间
+    std::string caseName = "unknown";
+    
+    if (dim == 1) {
+        auto it = exampleStr1D.find(nCase);
+        if (it != exampleStr1D.end()) {
+            caseName = it->second;
+        }
+    } else if (dim == 2) {
+        auto it = exampleStr2D.find(nCase);
+        if (it != exampleStr2D.end()) {
+            caseName = it->second;
+        }
+    }
+    
+    // 添加网格信息到文件名
+    std::string gridInfo = "";
+    if (dim == 1) {
+        gridInfo = std::to_string(iMax[0]);
+    } else if (dim == 2) {
+        gridInfo = std::to_string(iMax[0]) + "x" + std::to_string(iMax[1]);
+    } else if (dim == 3) {
+        gridInfo = std::to_string(iMax[0]) + "x" + std::to_string(iMax[1]) + "x" + std::to_string(iMax[2]);
+    }
+    
+    return caseName + " - " + disStr[interMethod] + " - " + gridInfo + " - " + std::format("t={:.4f}.cgns",t);
 }
+
+
+// 原命名系统
+// std::string Info::filename()
+// {
+//     return fluxStr[eqType]+disStr[spMethod]+std::format("t={:.4f}.cgns",t);
+// }
+
 
 std::vector<std::string> Info::getVarNameListCons()
 {

@@ -12,7 +12,8 @@ int main()
     // auto prim2=eig.charToPrim(eigValues);
     // std::cout<<"finish\n";
 
-    omp_set_num_threads(10);
+    // omp_set_num_threads(10);
+    omp_set_num_threads(1);
 
     Info* info = new Info;
 
@@ -28,8 +29,14 @@ int main()
     // info->interMethod = NICEST5;
     // info->interMethod=WCNS5CONG;
     //  info->interMethod=TCNSCongA;
-    info->interMethod = WCNS5CONGZ;
+    // info->interMethod = WCNS5CONGZ;
     // info->sourceType=GRAVITY;
+
+    // 【王鸿飞】begin-1
+    // info->interMethod = WHFTCNSA;
+    info->interMethod = WHFTCNSAF002;
+    // 【王鸿飞】end
+
 
     // Shu-Osher
     //  info->endStep=1;
@@ -50,13 +57,13 @@ int main()
     // info->dim = 1;
 
     // lax sod tube
-    info->endStep = 14;
-    info->outputDt = 0.01;
-    info->CFL = 0.5;
-    info->nCase = 2;
-    info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
-    info->iMax = { 201, 2, 2 };
-    info->dim = 1;
+    // info->endStep = 14;
+    // info->outputDt = 0.01;
+    // info->CFL = 0.5;
+    // info->nCase = 2;
+    // info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
+    // info->iMax = { 201, 2, 2 };
+    // info->dim = 1;
 
     // lax sod tube speed test
     //  info->endStep=14;
@@ -123,14 +130,15 @@ int main()
 
     // RT instability
     // 记得改GAMMA
-    //  info->endStep=1;
-    //  info->outputDt=1.95;
-    //  info->CFL=0.5;
-    //  info->nCase=3;
-    //  info->calZone={0,0.25,0,1,0,0};
+     info->endStep=1;
+     info->outputDt=1.95;
+     info->CFL=0.5;
+     info->nCase=3;
+     info->calZone={0,0.25,0,1,0,0};
     //  info->iMax={201,801,2};
-    //  info->dim=2;
-    //  info->sourceType=GRAVITY;
+     info->iMax={65,257,2};
+     info->dim=2;
+     info->sourceType=GRAVITY;
 
     // info->diffMethod=HDS6;
     // Double Mach

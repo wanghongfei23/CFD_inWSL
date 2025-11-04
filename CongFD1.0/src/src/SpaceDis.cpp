@@ -211,6 +211,37 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
         }
         break;
 
+    //【王鸿飞】begin-1
+
+    case WHFTCNSA:
+        inter5 = &whf_TcnsN_A;
+        inter5Positive = &whf_TcnsN_A;
+        if (fluxType == EULER) {
+            reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
+            reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
+        } else {
+            reconLMethod = &SpaceDis::reconLprim;
+            reconRMethod = &SpaceDis::reconRprim;
+        }
+        break;
+    
+    case WHFTCNSAF002:
+        inter5 = &whf_zyc_TcnsN_myASF002_1;
+        inter5Positive = &whf_zyc_TcnsN_myASF002_1;
+        if (fluxType == EULER) {
+            reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
+            reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
+        } else {
+            reconLMethod = &SpaceDis::reconLprim;
+            reconRMethod = &SpaceDis::reconRprim;
+        }
+        break;
+
+
+
+
+    //【王鸿飞】end-1 
+
     default:
         break;
     }

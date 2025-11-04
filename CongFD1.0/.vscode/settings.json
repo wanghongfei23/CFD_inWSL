@@ -9,6 +9,11 @@
     "memory": "cpp",
     "cmath": "cpp",
     "map": "cpp",
-    "chrono": "cpp"
+    "chrono": "cpp",
+    "cstring": "cpp",
+    "string": "cpp",
+    "cassert": "cpp",
+    "format": "cpp",
+    "iostream": "cpp"
   }
 }
