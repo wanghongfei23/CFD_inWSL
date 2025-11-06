@@ -25,8 +25,8 @@ inline long timepp = 0;
 inline long timesss = 0;
 
 // 【王鸿飞】注意gamma
-// #define GAMMA 1.4
-#define GAMMA 5.0/3.0
+#define GAMMA 1.4
+// #define GAMMA 5.0/3.0
 
 enum BndType {
     TYPENULL,

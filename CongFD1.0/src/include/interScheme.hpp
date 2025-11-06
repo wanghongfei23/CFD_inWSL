@@ -1543,27 +1543,21 @@ constexpr real whf_zyc_TcnsN_myASF002_1(std::array<real, 5> q) {
 
   real epsilon_A = 2.7551*1e-7;
 
-  // 解包输入值
-    real q_im2 = q[0]; // q_{i-2}
-    real q_im1 = q[1]; // q_{i-1}
-    real q_i   = q[2]; // q_i
-    real q_ip1 = q[3]; // q_{i+1}
-    real q_ip2 = q[4]; // q_{i+2}
-
-    // 计算差分值
-    real dq_im3_2 = q_im1 - q_im2; // Δq_{i-3/2}
-    real dq_im1_2 = q_i - q_im1;   // Δq_{i-1/2}
-    real dq_ip1_2 = q_ip1 - q_i;   // Δq_{i+1/2}
-    real dq_ip3_2 = q_ip2 - q_ip1; // Δq_{i+3/2}
+    std::array<real, 4> delta_q;
+    delta_q[0] = q[0] - q[1];
+    delta_q[1] = q[1] - q[2];
+    delta_q[2] = q[2] - q[3];
+    delta_q[3] = q[3] - q[4];
+    
   // 计算η值
-  real eta_im1 = (std::abs(2.0*dq_im1_2*dq_im3_2) + epsilon_A) / 
-                  (std::pow(dq_im1_2, 2) + std::pow(dq_im3_2, 2) + epsilon_A);
+  real eta_im1 = (std::abs(2.0*delta_q[1]*delta_q[0]) + epsilon_A) / 
+                  (std::pow(delta_q[1], 2) + std::pow(delta_q[0], 2) + epsilon_A);
   
-  real eta_i = (std::abs(2.0*dq_ip1_2*dq_im1_2) + epsilon_A) / 
-                (std::pow(dq_ip1_2, 2) + std::pow(dq_im1_2, 2) + epsilon_A);
+  real eta_i = (std::abs(2.0*delta_q[2]*delta_q[1]) + epsilon_A) / 
+                (std::pow(delta_q[2], 2) + std::pow(delta_q[1], 2) + epsilon_A);
   
-  real eta_ip1 = (std::abs(2.0*dq_ip3_2*dq_ip1_2) + epsilon_A) / 
-                  (std::pow(dq_ip3_2, 2) + std::pow(dq_ip1_2, 2) + epsilon_A);
+  real eta_ip1 = (std::abs(2.0*delta_q[3]*delta_q[2]) + epsilon_A) / 
+                  (std::pow(delta_q[3], 2) + std::pow(delta_q[2], 2) + epsilon_A);
   
   real eta_min = std::min({eta_im1, eta_i, eta_ip1});
 

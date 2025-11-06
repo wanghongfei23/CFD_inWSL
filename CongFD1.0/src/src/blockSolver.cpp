@@ -208,6 +208,9 @@ void BlockSolver::stepsLoopCFL()
         timesss+=duration;
         timesteps++;
         std::cout<<std::format("time = {:.4f} dt={:.10f}  rhoLinf = {:.4f}  \n",info->t,dt,rhs->getLinf(0));
+    
+    
+        
     }
     outputGrid();
     outputPrim();

@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: congFD
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for generating CXX dependencies.
 
-rule CXX_SCAN__congFD_Debug
+rule CXX_SCAN__congFD_Release
   depfile = $DEP_FILE
   command = /usr/sbin/g++ $DEFINES $INCLUDES $FLAGS -E -x c++ $in -MT $DYNDEP_INTERMEDIATE_FILE -MD -MF $DEP_FILE -fmodules-ts -fdeps-file=$DYNDEP_INTERMEDIATE_FILE -fdeps-target=$OBJ_FILE -fdeps-format=p1689r5 -o $PREPROCESSED_OUTPUT_FILE
   description = Scanning $in for CXX dependencies
@@ -23,7 +23,7 @@ rule CXX_SCAN__congFD_Debug
 #############################################
 # Rule to generate ninja dyndep files for CXX.
 
-rule CXX_DYNDEP__congFD_Debug
+rule CXX_DYNDEP__congFD_Release
   command = /usr/bin/cmake -E cmake_ninja_dyndep --tdi=CMakeFiles/congFD.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
@@ -34,7 +34,7 @@ rule CXX_DYNDEP__congFD_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__congFD_scanned_Debug
+rule CXX_COMPILER__congFD_scanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/sbin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -fmodules-ts -fmodule-mapper=$DYNDEP_MODULE_MAP_FILE -MD -fdeps-format=p1689r5 -x c++ -o $out -c $in
@@ -44,7 +44,7 @@ rule CXX_COMPILER__congFD_scanned_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__congFD_unscanned_Debug
+rule CXX_COMPILER__congFD_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/sbin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -54,7 +54,7 @@ rule CXX_COMPILER__congFD_unscanned_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__congFD_Debug
+rule CXX_EXECUTABLE_LINKER__congFD_Release
   depfile = $DEP_FILE
   deps = gcc
   command = $PRE_LINK && /usr/sbin/g++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
@@ -65,7 +65,7 @@ rule CXX_EXECUTABLE_LINKER__congFD_Debug
 #############################################
 # Rule for generating CXX dependencies.
 
-rule CXX_SCAN__AccuracyTest_Debug
+rule CXX_SCAN__AccuracyTest_Release
   depfile = $DEP_FILE
   command = /usr/sbin/g++ $DEFINES $INCLUDES $FLAGS -E -x c++ $in -MT $DYNDEP_INTERMEDIATE_FILE -MD -MF $DEP_FILE -fmodules-ts -fdeps-file=$DYNDEP_INTERMEDIATE_FILE -fdeps-target=$OBJ_FILE -fdeps-format=p1689r5 -o $PREPROCESSED_OUTPUT_FILE
   description = Scanning $in for CXX dependencies
@@ -74,7 +74,7 @@ rule CXX_SCAN__AccuracyTest_Debug
 #############################################
 # Rule to generate ninja dyndep files for CXX.
 
-rule CXX_DYNDEP__AccuracyTest_Debug
+rule CXX_DYNDEP__AccuracyTest_Release
   command = /usr/bin/cmake -E cmake_ninja_dyndep --tdi=CMakeFiles/AccuracyTest.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
@@ -85,7 +85,7 @@ rule CXX_DYNDEP__AccuracyTest_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__AccuracyTest_scanned_Debug
+rule CXX_COMPILER__AccuracyTest_scanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/sbin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -fmodules-ts -fmodule-mapper=$DYNDEP_MODULE_MAP_FILE -MD -fdeps-format=p1689r5 -x c++ -o $out -c $in
@@ -95,7 +95,7 @@ rule CXX_COMPILER__AccuracyTest_scanned_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__AccuracyTest_unscanned_Debug
+rule CXX_COMPILER__AccuracyTest_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/sbin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -105,7 +105,7 @@ rule CXX_COMPILER__AccuracyTest_unscanned_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__AccuracyTest_Debug
+rule CXX_EXECUTABLE_LINKER__AccuracyTest_Release
   depfile = $DEP_FILE
   deps = gcc
   command = $PRE_LINK && /usr/sbin/g++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
@@ -116,7 +116,7 @@ rule CXX_EXECUTABLE_LINKER__AccuracyTest_Debug
 #############################################
 # Rule for generating CXX dependencies.
 
-rule CXX_SCAN__symmetrytest_Debug
+rule CXX_SCAN__symmetrytest_Release
   depfile = $DEP_FILE
   command = /usr/sbin/g++ $DEFINES $INCLUDES $FLAGS -E -x c++ $in -MT $DYNDEP_INTERMEDIATE_FILE -MD -MF $DEP_FILE -fmodules-ts -fdeps-file=$DYNDEP_INTERMEDIATE_FILE -fdeps-target=$OBJ_FILE -fdeps-format=p1689r5 -o $PREPROCESSED_OUTPUT_FILE
   description = Scanning $in for CXX dependencies
@@ -125,7 +125,7 @@ rule CXX_SCAN__symmetrytest_Debug
 #############################################
 # Rule to generate ninja dyndep files for CXX.
 
-rule CXX_DYNDEP__symmetrytest_Debug
+rule CXX_DYNDEP__symmetrytest_Release
   command = /usr/bin/cmake -E cmake_ninja_dyndep --tdi=CMakeFiles/symmetrytest.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
@@ -136,7 +136,7 @@ rule CXX_DYNDEP__symmetrytest_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__symmetrytest_scanned_Debug
+rule CXX_COMPILER__symmetrytest_scanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/sbin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -fmodules-ts -fmodule-mapper=$DYNDEP_MODULE_MAP_FILE -MD -fdeps-format=p1689r5 -x c++ -o $out -c $in
@@ -146,7 +146,7 @@ rule CXX_COMPILER__symmetrytest_scanned_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__symmetrytest_unscanned_Debug
+rule CXX_COMPILER__symmetrytest_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/sbin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -156,7 +156,7 @@ rule CXX_COMPILER__symmetrytest_unscanned_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__symmetrytest_Debug
+rule CXX_EXECUTABLE_LINKER__symmetrytest_Release
   depfile = $DEP_FILE
   deps = gcc
   command = $PRE_LINK && /usr/sbin/g++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
@@ -175,7 +175,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for generating CXX dependencies.
 
-rule CXX_SCAN__libcongFD_Debug
+rule CXX_SCAN__libcongFD_Release
   depfile = $DEP_FILE
   command = /usr/sbin/g++ $DEFINES $INCLUDES $FLAGS -E -x c++ $in -MT $DYNDEP_INTERMEDIATE_FILE -MD -MF $DEP_FILE -fmodules-ts -fdeps-file=$DYNDEP_INTERMEDIATE_FILE -fdeps-target=$OBJ_FILE -fdeps-format=p1689r5 -o $PREPROCESSED_OUTPUT_FILE
   description = Scanning $in for CXX dependencies
@@ -184,7 +184,7 @@ rule CXX_SCAN__libcongFD_Debug
 #############################################
 # Rule to generate ninja dyndep files for CXX.
 
-rule CXX_DYNDEP__libcongFD_Debug
+rule CXX_DYNDEP__libcongFD_Release
   command = /usr/bin/cmake -E cmake_ninja_dyndep --tdi=src/CMakeFiles/libcongFD.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
@@ -195,7 +195,7 @@ rule CXX_DYNDEP__libcongFD_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__libcongFD_scanned_Debug
+rule CXX_COMPILER__libcongFD_scanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/sbin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -fmodules-ts -fmodule-mapper=$DYNDEP_MODULE_MAP_FILE -MD -fdeps-format=p1689r5 -x c++ -o $out -c $in
@@ -205,7 +205,7 @@ rule CXX_COMPILER__libcongFD_scanned_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__libcongFD_unscanned_Debug
+rule CXX_COMPILER__libcongFD_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/sbin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -215,7 +215,7 @@ rule CXX_COMPILER__libcongFD_unscanned_Debug
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__libcongFD_Debug
+rule CXX_STATIC_LIBRARY_LINKER__libcongFD_Release
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/sbin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/sbin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT

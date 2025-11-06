@@ -131,11 +131,18 @@ static std::map<EquationType,std::string> fluxStr= {{LINEARCONV1D,"LINEARCONV1D"
 static std::map<InterMethod,std::string> disStr={
     {FIRSTORDER,"FIRSTORDER"},
     {MUSCL,"MUSCL"},
-    {WCNS5,"WCNS5"},
-    {WCNSZ5,"WCNSZ5"},
     // 【王鸿飞】begin-1命名
-    {WHFTCNSA,"WHFTCNSA"},
-    {WHFTCNSAF002,"WHFTCNSAF002"}
+    // {TCNS5,"TCNS5Z"},
+    // {WCNS5CONGZ,"Teno5_CongZ"},
+    // {WHFTCNSA,"WHFTCNSA"},
+    // {WHFTCNSAF002,"WHFTCNSAF002"}
+
+    {WCNS5,"WENO-JS"},
+    {WCNSZ5,"WENO-Z"},
+    {TCNS5,"TENO-Z"},
+    {WCNS5CONGZ,"TENO-Z-S"},
+    {WHFTCNSA,"TENO-Z-myA"},
+    {WHFTCNSAF002,"TENO-Z-myASF002"}
     // 【王鸿飞】end-1命名
 };
 

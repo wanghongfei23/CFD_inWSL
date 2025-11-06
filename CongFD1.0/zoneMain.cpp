@@ -19,22 +19,25 @@ int main()
 
     info->eqType = EULER;
     info->spMethod = WCNS5;
-
     info->diffMethod = MND6;
+
+
     // info->diffMethod = TRAD6;
-    // info->interMethod = TCNS5;
     // info->interMethod=LINEAR5;
     // info->interMethod=WCNSZ5Char;
     // info->BVD=true;
     // info->interMethod = NICEST5;
     // info->interMethod=WCNS5CONG;
-    //  info->interMethod=TCNSCongA;
-    // info->interMethod = WCNS5CONGZ;
     // info->sourceType=GRAVITY;
 
     // 【王鸿飞】begin-1
+
+    // info->interMethod = WCNS5; //weno5_JSchen
+    // info->interMethod = WCNSZ5; //weno5_Z
+    // info->interMethod = TCNS5; //Teno5_Z
+    info->interMethod = WCNS5CONGZ;//Teno5_CongZ
     // info->interMethod = WHFTCNSA;
-    info->interMethod = WHFTCNSAF002;
+    // info->interMethod = WHFTCNSAF002;
     // 【王鸿飞】end
 
 
@@ -116,29 +119,30 @@ int main()
     // info->CFL = 0.5;
     // info->nCase = 0;
     // info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
-    // info->iMax = { 401, 401, 2 };
+    // info->iMax = { 401, 401, 2 };//参考
     // info->dim = 2;
 
     // Riemann 2 vortex
-    //  info->endStep=1;
-    //  info->outputDt=0.3;
-    //  info->CFL=0.5;
-    //  info->nCase=1;
-    //  info->calZone={-0.5,0.5,-0.5,0.5,0,0};
-    //  info->iMax={801,801,2};
-    //  info->dim=2;
+     info->endStep=1;
+     info->outputDt=0.3;
+     info->CFL=0.5;
+     info->nCase=1;
+     info->calZone={-0.5,0.5,-0.5,0.5,0,0};
+     info->iMax={801,801,2};//参考
+     info->dim=2;
 
     // RT instability
     // 记得改GAMMA
-     info->endStep=1;
-     info->outputDt=1.95;
-     info->CFL=0.5;
-     info->nCase=3;
-     info->calZone={0,0.25,0,1,0,0};
-    //  info->iMax={201,801,2};
-     info->iMax={65,257,2};
-     info->dim=2;
-     info->sourceType=GRAVITY;
+    //  info->endStep=1;
+    //  info->outputDt=1.95;
+    //  info->CFL=0.5;
+    //  info->nCase=3;
+    //  info->calZone={0,0.25,0,1,0,0};
+    // //  info->iMax={201,801,2};
+    //  info->iMax={101,401,2};//参考
+    // //  info->iMax={65,257,2};
+    //  info->dim=2;
+    //  info->sourceType=GRAVITY;
 
     // info->diffMethod=HDS6;
     // Double Mach
@@ -147,7 +151,7 @@ int main()
     //  info->CFL=0.5;
     //  info->nCase=4;
     //  info->calZone={0,4,0,1,0,0};
-    //  info->iMax={801,201,2};
+    //  info->iMax={801,201,2};//参考
     //  info->dim=2;
 
     // file config mode
