@@ -1,0 +1,5 @@
+8
+totaltime= 80   Finish
+time= 0   Finish
+timesteps= 179   Finish
+solvertime= 0

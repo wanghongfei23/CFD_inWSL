@@ -2,6 +2,40 @@
 #include "blockSolver.hpp"
 #include "eigenSystem.hpp"
 #include <fstream>
+// 【王鸿飞】begin-1命名
+#include <map>
+#include <string>
+// 定义静态映射表，将算例映射到字符串
+static std::map<int,std::string> exampleStr1D={
+    {0,"Sod"},
+    {1,"ShuOsher"},
+    {2,"Lax"},
+    {3,"sedov"},
+    {4,"Woodward_Colella"},
+    {5,"Double_sparse_wave"}
+};
+
+static std::map<int,std::string> exampleStr2D={
+    {0,"2D_Riemann_1"},
+    {1,"2D_Riemann_2_vortex"},
+    {2,"implosion"},
+    {3,"RTI"},
+    {4,"Double_Mach"},
+    {5,"2D_Riemann_3_another"},
+    {6,"KHI"}
+};
+
+static std::map<InterMethod,std::string> disStr={
+    {FIRSTORDER,"FIRSTORDER"},
+    {MUSCL,"MUSCL"},
+    {WCNS5,"WENO-JS"},
+    {WCNSZ5,"WENO-Z"},
+    {TCNS5,"TENO-Z"},
+    {WCNS5CONGZ,"TENO-Z-S"},
+    {WHFTCNSA,"TENO-Z-myA"},
+    {WHFTCNSAF002,"TENO-Z-myASF002"}
+};
+// 【王鸿飞】end-1命名
 
 int main()
 {
@@ -51,13 +85,13 @@ int main()
     //  info->dim=1;
 
     // // sod tube
-    // info->CFL = 0.5;
-    // info->endStep = 20;
-    // info->outputDt = 0.01;
-    // info->nCase = 0;
-    // info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
-    // info->iMax = { 201, 2, 2 };
-    // info->dim = 1;
+    info->CFL = 0.5;
+    info->endStep = 20;
+    info->outputDt = 0.01;
+    info->nCase = 0;
+    info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
+    info->iMax = { 201, 2, 2 };
+    info->dim = 1;
 
     // lax sod tube
     // info->endStep = 14;
@@ -123,13 +157,13 @@ int main()
     // info->dim = 2;
 
     // Riemann 2 vortex
-     info->endStep=1;
-     info->outputDt=0.3;
-     info->CFL=0.5;
-     info->nCase=1;
-     info->calZone={-0.5,0.5,-0.5,0.5,0,0};
-     info->iMax={801,801,2};//参考
-     info->dim=2;
+    //  info->endStep=1;
+    //  info->outputDt=0.3;
+    //  info->CFL=0.5;
+    //  info->nCase=1;
+    //  info->calZone={-0.5,0.5,-0.5,0.5,0,0};
+    //  info->iMax={801,801,2};//参考
+    //  info->dim=2;
 
     // RT instability
     // 记得改GAMMA
@@ -217,8 +251,39 @@ int main()
     // bSolver.outputPrim();
     // bSolver.Test();
 
-    std::ofstream timeinfo("timeInfo.txt");
+    // 原命名
+    // std::ofstream timeinfo("timeInfo.txt");
 
+    // 【王鸿飞】begin-1命名
+    // 创建与info.cpp中filename()函数类似命名方式的文件名
+    std::string caseName = "unknown";
+    
+    if (info->dim == 1) {
+        auto it = exampleStr1D.find(info->nCase);
+        if (it != exampleStr1D.end()) {
+            caseName = it->second;
+        }
+    } else if (info->dim == 2) {
+        auto it = exampleStr2D.find(info->nCase);
+        if (it != exampleStr2D.end()) {
+            caseName = it->second;
+        }
+    }
+    
+    // 添加网格信息到文件名
+    std::string gridInfo = "";
+    if (info->dim == 1) {
+        gridInfo = std::to_string(info->iMax[0]);
+    } else if (info->dim == 2) {
+        gridInfo = std::to_string(info->iMax[0]) + "x" + std::to_string(info->iMax[1]);
+    } else if (info->dim == 3) {
+        gridInfo = std::to_string(info->iMax[0]) + "x" + std::to_string(info->iMax[1]) + "x" + std::to_string(info->iMax[2]);
+    }
+    
+    std::string timeInfoFilename = caseName + " - " + disStr[info->interMethod] + " - " + gridInfo + ".txt";
+    std::ofstream timeinfo(timeInfoFilename);
+    // 【王鸿飞】end-1命名
+    
     std::cout << "totaltime= " << duration << "   Finish\n";
     std::cout << "time= " << timepp / 1e6 << "   Finish\n";
     std::cout << "timesteps= " << bSolver.timesteps << "   Finish\n";
