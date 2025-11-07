@@ -43,27 +43,27 @@ enum BndType {
     ARDBND
 };
 enum InterMethod {
-    FIRSTORDER,
-    MUSCL,
-    WCNS5,
-    WCNSZ5,
-    WCNS5Char,
-    WCNSZ5Char,
-    WCNS5CONG,
-    TCNSCongA,
-    WCNS5CONGZ,
-    WCNS5CONGZCT4,
-    WCNS5CONGZCT7,
-    TCNS5,
-    TCNS5CT4,
-    TCNS5CT7,
-    LINEAR5,
-    NICEST5,
-    INTERMAX,
-    // 【王鸿飞】begin-2
-    WHFTCNSA,
-    WHFTCNSAF002
+    FIRSTORDER,      // 0
+    MUSCL,           // 1
+    WCNS5,           // 2
+    WCNSZ5,          // 3
+    WCNS5Char,       // 4
+    WCNSZ5Char,      // 5
+    WCNS5CONG,       // 6
+    TCNSCongA,       // 7
+    WCNS5CONGZ,      // 8
+    WCNS5CONGZCT4,   // 9
+    WCNS5CONGZCT7,   // 10
+    TCNS5,           // 11
+    TCNS5CT4,        // 12
+    TCNS5CT7,        // 13
+    LINEAR5,         // 14
+    NICEST5,         // 15
+    INTERMAX,        // 16
+    WHFTCNSA,        // 17
+    WHFTCNSAF002     // 18
 };
+
 enum DiffMethod {
     HDS6,
     TRAD6,

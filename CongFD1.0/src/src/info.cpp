@@ -132,11 +132,6 @@ static std::map<InterMethod,std::string> disStr={
     {FIRSTORDER,"FIRSTORDER"},
     {MUSCL,"MUSCL"},
     // 【王鸿飞】begin-1命名
-    // {TCNS5,"TCNS5Z"},
-    // {WCNS5CONGZ,"Teno5_CongZ"},
-    // {WHFTCNSA,"WHFTCNSA"},
-    // {WHFTCNSAF002,"WHFTCNSAF002"}
-
     {WCNS5,"WENO-JS"},
     {WCNSZ5,"WENO-Z"},
     {TCNS5,"TENO-Z"},

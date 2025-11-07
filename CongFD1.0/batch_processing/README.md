@@ -58,8 +58,9 @@ info_"算例名称"_"插值方法".txt
 | 13   | TCNS5CT7       |                   |
 | 14   | LINEAR5        | 五阶线性格式      |
 | 15   | NICEST5        |                   |
-| 16   | WHFTCNSA       | TENO-Z-myA        |
-| 17   | WHFTCNSAF002   | TENO-Z-myASF002   |
+| 16   | INTERMAX       |                   |
+| 17   | WHFTCNSA       | TENO-Z-myA        |
+| 18   | WHFTCNSAF002   | TENO-Z-myASF002   |
 
 ### 2. 算例编号 (nCase)
 
