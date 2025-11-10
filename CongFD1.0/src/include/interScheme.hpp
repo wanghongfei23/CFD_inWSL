@@ -1520,7 +1520,7 @@ constexpr real whf_TcnsN_A(std::array<real, 5> q)
 }
 
 
-constexpr real whf_zyc_TcnsN_myASF002_1(std::array<real, 5> q) {
+constexpr real whf_zyc_TcnsN_myASF002(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
   std::array<real, 3> beta = {
       1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
@@ -1623,7 +1623,125 @@ constexpr real whf_zyc_TcnsN_myASF002_1(std::array<real, 5> q) {
 }
 
 
+constexpr real whf_TcnsN_myASH002(std::array<real, 5> q) {
+  real eps = 1e-40; // 1e-10;
+  std::array<real, 3> beta = {
+      1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+          1.0 / 4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2),
 
+      1.0 / 1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) +
+          1.0 / 4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
+          1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2)};
+
+  unsigned short minBeta =
+      std::min_element(beta.begin(), beta.end()) - beta.begin();
+  //CT adapt begin
+
+  std::array<real, 4> delta_q;
+  delta_q[0] = std::abs(q[0] - q[1]);
+  delta_q[1] = std::abs(q[1] - q[2]);
+  delta_q[2] = std::abs(q[2] - q[3]);
+  delta_q[3] = std::abs(q[3] - q[4]);
+  
+  // 计算z_min
+  // 优化：减少重复计算，避免多次调用std::abs
+  const real abs_delta_q0 = std::abs(delta_q[0]);
+  const real abs_delta_q1 = std::abs(delta_q[1]);
+  const real abs_delta_q2 = std::abs(delta_q[2]);
+  const real abs_delta_q3 = std::abs(delta_q[3]);
+
+  // 优化：使用直接比较替代函数调用
+  real min_delta0 = (abs_delta_q0 < abs_delta_q1) ? abs_delta_q0 : abs_delta_q1;
+  real min_delta1 = (abs_delta_q1 < abs_delta_q2) ? abs_delta_q1 : abs_delta_q2;
+  real min_delta2 = (abs_delta_q2 < abs_delta_q3) ? abs_delta_q2 : abs_delta_q3;
+
+  real max_delta0 = (abs_delta_q0 > abs_delta_q1) ? abs_delta_q0 : abs_delta_q1;
+  real max_delta1 = (abs_delta_q1 > abs_delta_q2) ? abs_delta_q1 : abs_delta_q2;
+  real max_delta2 = (abs_delta_q2 > abs_delta_q3) ? abs_delta_q2 : abs_delta_q3;
+
+  real z_min;
+  // 使用交叉相乘计算min_delta/max_delta的最小值，避免除法运算
+  // 0和1比较
+  if (min_delta0 * max_delta1 < min_delta1 * max_delta0) {
+      z_min = min_delta0 / max_delta0;
+  } else {
+      z_min = min_delta1 / max_delta1;
+  }
+  // 2和min{0,1}比较
+  if (z_min * max_delta2 > min_delta2) {
+      z_min = min_delta2 / max_delta2;
+  }
+
+  // 计算C_T_prime，这里的C_T就是C_T_prime
+  // 优化：预计算常数以减少运行时计算
+  real C_T = 0.0220596;
+  if (z_min < 1.0) {
+      // 预计算系数以减少运行时的乘法运算
+      constexpr real a = 11.351092;
+      constexpr real b = 5.740650;
+      constexpr real c = 1.506631;
+      constexpr real d = 0.157;
+      
+      const real z_min_sq = z_min * z_min;
+      C_T = d / (a * z_min_sq - b * z_min + c);
+  }
+
+  //CT adapt end
+  
+  real CT_1 = 1 - C_T;
+  real tau = std::abs(beta[2] -
+                      beta[0]); //,KK=0.15704178024750198*(beta[minBeta]+tau);
+  real rr = C_T * tau - CT_1 * beta[minBeta];
+  real ll = tau * beta[minBeta];
+  // unsigned
+  // flag=(minBeta!=0&&ll<rr*beta[0])+((minBeta!=1&&ll<rr*beta[1])<<1)+((minBeta!=2&&ll<rr*beta[2])<<2);
+  unsigned short flag = 0;
+  if (ll < rr * beta[0])
+    flag += 1;
+  if (ll < rr * beta[1])
+    flag += 2;
+  if (ll < rr * beta[2])
+    flag += 4;
+  switch (flag) {
+  case 0:
+    /* 1,1,1 */
+    return 3.0 / 128.0 * q[0] - 5.0 / 32.0 * q[1] + 45.0 / 64.0 * q[2] +
+           15.0 / 32.0 * q[3] - 5.0 / 128.0 * q[4];
+    break;
+  case 1:
+    /* 0,1,1 */
+    return -1.0 / 16.0 * q[1] + 9.0 / 16.0 * q[2] + 9.0 / 16.0 * q[3] -
+           1.0 / 16.0 * q[4];
+    break;
+  case 2:
+    /* 1,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 3:
+    /* 0,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 4:
+    /* 1,1,0 */
+    return 1.0 / 16.0 * q[0] - 5.0 / 16.0 * q[1] + 15.0 / 16.0 * q[2] +
+           5.0 / 16.0 * q[3];
+    break;
+  case 5:
+    /* 0,1,0 */
+    return -1.0 / 8.0 * q[1] + 3.0 / 4.0 * q[2] + 3.0 / 8.0 * q[3];
+    break;
+  case 6:
+    /* 1,0,0 */
+    return 3.0 / 8.0 * q[0] - 5.0 / 4.0 * q[1] + 15.0 / 8.0 * q[2];
+    break;
+  default:
+    /* 0,0,0 */
+    return q[2];
+    break;
+  }
+}
 
 
 

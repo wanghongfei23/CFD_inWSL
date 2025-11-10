@@ -33,7 +33,8 @@ static std::map<InterMethod,std::string> disStr={
     {TCNS5,"TENO-Z"},
     {WCNS5CONGZ,"TENO-Z-S"},
     {WHFTCNSA,"TENO-Z-myA"},
-    {WHFTCNSAF002,"TENO-Z-myASF002"}
+    {WHFTCNSAF002,"TENO-Z-myASF002"},
+    {WHFTCNSAH002,"TENO-Z-myASH002"}
 };
 // 【王鸿飞】end-1命名
 
@@ -68,10 +69,11 @@ int main()
 
     // info->interMethod = WCNS5; //weno5_JSchen
     // info->interMethod = WCNSZ5; //weno5_Z
-    info->interMethod = TCNS5; //Teno5_Z
+    // info->interMethod = TCNS5; //Teno5_Z
     // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
     // info->interMethod = WHFTCNSA;
     // info->interMethod = WHFTCNSAF002;
+    info->interMethod = WHFTCNSAH002;
     // 【王鸿飞】end
 
 
@@ -85,13 +87,13 @@ int main()
     //  info->dim=1;
 
     // // sod tube
-    info->CFL = 0.5;
-    info->endStep = 20;
-    info->outputDt = 0.01;
-    info->nCase = 0;
-    info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
-    info->iMax = { 201, 2, 2 };
-    info->dim = 1;
+    // info->CFL = 0.5;
+    // info->endStep = 20;
+    // info->outputDt = 0.01;
+    // info->nCase = 0;
+    // info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
+    // info->iMax = { 201, 2, 2 };
+    // info->dim = 1;
 
     // lax sod tube
     // info->endStep = 14;
@@ -167,16 +169,16 @@ int main()
 
     // RT instability
     // 记得改GAMMA
-    //  info->endStep=1;
-    //  info->outputDt=1.95;
-    //  info->CFL=0.5;
-    //  info->nCase=3;
-    //  info->calZone={0,0.25,0,1,0,0};
-    // //  info->iMax={201,801,2};
-    //  info->iMax={101,401,2};//参考
-    // //  info->iMax={65,257,2};
-    //  info->dim=2;
-    //  info->sourceType=GRAVITY;
+     info->endStep=1;
+     info->outputDt=1.95;
+     info->CFL=0.5;
+     info->nCase=3;
+     info->calZone={0,0.25,0,1,0,0};
+    //  info->iMax={201,801,2};
+     info->iMax={101,401,2};//参考
+    //  info->iMax={65,257,2};
+     info->dim=2;
+     info->sourceType=GRAVITY;
 
     // info->diffMethod=HDS6;
     // Double Mach
@@ -194,7 +196,7 @@ int main()
         int n;
         real nf;
         file >> n;
-        if (n < WHFTCNSAF002)
+        if (n < WHFTCNSAH002)
             info->interMethod = (InterMethod)n;
 
         file >> n;
