@@ -68,10 +68,10 @@ int main()
 
     // info->interMethod = WCNS5; //weno5_JSchen
     // info->interMethod = WCNSZ5; //weno5_Z
-    // info->interMethod = TCNS5; //Teno5_Z
+    info->interMethod = TCNS5; //Teno5_Z
     // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
     // info->interMethod = WHFTCNSA;
-    info->interMethod = WHFTCNSAF002;
+    // info->interMethod = WHFTCNSAF002;
     // 【王鸿飞】end
 
 
