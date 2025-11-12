@@ -34,7 +34,8 @@ static std::map<InterMethod,std::string> disStr={
     {WCNS5CONGZ,"TENO-Z-S"},
     {WHFTCNSA,"TENO-Z-myA"},
     {WHFTCNSAF002,"TENO-Z-myASF002"},
-    {WHFTCNSAH002,"TENO-Z-myASH002"}
+    {WHFTCNSAH002,"TENO-Z-myASH002"},
+    {WHFTCNSAF102,"TENO-Z-myASF102"}
 };
 // 【王鸿飞】end-1命名
 
@@ -73,7 +74,8 @@ int main()
     // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
     // info->interMethod = WHFTCNSA;
     // info->interMethod = WHFTCNSAF002;
-    info->interMethod = WHFTCNSAH002;
+    // info->interMethod = WHFTCNSAH002;
+    info->interMethod = WHFTCNSAF102;
     // 【王鸿飞】end
 
 
@@ -175,8 +177,8 @@ int main()
      info->nCase=3;
      info->calZone={0,0.25,0,1,0,0};
     //  info->iMax={201,801,2};
-     info->iMax={101,401,2};//参考
-    //  info->iMax={65,257,2};
+    //  info->iMax={101,401,2};//参考
+     info->iMax={65,257,2};
      info->dim=2;
      info->sourceType=GRAVITY;
 
@@ -196,7 +198,7 @@ int main()
         int n;
         real nf;
         file >> n;
-        if (n < WHFTCNSAH002)
+        if (n < WHFTCNSAF102)
             info->interMethod = (InterMethod)n;
 
         file >> n;

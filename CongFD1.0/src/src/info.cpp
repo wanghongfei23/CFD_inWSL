@@ -138,7 +138,8 @@ static std::map<InterMethod,std::string> disStr={
     {WCNS5CONGZ,"TENO-Z-S"},
     {WHFTCNSA,"TENO-Z-myA"},
     {WHFTCNSAF002,"TENO-Z-myASF002"},
-    {WHFTCNSAH002,"TENO-Z-myASH002"}
+    {WHFTCNSAH002,"TENO-Z-myASH002"},
+    {WHFTCNSAF102,"TENO-Z-myASF102"}
     // 【王鸿飞】end-1命名
 };
 

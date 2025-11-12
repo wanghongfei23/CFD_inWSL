@@ -25,8 +25,8 @@ inline long timepp = 0;
 inline long timesss = 0;
 
 // 【王鸿飞】注意gamma
-// #define GAMMA 1.4   //其他
-#define GAMMA 5.0/3.0  //RTI
+#define GAMMA 1.4   //其他
+// #define GAMMA 5.0/3.0  //RTI
 
 enum BndType {
     TYPENULL,
@@ -62,7 +62,8 @@ enum InterMethod {
     INTERMAX,        // 16
     WHFTCNSA,        // 17
     WHFTCNSAF002,    // 18
-    WHFTCNSAH002     // 19
+    WHFTCNSAH002,    // 19
+    WHFTCNSAF102     // 20
 };
 
 enum DiffMethod {
