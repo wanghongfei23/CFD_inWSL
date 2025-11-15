@@ -157,11 +157,11 @@ static std::map<int,std::string> exampleStr1D={
 
 static std::map<int,std::string> exampleStr2D={
     {0,"2D_Riemann_1"},
-    {1,"2D_Riemann_2_vortex"},
+    {1,"2D_Riemann_2"},
     {2,"implosion"},
     {3,"RTI"},
     {4,"Double_Mach"},
-    {5,"2D_Riemann_3_another"},
+    {5,"2D_Riemann_3"},
     {6,"KHI"}
 };
 

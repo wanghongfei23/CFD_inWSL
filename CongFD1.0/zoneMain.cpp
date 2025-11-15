@@ -17,11 +17,11 @@ static std::map<int,std::string> exampleStr1D={
 
 static std::map<int,std::string> exampleStr2D={
     {0,"2D_Riemann_1"},
-    {1,"2D_Riemann_2_vortex"},
+    {1,"2D_Riemann_2"},
     {2,"implosion"},
     {3,"RTI"},
     {4,"Double_Mach"},
-    {5,"2D_Riemann_3_another"},
+    {5,"2D_Riemann_3"},
     {6,"KHI"}
 };
 
@@ -72,12 +72,12 @@ int main()
     // info->interMethod = WCNSZ5; //weno5_Z
     // info->interMethod = TCNS5; //Teno5_Z
     // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
-    // info->interMethod = WHFTCNSA;
+    info->interMethod = WHFTCNSA;
     // info->interMethod = WHFTCNSAF002;
     // info->interMethod = WHFTCNSAH002;
-    info->interMethod = WHFTCNSAF102;
-    // 【王鸿飞】end
+    // info->interMethod = WHFTCNSAF102;
 
+    // 【王鸿飞】end
 
     // Shu-Osher
     //  info->endStep=1;
@@ -169,28 +169,37 @@ int main()
     //  info->iMax={801,801,2};//参考
     //  info->dim=2;
 
+    // Riemann 3
+    //  info->endStep=1;
+    //  info->outputDt=0.4;
+    //  info->CFL=0.5;
+    //  info->nCase=5;
+    //  info->calZone={-0.5,0.5,-0.5,0.5,0,0};
+    //  info->iMax={801,801,2};//参考
+    //  info->dim=2;
+
     // RT instability
     // 记得改GAMMA
-     info->endStep=1;
-     info->outputDt=1.95;
-     info->CFL=0.5;
-     info->nCase=3;
-     info->calZone={0,0.25,0,1,0,0};
-    //  info->iMax={201,801,2};
+    //  info->endStep=1;
+    //  info->outputDt=1.95;
+    //  info->CFL=0.5;
+    //  info->nCase=3;
+    //  info->calZone={0,0.25,0,1,0,0};
+    // //  info->iMax={201,801,2};
     //  info->iMax={101,401,2};//参考
-     info->iMax={65,257,2};
-     info->dim=2;
-     info->sourceType=GRAVITY;
+    // //  info->iMax={65,257,2};
+    //  info->dim=2;
+    //  info->sourceType=GRAVITY;
 
     // info->diffMethod=HDS6;
     // Double Mach
-    //  info->endStep=20;
-    //  info->outputDt=0.01;
-    //  info->CFL=0.5;
-    //  info->nCase=4;
-    //  info->calZone={0,4,0,1,0,0};
-    //  info->iMax={801,201,2};//参考
-    //  info->dim=2;
+     info->endStep=20;
+     info->outputDt=0.01;
+     info->CFL=0.5;
+     info->nCase=4;
+     info->calZone={0,4,0,1,0,0};
+     info->iMax={801,201,2};//参考
+     info->dim=2;
 
     // file config mode
     std::ifstream file("info.txt");

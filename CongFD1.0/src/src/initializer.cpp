@@ -314,7 +314,7 @@ void Initializer::solInit(Block* grid,Data* sol)
                 else std::cout<<"initialize: length error \n";
             break;
 
-            case 2:
+        case 2:
             //Implosion problem;
             //x [-0.3,0.3]
             //y [-0.3,0.3]
@@ -340,7 +340,6 @@ void Initializer::solInit(Block* grid,Data* sol)
                     u=0.0;
                     v=0.0;
                     p=1.0;
-
                 }
                 tempsol.push_back(r);
                 tempsol.push_back(r*u);
@@ -441,6 +440,42 @@ void Initializer::solInit(Block* grid,Data* sol)
                 else std::cout<<"initialize: length error \n";
             break;
         
+        case 6:
+        // 目前还是case5
+            //2D Riemann Problem 3;
+            //x [-0.5,0.5]
+            //y [-0.5,0.5]
+            tempsol.reserve(grid->icMax[0]*grid->icMax[1]);
+            for(int i=0;i<grid->icMax[1];i++)
+            for(int j=0;j<grid->icMax[0];j++)
+            {
+                real x=(*grid)(i*grid->icMax[0]+j,0);
+                real y=(*grid)(i*grid->icMax[0]+j,1);
+                real gamma=GAMMA;
+                real r,u,v,p;
+                if (x>0.0)
+                {
+                    if (y>0.0)
+                    {r=0.5323;u=0.0;v=0.0;p=0.4;}
+                    else
+                    {r=0.8;u=0.0;v=0.0;p=1.0;}
+                }
+                else
+                {
+                    if (y>0)
+                    {r=1.0;u=0.7276;v=0.0;p=1.0;}
+                    else
+                    {r=1.0;u=0.0;v=0.7276;p=1.0;}
+                }
+                tempsol.push_back(r);
+                tempsol.push_back(r*u);
+                tempsol.push_back(r*v);
+                tempsol.push_back(1.0/(gamma-1)*p+r*(u*u+v*v)/2);
+            }
+            if (tempsol.size()==sol->size()) sol->setValue(tempsol);
+                else std::cout<<"initialize: length error \n";
+            break;
+            
         default:
             break;
         }

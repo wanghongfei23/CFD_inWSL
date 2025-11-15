@@ -1,0 +1,5 @@
+33
+totaltime= 642   Finish
+time= 0   Finish
+timesteps= 87   Finish
+solvertime= 486

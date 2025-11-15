@@ -1,0 +1,1 @@
+/usr/sbin/c++  -g -w -O0 -Wl,--dependency-file=CMakeFiles/symmetrytest.dir/link.d CMakeFiles/symmetrytest.dir/symmetrytest.cpp.o -o symmetrytest  src/liblibcongFD.a /usr/lib/libgomp.so /usr/lib/libpthread.a -lcgns
