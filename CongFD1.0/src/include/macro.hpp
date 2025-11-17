@@ -63,7 +63,8 @@ enum InterMethod {
     WHFTCNSA,        // 17
     WHFTCNSAF002,    // 18
     WHFTCNSAH002,    // 19
-    WHFTCNSAF102     // 20
+    WHFTCNSAF102,     // 20
+    ending     // 21
 };
 
 enum DiffMethod {

@@ -1,0 +1,324 @@
+{
+	"globsDependent" : 
+	[
+		{
+			"expression" : "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/*.hpp",
+			"paths" : 
+			[
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/EulerEquation1D.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/SourceTerm.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/block.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/blockSolver.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/bnds.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/cgnsio.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/data.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/dataManipulater.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/differ.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/differenceScheme.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/eigenSystem.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/equation.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/fluxPointFlux.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/fluxScheme.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/fluxSchemes.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/info.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/initializer.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/interScheme.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/macro.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/oneDBnd.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/positive_preserving.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/reconstructor.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/reconstructor5order.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/solvePointFlux.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/solverType.hpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/sp_distributor.hpp"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/*.cpp",
+			"paths" : 
+			[
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/EulerEquation1D.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/block.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/blockSolver.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/bnds.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/cgnsio.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/data.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/dataManipulater.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/differ.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/eigenSystem.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/equation.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/fluxScheme.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/info.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/initializer.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/interScheme.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/macro.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/oneDBnd.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/reconstructor.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/reconstructor5order.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/solverType.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/sourceTerm.cpp",
+				"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/sp_distributor.cpp"
+			],
+			"recurse" : true
+		}
+	],
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.1.1/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.1.1/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.1.1/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Linker/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Linker/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"path" : "helloConfig.h.in"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindOpenMP.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakePrintHelpers.cmake"
+		},
+		{
+			"path" : "src/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindOpenMP.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "utils/CMakeLists.txt"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/build",
+		"source" : "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}

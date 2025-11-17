@@ -35,7 +35,8 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSA,"TENO-Z-myA"},
     {WHFTCNSAF002,"TENO-Z-myASF002"},
     {WHFTCNSAH002,"TENO-Z-myASH002"},
-    {WHFTCNSAF102,"TENO-Z-myASF102"}
+    {WHFTCNSAF102,"TENO-Z-myASF102"},
+    {ending,"ending"}
 };
 // 【王鸿飞】end-1命名
 
@@ -72,10 +73,11 @@ int main()
     // info->interMethod = WCNSZ5; //weno5_Z
     // info->interMethod = TCNS5; //Teno5_Z
     // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
-    info->interMethod = WHFTCNSA;
+    // info->interMethod = WHFTCNSA;
     // info->interMethod = WHFTCNSAF002;
     // info->interMethod = WHFTCNSAH002;
-    // info->interMethod = WHFTCNSAF102;
+    info->interMethod = WHFTCNSAF102;
+    // info->interMethod = ending;
 
     // 【王鸿飞】end
 
@@ -125,13 +127,13 @@ int main()
     //  info->dim=1;
 
     // Woodward-Colella
-    // info->endStep = 1;
-    // info->outputDt = 0.038;
-    // info->CFL = 0.1;
-    // info->nCase = 4;
-    // info->calZone = { 0, 1, 0, 0, 0, 0 };
-    // info->iMax = { 401, 2, 2 };
-    // info->dim = 1;
+    info->endStep = 1;
+    info->outputDt = 0.038;
+    info->CFL = 0.1;
+    info->nCase = 4;
+    info->calZone = { 0, 1, 0, 0, 0, 0 };
+    info->iMax = { 401, 2, 2 };
+    info->dim = 1;
 
     // 双稀疏波
     //  info->endStep=100;
@@ -170,8 +172,8 @@ int main()
     //  info->dim=2;
 
     // Riemann 3
-    //  info->endStep=1;
-    //  info->outputDt=0.4;
+    //  info->endStep=8;
+    //  info->outputDt=0.05;
     //  info->CFL=0.5;
     //  info->nCase=5;
     //  info->calZone={-0.5,0.5,-0.5,0.5,0,0};
@@ -193,13 +195,13 @@ int main()
 
     // info->diffMethod=HDS6;
     // Double Mach
-     info->endStep=20;
-     info->outputDt=0.01;
-     info->CFL=0.5;
-     info->nCase=4;
-     info->calZone={0,4,0,1,0,0};
-     info->iMax={801,201,2};//参考
-     info->dim=2;
+    //  info->endStep=20;
+    //  info->outputDt=0.01;
+    //  info->CFL=0.5;
+    //  info->nCase=4;
+    //  info->calZone={0,4,0,1,0,0};
+    //  info->iMax={801,201,2};//参考
+    //  info->dim=2;
 
     // file config mode
     std::ifstream file("info.txt");
@@ -207,7 +209,7 @@ int main()
         int n;
         real nf;
         file >> n;
-        if (n < WHFTCNSAF102)
+        if (n < ending)
             info->interMethod = (InterMethod)n;
 
         file >> n;
