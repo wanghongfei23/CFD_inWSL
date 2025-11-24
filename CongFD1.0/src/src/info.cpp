@@ -140,7 +140,17 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSAF002,"TENO-Z-myASF002"},
     {WHFTCNSAH002,"TENO-Z-myASH002"},
     {WHFTCNSAF102,"TENO-Z-myASF102"},
-    {ending,"ending"}
+    {WHFTCNSAF103,"TENO-Z-myASF103"},
+    {WHFTCNSAF102_par_01,"TENO-Z-myASF102_par_01"},
+    {temp002,"temp002"},
+    {temp003,"temp003"},
+    {temp004,"temp004"},
+    {temp005,"temp005"},
+    {temp006,"temp006"},
+    {temp007,"temp007"},
+    {temp008,"temp008"},
+    {temp009,"temp009"},
+    {temp010,"temp010"}
     // 【王鸿飞】end-1命名
 };
 

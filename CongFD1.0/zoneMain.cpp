@@ -36,7 +36,17 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSAF002,"TENO-Z-myASF002"},
     {WHFTCNSAH002,"TENO-Z-myASH002"},
     {WHFTCNSAF102,"TENO-Z-myASF102"},
-    {ending,"ending"}
+    {WHFTCNSAF103,"TENO-Z-myASF103"}, // whf_zyc_TcnsN_myASF103
+    {WHFTCNSAF102_par_01,"TENO-Z-myASF102_par_01"},
+    {temp002,"temp002"},
+    {temp003,"temp003"},
+    {temp004,"temp004"},
+    {temp005,"temp005"},
+    {temp006,"temp006"},
+    {temp007,"temp007"},
+    {temp008,"temp008"},
+    {temp009,"temp009"},
+    {temp010,"temp010"}
 };
 // 【王鸿飞】end-1命名
 
@@ -69,6 +79,8 @@ int main()
 
     // 【王鸿飞】begin-1
 
+    // F102中的1表示改进版本 
+
     // info->interMethod = WCNS5; //weno5_JSchen
     // info->interMethod = WCNSZ5; //weno5_Z
     // info->interMethod = TCNS5; //Teno5_Z
@@ -76,8 +88,18 @@ int main()
     // info->interMethod = WHFTCNSA;
     // info->interMethod = WHFTCNSAF002;
     // info->interMethod = WHFTCNSAH002;
-    info->interMethod = WHFTCNSAF102;
-    // info->interMethod = ending;
+    // info->interMethod = WHFTCNSAF102;
+    // info->interMethod = WHFTCNSAF103;
+    info->interMethod = WHFTCNSAF102_par_01;
+    // info->interMethod = temp002;
+    // info->interMethod = temp003;
+    // info->interMethod = temp004;
+    // info->interMethod = temp005;
+    // info->interMethod = temp006;
+    // info->interMethod = temp007;
+    // info->interMethod = temp008;
+    // info->interMethod = temp009;
+    // info->interMethod = temp010;
 
     // 【王鸿飞】end
 
@@ -127,13 +149,13 @@ int main()
     //  info->dim=1;
 
     // Woodward-Colella
-    info->endStep = 1;
-    info->outputDt = 0.038;
-    info->CFL = 0.1;
-    info->nCase = 4;
-    info->calZone = { 0, 1, 0, 0, 0, 0 };
-    info->iMax = { 401, 2, 2 };
-    info->dim = 1;
+    // info->endStep = 1;
+    // info->outputDt = 0.038;
+    // info->CFL = 0.1;
+    // info->nCase = 4;
+    // info->calZone = { 0, 1, 0, 0, 0, 0 };
+    // info->iMax = { 401, 2, 2 };
+    // info->dim = 1;
 
     // 双稀疏波
     //  info->endStep=100;
@@ -195,13 +217,13 @@ int main()
 
     // info->diffMethod=HDS6;
     // Double Mach
-    //  info->endStep=20;
-    //  info->outputDt=0.01;
-    //  info->CFL=0.5;
-    //  info->nCase=4;
-    //  info->calZone={0,4,0,1,0,0};
-    //  info->iMax={801,201,2};//参考
-    //  info->dim=2;
+     info->endStep=20;
+     info->outputDt=0.01;
+     info->CFL=0.5;
+     info->nCase=4;
+     info->calZone={0,4,0,1,0,0};
+     info->iMax={801,201,2};//参考
+     info->dim=2;
 
     // file config mode
     std::ifstream file("info.txt");
@@ -209,7 +231,7 @@ int main()
         int n;
         real nf;
         file >> n;
-        if (n < ending)
+        if (n < temp010)
             info->interMethod = (InterMethod)n;
 
         file >> n;

@@ -47,7 +47,7 @@ int main()
     // 【王鸿飞】end插值格式开发（1.0）手搓
 
     // 【王鸿飞】begin插值格式开发（2.0）AI-原格式
-    // info->interMethod= congTCNS5CT5 ; //【通过】师兄自带的，暂定为正确
+    info->interMethod= congTCNS5CT5 ; //【通过】师兄自带的，暂定为正确
     // info->interMethod= congTCNS5CT10 ; //【通过】师兄自带的，暂定为正确
     // info->interMethod= whfAITCNSNA ;
     // info->interMethod= whfAITCNSNS ;
@@ -64,7 +64,7 @@ int main()
     // 【王鸿飞】end插值格式开发（3.0）AI-新格式
 
     // 【王鸿飞】begin插值格式终章（4.0）手搓及优化
-    info->interMethod= whfzycTCNSNmyASF002_1 ; //
+    // info->interMethod= whfzycTCNSNmyASF002_1 ; //
     // info->interMethod = whfTCNSNA; //
     // info->interMethod = whfCOMPARE; //找不同
     // 【王鸿飞】end插值格式终章（4.0）手搓及优化
@@ -110,13 +110,13 @@ int main()
     // info->dim=1;
 
     // sedov
-    info->endStep=1;
-    info->outputDt=0.001;
-    info->CFL=0.5;
-    info->nCase=3;
-    info->calZone={-2,2,0,0,0,0};
-    info->iMax={400,2,2};
-    info->dim=1;
+    // info->endStep=1;
+    // info->outputDt=0.001;
+    // info->CFL=0.5;
+    // info->nCase=3;
+    // info->calZone={-2,2,0,0,0,0};
+    // info->iMax={400,2,2};
+    // info->dim=1;
 
     // Woodward-Colella
     // info->endStep=1;
@@ -209,19 +209,19 @@ int main()
 
     // Double Mach
 
-    // info->endStep=20;
-    // info->outputDt=0.01;
+    info->endStep=20;
+    info->outputDt=0.01;
     
     // info->endStep=2;
     // info->outputDt=0.1;
-    // info->CFL=0.5;
-    // info->nCase=4;
-    // info->calZone={0,4,0,1,0,0};
-    // info->iMax={801,201,2};
-    // // info->iMax={1601,401,2};
-    // // info->iMax={513,129,2};
-    // // info->iMax={1025,257,2};
-    // info->dim=2;
+    info->CFL=0.5;
+    info->nCase=4;
+    info->calZone={0,4,0,1,0,0};
+    info->iMax={801,201,2};
+    // info->iMax={1601,401,2};
+    // info->iMax={513,129,2};
+    // info->iMax={1025,257,2};
+    info->dim=2;
 
 
     // 【王鸿飞】begin新算例

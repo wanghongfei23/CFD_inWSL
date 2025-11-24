@@ -63,7 +63,7 @@ info_"算例名称"_"插值方法".txt
 | 18   | WHFTCNSAF002   | TENO-Z-myASF002   |
 | 19   | WHFTCNSAH002   | TENO-Z-myASH002   |
 | 20   | WHFTCNSAF102   | TENO-Z-myASF102   |
-| 21   | ending   | TENO-Z-myASF102   |
+| 21   | WHFTCNSAF103   | TENO-Z-myASF103   |
 
 ### 2. 算例编号 (nCase)
 
