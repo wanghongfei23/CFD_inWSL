@@ -147,7 +147,7 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSAS_initial,"TENO-AS-initial"},
     {WHFTCNSAS_approx,"TENO-AS-approx"},
     {WHFTCNSAS_fx_real,"TENO-AS-fx-real"},
-    {temp007,"temp_name_007"},
+    {WHFTCNSAS_floor,"TENO-AS-floor"},
     {temp008,"temp_name_008"},
     {temp009,"temp_name_009"},
     {temp010,"temp_name_010"}

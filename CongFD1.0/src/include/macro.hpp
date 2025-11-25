@@ -71,7 +71,7 @@ enum InterMethod {
     WHFTCNSAS_initial,     // 25
     WHFTCNSAS_approx,     // 26
     WHFTCNSAS_fx_real,     // 27
-    temp007,     // 28
+    WHFTCNSAS_floor,     // 28
     temp008,     // 29
     temp009,     // 30
     temp010     // 31

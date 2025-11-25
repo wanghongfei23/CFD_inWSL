@@ -36,14 +36,14 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSASF002,"TENO-AS-myF002"},
     {WHFTCNSAH002,"TENO-AS-myH002"},
     {WHFTCNSASF102,"TENO-AS-myF102"},
-    {WHFTCNSASF103,"TENO-AS-myF103"}, // whf_TCNS_AS_myF103
+    {WHFTCNSASF103,"TENO-AS-myF103"},
     {WHFTCNSASF102_par_01,"TENO-AS-myF102_par_01"},
     {WHFTCNSASF103_par_01,"TENO-AS-myF103_par_01"},
     {WHFTCNSAS_fx,"TENO-AS-fx"},
     {WHFTCNSAS_initial,"TENO-AS-initial"},
     {WHFTCNSAS_approx,"TENO-AS-approx"},
     {WHFTCNSAS_fx_real,"TENO-AS-fx-real"},
-    {temp007,"temp_name_007"},
+    {WHFTCNSAS_floor,"TENO-AS-floor"},
     {temp008,"temp_name_008"},
     {temp009,"temp_name_009"},
     {temp010,"temp_name_010"}
@@ -59,8 +59,8 @@ int main()
     // auto prim2=eig.charToPrim(eigValues);
     // std::cout<<"finish\n";
 
-    omp_set_num_threads(10);
-    // omp_set_num_threads(1);
+    // omp_set_num_threads(10);
+    omp_set_num_threads(1);
 
     Info* info = new Info;
 
@@ -94,9 +94,9 @@ int main()
     // info->interMethod = WHFTCNSASF103_par_01;
     // info->interMethod = WHFTCNSAS_fx; // 不进行函数拟合，直接用原来近似的指数形式CT'
     // info->interMethod = WHFTCNSAS_initial; // 原封不动的叠加A和S
-    // info->interMethod = WHFTCNSAS_approx;
-    info->interMethod = WHFTCNSAS_fx_real;
-    // info->interMethod = temp007;
+    info->interMethod = WHFTCNSAS_approx;
+    // info->interMethod = WHFTCNSAS_fx_real;
+    // info->interMethod = WHFTCNSAS_floor;
     // info->interMethod = temp008;
     // info->interMethod = temp009;
     // info->interMethod = temp010;

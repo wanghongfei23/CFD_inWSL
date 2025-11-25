@@ -1448,7 +1448,6 @@ constexpr real whf_TCNS_A(std::array<real, 5> q)
     // real eta_min = std::min(eta[0],eta[1],eta[2]);
     real eta_min = std::min({eta[0],eta[1],eta[2]});
 
-    // real m = 1.0 - std::min(1.0, eta_min/C_r);
     real min = std::min(1.0, 4.1666667 * eta_min);
     
     real g_m = min*min*min*min*(5.0 - 4*min);
@@ -2193,12 +2192,10 @@ constexpr real whf_TCNS_AS_fx(std::array<real, 5> q) {
   
   real eta_min = std::min({eta_im1, eta_i, eta_ip1});
 
-  // 计算min
-  real min = std::min(0.24, eta_min);
+  // 计算 x
+  real x = std::min(1.0, eta_min/0.24);
   
   // 计算C_T_prime
-  real x = min/0.24;
-  // real C_T = 1.0/(1255.2*min*min - 152.4*min + 9.6);
   real C_T = 0.157/std::pow(6.813, x*x*x*x*(5.0-4.0*x));
   
   //CT adapt end
@@ -2309,9 +2306,9 @@ constexpr real whf_TCNS_AS_initial(std::array<real, 5> q) {
         real eta_min = std::min({eta[0],eta[1],eta[2]});
 
         // real m = 1.0 - std::min(1.0, eta_min/C_r);
-        real min = std::min(1.0, 4.1666667 * eta_min);
+        real x = std::min(1.0, eta_min/0.24);
         
-        real g_m = min*min*min*min*(5.0 - 4*min);
+        real g_m = x*x*x*x*(5.0 - 4*x);
 
         int beta_A = std::floor(alpha1 - alpha2*(1.0 - g_m));
 
@@ -2456,9 +2453,9 @@ constexpr real whf_TCNS_AS_approx(std::array<real, 5> q) {
         real eta_min = std::min({eta[0],eta[1],eta[2]});
 
         // real m = 1.0 - std::min(1.0, eta_min/C_r);
-        real min = std::min(1.0, 4.1666667 * eta_min);
+        real x = std::min(1.0, eta_min/0.24);
         
-        real g_m = min*min*min*min*(5.0 - 4*min);
+        real g_m = x*x*x*x*(5.0 - 4*x);
 
         int beta_A = std::floor(alpha1 - alpha2*(1.0 - g_m));
 
@@ -2591,18 +2588,16 @@ constexpr real whf_TCNS_AS_fx_real(std::array<real, 5> q) {
   
   real eta_min = std::min({eta_im1, eta_i, eta_ip1});
 
-  // 计算min
-  real min = std::min(0.24, eta_min);
+  // 计算 x
+  real x = std::min(1.0, eta_min/0.24);
   
   // 计算C_T_prime
-  real x = min/0.24;
-
   real alpha_1 = 10.0;
   real alpha_2 = 5.0;
   // int q_A = 6;
   real q_A = 6.0;
 
-  real C_T = std::pow(1.5, 1.0/q_A)*std::pow(10.0, (alpha_2-alpha_1)/q_A)/std::pow(10.0,x*x*x*x*(5.0-4.0*x)*alpha_2/q_A);
+  real C_T = std::pow(1.5, 1.0/q_A)*std::pow(10.0, (alpha_2-alpha_1)/q_A)/std::pow(10.0,alpha_2*x*x*x*x*(5.0-4.0*x)/q_A);
   
   //CT adapt end
   
@@ -2659,7 +2654,7 @@ constexpr real whf_TCNS_AS_fx_real(std::array<real, 5> q) {
   }
 }
 
-constexpr real temp_007(std::array<real, 5> q) {
+constexpr real whf_TCNS_AS_floor(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
   std::array<real, 3> beta = {
       1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
@@ -2700,11 +2695,20 @@ constexpr real temp_007(std::array<real, 5> q) {
   
   real eta_min = std::min({eta_im1, eta_i, eta_ip1});
 
-  // 计算min
-  real min = std::min(0.24, eta_min);
+  // 计算 
+  real x = std::min(1.0, eta_min/0.24);
   
   // 计算C_T_prime
-  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+  real alpha_1 = 10.0;
+  real alpha_2 = 5.0;
+  // int q_A = 6;
+  real q_A = 6.0;
+
+  // 取整
+  real floor_in = std::floor(alpha_2*x*x*x*x*(5.0-4.0*x));
+  // real C_T = std::pow(1.5, 1.0/q_A)*std::pow(10.0, (alpha_2-alpha_1)/q_A)/std::pow(10.0,alpha_2*x*x*x*x*(5.0-4.0*x)/q_A);
+  real C_T = std::pow(1.5, 1.0/q_A)*std::pow(10.0, (alpha_2-alpha_1)/q_A)/std::pow(10.0,floor_in/q_A);
+  
   //CT adapt end
   
   real CT_1 = 1 - C_T;
