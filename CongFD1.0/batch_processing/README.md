@@ -50,20 +50,20 @@ info_"算例名称"_"插值方法".txt
 | 5    | WCNSZ5Char     | WCNSZ5特征重构    |
 | 6    | WCNS5CONG      | WCNS5改进格式     |
 | 7    | TCNSCongA      | TENO-A格式        |
-| 8    | WCNS5CONGZ     | TENO-Z-S          |
-| 9    | WCNS5CONGZCT4  | TENO-Z-S CT4版本  |
-| 10   | WCNS5CONGZCT7  | TENO-Z-S CT7版本  |
-| 11   | TCNS5          | TENO-Z            |
-| 12   | TCNS5CT4       | TENO-Z CT4版本    |
-| 13   | TCNS5CT7       | TENO-Z CT7版本    |
+| 8    | WCNS5CONGZ     | TENO-S          |
+| 9    | WCNS5CONGZCT4  | TENO-S CT4版本  |
+| 10   | WCNS5CONGZCT7  | TENO-S CT7版本  |
+| 11   | TCNS5          | TENO            |
+| 12   | TCNS5CT4       | TENO CT4版本    |
+| 13   | TCNS5CT7       | TENO CT7版本    |
 | 14   | LINEAR5        | 五阶线性格式      |
 | 15   | NICEST5        | NICEST格式        |
 | 16   | INTERMAX       | 最大值插值格式    |
-| 17   | WHFTCNSA       | TENO-Z-myA        |
-| 18   | WHFTCNSAF002   | TENO-Z-myASF002   |
-| 19   | WHFTCNSAH002   | TENO-Z-myASH002   |
-| 20   | WHFTCNSAF102   | TENO-Z-myASF102   |
-| 21   | WHFTCNSAF103   | TENO-Z-myASF103   |
+| 17   | WHFTCNSA       | TENO-myA        |
+| 18   | WHFTCNSASF002   | TENO-AS-myF002   |
+| 19   | WHFTCNSAH002   | TENO-AS-myH002   |
+| 20   | WHFTCNSASF102   | TENO-AS-myF102   |
+| 21   | WHFTCNSASF103   | TENO-AS-myF103   |
 
 ### 2. 算例编号 (nCase)
 

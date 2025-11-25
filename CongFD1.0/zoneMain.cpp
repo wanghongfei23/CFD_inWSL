@@ -30,23 +30,23 @@ static std::map<InterMethod,std::string> disStr={
     {MUSCL,"MUSCL"},
     {WCNS5,"WENO-JS"},
     {WCNSZ5,"WENO-Z"},
-    {TCNS5,"TENO-Z"},
-    {WCNS5CONGZ,"TENO-Z-S"},
-    {WHFTCNSA,"TENO-Z-myA"},
-    {WHFTCNSAF002,"TENO-Z-myASF002"},
-    {WHFTCNSAH002,"TENO-Z-myASH002"},
-    {WHFTCNSAF102,"TENO-Z-myASF102"},
-    {WHFTCNSAF103,"TENO-Z-myASF103"}, // whf_zyc_TcnsN_myASF103
-    {WHFTCNSAF102_par_01,"TENO-Z-myASF102_par_01"},
-    {temp002,"temp002"},
-    {temp003,"temp003"},
-    {temp004,"temp004"},
-    {temp005,"temp005"},
-    {temp006,"temp006"},
-    {temp007,"temp007"},
-    {temp008,"temp008"},
-    {temp009,"temp009"},
-    {temp010,"temp010"}
+    {TCNS5,"TENO"},
+    {WCNS5CONGZ,"TENO-S"},
+    {WHFTCNSA,"TENO-myA"},
+    {WHFTCNSASF002,"TENO-AS-myF002"},
+    {WHFTCNSAH002,"TENO-AS-myH002"},
+    {WHFTCNSASF102,"TENO-AS-myF102"},
+    {WHFTCNSASF103,"TENO-AS-myF103"}, // whf_TCNS_AS_myF103
+    {WHFTCNSASF102_par_01,"TENO-AS-myF102_par_01"},
+    {WHFTCNSASF103_par_01,"TENO-AS-myF103_par_01"},
+    {WHFTCNSAS_fx,"TENO-AS-fx"},
+    {WHFTCNSAS_initial,"TENO-AS-initial"},
+    {WHFTCNSAS_approx,"TENO-AS-approx"},
+    {WHFTCNSAS_fx_real,"TENO-AS-fx-real"},
+    {temp007,"temp_name_007"},
+    {temp008,"temp_name_008"},
+    {temp009,"temp_name_009"},
+    {temp010,"temp_name_010"}
 };
 // 【王鸿飞】end-1命名
 
@@ -59,8 +59,8 @@ int main()
     // auto prim2=eig.charToPrim(eigValues);
     // std::cout<<"finish\n";
 
-    // omp_set_num_threads(10);
-    omp_set_num_threads(1);
+    omp_set_num_threads(10);
+    // omp_set_num_threads(1);
 
     Info* info = new Info;
 
@@ -86,16 +86,16 @@ int main()
     // info->interMethod = TCNS5; //Teno5_Z
     // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
     // info->interMethod = WHFTCNSA;
-    // info->interMethod = WHFTCNSAF002;
+    // info->interMethod = WHFTCNSASF002;
     // info->interMethod = WHFTCNSAH002;
-    // info->interMethod = WHFTCNSAF102;
-    // info->interMethod = WHFTCNSAF103;
-    info->interMethod = WHFTCNSAF102_par_01;
-    // info->interMethod = temp002;
-    // info->interMethod = temp003;
-    // info->interMethod = temp004;
-    // info->interMethod = temp005;
-    // info->interMethod = temp006;
+    // info->interMethod = WHFTCNSASF102;
+    // info->interMethod = WHFTCNSASF103;
+    // info->interMethod = WHFTCNSASF102_par_01;
+    // info->interMethod = WHFTCNSASF103_par_01;
+    // info->interMethod = WHFTCNSAS_fx; // 不进行函数拟合，直接用原来近似的指数形式CT'
+    // info->interMethod = WHFTCNSAS_initial; // 原封不动的叠加A和S
+    // info->interMethod = WHFTCNSAS_approx;
+    info->interMethod = WHFTCNSAS_fx_real;
     // info->interMethod = temp007;
     // info->interMethod = temp008;
     // info->interMethod = temp009;
@@ -204,26 +204,26 @@ int main()
 
     // RT instability
     // 记得改GAMMA
-    //  info->endStep=1;
-    //  info->outputDt=1.95;
-    //  info->CFL=0.5;
-    //  info->nCase=3;
-    //  info->calZone={0,0.25,0,1,0,0};
-    // //  info->iMax={201,801,2};
-    //  info->iMax={101,401,2};//参考
-    // //  info->iMax={65,257,2};
-    //  info->dim=2;
-    //  info->sourceType=GRAVITY;
+     info->endStep=1;
+     info->outputDt=1.95;
+     info->CFL=0.5;
+     info->nCase=3;
+     info->calZone={0,0.25,0,1,0,0};
+    //  info->iMax={201,801,2};
+     info->iMax={101,401,2};//参考
+    //  info->iMax={65,257,2};
+     info->dim=2;
+     info->sourceType=GRAVITY;
 
     // info->diffMethod=HDS6;
     // Double Mach
-     info->endStep=20;
-     info->outputDt=0.01;
-     info->CFL=0.5;
-     info->nCase=4;
-     info->calZone={0,4,0,1,0,0};
-     info->iMax={801,201,2};//参考
-     info->dim=2;
+    //  info->endStep=20;
+    //  info->outputDt=0.01;
+    //  info->CFL=0.5;
+    //  info->nCase=4;
+    //  info->calZone={0,4,0,1,0,0};
+    //  info->iMax={801,201,2};//参考
+    //  info->dim=2;
 
     // file config mode
     std::ifstream file("info.txt");

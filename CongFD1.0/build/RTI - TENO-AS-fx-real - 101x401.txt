@@ -1,0 +1,5 @@
+27
+totaltime= 162983   Finish
+time= 516263   Finish
+timesteps= 6650   Finish
+solvertime= 153192
