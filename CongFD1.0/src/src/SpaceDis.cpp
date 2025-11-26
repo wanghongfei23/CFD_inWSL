@@ -319,9 +319,9 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
             reconRMethod = &SpaceDis::reconRprim;
         }
         break;
-    case WHFTCNSAS_approx:
-        inter5 = &whf_TCNS_AS_approx;
-        inter5Positive = &whf_TCNS_AS_approx;
+    case WHFTCNSAS_approx_1:
+        inter5 = &whf_TCNS_AS_approx_1;
+        inter5Positive = &whf_TCNS_AS_approx_1;
         if (fluxType == EULER) {
             reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
             reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
@@ -342,9 +342,9 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
             reconRMethod = &SpaceDis::reconRprim;
         }
         break;
-    case WHFTCNSAS_floor:
-        inter5 = &whf_TCNS_AS_floor;
-        inter5Positive = &whf_TCNS_AS_floor;
+    case WHFTCNSAS_approx_2:
+        inter5 = &whf_TCNS_AS_approx_2;
+        inter5Positive = &whf_TCNS_AS_approx_2;
         if (fluxType == EULER) {
             reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
             reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);

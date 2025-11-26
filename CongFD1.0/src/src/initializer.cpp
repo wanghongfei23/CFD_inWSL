@@ -576,7 +576,7 @@ void Initializer::initUniformBlock(Block* block)
     //         real tempInterval;
     //         for(auto iver:index) temp+=block->coorVer(iver,idim);
     //         block->coorCel(iCelGlobal,idim)=temp/iLen;
-    //         //only lower line approximate
+    //         //only lower line approx_1imate
     //         if(idim==0) block->intervalCel(iCelGlobal,idim)=block->coorVer(index[1],idim)-block->coorVer(index[0],idim);
     //         if(idim==1) block->intervalCel(iCelGlobal,idim)=block->coorVer(index[2],idim)-block->coorVer(index[0],idim);
     //         if(idim==2) block->intervalCel(iCelGlobal,idim)=block->coorVer(index[4],idim)-block->coorVer(index[0],idim);
@@ -595,7 +595,7 @@ void Initializer::initUniformBlock(Block* block)
             int iCelGlobal=l+m*icMax[0]+n*icMax[0]*icMax[1];
             int* onedIndex=((idim == 0 ) ? &l : ( idim == 1 ? &m : &n));
             block->coorCel(iCelGlobal,idim)=(cmin+((*onedIndex)+0.5)*interval);
-            //only lower line approximate
+            //only lower line approx_1imate
             if(idim==0) block->intervalCel(iCelGlobal,idim)=interval;
             if(idim==1) block->intervalCel(iCelGlobal,idim)=interval;
             if(idim==2) block->intervalCel(iCelGlobal,idim)=interval;

@@ -1437,15 +1437,14 @@ constexpr real whf_TCNS_A(std::array<real, 5> q)
     delta_q[3] = q[3] - q[4];
 
     std::array<real, 3> eta;
-    eta[0] = (std::abs(2.0 * delta_q[0] * delta_q[2]) + epsilon_A)
-           / (delta_q[0] * delta_q[0] + delta_q[2] * delta_q[2] + epsilon_A);
-    eta[1] = (std::abs(2.0 * delta_q[1] * delta_q[3]) + epsilon_A)
-           / (delta_q[1] * delta_q[1] + delta_q[3] * delta_q[3] + epsilon_A);
-    eta[2] = (std::abs(2.0 * delta_q[2] * delta_q[1]) + epsilon_A)
-           / (delta_q[2] * delta_q[2] + delta_q[1] * delta_q[1] + epsilon_A);
+        eta[0] = (std::abs(2.0 * delta_q[0] * delta_q[1]) + epsilon_A)
+              / (delta_q[0] * delta_q[0] + delta_q[1] * delta_q[1] + epsilon_A);
+        eta[1] = (std::abs(2.0 * delta_q[1] * delta_q[2]) + epsilon_A)
+              / (delta_q[1] * delta_q[1] + delta_q[2] * delta_q[2] + epsilon_A);
+        eta[2] = (std::abs(2.0 * delta_q[2] * delta_q[3]) + epsilon_A)
+              / (delta_q[2] * delta_q[2] + delta_q[3] * delta_q[3] + epsilon_A);
     
     // 计算η_min值
-    // real eta_min = std::min(eta[0],eta[1],eta[2]);
     real eta_min = std::min({eta[0],eta[1],eta[2]});
 
     real min = std::min(1.0, 4.1666667 * eta_min);
@@ -2294,12 +2293,12 @@ constexpr real whf_TCNS_AS_initial(std::array<real, 5> q) {
         delta_q[3] = q[3] - q[4];
 
         std::array<real, 3> eta;
-        eta[0] = (std::abs(2.0 * delta_q[0] * delta_q[2]) + epsilon_A)
-              / (delta_q[0] * delta_q[0] + delta_q[2] * delta_q[2] + epsilon_A);
-        eta[1] = (std::abs(2.0 * delta_q[1] * delta_q[3]) + epsilon_A)
-              / (delta_q[1] * delta_q[1] + delta_q[3] * delta_q[3] + epsilon_A);
-        eta[2] = (std::abs(2.0 * delta_q[2] * delta_q[1]) + epsilon_A)
-              / (delta_q[2] * delta_q[2] + delta_q[1] * delta_q[1] + epsilon_A);
+        eta[0] = (std::abs(2.0 * delta_q[0] * delta_q[1]) + epsilon_A)
+              / (delta_q[0] * delta_q[0] + delta_q[1] * delta_q[1] + epsilon_A);
+        eta[1] = (std::abs(2.0 * delta_q[1] * delta_q[2]) + epsilon_A)
+              / (delta_q[1] * delta_q[1] + delta_q[2] * delta_q[2] + epsilon_A);
+        eta[2] = (std::abs(2.0 * delta_q[2] * delta_q[3]) + epsilon_A)
+              / (delta_q[2] * delta_q[2] + delta_q[3] * delta_q[3] + epsilon_A);
         
         // 计算η_min值
         // real eta_min = std::min(eta[0],eta[1],eta[2]);
@@ -2313,26 +2312,6 @@ constexpr real whf_TCNS_AS_initial(std::array<real, 5> q) {
         int beta_A = std::floor(alpha1 - alpha2*(1.0 - g_m));
 
         real CT_real;
-
-        // 求光滑度量gamma
-        const real C = 1.0;
-        const real eps_A = 1e-40;
-
-        std::array<real, 3> gamma;
-
-        gamma[0] = C + tau/(beta[0] + eps_A);
-        gamma[1] = C + tau/(beta[1] + eps_A);
-        gamma[2] = C + tau/(beta[2] + eps_A);
-
-        gamma[0] = gamma[0]*gamma[0];
-        gamma[1] = gamma[1]*gamma[1];
-        gamma[2] = gamma[2]*gamma[2];
-
-        gamma[0] = gamma[0]*gamma[0]*gamma[0];
-        gamma[1] = gamma[1]*gamma[1]*gamma[1];
-        gamma[2] = gamma[2]*gamma[2]*gamma[2];
-
-        real gamma_sum = gamma[0] + gamma[1] + gamma[2];
         
         switch(beta_A) {
         case 5: CT_real = 1e-5; 
@@ -2400,7 +2379,7 @@ constexpr real whf_TCNS_AS_initial(std::array<real, 5> q) {
     }
 }
 
-constexpr real whf_TCNS_AS_approx(std::array<real, 5> q) {
+constexpr real whf_TCNS_AS_approx_1(std::array<real, 5> q) {
     real eps = 1e-40; // 1e-10;
     std::array<real, 3> beta = {
         1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2)
@@ -2441,12 +2420,12 @@ constexpr real whf_TCNS_AS_approx(std::array<real, 5> q) {
         delta_q[3] = q[3] - q[4];
 
         std::array<real, 3> eta;
-        eta[0] = (std::abs(2.0 * delta_q[0] * delta_q[2]) + epsilon_A)
-              / (delta_q[0] * delta_q[0] + delta_q[2] * delta_q[2] + epsilon_A);
-        eta[1] = (std::abs(2.0 * delta_q[1] * delta_q[3]) + epsilon_A)
-              / (delta_q[1] * delta_q[1] + delta_q[3] * delta_q[3] + epsilon_A);
-        eta[2] = (std::abs(2.0 * delta_q[2] * delta_q[1]) + epsilon_A)
-              / (delta_q[2] * delta_q[2] + delta_q[1] * delta_q[1] + epsilon_A);
+        eta[0] = (std::abs(2.0 * delta_q[0] * delta_q[1]) + epsilon_A)
+              / (delta_q[0] * delta_q[0] + delta_q[1] * delta_q[1] + epsilon_A);
+        eta[1] = (std::abs(2.0 * delta_q[1] * delta_q[2]) + epsilon_A)
+              / (delta_q[1] * delta_q[1] + delta_q[2] * delta_q[2] + epsilon_A);
+        eta[2] = (std::abs(2.0 * delta_q[2] * delta_q[3]) + epsilon_A)
+              / (delta_q[2] * delta_q[2] + delta_q[3] * delta_q[3] + epsilon_A);
         
         // 计算η_min值
         // real eta_min = std::min(eta[0],eta[1],eta[2]);
@@ -2461,26 +2440,6 @@ constexpr real whf_TCNS_AS_approx(std::array<real, 5> q) {
 
         real CT_real;
 
-        // 求光滑度量gamma
-        const real C = 1.0;
-        const real eps_A = 1e-40;
-
-        std::array<real, 3> gamma;
-
-        gamma[0] = C + tau/(beta[0] + eps_A);
-        gamma[1] = C + tau/(beta[1] + eps_A);
-        gamma[2] = C + tau/(beta[2] + eps_A);
-
-        gamma[0] = gamma[0]*gamma[0];
-        gamma[1] = gamma[1]*gamma[1];
-        gamma[2] = gamma[2]*gamma[2];
-
-        gamma[0] = gamma[0]*gamma[0]*gamma[0];
-        gamma[1] = gamma[1]*gamma[1]*gamma[1];
-        gamma[2] = gamma[2]*gamma[2]*gamma[2];
-
-        real gamma_sum = gamma[0] + gamma[1] + gamma[2];
-        
         switch(beta_A) {
         case 5: CT_real = 1e-5; 
         break;
@@ -2654,7 +2613,7 @@ constexpr real whf_TCNS_AS_fx_real(std::array<real, 5> q) {
   }
 }
 
-constexpr real whf_TCNS_AS_floor(std::array<real, 5> q) {
+constexpr real whf_TCNS_AS_approx_2(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
   std::array<real, 3> beta = {
       1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
@@ -2705,9 +2664,13 @@ constexpr real whf_TCNS_AS_floor(std::array<real, 5> q) {
   real q_A = 6.0;
 
   // 取整
-  real floor_in = std::floor(alpha_2*x*x*x*x*(5.0-4.0*x));
-  // real C_T = std::pow(1.5, 1.0/q_A)*std::pow(10.0, (alpha_2-alpha_1)/q_A)/std::pow(10.0,alpha_2*x*x*x*x*(5.0-4.0*x)/q_A);
-  real C_T = std::pow(1.5, 1.0/q_A)*std::pow(10.0, (alpha_2-alpha_1)/q_A)/std::pow(10.0,floor_in/q_A);
+  real beta_A = std::floor(alpha_2*x*x*x*x*(5.0-4.0*x) + alpha_1 - alpha_2);
+
+  real C_T = std::pow(1.5, 1.0/q_A)/std::pow(10.0,beta_A/q_A);
+
+//   real approx_2_in = std::floor(alpha_2*x*x*x*x*(5.0-4.0*x));
+
+//   real C_T = std::pow(1.5, 1.0/q_A)*std::pow(10.0, (alpha_2-alpha_1)/q_A)/std::pow(10.0,approx_2_in/q_A);
   
   //CT adapt end
   

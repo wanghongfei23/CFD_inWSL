@@ -41,9 +41,9 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSASF103_par_01,"TENO-AS-myF103_par_01"},
     {WHFTCNSAS_fx,"TENO-AS-fx"},
     {WHFTCNSAS_initial,"TENO-AS-initial"},
-    {WHFTCNSAS_approx,"TENO-AS-approx"},
+    {WHFTCNSAS_approx_1,"TENO-AS-approx_1"},
     {WHFTCNSAS_fx_real,"TENO-AS-fx-real"},
-    {WHFTCNSAS_floor,"TENO-AS-floor"},
+    {WHFTCNSAS_approx_2,"TENO-AS-approx_2"},
     {temp008,"temp_name_008"},
     {temp009,"temp_name_009"},
     {temp010,"temp_name_010"}
@@ -85,7 +85,7 @@ int main()
     // info->interMethod = WCNSZ5; //weno5_Z
     // info->interMethod = TCNS5; //Teno5_Z
     // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
-    // info->interMethod = WHFTCNSA;
+    info->interMethod = WHFTCNSA;
     // info->interMethod = WHFTCNSASF002;
     // info->interMethod = WHFTCNSAH002;
     // info->interMethod = WHFTCNSASF102;
@@ -93,10 +93,10 @@ int main()
     // info->interMethod = WHFTCNSASF102_par_01;
     // info->interMethod = WHFTCNSASF103_par_01;
     // info->interMethod = WHFTCNSAS_fx; // 不进行函数拟合，直接用原来近似的指数形式CT'
-    // info->interMethod = WHFTCNSAS_initial; // 原封不动的叠加A和S
-    info->interMethod = WHFTCNSAS_approx;
-    // info->interMethod = WHFTCNSAS_fx_real;
-    // info->interMethod = WHFTCNSAS_floor;
+    // info->interMethod = WHFTCNSAS_initial; // 算CT'，原封不动的叠加A和S
+    // info->interMethod = WHFTCNSAS_approx_1; // 算CT'，叠加A和S，分母近似掉-1
+    // info->interMethod = WHFTCNSAS_fx_real; // 算
+    // info->interMethod = WHFTCNSAS_approx_2; // 具体代入，叠加A和S，分母近似掉-1
     // info->interMethod = temp008;
     // info->interMethod = temp009;
     // info->interMethod = temp010;
@@ -194,8 +194,12 @@ int main()
     //  info->dim=2;
 
     // Riemann 3
-    //  info->endStep=8;
+
+    //  info->endStep=5;
     //  info->outputDt=0.05;
+
+    //  info->endStep=1;
+    //  info->outputDt=0.25;
     //  info->CFL=0.5;
     //  info->nCase=5;
     //  info->calZone={-0.5,0.5,-0.5,0.5,0,0};
@@ -204,26 +208,30 @@ int main()
 
     // RT instability
     // 记得改GAMMA
-     info->endStep=1;
-     info->outputDt=1.95;
-     info->CFL=0.5;
-     info->nCase=3;
-     info->calZone={0,0.25,0,1,0,0};
-    //  info->iMax={201,801,2};
-     info->iMax={101,401,2};//参考
-    //  info->iMax={65,257,2};
-     info->dim=2;
-     info->sourceType=GRAVITY;
+    //  info->endStep=1;
+    //  info->outputDt=1.95;
+    //  info->CFL=0.5;
+    //  info->nCase=3;
+    //  info->calZone={0,0.25,0,1,0,0};
+    // //  info->iMax={201,801,2};
+    //  info->iMax={101,401,2};//参考
+    // //  info->iMax={65,257,2};
+    //  info->dim=2;
+    //  info->sourceType=GRAVITY;
 
     // info->diffMethod=HDS6;
     // Double Mach
+
     //  info->endStep=20;
     //  info->outputDt=0.01;
-    //  info->CFL=0.5;
-    //  info->nCase=4;
-    //  info->calZone={0,4,0,1,0,0};
-    //  info->iMax={801,201,2};//参考
-    //  info->dim=2;
+
+     info->endStep=1;
+     info->outputDt=0.2;
+     info->CFL=0.5;
+     info->nCase=4;
+     info->calZone={0,4,0,1,0,0};
+     info->iMax={801,201,2};//参考
+     info->dim=2;
 
     // file config mode
     std::ifstream file("info.txt");
