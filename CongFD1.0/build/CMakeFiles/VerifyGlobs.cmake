@@ -4,6 +4,7 @@
 # SRCS at src/CMakeLists.txt:2 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0/src/include/*.hpp")
 set(OLD_GLOB
+  "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0/src/include/000_globals.hpp"
   "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0/src/include/Bnds.hpp"
   "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0/src/include/SourceTerm.hpp"
   "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0/src/include/SpaceDis.hpp"

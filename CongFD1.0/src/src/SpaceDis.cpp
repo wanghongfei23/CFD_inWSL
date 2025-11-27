@@ -213,9 +213,12 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
 
     //【王鸿飞】begin-1
 
+    // 王鸿飞统计CT_A
     case WHFTCNSA:
         inter5 = &whf_TCNS_A;
         inter5Positive = &whf_TCNS_A;
+        // inter5 = &whf_TCNS_A_count;
+        // inter5Positive = &whf_TCNS_A_count;
         if (fluxType == EULER) {
             reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
             reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
@@ -273,9 +276,9 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
         }
         break;
 
-    case WHFTCNSASF102_par_01:
-        inter5 = &whf_TCNS_AS_myF102_par_01;
-        inter5Positive = &whf_TCNS_AS_myF102_par_01;
+    case WHFTCNSASF102_reciprocal:
+        inter5 = &whf_TCNS_AS_myF102_reciprocal;
+        inter5Positive = &whf_TCNS_AS_myF102_reciprocal;
         if (fluxType == EULER) {
             reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
             reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
@@ -285,9 +288,9 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
         }
         break;
 
-    case WHFTCNSASF103_par_01:
-        inter5 = &whf_TCNS_AS_myF103_par_01;
-        inter5Positive = &whf_TCNS_AS_myF103_par_01;
+    case WHFTCNSASF103_reciprocal:
+        inter5 = &whf_TCNS_AS_myF103_reciprocal;
+        inter5Positive = &whf_TCNS_AS_myF103_reciprocal;
         if (fluxType == EULER) {
             reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
             reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);

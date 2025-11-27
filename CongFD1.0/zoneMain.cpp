@@ -1,6 +1,7 @@
 
 #include "blockSolver.hpp"
 #include "eigenSystem.hpp"
+#include "000_globals.hpp"
 #include <fstream>
 // 【王鸿飞】begin-1命名
 #include <map>
@@ -37,8 +38,8 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSAH002,"TENO-AS-myH002"},
     {WHFTCNSASF102,"TENO-AS-myF102"},
     {WHFTCNSASF103,"TENO-AS-myF103"},
-    {WHFTCNSASF102_par_01,"TENO-AS-myF102_par_01"},
-    {WHFTCNSASF103_par_01,"TENO-AS-myF103_par_01"},
+    {WHFTCNSASF102_reciprocal,"TENO-AS-myF102_reciprocal"},
+    {WHFTCNSASF103_reciprocal,"TENO-AS-myF103_reciprocal"},
     {WHFTCNSAS_fx,"TENO-AS-fx"},
     {WHFTCNSAS_initial,"TENO-AS-initial"},
     {WHFTCNSAS_approx_1,"TENO-AS-approx_1"},
@@ -59,8 +60,8 @@ int main()
     // auto prim2=eig.charToPrim(eigValues);
     // std::cout<<"finish\n";
 
-    // omp_set_num_threads(10);
-    omp_set_num_threads(1);
+    omp_set_num_threads(10);
+    // omp_set_num_threads(1);
 
     Info* info = new Info;
 
@@ -85,13 +86,13 @@ int main()
     // info->interMethod = WCNSZ5; //weno5_Z
     // info->interMethod = TCNS5; //Teno5_Z
     // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
-    info->interMethod = WHFTCNSA;
+    // info->interMethod = WHFTCNSA;
     // info->interMethod = WHFTCNSASF002;
     // info->interMethod = WHFTCNSAH002;
     // info->interMethod = WHFTCNSASF102;
     // info->interMethod = WHFTCNSASF103;
-    // info->interMethod = WHFTCNSASF102_par_01;
-    // info->interMethod = WHFTCNSASF103_par_01;
+    info->interMethod = WHFTCNSASF102_reciprocal;
+    // info->interMethod = WHFTCNSASF103_reciprocal;
     // info->interMethod = WHFTCNSAS_fx; // 不进行函数拟合，直接用原来近似的指数形式CT'
     // info->interMethod = WHFTCNSAS_initial; // 算CT'，原封不动的叠加A和S
     // info->interMethod = WHFTCNSAS_approx_1; // 算CT'，叠加A和S，分母近似掉-1
@@ -208,16 +209,17 @@ int main()
 
     // RT instability
     // 记得改GAMMA
-    //  info->endStep=1;
-    //  info->outputDt=1.95;
-    //  info->CFL=0.5;
-    //  info->nCase=3;
-    //  info->calZone={0,0.25,0,1,0,0};
-    // //  info->iMax={201,801,2};
-    //  info->iMax={101,401,2};//参考
-    // //  info->iMax={65,257,2};
-    //  info->dim=2;
-    //  info->sourceType=GRAVITY;
+     info->endStep=1;
+     info->outputDt=1.95;
+     info->CFL=0.5;
+     info->nCase=3;
+     info->calZone={0,0.25,0,1,0,0};
+    //  info->iMax={201,801,2};
+     info->iMax={101,401,2};//参考
+    //  info->iMax={65,257,2};
+     info->dim=2;
+     info->sourceType=GRAVITY;
+
 
     // info->diffMethod=HDS6;
     // Double Mach
@@ -225,13 +227,13 @@ int main()
     //  info->endStep=20;
     //  info->outputDt=0.01;
 
-     info->endStep=1;
-     info->outputDt=0.2;
-     info->CFL=0.5;
-     info->nCase=4;
-     info->calZone={0,4,0,1,0,0};
-     info->iMax={801,201,2};//参考
-     info->dim=2;
+    //  info->endStep=1;
+    //  info->outputDt=0.2;
+    //  info->CFL=0.5;
+    //  info->nCase=4;
+    //  info->calZone={0,4,0,1,0,0};
+    //  info->iMax={801,201,2};//参考
+    //  info->dim=2;
 
     // file config mode
     std::ifstream file("info.txt");
@@ -339,4 +341,20 @@ int main()
     timeinfo << "time= " << timepp / 1e6 << "   Finish\n";
     timeinfo << "timesteps= " << bSolver.timesteps << "   Finish\n";
     timeinfo << "solvertime= " << timesss << '\n';
+    
+
+    // 王鸿飞统计CT_A
+    // 输出统计信息到单独的文件
+    if (global_counter_5 || global_counter_6 || global_counter_7 || global_counter_8 || global_counter_9 || global_counter_10) {
+        std::string statFileName = caseName + " - " + disStr[info->interMethod] + " - " + gridInfo + "_CT-A_counter.txt";
+        std::ofstream statFile(statFileName);
+        statFile << "CT Value Statistics:\n";
+        statFile << "CT=1e-05 count: " << global_counter_5 << "\n";
+        statFile << "CT=1e-06 count: " << global_counter_6 << "\n";
+        statFile << "CT=1e-07 count: " << global_counter_7 << "\n";
+        statFile << "CT=1e-08 count: " << global_counter_8 << "\n";
+        statFile << "CT=1e-09 count: " << global_counter_9 << "\n";
+        statFile << "CT=1e-10 count: " << global_counter_10 << "\n";
+        statFile.close();
+    }
 }
