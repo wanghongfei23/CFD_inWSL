@@ -357,9 +357,9 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
         }
         break;
 
-    case temp008:
-        inter5 = &temp_008;
-        inter5Positive = &temp_008;
+    case WHFTCNSASF202_2S:
+        inter5 = &whf_TCNS_AS_myF202_2S;
+        inter5Positive = &whf_TCNS_AS_myF202_2S;
         if (fluxType == EULER) {
             reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
             reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
@@ -368,9 +368,9 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
             reconRMethod = &SpaceDis::reconRprim;
         }
         break;
-    case temp009:
-        inter5 = &temp_009;
-        inter5Positive = &temp_009;
+    case WHFTCNSASF202_NoS:
+        inter5 = &whf_TCNS_AS_myF202_NoS;
+        inter5Positive = &whf_TCNS_AS_myF202_NoS;
         if (fluxType == EULER) {
             reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
             reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
@@ -391,6 +391,115 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
             reconRMethod = &SpaceDis::reconRprim;
         }
         break;
+
+    case temp011:
+        inter5 = &temp_011;
+        inter5Positive = &temp_011;
+        if (fluxType == EULER) {
+            reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
+            reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
+        } else {
+            reconLMethod = &SpaceDis::reconLprim;
+            reconRMethod = &SpaceDis::reconRprim;
+        }
+        break;
+
+    case temp012:
+        inter5 = &temp_012;
+        inter5Positive = &temp_012;
+        if (fluxType == EULER) {
+            reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
+            reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
+        } else {
+            reconLMethod = &SpaceDis::reconLprim;
+            reconRMethod = &SpaceDis::reconRprim;
+        }
+        break;
+
+    case temp013:
+        inter5 = &temp_013;
+        inter5Positive = &temp_013;
+        if (fluxType == EULER) {
+            reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
+            reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
+        } else {
+            reconLMethod = &SpaceDis::reconLprim;
+            reconRMethod = &SpaceDis::reconRprim;
+        }
+        break;
+
+    case temp014:
+        inter5 = &temp_014;
+        inter5Positive = &temp_014;
+        if (fluxType == EULER) {
+            reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
+            reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
+        } else {
+            reconLMethod = &SpaceDis::reconLprim;
+            reconRMethod = &SpaceDis::reconRprim;
+        }
+        break;
+
+    case temp015:
+        inter5 = &temp_015;
+        inter5Positive = &temp_015;
+        if (fluxType == EULER) {
+            reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
+            reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
+        } else {
+            reconLMethod = &SpaceDis::reconLprim;
+            reconRMethod = &SpaceDis::reconRprim;
+        }
+        break;
+
+    case temp016:
+        inter5 = &temp_016;
+        inter5Positive = &temp_016;
+        if (fluxType == EULER) {
+            reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
+            reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
+        } else {
+            reconLMethod = &SpaceDis::reconLprim;
+            reconRMethod = &SpaceDis::reconRprim;
+        }
+        break;
+
+    case temp017:
+        inter5 = &temp_017;
+        inter5Positive = &temp_017;
+        if (fluxType == EULER) {
+            reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
+            reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
+        } else {
+            reconLMethod = &SpaceDis::reconLprim;
+            reconRMethod = &SpaceDis::reconRprim;
+        }
+        break;
+
+    case temp018:
+        inter5 = &temp_018;
+        inter5Positive = &temp_018;
+        if (fluxType == EULER) {
+            reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
+            reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
+        } else {
+            reconLMethod = &SpaceDis::reconLprim;
+            reconRMethod = &SpaceDis::reconRprim;
+        }
+        break;
+
+    case temp019:
+        inter5 = &temp_019;
+        inter5Positive = &temp_019;
+        if (fluxType == EULER) {
+            reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
+            reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
+        } else {
+            reconLMethod = &SpaceDis::reconLprim;
+            reconRMethod = &SpaceDis::reconRprim;
+        }
+        break;
+
 
 
 

@@ -25,8 +25,8 @@ inline long timepp = 0;
 inline long timesss = 0;
 
 // 【王鸿飞】注意gamma
-// #define GAMMA 1.4   //其他
-#define GAMMA 5.0/3.0  //RTI
+#define GAMMA 1.4   //其他
+// #define GAMMA 5.0/3.0  //RTI
 
 enum BndType {
     TYPENULL,
@@ -72,9 +72,18 @@ enum InterMethod {
     WHFTCNSAS_approx_1,     // 26
     WHFTCNSAS_fx_real,     // 27
     WHFTCNSAS_approx_2,     // 28
-    temp008,     // 29
-    temp009,     // 30
-    temp010     // 31
+    WHFTCNSASF202_2S,     // 29
+    WHFTCNSASF202_NoS,     // 30
+    temp010,     // 31
+    temp011,     // 32
+    temp012,     // 33
+    temp013,     // 34
+    temp014,     // 35
+    temp015,     // 36
+    temp016,     // 37
+    temp017,     // 38
+    temp018,     // 39
+    temp019     // 40
 };
 
 enum DiffMethod {

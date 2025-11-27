@@ -45,9 +45,18 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSAS_approx_1,"TENO-AS-approx_1"},
     {WHFTCNSAS_fx_real,"TENO-AS-fx-real"},
     {WHFTCNSAS_approx_2,"TENO-AS-approx_2"},
-    {temp008,"temp_name_008"},
-    {temp009,"temp_name_009"},
-    {temp010,"temp_name_010"}
+    {WHFTCNSASF202_2S,"TENO-AS-myF202_2S"},
+    {WHFTCNSASF202_NoS,"TENO-AS-myF202_NoS"},
+    {temp010,"temp_name_010"},
+    {temp011,"temp_name_011"},
+    {temp012,"temp_name_012"},
+    {temp013,"temp_name_013"},
+    {temp014,"temp_name_014"},
+    {temp015,"temp_name_015"},
+    {temp016,"temp_name_016"},
+    {temp017,"temp_name_017"},
+    {temp018,"temp_name_018"},
+    {temp019,"temp_name_019"}
 };
 // 【王鸿飞】end-1命名
 
@@ -60,8 +69,8 @@ int main()
     // auto prim2=eig.charToPrim(eigValues);
     // std::cout<<"finish\n";
 
-    omp_set_num_threads(10);
-    // omp_set_num_threads(1);
+    // omp_set_num_threads(10);
+    omp_set_num_threads(1);
 
     Info* info = new Info;
 
@@ -91,16 +100,27 @@ int main()
     // info->interMethod = WHFTCNSAH002;
     // info->interMethod = WHFTCNSASF102;
     // info->interMethod = WHFTCNSASF103;
-    info->interMethod = WHFTCNSASF102_reciprocal;
+    // info->interMethod = WHFTCNSASF102_reciprocal;
     // info->interMethod = WHFTCNSASF103_reciprocal;
     // info->interMethod = WHFTCNSAS_fx; // 不进行函数拟合，直接用原来近似的指数形式CT'
     // info->interMethod = WHFTCNSAS_initial; // 算CT'，原封不动的叠加A和S
     // info->interMethod = WHFTCNSAS_approx_1; // 算CT'，叠加A和S，分母近似掉-1
     // info->interMethod = WHFTCNSAS_fx_real; // 算
     // info->interMethod = WHFTCNSAS_approx_2; // 具体代入，叠加A和S，分母近似掉-1
-    // info->interMethod = temp008;
-    // info->interMethod = temp009;
+
+    // F进入2.0时代
+    info->interMethod = WHFTCNSASF202_2S;
+    // info->interMethod = WHFTCNSASF202_NoS;
     // info->interMethod = temp010;
+    // info->interMethod = temp011;
+    // info->interMethod = temp012;
+    // info->interMethod = temp013;
+    // info->interMethod = temp014;
+    // info->interMethod = temp015;
+    // info->interMethod = temp016;
+    // info->interMethod = temp017;
+    // info->interMethod = temp018;
+    // info->interMethod = temp019;
 
     // 【王鸿飞】end
 
@@ -177,13 +197,13 @@ int main()
     //  info->dim=2;
 
     // Riemann 1
-    // info->endStep = 1;
-    // info->outputDt = 0.8;
-    // info->CFL = 0.5;
-    // info->nCase = 0;
-    // info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
-    // info->iMax = { 401, 401, 2 };//参考
-    // info->dim = 2;
+    info->endStep = 1;
+    info->outputDt = 0.8;
+    info->CFL = 0.5;
+    info->nCase = 0;
+    info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
+    info->iMax = { 401, 401, 2 };//参考
+    info->dim = 2;
 
     // Riemann 2 vortex
     //  info->endStep=1;
@@ -209,16 +229,16 @@ int main()
 
     // RT instability
     // 记得改GAMMA
-     info->endStep=1;
-     info->outputDt=1.95;
-     info->CFL=0.5;
-     info->nCase=3;
-     info->calZone={0,0.25,0,1,0,0};
-    //  info->iMax={201,801,2};
-     info->iMax={101,401,2};//参考
-    //  info->iMax={65,257,2};
-     info->dim=2;
-     info->sourceType=GRAVITY;
+    //  info->endStep=1;
+    //  info->outputDt=1.95;
+    //  info->CFL=0.5;
+    //  info->nCase=3;
+    //  info->calZone={0,0.25,0,1,0,0};
+    // //  info->iMax={201,801,2};
+    //  info->iMax={101,401,2};//参考
+    // //  info->iMax={65,257,2};
+    //  info->dim=2;
+    //  info->sourceType=GRAVITY;
 
 
     // info->diffMethod=HDS6;
@@ -241,7 +261,7 @@ int main()
         int n;
         real nf;
         file >> n;
-        if (n < temp010)
+        if (n < temp019)
             info->interMethod = (InterMethod)n;
 
         file >> n;

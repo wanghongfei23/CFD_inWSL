@@ -148,9 +148,18 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSAS_approx_1,"TENO-AS-approx_1"},
     {WHFTCNSAS_fx_real,"TENO-AS-fx-real"},
     {WHFTCNSAS_approx_2,"TENO-AS-approx_2"},
-    {temp008,"temp_name_008"},
-    {temp009,"temp_name_009"},
-    {temp010,"temp_name_010"}
+    {WHFTCNSASF202_2S,"TENO-AS-myF202_2S"},
+    {WHFTCNSASF202_NoS,"TENO-AS-myF202_NoS"},
+    {temp010,"temp_name_010"},
+    {temp011,"temp_name_011"},
+    {temp012,"temp_name_012"},
+    {temp013,"temp_name_013"},
+    {temp014,"temp_name_014"},
+    {temp015,"temp_name_015"},
+    {temp016,"temp_name_016"},
+    {temp017,"temp_name_017"},
+    {temp018,"temp_name_018"},
+    {temp019,"temp_name_019"}
     // 【王鸿飞】end-1命名
 };
 

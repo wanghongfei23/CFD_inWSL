@@ -1907,11 +1907,23 @@ constexpr real whf_TCNS_AS_myF102(std::array<real, 5> q) {
   
   real eta_min = std::min({eta_im1, eta_i, eta_ip1});
 
-  // 计算min
-  real min = std::min(0.24, eta_min);
-  
-  // 计算C_T_prime
-  real C_T = 1.0/(1255.2*min*min - 152.4*min + 9.6);
+            // // 计算min
+            // real min = std::min(0.24, eta_min);
+            
+            // // 计算C_T_prime
+
+            // real C_T = 1.0/(1255.2*min*min - 152.4*min + 9.6);
+
+            // 计算min
+            real min = std::min(0.24, eta_min);
+            
+            real m = 1 - min/0.24;
+
+            // 计算C_T_prime
+
+            // real C_T = 0.157042/(11.350924*m*m - 5.740552*m + 1.506621);
+            real C_T = 1.0/(72.3*m*m - 36.564*m + 9.6);
+            
   //CT adapt end
   
   real CT_1 = 1 - C_T;
@@ -2010,11 +2022,22 @@ constexpr real whf_TCNS_AS_myF103(std::array<real, 5> q) {
   
   real eta_min = std::min({eta_im1, eta_i, eta_ip1});
 
-  // 计算min
-  real min = std::min(0.24, eta_min);
+                // // 计算min
+                // real min = std::min(0.24, eta_min);
+                
+                // // 计算C_T_prime
+
+                // real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+
+                // 计算min
+                real min = std::min(0.24, eta_min);
+                
+                real m = 1 - min/0.24;
+
+                // 计算C_T_prime
+
+                real C_T = 0.157042/(8.825391*m*m*m - 1.887163*m*m - 0.445582*m + 1.065484);
   
-  // 计算C_T_prime
-  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
   //CT adapt end
   
   real CT_1 = 1 - C_T;
@@ -2116,7 +2139,7 @@ constexpr real whf_TCNS_AS_myF102_reciprocal(std::array<real, 5> q) {
   
   // 计算C_T_prime
 
-  real m = 1-min;
+  real m = 1 - min/0.24;
 
   real C_T = 0.157042*(-0.561516*m*m + -0.528721*m + 1.086314);
 
@@ -2222,7 +2245,7 @@ constexpr real whf_TCNS_AS_myF103_reciprocal(std::array<real, 5> q) {
   
   // 计算C_T_prime
 
-  real m = 1-min;
+  real m = 1 - min/0.24;
 
   real C_T = 0.157042*(2.882424*m*m*m + -4.885152*m*m + 1.200647*m + 0.942236);
 
@@ -2858,7 +2881,10 @@ constexpr real whf_TCNS_AS_approx_2(std::array<real, 5> q) {
   }
 }
 
-constexpr real temp_008(std::array<real, 5> q) {
+
+// 【王鸿飞】F2.0时代
+
+constexpr real whf_TCNS_AS_myF202_2S(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
   std::array<real, 3> beta = {
       1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
@@ -2902,8 +2928,12 @@ constexpr real temp_008(std::array<real, 5> q) {
   // 计算min
   real min = std::min(0.24, eta_min);
   
+  real m = 1 - min/0.24;
+
   // 计算C_T_prime
-  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+
+  real C_T = -0.088*m*m + 0.26*m - 0.00062;
+
   //CT adapt end
   
   real CT_1 = 1 - C_T;
@@ -2959,7 +2989,8 @@ constexpr real temp_008(std::array<real, 5> q) {
   }
 }
 
-constexpr real temp_009(std::array<real, 5> q) {
+
+constexpr real whf_TCNS_AS_myF202_NoS(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
   std::array<real, 3> beta = {
       1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
@@ -3003,8 +3034,12 @@ constexpr real temp_009(std::array<real, 5> q) {
   // 计算min
   real min = std::min(0.24, eta_min);
   
+  real m = 1 - min/0.24;
+
   // 计算C_T_prime
-  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+
+  real C_T = -0.088182*m*m + 0.259395*m - 0.000616;
+
   //CT adapt end
   
   real CT_1 = 1 - C_T;
@@ -3059,6 +3094,7 @@ constexpr real temp_009(std::array<real, 5> q) {
     break;
   }
 }
+
 
 constexpr real temp_010(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
@@ -3160,6 +3196,927 @@ constexpr real temp_010(std::array<real, 5> q) {
     break;
   }
 }
+
+
+constexpr real temp_011(std::array<real, 5> q) {
+  real eps = 1e-40; // 1e-10;
+  std::array<real, 3> beta = {
+      1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+          1.0 / 4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) +
+          1.0 / 4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
+          1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2)};
+
+  // int minBeta=(beta[0]>beta[1])? ((beta[2]>beta[1])? 1:
+  // 2):((beta[2]>beta[0])? 0 : 2);
+  unsigned short minBeta =
+      std::min_element(beta.begin(), beta.end()) - beta.begin();
+  //CT adapt begin
+  // real xi = 1e-3;
+  // real Cr = 0.24;
+  // 此时 epsilon_A = 2.7551*1e-7 ， 1/Cr = 4.1666667
+
+  real epsilon_A = 2.7551*1e-7;
+
+    std::array<real, 4> delta_q;
+    delta_q[0] = q[0] - q[1];
+    delta_q[1] = q[1] - q[2];
+    delta_q[2] = q[2] - q[3];
+    delta_q[3] = q[3] - q[4];
+    
+  // 计算η值
+  real eta_im1 = (std::abs(2.0*delta_q[1]*delta_q[0]) + epsilon_A) / 
+                  (std::pow(delta_q[1], 2) + std::pow(delta_q[0], 2) + epsilon_A);
+  
+  real eta_i = (std::abs(2.0*delta_q[2]*delta_q[1]) + epsilon_A) / 
+                (std::pow(delta_q[2], 2) + std::pow(delta_q[1], 2) + epsilon_A);
+  
+  real eta_ip1 = (std::abs(2.0*delta_q[3]*delta_q[2]) + epsilon_A) / 
+                  (std::pow(delta_q[3], 2) + std::pow(delta_q[2], 2) + epsilon_A);
+  
+  real eta_min = std::min({eta_im1, eta_i, eta_ip1});
+
+  // 计算min
+  real min = std::min(0.24, eta_min);
+  
+  // 计算C_T_prime
+  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+  //CT adapt end
+  
+  real CT_1 = 1 - C_T;
+  real tau = std::abs(beta[2] -
+                      beta[0]); //,KK=0.15704178024750198*(beta[minBeta]+tau);
+  real rr = C_T * tau - CT_1 * beta[minBeta];
+  real ll = tau * beta[minBeta];
+  // unsigned
+  // flag=(minBeta!=0&&ll<rr*beta[0])+((minBeta!=1&&ll<rr*beta[1])<<1)+((minBeta!=2&&ll<rr*beta[2])<<2);
+  unsigned short flag = 0;
+  if (ll < rr * beta[0])
+    flag += 1;
+  if (ll < rr * beta[1])
+    flag += 2;
+  if (ll < rr * beta[2])
+    flag += 4;
+  switch (flag) {
+  case 0:
+    /* 1,1,1 */
+    return 3.0 / 128.0 * q[0] - 5.0 / 32.0 * q[1] + 45.0 / 64.0 * q[2] +
+           15.0 / 32.0 * q[3] - 5.0 / 128.0 * q[4];
+    break;
+  case 1:
+    /* 0,1,1 */
+    return -1.0 / 16.0 * q[1] + 9.0 / 16.0 * q[2] + 9.0 / 16.0 * q[3] -
+           1.0 / 16.0 * q[4];
+    break;
+  case 2:
+    /* 1,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 3:
+    /* 0,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 4:
+    /* 1,1,0 */
+    return 1.0 / 16.0 * q[0] - 5.0 / 16.0 * q[1] + 15.0 / 16.0 * q[2] +
+           5.0 / 16.0 * q[3];
+    break;
+  case 5:
+    /* 0,1,0 */
+    return -1.0 / 8.0 * q[1] + 3.0 / 4.0 * q[2] + 3.0 / 8.0 * q[3];
+    break;
+  case 6:
+    /* 1,0,0 */
+    return 3.0 / 8.0 * q[0] - 5.0 / 4.0 * q[1] + 15.0 / 8.0 * q[2];
+    break;
+  default:
+    /* 0,0,0 */
+    return q[2];
+    break;
+  }
+}
+
+
+constexpr real temp_012(std::array<real, 5> q) {
+  real eps = 1e-40; // 1e-10;
+  std::array<real, 3> beta = {
+      1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+          1.0 / 4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) +
+          1.0 / 4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
+          1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2)};
+
+  // int minBeta=(beta[0]>beta[1])? ((beta[2]>beta[1])? 1:
+  // 2):((beta[2]>beta[0])? 0 : 2);
+  unsigned short minBeta =
+      std::min_element(beta.begin(), beta.end()) - beta.begin();
+  //CT adapt begin
+  // real xi = 1e-3;
+  // real Cr = 0.24;
+  // 此时 epsilon_A = 2.7551*1e-7 ， 1/Cr = 4.1666667
+
+  real epsilon_A = 2.7551*1e-7;
+
+    std::array<real, 4> delta_q;
+    delta_q[0] = q[0] - q[1];
+    delta_q[1] = q[1] - q[2];
+    delta_q[2] = q[2] - q[3];
+    delta_q[3] = q[3] - q[4];
+    
+  // 计算η值
+  real eta_im1 = (std::abs(2.0*delta_q[1]*delta_q[0]) + epsilon_A) / 
+                  (std::pow(delta_q[1], 2) + std::pow(delta_q[0], 2) + epsilon_A);
+  
+  real eta_i = (std::abs(2.0*delta_q[2]*delta_q[1]) + epsilon_A) / 
+                (std::pow(delta_q[2], 2) + std::pow(delta_q[1], 2) + epsilon_A);
+  
+  real eta_ip1 = (std::abs(2.0*delta_q[3]*delta_q[2]) + epsilon_A) / 
+                  (std::pow(delta_q[3], 2) + std::pow(delta_q[2], 2) + epsilon_A);
+  
+  real eta_min = std::min({eta_im1, eta_i, eta_ip1});
+
+  // 计算min
+  real min = std::min(0.24, eta_min);
+  
+  // 计算C_T_prime
+  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+  //CT adapt end
+  
+  real CT_1 = 1 - C_T;
+  real tau = std::abs(beta[2] -
+                      beta[0]); //,KK=0.15704178024750198*(beta[minBeta]+tau);
+  real rr = C_T * tau - CT_1 * beta[minBeta];
+  real ll = tau * beta[minBeta];
+  // unsigned
+  // flag=(minBeta!=0&&ll<rr*beta[0])+((minBeta!=1&&ll<rr*beta[1])<<1)+((minBeta!=2&&ll<rr*beta[2])<<2);
+  unsigned short flag = 0;
+  if (ll < rr * beta[0])
+    flag += 1;
+  if (ll < rr * beta[1])
+    flag += 2;
+  if (ll < rr * beta[2])
+    flag += 4;
+  switch (flag) {
+  case 0:
+    /* 1,1,1 */
+    return 3.0 / 128.0 * q[0] - 5.0 / 32.0 * q[1] + 45.0 / 64.0 * q[2] +
+           15.0 / 32.0 * q[3] - 5.0 / 128.0 * q[4];
+    break;
+  case 1:
+    /* 0,1,1 */
+    return -1.0 / 16.0 * q[1] + 9.0 / 16.0 * q[2] + 9.0 / 16.0 * q[3] -
+           1.0 / 16.0 * q[4];
+    break;
+  case 2:
+    /* 1,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 3:
+    /* 0,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 4:
+    /* 1,1,0 */
+    return 1.0 / 16.0 * q[0] - 5.0 / 16.0 * q[1] + 15.0 / 16.0 * q[2] +
+           5.0 / 16.0 * q[3];
+    break;
+  case 5:
+    /* 0,1,0 */
+    return -1.0 / 8.0 * q[1] + 3.0 / 4.0 * q[2] + 3.0 / 8.0 * q[3];
+    break;
+  case 6:
+    /* 1,0,0 */
+    return 3.0 / 8.0 * q[0] - 5.0 / 4.0 * q[1] + 15.0 / 8.0 * q[2];
+    break;
+  default:
+    /* 0,0,0 */
+    return q[2];
+    break;
+  }
+}
+
+
+constexpr real temp_013(std::array<real, 5> q) {
+  real eps = 1e-40; // 1e-10;
+  std::array<real, 3> beta = {
+      1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+          1.0 / 4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) +
+          1.0 / 4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
+          1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2)};
+
+  // int minBeta=(beta[0]>beta[1])? ((beta[2]>beta[1])? 1:
+  // 2):((beta[2]>beta[0])? 0 : 2);
+  unsigned short minBeta =
+      std::min_element(beta.begin(), beta.end()) - beta.begin();
+  //CT adapt begin
+  // real xi = 1e-3;
+  // real Cr = 0.24;
+  // 此时 epsilon_A = 2.7551*1e-7 ， 1/Cr = 4.1666667
+
+  real epsilon_A = 2.7551*1e-7;
+
+    std::array<real, 4> delta_q;
+    delta_q[0] = q[0] - q[1];
+    delta_q[1] = q[1] - q[2];
+    delta_q[2] = q[2] - q[3];
+    delta_q[3] = q[3] - q[4];
+    
+  // 计算η值
+  real eta_im1 = (std::abs(2.0*delta_q[1]*delta_q[0]) + epsilon_A) / 
+                  (std::pow(delta_q[1], 2) + std::pow(delta_q[0], 2) + epsilon_A);
+  
+  real eta_i = (std::abs(2.0*delta_q[2]*delta_q[1]) + epsilon_A) / 
+                (std::pow(delta_q[2], 2) + std::pow(delta_q[1], 2) + epsilon_A);
+  
+  real eta_ip1 = (std::abs(2.0*delta_q[3]*delta_q[2]) + epsilon_A) / 
+                  (std::pow(delta_q[3], 2) + std::pow(delta_q[2], 2) + epsilon_A);
+  
+  real eta_min = std::min({eta_im1, eta_i, eta_ip1});
+
+  // 计算min
+  real min = std::min(0.24, eta_min);
+  
+  // 计算C_T_prime
+  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+  //CT adapt end
+  
+  real CT_1 = 1 - C_T;
+  real tau = std::abs(beta[2] -
+                      beta[0]); //,KK=0.15704178024750198*(beta[minBeta]+tau);
+  real rr = C_T * tau - CT_1 * beta[minBeta];
+  real ll = tau * beta[minBeta];
+  // unsigned
+  // flag=(minBeta!=0&&ll<rr*beta[0])+((minBeta!=1&&ll<rr*beta[1])<<1)+((minBeta!=2&&ll<rr*beta[2])<<2);
+  unsigned short flag = 0;
+  if (ll < rr * beta[0])
+    flag += 1;
+  if (ll < rr * beta[1])
+    flag += 2;
+  if (ll < rr * beta[2])
+    flag += 4;
+  switch (flag) {
+  case 0:
+    /* 1,1,1 */
+    return 3.0 / 128.0 * q[0] - 5.0 / 32.0 * q[1] + 45.0 / 64.0 * q[2] +
+           15.0 / 32.0 * q[3] - 5.0 / 128.0 * q[4];
+    break;
+  case 1:
+    /* 0,1,1 */
+    return -1.0 / 16.0 * q[1] + 9.0 / 16.0 * q[2] + 9.0 / 16.0 * q[3] -
+           1.0 / 16.0 * q[4];
+    break;
+  case 2:
+    /* 1,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 3:
+    /* 0,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 4:
+    /* 1,1,0 */
+    return 1.0 / 16.0 * q[0] - 5.0 / 16.0 * q[1] + 15.0 / 16.0 * q[2] +
+           5.0 / 16.0 * q[3];
+    break;
+  case 5:
+    /* 0,1,0 */
+    return -1.0 / 8.0 * q[1] + 3.0 / 4.0 * q[2] + 3.0 / 8.0 * q[3];
+    break;
+  case 6:
+    /* 1,0,0 */
+    return 3.0 / 8.0 * q[0] - 5.0 / 4.0 * q[1] + 15.0 / 8.0 * q[2];
+    break;
+  default:
+    /* 0,0,0 */
+    return q[2];
+    break;
+  }
+}
+
+
+constexpr real temp_014(std::array<real, 5> q) {
+  real eps = 1e-40; // 1e-10;
+  std::array<real, 3> beta = {
+      1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+          1.0 / 4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) +
+          1.0 / 4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
+          1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2)};
+
+  // int minBeta=(beta[0]>beta[1])? ((beta[2]>beta[1])? 1:
+  // 2):((beta[2]>beta[0])? 0 : 2);
+  unsigned short minBeta =
+      std::min_element(beta.begin(), beta.end()) - beta.begin();
+  //CT adapt begin
+  // real xi = 1e-3;
+  // real Cr = 0.24;
+  // 此时 epsilon_A = 2.7551*1e-7 ， 1/Cr = 4.1666667
+
+  real epsilon_A = 2.7551*1e-7;
+
+    std::array<real, 4> delta_q;
+    delta_q[0] = q[0] - q[1];
+    delta_q[1] = q[1] - q[2];
+    delta_q[2] = q[2] - q[3];
+    delta_q[3] = q[3] - q[4];
+    
+  // 计算η值
+  real eta_im1 = (std::abs(2.0*delta_q[1]*delta_q[0]) + epsilon_A) / 
+                  (std::pow(delta_q[1], 2) + std::pow(delta_q[0], 2) + epsilon_A);
+  
+  real eta_i = (std::abs(2.0*delta_q[2]*delta_q[1]) + epsilon_A) / 
+                (std::pow(delta_q[2], 2) + std::pow(delta_q[1], 2) + epsilon_A);
+  
+  real eta_ip1 = (std::abs(2.0*delta_q[3]*delta_q[2]) + epsilon_A) / 
+                  (std::pow(delta_q[3], 2) + std::pow(delta_q[2], 2) + epsilon_A);
+  
+  real eta_min = std::min({eta_im1, eta_i, eta_ip1});
+
+  // 计算min
+  real min = std::min(0.24, eta_min);
+  
+  // 计算C_T_prime
+  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+  //CT adapt end
+  
+  real CT_1 = 1 - C_T;
+  real tau = std::abs(beta[2] -
+                      beta[0]); //,KK=0.15704178024750198*(beta[minBeta]+tau);
+  real rr = C_T * tau - CT_1 * beta[minBeta];
+  real ll = tau * beta[minBeta];
+  // unsigned
+  // flag=(minBeta!=0&&ll<rr*beta[0])+((minBeta!=1&&ll<rr*beta[1])<<1)+((minBeta!=2&&ll<rr*beta[2])<<2);
+  unsigned short flag = 0;
+  if (ll < rr * beta[0])
+    flag += 1;
+  if (ll < rr * beta[1])
+    flag += 2;
+  if (ll < rr * beta[2])
+    flag += 4;
+  switch (flag) {
+  case 0:
+    /* 1,1,1 */
+    return 3.0 / 128.0 * q[0] - 5.0 / 32.0 * q[1] + 45.0 / 64.0 * q[2] +
+           15.0 / 32.0 * q[3] - 5.0 / 128.0 * q[4];
+    break;
+  case 1:
+    /* 0,1,1 */
+    return -1.0 / 16.0 * q[1] + 9.0 / 16.0 * q[2] + 9.0 / 16.0 * q[3] -
+           1.0 / 16.0 * q[4];
+    break;
+  case 2:
+    /* 1,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 3:
+    /* 0,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 4:
+    /* 1,1,0 */
+    return 1.0 / 16.0 * q[0] - 5.0 / 16.0 * q[1] + 15.0 / 16.0 * q[2] +
+           5.0 / 16.0 * q[3];
+    break;
+  case 5:
+    /* 0,1,0 */
+    return -1.0 / 8.0 * q[1] + 3.0 / 4.0 * q[2] + 3.0 / 8.0 * q[3];
+    break;
+  case 6:
+    /* 1,0,0 */
+    return 3.0 / 8.0 * q[0] - 5.0 / 4.0 * q[1] + 15.0 / 8.0 * q[2];
+    break;
+  default:
+    /* 0,0,0 */
+    return q[2];
+    break;
+  }
+}
+
+
+constexpr real temp_015(std::array<real, 5> q) {
+  real eps = 1e-40; // 1e-10;
+  std::array<real, 3> beta = {
+      1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+          1.0 / 4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) +
+          1.0 / 4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
+          1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2)};
+
+  // int minBeta=(beta[0]>beta[1])? ((beta[2]>beta[1])? 1:
+  // 2):((beta[2]>beta[0])? 0 : 2);
+  unsigned short minBeta =
+      std::min_element(beta.begin(), beta.end()) - beta.begin();
+  //CT adapt begin
+  // real xi = 1e-3;
+  // real Cr = 0.24;
+  // 此时 epsilon_A = 2.7551*1e-7 ， 1/Cr = 4.1666667
+
+  real epsilon_A = 2.7551*1e-7;
+
+    std::array<real, 4> delta_q;
+    delta_q[0] = q[0] - q[1];
+    delta_q[1] = q[1] - q[2];
+    delta_q[2] = q[2] - q[3];
+    delta_q[3] = q[3] - q[4];
+    
+  // 计算η值
+  real eta_im1 = (std::abs(2.0*delta_q[1]*delta_q[0]) + epsilon_A) / 
+                  (std::pow(delta_q[1], 2) + std::pow(delta_q[0], 2) + epsilon_A);
+  
+  real eta_i = (std::abs(2.0*delta_q[2]*delta_q[1]) + epsilon_A) / 
+                (std::pow(delta_q[2], 2) + std::pow(delta_q[1], 2) + epsilon_A);
+  
+  real eta_ip1 = (std::abs(2.0*delta_q[3]*delta_q[2]) + epsilon_A) / 
+                  (std::pow(delta_q[3], 2) + std::pow(delta_q[2], 2) + epsilon_A);
+  
+  real eta_min = std::min({eta_im1, eta_i, eta_ip1});
+
+  // 计算min
+  real min = std::min(0.24, eta_min);
+  
+  // 计算C_T_prime
+  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+  //CT adapt end
+  
+  real CT_1 = 1 - C_T;
+  real tau = std::abs(beta[2] -
+                      beta[0]); //,KK=0.15704178024750198*(beta[minBeta]+tau);
+  real rr = C_T * tau - CT_1 * beta[minBeta];
+  real ll = tau * beta[minBeta];
+  // unsigned
+  // flag=(minBeta!=0&&ll<rr*beta[0])+((minBeta!=1&&ll<rr*beta[1])<<1)+((minBeta!=2&&ll<rr*beta[2])<<2);
+  unsigned short flag = 0;
+  if (ll < rr * beta[0])
+    flag += 1;
+  if (ll < rr * beta[1])
+    flag += 2;
+  if (ll < rr * beta[2])
+    flag += 4;
+  switch (flag) {
+  case 0:
+    /* 1,1,1 */
+    return 3.0 / 128.0 * q[0] - 5.0 / 32.0 * q[1] + 45.0 / 64.0 * q[2] +
+           15.0 / 32.0 * q[3] - 5.0 / 128.0 * q[4];
+    break;
+  case 1:
+    /* 0,1,1 */
+    return -1.0 / 16.0 * q[1] + 9.0 / 16.0 * q[2] + 9.0 / 16.0 * q[3] -
+           1.0 / 16.0 * q[4];
+    break;
+  case 2:
+    /* 1,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 3:
+    /* 0,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 4:
+    /* 1,1,0 */
+    return 1.0 / 16.0 * q[0] - 5.0 / 16.0 * q[1] + 15.0 / 16.0 * q[2] +
+           5.0 / 16.0 * q[3];
+    break;
+  case 5:
+    /* 0,1,0 */
+    return -1.0 / 8.0 * q[1] + 3.0 / 4.0 * q[2] + 3.0 / 8.0 * q[3];
+    break;
+  case 6:
+    /* 1,0,0 */
+    return 3.0 / 8.0 * q[0] - 5.0 / 4.0 * q[1] + 15.0 / 8.0 * q[2];
+    break;
+  default:
+    /* 0,0,0 */
+    return q[2];
+    break;
+  }
+}
+
+
+constexpr real temp_016(std::array<real, 5> q) {
+  real eps = 1e-40; // 1e-10;
+  std::array<real, 3> beta = {
+      1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+          1.0 / 4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) +
+          1.0 / 4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
+          1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2)};
+
+  // int minBeta=(beta[0]>beta[1])? ((beta[2]>beta[1])? 1:
+  // 2):((beta[2]>beta[0])? 0 : 2);
+  unsigned short minBeta =
+      std::min_element(beta.begin(), beta.end()) - beta.begin();
+  //CT adapt begin
+  // real xi = 1e-3;
+  // real Cr = 0.24;
+  // 此时 epsilon_A = 2.7551*1e-7 ， 1/Cr = 4.1666667
+
+  real epsilon_A = 2.7551*1e-7;
+
+    std::array<real, 4> delta_q;
+    delta_q[0] = q[0] - q[1];
+    delta_q[1] = q[1] - q[2];
+    delta_q[2] = q[2] - q[3];
+    delta_q[3] = q[3] - q[4];
+    
+  // 计算η值
+  real eta_im1 = (std::abs(2.0*delta_q[1]*delta_q[0]) + epsilon_A) / 
+                  (std::pow(delta_q[1], 2) + std::pow(delta_q[0], 2) + epsilon_A);
+  
+  real eta_i = (std::abs(2.0*delta_q[2]*delta_q[1]) + epsilon_A) / 
+                (std::pow(delta_q[2], 2) + std::pow(delta_q[1], 2) + epsilon_A);
+  
+  real eta_ip1 = (std::abs(2.0*delta_q[3]*delta_q[2]) + epsilon_A) / 
+                  (std::pow(delta_q[3], 2) + std::pow(delta_q[2], 2) + epsilon_A);
+  
+  real eta_min = std::min({eta_im1, eta_i, eta_ip1});
+
+  // 计算min
+  real min = std::min(0.24, eta_min);
+  
+  // 计算C_T_prime
+  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+  //CT adapt end
+  
+  real CT_1 = 1 - C_T;
+  real tau = std::abs(beta[2] -
+                      beta[0]); //,KK=0.15704178024750198*(beta[minBeta]+tau);
+  real rr = C_T * tau - CT_1 * beta[minBeta];
+  real ll = tau * beta[minBeta];
+  // unsigned
+  // flag=(minBeta!=0&&ll<rr*beta[0])+((minBeta!=1&&ll<rr*beta[1])<<1)+((minBeta!=2&&ll<rr*beta[2])<<2);
+  unsigned short flag = 0;
+  if (ll < rr * beta[0])
+    flag += 1;
+  if (ll < rr * beta[1])
+    flag += 2;
+  if (ll < rr * beta[2])
+    flag += 4;
+  switch (flag) {
+  case 0:
+    /* 1,1,1 */
+    return 3.0 / 128.0 * q[0] - 5.0 / 32.0 * q[1] + 45.0 / 64.0 * q[2] +
+           15.0 / 32.0 * q[3] - 5.0 / 128.0 * q[4];
+    break;
+  case 1:
+    /* 0,1,1 */
+    return -1.0 / 16.0 * q[1] + 9.0 / 16.0 * q[2] + 9.0 / 16.0 * q[3] -
+           1.0 / 16.0 * q[4];
+    break;
+  case 2:
+    /* 1,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 3:
+    /* 0,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 4:
+    /* 1,1,0 */
+    return 1.0 / 16.0 * q[0] - 5.0 / 16.0 * q[1] + 15.0 / 16.0 * q[2] +
+           5.0 / 16.0 * q[3];
+    break;
+  case 5:
+    /* 0,1,0 */
+    return -1.0 / 8.0 * q[1] + 3.0 / 4.0 * q[2] + 3.0 / 8.0 * q[3];
+    break;
+  case 6:
+    /* 1,0,0 */
+    return 3.0 / 8.0 * q[0] - 5.0 / 4.0 * q[1] + 15.0 / 8.0 * q[2];
+    break;
+  default:
+    /* 0,0,0 */
+    return q[2];
+    break;
+  }
+}
+
+
+constexpr real temp_017(std::array<real, 5> q) {
+  real eps = 1e-40; // 1e-10;
+  std::array<real, 3> beta = {
+      1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+          1.0 / 4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) +
+          1.0 / 4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
+          1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2)};
+
+  // int minBeta=(beta[0]>beta[1])? ((beta[2]>beta[1])? 1:
+  // 2):((beta[2]>beta[0])? 0 : 2);
+  unsigned short minBeta =
+      std::min_element(beta.begin(), beta.end()) - beta.begin();
+  //CT adapt begin
+  // real xi = 1e-3;
+  // real Cr = 0.24;
+  // 此时 epsilon_A = 2.7551*1e-7 ， 1/Cr = 4.1666667
+
+  real epsilon_A = 2.7551*1e-7;
+
+    std::array<real, 4> delta_q;
+    delta_q[0] = q[0] - q[1];
+    delta_q[1] = q[1] - q[2];
+    delta_q[2] = q[2] - q[3];
+    delta_q[3] = q[3] - q[4];
+    
+  // 计算η值
+  real eta_im1 = (std::abs(2.0*delta_q[1]*delta_q[0]) + epsilon_A) / 
+                  (std::pow(delta_q[1], 2) + std::pow(delta_q[0], 2) + epsilon_A);
+  
+  real eta_i = (std::abs(2.0*delta_q[2]*delta_q[1]) + epsilon_A) / 
+                (std::pow(delta_q[2], 2) + std::pow(delta_q[1], 2) + epsilon_A);
+  
+  real eta_ip1 = (std::abs(2.0*delta_q[3]*delta_q[2]) + epsilon_A) / 
+                  (std::pow(delta_q[3], 2) + std::pow(delta_q[2], 2) + epsilon_A);
+  
+  real eta_min = std::min({eta_im1, eta_i, eta_ip1});
+
+  // 计算min
+  real min = std::min(0.24, eta_min);
+  
+  // 计算C_T_prime
+  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+  //CT adapt end
+  
+  real CT_1 = 1 - C_T;
+  real tau = std::abs(beta[2] -
+                      beta[0]); //,KK=0.15704178024750198*(beta[minBeta]+tau);
+  real rr = C_T * tau - CT_1 * beta[minBeta];
+  real ll = tau * beta[minBeta];
+  // unsigned
+  // flag=(minBeta!=0&&ll<rr*beta[0])+((minBeta!=1&&ll<rr*beta[1])<<1)+((minBeta!=2&&ll<rr*beta[2])<<2);
+  unsigned short flag = 0;
+  if (ll < rr * beta[0])
+    flag += 1;
+  if (ll < rr * beta[1])
+    flag += 2;
+  if (ll < rr * beta[2])
+    flag += 4;
+  switch (flag) {
+  case 0:
+    /* 1,1,1 */
+    return 3.0 / 128.0 * q[0] - 5.0 / 32.0 * q[1] + 45.0 / 64.0 * q[2] +
+           15.0 / 32.0 * q[3] - 5.0 / 128.0 * q[4];
+    break;
+  case 1:
+    /* 0,1,1 */
+    return -1.0 / 16.0 * q[1] + 9.0 / 16.0 * q[2] + 9.0 / 16.0 * q[3] -
+           1.0 / 16.0 * q[4];
+    break;
+  case 2:
+    /* 1,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 3:
+    /* 0,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 4:
+    /* 1,1,0 */
+    return 1.0 / 16.0 * q[0] - 5.0 / 16.0 * q[1] + 15.0 / 16.0 * q[2] +
+           5.0 / 16.0 * q[3];
+    break;
+  case 5:
+    /* 0,1,0 */
+    return -1.0 / 8.0 * q[1] + 3.0 / 4.0 * q[2] + 3.0 / 8.0 * q[3];
+    break;
+  case 6:
+    /* 1,0,0 */
+    return 3.0 / 8.0 * q[0] - 5.0 / 4.0 * q[1] + 15.0 / 8.0 * q[2];
+    break;
+  default:
+    /* 0,0,0 */
+    return q[2];
+    break;
+  }
+}
+
+
+constexpr real temp_018(std::array<real, 5> q) {
+  real eps = 1e-40; // 1e-10;
+  std::array<real, 3> beta = {
+      1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+          1.0 / 4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) +
+          1.0 / 4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
+          1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2)};
+
+  // int minBeta=(beta[0]>beta[1])? ((beta[2]>beta[1])? 1:
+  // 2):((beta[2]>beta[0])? 0 : 2);
+  unsigned short minBeta =
+      std::min_element(beta.begin(), beta.end()) - beta.begin();
+  //CT adapt begin
+  // real xi = 1e-3;
+  // real Cr = 0.24;
+  // 此时 epsilon_A = 2.7551*1e-7 ， 1/Cr = 4.1666667
+
+  real epsilon_A = 2.7551*1e-7;
+
+    std::array<real, 4> delta_q;
+    delta_q[0] = q[0] - q[1];
+    delta_q[1] = q[1] - q[2];
+    delta_q[2] = q[2] - q[3];
+    delta_q[3] = q[3] - q[4];
+    
+  // 计算η值
+  real eta_im1 = (std::abs(2.0*delta_q[1]*delta_q[0]) + epsilon_A) / 
+                  (std::pow(delta_q[1], 2) + std::pow(delta_q[0], 2) + epsilon_A);
+  
+  real eta_i = (std::abs(2.0*delta_q[2]*delta_q[1]) + epsilon_A) / 
+                (std::pow(delta_q[2], 2) + std::pow(delta_q[1], 2) + epsilon_A);
+  
+  real eta_ip1 = (std::abs(2.0*delta_q[3]*delta_q[2]) + epsilon_A) / 
+                  (std::pow(delta_q[3], 2) + std::pow(delta_q[2], 2) + epsilon_A);
+  
+  real eta_min = std::min({eta_im1, eta_i, eta_ip1});
+
+  // 计算min
+  real min = std::min(0.24, eta_min);
+  
+  // 计算C_T_prime
+  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+  //CT adapt end
+  
+  real CT_1 = 1 - C_T;
+  real tau = std::abs(beta[2] -
+                      beta[0]); //,KK=0.15704178024750198*(beta[minBeta]+tau);
+  real rr = C_T * tau - CT_1 * beta[minBeta];
+  real ll = tau * beta[minBeta];
+  // unsigned
+  // flag=(minBeta!=0&&ll<rr*beta[0])+((minBeta!=1&&ll<rr*beta[1])<<1)+((minBeta!=2&&ll<rr*beta[2])<<2);
+  unsigned short flag = 0;
+  if (ll < rr * beta[0])
+    flag += 1;
+  if (ll < rr * beta[1])
+    flag += 2;
+  if (ll < rr * beta[2])
+    flag += 4;
+  switch (flag) {
+  case 0:
+    /* 1,1,1 */
+    return 3.0 / 128.0 * q[0] - 5.0 / 32.0 * q[1] + 45.0 / 64.0 * q[2] +
+           15.0 / 32.0 * q[3] - 5.0 / 128.0 * q[4];
+    break;
+  case 1:
+    /* 0,1,1 */
+    return -1.0 / 16.0 * q[1] + 9.0 / 16.0 * q[2] + 9.0 / 16.0 * q[3] -
+           1.0 / 16.0 * q[4];
+    break;
+  case 2:
+    /* 1,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 3:
+    /* 0,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 4:
+    /* 1,1,0 */
+    return 1.0 / 16.0 * q[0] - 5.0 / 16.0 * q[1] + 15.0 / 16.0 * q[2] +
+           5.0 / 16.0 * q[3];
+    break;
+  case 5:
+    /* 0,1,0 */
+    return -1.0 / 8.0 * q[1] + 3.0 / 4.0 * q[2] + 3.0 / 8.0 * q[3];
+    break;
+  case 6:
+    /* 1,0,0 */
+    return 3.0 / 8.0 * q[0] - 5.0 / 4.0 * q[1] + 15.0 / 8.0 * q[2];
+    break;
+  default:
+    /* 0,0,0 */
+    return q[2];
+    break;
+  }
+}
+
+
+constexpr real temp_019(std::array<real, 5> q) {
+  real eps = 1e-40; // 1e-10;
+  std::array<real, 3> beta = {
+      1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+          1.0 / 4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) +
+          1.0 / 4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2),
+
+      1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
+          1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2)};
+
+  // int minBeta=(beta[0]>beta[1])? ((beta[2]>beta[1])? 1:
+  // 2):((beta[2]>beta[0])? 0 : 2);
+  unsigned short minBeta =
+      std::min_element(beta.begin(), beta.end()) - beta.begin();
+  //CT adapt begin
+  // real xi = 1e-3;
+  // real Cr = 0.24;
+  // 此时 epsilon_A = 2.7551*1e-7 ， 1/Cr = 4.1666667
+
+  real epsilon_A = 2.7551*1e-7;
+
+    std::array<real, 4> delta_q;
+    delta_q[0] = q[0] - q[1];
+    delta_q[1] = q[1] - q[2];
+    delta_q[2] = q[2] - q[3];
+    delta_q[3] = q[3] - q[4];
+    
+  // 计算η值
+  real eta_im1 = (std::abs(2.0*delta_q[1]*delta_q[0]) + epsilon_A) / 
+                  (std::pow(delta_q[1], 2) + std::pow(delta_q[0], 2) + epsilon_A);
+  
+  real eta_i = (std::abs(2.0*delta_q[2]*delta_q[1]) + epsilon_A) / 
+                (std::pow(delta_q[2], 2) + std::pow(delta_q[1], 2) + epsilon_A);
+  
+  real eta_ip1 = (std::abs(2.0*delta_q[3]*delta_q[2]) + epsilon_A) / 
+                  (std::pow(delta_q[3], 2) + std::pow(delta_q[2], 2) + epsilon_A);
+  
+  real eta_min = std::min({eta_im1, eta_i, eta_ip1});
+
+  // 计算min
+  real min = std::min(0.24, eta_min);
+  
+  // 计算C_T_prime
+  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+  //CT adapt end
+  
+  real CT_1 = 1 - C_T;
+  real tau = std::abs(beta[2] -
+                      beta[0]); //,KK=0.15704178024750198*(beta[minBeta]+tau);
+  real rr = C_T * tau - CT_1 * beta[minBeta];
+  real ll = tau * beta[minBeta];
+  // unsigned
+  // flag=(minBeta!=0&&ll<rr*beta[0])+((minBeta!=1&&ll<rr*beta[1])<<1)+((minBeta!=2&&ll<rr*beta[2])<<2);
+  unsigned short flag = 0;
+  if (ll < rr * beta[0])
+    flag += 1;
+  if (ll < rr * beta[1])
+    flag += 2;
+  if (ll < rr * beta[2])
+    flag += 4;
+  switch (flag) {
+  case 0:
+    /* 1,1,1 */
+    return 3.0 / 128.0 * q[0] - 5.0 / 32.0 * q[1] + 45.0 / 64.0 * q[2] +
+           15.0 / 32.0 * q[3] - 5.0 / 128.0 * q[4];
+    break;
+  case 1:
+    /* 0,1,1 */
+    return -1.0 / 16.0 * q[1] + 9.0 / 16.0 * q[2] + 9.0 / 16.0 * q[3] -
+           1.0 / 16.0 * q[4];
+    break;
+  case 2:
+    /* 1,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 3:
+    /* 0,0,1 */
+    return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
+    break;
+  case 4:
+    /* 1,1,0 */
+    return 1.0 / 16.0 * q[0] - 5.0 / 16.0 * q[1] + 15.0 / 16.0 * q[2] +
+           5.0 / 16.0 * q[3];
+    break;
+  case 5:
+    /* 0,1,0 */
+    return -1.0 / 8.0 * q[1] + 3.0 / 4.0 * q[2] + 3.0 / 8.0 * q[3];
+    break;
+  case 6:
+    /* 1,0,0 */
+    return 3.0 / 8.0 * q[0] - 5.0 / 4.0 * q[1] + 15.0 / 8.0 * q[2];
+    break;
+  default:
+    /* 0,0,0 */
+    return q[2];
+    break;
+  }
+}
+
+
+
 
 
 
