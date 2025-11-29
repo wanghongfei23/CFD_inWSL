@@ -74,7 +74,7 @@ enum InterMethod {
     WHFTCNSAS_approx_2,     // 28
     WHFTCNSASF202_2S,     // 29
     WHFTCNSASF202_NoS,     // 30
-    temp010,     // 31
+    WHFTCNSASF203_NoS,     // 31
     temp011,     // 32
     temp012,     // 33
     temp013,     // 34

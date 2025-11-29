@@ -392,16 +392,6 @@ inline real Teno5_Z(std::array<real, 5> q) {
   beta[2] = 1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
             1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2);
 
-
-
-
-
-
-
-
-
-
-
   real sumbeta = 0;
   real C = 1, qq = 6, tau = std::abs(beta[2] - beta[0]);
   for (int i = 0; i < 3; i++) {
@@ -412,25 +402,6 @@ inline real Teno5_Z(std::array<real, 5> q) {
   }
   real CT = 1e-5 * sumbeta;
   // volatile unsigned flag=(beta[0]<CT)+((beta[1]<CT)<<1)+((beta[2]<CT)<<2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   unsigned short flag = 0;
   if (beta[0] < CT)

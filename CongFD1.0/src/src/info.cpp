@@ -150,7 +150,7 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSAS_approx_2,"TENO-AS-approx_2"},
     {WHFTCNSASF202_2S,"TENO-AS-myF202_2S"},
     {WHFTCNSASF202_NoS,"TENO-AS-myF202_NoS"},
-    {temp010,"temp_name_010"},
+    {WHFTCNSASF203_NoS,"TENO-AS-myF203_NoS"},
     {temp011,"temp_name_011"},
     {temp012,"temp_name_012"},
     {temp013,"temp_name_013"},

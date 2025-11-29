@@ -381,68 +381,134 @@ constexpr real Teno5_ZCT7(std::array<real, 5> q)
 
 constexpr real Teno5_Z(std::array<real, 5> q)
 {
-    real eps = 1e-40;
-    std::array<real, 3> beta;
-    beta[0] = 1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2)
-        + 1.0 / 4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2);
+    // real eps = 1e-40;
+    // std::array<real, 3> beta;
+    // beta[0] = 1.0/1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+    //           1.0/4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2);
+    // beta[1] = 1.0/1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) + 
+    //           1.0/4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2);
+    // beta[2] = 1.0/1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) + 
+    //           1.0/4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2);
 
-    beta[1] = 1.0 / 1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2)
-        + 1.0 / 4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2);
+    // real sumbeta = 0;
+    // real C = 1, qq = 6, tau = std::abs(beta[2] - beta[0]);
+    // for (int i = 0; i < 3; i++) {
+    //     real tempp = C + tau / (beta[i] + eps);
+    //     tempp *= tempp;
+    //     beta[i] = tempp * tempp * tempp;
+    //     sumbeta += beta[i];
+    // }
+    // real CT = 1e-5 * sumbeta;
+    // // volatile unsigned flag=(beta[0]<CT)+((beta[1]<CT)<<1)+((beta[2]<CT)<<2);
+    // unsigned short flag = 0;
+    // if (beta[0] < CT)
+    //     flag += 1;
+    // if (beta[1] < CT)
+    //     flag += 2;
+    // if (beta[2] < CT)
+    //     flag += 4;
+    // switch (flag) {
+    // case 0:
+    //     /* 1,1,1 */
+    //     return 3.0/128.0*q[0] - 5.0/32.0*q[1] + 45.0/64.0*q[2] + 15.0/32.0*q[3] - 5.0/128.0*q[4];
+    //     break;
+    // case 1:
+    //     /* 0,1,1 */
+    //     return -1.0/16.0*q[1] + 9.0/16.0*q[2] + 9.0/16.0*q[3] - 1.0/16.0*q[4];
+    //     break;
+    // case 2:
+    //     /* 1,0,1 */
+    //     return 3.0/8.0*q[2] + 3.0/4.0*q[3] - 1.0/8.0*q[4];
+    //     break;
+    // case 3:
+    //     /* 0,0,1 */
+    //     return 3.0/8.0*q[2] + 3.0/4.0*q[3] - 1.0/8.0*q[4];
+    //     break;
+    // case 4:
+    //     /* 1,1,0 */
+    //     return 1.0/16.0*q[0] - 5.0/16.0*q[1] + 15.0/16.0*q[2] + 5.0/16.0*q[3];
+    //     break;
+    // case 5:
+    //     /* 0,1,0 */
+    //     return -1.0/8.0*q[1] + 3.0/4.0*q[2] + 3.0/8.0*q[3];
+    //     break;
+    // case 6:
+    //     /* 1,0,0 */
+    //     return 3.0/8.0*q[0] - 5.0/4.0*q[1] + 15.0/8.0*q[2];
+    //     break;
+    // default:
+    //     /* 0,0,0 */
+    //     return q[2];
+    //     break;
+    // }
 
-    beta[2] = 1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2)
-        + 1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2);
+  real eps = 1e-40;
+  std::array<real, 3> beta;
+  beta[0] = 1.0/1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+            1.0/4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2);
 
-    real sumbeta = 0;
-    real C = 1, qq = 6, tau = std::abs(beta[2] - beta[0]);
-    for (int i = 0; i < 3; i++) {
-        real tempp = C + tau / (beta[i] + eps);
-        tempp *= tempp;
-        beta[i] = tempp * tempp * tempp;
-        sumbeta += beta[i];
-    }
-    real CT = 1e-5 * sumbeta;
-    // volatile unsigned flag=(beta[0]<CT)+((beta[1]<CT)<<1)+((beta[2]<CT)<<2);
-    unsigned short flag = 0;
-    if (beta[0] < CT)
-        flag += 1;
-    if (beta[1] < CT)
-        flag += 2;
-    if (beta[2] < CT)
-        flag += 4;
-    switch (flag) {
-    case 0:
-        /* 1,1,1 */
-        return 3.0 / 128.0 * q[0] - 5.0 / 32.0 * q[1] + 45.0 / 64.0 * q[2] + 15.0 / 32.0 * q[3] - 5.0 / 128.0 * q[4];
-        break;
-    case 1:
-        /* 0,1,1 */
-        return -1.0 / 16.0 * q[1] + 9.0 / 16.0 * q[2] + 9.0 / 16.0 * q[3] - 1.0 / 16.0 * q[4];
-        break;
-    case 2:
-        /* 1,0,1 */
-        return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
-        break;
-    case 4:
-        /* 1,1,0 */
-        return 1.0 / 16.0 * q[0] - 5.0 / 16.0 * q[1] + 15.0 / 16.0 * q[2] + 5.0 / 16.0 * q[3];
-        break;
-    case 3:
-        /* 0,0,1 */
-        return 3.0 / 8.0 * q[2] + 3.0 / 4.0 * q[3] - 1.0 / 8.0 * q[4];
-        break;
-    case 5:
-        /* 0,1,0 */
-        return -1.0 / 8.0 * q[1] + 3.0 / 4.0 * q[2] + 3.0 / 8.0 * q[3];
-        break;
-    case 6:
-        /* 1,0,0 */
-        return 3.0 / 8.0 * q[0] - 5.0 / 4.0 * q[1] + 15.0 / 8.0 * q[2];
-        break;
-    default:
-        /* 0,0,0 */
-        return q[2];
-        break;
-    }
+  beta[1] = 1.0/1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) +
+            1.0/4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2);
+
+  beta[2] = 1.0/1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
+            1.0/4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2);
+
+  real sumbeta = 0;
+  real C = 1, qq = 6, tau = std::abs(beta[2] - beta[0]);
+  for (int i = 0; i < 3; i++) {
+    real tempp = C + tau/(beta[i] + eps);
+    tempp *= tempp;
+    beta[i] = tempp * tempp * tempp;
+    sumbeta += beta[i];
+  }
+  real CT = 1e-5 * sumbeta;
+  // volatile unsigned flag=(beta[0]<CT)+((beta[1]<CT)<<1)+((beta[2]<CT)<<2);
+  unsigned short flag = 0;
+  if (beta[0] < CT)
+    flag += 1;
+  if (beta[1] < CT)
+    flag += 2;
+  if (beta[2] < CT)
+    flag += 4;
+  switch (flag) {
+  case 0:
+    /* 1,1,1 */
+    return 3.0/128.0*q[0] - 5.0/32.0*q[1] + 45.0/64.0*q[2] +
+           15.0/32.0*q[3] - 5.0/128.0*q[4];
+    break;
+  case 1:
+    /* 0,1,1 */
+    return -1.0/16.0*q[1] + 9.0/16.0*q[2] + 9.0/16.0*q[3] -
+           1.0/16.0*q[4];
+    break;
+  case 2:
+    /* 1,0,1 */
+    return 3.0/8.0*q[2] + 3.0/4.0*q[3] - 1.0/8.0*q[4];
+    break;
+  case 4:
+    /* 1,1,0 */
+    return 1.0/16.0*q[0] - 5.0/16.0*q[1] + 15.0/16.0*q[2] +
+           5.0/16.0*q[3];
+    break;
+  case 3:
+    /* 0,0,1 */
+    return 3.0/8.0*q[2] + 3.0/4.0*q[3] - 1.0/8.0*q[4];
+    break;
+  case 5:
+    /* 0,1,0 */
+    return -1.0/8.0*q[1] + 3.0/4.0*q[2] + 3.0/8.0*q[3];
+    break;
+  case 6:
+    /* 1,0,0 */
+    return 3.0/8.0*q[0] - 5.0/4.0*q[1] + 15.0/8.0*q[2];
+    break;
+  default:
+    /* 0,0,0 */
+    return q[2];
+    break;
+  }
+
+
 }
 constexpr real Teno5_ZConvex(std::array<real, 5> q)
 {
@@ -489,16 +555,13 @@ const static real CTi = pow(1.5 * 1e-10, 1.0 / 6.0);
 constexpr real Teno5_CongZ(std::array<real, 5> q)
 {
     real eps = 1e-40; // 1e-10;
-    std::array<real, 3> beta = {
-        1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2)
-            + 1.0 / 4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2),
-
-        1.0 / 1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2)
-            + 1.0 / 4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2),
-
-        1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2)
-            + 1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2)
-    };
+    std::array<real, 3> beta ;
+    beta[0] = 1.0/1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+              1.0/4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2);
+    beta[1] = 1.0/1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) + 
+              1.0/4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2);
+    beta[2] = 1.0/1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) + 
+              1.0/4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2);
 
     // int minBeta=(beta[0]>beta[1])? ((beta[2]>beta[1])? 1: 2):((beta[2]>beta[0])? 0 : 2);
     unsigned short minBeta = std::min_element(beta.begin(), beta.end()) - beta.begin();
@@ -3096,7 +3159,7 @@ constexpr real whf_TCNS_AS_myF202_NoS(std::array<real, 5> q) {
 }
 
 
-constexpr real temp_010(std::array<real, 5> q) {
+constexpr real whf_TCNS_AS_myF203_NoS(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
   std::array<real, 3> beta = {
       1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
@@ -3140,8 +3203,15 @@ constexpr real temp_010(std::array<real, 5> q) {
   // 计算min
   real min = std::min(0.24, eta_min);
   
+  real m = 1 - min/0.24;
+
   // 计算C_T_prime
-  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
+
+  real mm=m*m;
+  real mmm=m*mm;
+
+  real C_T = -0.452662*mmm + 0.590811*mm - 0.012189*m + 0.022010;
+
   //CT adapt end
   
   real CT_1 = 1 - C_T;

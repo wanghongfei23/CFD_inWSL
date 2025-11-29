@@ -47,7 +47,7 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSAS_approx_2,"TENO-AS-approx_2"},
     {WHFTCNSASF202_2S,"TENO-AS-myF202_2S"},
     {WHFTCNSASF202_NoS,"TENO-AS-myF202_NoS"},
-    {temp010,"temp_name_010"},
+    {WHFTCNSASF203_NoS,"TENO-AS-myF203_NoS"},
     {temp011,"temp_name_011"},
     {temp012,"temp_name_012"},
     {temp013,"temp_name_013"},
@@ -69,8 +69,8 @@ int main()
     // auto prim2=eig.charToPrim(eigValues);
     // std::cout<<"finish\n";
 
-    // omp_set_num_threads(10);
-    omp_set_num_threads(1);
+    omp_set_num_threads(10);
+    // omp_set_num_threads(1);
 
     Info* info = new Info;
 
@@ -108,10 +108,10 @@ int main()
     // info->interMethod = WHFTCNSAS_fx_real; // 算
     // info->interMethod = WHFTCNSAS_approx_2; // 具体代入，叠加A和S，分母近似掉-1
 
-    // F进入2.0时代
-    info->interMethod = WHFTCNSASF202_2S;
+    // F的2.0时代
+    // info->interMethod = WHFTCNSASF202_2S;
     // info->interMethod = WHFTCNSASF202_NoS;
-    // info->interMethod = temp010;
+    info->interMethod = WHFTCNSASF203_NoS;
     // info->interMethod = temp011;
     // info->interMethod = temp012;
     // info->interMethod = temp013;
@@ -197,13 +197,15 @@ int main()
     //  info->dim=2;
 
     // Riemann 1
-    info->endStep = 1;
-    info->outputDt = 0.8;
-    info->CFL = 0.5;
-    info->nCase = 0;
-    info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
-    info->iMax = { 401, 401, 2 };//参考
-    info->dim = 2;
+
+    // info->endStep = 1;
+    // info->outputDt = 0.8;
+
+    // info->CFL = 0.5;
+    // info->nCase = 0;
+    // info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
+    // info->iMax = { 401, 401, 2 };//参考
+    // info->dim = 2;
 
     // Riemann 2 vortex
     //  info->endStep=1;
@@ -229,16 +231,16 @@ int main()
 
     // RT instability
     // 记得改GAMMA
-    //  info->endStep=1;
-    //  info->outputDt=1.95;
-    //  info->CFL=0.5;
-    //  info->nCase=3;
-    //  info->calZone={0,0.25,0,1,0,0};
-    // //  info->iMax={201,801,2};
-    //  info->iMax={101,401,2};//参考
-    // //  info->iMax={65,257,2};
-    //  info->dim=2;
-    //  info->sourceType=GRAVITY;
+     info->endStep=1;
+     info->outputDt=1.95;
+     info->CFL=0.5;
+     info->nCase=3;
+     info->calZone={0,0.25,0,1,0,0};
+    //  info->iMax={201,801,2};
+     info->iMax={101,401,2};//参考
+    //  info->iMax={65,257,2};
+     info->dim=2;
+     info->sourceType=GRAVITY;
 
 
     // info->diffMethod=HDS6;
@@ -247,8 +249,8 @@ int main()
     //  info->endStep=20;
     //  info->outputDt=0.01;
 
-    //  info->endStep=1;
-    //  info->outputDt=0.2;
+    // //  info->endStep=1;
+    // //  info->outputDt=0.2;
     //  info->CFL=0.5;
     //  info->nCase=4;
     //  info->calZone={0,4,0,1,0,0};

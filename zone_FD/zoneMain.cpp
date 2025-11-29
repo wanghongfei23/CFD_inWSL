@@ -18,7 +18,8 @@ int main()
 
     // ===================================求解器配置===================================
 
-    omp_set_num_threads(18);  // 设置OpenMP线程数
+    // omp_set_num_threads(18);  // 设置OpenMP线程数
+    omp_set_num_threads(10);  // 设置OpenMP线程数
     Info* info = new Info;  // 动态分配配置对象
 
     info->eqType = EULER;
@@ -209,11 +210,11 @@ int main()
 
     // Double Mach
 
-    info->endStep=20;
-    info->outputDt=0.01;
+    // info->endStep=20;
+    // info->outputDt=0.01;
     
-    // info->endStep=2;
-    // info->outputDt=0.1;
+    info->endStep=2;
+    info->outputDt=0.1;
     info->CFL=0.5;
     info->nCase=4;
     info->calZone={0,4,0,1,0,0};
