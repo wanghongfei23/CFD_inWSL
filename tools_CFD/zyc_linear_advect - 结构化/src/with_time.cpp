@@ -134,8 +134,8 @@ int main()
 
     // Calculate order of accuracy
     std::cout << "Order of accuracy:\n";
-    results_file << std::format("{:d}\t{:.5g}\t0\t{:.5g}\t0\t{:.5g}\t0\n",
-        grid_densities[0], L1_errors[0], L2_errors[0], Linf_errors[0]);
+    results_file << grid_densities[0] << "\t" << std::setprecision(5) << std::scientific 
+                 << L1_errors[0] << "\t0\t" << L2_errors[0] << "\t0\t" << Linf_errors[0] << "\t0\n";
     for (size_t i = 1; i < grid_densities.size(); ++i) {
         real_t h1 = 1.0Q / grid_densities[i - 1];
         real_t h2 = 1.0Q / grid_densities[i];
@@ -150,9 +150,10 @@ int main()
         std::cout << "L-infinity norm order: " << Linf_order << "\n\n";
 
         // Update the order of accuracy
-        results_file << std::format("{:d}\t{:.5g}\t{:.5g}\t{:.5g}\t{:.5g}\t{:.5g}\t{:.5g}\n",
-            grid_densities[i], L1_errors[i], L1_order,
-            L2_errors[i], L2_order, Linf_errors[i], Linf_order);
+        results_file << grid_densities[i] << "\t" << std::setprecision(5) << std::scientific
+                     << L1_errors[i] << "\t" << L1_order << "\t"
+                     << L2_errors[i] << "\t" << L2_order << "\t"
+                     << Linf_errors[i] << "\t" << Linf_order << "\n";
     }
     results_file.close();
     return 0;

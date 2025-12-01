@@ -17,9 +17,9 @@ inline real_t Teno5_CongZ(const std::array<real_t, 5>& q)
         1.0Q / 1.0Q * powq(1.0Q * q[2] - 2.0Q * q[3] + 1.0Q * q[4], 2) + 1.0Q / 4.0Q * powq(3.0Q * q[2] - 4.0Q * q[3] + 1.0Q * q[4], 2)
     };
     unsigned short minBeta = std::min_element(beta.begin(), beta.end()) - beta.begin();
-    // constexpr real_t CT = std::pow(1.5 * 1.0e-5, 1.0 / 6.0);
+    // constexpr real_t CT = powq(1.5 * 1.0e-5, 1.0 / 6.0);
     // constexpr real_t CT_1 = 1.0 - CT;
-    const real_t CT = std::pow(1.5 * 1.0e-5, 1.0 / 6.0);
+    const real_t CT = powq(1.5 * 1.0e-5, 1.0 / 6.0);
     const real_t CT_1 = 1.0 - CT;
     real_t tau = std::abs(beta[2] - beta[0]);
     real_t rr = CT * tau - CT_1 * beta[minBeta];
@@ -84,38 +84,38 @@ inline real_t whf_ai_TcnsN_AS_1(std::array<real_t, 5> q) {
     real_t dq_ip3_2 = q_ip2 - q_ip1; // Δq_{i+3/2}
 
     // 计算局部光滑因子
-    real_t beta0 = std::pow(q_im2 - 2*q_im1 + q_i, 2) + 
-                 0.25 * std::pow(q_im2 - 4*q_im1 + 3*q_i, 2);
+    real_t beta0 = powq(q_im2 - 2*q_im1 + q_i, 2) + 
+                 0.25 * powq(q_im2 - 4*q_im1 + 3*q_i, 2);
     
-    real_t beta1 = std::pow(q_im1 - 2*q_i + q_ip1, 2) + 
-                 0.25 * std::pow(q_im1 - q_ip1, 2);
+    real_t beta1 = powq(q_im1 - 2*q_i + q_ip1, 2) + 
+                 0.25 * powq(q_im1 - q_ip1, 2);
     
-    real_t beta2 = std::pow(q_i - 2*q_ip1 + q_ip2, 2) + 
-                 0.25 * std::pow(3*q_i - 4*q_ip1 + q_ip2, 2);
+    real_t beta2 = powq(q_i - 2*q_ip1 + q_ip2, 2) + 
+                 0.25 * powq(3*q_i - 4*q_ip1 + q_ip2, 2);
 
     // 计算全局光滑因子
     real_t tau = std::abs(beta2 - beta0);
 
     // 计算η值
     real_t eta_im1 = (std::abs(2*dq_im1_2*dq_im3_2) + epsilon_A) / 
-                   (std::pow(dq_im1_2, 2) + std::pow(dq_im3_2, 2) + epsilon_A);
+                   (powq(dq_im1_2, 2) + powq(dq_im3_2, 2) + epsilon_A);
     
     real_t eta_i = (std::abs(2*dq_ip1_2*dq_im1_2) + epsilon_A) / 
-                 (std::pow(dq_ip1_2, 2) + std::pow(dq_im1_2, 2) + epsilon_A);
+                 (powq(dq_ip1_2, 2) + powq(dq_im1_2, 2) + epsilon_A);
     
     real_t eta_ip1 = (std::abs(2*dq_ip3_2*dq_ip1_2) + epsilon_A) / 
-                   (std::pow(dq_ip3_2, 2) + std::pow(dq_ip1_2, 2) + epsilon_A);
+                   (powq(dq_ip3_2, 2) + powq(dq_ip1_2, 2) + epsilon_A);
     
     real_t eta_min = std::min({eta_im1, eta_i, eta_ip1});
 
     // 计算m和g(m)
     real_t m = 1.0Q - std::min(1.0Q, eta_min / Cr);
-    real_t g_m = std::pow(1.0Q - m, 4) * (1.0Q + 4.0Q*m);
+    real_t g_m = powq(1.0Q - m, 4) * (1.0Q + 4.0Q*m);
     
     // 计算自适应参数
     real_t beta_A = alpha1 - alpha2 * (1.0Q - g_m);
-    real_t C_TA = std::pow(10.0, -std::floor(beta_A));
-    real_t C_T_prime = std::pow(1.5 * C_TA / (1.0 - C_TA), 1.0/qA);
+    real_t C_TA = powq(10.0, -floorq(beta_A));
+    real_t C_T_prime = powq(1.5 * C_TA / (1.0 - C_TA), 1.0/qA);
 
     // 确定β_j
     real_t beta_j = std::min({beta0, beta1, beta2});
@@ -176,27 +176,27 @@ inline real_t whf_ai_TcnsN_myASF002_1(std::array<real_t, 5> q) {
     real_t dq_ip3_2 = q_ip2 - q_ip1; // Δq_{i+3/2}
 
     // 计算局部光滑因子
-    real_t beta0 = std::pow(q_im2 - 2*q_im1 + q_i, 2) + 
-                 0.25 * std::pow(q_im2 - 4*q_im1 + 3*q_i, 2);
+    real_t beta0 = powq(q_im2 - 2*q_im1 + q_i, 2) + 
+                 0.25 * powq(q_im2 - 4*q_im1 + 3*q_i, 2);
     
-    real_t beta1 = std::pow(q_im1 - 2*q_i + q_ip1, 2) + 
-                 0.25 * std::pow(q_im1 - q_ip1, 2);
+    real_t beta1 = powq(q_im1 - 2*q_i + q_ip1, 2) + 
+                 0.25 * powq(q_im1 - q_ip1, 2);
     
-    real_t beta2 = std::pow(q_i - 2*q_ip1 + q_ip2, 2) + 
-                 0.25 * std::pow(3*q_i - 4*q_ip1 + q_ip2, 2);
+    real_t beta2 = powq(q_i - 2*q_ip1 + q_ip2, 2) + 
+                 0.25 * powq(3*q_i - 4*q_ip1 + q_ip2, 2);
 
     // 计算全局光滑因子
     real_t tau = std::abs(beta2 - beta0);
 
     // 计算η值
     real_t eta_im1 = (std::abs(2*dq_im1_2*dq_im3_2) + epsilon_A) / 
-                   (std::pow(dq_im1_2, 2) + std::pow(dq_im3_2, 2) + epsilon_A);
+                   (powq(dq_im1_2, 2) + powq(dq_im3_2, 2) + epsilon_A);
     
     real_t eta_i = (std::abs(2*dq_ip1_2*dq_im1_2) + epsilon_A) / 
-                 (std::pow(dq_ip1_2, 2) + std::pow(dq_im1_2, 2) + epsilon_A);
+                 (powq(dq_ip1_2, 2) + powq(dq_im1_2, 2) + epsilon_A);
     
     real_t eta_ip1 = (std::abs(2*dq_ip3_2*dq_ip1_2) + epsilon_A) / 
-                   (std::pow(dq_ip3_2, 2) + std::pow(dq_ip1_2, 2) + epsilon_A);
+                   (powq(dq_ip3_2, 2) + powq(dq_ip1_2, 2) + epsilon_A);
     
     real_t eta_min = std::min({eta_im1, eta_i, eta_ip1});
 
@@ -250,12 +250,12 @@ inline real_t whf_TcnsN_A(std::array<real_t, 5> q)
 {
     // 局部光滑因子β
     std::array<real_t, 3> beta;
-    beta[0] = 1.0/1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
-              1.0/4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2);
-    beta[1] = 1.0/1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) + 
-              1.0/4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2);
-    beta[2] = 1.0/1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) + 
-              1.0/4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2);
+    beta[0] = 1.0/1.0 * powq(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
+              1.0/4.0 * powq(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2);
+    beta[1] = 1.0/1.0 * powq(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) + 
+              1.0/4.0 * powq(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2);
+    beta[2] = 1.0/1.0 * powq(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) + 
+              1.0/4.0 * powq(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2);
     // 全局光滑因子τ
     real_t tau = std::abs(beta[2] - beta[0]);
 
@@ -284,7 +284,7 @@ inline real_t whf_TcnsN_A(std::array<real_t, 5> q)
     real_t m = 1.0 - std::min(1.0Q, eta_min/C_r);
     real_t g_m = (1 - m)*(1 - m)*(1 - m)*(1 - m)*(1 + 4*m);
 
-    int beta_A = std::floor(alpha1 - alpha2*(1 - g_m));
+    int beta_A = (int)floorq(alpha1 - alpha2*(1 - g_m));
 
     real_t CT_A;
 
@@ -298,13 +298,13 @@ inline real_t whf_TcnsN_A(std::array<real_t, 5> q)
     gamma[1] = C + tau/(beta[1] + eps);
     gamma[2] = C + tau/(beta[2] + eps);
 
-    gamma[0] = gamma[0]*gamma[0];
-    gamma[1] = gamma[1]*gamma[1];
-    gamma[2] = gamma[2]*gamma[2];
+    gamma[0] = powq(gamma[0], 2);
+    gamma[1] = powq(gamma[1], 2);
+    gamma[2] = powq(gamma[2], 2);
 
-    gamma[0] = gamma[0]*gamma[0]*gamma[0];
-    gamma[1] = gamma[1]*gamma[1]*gamma[1];
-    gamma[2] = gamma[2]*gamma[2]*gamma[2];
+    gamma[0] = powq(gamma[0], 3);
+    gamma[1] = powq(gamma[1], 3);
+    gamma[2] = powq(gamma[2], 3);
 
     real_t gamma_sum = gamma[0] + gamma[1] + gamma[2];
     
