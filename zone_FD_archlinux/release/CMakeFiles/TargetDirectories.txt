@@ -1,0 +1,8 @@
+/mnt/d/ArchLinux/CongFD/release/CMakeFiles/congFD.dir
+/mnt/d/ArchLinux/CongFD/release/CMakeFiles/edit_cache.dir
+/mnt/d/ArchLinux/CongFD/release/CMakeFiles/rebuild_cache.dir
+/mnt/d/ArchLinux/CongFD/release/src/CMakeFiles/libcongFD.dir
+/mnt/d/ArchLinux/CongFD/release/src/CMakeFiles/edit_cache.dir
+/mnt/d/ArchLinux/CongFD/release/src/CMakeFiles/rebuild_cache.dir
+/mnt/d/ArchLinux/CongFD/release/utils/CMakeFiles/edit_cache.dir
+/mnt/d/ArchLinux/CongFD/release/utils/CMakeFiles/rebuild_cache.dir

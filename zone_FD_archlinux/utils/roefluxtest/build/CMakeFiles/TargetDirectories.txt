@@ -1,0 +1,3 @@
+/mnt/d/ArchLinux/CongFD/utils/roefluxtest/build/CMakeFiles/roetest.dir
+/mnt/d/ArchLinux/CongFD/utils/roefluxtest/build/CMakeFiles/edit_cache.dir
+/mnt/d/ArchLinux/CongFD/utils/roefluxtest/build/CMakeFiles/rebuild_cache.dir

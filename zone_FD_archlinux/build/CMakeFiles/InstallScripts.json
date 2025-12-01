@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/archwanghongfei/Documents/GitHub/zone_FD_archlinux/build/cmake_install.cmake",
+		"/home/archwanghongfei/Documents/GitHub/zone_FD_archlinux/build/src/cmake_install.cmake",
+		"/home/archwanghongfei/Documents/GitHub/zone_FD_archlinux/build/utils/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

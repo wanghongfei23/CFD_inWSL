@@ -1,0 +1,6 @@
+--2024-07-12 12:16:13--  https://update.code.visualstudio.com/commit:f1e16e1e6214d7c44d078b1f0607b2388f29d729/server-linux-legacy-x64/stable
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving update.code.visualstudio.com (update.code.visualstudio.com)... 13.107.246.73, 2620:1ec:bdf::73
+Connecting to update.code.visualstudio.com (update.code.visualstudio.com)|13.107.246.73|:443... connected.
+GnuTLS: The TLS connection was non-properly terminated.
+Unable to establish SSL connection.

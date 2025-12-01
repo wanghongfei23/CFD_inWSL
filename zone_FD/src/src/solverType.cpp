@@ -148,7 +148,7 @@ void SolverType::initReconer()
 
         // 【王鸿飞】end插值格式开发（3.0）AI-新格式
 
-        // 【王鸿飞】begin插值格式终章（4.0）手搓及优化
+        // 【王鸿飞】begin插值格式（4.0）手搓及优化
 
         case whfzycTCNSNmyASF002_1:
             reconer = pro::make_proxy<ProxyDataManipulator>(
@@ -160,12 +160,33 @@ void SolverType::initReconer()
                 Recon5OrderFaceCenter<whf_TcnsN_COMPARE>());
             break;
 
+        case new_TCNS5:
+            reconer = pro::make_proxy<ProxyDataManipulator>(
+                Recon5OrderFaceCenter<new_Teno5_Z>());
+            break;
+
+
+        case new_WHFTCNSA:
+            reconer = pro::make_proxy<ProxyDataManipulator>(
+                Recon5OrderFaceCenter<new_whf_TCNS_A>());
+            break;
+
+
+        case new_WCNS5CONGZ:
+            reconer = pro::make_proxy<ProxyDataManipulator>(
+                Recon5OrderFaceCenter<new_Teno5_CongZ>());
+            break;
+
+
+        case new_WHFTCNSASF203_NoS:
+            reconer = pro::make_proxy<ProxyDataManipulator>(
+                Recon5OrderFaceCenter<whf_TCNS_AS_myF203_NoS>());
+            break;
 
 
 
 
-
-        // 【王鸿飞】end插值格式终章（4.0）手搓及优化
+        // 【王鸿飞】end插值格式（4.0）手搓及优化
 
 
         default:
@@ -308,7 +329,7 @@ void SolverType::initReconer()
             // 【王鸿飞】end插值格式开发（3.0）AI-新格式
             
 
-            // 【王鸿飞】begin插值格式终章（4.0）手搓及优化
+            // 【王鸿飞】begin插值格式（4.0）手搓及优化
 
             case whfzycTCNSNmyASF002_1:
                 reconer = pro::make_proxy<ProxyDataManipulator>(
@@ -321,10 +342,34 @@ void SolverType::initReconer()
                 break;
 
 
+            case new_TCNS5:
+                reconer = pro::make_proxy<ProxyDataManipulator>(
+                    Recon5Order1DEulerEig<new_Teno5_Z>());
+                break;
+
+
+            case new_WHFTCNSA:
+                reconer = pro::make_proxy<ProxyDataManipulator>(
+                    Recon5Order1DEulerEig<new_whf_TCNS_A>());
+                break;
+
+
+            case new_WCNS5CONGZ:
+                reconer = pro::make_proxy<ProxyDataManipulator>(
+                    Recon5Order1DEulerEig<new_Teno5_CongZ>());
+                break;
+
+
+            case new_WHFTCNSASF203_NoS:
+                reconer = pro::make_proxy<ProxyDataManipulator>(
+                    Recon5Order1DEulerEig<whf_TCNS_AS_myF203_NoS>());
+                break;
 
 
 
-            // 【王鸿飞】end插值格式终章（4.0）手搓及优化
+
+
+            // 【王鸿飞】end插值格式（4.0）手搓及优化
 
 
 
@@ -467,7 +512,7 @@ void SolverType::initReconer()
 
 
 
-            // 【王鸿飞】begin插值格式终章（4.0）手搓及优化
+            // 【王鸿飞】begin插值格式（4.0）手搓及优化
 
             case whfzycTCNSNmyASF002_1:
                 reconer = pro::make_proxy<ProxyDataManipulator>(
@@ -480,10 +525,34 @@ void SolverType::initReconer()
                 break;
 
 
+            case new_TCNS5:
+                reconer = pro::make_proxy<ProxyDataManipulator>(
+                    Recon5Order2DEulerEig<new_Teno5_Z>());
+                break;
+
+
+            case new_WHFTCNSA:
+                reconer = pro::make_proxy<ProxyDataManipulator>(
+                    Recon5Order2DEulerEig<new_whf_TCNS_A>());
+                break;
+
+
+            case new_WCNS5CONGZ:
+                reconer = pro::make_proxy<ProxyDataManipulator>(
+                    Recon5Order2DEulerEig<new_Teno5_CongZ>());
+                break;
+
+
+            case new_WHFTCNSASF203_NoS:
+                reconer = pro::make_proxy<ProxyDataManipulator>(
+                    Recon5Order2DEulerEig<whf_TCNS_AS_myF203_NoS>());
+                break;
 
 
 
-            // 【王鸿飞】end插值格式终章（4.0）手搓及优化
+
+
+            // 【王鸿飞】end插值格式（4.0）手搓及优化
 
 
 

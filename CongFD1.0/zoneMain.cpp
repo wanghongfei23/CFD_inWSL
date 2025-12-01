@@ -143,13 +143,13 @@ int main()
     // info->dim = 1;
 
     // lax sod tube
-    // info->endStep = 14;
-    // info->outputDt = 0.01;
-    // info->CFL = 0.5;
-    // info->nCase = 2;
-    // info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
-    // info->iMax = { 201, 2, 2 };
-    // info->dim = 1;
+    info->endStep = 14;
+    info->outputDt = 0.01;
+    info->CFL = 0.5;
+    info->nCase = 2;
+    info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
+    info->iMax = { 201, 2, 2 };
+    info->dim = 1;
 
     // lax sod tube speed test
     //  info->endStep=14;
@@ -231,16 +231,16 @@ int main()
 
     // RT instability
     // 记得改GAMMA
-     info->endStep=1;
-     info->outputDt=1.95;
-     info->CFL=0.5;
-     info->nCase=3;
-     info->calZone={0,0.25,0,1,0,0};
-    //  info->iMax={201,801,2};
-     info->iMax={101,401,2};//参考
-    //  info->iMax={65,257,2};
-     info->dim=2;
-     info->sourceType=GRAVITY;
+    //  info->endStep=1;
+    //  info->outputDt=1.95;
+    //  info->CFL=0.5;
+    //  info->nCase=3;
+    //  info->calZone={0,0.25,0,1,0,0};
+    // //  info->iMax={201,801,2};
+    //  info->iMax={101,401,2};//参考
+    // //  info->iMax={65,257,2};
+    //  info->dim=2;
+    //  info->sourceType=GRAVITY;
 
 
     // info->diffMethod=HDS6;
@@ -249,8 +249,8 @@ int main()
     //  info->endStep=20;
     //  info->outputDt=0.01;
 
-    // //  info->endStep=1;
-    // //  info->outputDt=0.2;
+    //  info->endStep=1;
+    //  info->outputDt=0.2;
     //  info->CFL=0.5;
     //  info->nCase=4;
     //  info->calZone={0,4,0,1,0,0};

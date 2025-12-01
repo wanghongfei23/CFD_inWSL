@@ -1,0 +1,1 @@
+/usr/sbin/c++ -O3 -DNDEBUG CMakeFiles/congFD.dir/zoneMain.cpp.o -o congFD  src/liblibcongFD.a /usr/lib/libgomp.so /usr/lib/libpthread.a -lcgns

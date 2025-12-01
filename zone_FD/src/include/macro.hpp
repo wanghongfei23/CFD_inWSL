@@ -69,7 +69,12 @@ enum InterMethod {FIRSTORDER,
     whfAITCNSNmyASF002_2,
     whfAITCNSNmyASF002_ai1,
     whfzycTCNSNmyASF002_1,
-    whfCOMPARE}; 
+    whfCOMPARE,
+    new_TCNS5,
+    new_WHFTCNSA,
+    new_WCNS5CONGZ,
+    new_WHFTCNSASF203_NoS
+}; 
 // 【王鸿飞】end
 
 // 插分格式

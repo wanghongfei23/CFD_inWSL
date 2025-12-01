@@ -507,9 +507,10 @@ constexpr real Teno5_Z(std::array<real, 5> q)
     return q[2];
     break;
   }
-
-
 }
+
+
+
 constexpr real Teno5_ZConvex(std::array<real, 5> q)
 {
     real eps = 1e-40;
@@ -552,6 +553,7 @@ constexpr real Teno5_ZConvex(std::array<real, 5> q)
 }
 
 const static real CTi = pow(1.5 * 1e-10, 1.0 / 6.0);
+
 constexpr real Teno5_CongZ(std::array<real, 5> q)
 {
     real eps = 1e-40; // 1e-10;
@@ -3209,9 +3211,10 @@ constexpr real whf_TCNS_AS_myF203_NoS(std::array<real, 5> q) {
 
   real mm=m*m;
   real mmm=m*mm;
-
   real C_T = -0.452662*mmm + 0.590811*mm - 0.012189*m + 0.022010;
 
+  // real C_T = -0.452662*m*m*m + 0.590811*m*m - 0.012189*m + 0.022010;
+  
   //CT adapt end
   
   real CT_1 = 1 - C_T;

@@ -48,7 +48,7 @@ int main()
     // 【王鸿飞】end插值格式开发（1.0）手搓
 
     // 【王鸿飞】begin插值格式开发（2.0）AI-原格式
-    info->interMethod= congTCNS5CT5 ; //【通过】师兄自带的，暂定为正确
+    // info->interMethod= congTCNS5CT5 ; //【通过】师兄自带的，暂定为正确
     // info->interMethod= congTCNS5CT10 ; //【通过】师兄自带的，暂定为正确
     // info->interMethod= whfAITCNSNA ;
     // info->interMethod= whfAITCNSNS ;
@@ -64,11 +64,19 @@ int main()
     // info->interMethod= whfAITCNSNmyASF002_ai1 ;
     // 【王鸿飞】end插值格式开发（3.0）AI-新格式
 
-    // 【王鸿飞】begin插值格式终章（4.0）手搓及优化
+    // 【王鸿飞】begin插值格式（4.0）手搓及优化
     // info->interMethod= whfzycTCNSNmyASF002_1 ; //
     // info->interMethod = whfTCNSNA; //
     // info->interMethod = whfCOMPARE; //找不同
-    // 【王鸿飞】end插值格式终章（4.0）手搓及优化
+    // 【王鸿飞】end插值格式（4.0）手搓及优化
+
+    // 【王鸿飞】begin插值格式（F203）)手搓及优化
+    // info->interMethod= new_TCNS5 ;
+    // info->interMethod= new_WHFTCNSA ;
+    // info->interMethod= new_WCNS5CONGZ ;
+    info->interMethod= new_WHFTCNSASF203_NoS ;
+
+    // 【王鸿飞】end插值格式（F203）)手搓及优化
 
     // ===================================算例设置===================================
 
