@@ -121,6 +121,7 @@ int main()
     // info->interMethod = temp017;
     // info->interMethod = temp018;
     // info->interMethod = temp019;
+    // info->interMethod = TCNSCongA;
 
     // 【王鸿飞】end
 
@@ -378,5 +379,13 @@ int main()
         statFile << "CT=1e-09 count: " << global_counter_9 << "\n";
         statFile << "CT=1e-10 count: " << global_counter_10 << "\n";
         statFile.close();
+    }
+    if (pandaun_001==1)
+    {
+        std::cout << "有非预期值" << "\n";
+    }
+    if (pandaun_001==0)
+    {
+        std::cout << "无非预期值" << "\n";
     }
 }

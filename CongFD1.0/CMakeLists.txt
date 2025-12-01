@@ -20,15 +20,15 @@ set(CMAKE_CXX_STANDARD 23)
 #add_subdirectory(libMeshb)   # 添加libMeshb子目录，CMake会处理其中的CMakeLists.txt[1](@ref)
 #list(APPEND EXTRA_LIBS libMeshb)  # 将libMeshb库添加到EXTRA_LIBS变量中
 
-# 设置编译模式为Release（发布模式）[3](@ref)
-# Release模式通常会进行更多优化，减小生成二进制文件的大小[2](@ref)
-set(CMAKE_BUILD_TYPE Release)  # 这一行段代码，设置编译模式为Release
+# 设置编译模式为Release（发布模式）[3](@ref)  # Release模式通常会进行更多优化，减小生成二进制文件的大小[2](@ref)
+set(CMAKE_BUILD_TYPE Release)
 
 # 设置C++编译器标志：添加-g（调试信息）、-w（抑制所有警告）、-O3（三级优化，较-O2更激进）[2](@ref)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -w -O3")
 
 # 设置Debug模式的C编译器标志：添加-O3优化级别[3](@ref)
 set(CMAKE_C_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O3")
+# set(CMAKE_C_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
 
 # 设置Release模式的C编译器标志：添加-O3优化级别[3](@ref)
 set(CMAKE_C_FLAGS_Release "${CMAKE_CXX_FLAGS_Release} -O3")

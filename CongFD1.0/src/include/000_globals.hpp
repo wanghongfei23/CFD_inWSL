@@ -12,5 +12,7 @@ inline int global_counter_8 = 0;
 inline int global_counter_9 = 0;
 inline int global_counter_10 = 0;
 
+inline int pandaun_001 = 0;
+
 // 注意：使用 inline 关键字确保在多个编译单元中只有一个实例
 

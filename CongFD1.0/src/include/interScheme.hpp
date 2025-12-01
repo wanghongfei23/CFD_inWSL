@@ -1503,24 +1503,28 @@ constexpr real whf_TCNS_A(std::array<real, 5> q)
     delta_q[3] = q[3] - q[4];
 
     std::array<real, 3> eta;
-        eta[0] = (std::abs(2.0 * delta_q[0] * delta_q[1]) + epsilon_A)
-              / (delta_q[0] * delta_q[0] + delta_q[1] * delta_q[1] + epsilon_A);
-        eta[1] = (std::abs(2.0 * delta_q[1] * delta_q[2]) + epsilon_A)
-              / (delta_q[1] * delta_q[1] + delta_q[2] * delta_q[2] + epsilon_A);
-        eta[2] = (std::abs(2.0 * delta_q[2] * delta_q[3]) + epsilon_A)
-              / (delta_q[2] * delta_q[2] + delta_q[3] * delta_q[3] + epsilon_A);
+        eta[0] = (std::abs(2.0*delta_q[0]*delta_q[1]) + epsilon_A)
+              / (delta_q[0]*delta_q[0] + delta_q[1]*delta_q[1] + epsilon_A);
+        eta[1] = (std::abs(2.0*delta_q[1]*delta_q[2]) + epsilon_A)
+              / (delta_q[1]*delta_q[1] + delta_q[2]*delta_q[2] + epsilon_A);
+        eta[2] = (std::abs(2.0*delta_q[2]*delta_q[3]) + epsilon_A)
+              / (delta_q[2]*delta_q[2] + delta_q[3]*delta_q[3] + epsilon_A);
     
     // 计算η_min值
     real eta_min = std::min({eta[0],eta[1],eta[2]});
 
-    real min = std::min(1.0, 4.1666667 * eta_min);
+    // real min = std::min(1.0, eta_min/0.24);
+    real min = std::min(1.0, 4.166667*eta_min);
+    real gm = min*min*min*min*(5.0 - 4*min);
+    int beta_A = std::floor(alpha1 - alpha2*(1.0 - gm));
+
+    // real m = 1.0 - std::min(1.0, eta_min/0.24);
+    // real gm = (1.0-m)*(1.0-m)*(1.0-m)*(1.0-m)*(1.0 + 4*m);
+    // int beta_A = std::floor(alpha1 - alpha2*(1.0 - gm));
     
-    real g_m = min*min*min*min*(5.0 - 4*min);
-
-    int beta_A = std::floor(alpha1 - alpha2*(1.0 - g_m));
-
     real CT_A;
 
+    
     // 求光滑度量gamma
     const real C = 1.0;
     const real eps = 1e-40;
@@ -1553,6 +1557,8 @@ constexpr real whf_TCNS_A(std::array<real, 5> q)
     case 9: CT_A = 1e-9;
     break;
     case 10: CT_A = 1e-10;
+    break;
+    default: pandaun_001 = 1 ;
     break;
     }
     
@@ -3211,7 +3217,8 @@ constexpr real whf_TCNS_AS_myF203_NoS(std::array<real, 5> q) {
 
   real mm=m*m;
   real mmm=m*mm;
-  real C_T = -0.452662*mmm + 0.590811*mm - 0.012189*m + 0.022010;
+  // real C_T = -0.452662*mmm + 0.590811*mm - 0.012189*m + 0.022010;
+  real C_T = -0.45*mmm + 0.59*mm - 0.012*m + 0.022;
 
   // real C_T = -0.452662*m*m*m + 0.590811*m*m - 0.012189*m + 0.022010;
   
