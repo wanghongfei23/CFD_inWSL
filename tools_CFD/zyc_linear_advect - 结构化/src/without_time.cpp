@@ -1,16 +1,27 @@
 #include "header.H"
 
+/**
+ * @brief 网格变量结构体
+ * 
+ * 该结构体封装了计算流体力学中常用的网格相关变量，
+ * 包括网格坐标、解变量、通量和右端项等
+ */
 struct GridVariables {
-    GhostArray x; // 网格坐标
-    GhostArray u; // 解变量
+    GhostArray x;      // 网格坐标
+    GhostArray u;      // 解变量
     GhostArray u_prev; // 前一时间步的解
-    GhostArray flux; // 通量存储在半节点上 (i+1/2位置)
-    GhostArray rhs; // 右端项
+    GhostArray flux;   // 通量存储在半节点上 (i+1/2位置)
+    GhostArray rhs;    // 右端项
 
-    real_t dx; // 空间步长
-    real_t time; // 当前时间
+    real_t dx;         // 空间步长
+    real_t time;       // 当前时间
 
-    // 正确的构造函数
+    /**
+     * @brief GridVariables构造函数
+     * @param N 网格点数
+     * @param ghost 虚拟点数
+     * @param length 计算域长度
+     */
     GridVariables(int N, int ghost, real_t length)
         : x(N, ghost)
         , // N个网格点
@@ -31,6 +42,14 @@ struct GridVariables {
     }
 };
 
+/**
+ * @brief 将计算结果写入Tecplot可视化文件
+ * @param grid 网格变量结构体
+ * @param current_time 当前时间
+ * @param filename 输出文件名
+ * 
+ * 该函数将计算结果以Tecplot格式写入文件，便于后续可视化分析
+ */
 void write_to_tecplot_file(const GridVariables& grid, real_t current_time, const std::string& filename)
 {
     std::ofstream outfile(filename);
@@ -48,37 +67,48 @@ void write_to_tecplot_file(const GridVariables& grid, real_t current_time, const
 
     outfile.close();
 }
+
+/**
+ * @brief 主函数（不含时间推进）
+ * 
+ * 该程序用于计算线性对流方程的空间离散精度，
+ * 通过不同网格密度计算右端项并分析收敛阶
+ */
 int main()
 {
+    // 设置OpenMP线程数
     omp_set_num_threads(10);
 
+    // 设置边界条件为非周期性
     is_periodic = false;
-    // Grid density sequence
+    // 网格密度序列（用于收敛性分析）
     std::vector<int> grid_densities = { 50, 100, 150, 200, 300, 400, 500 };
 
-    // Parameters
-    const int ghost = 5; // 每侧虚拟点数
-    const real_t L = 1.0Q; // 域长度
+    // 参数设置
+    const int ghost = 5;     // 每侧虚拟点数
+    const real_t L = 1.0Q;   // 计算域长度
 
-    // Vectors to store errors for each grid density
+    // 存储每种网格密度下的误差向量
     std::vector<real_t> L1_errors;
     std::vector<real_t> L2_errors;
     std::vector<real_t> Linf_errors;
 
+    // 创建结果文件
     std::ofstream results_file("rhs_results.txt");
     if (!results_file.is_open()) {
         std::cerr << "Failed to open rhs_results.txt for writing." << std::endl;
         return 1;
     }
 
-    // Write headers to the file
+    // 写入文件头部
     results_file << "N\tL1_Error\tL2_Error\tLinf_Error\tOrder_of_Accuracy\n";
 
+    // 遍历所有网格密度进行计算
     for (int N : grid_densities) {
-        // Create grid variables collection
+        // 创建网格变量集合
         GridVariables grid(N, ghost, L);
 
-        // Initialize grid
+        // 初始化网格
 // #pragma omp parallel for
         for (GhostArray::Range::Iterator i = grid.x.full_range().begin(); i != grid.x.full_range().end(); ++i) {
             grid.x[*i] = (*i + 0.5Q) * grid.dx; // 单元中心型网格坐标
@@ -86,37 +116,35 @@ int main()
             grid.u[*i] = exact_initial_solution(grid.x[*i], 0.0);
         }
 
-        // Compute RHS
+        // 计算右端项（RHS - Right Hand Side）
         compute_rhs(grid.rhs, grid.u, grid.flux, grid.dx);
 
-        // Calculate errors
+        // 计算各种范数误差
         real_t L1_error = L1_norm_error(grid.rhs, grid.x, 0.0Q);
         real_t L2_error = L2_norm_error(grid.rhs, grid.x, 0.0Q);
         real_t Linf_error = Linf_norm_error(grid.rhs, grid.x, 0.0Q);
 
-        // Store errors
+        // 存储误差
         L1_errors.push_back(L1_error);
         L2_errors.push_back(L2_error);
         Linf_errors.push_back(Linf_error);
 
-        // Write errors to file with initial order of accuracy set to zero
-        // results_file << N << "\t" << L1_error << "\t" << L2_error << "\t" << Linf_error << "\t0\n";
-
-        // Output errors
+        // 输出误差信息
         std::cout << "Grid density: " << N << "\n";
         std::cout << "L1 norm error: " << L1_error << "\n";
         std::cout << "L2 norm error: " << L2_error << "\n";
         std::cout << "L-infinity norm error: " << Linf_error << "\n\n";
     }
 
-    // Calculate order of accuracy
+    // 计算收敛阶
     std::cout << "Order of accuracy:\n";
-    results_file << std::format("{:d}\t{:.5g}\t0\t{:.5g}\t0\t{:.5g}\t0\n",
-        grid_densities[0], L1_errors[0], L2_errors[0], Linf_errors[0]);
+    results_file << grid_densities[0] << "\t" << std::setprecision(5) << std::scientific << L1_errors[0] 
+                 << "\t0\t" << L2_errors[0] << "\t0\t" << Linf_errors[0] << "\t0\n";
     for (size_t i = 1; i < grid_densities.size(); ++i) {
         real_t h1 = 1.0Q / grid_densities[i - 1];
         real_t h2 = 1.0Q / grid_densities[i];
 
+        // 使用公式计算收敛阶：p = log(error1/error2) / log(h1/h2)
         real_t L1_order = log2(L1_errors[i - 1] / L1_errors[i]) / log2(h1 / h2);
         real_t L2_order = log2(L2_errors[i - 1] / L2_errors[i]) / log2(h1 / h2);
         real_t Linf_order = log2(Linf_errors[i - 1] / Linf_errors[i]) / log2(h1 / h2);
@@ -126,10 +154,10 @@ int main()
         std::cout << "L2 norm order: " << L2_order << "\n";
         std::cout << "L-infinity norm order: " << Linf_order << "\n\n";
 
-        // Update the order of accuracy
-        results_file << std::format("{:d}\t{:.5g}\t{:.5g}\t{:.5g}\t{:.5g}\t{:.5g}\t{:.5g}\n",
-            grid_densities[i], L1_errors[i], L1_order,
-            L2_errors[i], L2_order, Linf_errors[i], Linf_order);
+        // 更新收敛阶到结果文件
+        results_file << grid_densities[i] << "\t" << std::setprecision(5) << std::scientific << L1_errors[i] 
+                     << "\t" << L1_order << "\t" << L2_errors[i] << "\t" << L2_order 
+                     << "\t" << Linf_errors[i] << "\t" << Linf_order << "\n";
     }
     results_file.close();
     return 0;
