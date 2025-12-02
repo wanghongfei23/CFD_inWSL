@@ -313,10 +313,26 @@ int main()
 
     // 【王鸿飞】end
 
-    // 显示菜单并获取用户选择
-    displayMenu();
-    int choice = getUserChoice();
-    configureCase(info, choice);
+    // 【预设算例编号】在此处设置需要运行的算例编号
+// 1D Cases: 
+    // 0 - Sod, 
+    // 1 - ShuOsher, 
+    // 2 - Lax, 
+    // 3 - Sedov, 
+    // 4 - Woodward_Colella, 
+    // 5 - Double_sparse_wave
+// 2D Cases: 
+    // 10 - 2D_Riemann_1, 
+    // 11 - 2D_Riemann_2, 
+    // 12 - implosion, 
+    // 13 - RTI, 
+    // 14 - Double_Mach, 
+    // 15 - 2D_Riemann_3, 
+    // 16 - KHI
+    const int presetCase = 2; // 修改此处的数字来选择不同的算例
+    
+    // 移除交互式选择，直接使用预设的算例编号
+    configureCase(info, presetCase);
 
     // file config mode
     std::ifstream file("info.txt");
