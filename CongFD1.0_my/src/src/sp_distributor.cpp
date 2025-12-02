@@ -1,5 +1,16 @@
+/**
+ * @file sp_distributor.cpp
+ * @brief 空间分布器类的实现文件
+ */
+
 #include "sp_distributor.hpp"
 
+/**
+ * @brief 求解右手端
+ * 
+ * 对各个维度分别进行空间离散计算，得到右手端项。
+ * 支持1D/2D/3D问题的并行计算，使用OpenMP进行并行化。
+ */
 void SpDistributor::rhsSolve()
 {
     if (dim <= 0 || dim > 3) {

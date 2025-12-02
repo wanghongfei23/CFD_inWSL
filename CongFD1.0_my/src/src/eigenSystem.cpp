@@ -1,5 +1,15 @@
+/**
+ * @file eigenSystem.cpp
+ * @brief 特征系统类的实现文件
+ */
+
 #include"eigenSystem.hpp"
 
+/**
+ * @brief 构造函数，使用原始变量和法向量初始化
+ * @param prim 原始变量数组 [rho, u, v, p]
+ * @param norm_ 法向量数组
+ */
 eigensystemEuler2D::eigensystemEuler2D(const std::array<real,4> &prim,const std::array<real,3> & norm_)
 {
     r=prim[0],u=prim[1],v=prim[2],p=prim[3];
@@ -10,6 +20,12 @@ eigensystemEuler2D::eigensystemEuler2D(const std::array<real,4> &prim,const std:
     Vn=norm[0]*u+norm[1]*v;
 }
 
+/**
+ * @brief 构造函数，使用左右两侧原始变量和法向量初始化
+ * @param priml 左侧原始变量数组 [rho, u, v, p]
+ * @param primr 右侧原始变量数组 [rho, u, v, p]
+ * @param norm_ 法向量数组
+ */
 eigensystemEuler2D::eigensystemEuler2D(const std::array<real,4> &priml,const std::array<real,4> &primr,const std::array<real,3> & norm_)
 {
       norm=norm_;
@@ -48,6 +64,11 @@ eigensystemEuler2D::eigensystemEuler2D(const std::array<real,4> &priml,const std
 }
 
 
+/**
+ * @brief 将原始变量转换为特征变量
+ * @param prim 原始变量数组 [rho, u, v, p]
+ * @return 特征变量数组
+ */
 std::array<real,4> eigensystemEuler2D::primToChar(const std::array<real,4> &prim)
 {
     real rt=prim[0],ut=prim[1],vt=prim[2],pt=prim[3];
@@ -79,6 +100,12 @@ std::array<real,4> eigensystemEuler2D::primToChar(const std::array<real,4> &prim
     return res;
 
 }
+
+/**
+ * @brief 将特征变量转换为原始变量
+ * @param chars 特征变量数组
+ * @return 原始变量数组 [rho, u, v, p]
+ */
 std::array<real,4> eigensystemEuler2D::charToPrim(const std::array<real,4> & chars)
 {
     real ch1=chars[0],ch2=chars[1],ch3=chars[2],ch4=chars[3],rt,rut,rvt,ret;

@@ -1,5 +1,18 @@
+/**
+ * @file cgnsio.cpp
+ * @brief CGNS输入输出类的实现文件
+ */
+
 #include "cgnsio.hpp"
 
+/**
+ * @brief 将网格数据输出到CGNS文件
+ * @param block 网格块指针
+ * @param info 信息对象指针
+ * 
+ * 该函数创建一个CGNS格式的网格文件，包含网格顶点坐标信息。
+ * 支持1D/2D/3D结构化网格。
+ */
 void CgnsIO::BlockCgnsOutput(Block* block,Info* info)
 {
    {
@@ -50,8 +63,13 @@ void CgnsIO::BlockCgnsOutput(Block* block,Info* info)
    cg_close(index_file);}
 }
 
-
-
+/**
+ * @brief 将解数据输出到CGNS文件
+ * @param data 数据指针
+ * @param info 信息对象指针
+ * 
+ * 该函数将计算得到的解数据写入已存在的CGNS文件中。
+ */
 void CgnsIO::solCgnsOutput(Data* data,Info* info)
 {
 

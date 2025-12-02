@@ -1,5 +1,13 @@
+/**
+ * @file blockSolver.cpp
+ * @brief BlockSolver类的实现文件
+ */
+
 #include "blockSolver.hpp"
 
+/**
+ * @brief 默认构造函数
+ */
 BlockSolver::BlockSolver()
 {
 
@@ -21,6 +29,10 @@ BlockSolver::BlockSolver()
    rhs=eqn->getRhs();
 }
 
+/**
+ * @brief 带参数的构造函数
+ * @param info_ Info对象指针
+ */
 BlockSolver::BlockSolver(Info* info_)
 {
     info=info_;
@@ -41,6 +53,10 @@ BlockSolver::BlockSolver(Info* info_)
     rhs=eqn->getRhs();
 }
 
+/**
+ * @brief 三阶SSP Runge-Kutta时间推进方法
+ * @param dt 时间步长
+ */
 void BlockSolver::RK3_SSP(real dt)
 {
     
@@ -92,6 +108,10 @@ void BlockSolver::RK3_SSP(real dt)
 }
 
 
+/**
+ * @brief DTS欧拉时间推进方法
+ * @param dt 时间步长
+ */
 void BlockSolver::DTS_Euler(real dt)
 {
     

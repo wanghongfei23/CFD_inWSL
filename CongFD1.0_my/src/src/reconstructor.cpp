@@ -1,7 +1,23 @@
+/**
+ * @file reconstructor.cpp
+ * @brief 重构器类的实现文件
+ */
+
 #include "reconstructor.hpp"
 #include "eigenSystem.hpp"
 #include "interScheme.hpp"
 
+/**
+ * @brief 构造函数
+ * @param n_ 网格点数
+ * @param vals_ 原始数据指针
+ * @param valsR_ 重构后数据指针
+ * @param bndL_ 左边界数据指针
+ * @param bndR_ 右边界数据指针
+ * @param info_ Info对象指针
+ * @param i0_ 起始索引
+ * @param offset_ 偏移量
+ */
 Reconstructor::Reconstructor(int n_,Data* vals_,std::shared_ptr<Data> valsR_,std::shared_ptr<OneDBnd> bndL_,std::shared_ptr<OneDBnd> bndR_,Info* info_,int i0_, int offset_)
 {
     vals=vals_;
@@ -15,6 +31,12 @@ Reconstructor::Reconstructor(int n_,Data* vals_,std::shared_ptr<Data> valsR_,std
     nval=vals->getNVar();
 }
 
+/**
+ * @brief 访问指定位置的数据
+ * @param i 索引
+ * @param ivar 变量索引
+ * @return 数据引用
+ */
 real& Reconstructor::at(int i,int ivar)
 {
     if (i<0) 
@@ -28,6 +50,11 @@ real& Reconstructor::at(int i,int ivar)
     return (*vals)[(i0+offset*i)*nval+ivar];
 }
 
+/**
+ * @brief 实现特征重构方法
+ * 
+ * 对一维欧拉方程进行特征重构，使用WENO5方法。
+ */
 void ReconEigen1DEuler::recon()
 {
     int nvalr=valsR->getN();

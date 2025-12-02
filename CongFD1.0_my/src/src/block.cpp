@@ -1,6 +1,17 @@
+/**
+ * @file block.cpp
+ * @brief Block类的实现文件
+ */
+
 #include"block.hpp"
 
 
+/**
+ * @brief 将网格数据输出到CGNS文件
+ * 
+ * 该函数创建一个CGNS格式的网格文件，包含网格顶点坐标信息。
+ * 支持1D/2D/3D结构化网格。
+ */
 void Block::outputCgns()
 {
    cgsize_t isize[3][dim];
@@ -52,28 +63,51 @@ void Block::outputCgns()
 }
 
 
+/**
+ * @brief 重载括号运算符，获取指定单元的坐标
+ * @param ic 单元索引
+ * @param idim 坐标维度索引
+ * @return 指定单元在指定维度上的坐标值
+ */
 real Block::operator()(int ic,int idim)
 {
     return coorCel(ic,idim);
 }
 
 
+/**
+ * @brief 获取内部单元的最大索引数组
+ * @return 内部单元最大索引数组
+ */
 std::array<int,3> Block::getICMax()
 {
    return icMax;
 }
 
+/**
+ * @brief 获取网格节点最大索引数组
+ * @return 网格节点最大索引数组
+ */
 std::array<int,3> Block::getIMax()
 {
    return iMax;
 }
 
 
+/**
+ * @brief 获取网格维度
+ * @return 网格维度 (1/2/3D)
+ */
 int Block::getDim()
 {
    return dim;
 }
 
+/**
+ * @brief 获取单元中心坐标
+ * @param idim 坐标维度索引
+ * @return 单元中心坐标向量
+ */
 std::vector<real> Block::getCellCoor(int idim)
 {
    assert(idim<=dim);
@@ -86,6 +120,12 @@ std::vector<real> Block::getCellCoor(int idim)
    return res;
    
 }
+
+/**
+ * @brief 获取顶点坐标
+ * @param idim 坐标维度索引
+ * @return 顶点坐标向量
+ */
 std::vector<real> Block::getVertexCoor(int idim)
 {
    std::vector<real> res;
@@ -99,6 +139,12 @@ std::vector<real> Block::getVertexCoor(int idim)
    return res;
    
 }
+
+/**
+ * @brief 获取单元间距
+ * @param i 单元索引
+ * @return 单元间距向量
+ */
 std::vector<real> Block::getCellInterval(int i)
 {
    std::vector<real> res;
@@ -110,6 +156,11 @@ std::vector<real> Block::getCellInterval(int i)
    return res;
 }
 
+/**
+ * @brief 获取指定方向上的最小网格间距
+ * @param i 网格节点索引
+ * @return 最小网格间距
+ */
 real Block::getMinDh(int i)
 {
    real res=coorVer(i+1,0)-coorVer(i,0);

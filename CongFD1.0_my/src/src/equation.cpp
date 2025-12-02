@@ -1,5 +1,15 @@
+/**
+ * @file equation.cpp
+ * @brief 方程类的实现文件
+ */
+
 #include "equation.hpp"
 
+/**
+ * @brief 将守恒变量转换为原始变量
+ * 
+ * 根据方程类型调用相应的转换函数，支持线性对流方程、Burgers方程和欧拉方程。
+ */
 void Equation::consToPrim()
 {
     switch (type)
@@ -23,6 +33,11 @@ void Equation::consToPrim()
     }
 }
 
+/**
+ * @brief 一维欧拉方程的守恒变量到原始变量转换
+ * 
+ * 将一维欧拉方程的守恒变量（rho, rho*u, rho*E）转换为原始变量（rho, u, p）。
+ */
 void Equation::consToPrimEuler1D()
 {
     if(nCons!=3,nPrim!=3)
@@ -47,6 +62,11 @@ void Equation::consToPrimEuler1D()
     }
 }
 
+/**
+ * @brief 二维欧拉方程的守恒变量到原始变量转换
+ * 
+ * 将二维欧拉方程的守恒变量（rho, rho*u, rho*v, rho*E）转换为原始变量（rho, u, v, p）。
+ */
 void Equation::consToPrimEuler2D()
 {
     if(nCons!=3,nPrim!=4)
@@ -76,16 +96,28 @@ void Equation::consToPrimEuler2D()
 }
 
 
+/**
+ * @brief 获取原始变量数据指针
+ * @return 原始变量数据指针
+ */
 Data* Equation::getPrim()
 {
     return prim;
 }
 
+/**
+ * @brief 获取守恒变量数据指针
+ * @return 守恒变量数据指针
+ */
 Data* Equation::getCons()
 {
     return cons;
 }
 
+/**
+ * @brief 获取右手端数据指针
+ * @return 右手端数据指针
+ */
 Data* Equation::getRhs()
 {
     return rhs;

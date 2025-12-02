@@ -1,6 +1,16 @@
+/**
+ * @file sp_recon.cpp
+ * @brief 空间离散重构计算实现文件
+ */
+
 #include "SpaceDis.hpp"
 #include "interScheme.hpp"
 
+/**
+ * @brief 右侧界面重构函数
+ * @param i 网格点索引
+ * @return 重构后的变量值向量
+ */
 std::vector<real> SpaceDis::reconR(int i)
 {
     std::vector<real> res(nPrim);
@@ -17,6 +27,11 @@ std::vector<real> SpaceDis::reconR(int i)
     }
 }
 
+/**
+ * @brief 左侧界面重构函数
+ * @param i 网格点索引
+ * @return 重构后的变量值向量
+ */
 std::vector<real> SpaceDis::reconL(int i)
 {
     std::vector<real> res(nPrim);
@@ -33,6 +48,11 @@ std::vector<real> SpaceDis::reconL(int i)
     }
 }
 
+/**
+ * @brief 一维特征重构左侧函数
+ * @param i 网格点索引
+ * @return 重构后的变量值向量
+ */
 std::vector<real> SpaceDis::reconLChar1D(int i)
 {
     assert(info->dim == 1);
@@ -62,6 +82,11 @@ std::vector<real> SpaceDis::reconLChar1D(int i)
     // return {Q1+(Q2+Q3)/(cRef*cRef),(Q2-Q3)/cRef/rRef,Q2+Q3};
     return { Q1 + (Q2) / (cRef * cRef), Q3, Q2 };
 }
+/**
+ * @brief 一维特征重构右侧函数
+ * @param i 网格点索引
+ * @return 重构后的变量值向量
+ */
 std::vector<real> SpaceDis::reconRChar1D(int i)
 {
     enum { R,
@@ -90,6 +115,14 @@ std::vector<real> SpaceDis::reconRChar1D(int i)
     return { Q1 + (Q2) / (cRef * cRef), Q3, Q2 };
 }
 
+/**
+ * @brief 最小差值计算函数
+ * @param u1L 左侧第一个值
+ * @param u2L 左侧第二个值
+ * @param u1R 右侧第一个值
+ * @param u2R 右侧第二个值
+ * @return 包含最小差值的数组
+ */
 static std::array<real, 2> minDif(real u1L, real u2L, real u1R, real u2R)
 {
     std::array<real, 3> difs = { std::abs(u1L - u1R), std::abs(u1L - u2R), std::abs(u2L - u1R) };
@@ -104,6 +137,12 @@ static std::array<real, 2> minDif(real u1L, real u2L, real u1R, real u2R)
     return { 0, 0 };
 }
 
+/**
+ * @brief 最小差值计算函数（三维数组版本）
+ * @param uL 左侧值数组
+ * @param uR 右侧值数组
+ * @return 包含最小差值的数组
+ */
 static std::array<real, 2> minDif(std::array<real, 3> uL, std::array<real, 3> uR)
 {
     std::array<real, 2> difs = { std::abs(uL[0] - uR[0]), std::abs(uL[1] - uR[1]) };
@@ -116,6 +155,12 @@ static std::array<real, 2> minDif(std::array<real, 3> uL, std::array<real, 3> uR
     return { 0, 0 };
 }
 
+/**
+ * @brief 最小差值计算函数（二维数组版本）
+ * @param uL 左侧值数组
+ * @param uR 右侧值数组
+ * @return 包含最小差值的数组
+ */
 static std::array<real, 2> minDif(std::array<real, 2> uL, std::array<real, 2> uR)
 {
     // std::array<real,4> difs={std::abs(uL[0]-uR[0]),std::abs(uL[1]-uR[1]),std::abs(uL[0]-uR[1]),std::abs(uL[1]-uR[0])};
@@ -146,6 +191,12 @@ static std::array<real, 2> minDif(std::array<real, 2> uL, std::array<real, 2> uR
 //     std::cout<<"spRecon Error: minDif index out\n";
 //     return{0,0};
 // }
+/**
+ * @brief 最小差值计算函数（另一种三维数组版本）
+ * @param uL 左侧值数组
+ * @param uR 右侧值数组
+ * @return 包含最小差值的数组
+ */
 static std::array<real, 2> minDif2(std::array<real, 3> uL, std::array<real, 3> uR)
 {
     std::array<real, 3> difs = { std::abs(uL[0] - uR[0]), std::abs(uL[0] - uR[1]), std::abs(uL[1] - uR[0]) };
@@ -159,6 +210,11 @@ static std::array<real, 2> minDif2(std::array<real, 3> uL, std::array<real, 3> u
     std::cout << "spRecon Error: minDif index out\n";
     return { 0, 0 };
 }
+/**
+ * @brief 一维界面中心重构函数
+ * @param i 网格点索引
+ * @return 重构后的变量值向量
+ */
 std::vector<real> SpaceDis::recon1DFaceCenter(int i)
 {
     std::array<real, 3> primL, primR;
@@ -217,6 +273,11 @@ std::vector<real> SpaceDis::recon1DFaceCenter(int i)
     return { resTempL[0], resTempL[1], resTempL[2], resTempR[0], resTempR[1], resTempR[2] };
 }
 
+/**
+ * @brief 二维界面中心重构函数
+ * @param i 网格点索引
+ * @return 重构后的变量值向量
+ */
 std::vector<real> SpaceDis::recon2DFaceCenter(int i)
 {
     std::array<real, 4> primL, primR;
@@ -265,6 +326,11 @@ std::vector<real> SpaceDis::recon2DFaceCenter(int i)
     auto resTempR = eig.charToPrim({ Q1RR, Q2RR, Q3RR, Q4RR });
     return { resTempL[0], resTempL[1], resTempL[2], resTempL[3], resTempR[0], resTempR[1], resTempR[2], resTempR[3] };
 }
+/**
+ * @brief 二维特征重构左侧函数
+ * @param i 网格点索引
+ * @return 重构后的变量值向量
+ */
 std::vector<real> SpaceDis::reconLChar2D(int i)
 {
     assert(info->dim == 2);
@@ -295,6 +361,11 @@ std::vector<real> SpaceDis::reconLChar2D(int i)
     return { resTemp[0], resTemp[1], resTemp[2], resTemp[3] };
 }
 
+/**
+ * @brief 二维特征重构右侧函数
+ * @param i 网格点索引
+ * @return 重构后的变量值向量
+ */
 std::vector<real> SpaceDis::reconRChar2D(int i)
 {
     assert(info->dim == 2);
@@ -418,6 +489,11 @@ std::vector<real> SpaceDis::reconRChar2D(int i)
 //     return res;
 // }
 
+/**
+ * @brief 右侧原始变量重构函数
+ * @param i 网格点索引
+ * @return 重构后的变量值向量
+ */
 std::vector<real> SpaceDis::reconRprim(int i)
 {
     std::vector<real> res(nPrim);
@@ -428,6 +504,11 @@ std::vector<real> SpaceDis::reconRprim(int i)
     return res;
 }
 
+/**
+ * @brief 左侧原始变量重构函数
+ * @param i 网格点索引
+ * @return 重构后的变量值向量
+ */
 std::vector<real> SpaceDis::reconLprim(int i)
 {
     std::vector<real> res(nPrim);

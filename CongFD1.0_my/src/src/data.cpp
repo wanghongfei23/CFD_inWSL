@@ -1,5 +1,15 @@
+/**
+ * @file data.cpp
+ * @brief Data类的实现文件
+ */
+
 #include "data.hpp"
 
+/**
+ * @brief 带参数的构造函数
+ * @param n_ 数据点数
+ * @param nVar_ 变量数
+ */
 Data::Data(int n_,int nVar_)
 {
     n=n_;
@@ -7,6 +17,11 @@ Data::Data(int n_,int nVar_)
     data.resize(nVar*n,0.0);
 }
 
+/**
+ * @brief 初始化解数据
+ * @param n_ 数据点数
+ * @param nvar_ 变量数
+ */
 void Data::solInit(int n_,int nvar_)
 {
     n=n_;
@@ -36,6 +51,12 @@ void Data::solInit(int n_,int nvar_)
         }
     }
 }
+
+/**
+ * @brief 初始化数据
+ * @param n_ 数据点数
+ * @param nvar_ 变量数
+ */
 void Data::init(int n_,int nvar_)
 {
     n=n_;
@@ -43,11 +64,22 @@ void Data::init(int n_,int nvar_)
     data.resize(nVar*n,0.0);
 }
 
+/**
+ * @brief 重载括号运算符，用于访问特定位置的特定变量
+ * @param i 数据点索引
+ * @param ivar 变量索引
+ * @return 对应位置的数据引用
+ */
 real& Data::operator() (int i,int ivar)
 {
     return data[i*nVar+ivar];
 }
 
+/**
+ * @brief 重载方括号运算符，用于访问特定位置的数据
+ * @param i 数据索引
+ * @return 对应位置的数据引用
+ */
 real& Data::operator[] (int i)
 {
     //return (this->data)[i];
@@ -56,6 +88,11 @@ real& Data::operator[] (int i)
 
 
 
+/**
+ * @brief 获取指定变量的最大元素值
+ * @param ivar 变量索引
+ * @return 最大元素值
+ */
 real Data::maxElement(int ivar)
 {
     if(data.empty()) return 0;
@@ -69,6 +106,10 @@ real Data::maxElement(int ivar)
 
 
 
+/**
+ * @brief 设置数据值
+ * @param value 数据值向量
+ */
 void Data::setValue(std::vector<real> value)
 {
     assert(value.size()==data.size());
@@ -83,7 +124,7 @@ void Data::setValue(std::vector<real> value)
 //         {
 //             (*this)[i]=dat[i];
 //         }
-        
+//         
 //     }
 //     else
 //     {
@@ -91,6 +132,10 @@ void Data::setValue(std::vector<real> value)
 //     }
 // }
 
+/**
+ * @brief 重载加赋值运算符
+ * @param arr 要加上的数据向量
+ */
 void Data::operator+= (std::vector<real> arr)
 {
     assert(arr.size()==n*nVar);
@@ -101,6 +146,9 @@ void Data::operator+= (std::vector<real> arr)
         
 }
 
+/**
+ * @brief 将数据设置为零
+ */
 void Data::setZeros()
 {
     std::fill(data.begin(),data.end(),0.0);

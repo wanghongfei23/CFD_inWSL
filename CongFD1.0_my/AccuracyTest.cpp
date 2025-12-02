@@ -1,16 +1,44 @@
+/**
+ * @file AccuracyTest.cpp
+ * @brief 精度测试程序实现文件
+ * 
+ * 该程序用于测试数值方法的精度，通过计算已知解析解的导数问题来评估数值方法的收敛阶。
+ */
+
 #include "SpaceDis.hpp"
 #include <fstream>
 #include <format>
+
+/**
+ * @brief 计算测试函数值
+ * @param x 自变量
+ * @param k 指数参数
+ * @return 函数值
+ */
 constexpr real gkx(real x,real k)
 {
     //return k*x;
     return pow(x,k)*exp(0.75*(x-1));
 }
+
+/**
+ * @brief 计算测试函数导数值
+ * @param x 自变量
+ * @param k 指数参数
+ * @return 导数值
+ */
 constexpr real dgkx(real x,real k)
 {
     //return k;
     return exp(0.75*(-1 + x))*k*pow(x,-1 + k) + 0.75*exp(0.75*(-1 + x))*pow(x,k);
 }
+
+/**
+ * @brief 计算误差
+ * @param h 网格步长
+ * @param k 指数参数
+ * @return 包含L1、L2和Linf范数误差的数组
+ */
 std::array<real,3> getError(real h,real k)
 {
     
@@ -82,8 +110,10 @@ std::array<real,3> getError(real h,real k)
     return res;
 }
 
-
-
+/**
+ * @brief 主函数
+ * @return 程序退出状态
+ */
 int main()
 {
     real k=1;
@@ -139,5 +169,3 @@ int main()
     //
 
 }
-
-

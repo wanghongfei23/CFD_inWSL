@@ -1,5 +1,16 @@
+/**
+ * @file oneDBnd.cpp
+ * @brief 一维边界条件类的实现文件
+ */
+
 #include "oneDBnd.hpp"
 
+/**
+ * @brief 构造函数
+ * @param n_ 网格点数
+ * @param nVar_ 变量数
+ * @param bType_ 边界类型
+ */
 OneDBnd::OneDBnd(int n_,int nVar_,BndType bType_)
 {
     n=n_;
@@ -7,17 +18,32 @@ OneDBnd::OneDBnd(int n_,int nVar_,BndType bType_)
     data.resize(n*nVar,0.0);
     type=bType_;
 }
+
+/**
+ * @brief 重载括号运算符，用于访问边界数据
+ * @param i 索引
+ * @param ivar 变量索引
+ * @return 数据引用
+ */
 real& OneDBnd::operator()(int i,int ivar)
 {
     return data.at(i*nVar+ivar);
 }
 
+/**
+ * @brief 获取网格点数
+ * @return 网格点数
+ */
 int OneDBnd::getN()
 {
     return n;
 }
 
 
+/**
+ * @brief 设置边界值
+ * @param value 值向量
+ */
 void OneDBnd::setValue(std::vector<real> value)
 {
     if(value.size()!=data.size())
@@ -26,11 +52,22 @@ void OneDBnd::setValue(std::vector<real> value)
     }
     std::copy(value.begin(),value.end(),data.begin());
 }
+
+/**
+ * @brief 获取边界类型
+ * @return 边界类型
+ */
 BndType OneDBnd::getType()
 {
     return type;
 }
 
+/**
+ * @brief 设置更新参数
+ * @param prim_ 原始变量数据指针
+ * @param i0_ 起始索引
+ * @param offset_ 偏移量
+ */
 void OneDBnd::setUpdate(Data* prim_,int i0_,int offset_)
 {
     prim=prim_;
@@ -38,6 +75,12 @@ void OneDBnd::setUpdate(Data* prim_,int i0_,int offset_)
     offset=offset_;
 }
 
+/**
+ * @brief 更新边界数据
+ * 
+ * 根据边界类型更新边界数据，支持周期边界、超声速出口边界、
+ * 对称边界和双马赫反射问题的上边界等。
+ */
 void OneDBnd::update()
 {
     switch (type)
@@ -137,5 +180,15 @@ void OneDBnd::update()
     
 }
 
+/**
+ * @brief 设置Info对象指针
+ * @param info_ Info对象指针
+ */
 void OneDBnd::setInfo(Info* info_){info=info_;}
+
+/**
+ * @brief 设置坐标信息
+ * @param coor_ 坐标数组
+ * @param dh_ 网格间距数组
+ */
 void OneDBnd::setCoor(std::array<real,3> coor_,std::array<real,3> dh_){coor=coor_;dh=dh_;}

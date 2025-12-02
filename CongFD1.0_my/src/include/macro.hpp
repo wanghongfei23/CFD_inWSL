@@ -1,9 +1,12 @@
-
+/**
+ * @file macro.hpp
+ * @brief 定义项目中使用的宏、枚举类型和通用函数
+ */
 
 #pragma once
 
-#define real double
-#define ind int
+#define real double              ///< 实数类型别名
+#define ind int                 ///< 整数类型别名
 
 // #include <cmath>
 // #include <stdio.h>
@@ -21,29 +24,37 @@
 #include <map>
 
 #include <chrono>
-inline long timepp = 0;
-inline long timesss = 0;
+inline long timepp = 0;         ///< 时间统计变量
+inline long timesss = 0;        ///< 时间统计变量
 
 // 【王鸿飞】注意gamma
-#define GAMMA 1.4   //其他
-// #define GAMMA 5.0/3.0  //RTI
-
+#define GAMMA 1.4               ///< 比热比常数（其他算例）
+// #define GAMMA 5.0/3.0        ///< 比热比常数（RTI算例）
+/**
+ * @brief 边界类型枚举
+ */
 enum BndType {
-    TYPENULL,
-    PERIODIC1D,
-    SYMMETRY1D,
-    DIRICLET,
-    DIRICLET_SODL,
-    DIRICLET_SODR,
-    FLUXGHOST,
-    SUPERSONICOUTLET,
-    SYMMETRYX, // only for 2D
-    SYMMETRYY, // only for 2D
-    DoubleMachUp,
-    ARDBND
+    TYPENULL,           ///< 空边界类型
+    PERIODIC1D,         ///< 一维周期边界
+    SYMMETRY1D,         ///< 一维对称边界
+    DIRICLET,           ///< Dirichlet边界
+    DIRICLET_SODL,      ///< Sod问题左边界
+    DIRICLET_SODR,      ///< Sod问题右边界
+    FLUXGHOST,          ///< 通量Ghost边界
+    SUPERSONICOUTLET,   ///< 超声速出口边界
+    SYMMETRYX,          ///< X方向对称边界（仅用于2D）
+    SYMMETRYY,          ///< Y方向对称边界（仅用于2D）
+    DoubleMachUp,       ///< 双马赫反射上边界
+    ARDBND              ///< ARD边界
 };
+
+/**
+ * @brief 插值方法枚举
+ */
 enum InterMethod {
+    // 0
     FIRSTORDER,      // 0
+    // 1-10
     MUSCL,           // 1
     WCNS5,           // 2
     WCNSZ5,          // 3
@@ -54,6 +65,7 @@ enum InterMethod {
     WCNS5CONGZ,      // 8
     WCNS5CONGZCT4,   // 9
     WCNS5CONGZCT7,   // 10
+    // 11-20
     TCNS5,           // 11
     TCNS5CT4,        // 12
     TCNS5CT7,        // 13
@@ -64,6 +76,7 @@ enum InterMethod {
     WHFTCNSASF002,    // 18
     WHFTCNSAH002,    // 19
     WHFTCNSASF102,     // 20
+    // 21-30
     WHFTCNSASF103,     // 21
     WHFTCNSASF102_reciprocal,     // 22
     WHFTCNSASF103_reciprocal,     // 23
@@ -74,6 +87,7 @@ enum InterMethod {
     WHFTCNSAS_approx_2,     // 28
     WHFTCNSASF202_2S,     // 29
     WHFTCNSASF202_NoS,     // 30
+    // 31-40
     WHFTCNSASF203_NoS,     // 31
     temp011,     // 32
     temp012,     // 33
@@ -86,45 +100,72 @@ enum InterMethod {
     temp019     // 40
 };
 
+/**
+ * @brief 差分方法枚举
+ */
 enum DiffMethod {
-    HDS6,
-    TRAD6,
-    TRAD2,
-    MND6
+    HDS6,                       ///< HDS6差分方法
+    TRAD6,                      ///< TRAD6差分方法
+    TRAD2,                      ///< TRAD2差分方法
+    MND6                        ///< MND6差分方法
 };
 
+/**
+ * @brief 方程类型枚举
+ */
 enum EquationType {
-    LINEARCONV1D,
-    BURGERS1D,
-    EULER,
-    ACCURACYTEST
+    LINEARCONV1D,               ///< 一维线性对流方程
+    BURGERS1D,                  ///< 一维Burgers方程
+    EULER,                      ///< 欧拉方程
+    ACCURACYTEST                ///< 精度测试方程
 };
 
+/**
+ * @brief 通量方法枚举
+ */
 enum FluxMethod {
-    HLLC1D,
-    ROE1D,
-    HLLC2D
+    HLLC1D,                     ///< 一维HLLC通量
+    ROE1D,                      ///< 一维Roe通量
+    HLLC2D                      ///< 二维HLLC通量
 };
 
+/**
+ * @brief 时间积分方法枚举
+ */
 enum TimeMethod {
-    RK3SSP,
-    EulerFront
+    RK3SSP,                     ///< 三阶SSP Runge-Kutta方法
+    EulerFront                  ///< 欧拉向前积分方法
 };
 
+/**
+ * @brief 源项类型枚举
+ */
 enum SourceType {
-    SOURCENULL,
-    GRAVITY
+    SOURCENULL,                 ///< 无源项
+    GRAVITY                     ///< 重力源项
 };
 
-// int index(int,int,int,std::array<int,3>);
-// std::array<int,2> calOffset(int dim,int i,int j,std::array<int,3>);
-// std::array<int,2> calOffsetInverse(int idim,int i,int j,std::array<int,3> iMax);
-
+/**
+ * @brief 计算三维数组的线性索引
+ * @param i x方向索引
+ * @param j y方向索引
+ * @param k z方向索引
+ * @param iMax 各方向最大索引数组
+ * @return 线性索引
+ */
 constexpr int index(int i, int j, int k, std::array<int, 3> iMax)
 {
     return i + j * iMax[0] + k * iMax[0] * iMax[1];
 }
 
+/**
+ * @brief 计算偏移量
+ * @param idim 维度
+ * @param i 第一索引
+ * @param j 第二索引
+ * @param iMax 各方向最大索引数组
+ * @return 包含起始索引和偏移量的数组
+ */
 constexpr std::array<int, 2> calOffset(int idim, int i, int j, std::array<int, 3> iMax)
 {
     std::array<int, 3> offsets { 1, iMax[0], iMax[0] * iMax[1] };
@@ -142,6 +183,14 @@ constexpr std::array<int, 2> calOffset(int idim, int i, int j, std::array<int, 3
     return res;
 }
 
+/**
+ * @brief 计算逆向偏移量
+ * @param idim 维度
+ * @param i 第一索引
+ * @param j 第二索引
+ * @param iMax 各方向最大索引数组
+ * @return 包含起始索引和偏移量的数组
+ */
 constexpr std::array<int, 2> calOffsetInverse(int idim, int i, int j, std::array<int, 3> iMax)
 {
     std::array<int, 3> offsets { 1, iMax[0], iMax[0] * iMax[1] };

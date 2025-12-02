@@ -1,5 +1,7 @@
-/*
- * sp_flux.cpp
+/**
+ * @file sp_flux.cpp
+ * @brief 空间离散通量计算实现文件
+ * 
  * 该文件实现了各种空间离散格式下的数值通量计算方法
  */
 
@@ -7,9 +9,12 @@
 #include "fluxScheme.hpp"
 #include "interScheme.hpp"
 
-// 计算对流项通量的函数，适用于方程 u_t + a * u_x == 0
-// 参数: i - 网格点索引
-// 实现: 使用Lax-Friedrichs数值通量公式计算界面通量
+/**
+ * @brief 计算对流项通量
+ * @param i 网格点索引
+ * 
+ * 适用于方程 u_t + a * u_x == 0，使用Lax-Friedrichs数值通量公式计算界面通量
+ */
 void SpaceDis::calFluxConv(int i)
 {
     /*for u_t + a * u_x == 0*/
@@ -38,10 +43,12 @@ void SpaceDis::calFluxConv(int i)
     fluxAt(i, 0) = 0.5 * (a * ul + a * ur - std::abs(a) * (ur - ul));
 }
 
-// 计算精度测试问题的通量函数
-// 参数: i - 网格点索引
-// 用途: 主要用于验证代码的精度和正确性
-// 实现: 直接使用左界面重构值作为通量
+/**
+ * @brief 计算精度测试问题的通量
+ * @param i 网格点索引
+ * 
+ * 主要用于验证代码的精度和正确性，直接使用左界面重构值作为通量
+ */
 void SpaceDis::calFluxAccuracyTest(int i)
 {
     /*for u_t + a * u_x == 0*/
@@ -54,10 +61,12 @@ void SpaceDis::calFluxAccuracyTest(int i)
     fluxAt(i, 0) = ul;
 }
 
-// 计算Burgers方程的通量函数
-// 参数: i - 网格点索引
-// 方程: u_t + (u^2/2)_x = 0
-// 实现: 使用Lax-Friedrichs格式计算非线性对流项的数值通量
+/**
+ * @brief 计算Burgers方程的通量
+ * @param i 网格点索引
+ * 
+ * 方程: u_t + (u^2/2)_x = 0，使用Lax-Friedrichs格式计算非线性对流项的数值通量
+ */
 void SpaceDis::calFluxBurgers(int i)
 {
     /*for u_t + a * u_x == 0*/
@@ -119,7 +128,10 @@ typedef std::array<real, 2> arr2;
 //     }
 // }
 
-// 计算一维欧拉方程的界面通量函数（当前使用版本）
+/**
+ * @brief 计算一维欧拉方程的界面通量
+ * @param i 网格点索引
+ */
 void SpaceDis::calFluxEuler1D(int i)
 {
     /*for u_t + a * u_x == 0*/
@@ -159,7 +171,10 @@ void SpaceDis::calFluxEuler1D(int i)
     }
 }
 
-// 计算二维欧拉方程的界面通量函数
+/**
+ * @brief 计算二维欧拉方程的界面通量
+ * @param i 网格点索引
+ */
 void SpaceDis::calFluxEuler2D(int i)
 {
     /*for u_t + a * u_x == 0*/

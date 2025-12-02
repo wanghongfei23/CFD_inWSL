@@ -1,3 +1,7 @@
+/**
+ * @file fluxScheme.cpp
+ * @brief 通量格式相关函数的实现文件
+ */
 
 #include "macro.hpp"
 #include "fluxScheme.hpp"
@@ -9,6 +13,16 @@ enum{
     R
 };
 
+/**
+ * @brief 计算一维Roe通量
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧速度
+ * @param ur 右侧速度
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @return 通量向量
+ */
 std::vector<real> roeFlux1D(real rl,real rr,real ul,real ur,real pl,real pr)
 {
     std::vector<real> res;
@@ -74,6 +88,16 @@ std::vector<real> roeFlux1D(real rl,real rr,real ul,real ur,real pl,real pr)
 
 }
 
+/**
+ * @brief 计算一维Roe通量（第二种实现）
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧速度
+ * @param ur 右侧速度
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @return 通量向量
+ */
 std::vector<real> roeFlux1D2(real rl,real rr,real ul,real ur,real pl,real pr)
 {
     //reference: https://blog.csdn.net/Tankrun1997/article/details/132743487
@@ -146,7 +170,3 @@ std::vector<real> roeFlux1D2(real rl,real rr,real ul,real ur,real pl,real pr)
 
 
 }
-
-
-
-

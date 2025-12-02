@@ -1,6 +1,16 @@
+/**
+ * @file sp_difference.cpp
+ * @brief 空间离散差分计算实现文件
+ */
+
 #include "SpaceDis.hpp"
 #include "fluxScheme.hpp"
 
+/**
+ * @brief HCS格式差分计算
+ * 
+ * 使用HCS(High-order Central Scheme)格式进行差分计算
+ */
 void SpaceDis::difHCS()
 {
     constexpr std::array<real, 3> w = { 64.0 / 45.0, -2.0 / 9.0, 1.0 / 180.0 };
@@ -93,6 +103,11 @@ void SpaceDis::difHCS()
         (*rhs)(i0 + (iNode - 2) * offset, j) += w[2] * fluxNode[j] / h;
 }
 
+/**
+ * @brief MND6格式差分计算
+ * 
+ * 使用MND6(Modified Nonlinear Dispersion)格式进行差分计算
+ */
 void SpaceDis::difMND6()
 {
     constexpr std::array<real, 3> w = { 3.0 / 2.0, -3.0 / 10.0, 1.0 / 30.0 };

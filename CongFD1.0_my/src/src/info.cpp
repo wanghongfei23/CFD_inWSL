@@ -1,5 +1,14 @@
+/**
+ * @file info.cpp
+ * @brief Info类的实现文件
+ */
+
 #include "info.hpp"
 
+/**
+ * @brief 获取鬼点单元数
+ * @return 鬼点单元数
+ */
 int Info::nGhostCell()
 {
     
@@ -15,6 +24,11 @@ int Info::nGhostCell()
     }
     return 0;
 }
+
+/**
+ * @brief 获取通量点数
+ * @return 通量点数
+ */
 int Info::nFluxPoint()
 {
     switch (diffMethod)
@@ -36,6 +50,10 @@ int Info::nFluxPoint()
     }
 }
 
+/**
+ * @brief 获取原始变量数
+ * @return 原始变量数
+ */
 int Info::nPrim()
 {
     switch (eqType)
@@ -60,6 +78,11 @@ int Info::nPrim()
         break;
     }
 }
+
+/**
+ * @brief 获取守恒变量数
+ * @return 守恒变量数
+ */
 int Info::nCons()
 {
     switch (eqType)
@@ -86,6 +109,10 @@ int Info::nCons()
 }
 
 
+/**
+ * @brief 获取问题维度
+ * @return 问题维度
+ */
 int Info::getDim()
 {
     int dim=0;
@@ -96,6 +123,10 @@ int Info::getDim()
     return dim;
 }
 
+/**
+ * @brief 获取内部网格最大索引
+ * @return 内部网格最大索引数组
+ */
 std::array<int,3> Info::icMax()
 {
     std::array<int,3> icMax;
@@ -109,6 +140,10 @@ std::array<int,3> Info::icMax()
 }
 
 
+/**
+ * @brief 获取默认边界类型
+ * @return 默认边界类型
+ */
 BndType Info::defaultBndType()
 {
     switch (eqType)
@@ -185,6 +220,10 @@ static std::map<int,std::string> exampleStr2D={
     {6,"KHI"}
 };
 
+/**
+ * @brief 生成文件名
+ * @return 生成的文件名
+ */
 std::string Info::filename()
 {
     // 字符串拼接，包含空间离散方法、插值方法、算例信息和当前时间

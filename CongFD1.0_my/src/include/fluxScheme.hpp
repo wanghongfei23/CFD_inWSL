@@ -1,3 +1,11 @@
+/**
+ * @file fluxScheme.hpp
+ * @brief 定义通量格式相关的函数和类
+ * 
+ * 该文件包含了各种通量计算方案的实现，如Roe通量、HLLC通量等，
+ * 用于计算CFD中界面的数值通量。
+ */
+
 #pragma once
 
 #include <array>
@@ -5,9 +13,42 @@
 #include <algorithm>
 
 typedef std::array<real,2> arr2;
+/**
+ * @brief 计算一维Roe通量
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧速度
+ * @param ur 右侧速度
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @return 通量向量
+ */
 std::vector<real> roeFlux1D(real rl,real rr,real ul,real ur,real pl,real pr);
+
+/**
+ * @brief 计算一维Roe通量（第二种实现）
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧速度
+ * @param ur 右侧速度
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @return 通量向量
+ */
 std::vector<real> roeFlux1D2(real rl,real rr,real ul,real ur,real pl,real pr);
+
 //std::vector<real> HLLCFlux1D(arr2 r, arr2 u, arr2 p, arr2 H, arr2 RT);
+
+/**
+ * @brief 计算一维HLLC通量
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧速度
+ * @param ur 右侧速度
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @return 通量数组
+ */
 constexpr std::array<real,3> HLLCFlux1D(real rl,real rr,real ul,real ur,real pl,real pr)
 {
     //reference:https://zhuanlan.zhihu.com/p/583555029
@@ -68,6 +109,20 @@ constexpr std::array<real,3> HLLCFlux1D(real rl,real rr,real ul,real ur,real pl,
     }
     return res;
 }
+
+/**
+ * @brief 计算二维HLLC通量
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧速度（x方向）
+ * @param ur 右侧速度（x方向）
+ * @param vl 左侧速度（y方向）
+ * @param vr 右侧速度（y方向）
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @param norm 单位法向量
+ * @return 通量数组
+ */
 constexpr std::array<real,4> HLLCFlux2D(real rl,real rr,real ul,real ur,real vl,real vr,real pl,real pr,std::array<real,3> norm)
 {
     enum{
@@ -157,6 +212,19 @@ constexpr std::array<real,4> HLLCFlux2D(real rl,real rr,real ul,real ur,real vl,
     return res;
 }
 
+/**
+ * @brief 计算二维HLLC通量（第二种实现）
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧速度（x方向）
+ * @param ur 右侧速度（x方向）
+ * @param vl 左侧速度（y方向）
+ * @param vr 右侧速度（y方向）
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @param norm 单位法向量
+ * @return 通量数组
+ */
 constexpr std::array<real,4> HLLCFlux2D2(real rl,real rr,real ul,real ur,real vl,real vr,real pl,real pr,std::array<real,3> norm)
 {
     enum{
@@ -301,6 +369,19 @@ constexpr std::array<real,4> HLLCFlux2D2(real rl,real rr,real ul,real ur,real vl
     return res;
 }
 
+/**
+ * @brief 计算二维Roe通量
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧速度（x方向）
+ * @param ur 右侧速度（x方向）
+ * @param vl 左侧速度（y方向）
+ * @param vr 右侧速度（y方向）
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @param norm 单位法向量
+ * @return 通量数组
+ */
 constexpr std::array<real,4> roeFlux2D(real rl,real rr,real ul,real ur,real vl,real vr,real pl,real pr,std::array<real,3> norm)
 {
     enum{
@@ -389,6 +470,19 @@ constexpr std::array<real,4> roeFlux2D(real rl,real rr,real ul,real ur,real vl,r
     return result;
 }
 
+/**
+ * @brief 计算二维Roe通量（对称版本）
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧速度（x方向）
+ * @param ur 右侧速度（x方向）
+ * @param vl 左侧速度（y方向）
+ * @param vr 右侧速度（y方向）
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @param norm 单位法向量
+ * @return 通量数组
+ */
 constexpr std::array<real,4> roeFlux2DSym(real rl,real rr,real ul,real ur,real vl,real vr,real pl,real pr,std::array<real,3> norm)
 {
     enum{
@@ -487,6 +581,12 @@ constexpr std::array<real,4> roeFlux2DSym(real rl,real rr,real ul,real ur,real v
     return result;
 }
 
+/**
+ * @brief 计算二维Euler方程通量
+ * @param q 状态向量
+ * @param norm 单位法向量
+ * @return 通量向量
+ */
 constexpr std::vector<real> fEuler2D(const std::vector<real>& q ,std::array<real,3> norm)
 {
     real r=q[0],u=q[1],v=q[2],p=q[3];
@@ -503,6 +603,12 @@ constexpr std::vector<real> fEuler2D(const std::vector<real>& q ,std::array<real
     return res;
 }
 
+/**
+ * @brief 计算一维Euler方程通量
+ * @param q 状态向量
+ * @param norm 单位法向量
+ * @return 通量向量
+ */
 constexpr std::vector<real> fEuler1D(const std::vector<real>& q ,std::array<real,3> norm)
 {
     real r=q[0],u=q[1],p=q[2];
@@ -514,6 +620,13 @@ constexpr std::vector<real> fEuler1D(const std::vector<real>& q ,std::array<real
     };
     return res;
 }
+
+/**
+ * @brief 默认通量计算函数
+ * @param q 状态向量
+ * @param norm 单位法向量
+ * @return 通量向量
+ */
 constexpr std::vector<real> fDefault(const std::vector<real>& q ,std::array<real,3> norm)
 {
     return {q[0]};

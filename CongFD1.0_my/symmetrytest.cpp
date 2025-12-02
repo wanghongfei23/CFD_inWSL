@@ -1,6 +1,19 @@
+/**
+ * @file symmetrytest.cpp
+ * @brief 对称性测试程序实现文件
+ * 
+ * 该程序用于测试二维欧拉方程特征系统和通量计算的对称性。
+ */
+
 #include "eigenSystem.hpp"
 #include "fluxScheme.hpp"
 
+/**
+ * @brief 主函数
+ * @return 程序退出状态
+ * 
+ * 测试不同方向上的特征变换和通量计算的对称性。
+ */
 int main()
 {
     //left star

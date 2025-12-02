@@ -1,5 +1,17 @@
+/**
+ * @file bnds.cpp
+ * @brief 边界条件管理类的实现文件
+ */
+
 #include"Bnds.hpp"
 
+/**
+ * @brief 获取指定方向的一维边界
+ * @param idim 方向索引
+ * @param i 第一索引
+ * @param j 第二索引
+ * @return 包含左右边界的数组
+ */
 std::array<std::shared_ptr<OneDBnd>,2> Bnds::getOneDBnd(int idim,int i,int j)
 {
     std::array<std::shared_ptr<OneDBnd>,2> res;
@@ -28,6 +40,9 @@ std::array<std::shared_ptr<OneDBnd>,2> Bnds::getOneDBnd(int idim,int i,int j)
     
 }
 
+/**
+ * @brief 更新所有边界条件
+ */
 void Bnds::update()
 {
     for (auto ibnd:oneDBnds)

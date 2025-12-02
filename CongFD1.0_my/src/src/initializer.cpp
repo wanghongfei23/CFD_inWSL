@@ -1,5 +1,17 @@
+/**
+ * @file initializer.cpp
+ * @brief 初始化器类的实现文件
+ */
+
 #include"initializer.hpp"
 
+/**
+ * @brief 解初始化
+ * @param grid 网格块指针
+ * @param sol 解数据指针
+ * 
+ * 根据不同的方程类型和算例编号初始化解数据。
+ */
 void Initializer::solInit(Block* grid,Data* sol)
 {
     std::vector<real> tempsol;

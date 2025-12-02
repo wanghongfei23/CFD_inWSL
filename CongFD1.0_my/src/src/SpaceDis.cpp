@@ -1,7 +1,25 @@
+/**
+ * @file SpaceDis.cpp
+ * @brief 空间离散类的实现文件
+ */
+
 #include "SpaceDis.hpp"
 #include "interScheme.hpp"
 
+/**
+ * @brief 默认构造函数
+ */
 SpaceDis::SpaceDis() { };
+
+/**
+ * @brief 构造函数
+ * @param n_ 网格点数
+ * @param data_ 数据指针
+ * @param rhs_ 右手端数据指针
+ * @param bndL_ 左边界指针
+ * @param bndR_ 右边界指针
+ * @param info_ Info对象指针
+ */
 SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bndL_, std::shared_ptr<OneDBnd> bndR_, Info* info_)
 {
     data = data_;

@@ -1,3 +1,8 @@
+/**
+ * @file zoneMain.cpp
+ * @brief 主程序入口文件，用于配置和运行CFD求解器
+ */
+
 #include "blockSolver.hpp"
 #include "eigenSystem.hpp"
 #include "000_globals.hpp"
@@ -7,10 +12,12 @@
 #include <iostream>
 #include <limits>
 
-// 【王鸿飞】begin-1命名
 #include <map>
 #include <string>
-// 定义静态映射表，将算例映射到字符串
+
+/**
+ * @brief 一维算例标识到字符串的映射表
+ */
 static std::map<int,std::string> exampleStr1D={
     {0,"Sod"},
     {1,"ShuOsher"},
@@ -20,6 +27,9 @@ static std::map<int,std::string> exampleStr1D={
     {5,"Double_sparse_wave"}
 };
 
+/**
+ * @brief 二维算例标识到字符串的映射表
+ */
 static std::map<int,std::string> exampleStr2D={
     {0,"2D_Riemann_1"},
     {1,"2D_Riemann_2"},
@@ -30,6 +40,9 @@ static std::map<int,std::string> exampleStr2D={
     {6,"KHI"}
 };
 
+/**
+ * @brief 插值方法到字符串的映射表
+ */
 static std::map<InterMethod,std::string> disStr={
     {FIRSTORDER,"FIRSTORDER"},
     {MUSCL,"MUSCL"},
@@ -62,9 +75,10 @@ static std::map<InterMethod,std::string> disStr={
     {temp018,"temp_name_018"},
     {temp019,"temp_name_019"}
 };
-// 【王鸿飞】end-1命名
 
-// 显示算例选择菜单
+/**
+ * @brief 算例选择菜单
+ */
 void displayMenu() {
     std::cout << "\n=== CFD Solver Case Selection ===\n";
     std::cout << "1D Cases:\n";
@@ -87,7 +101,10 @@ void displayMenu() {
     std::cout << "Enter your choice (0-5 for 1D, 10-16 for 2D): ";
 }
 
-// 获取用户选择的算例
+/**
+ * @brief 获取用户选择的算例
+ * @return 用户选择的算例编号
+ */
 int getUserChoice() {
     int choice;
     while (!(std::cin >> choice) || 
@@ -99,7 +116,11 @@ int getUserChoice() {
     return choice;
 }
 
-// 根据用户选择配置算例参数
+/**
+ * @brief 根据用户选择配置算例参数
+ * @param[in,out] info Info对象指针
+ * @param[in] choice 用户选择的算例编号
+ */
 void configureCase(Info* info, int choice) {
     switch(choice) {
         case 0: // Sod tube
@@ -248,15 +269,12 @@ void configureCase(Info* info, int choice) {
     }
 }
 
+/**
+ * @brief 主函数，程序入口点
+ * @return 程序退出状态码
+ */
 int main()
 {
-    // std::array<real,4> prim0={1.0,0.75,-0.5,1.0};
-    // std::array<real,4> prim={2.0,-0.75,0.5,1.0};
-    // eigensystemEuler2D eig=eigensystemEuler2D(prim0,{1,0,0});
-    // auto eigValues=eig.primToChar(prim);
-    // auto prim2=eig.charToPrim(eigValues);
-    // std::cout<<"finish\n";
-
     omp_set_num_threads(10);
     // omp_set_num_threads(1);
 
@@ -264,95 +282,96 @@ int main()
 
     info->eqType = EULER;
     info->spMethod = WCNS5;
-    info->diffMethod = MND6;
+    // 差分方法选项
+        info->diffMethod = MND6;
+        // info->diffMethod = TRAD6;
 
+    // 插值方法选项
+        // info->interMethod=LINEAR5;
+        // info->interMethod=WCNSZ5Char;
+        // info->BVD=true;
+        // info->interMethod = NICEST5;
+        // info->interMethod=WCNS5CONG;
+        // info->sourceType=GRAVITY;
 
-    // info->diffMethod = TRAD6;
-    // info->interMethod=LINEAR5;
-    // info->interMethod=WCNSZ5Char;
-    // info->BVD=true;
-    // info->interMethod = NICEST5;
-    // info->interMethod=WCNS5CONG;
-    // info->sourceType=GRAVITY;
+        // info->interMethod = WCNS5; //weno5_JSchen
+        // info->interMethod = WCNSZ5; //weno5_Z
+        info->interMethod = TCNS5; //Teno5_Z
+        // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
+        // info->interMethod = WHFTCNSA;
+        // info->interMethod = WHFTCNSASF002;
+        // info->interMethod = WHFTCNSAH002;
+        // info->interMethod = WHFTCNSASF102;
+        // info->interMethod = WHFTCNSASF103;
+        // info->interMethod = WHFTCNSASF102_reciprocal;
+        // info->interMethod = WHFTCNSASF103_reciprocal;
+        // info->interMethod = WHFTCNSAS_fx; // 不进行函数拟合，直接用原来近似的指数形式CT'
+        // info->interMethod = WHFTCNSAS_initial; // 算CT'，原封不动的叠加A和S
+        // info->interMethod = WHFTCNSAS_approx_1; // 算CT'，叠加A和S，分母近似掉-1
+        // info->interMethod = WHFTCNSAS_fx_real; // 算
+        // info->interMethod = WHFTCNSAS_approx_2; // 具体代入，叠加A和S，分母近似掉-1
 
-    // 【王鸿飞】begin-1
+        // info->interMethod = WHFTCNSASF202_2S;
+        // info->interMethod = WHFTCNSASF202_NoS;
+        // info->interMethod = WHFTCNSASF203_NoS;
+        // info->interMethod = temp011;
+        // info->interMethod = temp012;
+        // info->interMethod = temp013;
+        // info->interMethod = temp014;
+        // info->interMethod = temp015;
+        // info->interMethod = temp016;
+        // info->interMethod = temp017;
+        // info->interMethod = temp018;
+        // info->interMethod = temp019;
+        // info->interMethod = TCNSCongA;
 
-    // F102中的1表示改进版本 
-
-    // info->interMethod = WCNS5; //weno5_JSchen
-    // info->interMethod = WCNSZ5; //weno5_Z
-    info->interMethod = TCNS5; //Teno5_Z
-    // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
-    // info->interMethod = WHFTCNSA;
-    // info->interMethod = WHFTCNSASF002;
-    // info->interMethod = WHFTCNSAH002;
-    // info->interMethod = WHFTCNSASF102;
-    // info->interMethod = WHFTCNSASF103;
-    // info->interMethod = WHFTCNSASF102_reciprocal;
-    // info->interMethod = WHFTCNSASF103_reciprocal;
-    // info->interMethod = WHFTCNSAS_fx; // 不进行函数拟合，直接用原来近似的指数形式CT'
-    // info->interMethod = WHFTCNSAS_initial; // 算CT'，原封不动的叠加A和S
-    // info->interMethod = WHFTCNSAS_approx_1; // 算CT'，叠加A和S，分母近似掉-1
-    // info->interMethod = WHFTCNSAS_fx_real; // 算
-    // info->interMethod = WHFTCNSAS_approx_2; // 具体代入，叠加A和S，分母近似掉-1
-
-    // F的2.0时代
-    // info->interMethod = WHFTCNSASF202_2S;
-    // info->interMethod = WHFTCNSASF202_NoS;
-    // info->interMethod = WHFTCNSASF203_NoS;
-    // info->interMethod = temp011;
-    // info->interMethod = temp012;
-    // info->interMethod = temp013;
-    // info->interMethod = temp014;
-    // info->interMethod = temp015;
-    // info->interMethod = temp016;
-    // info->interMethod = temp017;
-    // info->interMethod = temp018;
-    // info->interMethod = temp019;
-    // info->interMethod = TCNSCongA;
-
-    // 【王鸿飞】end
 
     // 【预设算例编号】在此处设置需要运行的算例编号
-// 1D Cases: 
-    // 0 - Sod, 
-    // 1 - ShuOsher, 
-    // 2 - Lax, 
-    // 3 - Sedov, 
-    // 4 - Woodward_Colella, 
-    // 5 - Double_sparse_wave
-// 2D Cases: 
-    // 10 - 2D_Riemann_1, 
-    // 11 - 2D_Riemann_2, 
-    // 12 - implosion, 
-    // 13 - RTI, 
-    // 14 - Double_Mach, 
-    // 15 - 2D_Riemann_3, 
-    // 16 - KHI
-    const int presetCase = 2; // 修改此处的数字来选择不同的算例
+    // 1D Cases: 
+        // 0 - Sod, 
+        // 1 - ShuOsher, 
+        // 2 - Lax, 
+        // 3 - Sedov, 
+        // 4 - Woodward_Colella, 
+        // 5 - Double_sparse_wave
+    // 2D Cases: 
+        // 10 - 2D_Riemann_1, 
+        // 11 - 2D_Riemann_2, 
+        // 12 - implosion, 
+        // 13 - RTI, 
+        // 14 - Double_Mach, 
+        // 15 - 2D_Riemann_3, 
+        // 16 - KHI
+
+    const int presetCase = 2; // 算例选择
     
     // 移除交互式选择，直接使用预设的算例编号
     configureCase(info, presetCase);
 
-    // file config mode
+    // 从info.txt文件中读取仿真参数配置
     std::ifstream file("info.txt");
     if (file.is_open()) {
         int n;
         real nf;
         file >> n;
+        // 读取插值方法类型，并检查有效性
         if (n < temp019)
             info->interMethod = (InterMethod)n;
 
         file >> n;
+        // 设置结束时间步
         info->endStep = n;
 
         file >> nf;
+        // 设置输出时间间隔
         info->outputDt = nf;
 
         file >> nf;
+        // 设置CFL数
         info->CFL = nf;
 
         file >> n;
+        // 读取案例编号
         info->nCase = n;
 
         real nf1, nf2, nf3, nf4, nf5, nf6;
@@ -362,48 +381,54 @@ int main()
         file >> nf4;
         file >> nf5;
         file >> nf6;
+        // 设置计算区域范围
         info->calZone = { nf1, nf2, nf3, nf4, nf5, nf6 };
 
         int n1, n2, n3;
         file >> n1;
         file >> n2;
         file >> n3;
+        // 设置网格点数
         info->iMax = { n1, n2, n3 };
 
         file >> n;
+        // 设置问题维度
         info->dim = n;
 
         file >> n;
+        // 设置OpenMP线程数
         omp_set_num_threads(n);
 
         std::cout << "file mode initialization finished\n";
 
     } else {
+        // 文件打开失败提示
         std::cout << "file mode initialization failed\n";
     }
 
     InterMethod interscheme;
 
+    // 创建BlockSolver对象
     BlockSolver bSolver(info);
+    // 开始计时
     auto start = std::chrono::high_resolution_clock::now();
+    // 根据方程类型选择不同的时间步进循环方式
     if (info->eqType != EULER)
         bSolver.stepsLoop();
     else
         bSolver.stepsLoopCFL();
+    // 结束计时并计算运行时间
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start).count();
+
     // bSolver.stepsLoopDTS();
     // bSolver.solve();
     // bSolver.outputPrim();
     // bSolver.Test();
 
-    // 原命名
-    // std::ofstream timeinfo("timeInfo.txt");
-
-    // 【王鸿飞】begin-1命名
-    // 创建与info.cpp中filename()函数类似命名方式的文件名
+    // 命名系统
+    // 查询命名映射表
     std::string caseName = "unknown";
-    
     if (info->dim == 1) {
         auto it = exampleStr1D.find(info->nCase);
         if (it != exampleStr1D.end()) {
@@ -415,7 +440,6 @@ int main()
             caseName = it->second;
         }
     }
-    
     // 添加网格信息到文件名
     std::string gridInfo = "";
     if (info->dim == 1) {
@@ -428,8 +452,8 @@ int main()
     
     std::string timeInfoFilename = caseName + " - " + disStr[info->interMethod] + " - " + gridInfo + ".txt";
     std::ofstream timeinfo(timeInfoFilename);
-    // 【王鸿飞】end-1命名
     
+    // 时间信息打印与输出
     std::cout << "totaltime= " << duration << "   Finish\n";
     std::cout << "time= " << timepp / 1e6 << "   Finish\n";
     std::cout << "timesteps= " << bSolver.timesteps << "   Finish\n";
@@ -442,8 +466,8 @@ int main()
     timeinfo << "solvertime= " << timesss << '\n';
     
 
-    // 王鸿飞统计CT_A
-    // 输出统计信息到单独的文件
+    /// @brief 统计不同CT值的数量并输出到文件
+    /// @details 当存在任何CT值计数时，将统计信息写入独立的文本文件
     if (global_counter_5 || global_counter_6 || global_counter_7 || global_counter_8 || global_counter_9 || global_counter_10) {
         std::string statFileName = caseName + " - " + disStr[info->interMethod] + " - " + gridInfo + "_CT-A_counter.txt";
         std::ofstream statFile(statFileName);
@@ -456,6 +480,8 @@ int main()
         statFile << "CT=1e-10 count: " << global_counter_10 << "\n";
         statFile.close();
     }
+    /// @brief 检查是否存在非预期范围的CT值
+    /// @details 如果pandaun_001为true，表示存在超出-5到-10范围的CT值
     if (pandaun_001)
     {
         std::cout << "有 非-5到-10的预期值" << "\n";
