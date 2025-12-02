@@ -1,4 +1,0 @@
-/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/zyc_linear_advect - 结构化/build/CMakeFiles/wcns_convection.dir
-/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/zyc_linear_advect - 结构化/build/CMakeFiles/wcns_convection_without_time.dir
-/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/zyc_linear_advect - 结构化/build/CMakeFiles/edit_cache.dir
-/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/zyc_linear_advect - 结构化/build/CMakeFiles/rebuild_cache.dir

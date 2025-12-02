@@ -1,0 +1,13 @@
+# ninja log v6
+1	28	1764634540400142541	/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect - 标准结构/build/cmake_install.cmake	f2f8f055cf6a1e03
+1	28	1764634540400142541	build.ninja	f2f8f055cf6a1e03
+1	1152	1764643449492389113	CMakeFiles/wcns_convection_without_time.dir/src/without_time.cpp.o	e1cb51b6039f41dc
+1181	1306	1764643450672389184	/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect - 标准结构/bin/wcns_convection	cd4362b4f037b9ba
+1	1181	1764643449492389113	CMakeFiles/wcns_convection.dir/src/with_time.cpp.o	36de70405161bd73
+1152	1280	1764643450644389182	/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect - 标准结构/bin/wcns_convection_without_time	e42aed99d9d17b26
+2	1172	1764643641708402684	CMakeFiles/wcns_convection_without_time.dir/src/without_time.cpp.o	e1cb51b6039f41dc
+1172	1296	1764643642880402730	/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect - 标准结构/bin/wcns_convection_without_time	e42aed99d9d17b26
+2	1383	1764644110072414883	CMakeFiles/wcns_convection_without_time.dir/src/without_time.cpp.o	e1cb51b6039f41dc
+2	1391	1764644110072414883	CMakeFiles/wcns_convection.dir/src/with_time.cpp.o	36de70405161bd73
+1383	1528	1764644111452414894	/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect - 标准结构/bin/wcns_convection_without_time	e42aed99d9d17b26
+1392	1529	1764644111460414894	/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect - 标准结构/bin/wcns_convection	cd4362b4f037b9ba

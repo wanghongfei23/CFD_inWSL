@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "WCNS_Convection",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "wcns_convection::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wcns_convection-Debug-fb595c1802270201c9b8.json",
+					"name" : "wcns_convection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wcns_convection_without_time::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wcns_convection_without_time-Debug-952c0086233a92abf9a2.json",
+					"name" : "wcns_convection_without_time",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect - \u6807\u51c6\u7ed3\u6784/build",
+		"source" : "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect - \u6807\u51c6\u7ed3\u6784"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
