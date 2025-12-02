@@ -1,8 +1,12 @@
-
 #include "blockSolver.hpp"
 #include "eigenSystem.hpp"
 #include "000_globals.hpp"
 #include <fstream>
+#include <map>
+#include <string>
+#include <iostream>
+#include <limits>
+
 // 【王鸿飞】begin-1命名
 #include <map>
 #include <string>
@@ -59,6 +63,190 @@ static std::map<InterMethod,std::string> disStr={
     {temp019,"temp_name_019"}
 };
 // 【王鸿飞】end-1命名
+
+// 显示算例选择菜单
+void displayMenu() {
+    std::cout << "\n=== CFD Solver Case Selection ===\n";
+    std::cout << "1D Cases:\n";
+    std::cout << "  0 - Sod\n";
+    std::cout << "  1 - ShuOsher\n";
+    std::cout << "  2 - Lax\n";
+    std::cout << "  3 - Sedov\n";
+    std::cout << "  4 - Woodward_Colella\n";
+    std::cout << "  5 - Double_sparse_wave\n\n";
+    
+    std::cout << "2D Cases:\n";
+    std::cout << "  10 - 2D_Riemann_1\n";
+    std::cout << "  11 - 2D_Riemann_2\n";
+    std::cout << "  12 - implosion\n";
+    std::cout << "  13 - RTI\n";
+    std::cout << "  14 - Double_Mach\n";
+    std::cout << "  15 - 2D_Riemann_3\n";
+    std::cout << "  16 - KHI\n\n";
+    
+    std::cout << "Enter your choice (0-5 for 1D, 10-16 for 2D): ";
+}
+
+// 获取用户选择的算例
+int getUserChoice() {
+    int choice;
+    while (!(std::cin >> choice) || 
+           (choice < 0 || (choice > 5 && choice < 10) || choice > 16)) {
+        std::cout << "Invalid input. Please enter a valid choice (0-5 for 1D, 10-16 for 2D): ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
+    return choice;
+}
+
+// 根据用户选择配置算例参数
+void configureCase(Info* info, int choice) {
+    switch(choice) {
+        case 0: // Sod tube
+            info->endStep = 20;
+            info->outputDt = 0.01;
+            info->CFL = 0.5;
+            info->nCase = 0;
+            info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
+            info->iMax = { 201, 2, 2 };
+            info->dim = 1;
+            std::cout << "Configured: Sod tube problem\n";
+            break;
+            
+        case 1: // Shu-Osher
+            info->endStep = 1;
+            info->CFL = 0.5;
+            info->outputDt = 1.8;
+            info->nCase = 1;
+            info->calZone = {0, 10.0, 0, 0, 0, 0};
+            info->iMax = {201, 2, 2};
+            info->dim = 1;
+            std::cout << "Configured: Shu-Osher problem\n";
+            break;
+            
+        case 2: // Lax
+            info->endStep = 14;
+            info->outputDt = 0.01;
+            info->CFL = 0.5;
+            info->nCase = 2;
+            info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
+            info->iMax = { 201, 2, 2 };
+            info->dim = 1;
+            std::cout << "Configured: Lax problem\n";
+            break;
+            
+        case 3: // Sedov
+            info->endStep = 1;
+            info->outputDt = 0.001;
+            info->CFL = 0.5;
+            info->nCase = 3;
+            info->calZone = { -2, 2, 0, 0, 0, 0 };
+            info->iMax = { 400, 2, 2 };
+            info->dim = 1;
+            std::cout << "Configured: Sedov problem\n";
+            break;
+            
+        case 4: // Woodward-Colella
+            info->endStep = 1;
+            info->outputDt = 0.038;
+            info->CFL = 0.1;
+            info->nCase = 4;
+            info->calZone = { 0, 1, 0, 0, 0, 0 };
+            info->iMax = { 401, 2, 2 };
+            info->dim = 1;
+            std::cout << "Configured: Woodward-Colella problem\n";
+            break;
+            
+        case 5: // Double sparse wave
+            info->endStep = 100;
+            info->outputDt = 0.01;
+            info->CFL = 0.5;
+            info->nCase = 5;
+            info->calZone = { -5, 5, 0, 0, 0, 0 };
+            info->iMax = { 401, 2, 2 };
+            info->dim = 1;
+            std::cout << "Configured: Double sparse wave problem\n";
+            break;
+            
+        case 10: // 2D Riemann 1
+            info->endStep = 1;
+            info->outputDt = 0.8;
+            info->CFL = 0.5;
+            info->nCase = 0;
+            info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
+            info->iMax = { 401, 401, 2 };
+            info->dim = 2;
+            std::cout << "Configured: 2D Riemann 1 problem\n";
+            break;
+            
+        case 11: // 2D Riemann 2
+            info->endStep = 1;
+            info->outputDt = 0.3;
+            info->CFL = 0.5;
+            info->nCase = 1;
+            info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
+            info->iMax = { 801, 801, 2 };
+            info->dim = 2;
+            std::cout << "Configured: 2D Riemann 2 problem\n";
+            break;
+            
+        case 12: // Implosion
+            info->endStep = 25;
+            info->outputDt = 0.1;
+            info->CFL = 0.5;
+            info->nCase = 2;
+            info->calZone = { -0.3, 0.3, -0.3, 0.3, 0, 0 };
+            info->iMax = { 401, 401, 2 };
+            info->dim = 2;
+            std::cout << "Configured: Implosion problem\n";
+            break;
+            
+        case 13: // RTI
+            info->endStep = 1;
+            info->outputDt = 1.95;
+            info->CFL = 0.5;
+            info->nCase = 3;
+            info->calZone = { 0, 0.25, 0, 1, 0, 0 };
+            info->iMax = { 101, 401, 2 };
+            info->dim = 2;
+            info->sourceType = GRAVITY;
+            std::cout << "Configured: RTI problem\n";
+            break;
+            
+        case 14: // Double Mach
+            info->endStep = 20;
+            info->outputDt = 0.01;
+            info->CFL = 0.5;
+            info->nCase = 4;
+            info->calZone = { 0, 4, 0, 1, 0, 0 };
+            info->iMax = { 801, 201, 2 };
+            info->dim = 2;
+            std::cout << "Configured: Double Mach problem\n";
+            break;
+            
+        case 15: // 2D Riemann 3
+            info->endStep = 1;
+            info->outputDt = 0.25;
+            info->CFL = 0.5;
+            info->nCase = 5;
+            info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
+            info->iMax = { 801, 801, 2 };
+            info->dim = 2;
+            std::cout << "Configured: 2D Riemann 3 problem\n";
+            break;
+            
+        case 16: // KHI
+            info->endStep = 1;
+            info->outputDt = 0.25; // Adjust as needed
+            info->CFL = 0.5;
+            info->nCase = 6;
+            info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 }; // Adjust as needed
+            info->iMax = { 401, 401, 2 }; // Adjust as needed
+            info->dim = 2;
+            std::cout << "Configured: KHI problem\n";
+            break;
+    }
+}
 
 int main()
 {
@@ -125,138 +313,10 @@ int main()
 
     // 【王鸿飞】end
 
-    // Shu-Osher
-    //  info->endStep=1;
-    //  info->CFL=0.5;
-    //  info->outputDt=1.8;
-    //  info->nCase=1;
-    //  info->calZone={0,10.0,0,0,0,0};
-    //  info->iMax={201,2,2};
-    //  info->dim=1;
-
-    // // sod tube
-    // info->CFL = 0.5;
-    // info->endStep = 20;
-    // info->outputDt = 0.01;
-    // info->nCase = 0;
-    // info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
-    // info->iMax = { 201, 2, 2 };
-    // info->dim = 1;
-
-    // lax sod tube
-    // info->endStep = 14;
-    // info->outputDt = 0.01;
-    // info->CFL = 0.5;
-    // info->nCase = 2;
-    // info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
-    // info->iMax = { 201, 2, 2 };
-    // info->dim = 1;
-
-    // lax sod tube speed test
-    //  info->endStep=14;
-    //  info->outputDt=0.01;
-    //  info->CFL=0.1;
-    //  info->nCase=2;
-    //  info->calZone={-0.5,0.5,0,0,0,0};
-    //  info->iMax={2001,2,2};
-    //  info->dim=1;
-
-    // sedov
-    //  info->endStep=1;
-    //  info->outputDt=0.001;
-    //  info->CFL=0.5;
-    //  info->nCase=3;
-    //  info->calZone={-2,2,0,0,0,0};
-    //  info->iMax={400,2,2};
-    //  info->dim=1;
-
-    // Woodward-Colella
-    // info->endStep = 1;
-    // info->outputDt = 0.038;
-    // info->CFL = 0.1;
-    // info->nCase = 4;
-    // info->calZone = { 0, 1, 0, 0, 0, 0 };
-    // info->iMax = { 401, 2, 2 };
-    // info->dim = 1;
-
-    // 双稀疏波
-    //  info->endStep=100;
-    //  info->outputDt=0.01;
-    //  info->CFL=0.5;
-    //  info->nCase=5;
-    //  info->calZone={-5,5,0,0,0,0};
-    //  info->iMax={401,2,2};
-    //  info->dim=1;
-
-    // implosion
-    //  info->endStep=25;
-    //  info->outputDt=0.1;
-    //  info->CFL=0.5;
-    //  info->nCase=2;
-    //  info->calZone={-0.3,0.3,-0.3,0.3,0,0};
-    //  info->iMax={401,401,2};
-    //  info->dim=2;
-
-    // Riemann 1
-
-    // info->endStep = 1;
-    // info->outputDt = 0.8;
-
-    // info->CFL = 0.5;
-    // info->nCase = 0;
-    // info->calZone = { -0.5, 0.5, -0.5, 0.5, 0, 0 };
-    // info->iMax = { 401, 401, 2 };//参考
-    // info->dim = 2;
-
-    // Riemann 2 vortex
-    //  info->endStep=1;
-    //  info->outputDt=0.3;
-    //  info->CFL=0.5;
-    //  info->nCase=1;
-    //  info->calZone={-0.5,0.5,-0.5,0.5,0,0};
-    //  info->iMax={801,801,2};//参考
-    //  info->dim=2;
-
-    // Riemann 3
-
-    //  info->endStep=5;
-    //  info->outputDt=0.05;
-
-    //  info->endStep=1;
-    //  info->outputDt=0.25;
-    //  info->CFL=0.5;
-    //  info->nCase=5;
-    //  info->calZone={-0.5,0.5,-0.5,0.5,0,0};
-    //  info->iMax={801,801,2};//参考
-    //  info->dim=2;
-
-    // RT instability
-    // 记得改GAMMA
-    //  info->endStep=1;
-    //  info->outputDt=1.95;
-    //  info->CFL=0.5;
-    //  info->nCase=3;
-    //  info->calZone={0,0.25,0,1,0,0};
-    // //  info->iMax={201,801,2};
-    //  info->iMax={101,401,2};//参考
-    // //  info->iMax={65,257,2};
-    //  info->dim=2;
-    //  info->sourceType=GRAVITY;
-
-
-    // info->diffMethod=HDS6;
-    // Double Mach
-
-     info->endStep=20;
-     info->outputDt=0.01;
-
-    //  info->endStep=1;
-    //  info->outputDt=0.2;
-     info->CFL=0.5;
-     info->nCase=4;
-     info->calZone={0,4,0,1,0,0};
-     info->iMax={801,201,2};//参考
-     info->dim=2;
+    // 显示菜单并获取用户选择
+    displayMenu();
+    int choice = getUserChoice();
+    configureCase(info, choice);
 
     // file config mode
     std::ifstream file("info.txt");
@@ -382,10 +442,10 @@ int main()
     }
     if (pandaun_001)
     {
-        std::cout << "有非-5到-10的预期值" << "\n";
+        std::cout << "有 非-5到-10的预期值" << "\n";
     }
     else
     {
-        std::cout << "无非预期值" << "\n";
+        std::cout << "无 非-5到-10的预期值" << "\n";
     }
 }
