@@ -71,10 +71,10 @@ int main()
     // 【王鸿飞】end插值格式（4.0）手搓及优化
 
     // 【王鸿飞】begin插值格式（F203）)手搓及优化
-    // info->interMethod= new_TCNS5 ;
+    info->interMethod= new_TCNS5 ;
     // info->interMethod= new_WHFTCNSA ;
     // info->interMethod= new_WCNS5CONGZ ;
-    info->interMethod= new_WHFTCNSASF203_NoS ;
+    // info->interMethod= new_WHFTCNSASF203_NoS ;
 
     // 【王鸿飞】end插值格式（F203）)手搓及优化
 
@@ -218,18 +218,16 @@ int main()
 
     // Double Mach
 
-    // info->endStep=20;
-    // info->outputDt=0.01;
+    info->endStep=20;
+    info->outputDt=0.01;
     
-    info->endStep=2;
-    info->outputDt=0.1;
+    // info->endStep=2;
+    // info->outputDt=0.1;
+    
     info->CFL=0.5;
     info->nCase=4;
     info->calZone={0,4,0,1,0,0};
     info->iMax={801,201,2};
-    // info->iMax={1601,401,2};
-    // info->iMax={513,129,2};
-    // info->iMax={1025,257,2};
     info->dim=2;
 
 

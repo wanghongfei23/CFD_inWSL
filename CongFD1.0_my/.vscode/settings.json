@@ -1,0 +1,23 @@
+{
+  "files.associations": {
+    "fstream": "cpp",
+    "array": "cpp",
+    "type_traits": "cpp",
+    "vector": "cpp",
+    "algorithm": "cpp",
+    "span": "cpp",
+    "memory": "cpp",
+    "cmath": "cpp",
+    "map": "cpp",
+    "chrono": "cpp",
+    "cstring": "cpp",
+    "string": "cpp",
+    "cassert": "cpp",
+    "format": "cpp",
+    "iostream": "cpp",
+    "queue": "cpp",
+    "stack": "cpp",
+    "stacktrace": "cpp",
+    "thread": "cpp"
+  }
+}

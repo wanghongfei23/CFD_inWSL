@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/e/CPP/CongFD1.0_my/release/cmake_install.cmake",
+		"/mnt/e/CPP/CongFD1.0_my/release/src/cmake_install.cmake",
+		"/mnt/e/CPP/CongFD1.0_my/release/utils/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

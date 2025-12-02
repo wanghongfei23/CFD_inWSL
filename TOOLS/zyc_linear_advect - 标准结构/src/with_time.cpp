@@ -79,8 +79,8 @@ int main()
     // 设置OpenMP线程数
     omp_set_num_threads(16);
     // 网格密度序列（用于收敛性分析）
-    // std::vector<int> grid_densities = { 50, 100, 150, 200, 300, 400, 500 };
-    std::vector<int> grid_densities = { 50, 100};
+    std::vector<int> grid_densities = { 50, 100, 150, 200, 300, 400, 500 };
+    // std::vector<int> grid_densities = { 50, 100};
 
     // 参数设置
     const int ghost = 5;     // 每侧虚拟点数

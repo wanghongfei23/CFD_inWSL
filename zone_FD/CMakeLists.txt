@@ -33,7 +33,8 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -w -O2")
 
 # 设置Debug模式的C编译器标志：添加-O2优化级别[1](@ref)
-set(CMAKE_C_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O2")
+# set(CMAKE_C_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O2")
+set(CMAKE_C_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
 
 # 设置Release模式的C编译器标志：添加-O2优化级别[1](@ref)
 set(CMAKE_C_FLAGS_Release "${CMAKE_CXX_FLAGS_Release} -O2")

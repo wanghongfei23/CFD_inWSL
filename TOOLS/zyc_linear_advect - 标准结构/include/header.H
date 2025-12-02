@@ -346,10 +346,10 @@ real_t exact_initial_solution(real_t x, real_t /*t*/)
     // Exact solution for a Gaussian function
     // u(x, t) = e^(-300 * (x - x_c)^2) where x_c = 0.5
 
-    // real_t x_c = 0.5Q;
-    // return expq(-300.0Q * (x - x_c) * (x - x_c));
+    real_t x_c = 0.5Q;
+    return expq(-300.0Q * (x - x_c) * (x - x_c));
 
-    return x * x * expq(0.75Q * (x - 1.0Q));
+    // return x * x * expq(0.75Q * (x - 1.0Q));
 
     // return x;
 }
