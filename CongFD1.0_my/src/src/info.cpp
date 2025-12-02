@@ -6,8 +6,8 @@
 #include "info.hpp"
 
 /**
- * @brief 获取鬼点单元数
- * @return 鬼点单元数
+ * @brief 获取虚拟点单元数
+ * @return 虚拟点单元数
  */
 int Info::nGhostCell()
 {

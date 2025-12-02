@@ -275,75 +275,78 @@ void configureCase(Info* info, int choice) {
  */
 int main()
 {
+// =============================================================================
+//                                omp线程数设置                                =
+// =============================================================================
     omp_set_num_threads(10);
     // omp_set_num_threads(1);
 
+// =============================================================================
+//                                 Info 初始化                                 =
+// =============================================================================
     Info* info = new Info;
-
+    // --------------------------- 方程类型选项 --------------------------- 
     info->eqType = EULER;
+    // --------------------------- 空间离散方法选项 --------------------------- 
     info->spMethod = WCNS5;
-    // 差分方法选项
-        info->diffMethod = MND6;
-        // info->diffMethod = TRAD6;
+    // --------------------------- 差分方法选项 --------------------------- 
+    info->diffMethod = MND6;
+    // info->diffMethod = TRAD6;
+    // --------------------------- 插值方法选项 --------------------------- 
+    // info->interMethod=LINEAR5;
+    // info->interMethod=WCNSZ5Char;
+    // info->BVD=true;
+    // info->interMethod = NICEST5;
+    // info->interMethod=WCNS5CONG;
+    // info->sourceType=GRAVITY;
 
-    // 插值方法选项
-        // info->interMethod=LINEAR5;
-        // info->interMethod=WCNSZ5Char;
-        // info->BVD=true;
-        // info->interMethod = NICEST5;
-        // info->interMethod=WCNS5CONG;
-        // info->sourceType=GRAVITY;
+    // info->interMethod = WCNS5; //weno5_JSchen
+    // info->interMethod = WCNSZ5; //weno5_Z
+    info->interMethod = TCNS5; //Teno5_Z
+    // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
+    // info->interMethod = WHFTCNSA;
+    // info->interMethod = WHFTCNSASF002;
+    // info->interMethod = WHFTCNSAH002;
+    // info->interMethod = WHFTCNSASF102;
+    // info->interMethod = WHFTCNSASF103;
+    // info->interMethod = WHFTCNSASF102_reciprocal;
+    // info->interMethod = WHFTCNSASF103_reciprocal;
+    // info->interMethod = WHFTCNSAS_fx; // 不进行函数拟合，直接用原来近似的指数形式CT'
+    // info->interMethod = WHFTCNSAS_initial; // 算CT'，原封不动的叠加A和S
+    // info->interMethod = WHFTCNSAS_approx_1; // 算CT'，叠加A和S，分母近似掉-1
+    // info->interMethod = WHFTCNSAS_fx_real; // 算
+    // info->interMethod = WHFTCNSAS_approx_2; // 具体代入，叠加A和S，分母近似掉-1
 
-        // info->interMethod = WCNS5; //weno5_JSchen
-        // info->interMethod = WCNSZ5; //weno5_Z
-        info->interMethod = TCNS5; //Teno5_Z
-        // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
-        // info->interMethod = WHFTCNSA;
-        // info->interMethod = WHFTCNSASF002;
-        // info->interMethod = WHFTCNSAH002;
-        // info->interMethod = WHFTCNSASF102;
-        // info->interMethod = WHFTCNSASF103;
-        // info->interMethod = WHFTCNSASF102_reciprocal;
-        // info->interMethod = WHFTCNSASF103_reciprocal;
-        // info->interMethod = WHFTCNSAS_fx; // 不进行函数拟合，直接用原来近似的指数形式CT'
-        // info->interMethod = WHFTCNSAS_initial; // 算CT'，原封不动的叠加A和S
-        // info->interMethod = WHFTCNSAS_approx_1; // 算CT'，叠加A和S，分母近似掉-1
-        // info->interMethod = WHFTCNSAS_fx_real; // 算
-        // info->interMethod = WHFTCNSAS_approx_2; // 具体代入，叠加A和S，分母近似掉-1
+    // info->interMethod = WHFTCNSASF202_2S;
+    // info->interMethod = WHFTCNSASF202_NoS;
+    // info->interMethod = WHFTCNSASF203_NoS;
+    // info->interMethod = temp011;
+    // info->interMethod = temp012;
+    // info->interMethod = temp013;
+    // info->interMethod = temp014;
+    // info->interMethod = temp015;
+    // info->interMethod = temp016;
+    // info->interMethod = temp017;
+    // info->interMethod = temp018;
+    // info->interMethod = temp019;
+    // info->interMethod = TCNSCongA;
 
-        // info->interMethod = WHFTCNSASF202_2S;
-        // info->interMethod = WHFTCNSASF202_NoS;
-        // info->interMethod = WHFTCNSASF203_NoS;
-        // info->interMethod = temp011;
-        // info->interMethod = temp012;
-        // info->interMethod = temp013;
-        // info->interMethod = temp014;
-        // info->interMethod = temp015;
-        // info->interMethod = temp016;
-        // info->interMethod = temp017;
-        // info->interMethod = temp018;
-        // info->interMethod = temp019;
-        // info->interMethod = TCNSCongA;
-
-
-    // 【预设算例编号】在此处设置需要运行的算例编号
-    // 1D Cases: 
-        // 0 - Sod, 
-        // 1 - ShuOsher, 
-        // 2 - Lax, 
-        // 3 - Sedov, 
-        // 4 - Woodward_Colella, 
-        // 5 - Double_sparse_wave
-    // 2D Cases: 
-        // 10 - 2D_Riemann_1, 
-        // 11 - 2D_Riemann_2, 
-        // 12 - implosion, 
-        // 13 - RTI, 
-        // 14 - Double_Mach, 
-        // 15 - 2D_Riemann_3, 
-        // 16 - KHI
-
-    const int presetCase = 2; // 算例选择
+    // --------------------------- 算例选项 --------------------------- 
+    // 算例选择 - 修改这里来选择不同的算例
+    const int presetCase = 
+        // 0;  // Sod
+        // 1;  // ShuOsher
+        2;  // Lax
+        // 3;  // Sedov
+        // 4;  // Woodward_Colella
+        // 5;  // Double_sparse_wave
+        // 10; // 2D_Riemann_1
+        // 11; // 2D_Riemann_2
+        // 12; // implosion
+        // 13; // RTI
+        // 14; // Double_Mach
+        // 15; // 2D_Riemann_3
+        // 16; // KHI
     
     // 移除交互式选择，直接使用预设的算例编号
     configureCase(info, presetCase);
@@ -353,71 +356,55 @@ int main()
     if (file.is_open()) {
         int n;
         real nf;
-        file >> n;
-        // 读取插值方法类型，并检查有效性
-        if (n < temp019)
+        file >> n;                                    // 01. 读取插值方法类型，并检查有效性
+        // if (n < temp019)
             info->interMethod = (InterMethod)n;
-
-        file >> n;
-        // 设置结束时间步
-        info->endStep = n;
-
-        file >> nf;
-        // 设置输出时间间隔
-        info->outputDt = nf;
-
-        file >> nf;
-        // 设置CFL数
-        info->CFL = nf;
-
-        file >> n;
-        // 读取案例编号
-        info->nCase = n;
-
+        file >> n;                                    // 02. 设置结束时间步
+            info->endStep = n;
+        file >> nf;                                   // 03. 设置输出时间间隔
+            info->outputDt = nf;
+        file >> nf;                                   // 04. 设置CFL数
+            info->CFL = nf;
+        file >> n;                                    // 05. 读取案例编号
+            info->nCase = n;
         real nf1, nf2, nf3, nf4, nf5, nf6;
-        file >> nf1;
-        file >> nf2;
-        file >> nf3;
-        file >> nf4;
-        file >> nf5;
-        file >> nf6;
-        // 设置计算区域范围
-        info->calZone = { nf1, nf2, nf3, nf4, nf5, nf6 };
-
+        file >> nf1;                                  // 06. 设置计算区域范围
+        file >> nf2;                                  // 07. 设置计算区域范围
+        file >> nf3;                                  // 08. 设置计算区域范围
+        file >> nf4;                                  // 09. 设置计算区域范围
+        file >> nf5;                                  // 10. 设置计算区域范围
+        file >> nf6;                                  // 11. 设置计算区域范围
+            info->calZone = { nf1, nf2, nf3, nf4, nf5, nf6 };
         int n1, n2, n3;
-        file >> n1;
-        file >> n2;
-        file >> n3;
-        // 设置网格点数
-        info->iMax = { n1, n2, n3 };
-
-        file >> n;
-        // 设置问题维度
-        info->dim = n;
-
-        file >> n;
-        // 设置OpenMP线程数
+        file >> n1;                                   // 12. 设置网格点数
+        file >> n2;                                   // 13. 设置网格点数
+        file >> n3;                                   // 14. 设置网格点数
+            info->iMax = { n1, n2, n3 };
+        file >> n;                                    // 15. 设置问题维度
+            info->dim = n;
+        file >> n;                                    // 16. 设置OpenMP线程数
         omp_set_num_threads(n);
 
-        std::cout << "file mode initialization finished\n";
+        std::cout << "file mode initialization finished（文件模式初始化完成）\n";
 
     } else {
         // 文件打开失败提示
-        std::cout << "file mode initialization failed\n";
+        std::cout << "file mode initialization failed（文件模式初始化失败）\n";
     }
 
-    InterMethod interscheme;
-
-    // 创建BlockSolver对象
+    // 创建BlockSolver对象，名字为bSolver，参数为info指针
     BlockSolver bSolver(info);
-    // 开始计时
+
+    // 开始计时（开始时间变量名为start）
     auto start = std::chrono::high_resolution_clock::now();
+
     // 根据方程类型选择不同的时间步进循环方式
     if (info->eqType != EULER)
         bSolver.stepsLoop();
     else
         bSolver.stepsLoopCFL();
-    // 结束计时并计算运行时间
+
+    // 结束计时并计算运行时间（结束时间变量名为stop，持续时间变量名为duration）
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start).count();
 

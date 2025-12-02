@@ -203,7 +203,6 @@ void BlockSolver::stepsLoopCFL()
         // 输出当前时间、时间步长和密度残差的L∞范数
         std::string output_str = std::format("time = {:.4f} dt={:.10f}  rhoLinf = {:.4f}  \n", info->t, dt, rhs->getLinf(0));
         
-        
         std::cout << output_str;
         
         // 【王鸿飞】begin辅助工具

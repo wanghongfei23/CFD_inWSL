@@ -6,12 +6,21 @@
 #include "blockSolver.hpp"
 
 /**
- * @brief 默认构造函数
+ * @brief BlockSolver类的默认构造函数
+ * 
+ * 初始化求解器所需的各个组件，包括：
+ * - Info: 求解器参数信息
+ * - Block: 网格数据块
+ * - Initializer: 初始化器
+ * - Equation: 方程求解器
+ * - Bnds: 边界条件处理器
+ * - SpDistributor: 空间离散分配器
+ * - SourceTerm: 源项计算器
+ * 
+ * 并调用初始化器对这些组件进行初始化。
  */
 BlockSolver::BlockSolver()
 {
-
-
    info=new Info();
    block=new Block();
    initer=new Initializer(info);
@@ -30,8 +39,11 @@ BlockSolver::BlockSolver()
 }
 
 /**
- * @brief 带参数的构造函数
- * @param info_ Info对象指针
+ * @brief BlockSolver类的带参构造函数
+ * 
+ * 使用传入的Info对象初始化求解器，其余初始化过程与默认构造函数相同。
+ * 
+ * @param info_ 指向Info对象的指针，包含求解器参数信息
  */
 BlockSolver::BlockSolver(Info* info_)
 {
@@ -54,7 +66,13 @@ BlockSolver::BlockSolver(Info* info_)
 }
 
 /**
- * @brief 三阶SSP Runge-Kutta时间推进方法
+ * @brief 使用三阶SSP Runge-Kutta方法进行时间推进
+ * 
+ * 实现三阶段的三阶SSP Runge-Kutta时间积分方案：
+ * 1. 第一阶段：计算临时解
+ * 2. 第二阶段：基于第一阶段结果计算
+ * 3. 第三阶段：得到最终解
+ * 
  * @param dt 时间步长
  */
 void BlockSolver::RK3_SSP(real dt)
@@ -109,7 +127,11 @@ void BlockSolver::RK3_SSP(real dt)
 
 
 /**
- * @brief DTS欧拉时间推进方法
+ * @brief 使用DTS Euler方法进行时间推进
+ * 
+ * 实现基于对角化时间步长(Diagonalized Time Stepping)的欧拉时间积分方法，
+ * 用于隐式时间推进。
+ * 
  * @param dt 时间步长
  */
 void BlockSolver::DTS_Euler(real dt)
@@ -149,12 +171,24 @@ void BlockSolver::DTS_Euler(real dt)
 
 }
 
+/**
+ * @brief 执行单步时间推进
+ * 
+ * 根据设定的时间积分方法执行一步时间推进计算。
+ * 
+ * @param dt 时间步长
+ */
 void BlockSolver::solve(real dt)
 {
     RK3_SSP(dt);
     info->t+=dt;
 }
 
+/**
+ * @brief BlockSolver类的析构函数
+ * 
+ * 释放所有动态分配的内存资源。
+ */
 BlockSolver::~BlockSolver()
 {
     delete info;
@@ -166,21 +200,38 @@ BlockSolver::~BlockSolver()
     delete sourceTerm;
 }
 
+/**
+ * @brief 输出网格信息到CGNS文件
+ */
 void BlockSolver::outputGrid()
 {
     cgnsIO.BlockCgnsOutput(block,info);
 }
 
+/**
+ * @brief 输出守恒变量到CGNS文件
+ */
 void BlockSolver::outputCons()
 {
     cgnsIO.solCgnsOutput(eqn->getCons(),info);
 }
+
+/**
+ * @brief 输出原始变量到CGNS文件
+ * 
+ * 首先将守恒变量转换为原始变量，然后输出到CGNS文件。
+ */
 void BlockSolver::outputPrim()
 {
     eqn->consToPrim();
     cgnsIO.solCgnsOutput(eqn->getPrim(),info);
 }
 
+/**
+ * @brief 基于固定步数的时间步进循环
+ * 
+ * 按照固定的步数进行时间推进，每隔一定步数输出一次结果。
+ */
 void BlockSolver::stepsLoop()
 {
     for(;info->step<info->endStep;info->step++)
@@ -200,42 +251,69 @@ void BlockSolver::stepsLoop()
     outputPrim();
 }
 
+/**
+ * @brief 基于CFL条件控制时间步长的求解循环
+ * 
+ * 此函数实现了基于CFL条件的自适应时间步长求解循环。在每次迭代中：
+ * 1. 检查是否需要输出当前结果
+ * 2. 计算满足CFL条件的最大时间步长
+ * 3. 根据输出间隔调整时间步长
+ * 4. 执行一次时间步进求解
+ * 5. 更新时间和步数计数器
+ * 6. 输出当前求解状态信息
+ * 循环持续到达到设定的结束步数为止。
+ * 
+ * @note 该方法使用可变时间步长，确保数值稳定性
+ * @see getTimeIntervalExplicit() 获取满足CFL条件的时间步长
+ * @see solve() 执行单步求解
+ * @see outputGrid() 输出网格信息
+ * @see outputPrim() 输出原始变量
+ */
 void BlockSolver::stepsLoopCFL()
 {
-    const real eps=1e-15;
-    while(info->step<info->endStep)
+    const real eps=1e-15;                                                     // 定义一个极小值，用于浮点数比较
+    while(info->step<info->endStep)                                           // 当前步数小于结束步数时继续循环
     {
-        if(info->outputT<eps)
+        // 当输出时间接近0时，输出网格和流场数据
+        if(info->outputT<eps)                                                 // 判断是否需要输出结果（输出时间接近0）
         {
-            outputGrid();
-            outputPrim(); 
+            outputGrid();                                                     // 输出网格信息到文件
+            outputPrim();                                                     // 输出原始变量到文件
         }
 
-        auto dt=getTimeIntervalExplicit();
+        auto dt=getTimeIntervalExplicit();                                    // 根据CFL条件自动计算时间步长
         // dt=info->dt;
-        if(info->outputT+dt>info->outputDt)
-        {
-            dt=info->outputDt-info->outputT;
-            info->outputT=0.0;
-            info->step++;
-        }
-        else info->outputT+=dt;
-
-        auto start = std::chrono::high_resolution_clock::now(); 
-        solve(dt);
-        auto stop = std::chrono::high_resolution_clock::now(); 
-        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start).count(); 
-        timesss+=duration;
-        timesteps++;
-        std::cout<<std::format("time = {:.4f} dt={:.10f}  rhoLinf = {:.4f}  \n",info->t,dt,rhs->getLinf(0));
-    
-    
         
+        // 如果下一个时间步会超过输出间隔，则调整时间步长以精确匹配输出时刻
+        if(info->outputT+dt>info->outputDt)                                   // 判断加上当前步长是否会超过输出时间间隔
+        {
+            dt=info->outputDt-info->outputT;                                  // 调整时间步长，使其恰好到达输出时刻
+            info->outputT=0.0;                                                // 重置输出时间计数器
+            info->step++;                                                     // 步数增加1
+        }
+        else info->outputT+=dt;                                               // 否则更新输出时间计数器
+
+        // 执行求解并计时
+        auto start = std::chrono::high_resolution_clock::now();               // 记录求解开始时间
+        solve(dt);                                                            // 执行一次时间步长为dt的求解
+        auto stop = std::chrono::high_resolution_clock::now();                // 记录求解结束时间
+        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start).count(); // 计算求解耗时（毫秒）
+        timesss+=duration;                                                    // 累加总求解时间
+        timesteps++;                                                          // 时间步数计数器增加
+
+        // 输出当前时间、时间步长和密度Linf范数
+        std::cout<<std::format("time = {:.4f} dt={:.10f}  rhoLinf = {:.4f}  \n",info->t,dt,rhs->getLinf(0)); // 输出当前时间、时间步长和守恒变量第0个分量的Linf范数
     }
-    outputGrid();
-    outputPrim();
+    // 求解完成后输出最终结果
+    outputGrid();                                                             // 求解完成后输出最终网格信息
+    outputPrim();                                                             // 求解完成后输出最终原始变量
 }
 
+/**
+ * @brief 测试函数
+ * 
+ * 执行简单的测试计算并输出结果。
+ */
 void BlockSolver::Test()
 {
     outputGrid();
@@ -247,6 +325,13 @@ void BlockSolver::Test()
 
 }
 
+/**
+ * @brief 计算局部CFL数
+ * 
+ * 根据当前流动状态和网格信息计算每个网格点的局部CFL数。
+ * 
+ * @return 包含每个网格点CFL数的向量
+ */
 std::vector<real> BlockSolver::calLocalCFL()
 {
    
@@ -273,6 +358,11 @@ std::vector<real> BlockSolver::calLocalCFL()
 
 }
 
+/**
+ * @brief 基于DTS方法的时间步进循环
+ * 
+ * 使用对角化时间步长(DTS)方法进行时间推进。
+ */
 void BlockSolver::stepsLoopDTS()
 {
     const real eps=1e-15;
@@ -318,6 +408,13 @@ void BlockSolver::stepsLoopDTS()
     outputPrim();
 }
 
+/**
+ * @brief 计算显式时间积分的时间步长
+ * 
+ * 根据CFL条件和当前流动状态计算满足稳定条件的最大时间步长。
+ * 
+ * @return 计算得到的时间步长
+ */
 real BlockSolver::getTimeIntervalExplicit()
 {
     real dt,lambda=0;
