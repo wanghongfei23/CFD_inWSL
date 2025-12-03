@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/differenceScheme.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">differenceScheme.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="difference_scheme_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="macro_8hpp.html">macro.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// 差分格式基类，定义差分格式的接口</span></div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="};">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_difference_scheme.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="class_difference_scheme.html">DifferenceScheme</a> {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  <span class="comment">// 差分格式所需的数据点数量</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_difference_scheme.html#aaee205841b7c92df86470b6ca565b0a4">    7</a></span>  <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_difference_scheme.html#aaee205841b7c92df86470b6ca565b0a4">nFluxHalf</a> = 0;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_difference_scheme.html#a659cac3130eff4e6b49d6c58060091ae">    8</a></span>  <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_difference_scheme.html#a659cac3130eff4e6b49d6c58060091ae">nFluxNode</a> = 0;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <span class="comment">// 差分计算接口函数</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_difference_scheme.html#a24514054e702a39c3a50683d29308c5b">   11</a></span>  <span class="keyword">virtual</span> <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> <a class="code hl_function" href="class_difference_scheme.html#a24514054e702a39c3a50683d29308c5b">operator()</a>(std::vector&lt;real&gt;::iterator fluxHalf,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                          std::vector&lt;real&gt;::iterator fluxNode, <span class="keywordtype">int</span> nvar) = 0;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>};</div>
+</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// 二阶差分格式类</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_dif_second_order.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_dif_second_order.html">DifSecondOrder</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_difference_scheme.html">DifferenceScheme</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="comment">// 差分格式所需的数据点数量</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_dif_second_order.html#a74b895eafdf02735afb5579e9f399dd2">   19</a></span>  <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_dif_second_order.html#a74b895eafdf02735afb5579e9f399dd2">nFluxHalf</a> = 0;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_dif_second_order.html#a31184b3e8f93bdf80b2c98c84e3b1338">   20</a></span>  <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_dif_second_order.html#a31184b3e8f93bdf80b2c98c84e3b1338">nFluxNode</a> = 0;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="comment">// 二阶差分计算实现</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_dif_second_order.html#a4a7272c5b88a57c96c519bde48a253a5">   23</a></span>  <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> <a class="code hl_function" href="class_dif_second_order.html#a4a7272c5b88a57c96c519bde48a253a5">operator()</a>(std::vector&lt;real&gt;::iterator fluxHalf,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                  std::vector&lt;real&gt;::iterator fluxNode, <span class="keywordtype">int</span> nvar)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">return</span> fluxHalf[1] - fluxHalf[0];</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  };</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// 二阶差分格式函数</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="difference_scheme_8hpp.html#a96229561803eccbb695179c93d3e7c2e">   30</a></span><a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> <a class="code hl_function" href="difference_scheme_8hpp.html#a96229561803eccbb695179c93d3e7c2e">secondOrder</a>(std::vector&lt;real&gt;::iterator fluxHalf,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                 std::vector&lt;real&gt;::iterator fluxNode, <span class="keywordtype">int</span> nvar) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordflow">return</span> fluxHalf[1] - fluxHalf[0];</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// 显式六阶差分格式函数</span></div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="difference_scheme_8hpp.html#a1289734e8ef2e717129d63b8f17d371a">   36</a></span><a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> <a class="code hl_function" href="difference_scheme_8hpp.html#a1289734e8ef2e717129d63b8f17d371a">explicit6</a>(std::vector&lt;real&gt;::iterator fluxHalf,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>               std::vector&lt;real&gt;::iterator fluxNode, <span class="keywordtype">int</span> nvar) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">constexpr</span> std::array&lt;real, 3&gt; w = {75.0 / 64.0, 25.0 / (128.0 * 3.0),</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                                     3.0 / (128.0 * 50)};</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordflow">return</span> w[0] * (*(fluxHalf - nvar * 3) - *(fluxHalf - nvar * 2)) -</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>         w[1] * (*(fluxHalf - nvar * 4) - *(fluxHalf - nvar * 1)) +</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>         w[2] * (*(fluxHalf - nvar * 5) - *(fluxHalf - nvar * 0));</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// // 六阶单调性保持差分格式函数</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// real MND6(std::vector&lt;real&gt;::iterator fluxHalf,</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">//           std::vector&lt;real&gt;::iterator fluxNode, int nvar) {</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">//   constexpr std::array&lt;real, 3&gt; w = {3.0 / 2.0, -3.0 / 10.0, 1.0 / 30.0};</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">//   return w[1] * (*(fluxNode - nvar * 1) - *(fluxNode - nvar * 0)) +</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">//          w[0] * (*(fluxHalf - nvar * 2) - *(fluxHalf - nvar * 1)) +</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">//          w[2] * (*(fluxHalf - nvar * 3) - *(fluxHalf - nvar * 0));</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">// }</span></div>
+<div class="ttc" id="aclass_dif_second_order_html"><div class="ttname"><a href="class_dif_second_order.html">DifSecondOrder</a></div><div class="ttdef"><b>定义</b> <a href="#l00016">differenceScheme.hpp:16</a></div></div>
+<div class="ttc" id="aclass_dif_second_order_html_a31184b3e8f93bdf80b2c98c84e3b1338"><div class="ttname"><a href="class_dif_second_order.html#a31184b3e8f93bdf80b2c98c84e3b1338">DifSecondOrder::nFluxNode</a></div><div class="ttdeci">const int nFluxNode</div><div class="ttdef"><b>定义</b> <a href="#l00020">differenceScheme.hpp:20</a></div></div>
+<div class="ttc" id="aclass_dif_second_order_html_a4a7272c5b88a57c96c519bde48a253a5"><div class="ttname"><a href="class_dif_second_order.html#a4a7272c5b88a57c96c519bde48a253a5">DifSecondOrder::operator()</a></div><div class="ttdeci">real operator()(std::vector&lt; real &gt;::iterator fluxHalf, std::vector&lt; real &gt;::iterator fluxNode, int nvar) override</div><div class="ttdef"><b>定义</b> <a href="#l00023">differenceScheme.hpp:23</a></div></div>
+<div class="ttc" id="aclass_dif_second_order_html_a74b895eafdf02735afb5579e9f399dd2"><div class="ttname"><a href="class_dif_second_order.html#a74b895eafdf02735afb5579e9f399dd2">DifSecondOrder::nFluxHalf</a></div><div class="ttdeci">const int nFluxHalf</div><div class="ttdef"><b>定义</b> <a href="#l00019">differenceScheme.hpp:19</a></div></div>
+<div class="ttc" id="aclass_difference_scheme_html"><div class="ttname"><a href="class_difference_scheme.html">DifferenceScheme</a></div><div class="ttdef"><b>定义</b> <a href="#l00004">differenceScheme.hpp:4</a></div></div>
+<div class="ttc" id="aclass_difference_scheme_html_a24514054e702a39c3a50683d29308c5b"><div class="ttname"><a href="class_difference_scheme.html#a24514054e702a39c3a50683d29308c5b">DifferenceScheme::operator()</a></div><div class="ttdeci">virtual real operator()(std::vector&lt; real &gt;::iterator fluxHalf, std::vector&lt; real &gt;::iterator fluxNode, int nvar)=0</div></div>
+<div class="ttc" id="aclass_difference_scheme_html_a659cac3130eff4e6b49d6c58060091ae"><div class="ttname"><a href="class_difference_scheme.html#a659cac3130eff4e6b49d6c58060091ae">DifferenceScheme::nFluxNode</a></div><div class="ttdeci">const int nFluxNode</div><div class="ttdef"><b>定义</b> <a href="#l00008">differenceScheme.hpp:8</a></div></div>
+<div class="ttc" id="aclass_difference_scheme_html_aaee205841b7c92df86470b6ca565b0a4"><div class="ttname"><a href="class_difference_scheme.html#aaee205841b7c92df86470b6ca565b0a4">DifferenceScheme::nFluxHalf</a></div><div class="ttdeci">const int nFluxHalf</div><div class="ttdef"><b>定义</b> <a href="#l00007">differenceScheme.hpp:7</a></div></div>
+<div class="ttc" id="adifference_scheme_8hpp_html_a1289734e8ef2e717129d63b8f17d371a"><div class="ttname"><a href="difference_scheme_8hpp.html#a1289734e8ef2e717129d63b8f17d371a">explicit6</a></div><div class="ttdeci">real explicit6(std::vector&lt; real &gt;::iterator fluxHalf, std::vector&lt; real &gt;::iterator fluxNode, int nvar)</div><div class="ttdef"><b>定义</b> <a href="#l00036">differenceScheme.hpp:36</a></div></div>
+<div class="ttc" id="adifference_scheme_8hpp_html_a96229561803eccbb695179c93d3e7c2e"><div class="ttname"><a href="difference_scheme_8hpp.html#a96229561803eccbb695179c93d3e7c2e">secondOrder</a></div><div class="ttdeci">real secondOrder(std::vector&lt; real &gt;::iterator fluxHalf, std::vector&lt; real &gt;::iterator fluxNode, int nvar)</div><div class="ttdef"><b>定义</b> <a href="#l00030">differenceScheme.hpp:30</a></div></div>
+<div class="ttc" id="amacro_8hpp_html"><div class="ttname"><a href="macro_8hpp.html">macro.hpp</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a5f5a64ef503db0fc824df8320929b126"><div class="ttname"><a href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></div><div class="ttdeci">#define real</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00004">macro.hpp:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

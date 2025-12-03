@@ -1,0 +1,7 @@
+<map id="SolverType::initFluxPointSolver" name="SolverType::initFluxPointSolver">
+<area shape="rect" id="Node000001" title=" " alt="" coords="420,5,586,48"/>
+<area shape="rect" id="Node000002" href="$class_solver_type.html#a4a200cdee06d624314db793551715066" title=" " alt="" coords="213,13,372,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="402,27,373,29,373,24,407,27"/>
+<area shape="rect" id="Node000003" href="$class_solver_type.html#a3180f194ccd519d01e9b4843e83c0f1d" title=" " alt="" coords="5,13,165,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="195,27,165,29,165,24,200,26"/>
+</map>

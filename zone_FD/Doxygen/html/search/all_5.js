@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['eigensystem_2ecpp_0',['eigenSystem.cpp',['../eigen_system_8cpp.html',1,'']]],
+  ['eigensystem_2ehpp_1',['eigenSystem.hpp',['../eigen_system_8hpp.html',1,'']]],
+  ['eigensystemeuler1d_2',['eigensystemEuler1D',['../classeigensystem_euler1_d.html',1,'eigensystemEuler1D'],['../classeigensystem_euler1_d.html#acc98ba3a7df0e045abaa6764d581efdb',1,'eigensystemEuler1D::eigensystemEuler1D(const std::array&lt; real, 3 &gt; &amp;prim)'],['../classeigensystem_euler1_d.html#a27d6aec1d2c0ae1bee784547373d6b9b',1,'eigensystemEuler1D::eigensystemEuler1D(const std::array&lt; real, 3 &gt; &amp;priml, const std::array&lt; real, 3 &gt; &amp;primr)']]],
+  ['eigensystemeuler2d_3',['eigensystemEuler2D',['../classeigensystem_euler2_d.html',1,'eigensystemEuler2D'],['../classeigensystem_euler2_d.html#aee7af663cc25a3bd17fc570772e4a3a8',1,'eigensystemEuler2D::eigensystemEuler2D()'],['../classeigensystem_euler2_d.html#af37568953efa5292662ec5d982a17e4c',1,'eigensystemEuler2D::eigensystemEuler2D(const std::array&lt; real, 4 &gt; &amp;prim, const std::array&lt; real, 3 &gt; &amp;norm_)'],['../classeigensystem_euler2_d.html#afe13f3260761e1acbaa0ef48a3fda888',1,'eigensystemEuler2D::eigensystemEuler2D(const std::array&lt; real, 4 &gt; &amp;priml, const std::array&lt; real, 4 &gt; &amp;primr, const std::array&lt; real, 3 &gt; &amp;norm_)']]],
+  ['ek_4',['ek',['../classeigensystem_euler2_d.html#aa0c9ab7f72e4c7519d094e506c0460d1',1,'eigensystemEuler2D::ek'],['../classeigensystem_euler1_d.html#a4c126cb5263071caa29e49f9784610c2',1,'eigensystemEuler1D::ek']]],
+  ['emplace_5',['emplace',['../classpro_1_1proxy.html#a3cc1ed4910f5c15827651150d1a07bf3',1,'pro::proxy::emplace(Args &amp;&amp;... args) noexcept(std::is_nothrow_constructible_v&lt; P, Args... &gt; &amp;&amp;F::constraints.destructibility &gt;=constraint_level::nothrow)'],['../classpro_1_1proxy.html#a19b135d6bc30babce7c55b37817fde68',1,'pro::proxy::emplace(std::initializer_list&lt; U &gt; il, Args &amp;&amp;... args) noexcept(std::is_nothrow_constructible_v&lt; P, std::initializer_list&lt; U &gt; &amp;, Args... &gt; &amp;&amp;F::constraints.destructibility &gt;=constraint_level::nothrow)']]],
+  ['empty_5fproxy_5fbase_6',['empty_proxy_base',['../structpro_1_1details_1_1empty__proxy__base.html',1,'pro::details']]],
+  ['end_7',['end',['../class_data.html#ae40f6f7b7a4d16f6b1cd9497e68ea34e',1,'Data']]],
+  ['endstep_8',['endStep',['../class_info.html#a28546871aa801220ec18c4693d182646',1,'Info']]],
+  ['epsilon_9',['EPSILON',['../positive__preserving_8hpp.html#a1bbf78ffe0f28c9922ca3e98e784f14a',1,'positive_preserving.hpp']]],
+  ['eqn_10',['eqn',['../class_block_solver.html#ad166b858c00ed498e3d4bdf214735875',1,'BlockSolver']]],
+  ['eqtype_11',['eqType',['../class_info.html#ad1979d49ab34bc72e470b87c5319f06b',1,'Info']]],
+  ['equation_12',['Equation',['../class_equation.html',1,'Equation'],['../class_equation.html#a68511fc719250ed80f86c50de9136733',1,'Equation::Equation()']]],
+  ['equation_2ecpp_13',['equation.cpp',['../equation_8cpp.html',1,'']]],
+  ['equation_2ecpp_2eo_2ed_14',['equation.cpp.o.d',['../equation_8cpp_8o_8d.html',1,'']]],
+  ['equation_2ehpp_15',['equation.hpp',['../equation_8hpp.html',1,'']]],
+  ['equationtype_16',['EquationType',['../macro_8hpp.html#a6efecf3d755d53d3c4649b100919dca3',1,'macro.hpp']]],
+  ['euler_17',['EULER',['../macro_8hpp.html#a6efecf3d755d53d3c4649b100919dca3ab29a294112c9ef5c3c0c7db6363a6d2e',1,'macro.hpp']]],
+  ['eulerequation1d_2ecpp_18',['EulerEquation1D.cpp',['../_euler_equation1_d_8cpp.html',1,'']]],
+  ['eulerequation1d_2ehpp_19',['EulerEquation1D.hpp',['../_euler_equation1_d_8hpp.html',1,'']]],
+  ['eulerfront_20',['EulerFront',['../macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896a218bf64be45f1537b7485e0d4562cfe6',1,'macro.hpp']]],
+  ['examplestr1d_21',['exampleStr1D',['../info_8cpp.html#ae121115fcaf3d418d101dcad4d6ded5f',1,'info.cpp']]],
+  ['examplestr2d_22',['exampleStr2D',['../info_8cpp.html#a817ea10c29f8f787fbed9f5923c50e03',1,'info.cpp']]],
+  ['explicit6_23',['explicit6',['../difference_scheme_8hpp.html#a1289734e8ef2e717129d63b8f17d371a',1,'differenceScheme.hpp']]],
+  ['explicitdif6_24',['ExplicitDif6',['../class_explicit_dif6.html',1,'']]]
+];

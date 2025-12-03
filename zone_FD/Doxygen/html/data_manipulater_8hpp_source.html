@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/dataManipulater.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">dataManipulater.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="data_manipulater_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="data_8hpp.html">data.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="macro_8hpp.html">macro.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="one_d_bnd_8hpp.html">oneDBnd.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// 数据操作器基类，用于处理数据的边界条件和求解操作</span></div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_data_manipulater.html">    7</a></span><span class="keyword">class </span><a class="code hl_function" href="class_data_manipulater.html#ad962f9c942a8588f182c05d7032d9e98">DataManipulater</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="comment">// 构造函数</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#ad962f9c942a8588f182c05d7032d9e98">   10</a></span>  <a class="code hl_function" href="class_data_manipulater.html#ad962f9c942a8588f182c05d7032d9e98">DataManipulater</a>() {};</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <a class="code hl_function" href="class_data_manipulater.html#ad962f9c942a8588f182c05d7032d9e98">DataManipulater</a>(<a class="code hl_class" href="class_data_reader.html">DataReader</a> varsReader_, std::shared_ptr&lt;OneDBnd&gt; bndL_,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                  std::shared_ptr&lt;OneDBnd&gt; bndR_);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="comment">// 初始化函数</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_data_manipulater.html#a0646649c555d2cdfb04cee8865db4e3d">init</a>(<a class="code hl_class" href="class_data_reader.html">DataReader</a> varsReader_, std::shared_ptr&lt;OneDBnd&gt; bndL_,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            std::shared_ptr&lt;OneDBnd&gt; bndR_);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="comment">// 设置法向量函数</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_data_manipulater.html#a9f2fe29a9d25a8e1ff15904a1e6125aa">setConstNorm</a>(std::array&lt;real, 3&gt; norm_);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="comment">// 数据获取函数</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#a5f1208220de02f5f1a0c424dd17feab2">   22</a></span>  std::shared_ptr&lt;Data&gt; <a class="code hl_function" href="class_data_manipulater.html#a5f1208220de02f5f1a0c424dd17feab2">getData</a>() { <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_data_manipulater.html#a6c51830a38519c386b8b6f86ae0ab0d8">data</a>; }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="comment">// 求解接口函数</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#a4778cbeaa282b6861a3fdf27567a1a99">   25</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_data_manipulater.html#a4778cbeaa282b6861a3fdf27567a1a99">solve</a>() = 0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="comment">// 测试函数</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#a73b63183575339fae3a92f13e74a9aa5">   28</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_data_manipulater.html#a73b63183575339fae3a92f13e74a9aa5">test</a>() { std::cout &lt;&lt; <span class="stringliteral">&quot;test success\n&quot;</span>; }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="comment">// 数据指针</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#a6c51830a38519c386b8b6f86ae0ab0d8">   31</a></span>  std::shared_ptr&lt;Data&gt; <a class="code hl_variable" href="class_data_manipulater.html#a6c51830a38519c386b8b6f86ae0ab0d8">data</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="comment">// 迭代器</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#ab314bd460aa6b077c730c70b0c87de79">   35</a></span>  std::vector&lt;real&gt;::iterator <a class="code hl_variable" href="class_data_manipulater.html#ab314bd460aa6b077c730c70b0c87de79">iter</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="comment">// 纯虚函数接口</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#acd0906f3075a4f94969695fffdf1153f">   38</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_data_manipulater.html#acd0906f3075a4f94969695fffdf1153f">initVarsR</a>() = 0;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#a52b0d52376c1142bcd766da72000258d">   39</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_data_manipulater.html#a52b0d52376c1142bcd766da72000258d">leftBnd</a>() = 0;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#ac9cae551ba0637771c3c585e405795d8">   40</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_data_manipulater.html#ac9cae551ba0637771c3c585e405795d8">internal</a>() = 0;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#a64d8506b9d2aa2eff6da712ea507db92">   41</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_data_manipulater.html#a64d8506b9d2aa2eff6da712ea507db92">rightBnd</a>() = 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="comment">// 数据读取和边界条件</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">   44</a></span>  <a class="code hl_class" href="class_data_reader.html">DataReader</a> <a class="code hl_variable" href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">varsReader</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#aa2f845ac5fc8c7b15f55efd97a52c70d">   45</a></span>  std::shared_ptr&lt;OneDBnd&gt; <a class="code hl_variable" href="class_data_manipulater.html#aa2f845ac5fc8c7b15f55efd97a52c70d">bndL</a>, <a class="code hl_variable" href="class_data_manipulater.html#a689db485e67fcd62c69451ba083e230a">bndR</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="comment">// 法向量和网格参数</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#a5b9cb16faf4f936487ef282b90d672dc">   48</a></span>  std::array&lt;real, 3&gt; <a class="code hl_variable" href="class_data_manipulater.html#a5b9cb16faf4f936487ef282b90d672dc">norm</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#a7b2a61074864b18ec2e1a85f4246bcbe">   49</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="class_data_manipulater.html#a7b2a61074864b18ec2e1a85f4246bcbe">n</a>, <a class="code hl_variable" href="class_data_manipulater.html#af55889f87fa7ac03167b8576c6097ee6">nvar</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
+</div>
+<div class="ttc" id="aclass_data_manipulater_html_a0646649c555d2cdfb04cee8865db4e3d"><div class="ttname"><a href="class_data_manipulater.html#a0646649c555d2cdfb04cee8865db4e3d">DataManipulater::init</a></div><div class="ttdeci">void init(DataReader varsReader_, std::shared_ptr&lt; OneDBnd &gt; bndL_, std::shared_ptr&lt; OneDBnd &gt; bndR_)</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8cpp_source.html#l00009">dataManipulater.cpp:9</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a4095ac67d5463ef93b9111f10c2dcea1"><div class="ttname"><a href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">DataManipulater::varsReader</a></div><div class="ttdeci">DataReader varsReader</div><div class="ttdef"><b>定义</b> <a href="#l00044">dataManipulater.hpp:44</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a4778cbeaa282b6861a3fdf27567a1a99"><div class="ttname"><a href="class_data_manipulater.html#a4778cbeaa282b6861a3fdf27567a1a99">DataManipulater::solve</a></div><div class="ttdeci">virtual void solve()=0</div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a52b0d52376c1142bcd766da72000258d"><div class="ttname"><a href="class_data_manipulater.html#a52b0d52376c1142bcd766da72000258d">DataManipulater::leftBnd</a></div><div class="ttdeci">virtual void leftBnd()=0</div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a5b9cb16faf4f936487ef282b90d672dc"><div class="ttname"><a href="class_data_manipulater.html#a5b9cb16faf4f936487ef282b90d672dc">DataManipulater::norm</a></div><div class="ttdeci">std::array&lt; real, 3 &gt; norm</div><div class="ttdef"><b>定义</b> <a href="#l00048">dataManipulater.hpp:48</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a5f1208220de02f5f1a0c424dd17feab2"><div class="ttname"><a href="class_data_manipulater.html#a5f1208220de02f5f1a0c424dd17feab2">DataManipulater::getData</a></div><div class="ttdeci">std::shared_ptr&lt; Data &gt; getData()</div><div class="ttdef"><b>定义</b> <a href="#l00022">dataManipulater.hpp:22</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a64d8506b9d2aa2eff6da712ea507db92"><div class="ttname"><a href="class_data_manipulater.html#a64d8506b9d2aa2eff6da712ea507db92">DataManipulater::rightBnd</a></div><div class="ttdeci">virtual void rightBnd()=0</div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a689db485e67fcd62c69451ba083e230a"><div class="ttname"><a href="class_data_manipulater.html#a689db485e67fcd62c69451ba083e230a">DataManipulater::bndR</a></div><div class="ttdeci">std::shared_ptr&lt; OneDBnd &gt; bndR</div><div class="ttdef"><b>定义</b> <a href="#l00045">dataManipulater.hpp:45</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a6c51830a38519c386b8b6f86ae0ab0d8"><div class="ttname"><a href="class_data_manipulater.html#a6c51830a38519c386b8b6f86ae0ab0d8">DataManipulater::data</a></div><div class="ttdeci">std::shared_ptr&lt; Data &gt; data</div><div class="ttdef"><b>定义</b> <a href="#l00031">dataManipulater.hpp:31</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a73b63183575339fae3a92f13e74a9aa5"><div class="ttname"><a href="class_data_manipulater.html#a73b63183575339fae3a92f13e74a9aa5">DataManipulater::test</a></div><div class="ttdeci">void test()</div><div class="ttdef"><b>定义</b> <a href="#l00028">dataManipulater.hpp:28</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a7b2a61074864b18ec2e1a85f4246bcbe"><div class="ttname"><a href="class_data_manipulater.html#a7b2a61074864b18ec2e1a85f4246bcbe">DataManipulater::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="#l00049">dataManipulater.hpp:49</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a9f2fe29a9d25a8e1ff15904a1e6125aa"><div class="ttname"><a href="class_data_manipulater.html#a9f2fe29a9d25a8e1ff15904a1e6125aa">DataManipulater::setConstNorm</a></div><div class="ttdeci">void setConstNorm(std::array&lt; real, 3 &gt; norm_)</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8cpp_source.html#l00019">dataManipulater.cpp:19</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_aa2f845ac5fc8c7b15f55efd97a52c70d"><div class="ttname"><a href="class_data_manipulater.html#aa2f845ac5fc8c7b15f55efd97a52c70d">DataManipulater::bndL</a></div><div class="ttdeci">std::shared_ptr&lt; OneDBnd &gt; bndL</div><div class="ttdef"><b>定义</b> <a href="#l00045">dataManipulater.hpp:45</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_ab314bd460aa6b077c730c70b0c87de79"><div class="ttname"><a href="class_data_manipulater.html#ab314bd460aa6b077c730c70b0c87de79">DataManipulater::iter</a></div><div class="ttdeci">std::vector&lt; real &gt;::iterator iter</div><div class="ttdef"><b>定义</b> <a href="#l00035">dataManipulater.hpp:35</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_ac9cae551ba0637771c3c585e405795d8"><div class="ttname"><a href="class_data_manipulater.html#ac9cae551ba0637771c3c585e405795d8">DataManipulater::internal</a></div><div class="ttdeci">virtual void internal()=0</div></div>
+<div class="ttc" id="aclass_data_manipulater_html_acd0906f3075a4f94969695fffdf1153f"><div class="ttname"><a href="class_data_manipulater.html#acd0906f3075a4f94969695fffdf1153f">DataManipulater::initVarsR</a></div><div class="ttdeci">virtual void initVarsR()=0</div></div>
+<div class="ttc" id="aclass_data_manipulater_html_ad962f9c942a8588f182c05d7032d9e98"><div class="ttname"><a href="class_data_manipulater.html#ad962f9c942a8588f182c05d7032d9e98">DataManipulater::DataManipulater</a></div><div class="ttdeci">DataManipulater()</div><div class="ttdef"><b>定义</b> <a href="#l00010">dataManipulater.hpp:10</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_af55889f87fa7ac03167b8576c6097ee6"><div class="ttname"><a href="class_data_manipulater.html#af55889f87fa7ac03167b8576c6097ee6">DataManipulater::nvar</a></div><div class="ttdeci">int nvar</div><div class="ttdef"><b>定义</b> <a href="#l00049">dataManipulater.hpp:49</a></div></div>
+<div class="ttc" id="aclass_data_reader_html"><div class="ttname"><a href="class_data_reader.html">DataReader</a></div><div class="ttdef"><b>定义</b> <a href="data_8hpp_source.html#l00057">data.hpp:57</a></div></div>
+<div class="ttc" id="adata_8hpp_html"><div class="ttname"><a href="data_8hpp.html">data.hpp</a></div></div>
+<div class="ttc" id="amacro_8hpp_html"><div class="ttname"><a href="macro_8hpp.html">macro.hpp</a></div></div>
+<div class="ttc" id="aone_d_bnd_8hpp_html"><div class="ttname"><a href="one_d_bnd_8hpp.html">oneDBnd.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

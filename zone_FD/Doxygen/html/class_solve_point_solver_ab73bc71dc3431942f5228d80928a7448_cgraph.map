@@ -1,0 +1,18 @@
+<map id="SolvePointSolver::solve" name="SolvePointSolver::solve">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,105,166,132"/>
+<area shape="rect" id="Node000002" href="$class_solve_point_solver.html#a8f69cd802a365199bb4cbe3132ff7243" title=" " alt="" coords="214,29,396,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,102,213,65,238,60,234,62,215,71,120,107"/>
+<area shape="rect" id="Node000004" href="$class_solve_point_solver.html#ac146590ecdf1cf86c3a583b201d1fff2" title=" " alt="" coords="219,80,390,107"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="166,107,206,104,201,106,167,112"/>
+<area shape="rect" id="Node000006" href="$class_solve_point_solver.html#a8487850ac3f5712d9a43b8f793eabd69" title=" " alt="" coords="220,131,390,157"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="166,125,207,132,202,133,167,131"/>
+<area shape="rect" id="Node000007" href="$class_solve_point_solver.html#a41670bfb9195e6a0bf42e90746b22c62" title=" " alt="" coords="216,181,394,208"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="119,130,215,167,239,177,233,176,213,172,118,135"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="267,29,261,21,266,11,281,5,305,3,331,5,346,14,341,14,329,10,305,8,282,10,269,15,266,20,273,29"/>
+<area shape="rect" id="Node000003" href="$class_solve_point_solver.html#aacb17559775a59e14c5a46a07ccd19a8" title=" " alt="" coords="444,21,636,64"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="396,40,431,42,426,43,397,45"/>
+<area shape="rect" id="Node000005" href="$class_solve_point_solver.html#acee66abdf91b1e000d19512a6ee04c95" title=" " alt="" coords="458,131,622,157"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="370,105,463,127,457,127,370,110"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="390,141,445,144,440,144,390,147"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="370,178,457,161,463,161,371,183"/>
+</map>

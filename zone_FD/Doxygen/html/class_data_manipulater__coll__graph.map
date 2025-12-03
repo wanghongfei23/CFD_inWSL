@@ -1,0 +1,7 @@
+<map id="DataManipulater" name="DataManipulater">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,203,122,229"/>
+<area shape="rect" id="Node000002" href="$class_data_reader.html" title=" " alt="" coords="18,104,109,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,145,66,203,61,202,61,148"/>
+<area shape="rect" id="Node000003" href="$class_data.html" title=" " alt="" coords="39,5,88,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="64,45,66,104,61,103,63,50"/>
+</map>

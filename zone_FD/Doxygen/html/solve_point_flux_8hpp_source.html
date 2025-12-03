@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/solvePointFlux.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">solvePointFlux.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="solve_point_flux_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="data_manipulater_8hpp.html">dataManipulater.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*------------------concepts bigin---------------------------*/</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, std::<span class="keywordtype">size_t</span> NVar&gt;</div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="concept_flux.html">    7</a></span><span class="keyword">concept </span><a class="code hl_concept" href="concept_flux.html">Flux</a> = <span class="keyword">requires</span>(T <a class="code hl_function" href="utils_2exact_sol_burgers_2main_8cpp.html#a0ccf2c2ad9f3225b701704972316dd3a">f</a>, std::span&lt;real, NVar&gt; arr, std::span&lt;real, NVar&gt; <a class="code hl_typedef" href="flux_scheme_8hpp.html#af8bc7f1334a9adf9902e914309dfefc5">arr2</a>,</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    std::array&lt;real, 3&gt; norm) { T(arr, <a class="code hl_typedef" href="flux_scheme_8hpp.html#af8bc7f1334a9adf9902e914309dfefc5">arr2</a>, norm); };</div>
+</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">template</span> &lt;std::<span class="keywordtype">size_t</span> NVar&gt;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="solve_point_flux_8hpp.html#a0ed028355f0ee0e4f412cf18d6aff32c">   11</a></span><span class="keyword">using </span><a class="code hl_typedef" href="solve_point_flux_8hpp.html#a0ed028355f0ee0e4f412cf18d6aff32c">FluxN</a> = void (*)(<span class="keyword">const</span> std::span&lt;real, NVar&gt;&amp;,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">const</span> std::span&lt;real, NVar&gt;&amp;,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">const</span> std::array&lt;real, 3&gt;&amp;);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*-----------------concepts end--------------------------------*/</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">template</span> &lt;std::<span class="keywordtype">size_t</span> NVar, FluxN&lt;NVar&gt; fluxSolver&gt;</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_solve_point_solver.html">   17</a></span><span class="keyword">class </span><a class="code hl_function" href="class_solve_point_solver.html#aacb17559775a59e14c5a46a07ccd19a8">SolvePointSolver</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_data_manipulater.html#ad962f9c942a8588f182c05d7032d9e98">DataManipulater</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_solve_point_solver.html#aacb17559775a59e14c5a46a07ccd19a8">   19</a></span>    <a class="code hl_function" href="class_solve_point_solver.html#aacb17559775a59e14c5a46a07ccd19a8">SolvePointSolver</a>() {};</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_solve_point_solver.html#afe89f3b96bad6d2abfb9c29e3c7a79eb">   20</a></span>    <a class="code hl_function" href="class_solve_point_solver.html#afe89f3b96bad6d2abfb9c29e3c7a79eb">SolvePointSolver</a>(<a class="code hl_class" href="class_data_reader.html">DataReader</a> varsReader_, std::shared_ptr&lt;OneDBnd&gt; bndL_,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        std::shared_ptr&lt;OneDBnd&gt; bndR_, <span class="keywordtype">int</span> nl_, <span class="keywordtype">int</span> nr_)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        : <a class="code hl_function" href="class_data_manipulater.html#ad962f9c942a8588f182c05d7032d9e98">DataManipulater</a>(varsReader_, bndL_, bndR_)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        , <a class="code hl_variable" href="class_solve_point_solver.html#ae1cf91c4ae18f51404bb8a231a9ee14a">nl</a>(nl_)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        , <a class="code hl_variable" href="class_solve_point_solver.html#a4e93c3072775bdc6b6356d727363b6d4">nr</a>(nr_) {};</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_solve_point_solver.html#a65147cc3fa4ab691bd61b0135c12bbe5">   26</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#a65147cc3fa4ab691bd61b0135c12bbe5">setNlNr</a>(<span class="keywordtype">int</span> nl_, <span class="keywordtype">int</span> nr_)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_variable" href="class_solve_point_solver.html#ae1cf91c4ae18f51404bb8a231a9ee14a">nl</a> = nl_;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_variable" href="class_solve_point_solver.html#a4e93c3072775bdc6b6356d727363b6d4">nr</a> = nr_;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_solve_point_solver.html#a2be332abde65325ffbdb141790dc06a8">   31</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#a2be332abde65325ffbdb141790dc06a8">check</a>() { std::cout &lt;&lt; <span class="stringliteral">&quot;initialized successfully SolvePointSolver\n&quot;</span>; }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_solve_point_solver.html#ab73bc71dc3431942f5228d80928a7448">   33</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#ab73bc71dc3431942f5228d80928a7448">solve</a>() final</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_solve_point_solver.html#ae1cf91c4ae18f51404bb8a231a9ee14a">nl</a> == 0 &amp;&amp; <a class="code hl_variable" href="class_solve_point_solver.html#a4e93c3072775bdc6b6356d727363b6d4">nr</a> == 0)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_function" href="class_solve_point_solver.html#a8f69cd802a365199bb4cbe3132ff7243">initVarsR</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="class_data_manipulater.html#ab314bd460aa6b077c730c70b0c87de79">iter</a> = <a class="code hl_variable" href="class_data_manipulater.html#a6c51830a38519c386b8b6f86ae0ab0d8">data</a>-&gt;begin();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_function" href="class_solve_point_solver.html#a8487850ac3f5712d9a43b8f793eabd69">leftBnd</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_function" href="class_solve_point_solver.html#ac146590ecdf1cf86c3a583b201d1fff2">internal</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_function" href="class_solve_point_solver.html#a41670bfb9195e6a0bf42e90746b22c62">rightBnd</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="comment">// std::cout &lt;&lt; std::endl;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        assert(<a class="code hl_variable" href="class_data_manipulater.html#ab314bd460aa6b077c730c70b0c87de79">iter</a> == <a class="code hl_variable" href="class_data_manipulater.html#a6c51830a38519c386b8b6f86ae0ab0d8">data</a>-&gt;end());</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#a8f69cd802a365199bb4cbe3132ff7243">initVarsR</a>() final;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#a8487850ac3f5712d9a43b8f793eabd69">leftBnd</a>() final;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#ac146590ecdf1cf86c3a583b201d1fff2">internal</a>() final;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#a41670bfb9195e6a0bf42e90746b22c62">rightBnd</a>() final;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#acee66abdf91b1e000d19512a6ee04c95">solveI</a>(std::vector&lt;<a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&gt;::iterator);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>protected:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_solve_point_solver.html#ae1cf91c4ae18f51404bb8a231a9ee14a">   52</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_solve_point_solver.html#ae1cf91c4ae18f51404bb8a231a9ee14a">nl</a> = 0, <a class="code hl_variable" href="class_solve_point_solver.html#a4e93c3072775bdc6b6356d727363b6d4">nr</a> = 0;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>template &lt;std::<span class="keywordtype">size_t</span> NVar, <a class="code hl_typedef" href="solve_point_flux_8hpp.html#a0ed028355f0ee0e4f412cf18d6aff32c">FluxN</a>&lt;NVar&gt; fluxSolver&gt;</div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_solve_point_solver.html#a8f69cd802a365199bb4cbe3132ff7243">   55</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#aacb17559775a59e14c5a46a07ccd19a8">SolvePointSolver</a>&lt;NVar, fluxSolver&gt;::<a class="code hl_function" href="class_solve_point_solver.html#a8f69cd802a365199bb4cbe3132ff7243">initVarsR</a>()</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_data_manipulater.html#a6c51830a38519c386b8b6f86ae0ab0d8">data</a>) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_variable" href="class_data_manipulater.html#a6c51830a38519c386b8b6f86ae0ab0d8">data</a> = std::make_shared&lt;Data&gt;(<a class="code hl_variable" href="class_data_manipulater.html#a7b2a61074864b18ec2e1a85f4246bcbe">n</a> + <a class="code hl_variable" href="class_solve_point_solver.html#ae1cf91c4ae18f51404bb8a231a9ee14a">nl</a> + <a class="code hl_variable" href="class_solve_point_solver.html#a4e93c3072775bdc6b6356d727363b6d4">nr</a>, NVar);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    assert(NVar == <a class="code hl_variable" href="class_data_manipulater.html#af55889f87fa7ac03167b8576c6097ee6">nvar</a>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">template</span> &lt;std::<span class="keywordtype">size_t</span> NVar, FluxN&lt;NVar&gt; fluxSolver&gt;</div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_solve_point_solver.html#a8487850ac3f5712d9a43b8f793eabd69">   64</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#a8487850ac3f5712d9a43b8f793eabd69">SolvePointSolver&lt;NVar, fluxSolver&gt;::leftBnd</a>()</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = <a class="code hl_variable" href="class_solve_point_solver.html#ae1cf91c4ae18f51404bb8a231a9ee14a">nl</a> - 1; i &gt;= 0; i--) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">auto</span> iterBnd = (*bndL)(i);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_function" href="class_solve_point_solver.html#acee66abdf91b1e000d19512a6ee04c95">solveI</a>(iterBnd);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">template</span> &lt;std::<span class="keywordtype">size_t</span> NVar, FluxN&lt;NVar&gt; fluxSolver&gt;</div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_solve_point_solver.html#ac146590ecdf1cf86c3a583b201d1fff2">   73</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#ac146590ecdf1cf86c3a583b201d1fff2">SolvePointSolver&lt;NVar, fluxSolver&gt;::internal</a>()</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>{</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">auto</span> endIter = <a class="code hl_variable" href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">varsReader</a>(<a class="code hl_variable" href="class_data_manipulater.html#a7b2a61074864b18ec2e1a85f4246bcbe">n</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterVar = <a class="code hl_variable" href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">varsReader</a>(0); iterVar != endIter; iterVar += <a class="code hl_variable" href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">varsReader</a>.getOffset()) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_function" href="class_solve_point_solver.html#acee66abdf91b1e000d19512a6ee04c95">solveI</a>(iterVar);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        assert(iterVar &lt;= endIter);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">template</span> &lt;std::<span class="keywordtype">size_t</span> NVar, FluxN&lt;NVar&gt; fluxSolver&gt;</div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_solve_point_solver.html#a41670bfb9195e6a0bf42e90746b22c62">   83</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#a41670bfb9195e6a0bf42e90746b22c62">SolvePointSolver&lt;NVar, fluxSolver&gt;::rightBnd</a>()</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>{</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_solve_point_solver.html#a4e93c3072775bdc6b6356d727363b6d4">nr</a>; i++) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keyword">auto</span> iterBnd = (*bndR)(i);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_function" href="class_solve_point_solver.html#acee66abdf91b1e000d19512a6ee04c95">solveI</a>(iterBnd);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">template</span> &lt;std::<span class="keywordtype">size_t</span> NVar, FluxN&lt;NVar&gt; fluxSolver&gt;</div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_solve_point_solver.html#acee66abdf91b1e000d19512a6ee04c95">   92</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_solve_point_solver.html#acee66abdf91b1e000d19512a6ee04c95">SolvePointSolver&lt;NVar, fluxSolver&gt;::solveI</a>(</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    std::vector&lt;real&gt;::iterator iterBnd)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>{</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    assert(NVar == <a class="code hl_variable" href="class_data_manipulater.html#af55889f87fa7ac03167b8576c6097ee6">nvar</a>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    std::span&lt;real, NVar&gt; input(iterBnd, NVar), output(<a class="code hl_variable" href="class_data_manipulater.html#ab314bd460aa6b077c730c70b0c87de79">iter</a>, NVar);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    (*fluxSolver)(input, output, <a class="code hl_variable" href="class_data_manipulater.html#a5b9cb16faf4f936487ef282b90d672dc">norm</a>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_variable" href="class_data_manipulater.html#ab314bd460aa6b077c730c70b0c87de79">iter</a> += NVar;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="comment">// std::cout &lt;&lt; iter - data-&gt;end() &lt;&lt; &#39;\n&#39;;</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
+</div>
+<div class="ttc" id="aclass_data_manipulater_html_a4095ac67d5463ef93b9111f10c2dcea1"><div class="ttname"><a href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">DataManipulater::varsReader</a></div><div class="ttdeci">DataReader varsReader</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00044">dataManipulater.hpp:44</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a5b9cb16faf4f936487ef282b90d672dc"><div class="ttname"><a href="class_data_manipulater.html#a5b9cb16faf4f936487ef282b90d672dc">DataManipulater::norm</a></div><div class="ttdeci">std::array&lt; real, 3 &gt; norm</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00048">dataManipulater.hpp:48</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a6c51830a38519c386b8b6f86ae0ab0d8"><div class="ttname"><a href="class_data_manipulater.html#a6c51830a38519c386b8b6f86ae0ab0d8">DataManipulater::data</a></div><div class="ttdeci">std::shared_ptr&lt; Data &gt; data</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00031">dataManipulater.hpp:31</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a7b2a61074864b18ec2e1a85f4246bcbe"><div class="ttname"><a href="class_data_manipulater.html#a7b2a61074864b18ec2e1a85f4246bcbe">DataManipulater::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00049">dataManipulater.hpp:49</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_ab314bd460aa6b077c730c70b0c87de79"><div class="ttname"><a href="class_data_manipulater.html#ab314bd460aa6b077c730c70b0c87de79">DataManipulater::iter</a></div><div class="ttdeci">std::vector&lt; real &gt;::iterator iter</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00035">dataManipulater.hpp:35</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_ad962f9c942a8588f182c05d7032d9e98"><div class="ttname"><a href="class_data_manipulater.html#ad962f9c942a8588f182c05d7032d9e98">DataManipulater::DataManipulater</a></div><div class="ttdeci">DataManipulater()</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00010">dataManipulater.hpp:10</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_af55889f87fa7ac03167b8576c6097ee6"><div class="ttname"><a href="class_data_manipulater.html#af55889f87fa7ac03167b8576c6097ee6">DataManipulater::nvar</a></div><div class="ttdeci">int nvar</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00049">dataManipulater.hpp:49</a></div></div>
+<div class="ttc" id="aclass_data_reader_html"><div class="ttname"><a href="class_data_reader.html">DataReader</a></div><div class="ttdef"><b>定义</b> <a href="data_8hpp_source.html#l00057">data.hpp:57</a></div></div>
+<div class="ttc" id="aclass_solve_point_solver_html_a2be332abde65325ffbdb141790dc06a8"><div class="ttname"><a href="class_solve_point_solver.html#a2be332abde65325ffbdb141790dc06a8">SolvePointSolver::check</a></div><div class="ttdeci">void check()</div><div class="ttdef"><b>定义</b> <a href="#l00031">solvePointFlux.hpp:31</a></div></div>
+<div class="ttc" id="aclass_solve_point_solver_html_a41670bfb9195e6a0bf42e90746b22c62"><div class="ttname"><a href="class_solve_point_solver.html#a41670bfb9195e6a0bf42e90746b22c62">SolvePointSolver::rightBnd</a></div><div class="ttdeci">void rightBnd() final</div><div class="ttdef"><b>定义</b> <a href="#l00083">solvePointFlux.hpp:83</a></div></div>
+<div class="ttc" id="aclass_solve_point_solver_html_a4e93c3072775bdc6b6356d727363b6d4"><div class="ttname"><a href="class_solve_point_solver.html#a4e93c3072775bdc6b6356d727363b6d4">SolvePointSolver::nr</a></div><div class="ttdeci">int nr</div><div class="ttdef"><b>定义</b> <a href="#l00052">solvePointFlux.hpp:52</a></div></div>
+<div class="ttc" id="aclass_solve_point_solver_html_a65147cc3fa4ab691bd61b0135c12bbe5"><div class="ttname"><a href="class_solve_point_solver.html#a65147cc3fa4ab691bd61b0135c12bbe5">SolvePointSolver::setNlNr</a></div><div class="ttdeci">void setNlNr(int nl_, int nr_)</div><div class="ttdef"><b>定义</b> <a href="#l00026">solvePointFlux.hpp:26</a></div></div>
+<div class="ttc" id="aclass_solve_point_solver_html_a8487850ac3f5712d9a43b8f793eabd69"><div class="ttname"><a href="class_solve_point_solver.html#a8487850ac3f5712d9a43b8f793eabd69">SolvePointSolver::leftBnd</a></div><div class="ttdeci">void leftBnd() final</div><div class="ttdef"><b>定义</b> <a href="#l00064">solvePointFlux.hpp:64</a></div></div>
+<div class="ttc" id="aclass_solve_point_solver_html_a8f69cd802a365199bb4cbe3132ff7243"><div class="ttname"><a href="class_solve_point_solver.html#a8f69cd802a365199bb4cbe3132ff7243">SolvePointSolver::initVarsR</a></div><div class="ttdeci">void initVarsR() final</div><div class="ttdef"><b>定义</b> <a href="#l00055">solvePointFlux.hpp:55</a></div></div>
+<div class="ttc" id="aclass_solve_point_solver_html_aacb17559775a59e14c5a46a07ccd19a8"><div class="ttname"><a href="class_solve_point_solver.html#aacb17559775a59e14c5a46a07ccd19a8">SolvePointSolver::SolvePointSolver</a></div><div class="ttdeci">SolvePointSolver()</div><div class="ttdef"><b>定义</b> <a href="#l00019">solvePointFlux.hpp:19</a></div></div>
+<div class="ttc" id="aclass_solve_point_solver_html_ab73bc71dc3431942f5228d80928a7448"><div class="ttname"><a href="class_solve_point_solver.html#ab73bc71dc3431942f5228d80928a7448">SolvePointSolver::solve</a></div><div class="ttdeci">void solve() final</div><div class="ttdef"><b>定义</b> <a href="#l00033">solvePointFlux.hpp:33</a></div></div>
+<div class="ttc" id="aclass_solve_point_solver_html_ac146590ecdf1cf86c3a583b201d1fff2"><div class="ttname"><a href="class_solve_point_solver.html#ac146590ecdf1cf86c3a583b201d1fff2">SolvePointSolver::internal</a></div><div class="ttdeci">void internal() final</div><div class="ttdef"><b>定义</b> <a href="#l00073">solvePointFlux.hpp:73</a></div></div>
+<div class="ttc" id="aclass_solve_point_solver_html_acee66abdf91b1e000d19512a6ee04c95"><div class="ttname"><a href="class_solve_point_solver.html#acee66abdf91b1e000d19512a6ee04c95">SolvePointSolver::solveI</a></div><div class="ttdeci">void solveI(std::vector&lt; real &gt;::iterator)</div><div class="ttdef"><b>定义</b> <a href="#l00092">solvePointFlux.hpp:92</a></div></div>
+<div class="ttc" id="aclass_solve_point_solver_html_ae1cf91c4ae18f51404bb8a231a9ee14a"><div class="ttname"><a href="class_solve_point_solver.html#ae1cf91c4ae18f51404bb8a231a9ee14a">SolvePointSolver::nl</a></div><div class="ttdeci">int nl</div><div class="ttdef"><b>定义</b> <a href="#l00052">solvePointFlux.hpp:52</a></div></div>
+<div class="ttc" id="aclass_solve_point_solver_html_afe89f3b96bad6d2abfb9c29e3c7a79eb"><div class="ttname"><a href="class_solve_point_solver.html#afe89f3b96bad6d2abfb9c29e3c7a79eb">SolvePointSolver::SolvePointSolver</a></div><div class="ttdeci">SolvePointSolver(DataReader varsReader_, std::shared_ptr&lt; OneDBnd &gt; bndL_, std::shared_ptr&lt; OneDBnd &gt; bndR_, int nl_, int nr_)</div><div class="ttdef"><b>定义</b> <a href="#l00020">solvePointFlux.hpp:20</a></div></div>
+<div class="ttc" id="aconcept_flux_html"><div class="ttname"><a href="concept_flux.html">Flux</a></div><div class="ttdef"><b>定义</b> <a href="#l00007">solvePointFlux.hpp:7</a></div></div>
+<div class="ttc" id="adata_manipulater_8hpp_html"><div class="ttname"><a href="data_manipulater_8hpp.html">dataManipulater.hpp</a></div></div>
+<div class="ttc" id="aflux_scheme_8hpp_html_af8bc7f1334a9adf9902e914309dfefc5"><div class="ttname"><a href="flux_scheme_8hpp.html#af8bc7f1334a9adf9902e914309dfefc5">arr2</a></div><div class="ttdeci">std::array&lt; real, 2 &gt; arr2</div><div class="ttdef"><b>定义</b> <a href="flux_scheme_8hpp_source.html#l00008">fluxScheme.hpp:8</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a5f5a64ef503db0fc824df8320929b126"><div class="ttname"><a href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></div><div class="ttdeci">#define real</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00004">macro.hpp:4</a></div></div>
+<div class="ttc" id="asolve_point_flux_8hpp_html_a0ed028355f0ee0e4f412cf18d6aff32c"><div class="ttname"><a href="solve_point_flux_8hpp.html#a0ed028355f0ee0e4f412cf18d6aff32c">FluxN</a></div><div class="ttdeci">void(*)(const std::span&lt; real, NVar &gt; &amp;, const std::span&lt; real, NVar &gt; &amp;, const std::array&lt; real, 3 &gt; &amp;) FluxN</div><div class="ttdef"><b>定义</b> <a href="#l00011">solvePointFlux.hpp:11</a></div></div>
+<div class="ttc" id="autils_2exact_sol_burgers_2main_8cpp_html_a0ccf2c2ad9f3225b701704972316dd3a"><div class="ttname"><a href="utils_2exact_sol_burgers_2main_8cpp.html#a0ccf2c2ad9f3225b701704972316dd3a">f</a></div><div class="ttdeci">double f(double theta, double x, double t)</div><div class="ttdef"><b>定义</b> <a href="utils_2exact_sol_burgers_2main_8cpp_source.html#l00015">main.cpp:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

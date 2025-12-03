@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/cgnsio.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">cgnsio.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="cgnsio_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="block_8hpp.html">block.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;cgnslib.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="data_8hpp.html">data.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="info_8hpp.html">info.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="macro_8hpp.html">macro.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// CGNS输入输出类，用于处理CGNS格式的网格和解文件</span></div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_cgns_i_o.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cgns_i_o.html">CgnsIO</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="comment">// 网格和解数据输出函数</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_cgns_i_o.html#aa7aee08044871be1b814cf9172966acd">BlockCgnsOutput</a>(<a class="code hl_class" href="class_block.html">Block</a> *block, <a class="code hl_class" href="class_info.html">Info</a> *info);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_cgns_i_o.html#aea4db00d491ae2ae39c1eba83dfc9e30">solCgnsOutput</a>(<a class="code hl_class" href="class_data.html">Data</a> *data, <a class="code hl_class" href="class_info.html">Info</a> *info);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_cgns_i_o.html#a7ea69253cb77e2ecab73e7a121e32b00">   14</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_cgns_i_o.html#a7ea69253cb77e2ecab73e7a121e32b00">oneDsolOutput</a>(<a class="code hl_class" href="class_info.html">Info</a> *info);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
+</div>
+<div class="ttc" id="ablock_8hpp_html"><div class="ttname"><a href="block_8hpp.html">block.hpp</a></div></div>
+<div class="ttc" id="aclass_block_html"><div class="ttname"><a href="class_block.html">Block</a></div><div class="ttdef"><b>定义</b> <a href="block_8hpp_source.html#l00006">block.hpp:7</a></div></div>
+<div class="ttc" id="aclass_cgns_i_o_html"><div class="ttname"><a href="class_cgns_i_o.html">CgnsIO</a></div><div class="ttdef"><b>定义</b> <a href="#l00009">cgnsio.hpp:9</a></div></div>
+<div class="ttc" id="aclass_cgns_i_o_html_a7ea69253cb77e2ecab73e7a121e32b00"><div class="ttname"><a href="class_cgns_i_o.html#a7ea69253cb77e2ecab73e7a121e32b00">CgnsIO::oneDsolOutput</a></div><div class="ttdeci">void oneDsolOutput(Info *info)</div></div>
+<div class="ttc" id="aclass_cgns_i_o_html_aa7aee08044871be1b814cf9172966acd"><div class="ttname"><a href="class_cgns_i_o.html#aa7aee08044871be1b814cf9172966acd">CgnsIO::BlockCgnsOutput</a></div><div class="ttdeci">void BlockCgnsOutput(Block *block, Info *info)</div><div class="ttdef"><b>定义</b> <a href="cgnsio_8cpp_source.html#l00003">cgnsio.cpp:3</a></div></div>
+<div class="ttc" id="aclass_cgns_i_o_html_aea4db00d491ae2ae39c1eba83dfc9e30"><div class="ttname"><a href="class_cgns_i_o.html#aea4db00d491ae2ae39c1eba83dfc9e30">CgnsIO::solCgnsOutput</a></div><div class="ttdeci">void solCgnsOutput(Data *data, Info *info)</div><div class="ttdef"><b>定义</b> <a href="cgnsio_8cpp_source.html#l00068">cgnsio.cpp:68</a></div></div>
+<div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>定义</b> <a href="data_8hpp_source.html#l00005">data.hpp:5</a></div></div>
+<div class="ttc" id="aclass_info_html"><div class="ttname"><a href="class_info.html">Info</a></div><div class="ttdef"><b>定义</b> <a href="info_8hpp_source.html#l00004">info.hpp:4</a></div></div>
+<div class="ttc" id="adata_8hpp_html"><div class="ttname"><a href="data_8hpp.html">data.hpp</a></div></div>
+<div class="ttc" id="ainfo_8hpp_html"><div class="ttname"><a href="info_8hpp.html">info.hpp</a></div></div>
+<div class="ttc" id="amacro_8hpp_html"><div class="ttname"><a href="macro_8hpp.html">macro.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

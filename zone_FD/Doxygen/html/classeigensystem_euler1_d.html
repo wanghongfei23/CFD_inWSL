@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: eigensystemEuler1D类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classeigensystem_euler1_d-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">eigensystemEuler1D类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:acc98ba3a7df0e045abaa6764d581efdb" id="r_acc98ba3a7df0e045abaa6764d581efdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc98ba3a7df0e045abaa6764d581efdb">eigensystemEuler1D</a> (const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;prim)</td></tr>
+<tr class="memitem:a27d6aec1d2c0ae1bee784547373d6b9b" id="r_a27d6aec1d2c0ae1bee784547373d6b9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27d6aec1d2c0ae1bee784547373d6b9b">eigensystemEuler1D</a> (const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;priml, const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;primr)</td></tr>
+<tr class="memitem:a431139e75e5790ebbc9e0708f18de130" id="r_a431139e75e5790ebbc9e0708f18de130"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a431139e75e5790ebbc9e0708f18de130">primToChar</a> (const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;prim)</td></tr>
+<tr class="memitem:abb845806e1b40826070c360c68c06cf9" id="r_abb845806e1b40826070c360c68c06cf9"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb845806e1b40826070c360c68c06cf9">charToPrim</a> (const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;chars)</td></tr>
+<tr class="memitem:a15cbc08cfff53d11d50238596f11974e" id="r_a15cbc08cfff53d11d50238596f11974e"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15cbc08cfff53d11d50238596f11974e">charToCons</a> (const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;chars)</td></tr>
+<tr class="memitem:abeda1809c03dc7fd11b3ba907e3e0952" id="r_abeda1809c03dc7fd11b3ba907e3e0952"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abeda1809c03dc7fd11b3ba907e3e0952">consToPrim</a> (const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;chars)</td></tr>
+<tr class="memitem:ae9d53ce3df2a3a2a4798b7d41f16c252" id="r_ae9d53ce3df2a3a2a4798b7d41f16c252"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9d53ce3df2a3a2a4798b7d41f16c252">primToCons</a> (const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;chars)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a6c276e1603c381c1a4dd51717342868f" id="r_a6c276e1603c381c1a4dd51717342868f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c276e1603c381c1a4dd51717342868f">r</a></td></tr>
+<tr class="memitem:a2b75b595f1d3945986cb3385ca8b8052" id="r_a2b75b595f1d3945986cb3385ca8b8052"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b75b595f1d3945986cb3385ca8b8052">u</a></td></tr>
+<tr class="memitem:ad0157365523c404381b83e542718e793" id="r_ad0157365523c404381b83e542718e793"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0157365523c404381b83e542718e793">p</a></td></tr>
+<tr class="memitem:a9d0b3d7526cc403fdad483cff0e5f874" id="r_a9d0b3d7526cc403fdad483cff0e5f874"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d0b3d7526cc403fdad483cff0e5f874">gamma</a> = <a class="el" href="macro_8hpp.html#a8659b9de3e544ff142b153b076f30fd5">GAMMA</a></td></tr>
+<tr class="memitem:a4c126cb5263071caa29e49f9784610c2" id="r_a4c126cb5263071caa29e49f9784610c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c126cb5263071caa29e49f9784610c2">ek</a></td></tr>
+<tr class="memitem:ab08c38a9a4dc50f3d8b1691bff53924f" id="r_ab08c38a9a4dc50f3d8b1691bff53924f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab08c38a9a4dc50f3d8b1691bff53924f">h</a></td></tr>
+<tr class="memitem:a031fb8c27fd0f8dd5774e17a8d9005f7" id="r_a031fb8c27fd0f8dd5774e17a8d9005f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a031fb8c27fd0f8dd5774e17a8d9005f7">c</a></td></tr>
+<tr class="memitem:a1929c3868d89aed6fdb13eb35d28ab79" id="r_a1929c3868d89aed6fdb13eb35d28ab79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1929c3868d89aed6fdb13eb35d28ab79">xOrY</a> = false</td></tr>
+<tr class="memitem:aaf814a22645249a41a95d53d3932650a" id="r_aaf814a22645249a41a95d53d3932650a"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 *3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf814a22645249a41a95d53d3932650a">leftEig</a></td></tr>
+<tr class="memitem:adfcfd65ac6b7ea59d30ca49621096b20" id="r_adfcfd65ac6b7ea59d30ca49621096b20"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 *3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfcfd65ac6b7ea59d30ca49621096b20">rightEig</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a> 第 <a class="el" href="eigen_system_8hpp_source.html#l00036">36</a> 行定义.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="acc98ba3a7df0e045abaa6764d581efdb" name="acc98ba3a7df0e045abaa6764d581efdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc98ba3a7df0e045abaa6764d581efdb">&#9670;&#160;</a></span>eigensystemEuler1D() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eigensystemEuler1D::eigensystemEuler1D </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>prim</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27d6aec1d2c0ae1bee784547373d6b9b" name="a27d6aec1d2c0ae1bee784547373d6b9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27d6aec1d2c0ae1bee784547373d6b9b">&#9670;&#160;</a></span>eigensystemEuler1D() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eigensystemEuler1D::eigensystemEuler1D </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>priml</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>primr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8cpp_source.html">eigenSystem.cpp</a> 第 <a class="el" href="eigen_system_8cpp_source.html#l00217">217</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a15cbc08cfff53d11d50238596f11974e" name="a15cbc08cfff53d11d50238596f11974e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15cbc08cfff53d11d50238596f11974e">&#9670;&#160;</a></span>charToCons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; eigensystemEuler1D::charToCons </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>chars</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8cpp_source.html">eigenSystem.cpp</a> 第 <a class="el" href="eigen_system_8cpp_source.html#l00295">295</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classeigensystem_euler1_d_a15cbc08cfff53d11d50238596f11974e_icgraph.png" border="0" usemap="#aclasseigensystem_euler1_d_a15cbc08cfff53d11d50238596f11974e_icgraph" loading="lazy" alt=""/></div>
+<map name="aclasseigensystem_euler1_d_a15cbc08cfff53d11d50238596f11974e_icgraph" id="aclasseigensystem_euler1_d_a15cbc08cfff53d11d50238596f11974e_icgraph">
+<area shape="rect" title=" " alt="" coords="432,72,574,115"/>
+<area shape="rect" href="class_recon5_order1_d_euler_eig.html#ab13f1f87765415e6ee231459ac0dbea4" title=" " alt="" coords="220,72,384,115"/>
+<area shape="poly" title=" " alt="" coords="414,94,385,96,384,91,419,93"/>
+<area shape="rect" href="class_recon5_order_face_center.html#ac0abd6248dea71041e8929959909a1b8" title=" " alt="" coords="5,5,172,48"/>
+<area shape="poly" title=" " alt="" coords="215,68,159,51,159,46,220,66"/>
+<area shape="rect" href="class_recon5_order_face_center.html#a3fcc1a8bd5bf4af2034bf8d8a5613c44" title=" " alt="" coords="5,72,172,115"/>
+<area shape="poly" title=" " alt="" coords="201,94,173,96,172,91,206,93"/>
+<area shape="rect" href="class_recon5_order_face_center.html#aca48e5c315452c68c05871549e8413d8" title=" " alt="" coords="5,139,172,181"/>
+<area shape="poly" title=" " alt="" coords="220,119,160,141,159,135,215,120"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abb845806e1b40826070c360c68c06cf9" name="abb845806e1b40826070c360c68c06cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb845806e1b40826070c360c68c06cf9">&#9670;&#160;</a></span>charToPrim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; eigensystemEuler1D::charToPrim </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>chars</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8cpp_source.html">eigenSystem.cpp</a> 第 <a class="el" href="eigen_system_8cpp_source.html#l00278">278</a> 行定义.</p>
+
+</div>
+</div>
+<a id="abeda1809c03dc7fd11b3ba907e3e0952" name="abeda1809c03dc7fd11b3ba907e3e0952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeda1809c03dc7fd11b3ba907e3e0952">&#9670;&#160;</a></span>consToPrim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; eigensystemEuler1D::consToPrim </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>chars</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8cpp_source.html">eigenSystem.cpp</a> 第 <a class="el" href="eigen_system_8cpp_source.html#l00309">309</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classeigensystem_euler1_d_abeda1809c03dc7fd11b3ba907e3e0952_icgraph.png" border="0" usemap="#aclasseigensystem_euler1_d_abeda1809c03dc7fd11b3ba907e3e0952_icgraph" loading="lazy" alt=""/></div>
+<map name="aclasseigensystem_euler1_d_abeda1809c03dc7fd11b3ba907e3e0952_icgraph" id="aclasseigensystem_euler1_d_abeda1809c03dc7fd11b3ba907e3e0952_icgraph">
+<area shape="rect" title=" " alt="" coords="432,72,574,115"/>
+<area shape="rect" href="class_recon5_order1_d_euler_eig.html#ab13f1f87765415e6ee231459ac0dbea4" title=" " alt="" coords="220,72,384,115"/>
+<area shape="poly" title=" " alt="" coords="414,94,385,96,384,91,419,93"/>
+<area shape="rect" href="class_recon5_order_face_center.html#ac0abd6248dea71041e8929959909a1b8" title=" " alt="" coords="5,5,172,48"/>
+<area shape="poly" title=" " alt="" coords="215,68,159,51,159,46,220,66"/>
+<area shape="rect" href="class_recon5_order_face_center.html#a3fcc1a8bd5bf4af2034bf8d8a5613c44" title=" " alt="" coords="5,72,172,115"/>
+<area shape="poly" title=" " alt="" coords="201,94,173,96,172,91,206,93"/>
+<area shape="rect" href="class_recon5_order_face_center.html#aca48e5c315452c68c05871549e8413d8" title=" " alt="" coords="5,139,172,181"/>
+<area shape="poly" title=" " alt="" coords="220,119,160,141,159,135,215,120"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a431139e75e5790ebbc9e0708f18de130" name="a431139e75e5790ebbc9e0708f18de130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a431139e75e5790ebbc9e0708f18de130">&#9670;&#160;</a></span>primToChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; eigensystemEuler1D::primToChar </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>prim</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8cpp_source.html">eigenSystem.cpp</a> 第 <a class="el" href="eigen_system_8cpp_source.html#l00253">253</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classeigensystem_euler1_d_a431139e75e5790ebbc9e0708f18de130_icgraph.png" border="0" usemap="#aclasseigensystem_euler1_d_a431139e75e5790ebbc9e0708f18de130_icgraph" loading="lazy" alt=""/></div>
+<map name="aclasseigensystem_euler1_d_a431139e75e5790ebbc9e0708f18de130_icgraph" id="aclasseigensystem_euler1_d_a431139e75e5790ebbc9e0708f18de130_icgraph">
+<area shape="rect" title=" " alt="" coords="432,72,574,115"/>
+<area shape="rect" href="class_recon5_order1_d_euler_eig.html#ab13f1f87765415e6ee231459ac0dbea4" title=" " alt="" coords="220,72,384,115"/>
+<area shape="poly" title=" " alt="" coords="414,94,385,96,384,91,419,93"/>
+<area shape="rect" href="class_recon5_order_face_center.html#ac0abd6248dea71041e8929959909a1b8" title=" " alt="" coords="5,5,172,48"/>
+<area shape="poly" title=" " alt="" coords="215,68,159,51,159,46,220,66"/>
+<area shape="rect" href="class_recon5_order_face_center.html#a3fcc1a8bd5bf4af2034bf8d8a5613c44" title=" " alt="" coords="5,72,172,115"/>
+<area shape="poly" title=" " alt="" coords="201,94,173,96,172,91,206,93"/>
+<area shape="rect" href="class_recon5_order_face_center.html#aca48e5c315452c68c05871549e8413d8" title=" " alt="" coords="5,139,172,181"/>
+<area shape="poly" title=" " alt="" coords="220,119,160,141,159,135,215,120"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae9d53ce3df2a3a2a4798b7d41f16c252" name="ae9d53ce3df2a3a2a4798b7d41f16c252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d53ce3df2a3a2a4798b7d41f16c252">&#9670;&#160;</a></span>primToCons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; eigensystemEuler1D::primToCons </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>chars</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8cpp_source.html">eigenSystem.cpp</a> 第 <a class="el" href="eigen_system_8cpp_source.html#l00270">270</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classeigensystem_euler1_d_ae9d53ce3df2a3a2a4798b7d41f16c252_icgraph.png" border="0" usemap="#aclasseigensystem_euler1_d_ae9d53ce3df2a3a2a4798b7d41f16c252_icgraph" loading="lazy" alt=""/></div>
+<map name="aclasseigensystem_euler1_d_ae9d53ce3df2a3a2a4798b7d41f16c252_icgraph" id="aclasseigensystem_euler1_d_ae9d53ce3df2a3a2a4798b7d41f16c252_icgraph">
+<area shape="rect" title=" " alt="" coords="432,72,574,115"/>
+<area shape="rect" href="class_recon5_order1_d_euler_eig.html#ab13f1f87765415e6ee231459ac0dbea4" title=" " alt="" coords="220,72,384,115"/>
+<area shape="poly" title=" " alt="" coords="414,94,385,96,384,91,419,93"/>
+<area shape="rect" href="class_recon5_order_face_center.html#ac0abd6248dea71041e8929959909a1b8" title=" " alt="" coords="5,5,172,48"/>
+<area shape="poly" title=" " alt="" coords="215,68,159,51,159,46,220,66"/>
+<area shape="rect" href="class_recon5_order_face_center.html#a3fcc1a8bd5bf4af2034bf8d8a5613c44" title=" " alt="" coords="5,72,172,115"/>
+<area shape="poly" title=" " alt="" coords="201,94,173,96,172,91,206,93"/>
+<area shape="rect" href="class_recon5_order_face_center.html#aca48e5c315452c68c05871549e8413d8" title=" " alt="" coords="5,139,172,181"/>
+<area shape="poly" title=" " alt="" coords="220,119,160,141,159,135,215,120"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a031fb8c27fd0f8dd5774e17a8d9005f7" name="a031fb8c27fd0f8dd5774e17a8d9005f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031fb8c27fd0f8dd5774e17a8d9005f7">&#9670;&#160;</a></span>c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> eigensystemEuler1D::c</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a> 第 <a class="el" href="eigen_system_8hpp_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4c126cb5263071caa29e49f9784610c2" name="a4c126cb5263071caa29e49f9784610c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c126cb5263071caa29e49f9784610c2">&#9670;&#160;</a></span>ek</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> eigensystemEuler1D::ek</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a> 第 <a class="el" href="eigen_system_8hpp_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9d0b3d7526cc403fdad483cff0e5f874" name="a9d0b3d7526cc403fdad483cff0e5f874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d0b3d7526cc403fdad483cff0e5f874">&#9670;&#160;</a></span>gamma</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> eigensystemEuler1D::gamma = <a class="el" href="macro_8hpp.html#a8659b9de3e544ff142b153b076f30fd5">GAMMA</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a> 第 <a class="el" href="eigen_system_8hpp_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab08c38a9a4dc50f3d8b1691bff53924f" name="ab08c38a9a4dc50f3d8b1691bff53924f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab08c38a9a4dc50f3d8b1691bff53924f">&#9670;&#160;</a></span>h</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> eigensystemEuler1D::h</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a> 第 <a class="el" href="eigen_system_8hpp_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aaf814a22645249a41a95d53d3932650a" name="aaf814a22645249a41a95d53d3932650a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf814a22645249a41a95d53d3932650a">&#9670;&#160;</a></span>leftEig</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 * 3&gt; eigensystemEuler1D::leftEig</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a> 第 <a class="el" href="eigen_system_8hpp_source.html#l00056">56</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad0157365523c404381b83e542718e793" name="ad0157365523c404381b83e542718e793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0157365523c404381b83e542718e793">&#9670;&#160;</a></span>p</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> eigensystemEuler1D::p</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a> 第 <a class="el" href="eigen_system_8hpp_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6c276e1603c381c1a4dd51717342868f" name="a6c276e1603c381c1a4dd51717342868f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c276e1603c381c1a4dd51717342868f">&#9670;&#160;</a></span>r</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> eigensystemEuler1D::r</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a> 第 <a class="el" href="eigen_system_8hpp_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a id="adfcfd65ac6b7ea59d30ca49621096b20" name="adfcfd65ac6b7ea59d30ca49621096b20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfcfd65ac6b7ea59d30ca49621096b20">&#9670;&#160;</a></span>rightEig</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 * 3&gt; eigensystemEuler1D::rightEig</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a> 第 <a class="el" href="eigen_system_8hpp_source.html#l00056">56</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a2b75b595f1d3945986cb3385ca8b8052" name="a2b75b595f1d3945986cb3385ca8b8052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b75b595f1d3945986cb3385ca8b8052">&#9670;&#160;</a></span>u</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> eigensystemEuler1D::u</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a> 第 <a class="el" href="eigen_system_8hpp_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1929c3868d89aed6fdb13eb35d28ab79" name="a1929c3868d89aed6fdb13eb35d28ab79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1929c3868d89aed6fdb13eb35d28ab79">&#9670;&#160;</a></span>xOrY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool eigensystemEuler1D::xOrY = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a> 第 <a class="el" href="eigen_system_8hpp_source.html#l00053">53</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/<a class="el" href="eigen_system_8hpp_source.html">eigenSystem.hpp</a></li>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/<a class="el" href="eigen_system_8cpp_source.html">eigenSystem.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

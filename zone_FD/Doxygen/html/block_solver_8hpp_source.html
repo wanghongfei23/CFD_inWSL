@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/blockSolver.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">blockSolver.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="block_solver_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_source_term_8hpp.html">SourceTerm.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="cgnsio_8hpp.html">cgnsio.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="initializer_8hpp.html">initializer.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// 块求解器类，用于控制整个求解过程</span></div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_block_solver.html">    7</a></span><span class="keyword">class </span><a class="code hl_function" href="class_block_solver.html#ae184bae9628dd79ce563c131fa51d8cf">BlockSolver</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">// 构造和析构函数</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_function" href="class_block_solver.html#ae184bae9628dd79ce563c131fa51d8cf">BlockSolver</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_function" href="class_block_solver.html#ae184bae9628dd79ce563c131fa51d8cf">BlockSolver</a>(<a class="code hl_class" href="class_info.html">Info</a>*);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_function" href="class_block_solver.html#a60c053f7a38083aab6f25dc48515122a">~BlockSolver</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">// 求解控制函数</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_block_solver.html#ae372dfb8d712322916273f5352d17096">solve</a>(<a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// 输出控制函数</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_block_solver.html#a0f29b8074f5d43e176ac656f084a025d">outputGrid</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_block_solver.html#add03b267a1937f5f9ab38e6e81cc0d7c">outputCons</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_block_solver.html#a21dc82d623d574bee297b9a57006a8b4">outputPrim</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// 时间步进循环控制函数</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_block_solver.html#a95f73fc2b0bba0b24da3eab91f84ac15">stepsLoop</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_block_solver.html#ae641ab097ce6fd1402bc2a411828ae92">stepsLoopCFL</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_block_solver.html#a736738d2e404c1e60714d603303a5004">stepsLoopDTS</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// 测试函数</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_block_solver.html#a105bdac2459eedfccd45c99eb4197c5a">Test</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// 时间步计数器</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_block_solver.html#a81fe908d17b9bd8de6ded969206c9391">   31</a></span>    <span class="keywordtype">long</span> <a class="code hl_variable" href="class_block_solver.html#a81fe908d17b9bd8de6ded969206c9391">timesteps</a> = 0;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// IO处理对象</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_block_solver.html#aed784f77965139a544b51627b2f95d19">   35</a></span>    <a class="code hl_class" href="class_cgns_i_o.html">CgnsIO</a> <a class="code hl_variable" href="class_block_solver.html#aed784f77965139a544b51627b2f95d19">cgnsIO</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// 配置和数据对象</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_block_solver.html#a92457433d141439d10702bb57f68d51e">   38</a></span>    <a class="code hl_class" href="class_info.html">Info</a>* <a class="code hl_variable" href="class_block_solver.html#a92457433d141439d10702bb57f68d51e">info</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_block_solver.html#a72023b0eb96021755ce007894a2ddb4f">   39</a></span>    <a class="code hl_class" href="class_block.html">Block</a>* <a class="code hl_variable" href="class_block_solver.html#a72023b0eb96021755ce007894a2ddb4f">block</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_block_solver.html#a848412954b8eb8183602f3a768dc575f">   40</a></span>    <a class="code hl_class" href="class_initializer.html">Initializer</a>* <a class="code hl_variable" href="class_block_solver.html#a848412954b8eb8183602f3a768dc575f">initer</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_block_solver.html#ad166b858c00ed498e3d4bdf214735875">   41</a></span>    <a class="code hl_class" href="class_equation.html">Equation</a>* <a class="code hl_variable" href="class_block_solver.html#ad166b858c00ed498e3d4bdf214735875">eqn</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_block_solver.html#a19e9d5a7b192bd1bfb5d787c2b974264">   42</a></span>    <a class="code hl_class" href="class_bnds.html">Bnds</a>* <a class="code hl_variable" href="class_block_solver.html#a19e9d5a7b192bd1bfb5d787c2b974264">bnds</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_block_solver.html#ad506bd2fa7e49b038f563d01cd7df3a4">   43</a></span>    <a class="code hl_class" href="class_sp_distributor.html">SpDistributor</a>* <a class="code hl_variable" href="class_block_solver.html#ad506bd2fa7e49b038f563d01cd7df3a4">spDis</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_block_solver.html#a326c724ed1012a295ab020c850626c32">   44</a></span>    <a class="code hl_class" href="class_data.html">Data</a> *<a class="code hl_variable" href="class_block_solver.html#a326c724ed1012a295ab020c850626c32">cons</a>, *<a class="code hl_variable" href="class_block_solver.html#afa1f3a68bcf4c9482d525964b86f3181">rhs</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_block_solver.html#a126f520dc4fa284271e8018d26397d0e">   45</a></span>    <a class="code hl_class" href="class_source_term.html">SourceTerm</a>* <a class="code hl_variable" href="class_block_solver.html#a126f520dc4fa284271e8018d26397d0e">sourceTerm</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// 时间积分方法</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_block_solver.html#a238b1f4f31dc8fdbddfcf890c80fa645">RK3_SSP</a>(<a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_block_solver.html#a1069cefb8de82cf97a391762bbc651fe">   49</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_block_solver.html#a1069cefb8de82cf97a391762bbc651fe">RK4_SSP</a>(<a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_block_solver.html#a7c8af668de7608ff082765bdf1b4278c">DTS_Euler</a>(<a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// CFL计算相关函数</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::vector&lt;real&gt; <a class="code hl_function" href="class_block_solver.html#a8306ec4e9850e33c897eac0bf401fe87">calLocalCFL</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> <a class="code hl_function" href="class_block_solver.html#aa5ea345e5efaabe2388390c1c1659d71">getTimeIntervalExplicit</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// 时间积分方法选择</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_block_solver.html#a6cabde1b3e14b55391cb37ad93775e0b">   57</a></span>    <a class="code hl_enumeration" href="macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896">TimeMethod</a> <a class="code hl_variable" href="class_block_solver.html#a6cabde1b3e14b55391cb37ad93775e0b">timeMethod</a> = <a class="code hl_enumvalue" href="macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896ae672a0d703868ebfcb0df2ee5bbecaa2">RK3SSP</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
+</div>
+<div class="ttc" id="a_source_term_8hpp_html"><div class="ttname"><a href="_source_term_8hpp.html">SourceTerm.hpp</a></div></div>
+<div class="ttc" id="acgnsio_8hpp_html"><div class="ttname"><a href="cgnsio_8hpp.html">cgnsio.hpp</a></div></div>
+<div class="ttc" id="aclass_block_html"><div class="ttname"><a href="class_block.html">Block</a></div><div class="ttdef"><b>定义</b> <a href="block_8hpp_source.html#l00006">block.hpp:7</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a0f29b8074f5d43e176ac656f084a025d"><div class="ttname"><a href="class_block_solver.html#a0f29b8074f5d43e176ac656f084a025d">BlockSolver::outputGrid</a></div><div class="ttdeci">void outputGrid()</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00137">blockSolver.cpp:137</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a105bdac2459eedfccd45c99eb4197c5a"><div class="ttname"><a href="class_block_solver.html#a105bdac2459eedfccd45c99eb4197c5a">BlockSolver::Test</a></div><div class="ttdeci">void Test()</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00237">blockSolver.cpp:237</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a1069cefb8de82cf97a391762bbc651fe"><div class="ttname"><a href="class_block_solver.html#a1069cefb8de82cf97a391762bbc651fe">BlockSolver::RK4_SSP</a></div><div class="ttdeci">void RK4_SSP(real)</div></div>
+<div class="ttc" id="aclass_block_solver_html_a126f520dc4fa284271e8018d26397d0e"><div class="ttname"><a href="class_block_solver.html#a126f520dc4fa284271e8018d26397d0e">BlockSolver::sourceTerm</a></div><div class="ttdeci">SourceTerm * sourceTerm</div><div class="ttdef"><b>定义</b> <a href="#l00045">blockSolver.hpp:45</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a19e9d5a7b192bd1bfb5d787c2b974264"><div class="ttname"><a href="class_block_solver.html#a19e9d5a7b192bd1bfb5d787c2b974264">BlockSolver::bnds</a></div><div class="ttdeci">Bnds * bnds</div><div class="ttdef"><b>定义</b> <a href="#l00042">blockSolver.hpp:42</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a21dc82d623d574bee297b9a57006a8b4"><div class="ttname"><a href="class_block_solver.html#a21dc82d623d574bee297b9a57006a8b4">BlockSolver::outputPrim</a></div><div class="ttdeci">void outputPrim()</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00146">blockSolver.cpp:146</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a238b1f4f31dc8fdbddfcf890c80fa645"><div class="ttname"><a href="class_block_solver.html#a238b1f4f31dc8fdbddfcf890c80fa645">BlockSolver::RK3_SSP</a></div><div class="ttdeci">void RK3_SSP(real)</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00043">blockSolver.cpp:43</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a326c724ed1012a295ab020c850626c32"><div class="ttname"><a href="class_block_solver.html#a326c724ed1012a295ab020c850626c32">BlockSolver::cons</a></div><div class="ttdeci">Data * cons</div><div class="ttdef"><b>定义</b> <a href="#l00044">blockSolver.hpp:44</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a60c053f7a38083aab6f25dc48515122a"><div class="ttname"><a href="class_block_solver.html#a60c053f7a38083aab6f25dc48515122a">BlockSolver::~BlockSolver</a></div><div class="ttdeci">~BlockSolver()</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00126">blockSolver.cpp:126</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a6cabde1b3e14b55391cb37ad93775e0b"><div class="ttname"><a href="class_block_solver.html#a6cabde1b3e14b55391cb37ad93775e0b">BlockSolver::timeMethod</a></div><div class="ttdeci">TimeMethod timeMethod</div><div class="ttdef"><b>定义</b> <a href="#l00057">blockSolver.hpp:57</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a72023b0eb96021755ce007894a2ddb4f"><div class="ttname"><a href="class_block_solver.html#a72023b0eb96021755ce007894a2ddb4f">BlockSolver::block</a></div><div class="ttdeci">Block * block</div><div class="ttdef"><b>定义</b> <a href="#l00039">blockSolver.hpp:39</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a736738d2e404c1e60714d603303a5004"><div class="ttname"><a href="class_block_solver.html#a736738d2e404c1e60714d603303a5004">BlockSolver::stepsLoopDTS</a></div><div class="ttdeci">void stepsLoopDTS()</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00273">blockSolver.cpp:273</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a7c8af668de7608ff082765bdf1b4278c"><div class="ttname"><a href="class_block_solver.html#a7c8af668de7608ff082765bdf1b4278c">BlockSolver::DTS_Euler</a></div><div class="ttdeci">void DTS_Euler(real)</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00089">blockSolver.cpp:89</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a81fe908d17b9bd8de6ded969206c9391"><div class="ttname"><a href="class_block_solver.html#a81fe908d17b9bd8de6ded969206c9391">BlockSolver::timesteps</a></div><div class="ttdeci">long timesteps</div><div class="ttdef"><b>定义</b> <a href="#l00031">blockSolver.hpp:31</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a8306ec4e9850e33c897eac0bf401fe87"><div class="ttname"><a href="class_block_solver.html#a8306ec4e9850e33c897eac0bf401fe87">BlockSolver::calLocalCFL</a></div><div class="ttdeci">std::vector&lt; real &gt; calLocalCFL()</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00247">blockSolver.cpp:247</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a848412954b8eb8183602f3a768dc575f"><div class="ttname"><a href="class_block_solver.html#a848412954b8eb8183602f3a768dc575f">BlockSolver::initer</a></div><div class="ttdeci">Initializer * initer</div><div class="ttdef"><b>定义</b> <a href="#l00040">blockSolver.hpp:40</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a92457433d141439d10702bb57f68d51e"><div class="ttname"><a href="class_block_solver.html#a92457433d141439d10702bb57f68d51e">BlockSolver::info</a></div><div class="ttdeci">Info * info</div><div class="ttdef"><b>定义</b> <a href="#l00038">blockSolver.hpp:38</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_a95f73fc2b0bba0b24da3eab91f84ac15"><div class="ttname"><a href="class_block_solver.html#a95f73fc2b0bba0b24da3eab91f84ac15">BlockSolver::stepsLoop</a></div><div class="ttdeci">void stepsLoop()</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00152">blockSolver.cpp:152</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_aa5ea345e5efaabe2388390c1c1659d71"><div class="ttname"><a href="class_block_solver.html#aa5ea345e5efaabe2388390c1c1659d71">BlockSolver::getTimeIntervalExplicit</a></div><div class="ttdeci">real getTimeIntervalExplicit()</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00318">blockSolver.cpp:318</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_ad166b858c00ed498e3d4bdf214735875"><div class="ttname"><a href="class_block_solver.html#ad166b858c00ed498e3d4bdf214735875">BlockSolver::eqn</a></div><div class="ttdeci">Equation * eqn</div><div class="ttdef"><b>定义</b> <a href="#l00041">blockSolver.hpp:41</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_ad506bd2fa7e49b038f563d01cd7df3a4"><div class="ttname"><a href="class_block_solver.html#ad506bd2fa7e49b038f563d01cd7df3a4">BlockSolver::spDis</a></div><div class="ttdeci">SpDistributor * spDis</div><div class="ttdef"><b>定义</b> <a href="#l00043">blockSolver.hpp:43</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_add03b267a1937f5f9ab38e6e81cc0d7c"><div class="ttname"><a href="class_block_solver.html#add03b267a1937f5f9ab38e6e81cc0d7c">BlockSolver::outputCons</a></div><div class="ttdeci">void outputCons()</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00142">blockSolver.cpp:142</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_ae184bae9628dd79ce563c131fa51d8cf"><div class="ttname"><a href="class_block_solver.html#ae184bae9628dd79ce563c131fa51d8cf">BlockSolver::BlockSolver</a></div><div class="ttdeci">BlockSolver()</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00004">blockSolver.cpp:4</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_ae372dfb8d712322916273f5352d17096"><div class="ttname"><a href="class_block_solver.html#ae372dfb8d712322916273f5352d17096">BlockSolver::solve</a></div><div class="ttdeci">void solve(real)</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00120">blockSolver.cpp:120</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_ae641ab097ce6fd1402bc2a411828ae92"><div class="ttname"><a href="class_block_solver.html#ae641ab097ce6fd1402bc2a411828ae92">BlockSolver::stepsLoopCFL</a></div><div class="ttdeci">void stepsLoopCFL()</div><div class="ttdef"><b>定义</b> <a href="block_solver_8cpp_source.html#l00170">blockSolver.cpp:170</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_aed784f77965139a544b51627b2f95d19"><div class="ttname"><a href="class_block_solver.html#aed784f77965139a544b51627b2f95d19">BlockSolver::cgnsIO</a></div><div class="ttdeci">CgnsIO cgnsIO</div><div class="ttdef"><b>定义</b> <a href="#l00035">blockSolver.hpp:35</a></div></div>
+<div class="ttc" id="aclass_block_solver_html_afa1f3a68bcf4c9482d525964b86f3181"><div class="ttname"><a href="class_block_solver.html#afa1f3a68bcf4c9482d525964b86f3181">BlockSolver::rhs</a></div><div class="ttdeci">Data * rhs</div><div class="ttdef"><b>定义</b> <a href="#l00044">blockSolver.hpp:44</a></div></div>
+<div class="ttc" id="aclass_bnds_html"><div class="ttname"><a href="class_bnds.html">Bnds</a></div><div class="ttdef"><b>定义</b> <a href="bnds_8hpp_source.html#l00007">bnds.hpp:7</a></div></div>
+<div class="ttc" id="aclass_cgns_i_o_html"><div class="ttname"><a href="class_cgns_i_o.html">CgnsIO</a></div><div class="ttdef"><b>定义</b> <a href="cgnsio_8hpp_source.html#l00009">cgnsio.hpp:9</a></div></div>
+<div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>定义</b> <a href="data_8hpp_source.html#l00005">data.hpp:5</a></div></div>
+<div class="ttc" id="aclass_equation_html"><div class="ttname"><a href="class_equation.html">Equation</a></div><div class="ttdef"><b>定义</b> <a href="equation_8hpp_source.html#l00006">equation.hpp:7</a></div></div>
+<div class="ttc" id="aclass_info_html"><div class="ttname"><a href="class_info.html">Info</a></div><div class="ttdef"><b>定义</b> <a href="info_8hpp_source.html#l00004">info.hpp:4</a></div></div>
+<div class="ttc" id="aclass_initializer_html"><div class="ttname"><a href="class_initializer.html">Initializer</a></div><div class="ttdef"><b>定义</b> <a href="initializer_8hpp_source.html#l00009">initializer.hpp:10</a></div></div>
+<div class="ttc" id="aclass_source_term_html"><div class="ttname"><a href="class_source_term.html">SourceTerm</a></div><div class="ttdef"><b>定义</b> <a href="_source_term_8hpp_source.html#l00005">SourceTerm.hpp:6</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html"><div class="ttname"><a href="class_sp_distributor.html">SpDistributor</a></div><div class="ttdef"><b>定义</b> <a href="sp__distributor_8hpp_source.html#l00006">sp_distributor.hpp:6</a></div></div>
+<div class="ttc" id="ainitializer_8hpp_html"><div class="ttname"><a href="initializer_8hpp.html">initializer.hpp</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a358043ae6b418d48835e9ac9be85d896"><div class="ttname"><a href="macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896">TimeMethod</a></div><div class="ttdeci">TimeMethod</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00087">macro.hpp:87</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a358043ae6b418d48835e9ac9be85d896ae672a0d703868ebfcb0df2ee5bbecaa2"><div class="ttname"><a href="macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896ae672a0d703868ebfcb0df2ee5bbecaa2">RK3SSP</a></div><div class="ttdeci">@ RK3SSP</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00087">macro.hpp:87</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a5f5a64ef503db0fc824df8320929b126"><div class="ttname"><a href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></div><div class="ttdeci">#define real</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00004">macro.hpp:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

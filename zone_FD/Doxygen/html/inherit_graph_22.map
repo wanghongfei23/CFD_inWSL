@@ -1,0 +1,7 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,95,57,121"/>
+<area shape="rect" id="Node000001" href="$structpro_1_1details_1_1composite__meta__impl.html" title=" " alt="" coords="105,5,338,112"/>
+<area shape="poly" id="edge20_Node000000_Node000001" title=" " alt="" coords="71,95,106,87,102,91,73,100"/>
+<area shape="rect" id="Node000002" href="$structpro_1_1details_1_1composite__meta__impl.html" title=" " alt="" coords="145,136,298,179"/>
+<area shape="poly" id="edge21_Node000000_Node000002" title=" " alt="" coords="72,116,146,136,142,139,71,121"/>
+</map>

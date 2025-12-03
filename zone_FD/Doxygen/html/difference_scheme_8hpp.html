@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/differenceScheme.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">differenceScheme.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="macro_8hpp_source.html">macro.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+differenceScheme.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="difference_scheme_8hpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2difference_scheme_8hpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2difference_scheme_8hpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2difference_scheme_8hpp">
+<area shape="rect" title=" " alt="" coords="379,5,626,80"/>
+<area shape="rect" href="macro_8hpp.html" title=" " alt="" coords="461,128,544,155"/>
+<area shape="poly" title=" " alt="" coords="504,78,505,114,500,111,501,82"/>
+<area shape="rect" title=" " alt="" coords="5,203,56,229"/>
+<area shape="poly" title=" " alt="" coords="458,147,294,167,185,183,72,205,70,200,184,178,294,162,463,145"/>
+<area shape="rect" title=" " alt="" coords="80,203,141,229"/>
+<area shape="poly" title=" " alt="" coords="459,149,329,171,156,205,155,199,328,166,464,148"/>
+<area shape="rect" title=" " alt="" coords="164,203,236,229"/>
+<area shape="poly" title=" " alt="" coords="463,153,251,204,250,199,458,152"/>
+<area shape="rect" title=" " alt="" coords="259,203,327,229"/>
+<area shape="poly" title=" " alt="" coords="469,155,343,200,341,195,463,156"/>
+<area shape="rect" title=" " alt="" coords="352,203,405,229"/>
+<area shape="poly" title=" " alt="" coords="483,155,414,197,412,192,478,156"/>
+<area shape="rect" title=" " alt="" coords="430,203,487,229"/>
+<area shape="poly" title=" " alt="" coords="497,154,476,192,472,187,493,157"/>
+<area shape="rect" title=" " alt="" coords="511,203,585,229"/>
+<area shape="poly" title=" " alt="" coords="512,153,534,190,529,188,509,158"/>
+<area shape="rect" title=" " alt="" coords="609,203,673,229"/>
+<area shape="poly" title=" " alt="" coords="527,153,606,195,601,195,526,158"/>
+<area shape="rect" title=" " alt="" coords="698,203,755,229"/>
+<area shape="poly" title=" " alt="" coords="542,153,686,201,680,201,541,158"/>
+<area shape="rect" title=" " alt="" coords="779,203,837,229"/>
+<area shape="poly" title=" " alt="" coords="544,148,766,201,761,202,544,154"/>
+<area shape="rect" title=" " alt="" coords="861,203,907,229"/>
+<area shape="poly" title=" " alt="" coords="544,145,675,164,848,202,843,202,675,170,544,150"/>
+<area shape="rect" title=" " alt="" coords="931,203,991,229"/>
+<area shape="poly" title=" " alt="" coords="544,144,704,164,918,202,913,202,703,169,544,150"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="difference_scheme_8hpp__dep__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2difference_scheme_8hppdep" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2difference_scheme_8hppdep" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2difference_scheme_8hppdep">
+<area shape="rect" title=" " alt="" coords="5,5,252,80"/>
+<area shape="rect" href="differ_8cpp.html" title=" " alt="" coords="13,128,244,203"/>
+<area shape="poly" title=" " alt="" coords="130,94,131,129,126,127,127,98"/>
+</map>
+</div>
+</div>
+<p><a href="difference_scheme_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:DifferenceScheme" id="r_DifferenceScheme"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_difference_scheme.html">DifferenceScheme</a></td></tr>
+<tr class="memitem:DifSecondOrder" id="r_DifSecondOrder"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dif_second_order.html">DifSecondOrder</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a96229561803eccbb695179c93d3e7c2e" id="r_a96229561803eccbb695179c93d3e7c2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96229561803eccbb695179c93d3e7c2e">secondOrder</a> (std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;::iterator fluxHalf, std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;::iterator fluxNode, int nvar)</td></tr>
+<tr class="memitem:a1289734e8ef2e717129d63b8f17d371a" id="r_a1289734e8ef2e717129d63b8f17d371a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1289734e8ef2e717129d63b8f17d371a">explicit6</a> (std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;::iterator fluxHalf, std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;::iterator fluxNode, int nvar)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="a1289734e8ef2e717129d63b8f17d371a" name="a1289734e8ef2e717129d63b8f17d371a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1289734e8ef2e717129d63b8f17d371a">&#9670;&#160;</a></span>explicit6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> explicit6 </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;::iterator</td>          <td class="paramname"><span class="paramname"><em>fluxHalf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;::iterator</td>          <td class="paramname"><span class="paramname"><em>fluxNode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nvar</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="difference_scheme_8hpp_source.html">differenceScheme.hpp</a> 第 <a class="el" href="difference_scheme_8hpp_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a96229561803eccbb695179c93d3e7c2e" name="a96229561803eccbb695179c93d3e7c2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96229561803eccbb695179c93d3e7c2e">&#9670;&#160;</a></span>secondOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> secondOrder </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;::iterator</td>          <td class="paramname"><span class="paramname"><em>fluxHalf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;::iterator</td>          <td class="paramname"><span class="paramname"><em>fluxNode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nvar</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="difference_scheme_8hpp_source.html">differenceScheme.hpp</a> 第 <a class="el" href="difference_scheme_8hpp_source.html#l00030">30</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="difference_scheme_8hpp_a96229561803eccbb695179c93d3e7c2e_icgraph.png" border="0" usemap="#adifference_scheme_8hpp_a96229561803eccbb695179c93d3e7c2e_icgraph" loading="lazy" alt=""/></div>
+<map name="adifference_scheme_8hpp_a96229561803eccbb695179c93d3e7c2e_icgraph" id="adifference_scheme_8hpp_a96229561803eccbb695179c93d3e7c2e_icgraph">
+<area shape="rect" title=" " alt="" coords="145,5,240,32"/>
+<area shape="rect" href="class_differ.html#a377a39ee2d4b442bac3d6e47544ed7bf" title=" " alt="" coords="5,5,97,32"/>
+<area shape="poly" title=" " alt="" coords="126,19,97,21,97,16,132,18"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

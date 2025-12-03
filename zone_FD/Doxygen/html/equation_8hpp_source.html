@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/equation.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">equation.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="equation_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include&quot;<a class="code" href="data_8hpp.html">data.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// 方程类，用于处理守恒变量和基本变量之间的转换</span></div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_equation.html">    6</a></span><span class="keyword">class </span><a class="code hl_function" href="class_equation.html#a68511fc719250ed80f86c50de9136733">Equation</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">// 构造函数</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_equation.html#a68511fc719250ed80f86c50de9136733">   10</a></span>    <a class="code hl_function" href="class_equation.html#a68511fc719250ed80f86c50de9136733">Equation</a>(){};</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">// 变量转换函数</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_equation.html#aaa33ed39d27eddf58fa0026e790f638b">consToPrim</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// 数据获取函数</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="class_data.html">Data</a>* <a class="code hl_function" href="class_equation.html#a2f42b340d4587efa6924c7171ea381f4">getCons</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_class" href="class_data.html">Data</a>* <a class="code hl_function" href="class_equation.html#ae465be9838f011b8b96e345655238489">getPrim</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_class" href="class_data.html">Data</a>* <a class="code hl_function" href="class_equation.html#a5bc5e65d311e373ef7dc7aff99cc1d53">getRhs</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// 允许初始化器访问保护成员</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_equation.html#a5d26a0aa56303737c594b42e7cdad905">   22</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_equation.html#a5d26a0aa56303737c594b42e7cdad905">Initializer</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// 变量转换实现函数</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_equation.html#ae22b2778464abbf88007d42762cfdd6c">consToPrimEuler1D</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_equation.html#a6724298495842e0839d9a2576d1ef3c6">consToPrimEuler2D</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// 方程相关数据</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_equation.html#ae3b30d86058af618935e96e3c471f2a1">   29</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_equation.html#ae3b30d86058af618935e96e3c471f2a1">inited</a>=<span class="keyword">false</span>;        <span class="comment">// 初始化标志</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_equation.html#a9c83273b9c9e80377380c6c230f00547">   30</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_equation.html#a9c83273b9c9e80377380c6c230f00547">n</a>,<a class="code hl_variable" href="class_equation.html#a8a9aa10e16deb9a819824b0d66c8e106">nCons</a>,<a class="code hl_variable" href="class_equation.html#abd85fdfd794398da6f6b4aeccc821a7b">nPrim</a>;        <span class="comment">// 网格点数、守恒变量数、基本变量数</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_equation.html#a0ba1350ce32a877e0645f9ebbeace8d2">   31</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_equation.html#a0ba1350ce32a877e0645f9ebbeace8d2">dim</a>;                  <span class="comment">// 问题维度</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_equation.html#aa8fff7bd4f523108faf10c6e2fa4a0b6">   32</a></span>    <a class="code hl_class" href="class_data.html">Data</a>* <a class="code hl_variable" href="class_equation.html#aa8fff7bd4f523108faf10c6e2fa4a0b6">cons</a>,*<a class="code hl_variable" href="class_equation.html#ae1062c8b55c6e5d7227b436dcea4f892">rhs</a>,*<a class="code hl_variable" href="class_equation.html#ae51899c3da57bff8b73eee055707c6d9">prim</a>;    <span class="comment">// 守恒变量、右手端、基本变量数据指针</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_equation.html#a4fe780082036365183478c01ca732046">   33</a></span>    <a class="code hl_enumeration" href="macro_8hpp.html#a6efecf3d755d53d3c4649b100919dca3">EquationType</a> <a class="code hl_variable" href="class_equation.html#a4fe780082036365183478c01ca732046">type</a>;        <span class="comment">// 方程类型</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+</div>
+<div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>定义</b> <a href="data_8hpp_source.html#l00005">data.hpp:5</a></div></div>
+<div class="ttc" id="aclass_equation_html_a0ba1350ce32a877e0645f9ebbeace8d2"><div class="ttname"><a href="class_equation.html#a0ba1350ce32a877e0645f9ebbeace8d2">Equation::dim</a></div><div class="ttdeci">int dim</div><div class="ttdef"><b>定义</b> <a href="#l00031">equation.hpp:31</a></div></div>
+<div class="ttc" id="aclass_equation_html_a2f42b340d4587efa6924c7171ea381f4"><div class="ttname"><a href="class_equation.html#a2f42b340d4587efa6924c7171ea381f4">Equation::getCons</a></div><div class="ttdeci">Data * getCons()</div><div class="ttdef"><b>定义</b> <a href="equation_8cpp_source.html#l00084">equation.cpp:84</a></div></div>
+<div class="ttc" id="aclass_equation_html_a4fe780082036365183478c01ca732046"><div class="ttname"><a href="class_equation.html#a4fe780082036365183478c01ca732046">Equation::type</a></div><div class="ttdeci">EquationType type</div><div class="ttdef"><b>定义</b> <a href="#l00033">equation.hpp:33</a></div></div>
+<div class="ttc" id="aclass_equation_html_a5bc5e65d311e373ef7dc7aff99cc1d53"><div class="ttname"><a href="class_equation.html#a5bc5e65d311e373ef7dc7aff99cc1d53">Equation::getRhs</a></div><div class="ttdeci">Data * getRhs()</div><div class="ttdef"><b>定义</b> <a href="equation_8cpp_source.html#l00089">equation.cpp:89</a></div></div>
+<div class="ttc" id="aclass_equation_html_a5d26a0aa56303737c594b42e7cdad905"><div class="ttname"><a href="class_equation.html#a5d26a0aa56303737c594b42e7cdad905">Equation::Initializer</a></div><div class="ttdeci">friend class Initializer</div><div class="ttdef"><b>定义</b> <a href="#l00022">equation.hpp:22</a></div></div>
+<div class="ttc" id="aclass_equation_html_a6724298495842e0839d9a2576d1ef3c6"><div class="ttname"><a href="class_equation.html#a6724298495842e0839d9a2576d1ef3c6">Equation::consToPrimEuler2D</a></div><div class="ttdeci">void consToPrimEuler2D()</div><div class="ttdef"><b>定义</b> <a href="equation_8cpp_source.html#l00050">equation.cpp:50</a></div></div>
+<div class="ttc" id="aclass_equation_html_a68511fc719250ed80f86c50de9136733"><div class="ttname"><a href="class_equation.html#a68511fc719250ed80f86c50de9136733">Equation::Equation</a></div><div class="ttdeci">Equation()</div><div class="ttdef"><b>定义</b> <a href="#l00010">equation.hpp:10</a></div></div>
+<div class="ttc" id="aclass_equation_html_a8a9aa10e16deb9a819824b0d66c8e106"><div class="ttname"><a href="class_equation.html#a8a9aa10e16deb9a819824b0d66c8e106">Equation::nCons</a></div><div class="ttdeci">int nCons</div><div class="ttdef"><b>定义</b> <a href="#l00030">equation.hpp:30</a></div></div>
+<div class="ttc" id="aclass_equation_html_a9c83273b9c9e80377380c6c230f00547"><div class="ttname"><a href="class_equation.html#a9c83273b9c9e80377380c6c230f00547">Equation::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="#l00030">equation.hpp:30</a></div></div>
+<div class="ttc" id="aclass_equation_html_aa8fff7bd4f523108faf10c6e2fa4a0b6"><div class="ttname"><a href="class_equation.html#aa8fff7bd4f523108faf10c6e2fa4a0b6">Equation::cons</a></div><div class="ttdeci">Data * cons</div><div class="ttdef"><b>定义</b> <a href="#l00032">equation.hpp:32</a></div></div>
+<div class="ttc" id="aclass_equation_html_aaa33ed39d27eddf58fa0026e790f638b"><div class="ttname"><a href="class_equation.html#aaa33ed39d27eddf58fa0026e790f638b">Equation::consToPrim</a></div><div class="ttdeci">void consToPrim()</div><div class="ttdef"><b>定义</b> <a href="equation_8cpp_source.html#l00003">equation.cpp:3</a></div></div>
+<div class="ttc" id="aclass_equation_html_abd85fdfd794398da6f6b4aeccc821a7b"><div class="ttname"><a href="class_equation.html#abd85fdfd794398da6f6b4aeccc821a7b">Equation::nPrim</a></div><div class="ttdeci">int nPrim</div><div class="ttdef"><b>定义</b> <a href="#l00030">equation.hpp:30</a></div></div>
+<div class="ttc" id="aclass_equation_html_ae1062c8b55c6e5d7227b436dcea4f892"><div class="ttname"><a href="class_equation.html#ae1062c8b55c6e5d7227b436dcea4f892">Equation::rhs</a></div><div class="ttdeci">Data * rhs</div><div class="ttdef"><b>定义</b> <a href="#l00032">equation.hpp:32</a></div></div>
+<div class="ttc" id="aclass_equation_html_ae22b2778464abbf88007d42762cfdd6c"><div class="ttname"><a href="class_equation.html#ae22b2778464abbf88007d42762cfdd6c">Equation::consToPrimEuler1D</a></div><div class="ttdeci">void consToPrimEuler1D()</div><div class="ttdef"><b>定义</b> <a href="equation_8cpp_source.html#l00026">equation.cpp:26</a></div></div>
+<div class="ttc" id="aclass_equation_html_ae3b30d86058af618935e96e3c471f2a1"><div class="ttname"><a href="class_equation.html#ae3b30d86058af618935e96e3c471f2a1">Equation::inited</a></div><div class="ttdeci">bool inited</div><div class="ttdef"><b>定义</b> <a href="#l00029">equation.hpp:29</a></div></div>
+<div class="ttc" id="aclass_equation_html_ae465be9838f011b8b96e345655238489"><div class="ttname"><a href="class_equation.html#ae465be9838f011b8b96e345655238489">Equation::getPrim</a></div><div class="ttdeci">Data * getPrim()</div><div class="ttdef"><b>定义</b> <a href="equation_8cpp_source.html#l00079">equation.cpp:79</a></div></div>
+<div class="ttc" id="aclass_equation_html_ae51899c3da57bff8b73eee055707c6d9"><div class="ttname"><a href="class_equation.html#ae51899c3da57bff8b73eee055707c6d9">Equation::prim</a></div><div class="ttdeci">Data * prim</div><div class="ttdef"><b>定义</b> <a href="#l00032">equation.hpp:32</a></div></div>
+<div class="ttc" id="adata_8hpp_html"><div class="ttname"><a href="data_8hpp.html">data.hpp</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a6efecf3d755d53d3c4649b100919dca3"><div class="ttname"><a href="macro_8hpp.html#a6efecf3d755d53d3c4649b100919dca3">EquationType</a></div><div class="ttdeci">EquationType</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00083">macro.hpp:83</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

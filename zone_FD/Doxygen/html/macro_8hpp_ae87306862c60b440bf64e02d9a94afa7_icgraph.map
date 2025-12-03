@@ -1,0 +1,8 @@
+<map id="calOffsetInverse" name="calOffsetInverse">
+<area shape="rect" id="Node000001" title=" " alt="" coords="431,5,547,32"/>
+<area shape="rect" id="Node000002" href="$class_initializer.html#ac79a58b8ad2735b658b66aa7df4686a6" title="初始化边界条件 根据方程类型和维度设置不同的边界条件" alt="" coords="5,5,134,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="415,21,134,21,134,16,416,16"/>
+<area shape="rect" id="Node000003" href="$class_initializer.html#af17ef5c544d4e34dd7f87e0cc661c48e" title="初始化双马赫反射问题的边界条件 特殊处理双马赫反射问题的复杂边界条件" alt="" coords="182,31,383,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="418,27,384,34,383,29,413,28"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="164,30,134,29,134,24,169,30"/>
+</map>

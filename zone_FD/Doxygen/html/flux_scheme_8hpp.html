@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/fluxScheme.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">fluxScheme.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+fluxScheme.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2flux_scheme_8hpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2flux_scheme_8hpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2flux_scheme_8hpp">
+<area shape="rect" title=" " alt="" coords="5,5,236,80"/>
+<area shape="rect" title=" " alt="" coords="18,128,68,155"/>
+<area shape="poly" title=" " alt="" coords="94,79,65,117,61,114,89,82"/>
+<area shape="rect" title=" " alt="" coords="92,128,149,155"/>
+<area shape="poly" title=" " alt="" coords="122,78,123,113,118,111,119,82"/>
+<area shape="rect" title=" " alt="" coords="173,128,247,155"/>
+<area shape="poly" title=" " alt="" coords="155,78,190,116,185,116,153,83"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp__dep__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2flux_scheme_8hppdep" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2flux_scheme_8hppdep" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2flux_scheme_8hppdep">
+<area shape="rect" title=" " alt="" coords="132,5,362,80"/>
+<area shape="rect" href="flux_scheme_8cpp.html" title=" " alt="" coords="5,128,236,203"/>
+<area shape="poly" title=" " alt="" coords="200,90,161,130,157,125,195,92"/>
+<area shape="rect" href="symmetrytest_8cpp.html" title=" " alt="" coords="260,128,490,203"/>
+<area shape="poly" title=" " alt="" coords="298,89,339,128,334,127,297,94"/>
+</map>
+</div>
+</div>
+<p><a href="flux_scheme_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:af8bc7f1334a9adf9902e914309dfefc5" id="r_af8bc7f1334a9adf9902e914309dfefc5"><td class="memItemLeft" align="right" valign="top">typedef std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8bc7f1334a9adf9902e914309dfefc5">arr2</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:af0fccd8af44a93f8ddab0c6808808977" id="r_af0fccd8af44a93f8ddab0c6808808977"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0fccd8af44a93f8ddab0c6808808977">roeFlux1D</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr)</td></tr>
+<tr class="memitem:abd346e16076a9a3a3d7a6c6a72127e68" id="r_abd346e16076a9a3a3d7a6c6a72127e68"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd346e16076a9a3a3d7a6c6a72127e68">roeFlux1D2</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr)</td></tr>
+<tr class="memitem:ad0d80594d0bf12c9e7695ee959637678" id="r_ad0d80594d0bf12c9e7695ee959637678"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0d80594d0bf12c9e7695ee959637678">HLLCFlux1D</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr)</td></tr>
+<tr class="memitem:a5c3e2b3d856c924514d678bb8200ad62" id="r_a5c3e2b3d856c924514d678bb8200ad62"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c3e2b3d856c924514d678bb8200ad62">HLLCFlux2D</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memitem:ac95437455293638f57fecf0cf143509e" id="r_ac95437455293638f57fecf0cf143509e"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac95437455293638f57fecf0cf143509e">HLLCFlux2D2</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memitem:a9f0a825aa1cd23aaa5dbc7227f32d267" id="r_a9f0a825aa1cd23aaa5dbc7227f32d267"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f0a825aa1cd23aaa5dbc7227f32d267">roeFlux2D</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memitem:aa0fbd8f4c90df1f1b64e3c6c98797d70" id="r_aa0fbd8f4c90df1f1b64e3c6c98797d70"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0fbd8f4c90df1f1b64e3c6c98797d70">roeFlux2DSym</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memitem:ac2b94b39b57264ca988713d2b1e4109c" id="r_ac2b94b39b57264ca988713d2b1e4109c"><td class="memItemLeft" align="right" valign="top">constexpr std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2b94b39b57264ca988713d2b1e4109c">fEuler2D</a> (const std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; &amp;q, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memitem:ae2585eceae3e805071b78ebfa1281a0b" id="r_ae2585eceae3e805071b78ebfa1281a0b"><td class="memItemLeft" align="right" valign="top">constexpr std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2585eceae3e805071b78ebfa1281a0b">fEuler1D</a> (const std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; &amp;q, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memitem:a799190b7d5984a67aab31b3b8c2075f8" id="r_a799190b7d5984a67aab31b3b8c2075f8"><td class="memItemLeft" align="right" valign="top">constexpr std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a799190b7d5984a67aab31b3b8c2075f8">fDefault</a> (const std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; &amp;q, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">类型定义说明</h2>
+<a id="af8bc7f1334a9adf9902e914309dfefc5" name="af8bc7f1334a9adf9902e914309dfefc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8bc7f1334a9adf9902e914309dfefc5">&#9670;&#160;</a></span>arr2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::array&lt;<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>,2&gt; <a class="el" href="#af8bc7f1334a9adf9902e914309dfefc5">arr2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00008">8</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="a799190b7d5984a67aab31b3b8c2075f8" name="a799190b7d5984a67aab31b3b8c2075f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a799190b7d5984a67aab31b3b8c2075f8">&#9670;&#160;</a></span>fDefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; fDefault </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00530">530</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae2585eceae3e805071b78ebfa1281a0b" name="ae2585eceae3e805071b78ebfa1281a0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2585eceae3e805071b78ebfa1281a0b">&#9670;&#160;</a></span>fEuler1D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; fEuler1D </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00517">517</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac2b94b39b57264ca988713d2b1e4109c" name="ac2b94b39b57264ca988713d2b1e4109c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2b94b39b57264ca988713d2b1e4109c">&#9670;&#160;</a></span>fEuler2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; fEuler2D </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00500">500</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp_ac2b94b39b57264ca988713d2b1e4109c_icgraph.png" border="0" usemap="#aflux_scheme_8hpp_ac2b94b39b57264ca988713d2b1e4109c_icgraph" loading="lazy" alt=""/></div>
+<map name="aflux_scheme_8hpp_ac2b94b39b57264ca988713d2b1e4109c_icgraph" id="aflux_scheme_8hpp_ac2b94b39b57264ca988713d2b1e4109c_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,175,32"/>
+<area shape="rect" href="symmetrytest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="84,19,55,21,55,16,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad0d80594d0bf12c9e7695ee959637678" name="ad0d80594d0bf12c9e7695ee959637678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d80594d0bf12c9e7695ee959637678">&#9670;&#160;</a></span>HLLCFlux1D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; HLLCFlux1D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5c3e2b3d856c924514d678bb8200ad62" name="a5c3e2b3d856c924514d678bb8200ad62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c3e2b3d856c924514d678bb8200ad62">&#9670;&#160;</a></span>HLLCFlux2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt; HLLCFlux2D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00077">77</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac95437455293638f57fecf0cf143509e" name="ac95437455293638f57fecf0cf143509e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac95437455293638f57fecf0cf143509e">&#9670;&#160;</a></span>HLLCFlux2D2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt; HLLCFlux2D2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00167">167</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp_ac95437455293638f57fecf0cf143509e_icgraph.png" border="0" usemap="#aflux_scheme_8hpp_ac95437455293638f57fecf0cf143509e_icgraph" loading="lazy" alt=""/></div>
+<map name="aflux_scheme_8hpp_ac95437455293638f57fecf0cf143509e_icgraph" id="aflux_scheme_8hpp_ac95437455293638f57fecf0cf143509e_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,207,32"/>
+<area shape="rect" href="symmetrytest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af0fccd8af44a93f8ddab0c6808808977" name="af0fccd8af44a93f8ddab0c6808808977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0fccd8af44a93f8ddab0c6808808977">&#9670;&#160;</a></span>roeFlux1D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; roeFlux1D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8cpp_source.html">fluxScheme.cpp</a> 第 <a class="el" href="flux_scheme_8cpp_source.html#l00012">12</a> 行定义.</p>
+
+</div>
+</div>
+<a id="abd346e16076a9a3a3d7a6c6a72127e68" name="abd346e16076a9a3a3d7a6c6a72127e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd346e16076a9a3a3d7a6c6a72127e68">&#9670;&#160;</a></span>roeFlux1D2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; roeFlux1D2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8cpp_source.html">fluxScheme.cpp</a> 第 <a class="el" href="flux_scheme_8cpp_source.html#l00077">77</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9f0a825aa1cd23aaa5dbc7227f32d267" name="a9f0a825aa1cd23aaa5dbc7227f32d267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0a825aa1cd23aaa5dbc7227f32d267">&#9670;&#160;</a></span>roeFlux2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt; roeFlux2D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00312">312</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa0fbd8f4c90df1f1b64e3c6c98797d70" name="aa0fbd8f4c90df1f1b64e3c6c98797d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0fbd8f4c90df1f1b64e3c6c98797d70">&#9670;&#160;</a></span>roeFlux2DSym()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt; roeFlux2DSym </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00401">401</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp_aa0fbd8f4c90df1f1b64e3c6c98797d70_icgraph.png" border="0" usemap="#aflux_scheme_8hpp_aa0fbd8f4c90df1f1b64e3c6c98797d70_icgraph" loading="lazy" alt=""/></div>
+<map name="aflux_scheme_8hpp_aa0fbd8f4c90df1f1b64e3c6c98797d70_icgraph" id="aflux_scheme_8hpp_aa0fbd8f4c90df1f1b64e3c6c98797d70_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,211,32"/>
+<area shape="rect" href="symmetrytest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

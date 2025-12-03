@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: DataManipulater类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="class_data_manipulater-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">DataManipulater类 参考<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a>&gt;</code></p>
+<div class="dynheader">
+类 DataManipulater 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_manipulater__inherit__graph.png" border="0" usemap="#a_data_manipulater_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_data_manipulater_inherit__map" id="a_data_manipulater_inherit__map">
+<area shape="rect" title=" " alt="" coords="152,5,269,32"/>
+<area shape="rect" href="class_reconstuctor.html" title=" " alt="" coords="82,88,182,115"/>
+<area shape="poly" title=" " alt="" coords="186,45,146,90,142,86,189,41"/>
+<area shape="rect" href="class_solve_point_solver.html" title=" " alt="" coords="206,80,372,123"/>
+<area shape="poly" title=" " alt="" coords="234,40,272,80,267,80,233,46"/>
+<area shape="rect" href="class_recon1_order.html" title=" " alt="" coords="5,179,104,205"/>
+<area shape="poly" title=" " alt="" coords="110,129,68,180,63,176,112,124"/>
+<area shape="rect" href="class_recon5_order_face_center.html" title=" " alt="" coords="127,171,294,213"/>
+<area shape="poly" title=" " alt="" coords="154,124,195,170,190,171,153,129"/>
+<area shape="rect" href="class_recon5_order1_d_euler_eig.html" title=" " alt="" coords="34,261,198,304"/>
+<area shape="poly" title=" " alt="" coords="180,223,139,263,136,259,175,225"/>
+<area shape="rect" href="class_recon5_order2_d_euler_eig.html" title=" " alt="" coords="222,261,386,304"/>
+<area shape="poly" title=" " alt="" coords="244,222,285,261,280,261,242,227"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+DataManipulater 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_manipulater__coll__graph.png" border="0" usemap="#a_data_manipulater_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_data_manipulater_coll__map" id="a_data_manipulater_coll__map">
+<area shape="rect" title=" " alt="" coords="5,203,122,229"/>
+<area shape="rect" href="class_data_reader.html" title=" " alt="" coords="18,104,109,131"/>
+<area shape="poly" title=" " alt="" coords="66,145,66,203,61,202,61,148"/>
+<area shape="rect" href="class_data.html" title=" " alt="" coords="39,5,88,32"/>
+<area shape="poly" title=" " alt="" coords="64,45,66,104,61,103,63,50"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad962f9c942a8588f182c05d7032d9e98" id="r_ad962f9c942a8588f182c05d7032d9e98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad962f9c942a8588f182c05d7032d9e98">DataManipulater</a> ()</td></tr>
+<tr class="memitem:a561d223e202ab2f567103978febba40c" id="r_a561d223e202ab2f567103978febba40c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a561d223e202ab2f567103978febba40c">DataManipulater</a> (<a class="el" href="class_data_reader.html">DataReader</a> varsReader_, std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt; bndL_, std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt; bndR_)</td></tr>
+<tr class="memitem:a0646649c555d2cdfb04cee8865db4e3d" id="r_a0646649c555d2cdfb04cee8865db4e3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0646649c555d2cdfb04cee8865db4e3d">init</a> (<a class="el" href="class_data_reader.html">DataReader</a> varsReader_, std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt; bndL_, std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt; bndR_)</td></tr>
+<tr class="memitem:a9f2fe29a9d25a8e1ff15904a1e6125aa" id="r_a9f2fe29a9d25a8e1ff15904a1e6125aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f2fe29a9d25a8e1ff15904a1e6125aa">setConstNorm</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm_)</td></tr>
+<tr class="memitem:a5f1208220de02f5f1a0c424dd17feab2" id="r_a5f1208220de02f5f1a0c424dd17feab2"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f1208220de02f5f1a0c424dd17feab2">getData</a> ()</td></tr>
+<tr class="memitem:a4778cbeaa282b6861a3fdf27567a1a99" id="r_a4778cbeaa282b6861a3fdf27567a1a99"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4778cbeaa282b6861a3fdf27567a1a99">solve</a> ()=0</td></tr>
+<tr class="memitem:a73b63183575339fae3a92f13e74a9aa5" id="r_a73b63183575339fae3a92f13e74a9aa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73b63183575339fae3a92f13e74a9aa5">test</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a6c51830a38519c386b8b6f86ae0ab0d8" id="r_a6c51830a38519c386b8b6f86ae0ab0d8"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c51830a38519c386b8b6f86ae0ab0d8">data</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:acd0906f3075a4f94969695fffdf1153f" id="r_acd0906f3075a4f94969695fffdf1153f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd0906f3075a4f94969695fffdf1153f">initVarsR</a> ()=0</td></tr>
+<tr class="memitem:a52b0d52376c1142bcd766da72000258d" id="r_a52b0d52376c1142bcd766da72000258d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52b0d52376c1142bcd766da72000258d">leftBnd</a> ()=0</td></tr>
+<tr class="memitem:ac9cae551ba0637771c3c585e405795d8" id="r_ac9cae551ba0637771c3c585e405795d8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9cae551ba0637771c3c585e405795d8">internal</a> ()=0</td></tr>
+<tr class="memitem:a64d8506b9d2aa2eff6da712ea507db92" id="r_a64d8506b9d2aa2eff6da712ea507db92"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64d8506b9d2aa2eff6da712ea507db92">rightBnd</a> ()=0</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:ab314bd460aa6b077c730c70b0c87de79" id="r_ab314bd460aa6b077c730c70b0c87de79"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab314bd460aa6b077c730c70b0c87de79">iter</a></td></tr>
+<tr class="memitem:a4095ac67d5463ef93b9111f10c2dcea1" id="r_a4095ac67d5463ef93b9111f10c2dcea1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data_reader.html">DataReader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4095ac67d5463ef93b9111f10c2dcea1">varsReader</a></td></tr>
+<tr class="memitem:aa2f845ac5fc8c7b15f55efd97a52c70d" id="r_aa2f845ac5fc8c7b15f55efd97a52c70d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2f845ac5fc8c7b15f55efd97a52c70d">bndL</a></td></tr>
+<tr class="memitem:a689db485e67fcd62c69451ba083e230a" id="r_a689db485e67fcd62c69451ba083e230a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a689db485e67fcd62c69451ba083e230a">bndR</a></td></tr>
+<tr class="memitem:a5b9cb16faf4f936487ef282b90d672dc" id="r_a5b9cb16faf4f936487ef282b90d672dc"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b9cb16faf4f936487ef282b90d672dc">norm</a></td></tr>
+<tr class="memitem:a7b2a61074864b18ec2e1a85f4246bcbe" id="r_a7b2a61074864b18ec2e1a85f4246bcbe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b2a61074864b18ec2e1a85f4246bcbe">n</a></td></tr>
+<tr class="memitem:af55889f87fa7ac03167b8576c6097ee6" id="r_af55889f87fa7ac03167b8576c6097ee6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af55889f87fa7ac03167b8576c6097ee6">nvar</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a> 第 <a class="el" href="data_manipulater_8hpp_source.html#l00007">7</a> 行定义.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="ad962f9c942a8588f182c05d7032d9e98" name="ad962f9c942a8588f182c05d7032d9e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad962f9c942a8588f182c05d7032d9e98">&#9670;&#160;</a></span>DataManipulater() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DataManipulater::DataManipulater </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a> 第 <a class="el" href="data_manipulater_8hpp_source.html#l00010">10</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_manipulater_ad962f9c942a8588f182c05d7032d9e98_icgraph.png" border="0" usemap="#aclass_data_manipulater_ad962f9c942a8588f182c05d7032d9e98_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_data_manipulater_ad962f9c942a8588f182c05d7032d9e98_icgraph" id="aclass_data_manipulater_ad962f9c942a8588f182c05d7032d9e98_icgraph">
+<area shape="rect" title=" " alt="" coords="246,35,465,61"/>
+<area shape="rect" href="class_reconstuctor.html#a106e759a8348460aeb59318744f6c1a6" title=" " alt="" coords="9,5,194,32"/>
+<area shape="poly" title=" " alt="" coords="228,34,195,32,195,27,233,33"/>
+<area shape="rect" href="class_solve_point_solver.html#afe89f3b96bad6d2abfb9c29e3c7a79eb" title=" " alt="" coords="5,56,198,99"/>
+<area shape="poly" title=" " alt="" coords="228,63,199,69,198,64,233,62"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a561d223e202ab2f567103978febba40c" name="a561d223e202ab2f567103978febba40c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a561d223e202ab2f567103978febba40c">&#9670;&#160;</a></span>DataManipulater() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DataManipulater::DataManipulater </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_data_reader.html">DataReader</a></td>          <td class="paramname"><span class="paramname"><em>varsReader_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>bndL_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>bndR_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8cpp_source.html">dataManipulater.cpp</a> 第 <a class="el" href="data_manipulater_8cpp_source.html#l00002">2</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a5f1208220de02f5f1a0c424dd17feab2" name="a5f1208220de02f5f1a0c424dd17feab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f1208220de02f5f1a0c424dd17feab2">&#9670;&#160;</a></span>getData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt; DataManipulater::getData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a> 第 <a class="el" href="data_manipulater_8hpp_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0646649c555d2cdfb04cee8865db4e3d" name="a0646649c555d2cdfb04cee8865db4e3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0646649c555d2cdfb04cee8865db4e3d">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataManipulater::init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_data_reader.html">DataReader</a></td>          <td class="paramname"><span class="paramname"><em>varsReader_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>bndL_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>bndR_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8cpp_source.html">dataManipulater.cpp</a> 第 <a class="el" href="data_manipulater_8cpp_source.html#l00009">9</a> 行定义.</p>
+
+</div>
+</div>
+<a id="acd0906f3075a4f94969695fffdf1153f" name="acd0906f3075a4f94969695fffdf1153f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0906f3075a4f94969695fffdf1153f">&#9670;&#160;</a></span>initVarsR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DataManipulater::initVarsR </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_recon1_order.html#ae45948ec4481ef2c0e0c0c9fdbeb7ec6">Recon1Order</a>, <a class="el" href="class_recon5_order_face_center.html#a6fc51692ae83e28f353236fc2052fdce">Recon5OrderFaceCenter&lt; inter5 &gt;</a> , 以及 <a class="el" href="class_solve_point_solver.html#a8f69cd802a365199bb4cbe3132ff7243">SolvePointSolver&lt; NVar, fluxSolver &gt;</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_manipulater_acd0906f3075a4f94969695fffdf1153f_icgraph.png" border="0" usemap="#aclass_data_manipulater_acd0906f3075a4f94969695fffdf1153f_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_data_manipulater_acd0906f3075a4f94969695fffdf1153f_icgraph" id="aclass_data_manipulater_acd0906f3075a4f94969695fffdf1153f_icgraph">
+<area shape="rect" title=" " alt="" coords="289,5,466,32"/>
+<area shape="rect" href="class_reconstuctor.html#ac43a2f570614482b3353ad2bfbd86f1f" title=" " alt="" coords="103,5,241,32"/>
+<area shape="poly" title=" " alt="" coords="271,19,242,21,242,16,276,19"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac9cae551ba0637771c3c585e405795d8" name="ac9cae551ba0637771c3c585e405795d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9cae551ba0637771c3c585e405795d8">&#9670;&#160;</a></span>internal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DataManipulater::internal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_recon1_order.html#a186129b64c70c28584902d452c573d9f">Recon1Order</a>, <a class="el" href="class_recon5_order_face_center.html#ac0abd6248dea71041e8929959909a1b8">Recon5OrderFaceCenter&lt; inter5 &gt;</a> , 以及 <a class="el" href="class_solve_point_solver.html#ac146590ecdf1cf86c3a583b201d1fff2">SolvePointSolver&lt; NVar, fluxSolver &gt;</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_manipulater_ac9cae551ba0637771c3c585e405795d8_icgraph.png" border="0" usemap="#aclass_data_manipulater_ac9cae551ba0637771c3c585e405795d8_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_data_manipulater_ac9cae551ba0637771c3c585e405795d8_icgraph" id="aclass_data_manipulater_ac9cae551ba0637771c3c585e405795d8_icgraph">
+<area shape="rect" title=" " alt="" coords="289,5,455,32"/>
+<area shape="rect" href="class_reconstuctor.html#ac43a2f570614482b3353ad2bfbd86f1f" title=" " alt="" coords="103,5,241,32"/>
+<area shape="poly" title=" " alt="" coords="271,19,242,21,241,16,276,19"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a52b0d52376c1142bcd766da72000258d" name="a52b0d52376c1142bcd766da72000258d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b0d52376c1142bcd766da72000258d">&#9670;&#160;</a></span>leftBnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DataManipulater::leftBnd </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_recon1_order.html#a66887b24a80da05b6db0dfcdec7b7070">Recon1Order</a>, <a class="el" href="class_recon5_order_face_center.html#a3fcc1a8bd5bf4af2034bf8d8a5613c44">Recon5OrderFaceCenter&lt; inter5 &gt;</a> , 以及 <a class="el" href="class_solve_point_solver.html#a8487850ac3f5712d9a43b8f793eabd69">SolvePointSolver&lt; NVar, fluxSolver &gt;</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_manipulater_a52b0d52376c1142bcd766da72000258d_icgraph.png" border="0" usemap="#aclass_data_manipulater_a52b0d52376c1142bcd766da72000258d_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_data_manipulater_a52b0d52376c1142bcd766da72000258d_icgraph" id="aclass_data_manipulater_a52b0d52376c1142bcd766da72000258d_icgraph">
+<area shape="rect" title=" " alt="" coords="289,5,454,32"/>
+<area shape="rect" href="class_reconstuctor.html#ac43a2f570614482b3353ad2bfbd86f1f" title=" " alt="" coords="103,5,241,32"/>
+<area shape="poly" title=" " alt="" coords="271,19,241,21,241,16,276,19"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a64d8506b9d2aa2eff6da712ea507db92" name="a64d8506b9d2aa2eff6da712ea507db92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d8506b9d2aa2eff6da712ea507db92">&#9670;&#160;</a></span>rightBnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DataManipulater::rightBnd </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_recon1_order.html#aebc5e8994a183f0eab7323896cf6f6b7">Recon1Order</a>, <a class="el" href="class_recon5_order_face_center.html#aca48e5c315452c68c05871549e8413d8">Recon5OrderFaceCenter&lt; inter5 &gt;</a> , 以及 <a class="el" href="class_solve_point_solver.html#a41670bfb9195e6a0bf42e90746b22c62">SolvePointSolver&lt; NVar, fluxSolver &gt;</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_manipulater_a64d8506b9d2aa2eff6da712ea507db92_icgraph.png" border="0" usemap="#aclass_data_manipulater_a64d8506b9d2aa2eff6da712ea507db92_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_data_manipulater_a64d8506b9d2aa2eff6da712ea507db92_icgraph" id="aclass_data_manipulater_a64d8506b9d2aa2eff6da712ea507db92_icgraph">
+<area shape="rect" title=" " alt="" coords="289,5,461,32"/>
+<area shape="rect" href="class_reconstuctor.html#ac43a2f570614482b3353ad2bfbd86f1f" title=" " alt="" coords="103,5,241,32"/>
+<area shape="poly" title=" " alt="" coords="271,19,241,21,241,16,276,19"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9f2fe29a9d25a8e1ff15904a1e6125aa" name="a9f2fe29a9d25a8e1ff15904a1e6125aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f2fe29a9d25a8e1ff15904a1e6125aa">&#9670;&#160;</a></span>setConstNorm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataManipulater::setConstNorm </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8cpp_source.html">dataManipulater.cpp</a> 第 <a class="el" href="data_manipulater_8cpp_source.html#l00019">19</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_data_manipulater_a9f2fe29a9d25a8e1ff15904a1e6125aa_icgraph.png" border="0" usemap="#aclass_data_manipulater_a9f2fe29a9d25a8e1ff15904a1e6125aa_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_data_manipulater_a9f2fe29a9d25a8e1ff15904a1e6125aa_icgraph" id="aclass_data_manipulater_a9f2fe29a9d25a8e1ff15904a1e6125aa_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,312,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4778cbeaa282b6861a3fdf27567a1a99" name="a4778cbeaa282b6861a3fdf27567a1a99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4778cbeaa282b6861a3fdf27567a1a99">&#9670;&#160;</a></span>solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DataManipulater::solve </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_reconstuctor.html#ac43a2f570614482b3353ad2bfbd86f1f">Reconstuctor</a> , 以及 <a class="el" href="class_solve_point_solver.html#ab73bc71dc3431942f5228d80928a7448">SolvePointSolver&lt; NVar, fluxSolver &gt;</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a73b63183575339fae3a92f13e74a9aa5" name="a73b63183575339fae3a92f13e74a9aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b63183575339fae3a92f13e74a9aa5">&#9670;&#160;</a></span>test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataManipulater::test </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a> 第 <a class="el" href="data_manipulater_8hpp_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="aa2f845ac5fc8c7b15f55efd97a52c70d" name="aa2f845ac5fc8c7b15f55efd97a52c70d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2f845ac5fc8c7b15f55efd97a52c70d">&#9670;&#160;</a></span>bndL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_one_d_bnd.html">OneDBnd</a>&gt; DataManipulater::bndL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a> 第 <a class="el" href="data_manipulater_8hpp_source.html#l00045">45</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a689db485e67fcd62c69451ba083e230a" name="a689db485e67fcd62c69451ba083e230a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a689db485e67fcd62c69451ba083e230a">&#9670;&#160;</a></span>bndR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_one_d_bnd.html">OneDBnd</a>&gt; DataManipulater::bndR</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a> 第 <a class="el" href="data_manipulater_8hpp_source.html#l00045">45</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6c51830a38519c386b8b6f86ae0ab0d8" name="a6c51830a38519c386b8b6f86ae0ab0d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c51830a38519c386b8b6f86ae0ab0d8">&#9670;&#160;</a></span>data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_data.html">Data</a>&gt; DataManipulater::data</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a> 第 <a class="el" href="data_manipulater_8hpp_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab314bd460aa6b077c730c70b0c87de79" name="ab314bd460aa6b077c730c70b0c87de79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab314bd460aa6b077c730c70b0c87de79">&#9670;&#160;</a></span>iter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&gt;::iterator DataManipulater::iter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a> 第 <a class="el" href="data_manipulater_8hpp_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7b2a61074864b18ec2e1a85f4246bcbe" name="a7b2a61074864b18ec2e1a85f4246bcbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2a61074864b18ec2e1a85f4246bcbe">&#9670;&#160;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DataManipulater::n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a> 第 <a class="el" href="data_manipulater_8hpp_source.html#l00049">49</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5b9cb16faf4f936487ef282b90d672dc" name="a5b9cb16faf4f936487ef282b90d672dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b9cb16faf4f936487ef282b90d672dc">&#9670;&#160;</a></span>norm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3&gt; DataManipulater::norm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a> 第 <a class="el" href="data_manipulater_8hpp_source.html#l00048">48</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af55889f87fa7ac03167b8576c6097ee6" name="af55889f87fa7ac03167b8576c6097ee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af55889f87fa7ac03167b8576c6097ee6">&#9670;&#160;</a></span>nvar</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DataManipulater::nvar</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a> 第 <a class="el" href="data_manipulater_8hpp_source.html#l00049">49</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4095ac67d5463ef93b9111f10c2dcea1" name="a4095ac67d5463ef93b9111f10c2dcea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4095ac67d5463ef93b9111f10c2dcea1">&#9670;&#160;</a></span>varsReader</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data_reader.html">DataReader</a> DataManipulater::varsReader</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a> 第 <a class="el" href="data_manipulater_8hpp_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/<a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a></li>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/<a class="el" href="data_manipulater_8cpp_source.html">dataManipulater.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

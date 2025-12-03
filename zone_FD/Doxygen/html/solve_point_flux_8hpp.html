@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/solvePointFlux.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#concepts">概念</a> &#124;
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle"><div class="title">solvePointFlux.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="data_manipulater_8hpp_source.html">dataManipulater.hpp</a>&quot;</code><br />
+<code>#include &lt;concepts&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+solvePointFlux.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="solve_point_flux_8hpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2solve_point_flux_8hpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2solve_point_flux_8hpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2solve_point_flux_8hpp">
+<area shape="rect" title=" " alt="" coords="402,5,632,80"/>
+<area shape="rect" href="data_manipulater_8hpp.html" title=" " alt="" coords="383,128,521,155"/>
+<area shape="poly" title=" " alt="" coords="494,78,471,117,467,113,491,82"/>
+<area shape="rect" title=" " alt="" coords="545,128,620,155"/>
+<area shape="poly" title=" " alt="" coords="543,78,568,115,563,114,541,83"/>
+<area shape="rect" href="data_8hpp.html" title=" " alt="" coords="431,277,502,304"/>
+<area shape="poly" title=" " alt="" coords="455,153,466,263,461,261,451,157"/>
+<area shape="rect" href="macro_8hpp.html" title=" " alt="" coords="461,352,544,379"/>
+<area shape="poly" title=" " alt="" coords="446,153,432,184,418,222,412,263,414,284,421,303,438,325,462,345,457,344,435,329,416,305,409,285,406,263,413,220,427,182,442,157"/>
+<area shape="rect" href="one_d_bnd_8hpp.html" title=" " alt="" coords="490,203,590,229"/>
+<area shape="poly" title=" " alt="" coords="468,153,516,193,510,193,467,158"/>
+<area shape="poly" title=" " alt="" coords="474,302,492,339,487,337,472,307"/>
+<area shape="rect" title=" " alt="" coords="5,427,56,453"/>
+<area shape="poly" title=" " alt="" coords="458,371,294,391,185,407,72,429,70,424,184,402,294,386,463,369"/>
+<area shape="rect" title=" " alt="" coords="80,427,141,453"/>
+<area shape="poly" title=" " alt="" coords="459,373,329,395,156,429,155,423,328,390,464,372"/>
+<area shape="rect" title=" " alt="" coords="164,427,236,453"/>
+<area shape="poly" title=" " alt="" coords="463,377,251,428,250,423,458,376"/>
+<area shape="rect" title=" " alt="" coords="259,427,327,453"/>
+<area shape="poly" title=" " alt="" coords="469,379,343,424,341,419,463,380"/>
+<area shape="rect" title=" " alt="" coords="352,427,405,453"/>
+<area shape="poly" title=" " alt="" coords="483,379,414,421,412,416,478,380"/>
+<area shape="rect" title=" " alt="" coords="430,427,487,453"/>
+<area shape="poly" title=" " alt="" coords="497,378,476,416,472,411,493,381"/>
+<area shape="rect" title=" " alt="" coords="511,427,585,453"/>
+<area shape="poly" title=" " alt="" coords="512,377,534,414,529,412,509,382"/>
+<area shape="rect" title=" " alt="" coords="609,427,673,453"/>
+<area shape="poly" title=" " alt="" coords="527,377,606,419,601,419,526,382"/>
+<area shape="rect" title=" " alt="" coords="698,427,755,453"/>
+<area shape="poly" title=" " alt="" coords="542,377,686,425,680,425,541,382"/>
+<area shape="rect" title=" " alt="" coords="779,427,837,453"/>
+<area shape="poly" title=" " alt="" coords="544,372,766,425,761,426,544,378"/>
+<area shape="rect" title=" " alt="" coords="861,427,907,453"/>
+<area shape="poly" title=" " alt="" coords="544,369,675,388,848,426,843,426,675,394,544,374"/>
+<area shape="rect" title=" " alt="" coords="931,427,991,453"/>
+<area shape="poly" title=" " alt="" coords="544,368,704,388,918,426,913,426,703,393,544,374"/>
+<area shape="poly" title=" " alt="" coords="529,228,492,268,488,264,525,231"/>
+<area shape="poly" title=" " alt="" coords="539,228,512,338,507,335,535,231"/>
+<area shape="rect" href="info_8hpp.html" title=" " alt="" coords="577,277,644,304"/>
+<area shape="poly" title=" " alt="" coords="553,227,590,267,585,266,551,232"/>
+<area shape="poly" title=" " alt="" coords="594,304,535,345,533,340,589,306"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="solve_point_flux_8hpp__dep__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2solve_point_flux_8hppdep" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2solve_point_flux_8hppdep" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2solve_point_flux_8hppdep">
+<area shape="rect" title=" " alt="" coords="387,5,617,80"/>
+<area shape="rect" href="solver_type_8hpp.html" title=" " alt="" coords="387,128,617,203"/>
+<area shape="poly" title=" " alt="" coords="503,93,504,128,499,127,501,98"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="132,251,362,325"/>
+<area shape="poly" title=" " alt="" coords="409,211,326,252,323,248,412,208"/>
+<area shape="rect" href="sp__distributor_8hpp.html" title=" " alt="" coords="387,251,617,325"/>
+<area shape="poly" title=" " alt="" coords="503,216,504,251,499,249,501,221"/>
+<area shape="rect" href="solver_type_8cpp.html" title=" " alt="" coords="641,251,872,325"/>
+<area shape="poly" title=" " alt="" coords="593,207,681,250,676,251,593,212"/>
+<area shape="rect" href="initializer_8hpp.html" title=" " alt="" coords="259,373,489,448"/>
+<area shape="poly" title=" " alt="" coords="454,335,414,375,411,371,450,338"/>
+<area shape="rect" href="sp__distributor_8cpp.html" title=" " alt="" coords="513,373,744,448"/>
+<area shape="poly" title=" " alt="" coords="552,334,593,373,587,373,551,339"/>
+<area shape="rect" href="block_solver_8hpp.html" title=" " alt="" coords="132,496,362,571"/>
+<area shape="poly" title=" " alt="" coords="326,457,287,498,284,494,322,461"/>
+<area shape="rect" href="initializer_8cpp.html" title=" " alt="" coords="387,496,617,571"/>
+<area shape="poly" title=" " alt="" coords="425,456,466,496,460,495,423,462"/>
+<area shape="rect" href="block_solver_8cpp.html" title=" " alt="" coords="5,619,236,693"/>
+<area shape="poly" title=" " alt="" coords="200,580,161,620,157,616,195,583"/>
+<area shape="rect" href="zone_main_8cpp.html" title=" " alt="" coords="260,619,490,693"/>
+<area shape="poly" title=" " alt="" coords="298,579,339,619,334,618,297,584"/>
+</map>
+</div>
+</div>
+<p><a href="solve_point_flux_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:SolvePointSolver_3C_20NVar_2C_20fluxSolver_20_3E" id="r_SolvePointSolver_3C_20NVar_2C_20fluxSolver_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solve_point_solver.html">SolvePointSolver&lt; NVar, fluxSolver &gt;</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-concepts" class="groupheader"><a id="concepts" name="concepts"></a>
+概念</h2></td></tr>
+<tr class="memitem:Flux" id="r_Flux"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concept_flux.html">Flux</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a0ed028355f0ee0e4f412cf18d6aff32c" id="r_a0ed028355f0ee0e4f412cf18d6aff32c"><td class="memTemplParams" colspan="2">template&lt;std::size_t NVar&gt; </td></tr>
+<tr class="memitem:a0ed028355f0ee0e4f412cf18d6aff32c template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ed028355f0ee0e4f412cf18d6aff32c">FluxN</a></td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">类型定义说明</h2>
+<a id="a0ed028355f0ee0e4f412cf18d6aff32c" name="a0ed028355f0ee0e4f412cf18d6aff32c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed028355f0ee0e4f412cf18d6aff32c">&#9670;&#160;</a></span>FluxN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a0ed028355f0ee0e4f412cf18d6aff32c">FluxN</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line"> void (*)(<span class="keyword">const</span> std::span&lt;real, NVar&gt;&amp;,</div>
+<div class="line">    <span class="keyword">const</span> std::span&lt;real, NVar&gt;&amp;,</div>
+<div class="line">    <span class="keyword">const</span> std::array&lt;real, 3&gt;&amp;)</div>
+</div><!-- fragment -->
+<p class="definition">在文件 <a class="el" href="solve_point_flux_8hpp_source.html">solvePointFlux.hpp</a> 第 <a class="el" href="solve_point_flux_8hpp_source.html#l00011">11</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

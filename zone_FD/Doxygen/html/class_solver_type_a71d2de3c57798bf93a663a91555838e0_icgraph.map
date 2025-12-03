@@ -1,0 +1,7 @@
+<map id="SolverType::initDiffer" name="SolverType::initDiffer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="420,5,562,32"/>
+<area shape="rect" id="Node000002" href="$class_solver_type.html#a4a200cdee06d624314db793551715066" title=" " alt="" coords="213,5,372,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="402,19,372,21,372,16,407,19"/>
+<area shape="rect" id="Node000003" href="$class_solver_type.html#a3180f194ccd519d01e9b4843e83c0f1d" title=" " alt="" coords="5,5,165,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="195,19,165,21,165,16,200,19"/>
+</map>

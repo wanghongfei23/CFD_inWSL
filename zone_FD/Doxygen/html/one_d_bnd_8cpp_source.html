@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/oneDBnd.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_98cdb10f369f6a3b9149e010b312bf5d.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">oneDBnd.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="one_d_bnd_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="one_d_bnd_8hpp.html">oneDBnd.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="foldopen" id="foldopen00003" data-start="{" data-end="}">
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="class_one_d_bnd.html#ac9d4b9c60fa5727922f105ea82a8cbe4">    3</a></span><a class="code hl_function" href="class_one_d_bnd.html#a44480106e96688551491e7b5f0aa19c9">OneDBnd::OneDBnd</a>(<span class="keywordtype">int</span> n_, <span class="keywordtype">int</span> nVar_, <a class="code hl_enumeration" href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950">BndType</a> bType_) {</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>  <a class="code hl_variable" href="class_one_d_bnd.html#aa3e3156ed21e74106c0b4d1fa1997b72">n</a> = n_;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>  <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> = nVar_;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>.resize(<a class="code hl_variable" href="class_one_d_bnd.html#aa3e3156ed21e74106c0b4d1fa1997b72">n</a> * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a>, 0.0);</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  <a class="code hl_variable" href="class_one_d_bnd.html#af4b6b66df78d6c48e1537bf9430967b0">type</a> = bType_;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>}</div>
+</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_one_d_bnd.html#a1764599095e4487bf7302b8ca7e55de5">    9</a></span><a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &amp;<a class="code hl_function" href="class_one_d_bnd.html#a1764599095e4487bf7302b8ca7e55de5">OneDBnd::operator()</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> ivar) { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>.at(i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + ivar); }</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_one_d_bnd.html#a05de9052b88c8aaac740db45925e9c66">   11</a></span>std::vector&lt;real&gt;::iterator <a class="code hl_function" href="class_one_d_bnd.html#a1764599095e4487bf7302b8ca7e55de5">OneDBnd::operator()</a>(<span class="keywordtype">int</span> i) {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>.begin() + i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
+</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_one_d_bnd.html#adf33a52adad1d0a48b9496d39f7683dd">   15</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="class_one_d_bnd.html#adf33a52adad1d0a48b9496d39f7683dd">OneDBnd::getN</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_one_d_bnd.html#aa3e3156ed21e74106c0b4d1fa1997b72">n</a>; }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_one_d_bnd.html#ad656d7fbfc692a5203bc7a4fbfc5e17f">   17</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_one_d_bnd.html#ad656d7fbfc692a5203bc7a4fbfc5e17f">OneDBnd::setValue</a>(std::vector&lt;real&gt; value) {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keywordflow">if</span> (value.size() != <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>.size()) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;OneDBnd error: setValue() incorrect size\n&quot;</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  std::copy(value.begin(), value.end(), <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>.begin());</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_one_d_bnd.html#a638c6e8f333bc378234fe945dd3e0d4d">   23</a></span><a class="code hl_enumeration" href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950">BndType</a> <a class="code hl_function" href="class_one_d_bnd.html#a638c6e8f333bc378234fe945dd3e0d4d">OneDBnd::getType</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_one_d_bnd.html#af4b6b66df78d6c48e1537bf9430967b0">type</a>; }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_one_d_bnd.html#a405bffb8a70a97568ffb24784f9c2d05">   25</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_one_d_bnd.html#a405bffb8a70a97568ffb24784f9c2d05">OneDBnd::setUpdate</a>(<a class="code hl_class" href="class_data.html">Data</a> *prim_, <span class="keywordtype">int</span> i0_, <span class="keywordtype">int</span> offset_) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <a class="code hl_variable" href="class_one_d_bnd.html#a88888e2ca24f70ddf6c70ac8e70c601e">prim</a> = prim_;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> = i0_;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a> = offset_;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_one_d_bnd.html#af7690530ba7cbd50d2112dbcfe5387e5">   31</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_one_d_bnd.html#af7690530ba7cbd50d2112dbcfe5387e5">OneDBnd::update</a>() {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordflow">switch</span> (<a class="code hl_variable" href="class_one_d_bnd.html#af4b6b66df78d6c48e1537bf9430967b0">type</a>) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a160b764c36ef84037093c64989f4ec93">PERIODIC1D</a>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_one_d_bnd.html#aa3e3156ed21e74106c0b4d1fa1997b72">n</a>; i++) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a>; j++) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + j] = (*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> + i * <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a>, j);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a055992460a035e6b4c082b6ff03771d1">SUPERSONICOUTLET</a>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_one_d_bnd.html#aa3e3156ed21e74106c0b4d1fa1997b72">n</a>; i++) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a>; j++) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + j] = (*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a>, j);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a697fe5e50e6c68aa01cdcb9785c7682e">SYMMETRYX</a>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// only for 2D</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_one_d_bnd.html#aa3e3156ed21e74106c0b4d1fa1997b72">n</a>; i++) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <span class="comment">// data[i*nVar+0]=(*prim)(i0,0);</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="comment">// data[i*nVar+1]=-(*prim)(i0,1);</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <span class="comment">// data[i*nVar+2]=(*prim)(i0,2);</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="comment">// data[i*nVar+3]=(*prim)(i0,3);</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 0] = (*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> + i * <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a>, 0);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 1] = -(*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> + i * <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a>, 1);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 2] = (*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> + i * <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a>, 2);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 3] = (*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> + i * <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a>, 3);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a05e27e4f5e6df02a102406b7b95283e6">SYMMETRY1D</a>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_one_d_bnd.html#aa3e3156ed21e74106c0b4d1fa1997b72">n</a>; i++) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <span class="comment">// data[i*nVar+0]=(*prim)(i0,0);</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="comment">// data[i*nVar+1]=-(*prim)(i0,1);</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <span class="comment">// data[i*nVar+2]=(*prim)(i0,2);</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="comment">// data[i*nVar+3]=(*prim)(i0,3);</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 0] = (*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> + i * <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a>, 0);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 1] = -(*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> + i * <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a>, 1);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 2] = (*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> + i * <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a>, 2);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950ac70258a7e94c580fd8fb3d961bc9504c">SYMMETRYY</a>:</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// only for 2D</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_one_d_bnd.html#aa3e3156ed21e74106c0b4d1fa1997b72">n</a>; i++) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 0] = (*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> + i * <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a>, 0);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 1] = (*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> + i * <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a>, 1);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 2] = -(*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> + i * <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a>, 2);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 3] = (*prim)(<a class="code hl_variable" href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">i0</a> + i * <a class="code hl_variable" href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">offset</a>, 3);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <span class="comment">// data[i*nVar+0]=(*prim)(i0,0);</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="comment">// data[i*nVar+1]=(*prim)(i0,1);</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <span class="comment">// data[i*nVar+2]=-(*prim)(i0,2);</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <span class="comment">// data[i*nVar+3]=(*prim)(i0,3);</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a9c04a1e31e68d0b581e60acb9ce7f657">DoubleMachUp</a>:</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// only for 2D</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_one_d_bnd.html#aa3e3156ed21e74106c0b4d1fa1997b72">n</a>; i++) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> x = <a class="code hl_variable" href="class_one_d_bnd.html#a82e0e00db3cd43a05f4fccae46591248">coor</a>[0];</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> y = -<a class="code hl_variable" href="class_one_d_bnd.html#ac8f28d093b24ccbfda42cef81a5992bc">dh</a>[1] / 2 + i * <a class="code hl_variable" href="class_one_d_bnd.html#ac8f28d093b24ccbfda42cef81a5992bc">dh</a>[1];</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="comment">// real y=dh[1]/2;</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> gt = 1.0 / 6.0 + std::sqrt(3.0) / 3.0 * (1.0 + 20 * <a class="code hl_variable" href="class_one_d_bnd.html#ae552ab565c77b3bb60803ff850d2e162">info</a>-&gt;t);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        std::array&lt;real, 4&gt; exactValues;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">if</span> (y &gt; std::sqrt(3.0) * (x - gt)) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>          exactValues = {8.0, 8.25 * cos(M_PI / 6), -8.25 * sin(M_PI / 6),</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                         116.5};</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>          exactValues = {1.4, 0, 0, 1.0};</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 0] = exactValues[0];</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 1] = exactValues[1];</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 2] = exactValues[2];</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_variable" href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">data</a>[i * <a class="code hl_variable" href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">nVar</a> + 3] = exactValues[3];</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_one_d_bnd.html#a98696294d2ebaf987265b659af38307e">  116</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_one_d_bnd.html#a98696294d2ebaf987265b659af38307e">OneDBnd::setInfo</a>(<a class="code hl_class" href="class_info.html">Info</a> *info_) { <a class="code hl_variable" href="class_one_d_bnd.html#ae552ab565c77b3bb60803ff850d2e162">info</a> = info_; }</div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_one_d_bnd.html#a46aa5b2e74cbe564746c2300c3742543">  117</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_one_d_bnd.html#a46aa5b2e74cbe564746c2300c3742543">OneDBnd::setCoor</a>(std::array&lt;real, 3&gt; coor_, std::array&lt;real, 3&gt; dh_) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <a class="code hl_variable" href="class_one_d_bnd.html#a82e0e00db3cd43a05f4fccae46591248">coor</a> = coor_;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <a class="code hl_variable" href="class_one_d_bnd.html#ac8f28d093b24ccbfda42cef81a5992bc">dh</a> = dh_;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+</div>
+<div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>定义</b> <a href="data_8hpp_source.html#l00005">data.hpp:5</a></div></div>
+<div class="ttc" id="aclass_info_html"><div class="ttname"><a href="class_info.html">Info</a></div><div class="ttdef"><b>定义</b> <a href="info_8hpp_source.html#l00004">info.hpp:4</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_a1764599095e4487bf7302b8ca7e55de5"><div class="ttname"><a href="class_one_d_bnd.html#a1764599095e4487bf7302b8ca7e55de5">OneDBnd::operator()</a></div><div class="ttdeci">real &amp; operator()(int, int)</div><div class="ttdef"><b>定义</b> <a href="#l00009">oneDBnd.cpp:9</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_a22f46bc4009df37a7f87c28ce6b17ec1"><div class="ttname"><a href="class_one_d_bnd.html#a22f46bc4009df37a7f87c28ce6b17ec1">OneDBnd::nVar</a></div><div class="ttdeci">int nVar</div><div class="ttdef"><b>定义</b> <a href="one_d_bnd_8hpp_source.html#l00029">oneDBnd.hpp:29</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_a405bffb8a70a97568ffb24784f9c2d05"><div class="ttname"><a href="class_one_d_bnd.html#a405bffb8a70a97568ffb24784f9c2d05">OneDBnd::setUpdate</a></div><div class="ttdeci">void setUpdate(Data *, int, int)</div><div class="ttdef"><b>定义</b> <a href="#l00025">oneDBnd.cpp:25</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_a44480106e96688551491e7b5f0aa19c9"><div class="ttname"><a href="class_one_d_bnd.html#a44480106e96688551491e7b5f0aa19c9">OneDBnd::OneDBnd</a></div><div class="ttdeci">OneDBnd()</div><div class="ttdef"><b>定义</b> <a href="one_d_bnd_8hpp_source.html#l00008">oneDBnd.hpp:8</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_a46aa5b2e74cbe564746c2300c3742543"><div class="ttname"><a href="class_one_d_bnd.html#a46aa5b2e74cbe564746c2300c3742543">OneDBnd::setCoor</a></div><div class="ttdeci">void setCoor(std::array&lt; real, 3 &gt;, std::array&lt; real, 3 &gt;)</div><div class="ttdef"><b>定义</b> <a href="#l00117">oneDBnd.cpp:117</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_a638c6e8f333bc378234fe945dd3e0d4d"><div class="ttname"><a href="class_one_d_bnd.html#a638c6e8f333bc378234fe945dd3e0d4d">OneDBnd::getType</a></div><div class="ttdeci">BndType getType()</div><div class="ttdef"><b>定义</b> <a href="#l00023">oneDBnd.cpp:23</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_a82e0e00db3cd43a05f4fccae46591248"><div class="ttname"><a href="class_one_d_bnd.html#a82e0e00db3cd43a05f4fccae46591248">OneDBnd::coor</a></div><div class="ttdeci">std::array&lt; real, 3 &gt; coor</div><div class="ttdef"><b>定义</b> <a href="one_d_bnd_8hpp_source.html#l00033">oneDBnd.hpp:33</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_a88888e2ca24f70ddf6c70ac8e70c601e"><div class="ttname"><a href="class_one_d_bnd.html#a88888e2ca24f70ddf6c70ac8e70c601e">OneDBnd::prim</a></div><div class="ttdeci">Data * prim</div><div class="ttdef"><b>定义</b> <a href="one_d_bnd_8hpp_source.html#l00025">oneDBnd.hpp:25</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_a96c7045d3f81b5f2c03f3b18378aa159"><div class="ttname"><a href="class_one_d_bnd.html#a96c7045d3f81b5f2c03f3b18378aa159">OneDBnd::offset</a></div><div class="ttdeci">int offset</div><div class="ttdef"><b>定义</b> <a href="one_d_bnd_8hpp_source.html#l00026">oneDBnd.hpp:26</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_a98696294d2ebaf987265b659af38307e"><div class="ttname"><a href="class_one_d_bnd.html#a98696294d2ebaf987265b659af38307e">OneDBnd::setInfo</a></div><div class="ttdeci">void setInfo(Info *)</div><div class="ttdef"><b>定义</b> <a href="#l00116">oneDBnd.cpp:116</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_aa3e3156ed21e74106c0b4d1fa1997b72"><div class="ttname"><a href="class_one_d_bnd.html#aa3e3156ed21e74106c0b4d1fa1997b72">OneDBnd::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="one_d_bnd_8hpp_source.html#l00028">oneDBnd.hpp:28</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_ab8a3d56d047f78da84aa0f4f0502d5a1"><div class="ttname"><a href="class_one_d_bnd.html#ab8a3d56d047f78da84aa0f4f0502d5a1">OneDBnd::i0</a></div><div class="ttdeci">int i0</div><div class="ttdef"><b>定义</b> <a href="one_d_bnd_8hpp_source.html#l00026">oneDBnd.hpp:26</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_ac8f28d093b24ccbfda42cef81a5992bc"><div class="ttname"><a href="class_one_d_bnd.html#ac8f28d093b24ccbfda42cef81a5992bc">OneDBnd::dh</a></div><div class="ttdeci">std::array&lt; real, 3 &gt; dh</div><div class="ttdef"><b>定义</b> <a href="one_d_bnd_8hpp_source.html#l00033">oneDBnd.hpp:33</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_ad656d7fbfc692a5203bc7a4fbfc5e17f"><div class="ttname"><a href="class_one_d_bnd.html#ad656d7fbfc692a5203bc7a4fbfc5e17f">OneDBnd::setValue</a></div><div class="ttdeci">void setValue(std::vector&lt; real &gt;)</div><div class="ttdef"><b>定义</b> <a href="#l00017">oneDBnd.cpp:17</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_ad8579253ee283c3606059be9f313c6e6"><div class="ttname"><a href="class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6">OneDBnd::data</a></div><div class="ttdeci">std::vector&lt; real &gt; data</div><div class="ttdef"><b>定义</b> <a href="one_d_bnd_8hpp_source.html#l00024">oneDBnd.hpp:24</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_adf33a52adad1d0a48b9496d39f7683dd"><div class="ttname"><a href="class_one_d_bnd.html#adf33a52adad1d0a48b9496d39f7683dd">OneDBnd::getN</a></div><div class="ttdeci">int getN()</div><div class="ttdef"><b>定义</b> <a href="#l00015">oneDBnd.cpp:15</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_ae552ab565c77b3bb60803ff850d2e162"><div class="ttname"><a href="class_one_d_bnd.html#ae552ab565c77b3bb60803ff850d2e162">OneDBnd::info</a></div><div class="ttdeci">Info * info</div><div class="ttdef"><b>定义</b> <a href="one_d_bnd_8hpp_source.html#l00032">oneDBnd.hpp:32</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_af4b6b66df78d6c48e1537bf9430967b0"><div class="ttname"><a href="class_one_d_bnd.html#af4b6b66df78d6c48e1537bf9430967b0">OneDBnd::type</a></div><div class="ttdeci">BndType type</div><div class="ttdef"><b>定义</b> <a href="one_d_bnd_8hpp_source.html#l00023">oneDBnd.hpp:23</a></div></div>
+<div class="ttc" id="aclass_one_d_bnd_html_af7690530ba7cbd50d2112dbcfe5387e5"><div class="ttname"><a href="class_one_d_bnd.html#af7690530ba7cbd50d2112dbcfe5387e5">OneDBnd::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>定义</b> <a href="#l00031">oneDBnd.cpp:31</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a5f5a64ef503db0fc824df8320929b126"><div class="ttname"><a href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></div><div class="ttdeci">#define real</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00004">macro.hpp:4</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a9caf9d72be020631aed818ce77cd8950"><div class="ttname"><a href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950">BndType</a></div><div class="ttdeci">BndType</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00033">macro.hpp:33</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a9caf9d72be020631aed818ce77cd8950a055992460a035e6b4c082b6ff03771d1"><div class="ttname"><a href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a055992460a035e6b4c082b6ff03771d1">SUPERSONICOUTLET</a></div><div class="ttdeci">@ SUPERSONICOUTLET</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00033">macro.hpp:33</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a9caf9d72be020631aed818ce77cd8950a05e27e4f5e6df02a102406b7b95283e6"><div class="ttname"><a href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a05e27e4f5e6df02a102406b7b95283e6">SYMMETRY1D</a></div><div class="ttdeci">@ SYMMETRY1D</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00033">macro.hpp:33</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a9caf9d72be020631aed818ce77cd8950a160b764c36ef84037093c64989f4ec93"><div class="ttname"><a href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a160b764c36ef84037093c64989f4ec93">PERIODIC1D</a></div><div class="ttdeci">@ PERIODIC1D</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00033">macro.hpp:33</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a9caf9d72be020631aed818ce77cd8950a697fe5e50e6c68aa01cdcb9785c7682e"><div class="ttname"><a href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a697fe5e50e6c68aa01cdcb9785c7682e">SYMMETRYX</a></div><div class="ttdeci">@ SYMMETRYX</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00034">macro.hpp:34</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a9caf9d72be020631aed818ce77cd8950a9c04a1e31e68d0b581e60acb9ce7f657"><div class="ttname"><a href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950a9c04a1e31e68d0b581e60acb9ce7f657">DoubleMachUp</a></div><div class="ttdeci">@ DoubleMachUp</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00033">macro.hpp:33</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a9caf9d72be020631aed818ce77cd8950ac70258a7e94c580fd8fb3d961bc9504c"><div class="ttname"><a href="macro_8hpp.html#a9caf9d72be020631aed818ce77cd8950ac70258a7e94c580fd8fb3d961bc9504c">SYMMETRYY</a></div><div class="ttdeci">@ SYMMETRYY</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00034">macro.hpp:34</a></div></div>
+<div class="ttc" id="aone_d_bnd_8hpp_html"><div class="ttname"><a href="one_d_bnd_8hpp.html">oneDBnd.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

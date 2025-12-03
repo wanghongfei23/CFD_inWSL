@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/differ.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_98cdb10f369f6a3b9149e010b312bf5d.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">differ.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="differ_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="differ_8hpp.html">differ.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="difference_scheme_8hpp.html">differenceScheme.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;boost/circular_buffer.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;ranges&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;span&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_differ.html#a377a39ee2d4b442bac3d6e47544ed7bf">    7</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_differ.html#a377a39ee2d4b442bac3d6e47544ed7bf">Differ::solve</a>()</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    assert(<a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getN() + 1 == <a class="code hl_variable" href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">fluxesHalf</a>-&gt;getN());</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">int</span> n = <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getN(), nvar = <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getNVar();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> h = <a class="code hl_variable" href="class_differ.html#aecaa77cd6ba2186eb7341b15cdacfd33">constantH</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">auto</span> iterFluxHalf = <a class="code hl_variable" href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">fluxesHalf</a>-&gt;begin();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">auto</span> iterFluxNode = <a class="code hl_variable" href="class_differ.html#a6cf35c38d7692508b49b30bd6cc5b03e">fluxesNode</a>-&gt;begin();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterRhs = <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>(0); iterRhs &lt; <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>(n); iterRhs += <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getOffset()) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ivar = 0; ivar &lt; nvar; ivar++) {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            iterRhs[ivar] += <a class="code hl_function" href="difference_scheme_8hpp.html#a96229561803eccbb695179c93d3e7c2e">secondOrder</a>(iterFluxHalf + ivar, iterFluxNode + ivar, nvar) / h;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_explicit_dif6.html#ad45160fce5e3b00eab8d75d188cd3c9a">   23</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_explicit_dif6.html#ad45160fce5e3b00eab8d75d188cd3c9a">ExplicitDif6::solve</a>()</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    assert(<a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getN() + 5 == <a class="code hl_variable" href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">fluxesHalf</a>-&gt;getN());</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">int</span> n = <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getN(), nvar = <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getNVar();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> h = <a class="code hl_variable" href="class_differ.html#aecaa77cd6ba2186eb7341b15cdacfd33">constantH</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">auto</span> iterFluxHalf = <a class="code hl_variable" href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">fluxesHalf</a>-&gt;begin();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">constexpr</span> std::array&lt;real, 3&gt; w = { 75.0 / 64.0, 25.0 / (128.0 * 3.0),</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        3.0 / (128.0 * 5.0) };</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> nStencil = 6;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    boost::circular_buffer&lt;std::span&lt;real&gt;&gt; varArrays(nStencil);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i : std::views::iota(0, nStencil - 1)) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        varArrays.push_back(std::span&lt;real&gt;(iterFluxHalf, nvar));</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        iterFluxHalf += nvar;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    assert(varArrays.size() == nStencil - 1);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iterRhs = <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>(0); iterRhs &lt; <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>(n); iterRhs += <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getOffset()) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        varArrays.push_back(std::span&lt;real&gt;(iterFluxHalf, nvar));</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ivar = 0; ivar &lt; nvar; ivar++) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            iterRhs[ivar] += (w[0] * (varArrays[3][ivar] - varArrays[2][ivar])</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                                 - w[1] * (varArrays[4][ivar] - varArrays[1][ivar])</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                                 + w[2] * (varArrays[5][ivar] - varArrays[0][ivar]))</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                / h;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        iterFluxHalf += nvar;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    assert(iterFluxHalf == <a class="code hl_variable" href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">fluxesHalf</a>-&gt;end());</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_mid_node_and_node_dif6.html#a1c4c7b6686bf3ceab51ee24db48a67db">   54</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_mid_node_and_node_dif6.html#a1c4c7b6686bf3ceab51ee24db48a67db">MidNodeAndNodeDif6::solve</a>()</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    assert(<a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getN() + 3 == <a class="code hl_variable" href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">fluxesHalf</a>-&gt;getN());</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    assert(<a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getN() + 2 == <a class="code hl_variable" href="class_differ.html#a6cf35c38d7692508b49b30bd6cc5b03e">fluxesNode</a>-&gt;getN());</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">int</span> n = <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getN(), nvar = <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getNVar();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> h = <a class="code hl_variable" href="class_differ.html#aecaa77cd6ba2186eb7341b15cdacfd33">constantH</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">constexpr</span> std::array&lt;real, 3&gt; w = { 3.0 / 2.0, -3.0 / 10.0, 1.0 / 30.0 };</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">auto</span> iterFluxHalf = <a class="code hl_variable" href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">fluxesHalf</a>-&gt;begin();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">auto</span> iterFluxNode = <a class="code hl_variable" href="class_differ.html#a6cf35c38d7692508b49b30bd6cc5b03e">fluxesNode</a>-&gt;begin();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// 初始化数组</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> nStencilHalf = 4;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> nStencilNode = 3;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    boost::circular_buffer&lt;std::span&lt;real&gt;&gt; varArraysHalf(nStencilHalf),</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        varArraysNode(nStencilNode);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i : std::views::iota(0, nStencilHalf - 1)) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        varArraysHalf.push_back(std::span&lt;real&gt;(iterFluxHalf, nvar));</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        iterFluxHalf += nvar;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i : std::views::iota(0, nStencilNode - 1)) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        varArraysNode.push_back(std::span&lt;real&gt;(iterFluxNode, nvar));</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        iterFluxNode += nvar;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    assert(varArraysHalf.size() == nStencilHalf - 1);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    assert(varArraysNode.size() == nStencilNode - 1);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">auto</span> iterRhs = <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>(0);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">for</span> (; iterRhs &lt; <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>(n); iterRhs += <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>.getOffset()) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        varArraysHalf.push_back(std::span&lt;real&gt;(iterFluxHalf, nvar));</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        varArraysNode.push_back(std::span&lt;real&gt;(iterFluxNode, nvar));</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ivar : std::views::iota(0, nvar)) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="comment">//chenyuqing:差分的实际逻辑</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            iterRhs[ivar] += (w[1] * (varArraysNode[2][ivar] - varArraysNode[0][ivar])</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                                 + w[0] * (varArraysHalf[2][ivar] - varArraysHalf[1][ivar])</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                                 + w[2] * (varArraysHalf[3][ivar] - varArraysHalf[0][ivar]))</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                / h;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="comment">//chenyuqing：修改差分公式</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <span class="comment">// iterRhs[ivar] += w[1]*varArraysNode[2][ivar] / h - w[1]*varArraysNode[0][ivar] / h</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="comment">//                  - w[0]* varArraysHalf[1][ivar] / h + w[0] *varArraysHalf[2][ivar] / h </span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                <span class="comment">//                  + w[2] * varArraysHalf[3][ivar] / h - w[2] * varArraysHalf[0][ivar]/ h</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="comment">// ;</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        iterFluxHalf += nvar;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        iterFluxNode += nvar;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    assert(iterRhs == <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>(n));</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    assert(iterFluxHalf == <a class="code hl_variable" href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">fluxesHalf</a>-&gt;end());</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
+</div>
+<div class="ttc" id="aclass_differ_html_a22755730928cb55e4cd84aeae301bab7"><div class="ttname"><a href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">Differ::fluxesHalf</a></div><div class="ttdeci">std::shared_ptr&lt; Data &gt; fluxesHalf</div><div class="ttdef"><b>定义</b> <a href="differ_8hpp_source.html#l00039">differ.hpp:39</a></div></div>
+<div class="ttc" id="aclass_differ_html_a377a39ee2d4b442bac3d6e47544ed7bf"><div class="ttname"><a href="class_differ.html#a377a39ee2d4b442bac3d6e47544ed7bf">Differ::solve</a></div><div class="ttdeci">virtual void solve()</div><div class="ttdef"><b>定义</b> <a href="#l00007">differ.cpp:7</a></div></div>
+<div class="ttc" id="aclass_differ_html_a6cf35c38d7692508b49b30bd6cc5b03e"><div class="ttname"><a href="class_differ.html#a6cf35c38d7692508b49b30bd6cc5b03e">Differ::fluxesNode</a></div><div class="ttdeci">std::shared_ptr&lt; Data &gt; fluxesNode</div><div class="ttdef"><b>定义</b> <a href="differ_8hpp_source.html#l00040">differ.hpp:40</a></div></div>
+<div class="ttc" id="aclass_differ_html_a90ba1cd32e929534b398a5a849a8c4cc"><div class="ttname"><a href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">Differ::rhsR</a></div><div class="ttdeci">DataReader rhsR</div><div class="ttdef"><b>定义</b> <a href="differ_8hpp_source.html#l00041">differ.hpp:41</a></div></div>
+<div class="ttc" id="aclass_differ_html_aecaa77cd6ba2186eb7341b15cdacfd33"><div class="ttname"><a href="class_differ.html#aecaa77cd6ba2186eb7341b15cdacfd33">Differ::constantH</a></div><div class="ttdeci">real constantH</div><div class="ttdef"><b>定义</b> <a href="differ_8hpp_source.html#l00042">differ.hpp:42</a></div></div>
+<div class="ttc" id="aclass_explicit_dif6_html_ad45160fce5e3b00eab8d75d188cd3c9a"><div class="ttname"><a href="class_explicit_dif6.html#ad45160fce5e3b00eab8d75d188cd3c9a">ExplicitDif6::solve</a></div><div class="ttdeci">void solve() final</div><div class="ttdef"><b>定义</b> <a href="#l00023">differ.cpp:23</a></div></div>
+<div class="ttc" id="aclass_mid_node_and_node_dif6_html_a1c4c7b6686bf3ceab51ee24db48a67db"><div class="ttname"><a href="class_mid_node_and_node_dif6.html#a1c4c7b6686bf3ceab51ee24db48a67db">MidNodeAndNodeDif6::solve</a></div><div class="ttdeci">void solve() final</div><div class="ttdef"><b>定义</b> <a href="#l00054">differ.cpp:54</a></div></div>
+<div class="ttc" id="adiffer_8hpp_html"><div class="ttname"><a href="differ_8hpp.html">differ.hpp</a></div></div>
+<div class="ttc" id="adifference_scheme_8hpp_html"><div class="ttname"><a href="difference_scheme_8hpp.html">differenceScheme.hpp</a></div></div>
+<div class="ttc" id="adifference_scheme_8hpp_html_a96229561803eccbb695179c93d3e7c2e"><div class="ttname"><a href="difference_scheme_8hpp.html#a96229561803eccbb695179c93d3e7c2e">secondOrder</a></div><div class="ttdeci">real secondOrder(std::vector&lt; real &gt;::iterator fluxHalf, std::vector&lt; real &gt;::iterator fluxNode, int nvar)</div><div class="ttdef"><b>定义</b> <a href="difference_scheme_8hpp_source.html#l00030">differenceScheme.hpp:30</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a5f5a64ef503db0fc824df8320929b126"><div class="ttname"><a href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></div><div class="ttdeci">#define real</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00004">macro.hpp:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

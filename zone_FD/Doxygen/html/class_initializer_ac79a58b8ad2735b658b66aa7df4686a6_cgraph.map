@@ -1,0 +1,11 @@
+<map id="Initializer::initBnds" name="Initializer::initBnds">
+<area shape="rect" id="Node000001" title="初始化边界条件 根据方程类型和维度设置不同的边界条件" alt="" coords="5,31,134,57"/>
+<area shape="rect" id="Node000002" href="$macro_8hpp.html#abc70118de3c8a5db9b0a7a505c51b050" title=" " alt="" coords="452,5,526,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,28,181,16,250,11,320,9,439,15,434,16,320,15,251,16,182,21,121,33"/>
+<area shape="rect" id="Node000003" href="$macro_8hpp.html#ae87306862c60b440bf64e02d9a94afa7" title=" " alt="" coords="431,68,547,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,55,182,67,305,77,418,82,413,82,305,82,181,72,123,61"/>
+<area shape="rect" id="Node000004" href="$class_initializer.html#af17ef5c544d4e34dd7f87e0cc661c48e" title="初始化双马赫反射问题的边界条件 特殊处理双马赫反射问题的复杂边界条件" alt="" coords="182,31,383,57"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="134,41,169,43,163,45,134,47"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="383,29,440,25,435,25,384,34"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="360,55,419,68,413,68,359,61"/>
+</map>

@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: FluxPointSolver&lt; NVar, solver &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="class_flux_point_solver-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">FluxPointSolver&lt; NVar, solver &gt; 模板类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a51a10cc1329373b970d43a6b6e527a52" id="r_a51a10cc1329373b970d43a6b6e527a52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51a10cc1329373b970d43a6b6e527a52">FluxPointSolver</a> ()</td></tr>
+<tr class="memitem:a9da9b8cd6555eb5a01fe31eaccbc9ca8" id="r_a9da9b8cd6555eb5a01fe31eaccbc9ca8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9da9b8cd6555eb5a01fe31eaccbc9ca8">FluxPointSolver</a> (std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt; valsR_, int idim_, int nvar_)</td></tr>
+<tr class="memitem:aa2cb01b92387db38d74b494186099b18" id="r_aa2cb01b92387db38d74b494186099b18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2cb01b92387db38d74b494186099b18">init</a> (std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt; valsR_, int idim_, int nvar_)</td></tr>
+<tr class="memitem:ab1384021cd9b65c5ae760212670c658a" id="r_ab1384021cd9b65c5ae760212670c658a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1384021cd9b65c5ae760212670c658a">getData</a> ()</td></tr>
+<tr class="memitem:a0ad4748263329e1371d4e48e164742f0" id="r_a0ad4748263329e1371d4e48e164742f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ad4748263329e1371d4e48e164742f0">setConstNorm</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm_)</td></tr>
+<tr class="memitem:ae4465ffe0ffd05e19f04b5eda34920cd" id="r_ae4465ffe0ffd05e19f04b5eda34920cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4465ffe0ffd05e19f04b5eda34920cd">check</a> ()</td></tr>
+<tr class="memitem:aa27633c55a5cb595d5d0f46e3616a473" id="r_aa27633c55a5cb595d5d0f46e3616a473"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa27633c55a5cb595d5d0f46e3616a473">solve</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a524b2a065ce506c5bc3ad1b3f6ccdd9b" id="r_a524b2a065ce506c5bc3ad1b3f6ccdd9b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a524b2a065ce506c5bc3ad1b3f6ccdd9b">fluxes</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a9ad6eca95a4dce5e13a3aee363c66dae" id="r_a9ad6eca95a4dce5e13a3aee363c66dae"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ad6eca95a4dce5e13a3aee363c66dae">valsR</a></td></tr>
+<tr class="memitem:a8d3e573f2c5522a01faf18e1cec192e9" id="r_a8d3e573f2c5522a01faf18e1cec192e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d3e573f2c5522a01faf18e1cec192e9">idim</a></td></tr>
+<tr class="memitem:a2f67eeed915c2f93c9277137a9af9a5a" id="r_a2f67eeed915c2f93c9277137a9af9a5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f67eeed915c2f93c9277137a9af9a5a">nvar</a></td></tr>
+<tr class="memitem:ac5e7404fa28b1def051ca7cdc07cec2c" id="r_ac5e7404fa28b1def051ca7cdc07cec2c"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5e7404fa28b1def051ca7cdc07cec2c">norm</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt;<br />
+class FluxPointSolver&lt; NVar, solver &gt;</div>
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00026">26</a> 行定义.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a51a10cc1329373b970d43a6b6e527a52" name="a51a10cc1329373b970d43a6b6e527a52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a10cc1329373b970d43a6b6e527a52">&#9670;&#160;</a></span>FluxPointSolver() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_flux_point_solver.html">FluxPointSolver</a>&lt; NVar, solver &gt;::FluxPointSolver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00029">29</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9da9b8cd6555eb5a01fe31eaccbc9ca8" name="a9da9b8cd6555eb5a01fe31eaccbc9ca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9da9b8cd6555eb5a01fe31eaccbc9ca8">&#9670;&#160;</a></span>FluxPointSolver() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_flux_point_solver.html">FluxPointSolver</a>&lt; NVar, solver &gt;::FluxPointSolver </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>valsR_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>idim_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nvar_</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00030">30</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ae4465ffe0ffd05e19f04b5eda34920cd" name="ae4465ffe0ffd05e19f04b5eda34920cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4465ffe0ffd05e19f04b5eda34920cd">&#9670;&#160;</a></span>check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_flux_point_solver.html">FluxPointSolver</a>&lt; NVar, solver &gt;::check </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00050">50</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab1384021cd9b65c5ae760212670c658a" name="ab1384021cd9b65c5ae760212670c658a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1384021cd9b65c5ae760212670c658a">&#9670;&#160;</a></span>getData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt; <a class="el" href="class_flux_point_solver.html">FluxPointSolver</a>&lt; NVar, solver &gt;::getData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa2cb01b92387db38d74b494186099b18" name="aa2cb01b92387db38d74b494186099b18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2cb01b92387db38d74b494186099b18">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_flux_point_solver.html">FluxPointSolver</a>&lt; NVar, solver &gt;::init </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>valsR_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>idim_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nvar_</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0ad4748263329e1371d4e48e164742f0" name="a0ad4748263329e1371d4e48e164742f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ad4748263329e1371d4e48e164742f0">&#9670;&#160;</a></span>setConstNorm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_flux_point_solver.html">FluxPointSolver</a>&lt; NVar, solver &gt;::setConstNorm </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00067">67</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_flux_point_solver_a0ad4748263329e1371d4e48e164742f0_icgraph.png" border="0" usemap="#aclass_flux_point_solver_a0ad4748263329e1371d4e48e164742f0_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_flux_point_solver_a0ad4748263329e1371d4e48e164742f0_icgraph" id="aclass_flux_point_solver_a0ad4748263329e1371d4e48e164742f0_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,309,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="84,19,55,21,55,16,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa27633c55a5cb595d5d0f46e3616a473" name="aa27633c55a5cb595d5d0f46e3616a473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa27633c55a5cb595d5d0f46e3616a473">&#9670;&#160;</a></span>solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_flux_point_solver.html">FluxPointSolver</a>&lt; NVar, solver &gt;::solve </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00074">74</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_flux_point_solver_aa27633c55a5cb595d5d0f46e3616a473_icgraph.png" border="0" usemap="#aclass_flux_point_solver_aa27633c55a5cb595d5d0f46e3616a473_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_flux_point_solver_aa27633c55a5cb595d5d0f46e3616a473_icgraph" id="aclass_flux_point_solver_aa27633c55a5cb595d5d0f46e3616a473_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,255,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a524b2a065ce506c5bc3ad1b3f6ccdd9b" name="a524b2a065ce506c5bc3ad1b3f6ccdd9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a524b2a065ce506c5bc3ad1b3f6ccdd9b">&#9670;&#160;</a></span>fluxes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_data.html">Data</a>&gt; <a class="el" href="class_flux_point_solver.html">FluxPointSolver</a>&lt; NVar, solver &gt;::fluxes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00056">56</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8d3e573f2c5522a01faf18e1cec192e9" name="a8d3e573f2c5522a01faf18e1cec192e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d3e573f2c5522a01faf18e1cec192e9">&#9670;&#160;</a></span>idim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_flux_point_solver.html">FluxPointSolver</a>&lt; NVar, solver &gt;::idim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00061">61</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac5e7404fa28b1def051ca7cdc07cec2c" name="ac5e7404fa28b1def051ca7cdc07cec2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e7404fa28b1def051ca7cdc07cec2c">&#9670;&#160;</a></span>norm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3&gt; <a class="el" href="class_flux_point_solver.html">FluxPointSolver</a>&lt; NVar, solver &gt;::norm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00062">62</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a2f67eeed915c2f93c9277137a9af9a5a" name="a2f67eeed915c2f93c9277137a9af9a5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f67eeed915c2f93c9277137a9af9a5a">&#9670;&#160;</a></span>nvar</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_flux_point_solver.html">FluxPointSolver</a>&lt; NVar, solver &gt;::nvar</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00061">61</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9ad6eca95a4dce5e13a3aee363c66dae" name="a9ad6eca95a4dce5e13a3aee363c66dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad6eca95a4dce5e13a3aee363c66dae">&#9670;&#160;</a></span>valsR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NVar, <a class="el" href="flux_point_flux_8hpp.html#a3986e3947c4c6eee6ac04598435108b7">RiemannSolverN</a>&lt; NVar &gt; solver&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_data.html">Data</a>&gt; <a class="el" href="class_flux_point_solver.html">FluxPointSolver</a>&lt; NVar, solver &gt;::valsR</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a> 第 <a class="el" href="flux_point_flux_8hpp_source.html#l00060">60</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/<a class="el" href="flux_point_flux_8hpp_source.html">fluxPointFlux.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+<map id="SolverType" name="SolverType">
+<area shape="rect" id="Node000001" title=" " alt="" coords="608,183,695,209"/>
+<area shape="rect" id="Node000002" href="$classpro_1_1proxy.html" title=" " alt="" coords="222,29,454,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="452,57,521,78,554,93,586,111,605,127,622,146,645,183,640,181,618,149,601,131,583,116,552,98,519,83,452,63"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="8,5,170,64"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="185,35,224,38,219,40,187,40"/>
+<area shape="rect" id="Node000004" href="$classpro_1_1proxy.html" title=" " alt="" coords="244,103,432,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="447,134,516,147,585,164,626,182,621,182,584,169,515,152,448,140"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,88,173,147"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="187,117,246,120,241,123,189,123"/>
+<area shape="rect" id="Node000006" href="$classpro_1_1proxy.html" title=" " alt="" coords="248,175,428,217"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="444,193,610,195,605,197,444,199"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="9,171,169,229"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="183,196,250,196,245,199,184,201"/>
+<area shape="rect" id="Node000008" href="$classpro_1_1proxy.html" title=" " alt="" coords="254,241,422,268"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="437,247,510,238,584,223,621,211,627,209,585,228,511,244,438,252"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="16,253,162,296"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="177,265,256,261,251,262,178,270"/>
+<area shape="rect" id="Node000010" href="$class_info.html" title=" " alt="" coords="316,292,360,319"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="376,306,420,306,473,303,530,292,583,271,602,258,618,241,641,211,645,208,622,244,605,262,586,276,531,297,474,308,420,312,376,311"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="BlockSolver::stepsLoop" name="BlockSolver::stepsLoop">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,165,83"/>
+<area shape="rect" id="Node000002" href="$class_block_solver.html#a0f29b8074f5d43e176ac656f084a025d" title=" " alt="" coords="214,5,374,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,53,224,35,219,37,144,58"/>
+<area shape="rect" id="Node000003" href="$class_block_solver.html#a21dc82d623d574bee297b9a57006a8b4" title=" " alt="" coords="213,56,375,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,67,200,69,194,70,165,72"/>
+<area shape="rect" id="Node000004" href="$class_block_solver.html#ae372dfb8d712322916273f5352d17096" title=" " alt="" coords="229,107,359,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="143,81,224,102,219,103,143,86"/>
+<area shape="rect" id="Node000005" href="$class_block_solver.html#a238b1f4f31dc8fdbddfcf890c80fa645" title=" " alt="" coords="423,107,582,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="359,117,410,120,405,120,359,123"/>
+</map>

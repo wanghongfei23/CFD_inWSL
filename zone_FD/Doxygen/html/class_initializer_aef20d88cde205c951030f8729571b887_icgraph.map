@@ -1,0 +1,5 @@
+<map id="Initializer::solInit" name="Initializer::solInit">
+<area shape="rect" id="Node000001" title="初始化网格和解数据 根据不同的方程类型和测试案例设置初始条件" alt="" coords="196,5,312,32"/>
+<area shape="rect" id="Node000002" href="$class_initializer.html#a6227d3ddd7eb24057a325ec4a1f9893d" title="初始化方程求解器 设置方程的网格信息、守恒变量和原始变量等" alt="" coords="5,5,148,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,19,148,21,148,16,183,19"/>
+</map>

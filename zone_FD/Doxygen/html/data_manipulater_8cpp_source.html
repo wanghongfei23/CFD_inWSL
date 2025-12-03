@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/dataManipulater.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_98cdb10f369f6a3b9149e010b312bf5d.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">dataManipulater.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="data_manipulater_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="data_manipulater_8hpp.html">dataManipulater.hpp</a>&quot;</span></div>
+<div class="foldopen" id="foldopen00002" data-start="{" data-end="}">
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#a561d223e202ab2f567103978febba40c">    2</a></span><a class="code hl_function" href="class_data_manipulater.html#ad962f9c942a8588f182c05d7032d9e98">DataManipulater::DataManipulater</a>(<a class="code hl_class" href="class_data_reader.html">DataReader</a> varsReader_,</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>                                 std::shared_ptr&lt;OneDBnd&gt; bndL_,</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>                                 std::shared_ptr&lt;OneDBnd&gt; bndR_)</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    : <a class="code hl_variable" href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">varsReader</a>(varsReader_), <a class="code hl_variable" href="class_data_manipulater.html#aa2f845ac5fc8c7b15f55efd97a52c70d">bndL</a>(bndL_), <a class="code hl_variable" href="class_data_manipulater.html#a689db485e67fcd62c69451ba083e230a">bndR</a>(bndR_) {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  <a class="code hl_variable" href="class_data_manipulater.html#a7b2a61074864b18ec2e1a85f4246bcbe">n</a> = <a class="code hl_variable" href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">varsReader</a>.getN();</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  <a class="code hl_variable" href="class_data_manipulater.html#af55889f87fa7ac03167b8576c6097ee6">nvar</a> = <a class="code hl_variable" href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">varsReader</a>.getNVar();</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#a0646649c555d2cdfb04cee8865db4e3d">    9</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_data_manipulater.html#a0646649c555d2cdfb04cee8865db4e3d">DataManipulater::init</a>(<a class="code hl_class" href="class_data_reader.html">DataReader</a> varsReader_,</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>                           std::shared_ptr&lt;OneDBnd&gt; bndL_,</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                           std::shared_ptr&lt;OneDBnd&gt; bndR_) {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <a class="code hl_variable" href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">varsReader</a> = varsReader_;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <a class="code hl_variable" href="class_data_manipulater.html#aa2f845ac5fc8c7b15f55efd97a52c70d">bndL</a> = bndL_;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <a class="code hl_variable" href="class_data_manipulater.html#a689db485e67fcd62c69451ba083e230a">bndR</a> = bndR_;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <a class="code hl_variable" href="class_data_manipulater.html#a7b2a61074864b18ec2e1a85f4246bcbe">n</a> = <a class="code hl_variable" href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">varsReader</a>.getN();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <a class="code hl_variable" href="class_data_manipulater.html#af55889f87fa7ac03167b8576c6097ee6">nvar</a> = <a class="code hl_variable" href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">varsReader</a>.getNVar();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_data_manipulater.html#a9f2fe29a9d25a8e1ff15904a1e6125aa">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_data_manipulater.html#a9f2fe29a9d25a8e1ff15904a1e6125aa">DataManipulater::setConstNorm</a>(std::array&lt;real, 3&gt; norm_) { <a class="code hl_variable" href="class_data_manipulater.html#a5b9cb16faf4f936487ef282b90d672dc">norm</a> = norm_; }</div>
+<div class="ttc" id="aclass_data_manipulater_html_a0646649c555d2cdfb04cee8865db4e3d"><div class="ttname"><a href="class_data_manipulater.html#a0646649c555d2cdfb04cee8865db4e3d">DataManipulater::init</a></div><div class="ttdeci">void init(DataReader varsReader_, std::shared_ptr&lt; OneDBnd &gt; bndL_, std::shared_ptr&lt; OneDBnd &gt; bndR_)</div><div class="ttdef"><b>定义</b> <a href="#l00009">dataManipulater.cpp:9</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a4095ac67d5463ef93b9111f10c2dcea1"><div class="ttname"><a href="class_data_manipulater.html#a4095ac67d5463ef93b9111f10c2dcea1">DataManipulater::varsReader</a></div><div class="ttdeci">DataReader varsReader</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00044">dataManipulater.hpp:44</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a5b9cb16faf4f936487ef282b90d672dc"><div class="ttname"><a href="class_data_manipulater.html#a5b9cb16faf4f936487ef282b90d672dc">DataManipulater::norm</a></div><div class="ttdeci">std::array&lt; real, 3 &gt; norm</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00048">dataManipulater.hpp:48</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a689db485e67fcd62c69451ba083e230a"><div class="ttname"><a href="class_data_manipulater.html#a689db485e67fcd62c69451ba083e230a">DataManipulater::bndR</a></div><div class="ttdeci">std::shared_ptr&lt; OneDBnd &gt; bndR</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00045">dataManipulater.hpp:45</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a7b2a61074864b18ec2e1a85f4246bcbe"><div class="ttname"><a href="class_data_manipulater.html#a7b2a61074864b18ec2e1a85f4246bcbe">DataManipulater::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00049">dataManipulater.hpp:49</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_a9f2fe29a9d25a8e1ff15904a1e6125aa"><div class="ttname"><a href="class_data_manipulater.html#a9f2fe29a9d25a8e1ff15904a1e6125aa">DataManipulater::setConstNorm</a></div><div class="ttdeci">void setConstNorm(std::array&lt; real, 3 &gt; norm_)</div><div class="ttdef"><b>定义</b> <a href="#l00019">dataManipulater.cpp:19</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_aa2f845ac5fc8c7b15f55efd97a52c70d"><div class="ttname"><a href="class_data_manipulater.html#aa2f845ac5fc8c7b15f55efd97a52c70d">DataManipulater::bndL</a></div><div class="ttdeci">std::shared_ptr&lt; OneDBnd &gt; bndL</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00045">dataManipulater.hpp:45</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_ad962f9c942a8588f182c05d7032d9e98"><div class="ttname"><a href="class_data_manipulater.html#ad962f9c942a8588f182c05d7032d9e98">DataManipulater::DataManipulater</a></div><div class="ttdeci">DataManipulater()</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00010">dataManipulater.hpp:10</a></div></div>
+<div class="ttc" id="aclass_data_manipulater_html_af55889f87fa7ac03167b8576c6097ee6"><div class="ttname"><a href="class_data_manipulater.html#af55889f87fa7ac03167b8576c6097ee6">DataManipulater::nvar</a></div><div class="ttdeci">int nvar</div><div class="ttdef"><b>定义</b> <a href="data_manipulater_8hpp_source.html#l00049">dataManipulater.hpp:49</a></div></div>
+<div class="ttc" id="aclass_data_reader_html"><div class="ttname"><a href="class_data_reader.html">DataReader</a></div><div class="ttdef"><b>定义</b> <a href="data_8hpp_source.html#l00057">data.hpp:57</a></div></div>
+<div class="ttc" id="adata_manipulater_8hpp_html"><div class="ttname"><a href="data_manipulater_8hpp.html">dataManipulater.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

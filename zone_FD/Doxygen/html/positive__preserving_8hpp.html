@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/positive_preserving.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#concepts">概念</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">positive_preserving.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="macro_8hpp_source.html">macro.hpp</a>&quot;</code><br />
+<code>#include &lt;concepts&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+positive_preserving.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="positive__preserving_8hpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2positive__preserving_8hpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2positive__preserving_8hpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2positive__preserving_8hpp">
+<area shape="rect" title=" " alt="" coords="426,5,680,80"/>
+<area shape="rect" href="macro_8hpp.html" title=" " alt="" coords="461,128,544,155"/>
+<area shape="poly" title=" " alt="" coords="536,79,518,116,514,112,532,82"/>
+<area shape="rect" title=" " alt="" coords="568,128,642,155"/>
+<area shape="poly" title=" " alt="" coords="574,78,594,115,589,113,572,83"/>
+<area shape="rect" title=" " alt="" coords="5,203,56,229"/>
+<area shape="poly" title=" " alt="" coords="458,147,294,167,185,183,72,205,70,200,184,178,294,162,463,145"/>
+<area shape="rect" title=" " alt="" coords="80,203,141,229"/>
+<area shape="poly" title=" " alt="" coords="459,149,329,171,156,205,155,199,328,166,464,148"/>
+<area shape="rect" title=" " alt="" coords="164,203,236,229"/>
+<area shape="poly" title=" " alt="" coords="463,153,251,204,250,199,458,152"/>
+<area shape="rect" title=" " alt="" coords="259,203,327,229"/>
+<area shape="poly" title=" " alt="" coords="469,155,343,200,341,195,463,156"/>
+<area shape="rect" title=" " alt="" coords="352,203,405,229"/>
+<area shape="poly" title=" " alt="" coords="483,155,414,197,412,192,478,156"/>
+<area shape="rect" title=" " alt="" coords="430,203,487,229"/>
+<area shape="poly" title=" " alt="" coords="497,154,476,192,472,187,493,157"/>
+<area shape="rect" title=" " alt="" coords="511,203,585,229"/>
+<area shape="poly" title=" " alt="" coords="512,153,534,190,529,188,509,158"/>
+<area shape="rect" title=" " alt="" coords="609,203,673,229"/>
+<area shape="poly" title=" " alt="" coords="527,153,606,195,601,195,526,158"/>
+<area shape="rect" title=" " alt="" coords="698,203,755,229"/>
+<area shape="poly" title=" " alt="" coords="542,153,686,201,680,201,541,158"/>
+<area shape="rect" title=" " alt="" coords="779,203,837,229"/>
+<area shape="poly" title=" " alt="" coords="544,149,767,202,761,202,544,155"/>
+<area shape="rect" title=" " alt="" coords="861,203,907,229"/>
+<area shape="poly" title=" " alt="" coords="544,150,556,152,636,165,700,173,765,182,848,202,843,202,764,188,700,178,636,171,555,157,544,155"/>
+<area shape="rect" title=" " alt="" coords="931,203,991,229"/>
+<area shape="poly" title=" " alt="" coords="544,150,556,152,656,167,735,174,815,183,918,203,913,202,814,188,734,180,655,172,555,157,544,155"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="positive__preserving_8hpp__dep__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2positive__preserving_8hppdep" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2positive__preserving_8hppdep" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2zone___f_d_2src_2include_2positive__preserving_8hppdep">
+<area shape="rect" title=" " alt="" coords="375,5,629,80"/>
+<area shape="rect" href="reconstructor5order_8hpp.html" title=" " alt="" coords="375,128,629,203"/>
+<area shape="poly" title=" " alt="" coords="503,93,504,128,499,127,501,98"/>
+<area shape="rect" href="solver_type_8hpp.html" title=" " alt="" coords="387,251,617,325"/>
+<area shape="poly" title=" " alt="" coords="503,216,504,251,499,249,501,221"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="132,373,362,448"/>
+<area shape="poly" title=" " alt="" coords="409,334,326,375,323,371,412,331"/>
+<area shape="rect" href="sp__distributor_8hpp.html" title=" " alt="" coords="387,373,617,448"/>
+<area shape="poly" title=" " alt="" coords="503,339,504,374,499,372,501,344"/>
+<area shape="rect" href="solver_type_8cpp.html" title=" " alt="" coords="641,373,872,448"/>
+<area shape="poly" title=" " alt="" coords="593,330,681,372,676,373,593,335"/>
+<area shape="rect" href="initializer_8hpp.html" title=" " alt="" coords="259,496,489,571"/>
+<area shape="poly" title=" " alt="" coords="454,457,414,498,411,494,450,461"/>
+<area shape="rect" href="sp__distributor_8cpp.html" title=" " alt="" coords="513,496,744,571"/>
+<area shape="poly" title=" " alt="" coords="552,456,593,496,587,495,551,462"/>
+<area shape="rect" href="block_solver_8hpp.html" title=" " alt="" coords="132,619,362,693"/>
+<area shape="poly" title=" " alt="" coords="326,580,287,620,284,616,322,583"/>
+<area shape="rect" href="initializer_8cpp.html" title=" " alt="" coords="387,619,617,693"/>
+<area shape="poly" title=" " alt="" coords="425,579,466,618,460,618,423,584"/>
+<area shape="rect" href="block_solver_8cpp.html" title=" " alt="" coords="5,741,236,816"/>
+<area shape="poly" title=" " alt="" coords="200,703,161,743,157,739,195,706"/>
+<area shape="rect" href="zone_main_8cpp.html" title=" " alt="" coords="260,741,490,816"/>
+<area shape="poly" title=" " alt="" coords="298,702,339,741,334,741,297,707"/>
+</map>
+</div>
+</div>
+<p><a href="positive__preserving_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-concepts" class="groupheader"><a id="concepts" name="concepts"></a>
+概念</h2></td></tr>
+<tr class="memitem:PositiveQuantityFunc" id="r_PositiveQuantityFunc"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concept_positive_quantity_func.html">PositiveQuantityFunc</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ad05b57bb98a24416322f12a924dec8d0" id="r_ad05b57bb98a24416322f12a924dec8d0"><td class="memTemplParams" colspan="2">template&lt;size_t ncomp, <a class="el" href="concept_positive_quantity_func.html">PositiveQuantityFunc</a>&lt; ncomp &gt; PositiveQuantityFuncType&gt; </td></tr>
+<tr class="memitem:ad05b57bb98a24416322f12a924dec8d0 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad05b57bb98a24416322f12a924dec8d0">variable_positive_limiter</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, ncomp &gt;const &amp;W, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, ncomp &gt; &amp;W_interpolated, PositiveQuantityFuncType computePositiveQuantity, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> <a class="el" href="#a1bbf78ffe0f28c9922ca3e98e784f14a">EPSILON</a>=1e-10)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a1bbf78ffe0f28c9922ca3e98e784f14a" id="r_a1bbf78ffe0f28c9922ca3e98e784f14a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bbf78ffe0f28c9922ca3e98e784f14a">EPSILON</a> = 1e-10</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="ad05b57bb98a24416322f12a924dec8d0" name="ad05b57bb98a24416322f12a924dec8d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad05b57bb98a24416322f12a924dec8d0">&#9670;&#160;</a></span>variable_positive_limiter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t ncomp, <a class="el" href="concept_positive_quantity_func.html">PositiveQuantityFunc</a>&lt; ncomp &gt; PositiveQuantityFuncType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void variable_positive_limiter </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, ncomp &gt;const &amp;</td>          <td class="paramname"><span class="paramname"><em>W</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, ncomp &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>W_interpolated</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PositiveQuantityFuncType</td>          <td class="paramname"><span class="paramname"><em>computePositiveQuantity</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>EPSILON</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1e-10</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="positive__preserving_8hpp_source.html">positive_preserving.hpp</a> 第 <a class="el" href="positive__preserving_8hpp_source.html#l00014">14</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="positive__preserving_8hpp_ad05b57bb98a24416322f12a924dec8d0_icgraph.png" border="0" usemap="#apositive__preserving_8hpp_ad05b57bb98a24416322f12a924dec8d0_icgraph" loading="lazy" alt=""/></div>
+<map name="apositive__preserving_8hpp_ad05b57bb98a24416322f12a924dec8d0_icgraph" id="apositive__preserving_8hpp_ad05b57bb98a24416322f12a924dec8d0_icgraph">
+<area shape="rect" title=" " alt="" coords="432,80,592,107"/>
+<area shape="rect" href="class_recon5_order1_d_euler_eig.html#ab13f1f87765415e6ee231459ac0dbea4" title=" " alt="" coords="220,72,384,115"/>
+<area shape="poly" title=" " alt="" coords="414,94,385,96,384,91,419,93"/>
+<area shape="rect" href="class_recon5_order_face_center.html#ac0abd6248dea71041e8929959909a1b8" title=" " alt="" coords="5,5,172,48"/>
+<area shape="poly" title=" " alt="" coords="215,68,159,51,159,46,220,66"/>
+<area shape="rect" href="class_recon5_order_face_center.html#a3fcc1a8bd5bf4af2034bf8d8a5613c44" title=" " alt="" coords="5,72,172,115"/>
+<area shape="poly" title=" " alt="" coords="201,94,173,96,172,91,206,93"/>
+<area shape="rect" href="class_recon5_order_face_center.html#aca48e5c315452c68c05871549e8413d8" title=" " alt="" coords="5,139,172,181"/>
+<area shape="poly" title=" " alt="" coords="220,119,160,141,159,135,215,120"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">变量说明</h2>
+<a id="a1bbf78ffe0f28c9922ca3e98e784f14a" name="a1bbf78ffe0f28c9922ca3e98e784f14a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bbf78ffe0f28c9922ca3e98e784f14a">&#9670;&#160;</a></span>EPSILON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> EPSILON = 1e-10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="positive__preserving_8hpp_source.html">positive_preserving.hpp</a> 第 <a class="el" href="positive__preserving_8hpp_source.html#l00006">6</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

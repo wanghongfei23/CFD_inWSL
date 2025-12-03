@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: PositiveQuantityFunc 概念参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">PositiveQuantityFunc 概念参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="positive__preserving_8hpp_source.html">positive_preserving.hpp</a>&gt;</code></p>
+<h2 id="header-conceptdef" class="groupheader">概念定义</h2>
+<div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keywordtype">size_t</span> ncomp&gt;</div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="concept_positive_quantity_func.html">PositiveQuantityFunc</a> =  <span class="keyword">requires</span>(F <a class="code hl_function" href="utils_2exact_sol_burgers_2main_8cpp.html#a0ccf2c2ad9f3225b701704972316dd3a">f</a>, <span class="keyword">const</span> std::array&lt;real, ncomp&gt;&amp; W) {</div>
+<div class="line">    { <a class="code hl_function" href="utils_2exact_sol_burgers_2main_8cpp.html#a0ccf2c2ad9f3225b701704972316dd3a">f</a>(W) } -&gt; std::same_as&lt;real&gt;; </div>
+<div class="line">}</div>
+<div class="ttc" id="aconcept_positive_quantity_func_html"><div class="ttname"><a href="concept_positive_quantity_func.html">PositiveQuantityFunc</a></div><div class="ttdef"><b>定义</b> <a href="positive__preserving_8hpp_source.html#l00009">positive_preserving.hpp:9</a></div></div>
+<div class="ttc" id="autils_2exact_sol_burgers_2main_8cpp_html_a0ccf2c2ad9f3225b701704972316dd3a"><div class="ttname"><a href="utils_2exact_sol_burgers_2main_8cpp.html#a0ccf2c2ad9f3225b701704972316dd3a">f</a></div><div class="ttdeci">double f(double theta, double x, double t)</div><div class="ttdef"><b>定义</b> <a href="utils_2exact_sol_burgers_2main_8cpp_source.html#l00015">main.cpp:15</a></div></div>
+</div><!-- fragment --><a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="positive__preserving_8hpp_source.html">positive_preserving.hpp</a> 第 <a class="el" href="positive__preserving_8hpp_source.html#l00009">9</a> 行定义.</p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

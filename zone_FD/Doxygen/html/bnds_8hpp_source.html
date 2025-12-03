@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/bnds.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">bnds.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="bnds_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="data_8hpp.html">data.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="info_8hpp.html">info.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="one_d_bnd_8hpp.html">oneDBnd.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// 边界条件类，用于管理所有边界条件</span></div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_bnds.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="class_bnds.html">Bnds</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="comment">// 边界条件获取和更新函数</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  std::array&lt;std::shared_ptr&lt;OneDBnd&gt;, 2&gt; <a class="code hl_function" href="class_bnds.html#af455ed53b0d972d0bc8a9120e86751eb">getOneDBnd</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_bnds.html#a6a987889844487c3d78cfb28c570ef4e">update</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="comment">// 允许初始化器访问私有成员</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_bnds.html#a5d26a0aa56303737c594b42e7cdad905">   15</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_bnds.html#a5d26a0aa56303737c594b42e7cdad905">Initializer</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="comment">// 边界条件相关数据</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_bnds.html#aee27bb04256cf20f885b4e1edba04bb1">   18</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bnds.html#aee27bb04256cf20f885b4e1edba04bb1">dim</a>;                                                    <span class="comment">// 问题维度</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_bnds.html#aaffd187d499065a7fddb83175a79873d">   19</a></span>  std::array&lt;int, 3&gt; <a class="code hl_variable" href="class_bnds.html#aaffd187d499065a7fddb83175a79873d">iMax</a>;                                    <span class="comment">// 网格最大索引</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_bnds.html#a54f13dfef0a913cd9f012a2b0bce4b9d">   20</a></span>  std::vector&lt;std::shared_ptr&lt;OneDBnd&gt;&gt; <a class="code hl_variable" href="class_bnds.html#a54f13dfef0a913cd9f012a2b0bce4b9d">oneDBnds</a>;             <span class="comment">// 一维边界条件数组，包含所有方向的边界条件</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+</div>
+<div class="ttc" id="aclass_bnds_html"><div class="ttname"><a href="class_bnds.html">Bnds</a></div><div class="ttdef"><b>定义</b> <a href="#l00007">bnds.hpp:7</a></div></div>
+<div class="ttc" id="aclass_bnds_html_a54f13dfef0a913cd9f012a2b0bce4b9d"><div class="ttname"><a href="class_bnds.html#a54f13dfef0a913cd9f012a2b0bce4b9d">Bnds::oneDBnds</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; OneDBnd &gt; &gt; oneDBnds</div><div class="ttdef"><b>定义</b> <a href="#l00020">bnds.hpp:20</a></div></div>
+<div class="ttc" id="aclass_bnds_html_a5d26a0aa56303737c594b42e7cdad905"><div class="ttname"><a href="class_bnds.html#a5d26a0aa56303737c594b42e7cdad905">Bnds::Initializer</a></div><div class="ttdeci">friend class Initializer</div><div class="ttdef"><b>定义</b> <a href="#l00015">bnds.hpp:15</a></div></div>
+<div class="ttc" id="aclass_bnds_html_a6a987889844487c3d78cfb28c570ef4e"><div class="ttname"><a href="class_bnds.html#a6a987889844487c3d78cfb28c570ef4e">Bnds::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>定义</b> <a href="bnds_8cpp_source.html#l00023">bnds.cpp:23</a></div></div>
+<div class="ttc" id="aclass_bnds_html_aaffd187d499065a7fddb83175a79873d"><div class="ttname"><a href="class_bnds.html#aaffd187d499065a7fddb83175a79873d">Bnds::iMax</a></div><div class="ttdeci">std::array&lt; int, 3 &gt; iMax</div><div class="ttdef"><b>定义</b> <a href="#l00019">bnds.hpp:19</a></div></div>
+<div class="ttc" id="aclass_bnds_html_aee27bb04256cf20f885b4e1edba04bb1"><div class="ttname"><a href="class_bnds.html#aee27bb04256cf20f885b4e1edba04bb1">Bnds::dim</a></div><div class="ttdeci">int dim</div><div class="ttdef"><b>定义</b> <a href="#l00018">bnds.hpp:18</a></div></div>
+<div class="ttc" id="aclass_bnds_html_af455ed53b0d972d0bc8a9120e86751eb"><div class="ttname"><a href="class_bnds.html#af455ed53b0d972d0bc8a9120e86751eb">Bnds::getOneDBnd</a></div><div class="ttdeci">std::array&lt; std::shared_ptr&lt; OneDBnd &gt;, 2 &gt; getOneDBnd(int, int, int)</div><div class="ttdef"><b>定义</b> <a href="bnds_8cpp_source.html#l00003">bnds.cpp:3</a></div></div>
+<div class="ttc" id="adata_8hpp_html"><div class="ttname"><a href="data_8hpp.html">data.hpp</a></div></div>
+<div class="ttc" id="ainfo_8hpp_html"><div class="ttname"><a href="info_8hpp.html">info.hpp</a></div></div>
+<div class="ttc" id="aone_d_bnd_8hpp_html"><div class="ttname"><a href="one_d_bnd_8hpp.html">oneDBnd.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['target_5ftype_0',['target_type',['../structpro_1_1details_1_1ptr__traits_3_01_p_00_01_q_00_01_n_e_01_4.html#a837b4340880a81869d01c77f5ef836de',1,'pro::details::ptr_traits&lt; P, Q, NE &gt;']]],
+  ['type_1',['type',['../structpro_1_1details_1_1recursive__reduction_3_01_r_00_01_o_00_01_i_00_01_is_8_8_8_01_4.html#ac02af4fd0e63b641abd7b33cc5ad39bb',1,'pro::details::recursive_reduction&lt; R, O, I, Is... &gt;::type'],['../structpro_1_1details_1_1instantiated__traits_3_01_t_00_01_t_l_00_01std_1_1index__sequence_3_01_iaf0958351a9736980d1cec35d4becf3c.html#a92697a5d467987e758a9cdcc3a0783ab',1,'pro::details::instantiated_traits&lt; T, TL, std::index_sequence&lt; Is... &gt;, Args... &gt;::type'],['../structpro_1_1details_1_1composite__accessor__reduction_3_01_i_s___d_i_r_e_c_t_00_01_f_00_01compoff4ef2bb4a6ef43fab0b592b67aa02f6.html#a69f11d20ac043d19ad9a0d2cc980128a',1,'pro::details::composite_accessor_reduction&lt; IS_DIRECT, F, composite_accessor_impl&lt; As... &gt;, I &gt;::type'],['../structpro_1_1details_1_1merge__conv__traits.html#adc7579a31fc8c8dfbdbee6d13905366c',1,'pro::details::merge_conv_traits::type']]]
+];

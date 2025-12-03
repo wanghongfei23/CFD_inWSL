@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/utils/exactSolBurgers/main2.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a href="dir_41d73644e196e40a513443d5514381f9.html">exactSolBurgers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">main2.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="main2_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="main2_8cpp.html#a8dd2bd912c6237bb1b158a15fec5390e">    7</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="main2_8cpp.html#a8dd2bd912c6237bb1b158a15fec5390e">u0</a>(<span class="keywordtype">double</span> x,<span class="keywordtype">double</span> u,<span class="keywordtype">double</span> t)</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordflow">return</span> 0.25+0.5*sin(M_PI*(x-u*t));</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="main2_8cpp.html#ae7b00f67114f339453b99ee6b0fc2984">   11</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="main2_8cpp.html#ae7b00f67114f339453b99ee6b0fc2984">du0</a>(<span class="keywordtype">double</span> x,<span class="keywordtype">double</span> u,<span class="keywordtype">double</span> t)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">return</span> -0.5*M_PI*t*cos(M_PI*(x-u*t));</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="main2_8cpp.html#a37d1e41ac68bbcbb7bbca203e9ffc766">   15</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="main2_8cpp.html#a37d1e41ac68bbcbb7bbca203e9ffc766">f</a>(<span class="keywordtype">double</span> x,<span class="keywordtype">double</span> u,<span class="keywordtype">double</span> t)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">return</span> u-<a class="code hl_function" href="main2_8cpp.html#a8dd2bd912c6237bb1b158a15fec5390e">u0</a>(x,u,t);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="main2_8cpp.html#ac8be8a801ea2cd7107430724da5ccb92">   19</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="main2_8cpp.html#ac8be8a801ea2cd7107430724da5ccb92">df</a>(<span class="keywordtype">double</span> x,<span class="keywordtype">double</span> u,<span class="keywordtype">double</span> t)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">return</span> 1.0-<a class="code hl_function" href="main2_8cpp.html#ae7b00f67114f339453b99ee6b0fc2984">du0</a>(x,u,t);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="main2_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   23</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv){</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">double</span> tend,dt;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">int</span> n;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::cout&lt;&lt;argc&lt;&lt;std::endl;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">if</span> (argc==4) </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        n=std::stoi(argv[1]);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        tend=std::stod(argv[2]);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        dt=std::stod(argv[3]);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        std::cout&lt;&lt;<span class="stringliteral">&quot;success running&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">else</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        n=200,tend=10,dt=0.1;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        std::cout&lt;&lt;<span class="stringliteral">&quot;n=  &quot;</span>&lt;&lt;n&lt;&lt;<span class="stringliteral">&quot;   t=  &quot;</span>&lt;&lt;tend&lt;&lt;<span class="stringliteral">&quot;   dt=  &quot;</span>&lt;&lt;dt&lt;&lt;std::endl;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">double</span> h=2.0/n,eps=1e-8;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">for</span>(<span class="keywordtype">double</span> t=0;t&lt;tend+dt/2;t=t+dt)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::string fname=<span class="stringliteral">&quot;BurgersT&quot;</span>+std::to_string(t)+<span class="stringliteral">&quot;.dat&quot;</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        std::fstream file(fname,std::ios::out);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        file&lt;&lt;<span class="stringliteral">&quot;Title=\&quot;exact solution of burgers equation at t = &quot;</span>&lt;&lt;t&lt;&lt;<span class="stringliteral">&quot;\&quot;&quot;</span>&lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        file&lt;&lt; <span class="stringliteral">&quot;Variables=\&quot;x\&quot;,\&quot;u\&quot; \n&quot;</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i =0;i&lt;n;i++)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordtype">double</span> u=0.25;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordtype">double</span> x=h/2.0+i*h-1.0;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordtype">double</span> delta=100;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">do</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                delta=-<a class="code hl_function" href="main2_8cpp.html#a37d1e41ac68bbcbb7bbca203e9ffc766">f</a>(u,x,t)/<a class="code hl_function" href="main2_8cpp.html#ac8be8a801ea2cd7107430724da5ccb92">df</a>(u,x,t);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                u=u+0.05*delta;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="comment">//std::cout&lt;&lt;times&lt;&lt;&#39; &#39;&lt;&lt;theta&lt;&lt;&#39;\n&#39;;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            } <span class="keywordflow">while</span> (std::abs(delta)&gt;eps);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            file&lt;&lt;x&lt;&lt;<span class="charliteral">&#39; &#39;</span>&lt;&lt;u&lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        file.close();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        std::cout&lt;&lt;<span class="stringliteral">&quot;t= &quot;</span>&lt;&lt;t&lt;&lt;<span class="stringliteral">&quot;  finished&quot;</span>&lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="ttc" id="amain2_8cpp_html_a37d1e41ac68bbcbb7bbca203e9ffc766"><div class="ttname"><a href="main2_8cpp.html#a37d1e41ac68bbcbb7bbca203e9ffc766">f</a></div><div class="ttdeci">double f(double x, double u, double t)</div><div class="ttdef"><b>定义</b> <a href="#l00015">main2.cpp:15</a></div></div>
+<div class="ttc" id="amain2_8cpp_html_a8dd2bd912c6237bb1b158a15fec5390e"><div class="ttname"><a href="main2_8cpp.html#a8dd2bd912c6237bb1b158a15fec5390e">u0</a></div><div class="ttdeci">double u0(double x, double u, double t)</div><div class="ttdef"><b>定义</b> <a href="#l00007">main2.cpp:7</a></div></div>
+<div class="ttc" id="amain2_8cpp_html_ac8be8a801ea2cd7107430724da5ccb92"><div class="ttname"><a href="main2_8cpp.html#ac8be8a801ea2cd7107430724da5ccb92">df</a></div><div class="ttdeci">double df(double x, double u, double t)</div><div class="ttdef"><b>定义</b> <a href="#l00019">main2.cpp:19</a></div></div>
+<div class="ttc" id="amain2_8cpp_html_ae7b00f67114f339453b99ee6b0fc2984"><div class="ttname"><a href="main2_8cpp.html#ae7b00f67114f339453b99ee6b0fc2984">du0</a></div><div class="ttdeci">double du0(double x, double u, double t)</div><div class="ttdef"><b>定义</b> <a href="#l00011">main2.cpp:11</a></div></div>
+<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>定义</b> <a href="main_8cpp_source.html#l00004">main.cpp:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

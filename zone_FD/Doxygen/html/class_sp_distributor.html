@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: SpDistributor类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="class_sp_distributor-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">SpDistributor类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a>&gt;</code></p>
+<div class="dynheader">
+SpDistributor 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sp_distributor__coll__graph.png" border="0" usemap="#a_sp_distributor_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_sp_distributor_coll__map" id="a_sp_distributor_coll__map">
+<area shape="rect" title=" " alt="" coords="814,133,911,160"/>
+<area shape="rect" href="class_data.html" title=" " alt="" coords="627,48,676,74"/>
+<area shape="poly" title=" " alt="" coords="691,64,740,74,791,92,822,110,848,133,843,132,819,115,789,97,739,79,692,69"/>
+<area shape="rect" href="class_bnds.html" title=" " alt="" coords="626,100,677,126"/>
+<area shape="poly" title=" " alt="" coords="692,117,816,138,810,139,693,122"/>
+<area shape="rect" href="class_info.html" title=" " alt="" coords="316,166,360,193"/>
+<area shape="poly" title=" " alt="" coords="375,176,694,160,816,151,810,152,695,165,376,181"/>
+<area shape="rect" href="class_solver_type.html" title=" " alt="" coords="608,286,695,313"/>
+<area shape="poly" title=" " alt="" coords="375,184,455,205,479,214,533,227,557,233,586,245,614,264,639,286,634,285,611,268,583,250,555,238,532,232,478,220,454,210,375,190"/>
+<area shape="poly" title=" " alt="" coords="692,276,739,249,788,215,821,185,847,161,851,158,825,189,791,219,742,253,694,281"/>
+<area shape="rect" href="classpro_1_1proxy.html" title=" " alt="" coords="222,220,454,246"/>
+<area shape="poly" title=" " alt="" coords="399,249,479,269,611,294,605,295,478,274,400,254"/>
+<area shape="rect" title=" " alt="" coords="8,200,170,258"/>
+<area shape="poly" title=" " alt="" coords="185,228,224,230,219,232,187,233"/>
+<area shape="rect" href="classpro_1_1proxy.html" title=" " alt="" coords="244,298,432,341"/>
+<area shape="poly" title=" " alt="" coords="447,330,515,331,584,324,620,314,625,313,585,329,516,336,448,335"/>
+<area shape="rect" title=" " alt="" coords="5,282,173,341"/>
+<area shape="poly" title=" " alt="" coords="188,312,246,315,241,318,189,317"/>
+<area shape="rect" href="classpro_1_1proxy.html" title=" " alt="" coords="248,369,428,412"/>
+<area shape="poly" title=" " alt="" coords="443,391,514,383,550,374,583,361,615,338,638,315,643,312,619,342,586,366,551,379,515,388,444,396"/>
+<area shape="rect" title=" " alt="" coords="9,365,169,424"/>
+<area shape="poly" title=" " alt="" coords="183,390,250,391,245,393,184,395"/>
+<area shape="rect" href="classpro_1_1proxy.html" title=" " alt="" coords="254,444,422,470"/>
+<area shape="poly" title=" " alt="" coords="438,459,475,456,513,448,549,436,583,418,607,394,625,365,645,315,649,312,629,368,611,397,586,422,552,441,514,453,476,461,438,464"/>
+<area shape="rect" title=" " alt="" coords="16,448,162,490"/>
+<area shape="poly" title=" " alt="" coords="177,462,256,461,251,461,178,467"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af7d75f4c83a85db9e4b1e1824e62f238" id="r_af7d75f4c83a85db9e4b1e1824e62f238"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7d75f4c83a85db9e4b1e1824e62f238">rhsSolve</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a11decd197f64baeffe9aff309dfdfa5a" id="r_a11decd197f64baeffe9aff309dfdfa5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11decd197f64baeffe9aff309dfdfa5a">nCons</a></td></tr>
+<tr class="memitem:ad2a7ed93dee3114250927dd9f2835d12" id="r_ad2a7ed93dee3114250927dd9f2835d12"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2a7ed93dee3114250927dd9f2835d12">nPrim</a></td></tr>
+<tr class="memitem:ac81273fd0c432b36efa9f6fb0588a2e2" id="r_ac81273fd0c432b36efa9f6fb0588a2e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac81273fd0c432b36efa9f6fb0588a2e2">dim</a></td></tr>
+<tr class="memitem:af84399540f7e3983fd56bc193e0ab922" id="r_af84399540f7e3983fd56bc193e0ab922"><td class="memItemLeft" align="right" valign="top">std::array&lt; int, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af84399540f7e3983fd56bc193e0ab922">iMax</a></td></tr>
+<tr class="memitem:a577389bf01a50ad4d9194495c640edbc" id="r_a577389bf01a50ad4d9194495c640edbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a577389bf01a50ad4d9194495c640edbc">prim</a></td></tr>
+<tr class="memitem:a7eda9c7b81723e73510a89f31975512d" id="r_a7eda9c7b81723e73510a89f31975512d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eda9c7b81723e73510a89f31975512d">cons</a></td></tr>
+<tr class="memitem:a5b8de696faf3abbfceb2e758c279b7ef" id="r_a5b8de696faf3abbfceb2e758c279b7ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b8de696faf3abbfceb2e758c279b7ef">rhs</a></td></tr>
+<tr class="memitem:aca15bba98de1884a8c8f3f4c5e0702db" id="r_aca15bba98de1884a8c8f3f4c5e0702db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bnds.html">Bnds</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca15bba98de1884a8c8f3f4c5e0702db">bnds</a></td></tr>
+<tr class="memitem:a618127d4f5376b10e6d5ff84d5201be7" id="r_a618127d4f5376b10e6d5ff84d5201be7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_info.html">Info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a618127d4f5376b10e6d5ff84d5201be7">info</a></td></tr>
+<tr class="memitem:ad78d6d0e133248477208e461946351b5" id="r_ad78d6d0e133248477208e461946351b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_solver_type.html">SolverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad78d6d0e133248477208e461946351b5">solverType</a></td></tr>
+<tr class="memitem:a340744045e01cc61fce62589425e364a" id="r_a340744045e01cc61fce62589425e364a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a340744045e01cc61fce62589425e364a">timep</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a5d26a0aa56303737c594b42e7cdad905" id="r_a5d26a0aa56303737c594b42e7cdad905"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d26a0aa56303737c594b42e7cdad905">Initializer</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00006">6</a> 行定义.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="af7d75f4c83a85db9e4b1e1824e62f238" name="af7d75f4c83a85db9e4b1e1824e62f238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d75f4c83a85db9e4b1e1824e62f238">&#9670;&#160;</a></span>rhsSolve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpDistributor::rhsSolve </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8cpp_source.html">sp_distributor.cpp</a> 第 <a class="el" href="sp__distributor_8cpp_source.html#l00003">3</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sp_distributor_af7d75f4c83a85db9e4b1e1824e62f238_cgraph.png" border="0" usemap="#aclass_sp_distributor_af7d75f4c83a85db9e4b1e1824e62f238_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_sp_distributor_af7d75f4c83a85db9e4b1e1824e62f238_cgraph" id="aclass_sp_distributor_af7d75f4c83a85db9e4b1e1824e62f238_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,162,32"/>
+<area shape="rect" href="macro_8hpp.html#abc70118de3c8a5db9b0a7a505c51b050" title=" " alt="" coords="210,5,283,32"/>
+<area shape="poly" title=" " alt="" coords="162,16,197,19,191,19,162,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
+<a id="a5d26a0aa56303737c594b42e7cdad905" name="a5d26a0aa56303737c594b42e7cdad905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d26a0aa56303737c594b42e7cdad905">&#9670;&#160;</a></span>Initializer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_initializer.html">Initializer</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00011">11</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="aca15bba98de1884a8c8f3f4c5e0702db" name="aca15bba98de1884a8c8f3f4c5e0702db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca15bba98de1884a8c8f3f4c5e0702db">&#9670;&#160;</a></span>bnds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bnds.html">Bnds</a>* SpDistributor::bnds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7eda9c7b81723e73510a89f31975512d" name="a7eda9c7b81723e73510a89f31975512d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eda9c7b81723e73510a89f31975512d">&#9670;&#160;</a></span>cons</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a> * SpDistributor::cons</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac81273fd0c432b36efa9f6fb0588a2e2" name="ac81273fd0c432b36efa9f6fb0588a2e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac81273fd0c432b36efa9f6fb0588a2e2">&#9670;&#160;</a></span>dim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SpDistributor::dim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af84399540f7e3983fd56bc193e0ab922" name="af84399540f7e3983fd56bc193e0ab922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af84399540f7e3983fd56bc193e0ab922">&#9670;&#160;</a></span>iMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;int, 3&gt; SpDistributor::iMax</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a618127d4f5376b10e6d5ff84d5201be7" name="a618127d4f5376b10e6d5ff84d5201be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a618127d4f5376b10e6d5ff84d5201be7">&#9670;&#160;</a></span>info</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_info.html">Info</a>* SpDistributor::info</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a11decd197f64baeffe9aff309dfdfa5a" name="a11decd197f64baeffe9aff309dfdfa5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11decd197f64baeffe9aff309dfdfa5a">&#9670;&#160;</a></span>nCons</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SpDistributor::nCons</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad2a7ed93dee3114250927dd9f2835d12" name="ad2a7ed93dee3114250927dd9f2835d12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2a7ed93dee3114250927dd9f2835d12">&#9670;&#160;</a></span>nPrim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SpDistributor::nPrim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a577389bf01a50ad4d9194495c640edbc" name="a577389bf01a50ad4d9194495c640edbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a577389bf01a50ad4d9194495c640edbc">&#9670;&#160;</a></span>prim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a>* SpDistributor::prim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5b8de696faf3abbfceb2e758c279b7ef" name="a5b8de696faf3abbfceb2e758c279b7ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b8de696faf3abbfceb2e758c279b7ef">&#9670;&#160;</a></span>rhs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a>* SpDistributor::rhs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad78d6d0e133248477208e461946351b5" name="ad78d6d0e133248477208e461946351b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78d6d0e133248477208e461946351b5">&#9670;&#160;</a></span>solverType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_solver_type.html">SolverType</a> SpDistributor::solverType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a340744045e01cc61fce62589425e364a" name="a340744045e01cc61fce62589425e364a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a340744045e01cc61fce62589425e364a">&#9670;&#160;</a></span>timep</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SpDistributor::timep</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a> 第 <a class="el" href="sp__distributor_8hpp_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/<a class="el" href="sp__distributor_8hpp_source.html">sp_distributor.hpp</a></li>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/<a class="el" href="sp__distributor_8cpp_source.html">sp_distributor.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

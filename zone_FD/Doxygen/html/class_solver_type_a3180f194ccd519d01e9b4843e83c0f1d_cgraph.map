@@ -1,0 +1,13 @@
+<map id="SolverType::SolverType" name="SolverType::SolverType">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,165,120"/>
+<area shape="rect" id="Node000002" href="$class_solver_type.html#a4a200cdee06d624314db793551715066" title=" " alt="" coords="213,93,372,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,104,200,106,195,108,165,109"/>
+<area shape="rect" id="Node000003" href="$class_solver_type.html#a71d2de3c57798bf93a663a91555838e0" title=" " alt="" coords="436,5,578,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="317,90,364,66,419,42,441,36,437,38,421,46,366,71,319,95"/>
+<area shape="rect" id="Node000004" href="$class_solver_type.html#a257f1082ea50afdec5f4e27b82d61844" title=" " alt="" coords="424,56,590,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="372,93,411,90,406,91,373,98"/>
+<area shape="rect" id="Node000005" href="$class_solver_type.html#a8eb1d69dedadb62c75d7e765805567a2" title=" " alt="" coords="427,123,587,149"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="372,115,414,123,408,123,372,120"/>
+<area shape="rect" id="Node000006" href="$class_solver_type.html#a663e3ae13c63cc0aeb8d0059f2b3dc5d" title=" " alt="" coords="420,173,594,216"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="325,118,421,159,437,168,432,167,419,164,324,123"/>
+</map>

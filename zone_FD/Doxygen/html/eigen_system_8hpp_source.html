@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/eigenSystem.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">eigenSystem.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="eigen_system_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="code" href="macro_8hpp.html">macro.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// 二维欧拉方程特征系统类，用于特征变换计算</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="eigen_system_8hpp.html#ab5892b7aaf06db754f888785dff0d031a58833a3110c570fb05130d40c365d1e4">    6</a></span><span class="keyword">enum</span> { <a class="code hl_enumvalue" href="eigen_system_8hpp.html#ab5892b7aaf06db754f888785dff0d031a58833a3110c570fb05130d40c365d1e4">X</a>, <a class="code hl_enumvalue" href="eigen_system_8hpp.html#ab5892b7aaf06db754f888785dff0d031a5596231eabd6cf29050967d5ac83ad84">Y</a> };</div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classeigensystem_euler2_d.html">    7</a></span><span class="keyword">class </span><a class="code hl_function" href="classeigensystem_euler2_d.html#aee7af663cc25a3bd17fc570772e4a3a8">eigensystemEuler2D</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="comment">// 构造函数</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classeigensystem_euler2_d.html#aee7af663cc25a3bd17fc570772e4a3a8">   10</a></span>  <a class="code hl_function" href="classeigensystem_euler2_d.html#aee7af663cc25a3bd17fc570772e4a3a8">eigensystemEuler2D</a>() {};</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <a class="code hl_function" href="classeigensystem_euler2_d.html#aee7af663cc25a3bd17fc570772e4a3a8">eigensystemEuler2D</a>(<span class="keyword">const</span> std::array&lt;real, 4&gt; &amp;prim,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                     <span class="keyword">const</span> std::array&lt;real, 3&gt; &amp;norm_);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="comment">// 现在使用的是这个构造函数</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <a class="code hl_function" href="classeigensystem_euler2_d.html#aee7af663cc25a3bd17fc570772e4a3a8">eigensystemEuler2D</a>(<span class="keyword">const</span> std::array&lt;real, 4&gt; &amp;priml,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                     <span class="keyword">const</span> std::array&lt;real, 4&gt; &amp;primr,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                     <span class="keyword">const</span> std::array&lt;real, 3&gt; &amp;norm_);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="comment">// 特征变换函数</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  std::array&lt;real, 4&gt; <a class="code hl_function" href="classeigensystem_euler2_d.html#a879dd9157179a09e866c6003822d84d6">primToChar</a>(<span class="keyword">const</span> std::array&lt;real, 4&gt; &amp;prim);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  std::array&lt;real, 4&gt; <a class="code hl_function" href="classeigensystem_euler2_d.html#a1fd30896a9fce8178242de2cb1d1ec53">charToPrim</a>(<span class="keyword">const</span> std::array&lt;real, 4&gt; &amp;chars);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  std::array&lt;real, 4&gt; <a class="code hl_function" href="classeigensystem_euler2_d.html#acfd6ae00b375d2acece60b0d5a7b0e77">charToCons</a>(<span class="keyword">const</span> std::array&lt;real, 4&gt; &amp;chars);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  std::array&lt;real, 4&gt; <a class="code hl_function" href="classeigensystem_euler2_d.html#aee360026b2b66eacbfe31d38325c01d2">consToPrim</a>(<span class="keyword">const</span> std::array&lt;real, 4&gt; &amp;chars);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  std::array&lt;real, 4&gt; <a class="code hl_function" href="classeigensystem_euler2_d.html#a4d83c1840ba2353c26d5edd7d7edcaab">primToCons</a>(<span class="keyword">const</span> std::array&lt;real, 4&gt; &amp;chars);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="comment">// 物理量和参数</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classeigensystem_euler2_d.html#a35eea25969b87cd9fe34887a6de2cd8a">   27</a></span>  <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> <a class="code hl_variable" href="classeigensystem_euler2_d.html#a4e48207eb3b72ad3593f085a77d59efe">r</a>, <a class="code hl_variable" href="classeigensystem_euler2_d.html#a5ae492829418ece3e4a26d9ca001a79a">u</a>, <a class="code hl_variable" href="classeigensystem_euler2_d.html#a34aaf43386751a7c30f09998b0d8d32d">v</a>, <a class="code hl_variable" href="classeigensystem_euler2_d.html#a9f77d80dd35891f80ca5e8f6871d2986">p</a>, <a class="code hl_variable" href="classeigensystem_euler2_d.html#a82d97509b1e254835555db1c28a3d1a6">gamma</a> = <a class="code hl_define" href="macro_8hpp.html#a8659b9de3e544ff142b153b076f30fd5">GAMMA</a>, <a class="code hl_variable" href="classeigensystem_euler2_d.html#aa0c9ab7f72e4c7519d094e506c0460d1">ek</a>, <a class="code hl_variable" href="classeigensystem_euler2_d.html#a83783d3424ac20742dad03a7f192ca3e">h</a>, <a class="code hl_variable" href="classeigensystem_euler2_d.html#a35eea25969b87cd9fe34887a6de2cd8a">c</a>, <a class="code hl_variable" href="classeigensystem_euler2_d.html#a5577b5f4e9d9eb8592dd66a9da4d7979">Vn</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classeigensystem_euler2_d.html#a1443983e371e1d6bd8c055b560a620d0">   28</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classeigensystem_euler2_d.html#a1443983e371e1d6bd8c055b560a620d0">xOrY</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classeigensystem_euler2_d.html#adb15bdc7c1d92235b3145b531f7d83fc">   29</a></span>  std::array&lt;real, 3&gt; <a class="code hl_variable" href="classeigensystem_euler2_d.html#adb15bdc7c1d92235b3145b531f7d83fc">norm</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="comment">// 特征矩阵</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classeigensystem_euler2_d.html#a693f4fe6f3e1aef90fb1c09189053712">   32</a></span>  std::array&lt;real, 4 * 4&gt; <a class="code hl_variable" href="classeigensystem_euler2_d.html#a693f4fe6f3e1aef90fb1c09189053712">leftEig</a>, <a class="code hl_variable" href="classeigensystem_euler2_d.html#a64e8a15831bc94da1b97971b423f1b47">rightEig</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// 一维欧拉方程特征系统类，用于特征变换计算</span></div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classeigensystem_euler1_d.html">   36</a></span><span class="keyword">class </span><a class="code hl_function" href="classeigensystem_euler1_d.html#acc98ba3a7df0e045abaa6764d581efdb">eigensystemEuler1D</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="comment">// 构造函数</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classeigensystem_euler1_d.html#acc98ba3a7df0e045abaa6764d581efdb">   39</a></span>  <a class="code hl_function" href="classeigensystem_euler1_d.html#acc98ba3a7df0e045abaa6764d581efdb">eigensystemEuler1D</a>(<span class="keyword">const</span> std::array&lt;real, 3&gt; &amp;prim);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_function" href="classeigensystem_euler1_d.html#acc98ba3a7df0e045abaa6764d581efdb">eigensystemEuler1D</a>(<span class="keyword">const</span> std::array&lt;real, 3&gt; &amp;priml,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                     <span class="keyword">const</span> std::array&lt;real, 3&gt; &amp;primr);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="comment">// 特征变换函数</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  std::array&lt;real, 3&gt; <a class="code hl_function" href="classeigensystem_euler1_d.html#a431139e75e5790ebbc9e0708f18de130">primToChar</a>(<span class="keyword">const</span> std::array&lt;real, 3&gt; &amp;prim);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  std::array&lt;real, 3&gt; <a class="code hl_function" href="classeigensystem_euler1_d.html#abb845806e1b40826070c360c68c06cf9">charToPrim</a>(<span class="keyword">const</span> std::array&lt;real, 3&gt; &amp;chars);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  std::array&lt;real, 3&gt; <a class="code hl_function" href="classeigensystem_euler1_d.html#a15cbc08cfff53d11d50238596f11974e">charToCons</a>(<span class="keyword">const</span> std::array&lt;real, 3&gt; &amp;chars);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  std::array&lt;real, 3&gt; <a class="code hl_function" href="classeigensystem_euler1_d.html#abeda1809c03dc7fd11b3ba907e3e0952">consToPrim</a>(<span class="keyword">const</span> std::array&lt;real, 3&gt; &amp;chars);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  std::array&lt;real, 3&gt; <a class="code hl_function" href="classeigensystem_euler1_d.html#ae9d53ce3df2a3a2a4798b7d41f16c252">primToCons</a>(<span class="keyword">const</span> std::array&lt;real, 3&gt; &amp;chars);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="comment">// 物理量和参数</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classeigensystem_euler1_d.html#a031fb8c27fd0f8dd5774e17a8d9005f7">   52</a></span>  <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> <a class="code hl_variable" href="classeigensystem_euler1_d.html#a6c276e1603c381c1a4dd51717342868f">r</a>, <a class="code hl_variable" href="classeigensystem_euler1_d.html#a2b75b595f1d3945986cb3385ca8b8052">u</a>, <a class="code hl_variable" href="classeigensystem_euler1_d.html#ad0157365523c404381b83e542718e793">p</a>, <a class="code hl_variable" href="classeigensystem_euler1_d.html#a9d0b3d7526cc403fdad483cff0e5f874">gamma</a> = <a class="code hl_define" href="macro_8hpp.html#a8659b9de3e544ff142b153b076f30fd5">GAMMA</a>, <a class="code hl_variable" href="classeigensystem_euler1_d.html#a4c126cb5263071caa29e49f9784610c2">ek</a>, <a class="code hl_variable" href="classeigensystem_euler1_d.html#ab08c38a9a4dc50f3d8b1691bff53924f">h</a>, <a class="code hl_variable" href="classeigensystem_euler1_d.html#a031fb8c27fd0f8dd5774e17a8d9005f7">c</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classeigensystem_euler1_d.html#a1929c3868d89aed6fdb13eb35d28ab79">   53</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classeigensystem_euler1_d.html#a1929c3868d89aed6fdb13eb35d28ab79">xOrY</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="comment">// 特征矩阵</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classeigensystem_euler1_d.html#aaf814a22645249a41a95d53d3932650a">   56</a></span>  std::array&lt;real, 3 * 3&gt; <a class="code hl_variable" href="classeigensystem_euler1_d.html#aaf814a22645249a41a95d53d3932650a">leftEig</a>, <a class="code hl_variable" href="classeigensystem_euler1_d.html#adfcfd65ac6b7ea59d30ca49621096b20">rightEig</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">// // 特征分解函数</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">// std::array&lt;real,4&gt; characteristicDecomposition(std::array&lt;real,4&gt; prim)</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// {</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">//     return{0,0,0,0};</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">// }</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// // 左特征矩阵计算函数</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// std::array&lt;real,4*4&gt; leftEigen(const std::array&lt;real,4&gt;&amp; prim,const</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">// std::array&lt;real,3&gt;&amp; norm)</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">// {</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">//     std::array&lt;real,4*4&gt; res;</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">//     real r=prim[0],u=prim[1],v=prim[2],p=prim[3];</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">//     real gamma=GAMMA,ek=(u*u+v*v)/2;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">//     real h=p/r*gamma/(1-gamma);</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">//     real Vn=norm[0]*u+norm[1]*v;</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">//     real c=std::sqrt(gamma*p/r);</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">//     //first line</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//     res[0]=-norm[Y]*u+norm[X]*v;</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">//     res[1]=norm[Y];</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">//     res[2]=-norm[X];</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">//     res[3]=0;</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">//     //second line</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">//     res[4]=h-ek;</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">//     res[5]=u;</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">//     res[6]=v;</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">//     res[7]=-1;</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">//     //third line</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">//     res[8 ]=(Vn/c+ek/h)/2;</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">//     res[9 ]=(-norm[X]/c-u/h)/2;</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">//     res[10]=(-norm[Y]/c-v/h)/2;</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">//     res[11]=1.0/(2*h);</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">//     //fourth line</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">//     res[12]=(-Vn/c+ek/h)/2;</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">//     res[13]=(norm[X]/c-u/h)/2;</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">//     res[14]=(norm[Y]/c-v/h)/2;</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">//     res[15]=1.0/(2*h);</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">//     return res;</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">// }</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">// // 右特征矩阵计算函数</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">// std::array&lt;real,4*4&gt; rightEigen(const std::array&lt;real,4&gt;&amp; prim,const</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">// std::array&lt;real,3&gt;&amp; norm)</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">// {</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">//     std::array&lt;real,4*4&gt; res;</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">//     enum{X,Y};</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">//     real r=prim[0],u=prim[1],v=prim[2],p=prim[3];</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">//     real gamma=GAMMA,ek=(u*u+v*v)/2;</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">//     real h=p/r*gamma/(1-gamma);</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">//     real Vn=norm[0]*u+norm[1]*v;</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">//     real c=std::sqrt(gamma*p/r);</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">//     //first line</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">//     res[0]=0;</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">//     res[1]=1/h;</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">//     res[2]=1;</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">//     res[3]=1;</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">//     //second line</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">//     res[4]=norm[Y];</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">//     res[5]=u/h;</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment">//     res[6]=u-norm[X]*c;</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">//     res[7]=u+norm[X]*c;</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">//     //third line</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">//     res[8 ]=-norm[X];</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">//     res[9 ]=v/h;</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">//     res[10]=v-norm[Y]*c;</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">//     res[11]=v+norm[Y]*c;</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">//     //fourth line</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">//     res[12]=norm[Y]*u-norm[X]*v;</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">//     res[13]=ek/h;</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">//     res[14]=h+ek-Vn*c;</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">//     res[15]=h+ek+Vn*c;</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">//     return res;</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">// }</span></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_a031fb8c27fd0f8dd5774e17a8d9005f7"><div class="ttname"><a href="classeigensystem_euler1_d.html#a031fb8c27fd0f8dd5774e17a8d9005f7">eigensystemEuler1D::c</a></div><div class="ttdeci">real c</div><div class="ttdef"><b>定义</b> <a href="#l00052">eigenSystem.hpp:52</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_a15cbc08cfff53d11d50238596f11974e"><div class="ttname"><a href="classeigensystem_euler1_d.html#a15cbc08cfff53d11d50238596f11974e">eigensystemEuler1D::charToCons</a></div><div class="ttdeci">std::array&lt; real, 3 &gt; charToCons(const std::array&lt; real, 3 &gt; &amp;chars)</div><div class="ttdef"><b>定义</b> <a href="eigen_system_8cpp_source.html#l00295">eigenSystem.cpp:295</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_a1929c3868d89aed6fdb13eb35d28ab79"><div class="ttname"><a href="classeigensystem_euler1_d.html#a1929c3868d89aed6fdb13eb35d28ab79">eigensystemEuler1D::xOrY</a></div><div class="ttdeci">bool xOrY</div><div class="ttdef"><b>定义</b> <a href="#l00053">eigenSystem.hpp:53</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_a2b75b595f1d3945986cb3385ca8b8052"><div class="ttname"><a href="classeigensystem_euler1_d.html#a2b75b595f1d3945986cb3385ca8b8052">eigensystemEuler1D::u</a></div><div class="ttdeci">real u</div><div class="ttdef"><b>定义</b> <a href="#l00052">eigenSystem.hpp:52</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_a431139e75e5790ebbc9e0708f18de130"><div class="ttname"><a href="classeigensystem_euler1_d.html#a431139e75e5790ebbc9e0708f18de130">eigensystemEuler1D::primToChar</a></div><div class="ttdeci">std::array&lt; real, 3 &gt; primToChar(const std::array&lt; real, 3 &gt; &amp;prim)</div><div class="ttdef"><b>定义</b> <a href="eigen_system_8cpp_source.html#l00253">eigenSystem.cpp:253</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_a4c126cb5263071caa29e49f9784610c2"><div class="ttname"><a href="classeigensystem_euler1_d.html#a4c126cb5263071caa29e49f9784610c2">eigensystemEuler1D::ek</a></div><div class="ttdeci">real ek</div><div class="ttdef"><b>定义</b> <a href="#l00052">eigenSystem.hpp:52</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_a6c276e1603c381c1a4dd51717342868f"><div class="ttname"><a href="classeigensystem_euler1_d.html#a6c276e1603c381c1a4dd51717342868f">eigensystemEuler1D::r</a></div><div class="ttdeci">real r</div><div class="ttdef"><b>定义</b> <a href="#l00052">eigenSystem.hpp:52</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_a9d0b3d7526cc403fdad483cff0e5f874"><div class="ttname"><a href="classeigensystem_euler1_d.html#a9d0b3d7526cc403fdad483cff0e5f874">eigensystemEuler1D::gamma</a></div><div class="ttdeci">real gamma</div><div class="ttdef"><b>定义</b> <a href="#l00052">eigenSystem.hpp:52</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_aaf814a22645249a41a95d53d3932650a"><div class="ttname"><a href="classeigensystem_euler1_d.html#aaf814a22645249a41a95d53d3932650a">eigensystemEuler1D::leftEig</a></div><div class="ttdeci">std::array&lt; real, 3 *3 &gt; leftEig</div><div class="ttdef"><b>定义</b> <a href="#l00056">eigenSystem.hpp:56</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_ab08c38a9a4dc50f3d8b1691bff53924f"><div class="ttname"><a href="classeigensystem_euler1_d.html#ab08c38a9a4dc50f3d8b1691bff53924f">eigensystemEuler1D::h</a></div><div class="ttdeci">real h</div><div class="ttdef"><b>定义</b> <a href="#l00052">eigenSystem.hpp:52</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_abb845806e1b40826070c360c68c06cf9"><div class="ttname"><a href="classeigensystem_euler1_d.html#abb845806e1b40826070c360c68c06cf9">eigensystemEuler1D::charToPrim</a></div><div class="ttdeci">std::array&lt; real, 3 &gt; charToPrim(const std::array&lt; real, 3 &gt; &amp;chars)</div><div class="ttdef"><b>定义</b> <a href="eigen_system_8cpp_source.html#l00278">eigenSystem.cpp:278</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_abeda1809c03dc7fd11b3ba907e3e0952"><div class="ttname"><a href="classeigensystem_euler1_d.html#abeda1809c03dc7fd11b3ba907e3e0952">eigensystemEuler1D::consToPrim</a></div><div class="ttdeci">std::array&lt; real, 3 &gt; consToPrim(const std::array&lt; real, 3 &gt; &amp;chars)</div><div class="ttdef"><b>定义</b> <a href="eigen_system_8cpp_source.html#l00309">eigenSystem.cpp:309</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_acc98ba3a7df0e045abaa6764d581efdb"><div class="ttname"><a href="classeigensystem_euler1_d.html#acc98ba3a7df0e045abaa6764d581efdb">eigensystemEuler1D::eigensystemEuler1D</a></div><div class="ttdeci">eigensystemEuler1D(const std::array&lt; real, 3 &gt; &amp;prim)</div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_ad0157365523c404381b83e542718e793"><div class="ttname"><a href="classeigensystem_euler1_d.html#ad0157365523c404381b83e542718e793">eigensystemEuler1D::p</a></div><div class="ttdeci">real p</div><div class="ttdef"><b>定义</b> <a href="#l00052">eigenSystem.hpp:52</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_adfcfd65ac6b7ea59d30ca49621096b20"><div class="ttname"><a href="classeigensystem_euler1_d.html#adfcfd65ac6b7ea59d30ca49621096b20">eigensystemEuler1D::rightEig</a></div><div class="ttdeci">std::array&lt; real, 3 *3 &gt; rightEig</div><div class="ttdef"><b>定义</b> <a href="#l00056">eigenSystem.hpp:56</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler1_d_html_ae9d53ce3df2a3a2a4798b7d41f16c252"><div class="ttname"><a href="classeigensystem_euler1_d.html#ae9d53ce3df2a3a2a4798b7d41f16c252">eigensystemEuler1D::primToCons</a></div><div class="ttdeci">std::array&lt; real, 3 &gt; primToCons(const std::array&lt; real, 3 &gt; &amp;chars)</div><div class="ttdef"><b>定义</b> <a href="eigen_system_8cpp_source.html#l00270">eigenSystem.cpp:270</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a1443983e371e1d6bd8c055b560a620d0"><div class="ttname"><a href="classeigensystem_euler2_d.html#a1443983e371e1d6bd8c055b560a620d0">eigensystemEuler2D::xOrY</a></div><div class="ttdeci">bool xOrY</div><div class="ttdef"><b>定义</b> <a href="#l00028">eigenSystem.hpp:28</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a1fd30896a9fce8178242de2cb1d1ec53"><div class="ttname"><a href="classeigensystem_euler2_d.html#a1fd30896a9fce8178242de2cb1d1ec53">eigensystemEuler2D::charToPrim</a></div><div class="ttdeci">std::array&lt; real, 4 &gt; charToPrim(const std::array&lt; real, 4 &gt; &amp;chars)</div><div class="ttdef"><b>定义</b> <a href="eigen_system_8cpp_source.html#l00135">eigenSystem.cpp:135</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a34aaf43386751a7c30f09998b0d8d32d"><div class="ttname"><a href="classeigensystem_euler2_d.html#a34aaf43386751a7c30f09998b0d8d32d">eigensystemEuler2D::v</a></div><div class="ttdeci">real v</div><div class="ttdef"><b>定义</b> <a href="#l00027">eigenSystem.hpp:27</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a35eea25969b87cd9fe34887a6de2cd8a"><div class="ttname"><a href="classeigensystem_euler2_d.html#a35eea25969b87cd9fe34887a6de2cd8a">eigensystemEuler2D::c</a></div><div class="ttdeci">real c</div><div class="ttdef"><b>定义</b> <a href="#l00027">eigenSystem.hpp:27</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a4d83c1840ba2353c26d5edd7d7edcaab"><div class="ttname"><a href="classeigensystem_euler2_d.html#a4d83c1840ba2353c26d5edd7d7edcaab">eigensystemEuler2D::primToCons</a></div><div class="ttdeci">std::array&lt; real, 4 &gt; primToCons(const std::array&lt; real, 4 &gt; &amp;chars)</div><div class="ttdef"><b>定义</b> <a href="eigen_system_8cpp_source.html#l00126">eigenSystem.cpp:126</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a4e48207eb3b72ad3593f085a77d59efe"><div class="ttname"><a href="classeigensystem_euler2_d.html#a4e48207eb3b72ad3593f085a77d59efe">eigensystemEuler2D::r</a></div><div class="ttdeci">real r</div><div class="ttdef"><b>定义</b> <a href="#l00027">eigenSystem.hpp:27</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a5577b5f4e9d9eb8592dd66a9da4d7979"><div class="ttname"><a href="classeigensystem_euler2_d.html#a5577b5f4e9d9eb8592dd66a9da4d7979">eigensystemEuler2D::Vn</a></div><div class="ttdeci">real Vn</div><div class="ttdef"><b>定义</b> <a href="#l00027">eigenSystem.hpp:27</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a5ae492829418ece3e4a26d9ca001a79a"><div class="ttname"><a href="classeigensystem_euler2_d.html#a5ae492829418ece3e4a26d9ca001a79a">eigensystemEuler2D::u</a></div><div class="ttdeci">real u</div><div class="ttdef"><b>定义</b> <a href="#l00027">eigenSystem.hpp:27</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a64e8a15831bc94da1b97971b423f1b47"><div class="ttname"><a href="classeigensystem_euler2_d.html#a64e8a15831bc94da1b97971b423f1b47">eigensystemEuler2D::rightEig</a></div><div class="ttdeci">std::array&lt; real, 4 *4 &gt; rightEig</div><div class="ttdef"><b>定义</b> <a href="#l00032">eigenSystem.hpp:32</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a693f4fe6f3e1aef90fb1c09189053712"><div class="ttname"><a href="classeigensystem_euler2_d.html#a693f4fe6f3e1aef90fb1c09189053712">eigensystemEuler2D::leftEig</a></div><div class="ttdeci">std::array&lt; real, 4 *4 &gt; leftEig</div><div class="ttdef"><b>定义</b> <a href="#l00032">eigenSystem.hpp:32</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a82d97509b1e254835555db1c28a3d1a6"><div class="ttname"><a href="classeigensystem_euler2_d.html#a82d97509b1e254835555db1c28a3d1a6">eigensystemEuler2D::gamma</a></div><div class="ttdeci">real gamma</div><div class="ttdef"><b>定义</b> <a href="#l00027">eigenSystem.hpp:27</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a83783d3424ac20742dad03a7f192ca3e"><div class="ttname"><a href="classeigensystem_euler2_d.html#a83783d3424ac20742dad03a7f192ca3e">eigensystemEuler2D::h</a></div><div class="ttdeci">real h</div><div class="ttdef"><b>定义</b> <a href="#l00027">eigenSystem.hpp:27</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a879dd9157179a09e866c6003822d84d6"><div class="ttname"><a href="classeigensystem_euler2_d.html#a879dd9157179a09e866c6003822d84d6">eigensystemEuler2D::primToChar</a></div><div class="ttdeci">std::array&lt; real, 4 &gt; primToChar(const std::array&lt; real, 4 &gt; &amp;prim)</div><div class="ttdef"><b>定义</b> <a href="eigen_system_8cpp_source.html#l00089">eigenSystem.cpp:89</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_a9f77d80dd35891f80ca5e8f6871d2986"><div class="ttname"><a href="classeigensystem_euler2_d.html#a9f77d80dd35891f80ca5e8f6871d2986">eigensystemEuler2D::p</a></div><div class="ttdeci">real p</div><div class="ttdef"><b>定义</b> <a href="#l00027">eigenSystem.hpp:27</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_aa0c9ab7f72e4c7519d094e506c0460d1"><div class="ttname"><a href="classeigensystem_euler2_d.html#aa0c9ab7f72e4c7519d094e506c0460d1">eigensystemEuler2D::ek</a></div><div class="ttdeci">real ek</div><div class="ttdef"><b>定义</b> <a href="#l00027">eigenSystem.hpp:27</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_acfd6ae00b375d2acece60b0d5a7b0e77"><div class="ttname"><a href="classeigensystem_euler2_d.html#acfd6ae00b375d2acece60b0d5a7b0e77">eigensystemEuler2D::charToCons</a></div><div class="ttdeci">std::array&lt; real, 4 &gt; charToCons(const std::array&lt; real, 4 &gt; &amp;chars)</div><div class="ttdef"><b>定义</b> <a href="eigen_system_8cpp_source.html#l00171">eigenSystem.cpp:171</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_adb15bdc7c1d92235b3145b531f7d83fc"><div class="ttname"><a href="classeigensystem_euler2_d.html#adb15bdc7c1d92235b3145b531f7d83fc">eigensystemEuler2D::norm</a></div><div class="ttdeci">std::array&lt; real, 3 &gt; norm</div><div class="ttdef"><b>定义</b> <a href="#l00029">eigenSystem.hpp:29</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_aee360026b2b66eacbfe31d38325c01d2"><div class="ttname"><a href="classeigensystem_euler2_d.html#aee360026b2b66eacbfe31d38325c01d2">eigensystemEuler2D::consToPrim</a></div><div class="ttdeci">std::array&lt; real, 4 &gt; consToPrim(const std::array&lt; real, 4 &gt; &amp;chars)</div><div class="ttdef"><b>定义</b> <a href="eigen_system_8cpp_source.html#l00202">eigenSystem.cpp:202</a></div></div>
+<div class="ttc" id="aclasseigensystem_euler2_d_html_aee7af663cc25a3bd17fc570772e4a3a8"><div class="ttname"><a href="classeigensystem_euler2_d.html#aee7af663cc25a3bd17fc570772e4a3a8">eigensystemEuler2D::eigensystemEuler2D</a></div><div class="ttdeci">eigensystemEuler2D()</div><div class="ttdef"><b>定义</b> <a href="#l00010">eigenSystem.hpp:10</a></div></div>
+<div class="ttc" id="aeigen_system_8hpp_html_ab5892b7aaf06db754f888785dff0d031a5596231eabd6cf29050967d5ac83ad84"><div class="ttname"><a href="eigen_system_8hpp.html#ab5892b7aaf06db754f888785dff0d031a5596231eabd6cf29050967d5ac83ad84">Y</a></div><div class="ttdeci">@ Y</div><div class="ttdef"><b>定义</b> <a href="#l00006">eigenSystem.hpp:6</a></div></div>
+<div class="ttc" id="aeigen_system_8hpp_html_ab5892b7aaf06db754f888785dff0d031a58833a3110c570fb05130d40c365d1e4"><div class="ttname"><a href="eigen_system_8hpp.html#ab5892b7aaf06db754f888785dff0d031a58833a3110c570fb05130d40c365d1e4">X</a></div><div class="ttdeci">@ X</div><div class="ttdef"><b>定义</b> <a href="#l00006">eigenSystem.hpp:6</a></div></div>
+<div class="ttc" id="amacro_8hpp_html"><div class="ttname"><a href="macro_8hpp.html">macro.hpp</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a5f5a64ef503db0fc824df8320929b126"><div class="ttname"><a href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></div><div class="ttdeci">#define real</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00004">macro.hpp:4</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a8659b9de3e544ff142b153b076f30fd5"><div class="ttname"><a href="macro_8hpp.html#a8659b9de3e544ff142b153b076f30fd5">GAMMA</a></div><div class="ttdeci">#define GAMMA</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00028">macro.hpp:28</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

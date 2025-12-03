@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/block.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">block.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="block_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include&quot;<a class="code" href="data_8hpp.html">data.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cgnslib.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// 网格块类，用于存储和操作计算网格信息</span></div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_block.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="class_block.html">Block</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">// 网格输出相关函数</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_block.html#a7485e7d43203f125a1575feffaae4c99">outputCgns</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">// 坐标获取函数</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> <a class="code hl_function" href="class_block.html#a96dc7d5c2661fcc46522e41dcf432045">operator()</a>(<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// 网格索引相关函数</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    std::array&lt;int,3&gt; <a class="code hl_function" href="class_block.html#af1f083b6d0d8c778233d53f6e7de993a">getICMax</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    std::array&lt;int,3&gt; <a class="code hl_function" href="class_block.html#a5cde5a1b6d167597fe764f95673da3c1">getIMax</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// 网格属性获取函数</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> <a class="code hl_function" href="class_block.html#a05bb2800633c5399cd76e91ac5e44d83">getMinDh</a>(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_block.html#a2732bcd9aa93080b77201b5fe7a370f5">getDim</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// 坐标数据获取函数</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::vector&lt;real&gt; <a class="code hl_function" href="class_block.html#a5131f105d7b63eda998c3a1894190c90">getCellCoor</a>(<span class="keywordtype">int</span> idim);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    std::vector&lt;real&gt; <a class="code hl_function" href="class_block.html#ab0ce0fd0e8a9c4073c326e514e03e252">getVertexCoor</a>(<span class="keywordtype">int</span> idim);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::vector&lt;real&gt; <a class="code hl_function" href="class_block.html#aaabb9958abad0413cca70028891daf21">getCellInterval</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// 友元类，允许Initializer访问私有成员</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_block.html#a5d26a0aa56303737c594b42e7cdad905">   30</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_block.html#a5d26a0aa56303737c594b42e7cdad905">Initializer</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// 网格数据成员</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_block.html#ade4d9d18efadff1dc56f339e63f0349e">   33</a></span>    <a class="code hl_class" href="class_data.html">Data</a> <a class="code hl_variable" href="class_block.html#ade4d9d18efadff1dc56f339e63f0349e">coorVer</a>;      <span class="comment">// 网格顶点坐标数据</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_block.html#a2b4f8bd0ada32d96c0e1252890c6b7fc">   34</a></span>    <a class="code hl_class" href="class_data.html">Data</a> <a class="code hl_variable" href="class_block.html#a2b4f8bd0ada32d96c0e1252890c6b7fc">coorCel</a>;      <span class="comment">// 网格单元中心坐标数据</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_block.html#ab864fb90e9fc38cbb653ad2bf1b542e5">   35</a></span>    <a class="code hl_class" href="class_data.html">Data</a> <a class="code hl_variable" href="class_block.html#ab864fb90e9fc38cbb653ad2bf1b542e5">intervalCel</a>;  <span class="comment">// 网格单元间距数据</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// 网格基本信息</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_block.html#a9f7bba0947417ad6735196850b36b8ea">   38</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_block.html#a4209d4a7ca3a0b9fc861b4f883b1956d">nVer</a>,<a class="code hl_variable" href="class_block.html#a9f7bba0947417ad6735196850b36b8ea">nCel</a>;           <span class="comment">// 顶点数和单元数</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_block.html#a0cd1aa46cb0de60bc2373ff29508feb1">   39</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_block.html#a0cd1aa46cb0de60bc2373ff29508feb1">inited</a>=<span class="keyword">false</span>;       <span class="comment">// 网格是否已初始化标志</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_block.html#a47ca7e1638a9d6013b587cf9f2284b76">   40</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_block.html#a47ca7e1638a9d6013b587cf9f2284b76">dim</a>;                 <span class="comment">// 网格维度</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_block.html#a17bb2138760e6fa24b5120370cf8eff0">   41</a></span>    std::array&lt;int,3&gt; <a class="code hl_variable" href="class_block.html#af89c7744b8254e889907372722b8422d">iMax</a>,<a class="code hl_variable" href="class_block.html#a17bb2138760e6fa24b5120370cf8eff0">icMax</a>;  <span class="comment">// iMax通量点，icMax求解点</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
+</div>
+<div class="ttc" id="aclass_block_html"><div class="ttname"><a href="class_block.html">Block</a></div><div class="ttdef"><b>定义</b> <a href="#l00006">block.hpp:7</a></div></div>
+<div class="ttc" id="aclass_block_html_a05bb2800633c5399cd76e91ac5e44d83"><div class="ttname"><a href="class_block.html#a05bb2800633c5399cd76e91ac5e44d83">Block::getMinDh</a></div><div class="ttdeci">real getMinDh(int i)</div><div class="ttdef"><b>定义</b> <a href="block_8cpp_source.html#l00113">block.cpp:113</a></div></div>
+<div class="ttc" id="aclass_block_html_a0cd1aa46cb0de60bc2373ff29508feb1"><div class="ttname"><a href="class_block.html#a0cd1aa46cb0de60bc2373ff29508feb1">Block::inited</a></div><div class="ttdeci">bool inited</div><div class="ttdef"><b>定义</b> <a href="#l00039">block.hpp:39</a></div></div>
+<div class="ttc" id="aclass_block_html_a17bb2138760e6fa24b5120370cf8eff0"><div class="ttname"><a href="class_block.html#a17bb2138760e6fa24b5120370cf8eff0">Block::icMax</a></div><div class="ttdeci">std::array&lt; int, 3 &gt; icMax</div><div class="ttdef"><b>定义</b> <a href="#l00041">block.hpp:41</a></div></div>
+<div class="ttc" id="aclass_block_html_a2732bcd9aa93080b77201b5fe7a370f5"><div class="ttname"><a href="class_block.html#a2732bcd9aa93080b77201b5fe7a370f5">Block::getDim</a></div><div class="ttdeci">int getDim()</div><div class="ttdef"><b>定义</b> <a href="block_8cpp_source.html#l00072">block.cpp:72</a></div></div>
+<div class="ttc" id="aclass_block_html_a2b4f8bd0ada32d96c0e1252890c6b7fc"><div class="ttname"><a href="class_block.html#a2b4f8bd0ada32d96c0e1252890c6b7fc">Block::coorCel</a></div><div class="ttdeci">Data coorCel</div><div class="ttdef"><b>定义</b> <a href="#l00034">block.hpp:34</a></div></div>
+<div class="ttc" id="aclass_block_html_a4209d4a7ca3a0b9fc861b4f883b1956d"><div class="ttname"><a href="class_block.html#a4209d4a7ca3a0b9fc861b4f883b1956d">Block::nVer</a></div><div class="ttdeci">int nVer</div><div class="ttdef"><b>定义</b> <a href="#l00038">block.hpp:38</a></div></div>
+<div class="ttc" id="aclass_block_html_a47ca7e1638a9d6013b587cf9f2284b76"><div class="ttname"><a href="class_block.html#a47ca7e1638a9d6013b587cf9f2284b76">Block::dim</a></div><div class="ttdeci">int dim</div><div class="ttdef"><b>定义</b> <a href="#l00040">block.hpp:40</a></div></div>
+<div class="ttc" id="aclass_block_html_a5131f105d7b63eda998c3a1894190c90"><div class="ttname"><a href="class_block.html#a5131f105d7b63eda998c3a1894190c90">Block::getCellCoor</a></div><div class="ttdeci">std::vector&lt; real &gt; getCellCoor(int idim)</div><div class="ttdef"><b>定义</b> <a href="block_8cpp_source.html#l00077">block.cpp:77</a></div></div>
+<div class="ttc" id="aclass_block_html_a5cde5a1b6d167597fe764f95673da3c1"><div class="ttname"><a href="class_block.html#a5cde5a1b6d167597fe764f95673da3c1">Block::getIMax</a></div><div class="ttdeci">std::array&lt; int, 3 &gt; getIMax()</div><div class="ttdef"><b>定义</b> <a href="block_8cpp_source.html#l00066">block.cpp:66</a></div></div>
+<div class="ttc" id="aclass_block_html_a5d26a0aa56303737c594b42e7cdad905"><div class="ttname"><a href="class_block.html#a5d26a0aa56303737c594b42e7cdad905">Block::Initializer</a></div><div class="ttdeci">friend class Initializer</div><div class="ttdef"><b>定义</b> <a href="#l00030">block.hpp:30</a></div></div>
+<div class="ttc" id="aclass_block_html_a7485e7d43203f125a1575feffaae4c99"><div class="ttname"><a href="class_block.html#a7485e7d43203f125a1575feffaae4c99">Block::outputCgns</a></div><div class="ttdeci">void outputCgns()</div><div class="ttdef"><b>定义</b> <a href="block_8cpp_source.html#l00004">block.cpp:4</a></div></div>
+<div class="ttc" id="aclass_block_html_a96dc7d5c2661fcc46522e41dcf432045"><div class="ttname"><a href="class_block.html#a96dc7d5c2661fcc46522e41dcf432045">Block::operator()</a></div><div class="ttdeci">real operator()(int, int)</div><div class="ttdef"><b>定义</b> <a href="block_8cpp_source.html#l00055">block.cpp:55</a></div></div>
+<div class="ttc" id="aclass_block_html_a9f7bba0947417ad6735196850b36b8ea"><div class="ttname"><a href="class_block.html#a9f7bba0947417ad6735196850b36b8ea">Block::nCel</a></div><div class="ttdeci">int nCel</div><div class="ttdef"><b>定义</b> <a href="#l00038">block.hpp:38</a></div></div>
+<div class="ttc" id="aclass_block_html_aaabb9958abad0413cca70028891daf21"><div class="ttname"><a href="class_block.html#aaabb9958abad0413cca70028891daf21">Block::getCellInterval</a></div><div class="ttdeci">std::vector&lt; real &gt; getCellInterval(int)</div><div class="ttdef"><b>定义</b> <a href="block_8cpp_source.html#l00102">block.cpp:102</a></div></div>
+<div class="ttc" id="aclass_block_html_ab0ce0fd0e8a9c4073c326e514e03e252"><div class="ttname"><a href="class_block.html#ab0ce0fd0e8a9c4073c326e514e03e252">Block::getVertexCoor</a></div><div class="ttdeci">std::vector&lt; real &gt; getVertexCoor(int idim)</div><div class="ttdef"><b>定义</b> <a href="block_8cpp_source.html#l00089">block.cpp:89</a></div></div>
+<div class="ttc" id="aclass_block_html_ab864fb90e9fc38cbb653ad2bf1b542e5"><div class="ttname"><a href="class_block.html#ab864fb90e9fc38cbb653ad2bf1b542e5">Block::intervalCel</a></div><div class="ttdeci">Data intervalCel</div><div class="ttdef"><b>定义</b> <a href="#l00035">block.hpp:35</a></div></div>
+<div class="ttc" id="aclass_block_html_ade4d9d18efadff1dc56f339e63f0349e"><div class="ttname"><a href="class_block.html#ade4d9d18efadff1dc56f339e63f0349e">Block::coorVer</a></div><div class="ttdeci">Data coorVer</div><div class="ttdef"><b>定义</b> <a href="#l00033">block.hpp:33</a></div></div>
+<div class="ttc" id="aclass_block_html_af1f083b6d0d8c778233d53f6e7de993a"><div class="ttname"><a href="class_block.html#af1f083b6d0d8c778233d53f6e7de993a">Block::getICMax</a></div><div class="ttdeci">std::array&lt; int, 3 &gt; getICMax()</div><div class="ttdef"><b>定义</b> <a href="block_8cpp_source.html#l00061">block.cpp:61</a></div></div>
+<div class="ttc" id="aclass_block_html_af89c7744b8254e889907372722b8422d"><div class="ttname"><a href="class_block.html#af89c7744b8254e889907372722b8422d">Block::iMax</a></div><div class="ttdeci">std::array&lt; int, 3 &gt; iMax</div><div class="ttdef"><b>定义</b> <a href="#l00041">block.hpp:41</a></div></div>
+<div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>定义</b> <a href="data_8hpp_source.html#l00005">data.hpp:5</a></div></div>
+<div class="ttc" id="adata_8hpp_html"><div class="ttname"><a href="data_8hpp.html">data.hpp</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a5f5a64ef503db0fc824df8320929b126"><div class="ttname"><a href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></div><div class="ttdeci">#define real</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00004">macro.hpp:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

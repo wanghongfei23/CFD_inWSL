@@ -24,10 +24,10 @@
 */
 var menudata={children:[
 {text:"首页",url:"index.html"},
-{text:"数据类型",url:"annotated.html",children:[
-{text:"数据类型列表",url:"annotated.html"},
-{text:"数据类型索引",url:"classes.html"},
-{text:"数据项",url:"functions.html",children:[
+{text:"类",url:"annotated.html",children:[
+{text:"类列表",url:"annotated.html"},
+{text:"类索引",url:"classes.html"},
+{text:"类成员",url:"functions.html",children:[
 {text:"全部",url:"functions.html",children:[
 {text:"b",url:"functions.html#index_b"},
 {text:"c",url:"functions.html#index_c"},
@@ -43,7 +43,7 @@ var menudata={children:[
 {text:"t",url:"functions.html#index_t"},
 {text:"u",url:"functions.html#index_u"},
 {text:"x",url:"functions.html#index_x"}]},
-{text:"函数/子程序",url:"functions_func.html",children:[
+{text:"函数",url:"functions_func.html",children:[
 {text:"b",url:"functions_func.html#index_b"},
 {text:"d",url:"functions_func.html#index_d"},
 {text:"e",url:"functions_func.html#index_e"},
@@ -74,7 +74,7 @@ var menudata={children:[
 {text:"s",url:"globals.html#index_s"},
 {text:"t",url:"globals.html#index_t"},
 {text:"w",url:"globals.html#index_w"}]},
-{text:"函数/子程序",url:"globals_func.html"},
+{text:"函数",url:"globals_func.html"},
 {text:"变量",url:"globals_vars.html"},
 {text:"类型定义",url:"globals_type.html"},
 {text:"宏定义",url:"globals_defs.html"}]}]}]}

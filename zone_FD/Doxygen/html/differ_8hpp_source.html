@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/differ.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">differ.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="differ_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="data_8hpp.html">data.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="info_8hpp.html">info.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// 差分基类，用于计算空间导数</span></div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_differ.html">    9</a></span><span class="keyword">class </span><a class="code hl_function" href="class_differ.html#a5750264f62eca1ec9e8878c87f2a38aa">Differ</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">// 构造函数</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_differ.html#a5750264f62eca1ec9e8878c87f2a38aa">   12</a></span>    <a class="code hl_function" href="class_differ.html#a5750264f62eca1ec9e8878c87f2a38aa">Differ</a>() {};</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_differ.html#a6aefb451e6b4a6228bd3046c723fda00">   13</a></span>    <a class="code hl_function" href="class_differ.html#a6aefb451e6b4a6228bd3046c723fda00">Differ</a>(std::shared_ptr&lt;Data&gt; fluxesHalf_, std::shared_ptr&lt;Data&gt; fluxesNode_,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_class" href="class_data_reader.html">DataReader</a> rhsR_)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        : <a class="code hl_variable" href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">fluxesHalf</a>(fluxesHalf_)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        , <a class="code hl_variable" href="class_differ.html#a6cf35c38d7692508b49b30bd6cc5b03e">fluxesNode</a>(fluxesNode_)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        , <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>(rhsR_) {};</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// 初始化函数</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_differ.html#ac224b3a3646d2ddb1b3c8dc57c7df556">   20</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_differ.html#ac224b3a3646d2ddb1b3c8dc57c7df556">init</a>(std::shared_ptr&lt;Data&gt; fluxesHalf_,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        std::shared_ptr&lt;Data&gt; fluxesNode_, <a class="code hl_class" href="class_data_reader.html">DataReader</a> rhsR_)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_variable" href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">fluxesHalf</a> = fluxesHalf_;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_variable" href="class_differ.html#a6cf35c38d7692508b49b30bd6cc5b03e">fluxesNode</a> = fluxesNode_;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a> = rhsR_;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// 设置常数函数</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_differ.html#a7db9555cc2179082594e8c7c18ecbd67">   29</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_differ.html#a7db9555cc2179082594e8c7c18ecbd67">setConstantH</a>(<a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> constantH_) { <a class="code hl_variable" href="class_differ.html#aecaa77cd6ba2186eb7341b15cdacfd33">constantH</a> = constantH_; }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// 检查函数</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_differ.html#a9e67b5d061cd550246043519953bec06">   32</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_differ.html#a9e67b5d061cd550246043519953bec06">check</a>() { std::cout &lt;&lt; <span class="stringliteral">&quot;initialized successfully Differ\n&quot;</span>; }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// 求解接口函数</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_differ.html#a377a39ee2d4b442bac3d6e47544ed7bf">solve</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// 数据成员</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">   39</a></span>    std::shared_ptr&lt;Data&gt; <a class="code hl_variable" href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">fluxesHalf</a>;  <span class="comment">// 半节点通量数据</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_differ.html#a6cf35c38d7692508b49b30bd6cc5b03e">   40</a></span>    std::shared_ptr&lt;Data&gt; <a class="code hl_variable" href="class_differ.html#a6cf35c38d7692508b49b30bd6cc5b03e">fluxesNode</a>;  <span class="comment">// 节点通量数据</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">   41</a></span>    <a class="code hl_class" href="class_data_reader.html">DataReader</a> <a class="code hl_variable" href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">rhsR</a>;                   <span class="comment">// 右手端数据读取器</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_differ.html#aecaa77cd6ba2186eb7341b15cdacfd33">   42</a></span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> <a class="code hl_variable" href="class_differ.html#aecaa77cd6ba2186eb7341b15cdacfd33">constantH</a>;                    <span class="comment">// 常数</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_differ.html#a3d4a31e9c32d28954436859b8a5385cd">   43</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_differ.html#a3d4a31e9c32d28954436859b8a5385cd">idim</a>;                          <span class="comment">// 维度索引</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// 显式六阶差分类</span></div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_explicit_dif6.html">   47</a></span><span class="keyword">class </span><a class="code hl_class" href="class_explicit_dif6.html">ExplicitDif6</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_differ.html#a5750264f62eca1ec9e8878c87f2a38aa">Differ</a> {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// 求解函数</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_explicit_dif6.html#ad45160fce5e3b00eab8d75d188cd3c9a">solve</a>() <span class="keyword">final</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">// 中点和节点六阶差分类</span></div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_mid_node_and_node_dif6.html">   54</a></span><span class="keyword">class </span><a class="code hl_class" href="class_mid_node_and_node_dif6.html">MidNodeAndNodeDif6</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_differ.html#a5750264f62eca1ec9e8878c87f2a38aa">Differ</a> {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// 求解函数</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_mid_node_and_node_dif6.html#a1c4c7b6686bf3ceab51ee24db48a67db">solve</a>() <span class="keyword">final</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
+</div>
+<div class="ttc" id="aclass_data_reader_html"><div class="ttname"><a href="class_data_reader.html">DataReader</a></div><div class="ttdef"><b>定义</b> <a href="data_8hpp_source.html#l00057">data.hpp:57</a></div></div>
+<div class="ttc" id="aclass_differ_html_a22755730928cb55e4cd84aeae301bab7"><div class="ttname"><a href="class_differ.html#a22755730928cb55e4cd84aeae301bab7">Differ::fluxesHalf</a></div><div class="ttdeci">std::shared_ptr&lt; Data &gt; fluxesHalf</div><div class="ttdef"><b>定义</b> <a href="#l00039">differ.hpp:39</a></div></div>
+<div class="ttc" id="aclass_differ_html_a377a39ee2d4b442bac3d6e47544ed7bf"><div class="ttname"><a href="class_differ.html#a377a39ee2d4b442bac3d6e47544ed7bf">Differ::solve</a></div><div class="ttdeci">virtual void solve()</div><div class="ttdef"><b>定义</b> <a href="differ_8cpp_source.html#l00007">differ.cpp:7</a></div></div>
+<div class="ttc" id="aclass_differ_html_a3d4a31e9c32d28954436859b8a5385cd"><div class="ttname"><a href="class_differ.html#a3d4a31e9c32d28954436859b8a5385cd">Differ::idim</a></div><div class="ttdeci">int idim</div><div class="ttdef"><b>定义</b> <a href="#l00043">differ.hpp:43</a></div></div>
+<div class="ttc" id="aclass_differ_html_a5750264f62eca1ec9e8878c87f2a38aa"><div class="ttname"><a href="class_differ.html#a5750264f62eca1ec9e8878c87f2a38aa">Differ::Differ</a></div><div class="ttdeci">Differ()</div><div class="ttdef"><b>定义</b> <a href="#l00012">differ.hpp:12</a></div></div>
+<div class="ttc" id="aclass_differ_html_a6aefb451e6b4a6228bd3046c723fda00"><div class="ttname"><a href="class_differ.html#a6aefb451e6b4a6228bd3046c723fda00">Differ::Differ</a></div><div class="ttdeci">Differ(std::shared_ptr&lt; Data &gt; fluxesHalf_, std::shared_ptr&lt; Data &gt; fluxesNode_, DataReader rhsR_)</div><div class="ttdef"><b>定义</b> <a href="#l00013">differ.hpp:13</a></div></div>
+<div class="ttc" id="aclass_differ_html_a6cf35c38d7692508b49b30bd6cc5b03e"><div class="ttname"><a href="class_differ.html#a6cf35c38d7692508b49b30bd6cc5b03e">Differ::fluxesNode</a></div><div class="ttdeci">std::shared_ptr&lt; Data &gt; fluxesNode</div><div class="ttdef"><b>定义</b> <a href="#l00040">differ.hpp:40</a></div></div>
+<div class="ttc" id="aclass_differ_html_a7db9555cc2179082594e8c7c18ecbd67"><div class="ttname"><a href="class_differ.html#a7db9555cc2179082594e8c7c18ecbd67">Differ::setConstantH</a></div><div class="ttdeci">void setConstantH(real constantH_)</div><div class="ttdef"><b>定义</b> <a href="#l00029">differ.hpp:29</a></div></div>
+<div class="ttc" id="aclass_differ_html_a90ba1cd32e929534b398a5a849a8c4cc"><div class="ttname"><a href="class_differ.html#a90ba1cd32e929534b398a5a849a8c4cc">Differ::rhsR</a></div><div class="ttdeci">DataReader rhsR</div><div class="ttdef"><b>定义</b> <a href="#l00041">differ.hpp:41</a></div></div>
+<div class="ttc" id="aclass_differ_html_a9e67b5d061cd550246043519953bec06"><div class="ttname"><a href="class_differ.html#a9e67b5d061cd550246043519953bec06">Differ::check</a></div><div class="ttdeci">void check()</div><div class="ttdef"><b>定义</b> <a href="#l00032">differ.hpp:32</a></div></div>
+<div class="ttc" id="aclass_differ_html_ac224b3a3646d2ddb1b3c8dc57c7df556"><div class="ttname"><a href="class_differ.html#ac224b3a3646d2ddb1b3c8dc57c7df556">Differ::init</a></div><div class="ttdeci">void init(std::shared_ptr&lt; Data &gt; fluxesHalf_, std::shared_ptr&lt; Data &gt; fluxesNode_, DataReader rhsR_)</div><div class="ttdef"><b>定义</b> <a href="#l00020">differ.hpp:20</a></div></div>
+<div class="ttc" id="aclass_differ_html_aecaa77cd6ba2186eb7341b15cdacfd33"><div class="ttname"><a href="class_differ.html#aecaa77cd6ba2186eb7341b15cdacfd33">Differ::constantH</a></div><div class="ttdeci">real constantH</div><div class="ttdef"><b>定义</b> <a href="#l00042">differ.hpp:42</a></div></div>
+<div class="ttc" id="aclass_explicit_dif6_html"><div class="ttname"><a href="class_explicit_dif6.html">ExplicitDif6</a></div><div class="ttdef"><b>定义</b> <a href="#l00047">differ.hpp:47</a></div></div>
+<div class="ttc" id="aclass_explicit_dif6_html_ad45160fce5e3b00eab8d75d188cd3c9a"><div class="ttname"><a href="class_explicit_dif6.html#ad45160fce5e3b00eab8d75d188cd3c9a">ExplicitDif6::solve</a></div><div class="ttdeci">void solve() final</div><div class="ttdef"><b>定义</b> <a href="differ_8cpp_source.html#l00023">differ.cpp:23</a></div></div>
+<div class="ttc" id="aclass_mid_node_and_node_dif6_html"><div class="ttname"><a href="class_mid_node_and_node_dif6.html">MidNodeAndNodeDif6</a></div><div class="ttdef"><b>定义</b> <a href="#l00054">differ.hpp:54</a></div></div>
+<div class="ttc" id="aclass_mid_node_and_node_dif6_html_a1c4c7b6686bf3ceab51ee24db48a67db"><div class="ttname"><a href="class_mid_node_and_node_dif6.html#a1c4c7b6686bf3ceab51ee24db48a67db">MidNodeAndNodeDif6::solve</a></div><div class="ttdeci">void solve() final</div><div class="ttdef"><b>定义</b> <a href="differ_8cpp_source.html#l00054">differ.cpp:54</a></div></div>
+<div class="ttc" id="adata_8hpp_html"><div class="ttname"><a href="data_8hpp.html">data.hpp</a></div></div>
+<div class="ttc" id="ainfo_8hpp_html"><div class="ttname"><a href="info_8hpp.html">info.hpp</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a5f5a64ef503db0fc824df8320929b126"><div class="ttname"><a href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></div><div class="ttdeci">#define real</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00004">macro.hpp:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

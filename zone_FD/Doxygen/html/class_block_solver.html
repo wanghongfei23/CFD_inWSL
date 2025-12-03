@@ -1,0 +1,1060 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: BlockSolver类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_block_solver-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">BlockSolver类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a>&gt;</code></p>
+<div class="dynheader">
+BlockSolver 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver__coll__graph.png" border="0" usemap="#a_block_solver_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_block_solver_coll__map" id="a_block_solver_coll__map">
+<area shape="rect" title=" " alt="" coords="1037,338,1129,364"/>
+<area shape="rect" href="class_cgns_i_o.html" title=" " alt="" coords="832,10,898,36"/>
+<area shape="poly" title=" " alt="" coords="913,22,967,34,993,46,1015,64,1029,86,1042,117,1062,197,1083,338,1078,336,1056,198,1037,119,1025,88,1011,67,990,51,965,39,914,27"/>
+<area shape="rect" href="class_info.html" title=" " alt="" coords="316,192,360,219"/>
+<area shape="poly" title=" " alt="" coords="373,194,435,181,514,168,604,160,695,162,790,170,865,182,900,192,935,207,973,228,1015,257,1036,275,1053,297,1077,338,1072,337,1049,300,1032,279,1012,261,970,233,933,212,898,197,864,187,789,175,695,167,604,165,515,173,436,186,376,199"/>
+<area shape="rect" href="class_initializer.html" title=" " alt="" coords="719,76,792,103"/>
+<area shape="poly" title=" " alt="" coords="369,181,418,150,477,123,543,106,609,95,720,89,716,91,610,100,544,111,479,128,421,155,372,185"/>
+<area shape="rect" href="class_sp_distributor.html" title=" " alt="" coords="816,610,913,636"/>
+<area shape="poly" title=" " alt="" coords="355,230,408,309,489,413,539,467,594,518,655,564,720,602,768,617,818,624,813,625,767,622,718,607,652,569,591,522,535,470,485,416,404,312,355,235"/>
+<area shape="rect" href="class_solver_type.html" title=" " alt="" coords="608,702,695,728"/>
+<area shape="poly" title=" " alt="" coords="340,232,347,317,354,372,366,431,384,492,408,552,440,608,480,657,504,674,527,679,553,680,585,687,618,701,613,701,584,692,553,686,527,684,502,679,477,661,435,611,403,554,379,494,361,432,349,373,342,318,339,237"/>
+<area shape="rect" href="class_source_term.html" title=" " alt="" coords="819,240,910,267"/>
+<area shape="poly" title=" " alt="" coords="374,201,589,191,707,193,756,197,793,204,824,219,851,240,846,240,822,224,791,210,755,203,707,198,590,197,377,206"/>
+<area shape="rect" href="class_block.html" title=" " alt="" coords="838,338,892,364"/>
+<area shape="poly" title=" " alt="" coords="907,348,1040,350,1034,352,908,354"/>
+<area shape="rect" href="class_data.html" title=" " alt="" coords="627,435,676,462"/>
+<area shape="poly" title=" " alt="" coords="690,460,737,474,793,484,854,487,884,484,912,476,962,453,1006,422,1043,389,1068,366,1072,363,1046,393,1009,426,965,458,914,482,884,489,854,492,792,490,736,479,691,465"/>
+<area shape="poly" title=" " alt="" coords="670,421,691,398,717,378,748,365,780,356,840,351,835,353,781,362,750,370,720,383,694,402,673,425"/>
+<area shape="rect" href="class_equation.html" title=" " alt="" coords="828,395,901,422"/>
+<area shape="poly" title=" " alt="" coords="691,450,740,451,791,444,819,434,846,421,842,424,821,439,793,450,740,457,692,455"/>
+<area shape="poly" title=" " alt="" coords="661,474,683,527,700,553,720,576,760,594,818,612,813,612,758,599,717,580,695,556,679,529,659,479"/>
+<area shape="poly" title=" " alt="" coords="654,418,660,387,672,351,690,314,717,284,740,269,767,259,821,252,816,254,768,264,743,273,720,288,695,317,677,353,665,389,659,421"/>
+<area shape="poly" title=" " alt="" coords="807,80,856,78,911,82,966,96,992,109,1015,125,1037,149,1054,177,1066,207,1075,238,1083,295,1084,339,1080,336,1078,296,1070,239,1061,208,1049,179,1033,152,1012,129,989,113,964,101,910,87,856,83,809,85"/>
+<area shape="poly" title=" " alt="" coords="915,399,963,390,1013,378,1055,364,1051,366,1014,383,964,395,917,404"/>
+<area shape="rect" href="class_bnds.html" title=" " alt="" coords="626,752,677,779"/>
+<area shape="poly" title=" " alt="" coords="692,762,740,757,791,744,863,718,918,691,964,654,1011,595,1029,565,1043,532,1063,466,1074,406,1079,367,1082,362,1079,407,1068,467,1048,534,1033,567,1016,598,968,658,921,696,866,723,793,750,741,762,693,767"/>
+<area shape="poly" title=" " alt="" coords="691,754,748,738,791,721,812,701,830,678,855,638,859,635,835,681,816,705,793,725,750,743,693,759"/>
+<area shape="poly" title=" " alt="" coords="916,600,966,573,990,554,1011,533,1039,489,1059,441,1071,397,1078,367,1081,362,1076,398,1064,443,1044,492,1015,537,994,558,969,577,919,605"/>
+<area shape="poly" title=" " alt="" coords="709,695,791,663,840,638,845,636,793,668,711,700"/>
+<area shape="rect" href="classpro_1_1proxy.html" title=" " alt="" coords="222,682,454,708"/>
+<area shape="poly" title=" " alt="" coords="446,708,478,711,610,715,605,717,478,716,447,713"/>
+<area shape="rect" title=" " alt="" coords="8,654,170,712"/>
+<area shape="poly" title=" " alt="" coords="185,685,224,688,219,691,187,690"/>
+<area shape="rect" href="classpro_1_1proxy.html" title=" " alt="" coords="244,746,432,788"/>
+<area shape="poly" title=" " alt="" coords="447,763,515,756,584,743,623,730,628,728,585,748,516,762,448,768"/>
+<area shape="rect" title=" " alt="" coords="5,736,173,795"/>
+<area shape="poly" title=" " alt="" coords="188,764,246,765,241,768,189,769"/>
+<area shape="rect" href="classpro_1_1proxy.html" title=" " alt="" coords="248,823,428,866"/>
+<area shape="poly" title=" " alt="" coords="443,840,480,834,516,825,551,810,583,790,592,779,595,767,598,753,606,739,620,730,624,728,610,742,603,755,600,768,596,781,586,794,554,815,518,830,481,840,444,846"/>
+<area shape="rect" title=" " alt="" coords="9,819,169,878"/>
+<area shape="poly" title=" " alt="" coords="183,844,250,845,245,847,184,849"/>
+<area shape="rect" href="classpro_1_1proxy.html" title=" " alt="" coords="254,898,422,924"/>
+<area shape="poly" title=" " alt="" coords="438,915,476,912,515,903,551,888,582,865,593,851,598,836,597,806,594,774,597,757,606,739,618,730,622,727,610,742,602,758,599,774,602,806,603,837,598,853,586,869,554,893,517,908,477,917,438,921"/>
+<area shape="rect" title=" " alt="" coords="16,902,162,944"/>
+<area shape="poly" title=" " alt="" coords="177,916,256,915,251,915,178,921"/>
+<area shape="poly" title=" " alt="" coords="911,271,1053,337,1048,338,911,277"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae184bae9628dd79ce563c131fa51d8cf" id="r_ae184bae9628dd79ce563c131fa51d8cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae184bae9628dd79ce563c131fa51d8cf">BlockSolver</a> ()</td></tr>
+<tr class="memitem:a6ef07942b5ef3ed920aa4dc38264f9c4" id="r_a6ef07942b5ef3ed920aa4dc38264f9c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ef07942b5ef3ed920aa4dc38264f9c4">BlockSolver</a> (<a class="el" href="class_info.html">Info</a> *)</td></tr>
+<tr class="memitem:a60c053f7a38083aab6f25dc48515122a" id="r_a60c053f7a38083aab6f25dc48515122a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60c053f7a38083aab6f25dc48515122a">~BlockSolver</a> ()</td></tr>
+<tr class="memitem:ae372dfb8d712322916273f5352d17096" id="r_ae372dfb8d712322916273f5352d17096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae372dfb8d712322916273f5352d17096">solve</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>)</td></tr>
+<tr class="memitem:a0f29b8074f5d43e176ac656f084a025d" id="r_a0f29b8074f5d43e176ac656f084a025d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f29b8074f5d43e176ac656f084a025d">outputGrid</a> ()</td></tr>
+<tr class="memitem:add03b267a1937f5f9ab38e6e81cc0d7c" id="r_add03b267a1937f5f9ab38e6e81cc0d7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add03b267a1937f5f9ab38e6e81cc0d7c">outputCons</a> ()</td></tr>
+<tr class="memitem:a21dc82d623d574bee297b9a57006a8b4" id="r_a21dc82d623d574bee297b9a57006a8b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21dc82d623d574bee297b9a57006a8b4">outputPrim</a> ()</td></tr>
+<tr class="memitem:a95f73fc2b0bba0b24da3eab91f84ac15" id="r_a95f73fc2b0bba0b24da3eab91f84ac15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95f73fc2b0bba0b24da3eab91f84ac15">stepsLoop</a> ()</td></tr>
+<tr class="memitem:ae641ab097ce6fd1402bc2a411828ae92" id="r_ae641ab097ce6fd1402bc2a411828ae92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae641ab097ce6fd1402bc2a411828ae92">stepsLoopCFL</a> ()</td></tr>
+<tr class="memitem:a736738d2e404c1e60714d603303a5004" id="r_a736738d2e404c1e60714d603303a5004"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a736738d2e404c1e60714d603303a5004">stepsLoopDTS</a> ()</td></tr>
+<tr class="memitem:a105bdac2459eedfccd45c99eb4197c5a" id="r_a105bdac2459eedfccd45c99eb4197c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a105bdac2459eedfccd45c99eb4197c5a">Test</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a81fe908d17b9bd8de6ded969206c9391" id="r_a81fe908d17b9bd8de6ded969206c9391"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81fe908d17b9bd8de6ded969206c9391">timesteps</a> = 0</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a238b1f4f31dc8fdbddfcf890c80fa645" id="r_a238b1f4f31dc8fdbddfcf890c80fa645"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a238b1f4f31dc8fdbddfcf890c80fa645">RK3_SSP</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>)</td></tr>
+<tr class="memitem:a1069cefb8de82cf97a391762bbc651fe" id="r_a1069cefb8de82cf97a391762bbc651fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1069cefb8de82cf97a391762bbc651fe">RK4_SSP</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>)</td></tr>
+<tr class="memitem:a7c8af668de7608ff082765bdf1b4278c" id="r_a7c8af668de7608ff082765bdf1b4278c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c8af668de7608ff082765bdf1b4278c">DTS_Euler</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>)</td></tr>
+<tr class="memitem:a8306ec4e9850e33c897eac0bf401fe87" id="r_a8306ec4e9850e33c897eac0bf401fe87"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8306ec4e9850e33c897eac0bf401fe87">calLocalCFL</a> ()</td></tr>
+<tr class="memitem:aa5ea345e5efaabe2388390c1c1659d71" id="r_aa5ea345e5efaabe2388390c1c1659d71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5ea345e5efaabe2388390c1c1659d71">getTimeIntervalExplicit</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aed784f77965139a544b51627b2f95d19" id="r_aed784f77965139a544b51627b2f95d19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_cgns_i_o.html">CgnsIO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed784f77965139a544b51627b2f95d19">cgnsIO</a></td></tr>
+<tr class="memitem:a92457433d141439d10702bb57f68d51e" id="r_a92457433d141439d10702bb57f68d51e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_info.html">Info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92457433d141439d10702bb57f68d51e">info</a></td></tr>
+<tr class="memitem:a72023b0eb96021755ce007894a2ddb4f" id="r_a72023b0eb96021755ce007894a2ddb4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_block.html">Block</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72023b0eb96021755ce007894a2ddb4f">block</a></td></tr>
+<tr class="memitem:a848412954b8eb8183602f3a768dc575f" id="r_a848412954b8eb8183602f3a768dc575f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_initializer.html">Initializer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a848412954b8eb8183602f3a768dc575f">initer</a></td></tr>
+<tr class="memitem:ad166b858c00ed498e3d4bdf214735875" id="r_ad166b858c00ed498e3d4bdf214735875"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_equation.html">Equation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad166b858c00ed498e3d4bdf214735875">eqn</a></td></tr>
+<tr class="memitem:a19e9d5a7b192bd1bfb5d787c2b974264" id="r_a19e9d5a7b192bd1bfb5d787c2b974264"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bnds.html">Bnds</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19e9d5a7b192bd1bfb5d787c2b974264">bnds</a></td></tr>
+<tr class="memitem:ad506bd2fa7e49b038f563d01cd7df3a4" id="r_ad506bd2fa7e49b038f563d01cd7df3a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sp_distributor.html">SpDistributor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad506bd2fa7e49b038f563d01cd7df3a4">spDis</a></td></tr>
+<tr class="memitem:a326c724ed1012a295ab020c850626c32" id="r_a326c724ed1012a295ab020c850626c32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a326c724ed1012a295ab020c850626c32">cons</a></td></tr>
+<tr class="memitem:afa1f3a68bcf4c9482d525964b86f3181" id="r_afa1f3a68bcf4c9482d525964b86f3181"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa1f3a68bcf4c9482d525964b86f3181">rhs</a></td></tr>
+<tr class="memitem:a126f520dc4fa284271e8018d26397d0e" id="r_a126f520dc4fa284271e8018d26397d0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_source_term.html">SourceTerm</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a126f520dc4fa284271e8018d26397d0e">sourceTerm</a></td></tr>
+<tr class="memitem:a6cabde1b3e14b55391cb37ad93775e0b" id="r_a6cabde1b3e14b55391cb37ad93775e0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896">TimeMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cabde1b3e14b55391cb37ad93775e0b">timeMethod</a> = <a class="el" href="macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896ae672a0d703868ebfcb0df2ee5bbecaa2">RK3SSP</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00007">7</a> 行定义.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="ae184bae9628dd79ce563c131fa51d8cf" name="ae184bae9628dd79ce563c131fa51d8cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae184bae9628dd79ce563c131fa51d8cf">&#9670;&#160;</a></span>BlockSolver() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BlockSolver::BlockSolver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00004">4</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6ef07942b5ef3ed920aa4dc38264f9c4" name="a6ef07942b5ef3ed920aa4dc38264f9c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef07942b5ef3ed920aa4dc38264f9c4">&#9670;&#160;</a></span>BlockSolver() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BlockSolver::BlockSolver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_info.html">Info</a> *</td>          <td class="paramname"><span class="paramname"><em>info_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a60c053f7a38083aab6f25dc48515122a" name="a60c053f7a38083aab6f25dc48515122a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60c053f7a38083aab6f25dc48515122a">&#9670;&#160;</a></span>~BlockSolver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BlockSolver::~BlockSolver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00126">126</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a8306ec4e9850e33c897eac0bf401fe87" name="a8306ec4e9850e33c897eac0bf401fe87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8306ec4e9850e33c897eac0bf401fe87">&#9670;&#160;</a></span>calLocalCFL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; BlockSolver::calLocalCFL </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00247">247</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a8306ec4e9850e33c897eac0bf401fe87_cgraph.png" border="0" usemap="#aclass_block_solver_a8306ec4e9850e33c897eac0bf401fe87_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a8306ec4e9850e33c897eac0bf401fe87_cgraph" id="aclass_block_solver_a8306ec4e9850e33c897eac0bf401fe87_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,178,32"/>
+<area shape="rect" href="class_data.html#abb641c4a4830c60d4396201388dd9faf" title=" " alt="" coords="226,5,311,32"/>
+<area shape="poly" title=" " alt="" coords="178,16,213,19,207,19,178,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a8306ec4e9850e33c897eac0bf401fe87_icgraph.png" border="0" usemap="#aclass_block_solver_a8306ec4e9850e33c897eac0bf401fe87_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a8306ec4e9850e33c897eac0bf401fe87_icgraph" id="aclass_block_solver_a8306ec4e9850e33c897eac0bf401fe87_icgraph">
+<area shape="rect" title=" " alt="" coords="451,5,623,32"/>
+<area shape="rect" href="class_block_solver.html#a7c8af668de7608ff082765bdf1b4278c" title=" " alt="" coords="240,5,403,32"/>
+<area shape="poly" title=" " alt="" coords="432,19,404,21,404,16,438,19"/>
+<area shape="rect" href="class_block_solver.html#a736738d2e404c1e60714d603303a5004" title=" " alt="" coords="5,5,192,32"/>
+<area shape="poly" title=" " alt="" coords="221,19,192,21,192,16,227,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7c8af668de7608ff082765bdf1b4278c" name="a7c8af668de7608ff082765bdf1b4278c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c8af668de7608ff082765bdf1b4278c">&#9670;&#160;</a></span>DTS_Euler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::DTS_Euler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00089">89</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a7c8af668de7608ff082765bdf1b4278c_cgraph.png" border="0" usemap="#aclass_block_solver_a7c8af668de7608ff082765bdf1b4278c_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a7c8af668de7608ff082765bdf1b4278c_cgraph" id="aclass_block_solver_a7c8af668de7608ff082765bdf1b4278c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,169,83"/>
+<area shape="rect" href="class_block_solver.html#a8306ec4e9850e33c897eac0bf401fe87" title=" " alt="" coords="217,5,389,32"/>
+<area shape="poly" title=" " alt="" coords="146,53,230,35,226,37,148,58"/>
+<area shape="rect" href="class_data.html#a24c913514c9a6c3dd579d723c4d7f970" title=" " alt="" coords="255,56,351,83"/>
+<area shape="poly" title=" " alt="" coords="169,67,241,69,236,70,169,72"/>
+<area shape="rect" href="class_data.html#a8aa18eb21e69ff516764c1f2da4adea7" title=" " alt="" coords="249,107,357,133"/>
+<area shape="poly" title=" " alt="" coords="147,81,236,103,231,105,147,86"/>
+<area shape="rect" href="class_data.html#abb641c4a4830c60d4396201388dd9faf" title=" " alt="" coords="437,5,522,32"/>
+<area shape="poly" title=" " alt="" coords="389,16,424,18,419,19,390,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a7c8af668de7608ff082765bdf1b4278c_icgraph.png" border="0" usemap="#aclass_block_solver_a7c8af668de7608ff082765bdf1b4278c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a7c8af668de7608ff082765bdf1b4278c_icgraph" id="aclass_block_solver_a7c8af668de7608ff082765bdf1b4278c_icgraph">
+<area shape="rect" title=" " alt="" coords="240,5,403,32"/>
+<area shape="rect" href="class_block_solver.html#a736738d2e404c1e60714d603303a5004" title=" " alt="" coords="5,5,192,32"/>
+<area shape="poly" title=" " alt="" coords="221,19,192,21,192,16,227,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa5ea345e5efaabe2388390c1c1659d71" name="aa5ea345e5efaabe2388390c1c1659d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ea345e5efaabe2388390c1c1659d71">&#9670;&#160;</a></span>getTimeIntervalExplicit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> BlockSolver::getTimeIntervalExplicit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00318">318</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_aa5ea345e5efaabe2388390c1c1659d71_cgraph.png" border="0" usemap="#aclass_block_solver_aa5ea345e5efaabe2388390c1c1659d71_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_aa5ea345e5efaabe2388390c1c1659d71_cgraph" id="aclass_block_solver_aa5ea345e5efaabe2388390c1c1659d71_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,195,48"/>
+<area shape="rect" href="class_data.html#abb641c4a4830c60d4396201388dd9faf" title=" " alt="" coords="243,13,328,40"/>
+<area shape="poly" title=" " alt="" coords="195,24,230,26,225,27,195,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_aa5ea345e5efaabe2388390c1c1659d71_icgraph.png" border="0" usemap="#aclass_block_solver_aa5ea345e5efaabe2388390c1c1659d71_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_aa5ea345e5efaabe2388390c1c1659d71_icgraph" id="aclass_block_solver_aa5ea345e5efaabe2388390c1c1659d71_icgraph">
+<area shape="rect" title=" " alt="" coords="335,5,524,48"/>
+<area shape="rect" href="class_block_solver.html#ae641ab097ce6fd1402bc2a411828ae92" title=" " alt="" coords="103,13,287,40"/>
+<area shape="poly" title=" " alt="" coords="317,27,288,29,288,24,322,27"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,55,40"/>
+<area shape="poly" title=" " alt="" coords="85,28,55,29,55,24,90,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="add03b267a1937f5f9ab38e6e81cc0d7c" name="add03b267a1937f5f9ab38e6e81cc0d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add03b267a1937f5f9ab38e6e81cc0d7c">&#9670;&#160;</a></span>outputCons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::outputCons </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00142">142</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0f29b8074f5d43e176ac656f084a025d" name="a0f29b8074f5d43e176ac656f084a025d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f29b8074f5d43e176ac656f084a025d">&#9670;&#160;</a></span>outputGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::outputGrid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00137">137</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a0f29b8074f5d43e176ac656f084a025d_icgraph.png" border="0" usemap="#aclass_block_solver_a0f29b8074f5d43e176ac656f084a025d_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a0f29b8074f5d43e176ac656f084a025d_icgraph" id="aclass_block_solver_a0f29b8074f5d43e176ac656f084a025d_icgraph">
+<area shape="rect" title=" " alt="" coords="337,81,496,108"/>
+<area shape="rect" href="class_block_solver.html#a95f73fc2b0bba0b24da3eab91f84ac15" title=" " alt="" coords="116,5,276,32"/>
+<area shape="poly" title=" " alt="" coords="367,75,288,47,251,35,251,30,290,41,372,74"/>
+<area shape="rect" href="class_block_solver.html#ae641ab097ce6fd1402bc2a411828ae92" title=" " alt="" coords="104,56,288,83"/>
+<area shape="poly" title=" " alt="" coords="319,84,289,83,288,77,324,83"/>
+<area shape="rect" href="class_block_solver.html#a736738d2e404c1e60714d603303a5004" title=" " alt="" coords="103,107,289,133"/>
+<area shape="poly" title=" " alt="" coords="319,106,290,112,289,107,324,105"/>
+<area shape="rect" href="class_block_solver.html#a105bdac2459eedfccd45c99eb4197c5a" title=" " alt="" coords="134,157,258,184"/>
+<area shape="poly" title=" " alt="" coords="372,114,290,148,252,159,251,154,288,143,367,115"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="99,35,56,43,54,38,103,31"/>
+<area shape="poly" title=" " alt="" coords="88,55,56,50,54,45,92,51"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a21dc82d623d574bee297b9a57006a8b4" name="a21dc82d623d574bee297b9a57006a8b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21dc82d623d574bee297b9a57006a8b4">&#9670;&#160;</a></span>outputPrim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::outputPrim </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00146">146</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a21dc82d623d574bee297b9a57006a8b4_icgraph.png" border="0" usemap="#aclass_block_solver_a21dc82d623d574bee297b9a57006a8b4_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a21dc82d623d574bee297b9a57006a8b4_icgraph" id="aclass_block_solver_a21dc82d623d574bee297b9a57006a8b4_icgraph">
+<area shape="rect" title=" " alt="" coords="337,56,499,83"/>
+<area shape="rect" href="class_block_solver.html#a95f73fc2b0bba0b24da3eab91f84ac15" title=" " alt="" coords="116,5,276,32"/>
+<area shape="poly" title=" " alt="" coords="339,52,257,35,258,30,344,51"/>
+<area shape="rect" href="class_block_solver.html#ae641ab097ce6fd1402bc2a411828ae92" title=" " alt="" coords="104,56,288,83"/>
+<area shape="poly" title=" " alt="" coords="319,70,289,72,288,67,324,69"/>
+<area shape="rect" href="class_block_solver.html#a736738d2e404c1e60714d603303a5004" title=" " alt="" coords="103,107,289,133"/>
+<area shape="poly" title=" " alt="" coords="344,86,258,109,257,103,339,87"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="99,35,56,43,54,38,103,31"/>
+<area shape="poly" title=" " alt="" coords="88,55,56,50,55,45,92,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a238b1f4f31dc8fdbddfcf890c80fa645" name="a238b1f4f31dc8fdbddfcf890c80fa645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a238b1f4f31dc8fdbddfcf890c80fa645">&#9670;&#160;</a></span>RK3_SSP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::RK3_SSP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00043">43</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a238b1f4f31dc8fdbddfcf890c80fa645_icgraph.png" border="0" usemap="#aclass_block_solver_a238b1f4f31dc8fdbddfcf890c80fa645_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a238b1f4f31dc8fdbddfcf890c80fa645_icgraph" id="aclass_block_solver_a238b1f4f31dc8fdbddfcf890c80fa645_icgraph">
+<area shape="rect" title=" " alt="" coords="513,56,673,83"/>
+<area shape="rect" href="class_block_solver.html#ae372dfb8d712322916273f5352d17096" title=" " alt="" coords="335,31,465,57"/>
+<area shape="poly" title=" " alt="" coords="495,57,465,55,466,50,500,57"/>
+<area shape="rect" href="class_block_solver.html#a105bdac2459eedfccd45c99eb4197c5a" title=" " alt="" coords="338,81,462,108"/>
+<area shape="poly" title=" " alt="" coords="500,82,463,89,462,84,495,82"/>
+<area shape="rect" href="class_block_solver.html#a95f73fc2b0bba0b24da3eab91f84ac15" title=" " alt="" coords="115,5,274,32"/>
+<area shape="poly" title=" " alt="" coords="317,34,275,31,275,26,322,34"/>
+<area shape="rect" href="class_block_solver.html#ae641ab097ce6fd1402bc2a411828ae92" title=" " alt="" coords="103,56,287,83"/>
+<area shape="poly" title=" " alt="" coords="317,54,288,61,287,55,322,53"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="98,35,56,43,54,38,102,31"/>
+<area shape="poly" title=" " alt="" coords="87,55,55,50,55,45,92,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1069cefb8de82cf97a391762bbc651fe" name="a1069cefb8de82cf97a391762bbc651fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1069cefb8de82cf97a391762bbc651fe">&#9670;&#160;</a></span>RK4_SSP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::RK4_SSP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae372dfb8d712322916273f5352d17096" name="ae372dfb8d712322916273f5352d17096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae372dfb8d712322916273f5352d17096">&#9670;&#160;</a></span>solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::solve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00120">120</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ae372dfb8d712322916273f5352d17096_cgraph.png" border="0" usemap="#aclass_block_solver_ae372dfb8d712322916273f5352d17096_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_ae372dfb8d712322916273f5352d17096_cgraph" id="aclass_block_solver_ae372dfb8d712322916273f5352d17096_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" href="class_block_solver.html#a238b1f4f31dc8fdbddfcf890c80fa645" title=" " alt="" coords="184,5,343,32"/>
+<area shape="poly" title=" " alt="" coords="136,16,171,18,165,19,136,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ae372dfb8d712322916273f5352d17096_icgraph.png" border="0" usemap="#aclass_block_solver_ae372dfb8d712322916273f5352d17096_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_ae372dfb8d712322916273f5352d17096_icgraph" id="aclass_block_solver_ae372dfb8d712322916273f5352d17096_icgraph">
+<area shape="rect" title=" " alt="" coords="335,31,465,57"/>
+<area shape="rect" href="class_block_solver.html#a95f73fc2b0bba0b24da3eab91f84ac15" title=" " alt="" coords="115,5,274,32"/>
+<area shape="poly" title=" " alt="" coords="317,34,275,31,275,26,322,34"/>
+<area shape="rect" href="class_block_solver.html#ae641ab097ce6fd1402bc2a411828ae92" title=" " alt="" coords="103,56,287,83"/>
+<area shape="poly" title=" " alt="" coords="322,54,288,61,287,55,317,54"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="98,35,56,43,54,38,102,31"/>
+<area shape="poly" title=" " alt="" coords="87,54,55,50,55,45,92,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a95f73fc2b0bba0b24da3eab91f84ac15" name="a95f73fc2b0bba0b24da3eab91f84ac15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f73fc2b0bba0b24da3eab91f84ac15">&#9670;&#160;</a></span>stepsLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::stepsLoop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00152">152</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_cgraph.png" border="0" usemap="#aclass_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_cgraph" id="aclass_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,165,83"/>
+<area shape="rect" href="class_block_solver.html#a0f29b8074f5d43e176ac656f084a025d" title=" " alt="" coords="214,5,374,32"/>
+<area shape="poly" title=" " alt="" coords="142,53,224,35,219,37,144,58"/>
+<area shape="rect" href="class_block_solver.html#a21dc82d623d574bee297b9a57006a8b4" title=" " alt="" coords="213,56,375,83"/>
+<area shape="poly" title=" " alt="" coords="164,67,200,69,194,70,165,72"/>
+<area shape="rect" href="class_block_solver.html#ae372dfb8d712322916273f5352d17096" title=" " alt="" coords="229,107,359,133"/>
+<area shape="poly" title=" " alt="" coords="143,81,224,102,219,103,143,86"/>
+<area shape="rect" href="class_block_solver.html#a238b1f4f31dc8fdbddfcf890c80fa645" title=" " alt="" coords="423,107,582,133"/>
+<area shape="poly" title=" " alt="" coords="359,117,410,120,405,120,359,123"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_icgraph.png" border="0" usemap="#aclass_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_icgraph" id="aclass_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,262,32"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae641ab097ce6fd1402bc2a411828ae92" name="ae641ab097ce6fd1402bc2a411828ae92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae641ab097ce6fd1402bc2a411828ae92">&#9670;&#160;</a></span>stepsLoopCFL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::stepsLoopCFL </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00170">170</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ae641ab097ce6fd1402bc2a411828ae92_cgraph.png" border="0" usemap="#aclass_block_solver_ae641ab097ce6fd1402bc2a411828ae92_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_ae641ab097ce6fd1402bc2a411828ae92_cgraph" id="aclass_block_solver_ae641ab097ce6fd1402bc2a411828ae92_cgraph">
+<area shape="rect" title=" " alt="" coords="5,97,190,124"/>
+<area shape="rect" href="class_block_solver.html#aa5ea345e5efaabe2388390c1c1659d71" title=" " alt="" coords="238,5,427,48"/>
+<area shape="poly" title=" " alt="" coords="135,94,237,57,257,53,252,55,239,63,138,99"/>
+<area shape="rect" href="class_block_solver.html#a0f29b8074f5d43e176ac656f084a025d" title=" " alt="" coords="253,72,412,99"/>
+<area shape="poly" title=" " alt="" coords="189,98,240,95,235,96,191,103"/>
+<area shape="rect" href="class_block_solver.html#a21dc82d623d574bee297b9a57006a8b4" title=" " alt="" coords="251,123,414,149"/>
+<area shape="poly" title=" " alt="" coords="190,118,238,125,233,126,190,123"/>
+<area shape="rect" href="class_block_solver.html#ae372dfb8d712322916273f5352d17096" title=" " alt="" coords="267,173,398,200"/>
+<area shape="poly" title=" " alt="" coords="135,122,238,159,265,169,259,169,237,164,134,127"/>
+<area shape="rect" href="class_data.html#abb641c4a4830c60d4396201388dd9faf" title=" " alt="" coords="512,13,597,40"/>
+<area shape="poly" title=" " alt="" coords="427,24,499,26,494,27,428,29"/>
+<area shape="rect" href="class_block_solver.html#a238b1f4f31dc8fdbddfcf890c80fa645" title=" " alt="" coords="475,173,634,200"/>
+<area shape="poly" title=" " alt="" coords="398,184,462,187,457,187,398,189"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ae641ab097ce6fd1402bc2a411828ae92_icgraph.png" border="0" usemap="#aclass_block_solver_ae641ab097ce6fd1402bc2a411828ae92_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_ae641ab097ce6fd1402bc2a411828ae92_icgraph" id="aclass_block_solver_ae641ab097ce6fd1402bc2a411828ae92_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,287,32"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a736738d2e404c1e60714d603303a5004" name="a736738d2e404c1e60714d603303a5004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a736738d2e404c1e60714d603303a5004">&#9670;&#160;</a></span>stepsLoopDTS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::stepsLoopDTS </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00273">273</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a736738d2e404c1e60714d603303a5004_cgraph.png" border="0" usemap="#aclass_block_solver_a736738d2e404c1e60714d603303a5004_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a736738d2e404c1e60714d603303a5004_cgraph" id="aclass_block_solver_a736738d2e404c1e60714d603303a5004_cgraph">
+<area shape="rect" title=" " alt="" coords="5,183,192,209"/>
+<area shape="rect" href="class_block_solver.html#a7c8af668de7608ff082765bdf1b4278c" title=" " alt="" coords="240,81,403,108"/>
+<area shape="poly" title=" " alt="" coords="129,180,277,112,275,117,131,184"/>
+<area shape="rect" href="class_data.html#abb641c4a4830c60d4396201388dd9faf" title=" " alt="" coords="671,81,757,108"/>
+<area shape="poly" title=" " alt="" coords="192,189,426,173,541,159,623,143,653,130,679,118,684,116,655,135,624,148,542,165,427,178,193,194"/>
+<area shape="rect" href="class_block_solver.html#a0f29b8074f5d43e176ac656f084a025d" title=" " alt="" coords="242,208,401,235"/>
+<area shape="poly" title=" " alt="" coords="192,204,229,210,223,211,192,209"/>
+<area shape="rect" href="class_block_solver.html#a21dc82d623d574bee297b9a57006a8b4" title=" " alt="" coords="240,259,402,285"/>
+<area shape="poly" title=" " alt="" coords="138,207,241,244,263,254,258,253,239,249,137,213"/>
+<area shape="rect" href="class_block_solver.html#a8306ec4e9850e33c897eac0bf401fe87" title=" " alt="" coords="451,5,623,32"/>
+<area shape="poly" title=" " alt="" coords="355,78,450,41,475,36,470,38,452,47,357,83"/>
+<area shape="rect" href="class_data.html#a24c913514c9a6c3dd579d723c4d7f970" title=" " alt="" coords="489,56,585,83"/>
+<area shape="poly" title=" " alt="" coords="403,83,476,76,471,78,404,88"/>
+<area shape="rect" href="class_data.html#a8aa18eb21e69ff516764c1f2da4adea7" title=" " alt="" coords="483,107,591,133"/>
+<area shape="poly" title=" " alt="" coords="403,102,470,111,465,112,404,107"/>
+<area shape="poly" title=" " alt="" coords="592,30,624,42,681,73,676,73,622,46,592,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a105bdac2459eedfccd45c99eb4197c5a" name="a105bdac2459eedfccd45c99eb4197c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105bdac2459eedfccd45c99eb4197c5a">&#9670;&#160;</a></span>Test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::Test </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00237">237</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a105bdac2459eedfccd45c99eb4197c5a_cgraph.png" border="0" usemap="#aclass_block_solver_a105bdac2459eedfccd45c99eb4197c5a_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a105bdac2459eedfccd45c99eb4197c5a_cgraph" id="aclass_block_solver_a105bdac2459eedfccd45c99eb4197c5a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,130,57"/>
+<area shape="rect" href="class_block_solver.html#a0f29b8074f5d43e176ac656f084a025d" title=" " alt="" coords="178,5,337,32"/>
+<area shape="poly" title=" " alt="" coords="130,33,165,31,160,32,131,38"/>
+<area shape="rect" href="class_block_solver.html#a238b1f4f31dc8fdbddfcf890c80fa645" title=" " alt="" coords="178,56,337,83"/>
+<area shape="poly" title=" " alt="" coords="130,50,165,56,160,57,130,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a72023b0eb96021755ce007894a2ddb4f" name="a72023b0eb96021755ce007894a2ddb4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72023b0eb96021755ce007894a2ddb4f">&#9670;&#160;</a></span>block</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_block.html">Block</a>* BlockSolver::block</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a19e9d5a7b192bd1bfb5d787c2b974264" name="a19e9d5a7b192bd1bfb5d787c2b974264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19e9d5a7b192bd1bfb5d787c2b974264">&#9670;&#160;</a></span>bnds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bnds.html">Bnds</a>* BlockSolver::bnds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00042">42</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aed784f77965139a544b51627b2f95d19" name="aed784f77965139a544b51627b2f95d19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed784f77965139a544b51627b2f95d19">&#9670;&#160;</a></span>cgnsIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cgns_i_o.html">CgnsIO</a> BlockSolver::cgnsIO</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a326c724ed1012a295ab020c850626c32" name="a326c724ed1012a295ab020c850626c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326c724ed1012a295ab020c850626c32">&#9670;&#160;</a></span>cons</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a>* BlockSolver::cons</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad166b858c00ed498e3d4bdf214735875" name="ad166b858c00ed498e3d4bdf214735875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad166b858c00ed498e3d4bdf214735875">&#9670;&#160;</a></span>eqn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_equation.html">Equation</a>* BlockSolver::eqn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00041">41</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a92457433d141439d10702bb57f68d51e" name="a92457433d141439d10702bb57f68d51e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92457433d141439d10702bb57f68d51e">&#9670;&#160;</a></span>info</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_info.html">Info</a>* BlockSolver::info</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a848412954b8eb8183602f3a768dc575f" name="a848412954b8eb8183602f3a768dc575f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a848412954b8eb8183602f3a768dc575f">&#9670;&#160;</a></span>initer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_initializer.html">Initializer</a>* BlockSolver::initer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00040">40</a> 行定义.</p>
+
+</div>
+</div>
+<a id="afa1f3a68bcf4c9482d525964b86f3181" name="afa1f3a68bcf4c9482d525964b86f3181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa1f3a68bcf4c9482d525964b86f3181">&#9670;&#160;</a></span>rhs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a> * BlockSolver::rhs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a126f520dc4fa284271e8018d26397d0e" name="a126f520dc4fa284271e8018d26397d0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126f520dc4fa284271e8018d26397d0e">&#9670;&#160;</a></span>sourceTerm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_source_term.html">SourceTerm</a>* BlockSolver::sourceTerm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00045">45</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad506bd2fa7e49b038f563d01cd7df3a4" name="ad506bd2fa7e49b038f563d01cd7df3a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad506bd2fa7e49b038f563d01cd7df3a4">&#9670;&#160;</a></span>spDis</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sp_distributor.html">SpDistributor</a>* BlockSolver::spDis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00043">43</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6cabde1b3e14b55391cb37ad93775e0b" name="a6cabde1b3e14b55391cb37ad93775e0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cabde1b3e14b55391cb37ad93775e0b">&#9670;&#160;</a></span>timeMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896">TimeMethod</a> BlockSolver::timeMethod = <a class="el" href="macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896ae672a0d703868ebfcb0df2ee5bbecaa2">RK3SSP</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00057">57</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a81fe908d17b9bd8de6ded969206c9391" name="a81fe908d17b9bd8de6ded969206c9391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81fe908d17b9bd8de6ded969206c9391">&#9670;&#160;</a></span>timesteps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long BlockSolver::timesteps = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/<a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a></li>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/src/<a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
