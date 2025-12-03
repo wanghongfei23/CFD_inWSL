@@ -1,0 +1,39 @@
+<map id="SpaceDis::fluxAt" name="SpaceDis::fluxAt">
+<area shape="rect" id="Node000001" title=" " alt="" coords="457,208,577,235"/>
+<area shape="rect" id="Node000002" href="$class_space_dis.html#a4fd8182286483d87980e1e35453d9230" title="计算精度测试问题的通量" alt="" coords="201,56,409,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="498,194,461,145,436,119,408,97,385,86,385,81,410,92,440,115,465,141,503,195"/>
+<area shape="rect" id="Node000004" href="$class_space_dis.html#aa123d38e0a2f5b844c4948c02cf53834" title="计算Burgers方程的通量" alt="" coords="218,360,392,387"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="503,247,465,301,440,328,410,350,386,362,384,357,408,346,436,324,461,298,498,249"/>
+<area shape="rect" id="Node000006" href="$class_space_dis.html#ae19ef12b12b2a4bf0f37ed8519391de2" title="计算对流项通量" alt="" coords="225,411,384,437"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="509,248,495,285,474,326,446,366,411,401,386,414,384,409,407,397,442,363,470,323,490,283,505,251"/>
+<area shape="rect" id="Node000007" href="$class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2" title="计算一维欧拉方程的界面通量" alt="" coords="217,107,392,133"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="486,198,451,172,408,148,378,137,377,131,410,143,454,168,491,198"/>
+<area shape="rect" id="Node000008" href="$class_space_dis.html#abfe367e73fb15973a560da82a948d32f" title="计算二维欧拉方程的界面通量" alt="" coords="217,5,392,32"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="504,193,490,160,470,120,442,80,407,46,389,35,388,30,411,42,446,76,474,117,495,158,509,194"/>
+<area shape="rect" id="Node000009" href="$class_space_dis.html#a01ab79d30caa15227bd817a6ca38ef47" title=" " alt="" coords="235,157,374,184"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="441,204,364,187,364,182,446,203"/>
+<area shape="rect" id="Node000010" href="$class_space_dis.html#ae25c0de65811d18361cd2dd9a73a8a33" title="HCS格式差分计算" alt="" coords="240,208,370,235"/>
+<area shape="poly" id="edge17_Node000001_Node000010" title=" " alt="" coords="439,222,370,224,369,219,444,220"/>
+<area shape="rect" id="Node000011" href="$class_space_dis.html#a4567c73c0c323760216c40a5a6ea7ff6" title="MND6格式差分计算" alt="" coords="236,259,374,285"/>
+<area shape="poly" id="edge20_Node000001_Node000011" title=" " alt="" coords="441,240,365,261,363,256,446,238"/>
+<area shape="rect" id="Node000012" href="$class_space_dis.html#a993154aab67998dcb51d1af2ae1fc2fd" title=" " alt="" coords="221,309,388,336"/>
+<area shape="poly" id="edge23_Node000001_Node000012" title=" " alt="" coords="491,244,454,275,410,300,379,311,377,306,408,295,451,270,486,246"/>
+<area shape="rect" id="Node000003" href="$class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,208,151,235"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="210,91,202,97,166,123,135,154,92,209,87,206,131,150,163,119,199,92,214,87"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="203,352,199,350,187,338,180,325,173,299,168,273,162,261,151,249,136,238,135,233,154,245,166,258,173,271,179,297,185,323,191,334,202,346,209,352"/>
+<area shape="rect" id="Node000005" href="$class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,259,153,285"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="217,355,200,350,142,319,98,288,98,283,145,315,202,346,222,355"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="209,406,199,401,183,382,176,362,173,324,171,286,164,267,151,249,137,238,137,233,155,245,169,265,176,285,178,323,181,361,188,379,203,397,214,407"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="210,404,199,401,163,374,131,343,89,288,90,283,135,339,166,370,202,396,215,405"/>
+<area shape="poly" id="edge11_Node000007_Node000003" title=" " alt="" coords="218,140,202,148,145,179,100,209,96,206,142,174,200,143,222,137"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="204,143,202,147,191,159,185,171,179,196,173,222,166,236,154,249,137,260,134,256,151,245,162,233,168,220,173,195,180,169,187,156,199,143,208,139"/>
+<area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="207,41,202,46,160,85,127,131,103,175,88,209,83,207,98,173,123,128,156,81,199,42,211,37"/>
+<area shape="poly" id="edge16_Node000009_Node000003" title=" " alt="" coords="225,190,143,210,140,205,229,186"/>
+<area shape="poly" id="edge15_Node000009_Node000005" title=" " alt="" coords="218,188,202,198,187,210,179,222,169,236,154,249,132,260,128,256,151,244,165,232,174,219,184,206,199,194,223,185"/>
+<area shape="poly" id="edge19_Node000010_Node000003" title=" " alt="" coords="222,223,152,224,150,219,226,220"/>
+<area shape="poly" id="edge18_Node000010_Node000005" title=" " alt="" coords="225,240,143,261,141,256,229,237"/>
+<area shape="poly" id="edge22_Node000011_Node000003" title=" " alt="" coords="225,256,142,238,141,233,230,253"/>
+<area shape="poly" id="edge21_Node000011_Node000005" title=" " alt="" coords="218,273,154,275,152,269,223,271"/>
+<area shape="poly" id="edge25_Node000012_Node000003" title=" " alt="" coords="210,304,199,300,184,287,174,274,165,261,151,249,131,238,130,233,154,244,169,258,179,271,187,283,202,295,215,303"/>
+<area shape="poly" id="edge24_Node000012_Node000005" title=" " alt="" coords="225,307,142,289,142,283,230,304"/>
+</map>

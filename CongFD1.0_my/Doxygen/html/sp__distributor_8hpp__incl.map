@@ -1,0 +1,58 @@
+<map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/sp_distributor.hpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/sp_distributor.hpp">
+<area shape="rect" id="Node000001" title="定义空间分布器类，用于分发空间离散任务" alt="" coords="596,5,842,80"/>
+<area shape="rect" id="Node000002" href="$_bnds_8hpp.html" title="定义边界条件管理类" alt="" coords="543,128,620,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="669,79,613,121,610,117,664,82"/>
+<area shape="rect" id="Node000019" href="$_space_dis_8hpp.html" title=" " alt="" coords="667,128,770,155"/>
+<area shape="poly" id="edge22_Node000001_Node000019" title=" " alt="" coords="720,78,721,114,716,111,717,83"/>
+<area shape="rect" id="Node000024" title=" " alt="" coords="794,128,851,155"/>
+<area shape="poly" id="edge32_Node000001_Node000024" title=" " alt="" coords="759,78,801,118,795,117,757,83"/>
+<area shape="rect" id="Node000003" href="$info_8hpp.html" title="定义求解器相关信息的类" alt="" coords="425,277,492,304"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="540,147,514,155,484,165,455,181,433,204,428,218,429,233,442,265,437,264,424,234,422,217,428,201,452,177,481,160,513,150,545,145"/>
+<area shape="rect" id="Node000017" href="$one_d_bnd_8hpp.html" title=" " alt="" coords="487,203,588,229"/>
+<area shape="poly" id="edge16_Node000002_Node000017" title=" " alt="" coords="576,153,555,191,551,187,572,157"/>
+<area shape="rect" id="Node000018" href="$data_8hpp.html" title=" " alt="" coords="583,277,654,304"/>
+<area shape="poly" id="edge21_Node000002_Node000018" title=" " alt="" coords="587,153,603,202,616,263,611,261,597,203,584,157"/>
+<area shape="rect" id="Node000004" href="$macro_8hpp.html" title="定义项目中使用的宏、枚举类型和通用函数" alt="" coords="496,352,578,379"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="473,302,515,342,510,341,472,307"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="940,427,990,453"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="579,368,728,387,825,403,928,427,922,426,824,408,727,393,579,374"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="668,427,729,453"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="566,377,659,420,654,420,565,382"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="752,427,824,453"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="579,376,740,424,735,424,578,381"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="847,427,916,453"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="579,372,835,426,830,426,579,377"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,427,59,453"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="493,370,316,390,198,406,75,429,73,424,197,401,316,385,498,369"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="83,427,141,453"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="493,372,350,393,156,429,155,423,349,388,499,371"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="164,427,238,453"/>
+<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="498,376,254,429,253,423,494,373"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="262,427,327,453"/>
+<area shape="poly" id="edge11_Node000004_Node000012" title=" " alt="" coords="498,379,342,427,341,422,493,379"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="351,427,409,453"/>
+<area shape="poly" id="edge12_Node000004_Node000013" title=" " alt="" coords="513,379,422,422,421,417,507,380"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="432,427,490,453"/>
+<area shape="poly" id="edge13_Node000004_Node000014" title=" " alt="" coords="527,378,487,418,484,414,522,380"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="514,427,560,453"/>
+<area shape="poly" id="edge14_Node000004_Node000015" title=" " alt="" coords="539,377,539,413,535,409,535,381"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="584,427,645,453"/>
+<area shape="poly" id="edge15_Node000004_Node000016" title=" " alt="" coords="552,377,593,417,588,415,550,382"/>
+<area shape="poly" id="edge20_Node000017_Node000003" title=" " alt="" coords="526,229,485,269,482,264,521,231"/>
+<area shape="poly" id="edge17_Node000017_Node000004" title=" " alt="" coords="539,228,540,338,535,335,535,232"/>
+<area shape="poly" id="edge18_Node000017_Node000018" title=" " alt="" coords="552,227,596,267,591,267,551,232"/>
+<area shape="poly" id="edge19_Node000018_Node000004" title=" " alt="" coords="607,303,564,344,561,339,602,306"/>
+<area shape="poly" id="edge27_Node000019_Node000003" title=" " alt="" coords="664,153,551,180,502,193,476,205,468,217,463,232,459,263,454,261,457,230,463,215,473,201,500,188,550,175,669,151"/>
+<area shape="poly" id="edge26_Node000019_Node000017" title=" " alt="" coords="685,156,584,199,582,194,690,154"/>
+<area shape="rect" id="Node000020" href="$block_8hpp.html" title="定义Block类，用于处理计算网格块的相关数据和操作" alt="" coords="849,203,927,229"/>
+<area shape="poly" id="edge23_Node000019_Node000020" title=" " alt="" coords="748,153,847,196,842,196,748,158"/>
+<area shape="rect" id="Node000022" title=" " alt="" coords="662,203,826,229"/>
+<area shape="poly" id="edge28_Node000019_Node000022" title=" " alt="" coords="724,153,737,189,732,187,722,158"/>
+<area shape="rect" id="Node000023" href="$eigen_system_8hpp.html" title="定义特征系统相关的类，用于欧拉方程的特征分解" alt="" coords="903,277,1025,304"/>
+<area shape="poly" id="edge29_Node000019_Node000023" title=" " alt="" coords="771,151,874,177,917,190,940,201,951,214,958,230,965,263,961,260,953,232,946,217,937,205,915,194,872,182,771,157"/>
+<area shape="poly" id="edge24_Node000020_Node000018" title=" " alt="" coords="846,228,670,278,669,273,851,227"/>
+<area shape="rect" id="Node000021" title=" " alt="" coords="806,277,879,304"/>
+<area shape="poly" id="edge25_Node000020_Node000021" title=" " alt="" coords="882,228,860,266,857,262,878,231"/>
+<area shape="poly" id="edge31_Node000023_Node000004" title=" " alt="" coords="905,302,594,357,594,352,900,303"/>
+<area shape="poly" id="edge30_Node000023_Node000005" title=" " alt="" coords="966,303,967,413,963,410,962,306"/>
+</map>

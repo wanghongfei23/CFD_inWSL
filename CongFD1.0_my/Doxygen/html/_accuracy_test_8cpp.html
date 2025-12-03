@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/AccuracyTest.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/AccuracyTest.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>精度测试程序实现文件  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a>&quot;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;format&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+AccuracyTest.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_accuracy_test_8cpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2_accuracy_test_8cpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2_accuracy_test_8cpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2_accuracy_test_8cpp">
+<area shape="rect" title="精度测试程序实现文件" alt="" coords="837,5,1083,80"/>
+<area shape="rect" href="_space_dis_8hpp.html" title=" " alt="" coords="639,128,742,155"/>
+<area shape="poly" title=" " alt="" coords="855,82,741,125,739,120,860,80"/>
+<area shape="rect" title=" " alt="" coords="933,427,992,453"/>
+<area shape="poly" title=" " alt="" coords="962,79,962,215,962,292,964,413,960,410,957,292,957,215,958,83"/>
+<area shape="rect" title=" " alt="" coords="998,128,1063,155"/>
+<area shape="poly" title=" " alt="" coords="987,78,1015,116,1010,114,986,83"/>
+<area shape="rect" href="block_8hpp.html" title="定义Block类，用于处理计算网格块的相关数据和操作" alt="" coords="708,203,785,229"/>
+<area shape="poly" title=" " alt="" coords="701,153,730,191,725,190,699,158"/>
+<area shape="rect" href="one_d_bnd_8hpp.html" title=" " alt="" coords="583,203,683,229"/>
+<area shape="poly" title=" " alt="" coords="683,154,654,193,651,188,678,157"/>
+<area shape="rect" href="info_8hpp.html" title="定义求解器相关信息的类" alt="" coords="462,277,530,304"/>
+<area shape="poly" title=" " alt="" coords="636,146,570,153,494,164,427,181,402,192,386,204,380,214,380,223,393,242,419,258,451,274,445,274,416,263,390,246,375,225,375,213,382,201,399,187,425,176,493,159,569,148,641,144"/>
+<area shape="rect" title=" " alt="" coords="396,203,559,229"/>
+<area shape="poly" title=" " alt="" coords="651,156,530,200,528,195,656,154"/>
+<area shape="rect" href="eigen_system_8hpp.html" title="定义特征系统相关的类，用于欧拉方程的特征分解" alt="" coords="799,277,921,304"/>
+<area shape="poly" title=" " alt="" coords="721,152,760,173,799,201,827,231,848,265,843,263,823,235,795,205,757,177,720,158"/>
+<area shape="rect" href="data_8hpp.html" title=" " alt="" coords="604,277,676,304"/>
+<area shape="poly" title=" " alt="" coords="730,229,672,271,670,266,725,231"/>
+<area shape="rect" title=" " alt="" coords="702,277,775,304"/>
+<area shape="poly" title=" " alt="" coords="747,228,744,263,739,260,743,232"/>
+<area shape="rect" href="macro_8hpp.html" title="定义项目中使用的宏、枚举类型和通用函数" alt="" coords="513,352,596,379"/>
+<area shape="poly" title=" " alt="" coords="627,303,582,344,579,340,623,306"/>
+<area shape="rect" title=" " alt="" coords="859,427,909,453"/>
+<area shape="poly" title=" " alt="" coords="596,371,705,391,846,426,841,426,704,397,596,376"/>
+<area shape="rect" title=" " alt="" coords="428,427,489,453"/>
+<area shape="poly" title=" " alt="" coords="540,378,488,420,486,415,535,380"/>
+<area shape="rect" title=" " alt="" coords="512,427,584,453"/>
+<area shape="poly" title=" " alt="" coords="555,377,552,413,548,409,551,381"/>
+<area shape="rect" title=" " alt="" coords="607,427,675,453"/>
+<area shape="poly" title=" " alt="" coords="571,377,617,417,612,416,569,382"/>
+<area shape="rect" title=" " alt="" coords="700,427,753,453"/>
+<area shape="poly" title=" " alt="" coords="585,377,689,422,683,421,584,382"/>
+<area shape="rect" title=" " alt="" coords="778,427,835,453"/>
+<area shape="poly" title=" " alt="" coords="596,376,766,426,760,426,596,381"/>
+<area shape="rect" title=" " alt="" coords="5,427,80,453"/>
+<area shape="poly" title=" " alt="" coords="510,371,335,393,95,429,94,424,335,388,515,370"/>
+<area shape="rect" title=" " alt="" coords="104,427,168,453"/>
+<area shape="poly" title=" " alt="" coords="511,372,371,395,184,429,183,424,370,390,516,371"/>
+<area shape="rect" title=" " alt="" coords="192,427,250,453"/>
+<area shape="poly" title=" " alt="" coords="515,374,405,398,266,429,265,424,404,393,510,375"/>
+<area shape="poly" title=" " alt="" coords="596,369,736,389,921,426,915,426,735,395,596,374"/>
+<area shape="rect" title=" " alt="" coords="274,427,320,453"/>
+<area shape="poly" title=" " alt="" coords="515,377,336,428,335,423,510,377"/>
+<area shape="rect" title=" " alt="" coords="344,427,405,453"/>
+<area shape="poly" title=" " alt="" coords="526,379,420,423,418,418,521,380"/>
+<area shape="poly" title=" " alt="" coords="636,228,640,263,635,260,633,232"/>
+<area shape="poly" title=" " alt="" coords="626,228,594,279,566,340,562,336,590,276,621,231"/>
+<area shape="poly" title=" " alt="" coords="612,229,534,272,532,267,607,231"/>
+<area shape="poly" title=" " alt="" coords="507,302,537,340,532,339,505,307"/>
+<area shape="poly" title=" " alt="" coords="809,304,612,353,611,348,804,305"/>
+<area shape="poly" title=" " alt="" coords="864,303,882,413,877,410,860,306"/>
+</map>
+</div>
+</div>
+<p><a href="_accuracy_test_8cpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a09658b07218fdb123135467122823cc9" id="r_a09658b07218fdb123135467122823cc9"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09658b07218fdb123135467122823cc9">gkx</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> x, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> k)</td></tr>
+<tr class="memdesc:a09658b07218fdb123135467122823cc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算测试函数值  <br /></td></tr>
+<tr class="memitem:a7b3e4e2024848b18fa90d79c36cbb93b" id="r_a7b3e4e2024848b18fa90d79c36cbb93b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b3e4e2024848b18fa90d79c36cbb93b">dgkx</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> x, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> k)</td></tr>
+<tr class="memdesc:a7b3e4e2024848b18fa90d79c36cbb93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算测试函数导数值  <br /></td></tr>
+<tr class="memitem:a44d0ab4b73566e46a9530dc0a54eb897" id="r_a44d0ab4b73566e46a9530dc0a54eb897"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44d0ab4b73566e46a9530dc0a54eb897">getError</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> h, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> k)</td></tr>
+<tr class="memdesc:a44d0ab4b73566e46a9530dc0a54eb897"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算误差  <br /></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">主函数  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>精度测试程序实现文件 </p>
+<p>该程序用于测试数值方法的精度，通过计算已知解析解的导数问题来评估数值方法的收敛阶。 </p>
+
+<p class="definition">在文件 <a class="el" href="_accuracy_test_8cpp_source.html">AccuracyTest.cpp</a> 中定义.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="a7b3e4e2024848b18fa90d79c36cbb93b" name="a7b3e4e2024848b18fa90d79c36cbb93b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b3e4e2024848b18fa90d79c36cbb93b">&#9670;&#160;</a></span>dgkx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> dgkx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>k</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算测试函数导数值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>自变量 </td></tr>
+    <tr><td class="paramname">k</td><td>指数参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>导数值 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_accuracy_test_8cpp_source.html">AccuracyTest.cpp</a> 第 <a class="el" href="_accuracy_test_8cpp_source.html#l00030">30</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_accuracy_test_8cpp_a7b3e4e2024848b18fa90d79c36cbb93b_icgraph.png" border="0" usemap="#a_accuracy_test_8cpp_a7b3e4e2024848b18fa90d79c36cbb93b_icgraph" loading="lazy" alt=""/></div>
+<map name="a_accuracy_test_8cpp_a7b3e4e2024848b18fa90d79c36cbb93b_icgraph" id="a_accuracy_test_8cpp_a7b3e4e2024848b18fa90d79c36cbb93b_icgraph">
+<area shape="rect" title="计算测试函数导数值" alt="" coords="218,5,267,32"/>
+<area shape="rect" href="_accuracy_test_8cpp.html#a44d0ab4b73566e46a9530dc0a54eb897" title="计算误差" alt="" coords="103,5,170,32"/>
+<area shape="poly" title=" " alt="" coords="200,19,171,21,170,16,205,19"/>
+<area shape="rect" href="_accuracy_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数" alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a44d0ab4b73566e46a9530dc0a54eb897" name="a44d0ab4b73566e46a9530dc0a54eb897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44d0ab4b73566e46a9530dc0a54eb897">&#9670;&#160;</a></span>getError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; getError </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>k</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算误差 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h</td><td>网格步长 </td></tr>
+    <tr><td class="paramname">k</td><td>指数参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>包含L1、L2和Linf范数误差的数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_accuracy_test_8cpp_source.html">AccuracyTest.cpp</a> 第 <a class="el" href="_accuracy_test_8cpp_source.html#l00042">42</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_accuracy_test_8cpp_a44d0ab4b73566e46a9530dc0a54eb897_cgraph.png" border="0" usemap="#a_accuracy_test_8cpp_a44d0ab4b73566e46a9530dc0a54eb897_cgraph" loading="lazy" alt=""/></div>
+<map name="a_accuracy_test_8cpp_a44d0ab4b73566e46a9530dc0a54eb897_cgraph" id="a_accuracy_test_8cpp_a44d0ab4b73566e46a9530dc0a54eb897_cgraph">
+<area shape="rect" title="计算误差" alt="" coords="5,157,73,184"/>
+<area shape="rect" href="_accuracy_test_8cpp.html#a7b3e4e2024848b18fa90d79c36cbb93b" title="计算测试函数导数值" alt="" coords="182,5,231,32"/>
+<area shape="poly" title=" " alt="" coords="43,156,69,101,91,69,119,42,142,29,168,22,165,26,144,34,122,46,95,73,74,103,48,158"/>
+<area shape="rect" href="class_space_dis.html#a3c563bda4d46190cc899af410bdc0cf7" title=" " alt="" coords="135,56,278,83"/>
+<area shape="poly" title=" " alt="" coords="49,155,79,124,119,92,134,87,130,91,122,97,82,128,54,158"/>
+<area shape="rect" href="_accuracy_test_8cpp.html#a09658b07218fdb123135467122823cc9" title="计算测试函数值" alt="" coords="185,107,228,133"/>
+<area shape="poly" title=" " alt="" coords="72,158,120,143,172,129,168,132,121,148,75,162"/>
+<area shape="rect" href="class_space_dis.html#a7cefe594270b1fc5a3932fac4948f145" title=" " alt="" coords="121,157,292,184"/>
+<area shape="poly" title=" " alt="" coords="72,168,107,169,103,172,74,173"/>
+<area shape="rect" href="class_space_dis.html#a6aabd30875fee7bf06b59bc5ad4f6855" title=" " alt="" coords="140,208,272,235"/>
+<area shape="poly" title=" " alt="" coords="73,178,121,193,146,202,141,204,120,199,74,184"/>
+<area shape="rect" href="class_space_dis.html#a66a9a5ec5989dabd9a1e50962cdac7bc" title=" " alt="" coords="137,259,276,285"/>
+<area shape="poly" title=" " alt="" coords="52,182,82,214,122,244,134,252,129,253,119,249,79,218,51,187"/>
+<area shape="rect" href="class_data.html#a8aa18eb21e69ff516764c1f2da4adea7" title="将数据设置为零" alt="" coords="152,309,260,336"/>
+<area shape="poly" title=" " alt="" coords="46,182,74,238,95,269,122,295,141,308,135,307,119,299,91,272,69,241,44,187"/>
+<area shape="rect" href="class_space_dis.html#a27c27a8844a4473abed20206941a009d" title=" " alt="" coords="340,56,468,83"/>
+<area shape="poly" title=" " alt="" coords="277,67,327,68,322,70,279,72"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_accuracy_test_8cpp_a44d0ab4b73566e46a9530dc0a54eb897_icgraph.png" border="0" usemap="#a_accuracy_test_8cpp_a44d0ab4b73566e46a9530dc0a54eb897_icgraph" loading="lazy" alt=""/></div>
+<map name="a_accuracy_test_8cpp_a44d0ab4b73566e46a9530dc0a54eb897_icgraph" id="a_accuracy_test_8cpp_a44d0ab4b73566e46a9530dc0a54eb897_icgraph">
+<area shape="rect" title="计算误差" alt="" coords="103,5,170,32"/>
+<area shape="rect" href="_accuracy_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数" alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a09658b07218fdb123135467122823cc9" name="a09658b07218fdb123135467122823cc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09658b07218fdb123135467122823cc9">&#9670;&#160;</a></span>gkx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> gkx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>k</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算测试函数值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>自变量 </td></tr>
+    <tr><td class="paramname">k</td><td>指数参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>函数值 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_accuracy_test_8cpp_source.html">AccuracyTest.cpp</a> 第 <a class="el" href="_accuracy_test_8cpp_source.html#l00018">18</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_accuracy_test_8cpp_a09658b07218fdb123135467122823cc9_icgraph.png" border="0" usemap="#a_accuracy_test_8cpp_a09658b07218fdb123135467122823cc9_icgraph" loading="lazy" alt=""/></div>
+<map name="a_accuracy_test_8cpp_a09658b07218fdb123135467122823cc9_icgraph" id="a_accuracy_test_8cpp_a09658b07218fdb123135467122823cc9_icgraph">
+<area shape="rect" title="计算测试函数值" alt="" coords="218,5,260,32"/>
+<area shape="rect" href="_accuracy_test_8cpp.html#a44d0ab4b73566e46a9530dc0a54eb897" title="计算误差" alt="" coords="103,5,170,32"/>
+<area shape="poly" title=" " alt="" coords="200,19,171,21,170,16,205,19"/>
+<area shape="rect" href="_accuracy_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数" alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>主函数 </p>
+<dl class="section return"><dt>返回</dt><dd>程序退出状态 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_accuracy_test_8cpp_source.html">AccuracyTest.cpp</a> 第 <a class="el" href="_accuracy_test_8cpp_source.html#l00117">117</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_accuracy_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#a_accuracy_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" loading="lazy" alt=""/></div>
+<map name="a_accuracy_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="a_accuracy_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" title="主函数" alt="" coords="5,157,55,184"/>
+<area shape="rect" href="_accuracy_test_8cpp.html#a44d0ab4b73566e46a9530dc0a54eb897" title="计算误差" alt="" coords="103,157,170,184"/>
+<area shape="poly" title=" " alt="" coords="54,168,89,169,85,172,56,173"/>
+<area shape="rect" href="_accuracy_test_8cpp.html#a7b3e4e2024848b18fa90d79c36cbb93b" title="计算测试函数导数值" alt="" coords="279,5,328,32"/>
+<area shape="poly" title=" " alt="" coords="140,156,167,101,189,69,216,42,239,29,266,23,262,26,241,34,220,46,193,73,171,103,145,158"/>
+<area shape="rect" href="class_space_dis.html#a3c563bda4d46190cc899af410bdc0cf7" title=" " alt="" coords="232,56,375,83"/>
+<area shape="poly" title=" " alt="" coords="147,155,176,124,217,92,231,87,227,91,219,97,180,128,151,159"/>
+<area shape="rect" href="_accuracy_test_8cpp.html#a09658b07218fdb123135467122823cc9" title="计算测试函数值" alt="" coords="282,107,325,133"/>
+<area shape="poly" title=" " alt="" coords="169,158,217,143,270,129,265,132,219,148,172,163"/>
+<area shape="rect" href="class_space_dis.html#a7cefe594270b1fc5a3932fac4948f145" title=" " alt="" coords="218,157,389,184"/>
+<area shape="poly" title=" " alt="" coords="170,168,205,170,200,172,171,173"/>
+<area shape="rect" href="class_space_dis.html#a6aabd30875fee7bf06b59bc5ad4f6855" title=" " alt="" coords="238,208,370,235"/>
+<area shape="poly" title=" " alt="" coords="170,178,219,193,243,202,238,203,217,199,171,184"/>
+<area shape="rect" href="class_space_dis.html#a66a9a5ec5989dabd9a1e50962cdac7bc" title=" " alt="" coords="234,259,373,285"/>
+<area shape="poly" title=" " alt="" coords="149,182,180,214,219,244,232,252,226,252,217,249,176,218,148,187"/>
+<area shape="rect" href="class_data.html#a8aa18eb21e69ff516764c1f2da4adea7" title="将数据设置为零" alt="" coords="250,309,358,336"/>
+<area shape="poly" title=" " alt="" coords="144,182,171,238,193,269,220,295,238,308,233,307,216,299,189,272,167,241,141,187"/>
+<area shape="rect" href="class_space_dis.html#a27c27a8844a4473abed20206941a009d" title=" " alt="" coords="437,56,566,83"/>
+<area shape="poly" title=" " alt="" coords="375,67,424,68,419,70,376,72"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

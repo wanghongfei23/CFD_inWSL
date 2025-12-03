@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/utils/exactSolBurgers/main.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a href="dir_41d73644e196e40a513443d5514381f9.html">exactSolBurgers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">main.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+main.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="exact_sol_burgers_2main_8cpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2utils_2exact_sol_burgers_2main_8cpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2utils_2exact_sol_burgers_2main_8cpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2utils_2exact_sol_burgers_2main_8cpp">
+<area shape="rect" title=" " alt="" coords="87,5,334,80"/>
+<area shape="rect" title=" " alt="" coords="5,128,77,155"/>
+<area shape="poly" title=" " alt="" coords="148,82,77,122,75,118,143,79"/>
+<area shape="rect" title=" " alt="" coords="100,128,158,155"/>
+<area shape="poly" title=" " alt="" coords="182,79,151,118,148,114,177,81"/>
+<area shape="rect" title=" " alt="" coords="182,128,239,155"/>
+<area shape="poly" title=" " alt="" coords="212,78,213,114,208,111,208,82"/>
+<area shape="rect" title=" " alt="" coords="263,128,328,155"/>
+<area shape="poly" title=" " alt="" coords="244,78,277,116,272,115,242,83"/>
+<area shape="rect" title=" " alt="" coords="352,128,426,155"/>
+<area shape="poly" title=" " alt="" coords="279,78,355,120,350,120,278,83"/>
+</map>
+</div>
+</div>
+<p><a href="exact_sol_burgers_2main_8cpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:af503194182429c20a0abdf6573b2320e" id="r_af503194182429c20a0abdf6573b2320e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af503194182429c20a0abdf6573b2320e">u0</a> (double x)</td></tr>
+<tr class="memitem:a2df4d72953405bafb738b3b8054087ec" id="r_a2df4d72953405bafb738b3b8054087ec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2df4d72953405bafb738b3b8054087ec">du0</a> (double x)</td></tr>
+<tr class="memitem:a0ccf2c2ad9f3225b701704972316dd3a" id="r_a0ccf2c2ad9f3225b701704972316dd3a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ccf2c2ad9f3225b701704972316dd3a">f</a> (double theta, double x, double t)</td></tr>
+<tr class="memitem:a5bde4ffd848500850efa224a7dafa7ec" id="r_a5bde4ffd848500850efa224a7dafa7ec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bde4ffd848500850efa224a7dafa7ec">df</a> (double theta, double x, double t)</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627" id="r_a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="a5bde4ffd848500850efa224a7dafa7ec" name="a5bde4ffd848500850efa224a7dafa7ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bde4ffd848500850efa224a7dafa7ec">&#9670;&#160;</a></span>df()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double df </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>theta</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="exact_sol_burgers_2main_8cpp_source.html">main.cpp</a> 第 <a class="el" href="exact_sol_burgers_2main_8cpp_source.html#l00019">19</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="exact_sol_burgers_2main_8cpp_a5bde4ffd848500850efa224a7dafa7ec_cgraph.png" border="0" usemap="#aexact_sol_burgers_2main_8cpp_a5bde4ffd848500850efa224a7dafa7ec_cgraph" loading="lazy" alt=""/></div>
+<map name="aexact_sol_burgers_2main_8cpp_a5bde4ffd848500850efa224a7dafa7ec_cgraph" id="aexact_sol_burgers_2main_8cpp_a5bde4ffd848500850efa224a7dafa7ec_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,44,32"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#a2df4d72953405bafb738b3b8054087ec" title=" " alt="" coords="92,5,134,32"/>
+<area shape="poly" title=" " alt="" coords="44,16,79,17,74,20,44,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="exact_sol_burgers_2main_8cpp_a5bde4ffd848500850efa224a7dafa7ec_icgraph.png" border="0" usemap="#aexact_sol_burgers_2main_8cpp_a5bde4ffd848500850efa224a7dafa7ec_icgraph" loading="lazy" alt=""/></div>
+<map name="aexact_sol_burgers_2main_8cpp_a5bde4ffd848500850efa224a7dafa7ec_icgraph" id="aexact_sol_burgers_2main_8cpp_a5bde4ffd848500850efa224a7dafa7ec_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,141,32"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2df4d72953405bafb738b3b8054087ec" name="a2df4d72953405bafb738b3b8054087ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df4d72953405bafb738b3b8054087ec">&#9670;&#160;</a></span>du0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double du0 </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="exact_sol_burgers_2main_8cpp_source.html">main.cpp</a> 第 <a class="el" href="exact_sol_burgers_2main_8cpp_source.html#l00011">11</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="exact_sol_burgers_2main_8cpp_a2df4d72953405bafb738b3b8054087ec_icgraph.png" border="0" usemap="#aexact_sol_burgers_2main_8cpp_a2df4d72953405bafb738b3b8054087ec_icgraph" loading="lazy" alt=""/></div>
+<map name="aexact_sol_burgers_2main_8cpp_a2df4d72953405bafb738b3b8054087ec_icgraph" id="aexact_sol_burgers_2main_8cpp_a2df4d72953405bafb738b3b8054087ec_icgraph">
+<area shape="rect" title=" " alt="" coords="189,5,231,32"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#a5bde4ffd848500850efa224a7dafa7ec" title=" " alt="" coords="103,5,141,32"/>
+<area shape="poly" title=" " alt="" coords="171,19,142,21,142,16,176,18"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0ccf2c2ad9f3225b701704972316dd3a" name="a0ccf2c2ad9f3225b701704972316dd3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ccf2c2ad9f3225b701704972316dd3a">&#9670;&#160;</a></span>f()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double f </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>theta</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="exact_sol_burgers_2main_8cpp_source.html">main.cpp</a> 第 <a class="el" href="exact_sol_burgers_2main_8cpp_source.html#l00015">15</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="exact_sol_burgers_2main_8cpp_a0ccf2c2ad9f3225b701704972316dd3a_cgraph.png" border="0" usemap="#aexact_sol_burgers_2main_8cpp_a0ccf2c2ad9f3225b701704972316dd3a_cgraph" loading="lazy" alt=""/></div>
+<map name="aexact_sol_burgers_2main_8cpp_a0ccf2c2ad9f3225b701704972316dd3a_cgraph" id="aexact_sol_burgers_2main_8cpp_a0ccf2c2ad9f3225b701704972316dd3a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,44,32"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#af503194182429c20a0abdf6573b2320e" title=" " alt="" coords="92,5,130,32"/>
+<area shape="poly" title=" " alt="" coords="44,16,79,17,74,20,44,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="exact_sol_burgers_2main_8cpp_a0ccf2c2ad9f3225b701704972316dd3a_icgraph.png" border="0" usemap="#aexact_sol_burgers_2main_8cpp_a0ccf2c2ad9f3225b701704972316dd3a_icgraph" loading="lazy" alt=""/></div>
+<map name="aexact_sol_burgers_2main_8cpp_a0ccf2c2ad9f3225b701704972316dd3a_icgraph" id="aexact_sol_burgers_2main_8cpp_a0ccf2c2ad9f3225b701704972316dd3a_icgraph">
+<area shape="rect" title=" " alt="" coords="124,56,162,83"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="16,5,65,32"/>
+<area shape="poly" title=" " alt="" coords="108,55,66,33,66,28,112,52"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a945946d12d87aac2bd56d616c9755596" title=" " alt="" coords="9,56,72,83"/>
+<area shape="poly" title=" " alt="" coords="106,71,73,72,72,67,110,68"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a8157e7bc6adf32648092496423936fd3" title=" " alt="" coords="5,107,76,133"/>
+<area shape="poly" title=" " alt="" coords="112,84,70,109,68,104,107,86"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="exact_sol_burgers_2main_8cpp_source.html">main.cpp</a> 第 <a class="el" href="exact_sol_burgers_2main_8cpp_source.html#l00023">23</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="exact_sol_burgers_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#aexact_sol_burgers_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" loading="lazy" alt=""/></div>
+<map name="aexact_sol_burgers_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="aexact_sol_burgers_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,55,83"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#a5bde4ffd848500850efa224a7dafa7ec" title=" " alt="" coords="103,5,141,32"/>
+<area shape="poly" title=" " alt="" coords="54,54,91,34,87,38,57,58"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#a0ccf2c2ad9f3225b701704972316dd3a" title=" " alt="" coords="103,56,141,83"/>
+<area shape="poly" title=" " alt="" coords="55,67,90,68,85,71,56,72"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#af503194182429c20a0abdf6573b2320e" title=" " alt="" coords="191,81,229,108"/>
+<area shape="poly" title=" " alt="" coords="56,77,103,92,140,95,178,97,173,98,140,101,102,97,55,83"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#a2df4d72953405bafb738b3b8054087ec" title=" " alt="" coords="189,5,231,32"/>
+<area shape="poly" title=" " alt="" coords="141,16,176,18,171,20,142,21"/>
+<area shape="poly" title=" " alt="" coords="142,72,179,85,174,85,141,77"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af503194182429c20a0abdf6573b2320e" name="af503194182429c20a0abdf6573b2320e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af503194182429c20a0abdf6573b2320e">&#9670;&#160;</a></span>u0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double u0 </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="exact_sol_burgers_2main_8cpp_source.html">main.cpp</a> 第 <a class="el" href="exact_sol_burgers_2main_8cpp_source.html#l00007">7</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="exact_sol_burgers_2main_8cpp_af503194182429c20a0abdf6573b2320e_icgraph.png" border="0" usemap="#aexact_sol_burgers_2main_8cpp_af503194182429c20a0abdf6573b2320e_icgraph" loading="lazy" alt=""/></div>
+<map name="aexact_sol_burgers_2main_8cpp_af503194182429c20a0abdf6573b2320e_icgraph" id="aexact_sol_burgers_2main_8cpp_af503194182429c20a0abdf6573b2320e_icgraph">
+<area shape="rect" title=" " alt="" coords="316,56,354,83"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#a0ccf2c2ad9f3225b701704972316dd3a" title=" " alt="" coords="177,56,215,83"/>
+<area shape="poly" title=" " alt="" coords="298,70,216,72,215,67,303,69"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="16,5,65,32"/>
+<area shape="poly" title=" " alt="" coords="299,55,267,47,211,36,155,28,66,22,65,17,155,23,212,30,269,41,305,55"/>
+<area shape="rect" href="inter_scheme_8hpp.html#aaa3344e62d98ea7851b1ea5623e35801" title=" " alt="" coords="124,107,268,133"/>
+<area shape="poly" title=" " alt="" coords="304,81,269,97,237,109,236,104,267,92,299,83"/>
+<area shape="poly" title=" " alt="" coords="160,60,65,29,66,24,164,57"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a945946d12d87aac2bd56d616c9755596" title=" " alt="" coords="9,56,72,83"/>
+<area shape="poly" title=" " alt="" coords="160,71,73,72,72,67,163,67"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a8157e7bc6adf32648092496423936fd3" title=" " alt="" coords="5,107,76,133"/>
+<area shape="poly" title=" " alt="" coords="163,83,77,111,75,106,161,78"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

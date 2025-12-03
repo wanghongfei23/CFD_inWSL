@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: Bnds类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="class_bnds-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Bnds类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>边界条件管理类  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_bnds_8hpp_source.html">Bnds.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af455ed53b0d972d0bc8a9120e86751eb" id="r_af455ed53b0d972d0bc8a9120e86751eb"><td class="memItemLeft" align="right" valign="top">std::array&lt; std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af455ed53b0d972d0bc8a9120e86751eb">getOneDBnd</a> (int, int, int)</td></tr>
+<tr class="memdesc:af455ed53b0d972d0bc8a9120e86751eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定方向的一维边界  <br /></td></tr>
+<tr class="memitem:a6a987889844487c3d78cfb28c570ef4e" id="r_a6a987889844487c3d78cfb28c570ef4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a987889844487c3d78cfb28c570ef4e">update</a> ()</td></tr>
+<tr class="memdesc:a6a987889844487c3d78cfb28c570ef4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新所有边界条件  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aee27bb04256cf20f885b4e1edba04bb1" id="r_aee27bb04256cf20f885b4e1edba04bb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee27bb04256cf20f885b4e1edba04bb1">dim</a></td></tr>
+<tr class="memdesc:aee27bb04256cf20f885b4e1edba04bb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">问题维度  <br /></td></tr>
+<tr class="memitem:a71a9aa41eee2a84e179bbfb34d21a38c" id="r_a71a9aa41eee2a84e179bbfb34d21a38c"><td class="memItemLeft" align="right" valign="top">std::array&lt; int, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71a9aa41eee2a84e179bbfb34d21a38c">iMax</a></td></tr>
+<tr class="memdesc:a71a9aa41eee2a84e179bbfb34d21a38c"><td class="mdescLeft">&#160;</td><td class="mdescRight">各方向最大索引  <br /></td></tr>
+<tr class="memitem:a54f13dfef0a913cd9f012a2b0bce4b9d" id="r_a54f13dfef0a913cd9f012a2b0bce4b9d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54f13dfef0a913cd9f012a2b0bce4b9d">oneDBnds</a></td></tr>
+<tr class="memdesc:a54f13dfef0a913cd9f012a2b0bce4b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维边界条件向量  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a5d26a0aa56303737c594b42e7cdad905" id="r_a5d26a0aa56303737c594b42e7cdad905"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d26a0aa56303737c594b42e7cdad905">Initializer</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>边界条件管理类 </p>
+<p>该类用于管理计算域的边界条件，包括获取一维边界和更新边界数据。 </p>
+
+<p class="definition">在文件 <a class="el" href="_bnds_8hpp_source.html">Bnds.hpp</a> 第 <a class="el" href="_bnds_8hpp_source.html#l00016">16</a> 行定义.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="af455ed53b0d972d0bc8a9120e86751eb" name="af455ed53b0d972d0bc8a9120e86751eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af455ed53b0d972d0bc8a9120e86751eb">&#9670;&#160;</a></span>getOneDBnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;, 2 &gt; Bnds::getOneDBnd </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>idim</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定方向的一维边界 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idim</td><td>方向索引 </td></tr>
+    <tr><td class="paramname">i</td><td>第一索引 </td></tr>
+    <tr><td class="paramname">j</td><td>第二索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>包含左右边界的数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bnds_8cpp_source.html">bnds.cpp</a> 第 <a class="el" href="bnds_8cpp_source.html#l00015">15</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bnds_af455ed53b0d972d0bc8a9120e86751eb_cgraph.png" border="0" usemap="#aclass_bnds_af455ed53b0d972d0bc8a9120e86751eb_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_bnds_af455ed53b0d972d0bc8a9120e86751eb_cgraph" id="aclass_bnds_af455ed53b0d972d0bc8a9120e86751eb_cgraph">
+<area shape="rect" title="获取指定方向的一维边界" alt="" coords="5,5,140,32"/>
+<area shape="rect" href="macro_8hpp.html#a0da3e49c2f90d769ba7f489622b47ef6" title="计算三维数组的线性索引" alt="" coords="188,5,240,32"/>
+<area shape="poly" title=" " alt="" coords="140,16,175,18,169,19,140,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6a987889844487c3d78cfb28c570ef4e" name="a6a987889844487c3d78cfb28c570ef4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a987889844487c3d78cfb28c570ef4e">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bnds::update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更新所有边界条件 </p>
+
+<p class="definition">在文件 <a class="el" href="bnds_8cpp_source.html">bnds.cpp</a> 第 <a class="el" href="bnds_8cpp_source.html#l00046">46</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
+<a id="a5d26a0aa56303737c594b42e7cdad905" name="a5d26a0aa56303737c594b42e7cdad905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d26a0aa56303737c594b42e7cdad905">&#9670;&#160;</a></span>Initializer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_initializer.html">Initializer</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_bnds_8hpp_source.html">Bnds.hpp</a> 第 <a class="el" href="_bnds_8hpp_source.html#l00034">34</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="aee27bb04256cf20f885b4e1edba04bb1" name="aee27bb04256cf20f885b4e1edba04bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee27bb04256cf20f885b4e1edba04bb1">&#9670;&#160;</a></span>dim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Bnds::dim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>问题维度 </p>
+
+<p class="definition">在文件 <a class="el" href="_bnds_8hpp_source.html">Bnds.hpp</a> 第 <a class="el" href="_bnds_8hpp_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a71a9aa41eee2a84e179bbfb34d21a38c" name="a71a9aa41eee2a84e179bbfb34d21a38c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71a9aa41eee2a84e179bbfb34d21a38c">&#9670;&#160;</a></span>iMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;int,3&gt; Bnds::iMax</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>各方向最大索引 </p>
+
+<p class="definition">在文件 <a class="el" href="_bnds_8hpp_source.html">Bnds.hpp</a> 第 <a class="el" href="_bnds_8hpp_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a54f13dfef0a913cd9f012a2b0bce4b9d" name="a54f13dfef0a913cd9f012a2b0bce4b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f13dfef0a913cd9f012a2b0bce4b9d">&#9670;&#160;</a></span>oneDBnds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_one_d_bnd.html">OneDBnd</a>&gt; &gt; Bnds::oneDBnds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>一维边界条件向量 </p>
+
+<p class="definition">在文件 <a class="el" href="_bnds_8hpp_source.html">Bnds.hpp</a> 第 <a class="el" href="_bnds_8hpp_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/<a class="el" href="_bnds_8hpp_source.html">Bnds.hpp</a></li>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/src/<a class="el" href="bnds_8cpp_source.html">bnds.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

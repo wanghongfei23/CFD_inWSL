@@ -1,0 +1,11 @@
+<map id="compute_rhs" name="compute_rhs">
+<area shape="rect" id="Node000001" title="计算右端项（WCNS5空间离散）" alt="" coords="5,81,102,108"/>
+<area shape="rect" id="Node000002" href="$class_ghost_array.html#a44c41fac8c60c62387f8d1dc699a8d0b" title="获取物理域范围" alt="" coords="161,5,298,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,79,149,42,169,36,164,39,151,46,79,83"/>
+<area shape="rect" id="Node000003" href="$class_ghost_array.html#abb8b1f3e5d1d5b84929b9afec42633a3" title="填充周期边界条件的虚拟点" alt="" coords="150,56,310,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="101,85,136,82,132,85,103,90"/>
+<area shape="rect" id="Node000004" href="$class_ghost_array.html#a34061424d3cd3b97bf2ebfd4cb7817f7" title="获取完整范围（包括虚拟点）" alt="" coords="154,107,306,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="102,99,141,106,136,108,103,104"/>
+<area shape="rect" id="Node000005" href="$flux__schemes_8_h.html#aee2a33ca9dfabac4c49508c8fb055af6" title=" " alt="" coords="189,157,270,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="79,106,151,143,177,155,172,155,149,148,77,111"/>
+</map>

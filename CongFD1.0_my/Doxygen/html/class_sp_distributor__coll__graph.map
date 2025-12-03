@@ -1,0 +1,9 @@
+<map id="SpDistributor" name="SpDistributor">
+<area shape="rect" id="Node000001" title="空间分布器类" alt="" coords="56,147,153,173"/>
+<area shape="rect" id="Node000002" href="$class_data.html" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,44,47,83,66,121,89,146,84,147,61,124,42,85,34,50"/>
+<area shape="rect" id="Node000003" href="$class_bnds.html" title="边界条件管理类" alt="" coords="79,5,130,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,46,107,147,102,146,102,49"/>
+<area shape="rect" id="Node000004" href="$class_info.html" title="存储和管理求解器的各种配置参数和状态信息" alt="" coords="155,5,198,32"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,45,166,85,148,124,125,148,122,144,144,121,161,83,171,49"/>
+</map>

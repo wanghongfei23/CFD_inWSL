@@ -1,0 +1,909 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/fluxScheme.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">fluxScheme.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>定义通量格式相关的函数和类  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+fluxScheme.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2flux_scheme_8hpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2flux_scheme_8hpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2flux_scheme_8hpp">
+<area shape="rect" title="定义通量格式相关的函数和类" alt="" coords="5,5,252,80"/>
+<area shape="rect" title=" " alt="" coords="26,128,76,155"/>
+<area shape="poly" title=" " alt="" coords="102,79,73,117,69,114,97,82"/>
+<area shape="rect" title=" " alt="" coords="100,128,157,155"/>
+<area shape="poly" title=" " alt="" coords="130,78,131,113,126,111,127,82"/>
+<area shape="rect" title=" " alt="" coords="181,128,255,155"/>
+<area shape="poly" title=" " alt="" coords="163,78,198,116,193,116,161,83"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp__dep__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2flux_scheme_8hppdep" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2flux_scheme_8hppdep" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2flux_scheme_8hppdep">
+<area shape="rect" title="定义通量格式相关的函数和类" alt="" coords="411,5,657,80"/>
+<area shape="rect" href="flux_scheme_8cpp.html" title="通量格式相关函数的实现文件" alt="" coords="5,128,252,203"/>
+<area shape="poly" title=" " alt="" coords="393,86,253,130,251,125,398,84"/>
+<area shape="rect" href="sp__difference_8cpp.html" title="空间离散差分计算实现文件" alt="" coords="276,128,522,203"/>
+<area shape="poly" title=" " alt="" coords="484,90,441,130,439,125,479,92"/>
+<area shape="rect" href="sp__flux_8cpp.html" title="空间离散通量计算实现文件" alt="" coords="547,128,793,203"/>
+<area shape="poly" title=" " alt="" coords="588,88,631,128,626,127,586,93"/>
+<area shape="rect" href="symmetrytest_8cpp.html" title="对称性测试程序实现文件" alt="" coords="817,128,1064,203"/>
+<area shape="poly" title=" " alt="" coords="672,82,819,127,814,127,672,87"/>
+</map>
+</div>
+</div>
+<p><a href="flux_scheme_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:af8bc7f1334a9adf9902e914309dfefc5" id="r_af8bc7f1334a9adf9902e914309dfefc5"><td class="memItemLeft" align="right" valign="top">typedef std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8bc7f1334a9adf9902e914309dfefc5">arr2</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:af0fccd8af44a93f8ddab0c6808808977" id="r_af0fccd8af44a93f8ddab0c6808808977"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0fccd8af44a93f8ddab0c6808808977">roeFlux1D</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr)</td></tr>
+<tr class="memdesc:af0fccd8af44a93f8ddab0c6808808977"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算一维Roe通量  <br /></td></tr>
+<tr class="memitem:abd346e16076a9a3a3d7a6c6a72127e68" id="r_abd346e16076a9a3a3d7a6c6a72127e68"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd346e16076a9a3a3d7a6c6a72127e68">roeFlux1D2</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr)</td></tr>
+<tr class="memdesc:abd346e16076a9a3a3d7a6c6a72127e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算一维Roe通量（第二种实现）  <br /></td></tr>
+<tr class="memitem:ad0d80594d0bf12c9e7695ee959637678" id="r_ad0d80594d0bf12c9e7695ee959637678"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0d80594d0bf12c9e7695ee959637678">HLLCFlux1D</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr)</td></tr>
+<tr class="memdesc:ad0d80594d0bf12c9e7695ee959637678"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算一维HLLC通量  <br /></td></tr>
+<tr class="memitem:a5c3e2b3d856c924514d678bb8200ad62" id="r_a5c3e2b3d856c924514d678bb8200ad62"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c3e2b3d856c924514d678bb8200ad62">HLLCFlux2D</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memdesc:a5c3e2b3d856c924514d678bb8200ad62"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算二维HLLC通量  <br /></td></tr>
+<tr class="memitem:ac95437455293638f57fecf0cf143509e" id="r_ac95437455293638f57fecf0cf143509e"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac95437455293638f57fecf0cf143509e">HLLCFlux2D2</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memdesc:ac95437455293638f57fecf0cf143509e"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算二维HLLC通量（第二种实现）  <br /></td></tr>
+<tr class="memitem:a9f0a825aa1cd23aaa5dbc7227f32d267" id="r_a9f0a825aa1cd23aaa5dbc7227f32d267"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f0a825aa1cd23aaa5dbc7227f32d267">roeFlux2D</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memdesc:a9f0a825aa1cd23aaa5dbc7227f32d267"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算二维Roe通量  <br /></td></tr>
+<tr class="memitem:aa0fbd8f4c90df1f1b64e3c6c98797d70" id="r_aa0fbd8f4c90df1f1b64e3c6c98797d70"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0fbd8f4c90df1f1b64e3c6c98797d70">roeFlux2DSym</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> vr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memdesc:aa0fbd8f4c90df1f1b64e3c6c98797d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算二维Roe通量（对称版本）  <br /></td></tr>
+<tr class="memitem:ac2b94b39b57264ca988713d2b1e4109c" id="r_ac2b94b39b57264ca988713d2b1e4109c"><td class="memItemLeft" align="right" valign="top">constexpr std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2b94b39b57264ca988713d2b1e4109c">fEuler2D</a> (const std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; &amp;q, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memdesc:ac2b94b39b57264ca988713d2b1e4109c"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算二维Euler方程通量  <br /></td></tr>
+<tr class="memitem:ae2585eceae3e805071b78ebfa1281a0b" id="r_ae2585eceae3e805071b78ebfa1281a0b"><td class="memItemLeft" align="right" valign="top">constexpr std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2585eceae3e805071b78ebfa1281a0b">fEuler1D</a> (const std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; &amp;q, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memdesc:ae2585eceae3e805071b78ebfa1281a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算一维Euler方程通量  <br /></td></tr>
+<tr class="memitem:a799190b7d5984a67aab31b3b8c2075f8" id="r_a799190b7d5984a67aab31b3b8c2075f8"><td class="memItemLeft" align="right" valign="top">constexpr std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a799190b7d5984a67aab31b3b8c2075f8">fDefault</a> (const std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; &amp;q, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; norm)</td></tr>
+<tr class="memdesc:a799190b7d5984a67aab31b3b8c2075f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认通量计算函数  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>定义通量格式相关的函数和类 </p>
+<p>该文件包含了各种通量计算方案的实现，如Roe通量、HLLC通量等， 用于计算CFD中界面的数值通量。 </p>
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 中定义.</p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">类型定义说明</h2>
+<a id="af8bc7f1334a9adf9902e914309dfefc5" name="af8bc7f1334a9adf9902e914309dfefc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8bc7f1334a9adf9902e914309dfefc5">&#9670;&#160;</a></span>arr2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::array&lt;<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>,2&gt; <a class="el" href="#af8bc7f1334a9adf9902e914309dfefc5">arr2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="a799190b7d5984a67aab31b3b8c2075f8" name="a799190b7d5984a67aab31b3b8c2075f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a799190b7d5984a67aab31b3b8c2075f8">&#9670;&#160;</a></span>fDefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; fDefault </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认通量计算函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>状态向量 </td></tr>
+    <tr><td class="paramname">norm</td><td>单位法向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>通量向量 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00630">630</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp_a799190b7d5984a67aab31b3b8c2075f8_icgraph.png" border="0" usemap="#aflux_scheme_8hpp_a799190b7d5984a67aab31b3b8c2075f8_icgraph" loading="lazy" alt=""/></div>
+<map name="aflux_scheme_8hpp_a799190b7d5984a67aab31b3b8c2075f8_icgraph" id="aflux_scheme_8hpp_a799190b7d5984a67aab31b3b8c2075f8_icgraph">
+<area shape="rect" title="默认通量计算函数" alt="" coords="387,31,454,57"/>
+<area shape="rect" href="class_space_dis.html#ae25c0de65811d18361cd2dd9a73a8a33" title="HCS格式差分计算" alt="" coords="205,5,334,32"/>
+<area shape="poly" title=" " alt="" coords="369,36,335,32,335,27,374,36"/>
+<area shape="rect" href="class_space_dis.html#a4567c73c0c323760216c40a5a6ea7ff6" title="MND6格式差分计算" alt="" coords="201,56,339,83"/>
+<area shape="poly" title=" " alt="" coords="374,52,340,60,339,55,369,52"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="poly" title=" " alt="" coords="187,19,153,21,153,16,192,18"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="poly" title=" " alt="" coords="205,36,133,58,131,53,199,37"/>
+<area shape="poly" title=" " alt="" coords="199,52,132,35,132,30,204,51"/>
+<area shape="poly" title=" " alt="" coords="182,69,151,72,151,67,187,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae2585eceae3e805071b78ebfa1281a0b" name="ae2585eceae3e805071b78ebfa1281a0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2585eceae3e805071b78ebfa1281a0b">&#9670;&#160;</a></span>fEuler1D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; fEuler1D </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算一维Euler方程通量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>状态向量 </td></tr>
+    <tr><td class="paramname">norm</td><td>单位法向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>通量向量 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00612">612</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp_ae2585eceae3e805071b78ebfa1281a0b_icgraph.png" border="0" usemap="#aflux_scheme_8hpp_ae2585eceae3e805071b78ebfa1281a0b_icgraph" loading="lazy" alt=""/></div>
+<map name="aflux_scheme_8hpp_ae2585eceae3e805071b78ebfa1281a0b_icgraph" id="aflux_scheme_8hpp_ae2585eceae3e805071b78ebfa1281a0b_icgraph">
+<area shape="rect" title="计算一维Euler方程通量" alt="" coords="387,31,459,57"/>
+<area shape="rect" href="class_space_dis.html#ae25c0de65811d18361cd2dd9a73a8a33" title="HCS格式差分计算" alt="" coords="205,5,334,32"/>
+<area shape="poly" title=" " alt="" coords="369,36,335,32,335,27,374,36"/>
+<area shape="rect" href="class_space_dis.html#a4567c73c0c323760216c40a5a6ea7ff6" title="MND6格式差分计算" alt="" coords="201,56,339,83"/>
+<area shape="poly" title=" " alt="" coords="374,52,340,61,339,55,369,53"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="poly" title=" " alt="" coords="187,19,153,21,153,16,192,18"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="poly" title=" " alt="" coords="205,36,133,58,131,53,199,37"/>
+<area shape="poly" title=" " alt="" coords="199,52,132,35,132,30,204,51"/>
+<area shape="poly" title=" " alt="" coords="182,69,151,72,151,67,187,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac2b94b39b57264ca988713d2b1e4109c" name="ac2b94b39b57264ca988713d2b1e4109c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2b94b39b57264ca988713d2b1e4109c">&#9670;&#160;</a></span>fEuler2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; fEuler2D </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算二维Euler方程通量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>状态向量 </td></tr>
+    <tr><td class="paramname">norm</td><td>单位法向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>通量向量 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00590">590</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp_ac2b94b39b57264ca988713d2b1e4109c_icgraph.png" border="0" usemap="#aflux_scheme_8hpp_ac2b94b39b57264ca988713d2b1e4109c_icgraph" loading="lazy" alt=""/></div>
+<map name="aflux_scheme_8hpp_ac2b94b39b57264ca988713d2b1e4109c_icgraph" id="aflux_scheme_8hpp_ac2b94b39b57264ca988713d2b1e4109c_icgraph">
+<area shape="rect" title="计算二维Euler方程通量" alt="" coords="387,56,459,83"/>
+<area shape="rect" href="class_space_dis.html#ae25c0de65811d18361cd2dd9a73a8a33" title="HCS格式差分计算" alt="" coords="205,56,334,83"/>
+<area shape="poly" title=" " alt="" coords="369,70,335,72,334,67,374,69"/>
+<area shape="rect" href="class_space_dis.html#a4567c73c0c323760216c40a5a6ea7ff6" title="MND6格式差分计算" alt="" coords="201,5,339,32"/>
+<area shape="poly" title=" " alt="" coords="370,53,312,35,313,30,375,53"/>
+<area shape="rect" href="symmetrytest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数" alt="" coords="245,107,294,133"/>
+<area shape="poly" title=" " alt="" coords="375,86,296,115,294,109,370,86"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="poly" title=" " alt="" coords="199,53,132,35,132,30,204,50"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="poly" title=" " alt="" coords="187,70,151,72,151,67,192,69"/>
+<area shape="poly" title=" " alt="" coords="183,20,154,21,152,16,188,18"/>
+<area shape="poly" title=" " alt="" coords="200,38,133,58,131,53,204,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad0d80594d0bf12c9e7695ee959637678" name="ad0d80594d0bf12c9e7695ee959637678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d80594d0bf12c9e7695ee959637678">&#9670;&#160;</a></span>HLLCFlux1D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; HLLCFlux1D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算一维HLLC通量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rl</td><td>左侧密度 </td></tr>
+    <tr><td class="paramname">rr</td><td>右侧密度 </td></tr>
+    <tr><td class="paramname">ul</td><td>左侧速度 </td></tr>
+    <tr><td class="paramname">ur</td><td>右侧速度 </td></tr>
+    <tr><td class="paramname">pl</td><td>左侧压力 </td></tr>
+    <tr><td class="paramname">pr</td><td>右侧压力 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>通量数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5c3e2b3d856c924514d678bb8200ad62" name="a5c3e2b3d856c924514d678bb8200ad62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c3e2b3d856c924514d678bb8200ad62">&#9670;&#160;</a></span>HLLCFlux2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt; HLLCFlux2D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算二维HLLC通量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rl</td><td>左侧密度 </td></tr>
+    <tr><td class="paramname">rr</td><td>右侧密度 </td></tr>
+    <tr><td class="paramname">ul</td><td>左侧速度（x方向） </td></tr>
+    <tr><td class="paramname">ur</td><td>右侧速度（x方向） </td></tr>
+    <tr><td class="paramname">vl</td><td>左侧速度（y方向） </td></tr>
+    <tr><td class="paramname">vr</td><td>右侧速度（y方向） </td></tr>
+    <tr><td class="paramname">pl</td><td>左侧压力 </td></tr>
+    <tr><td class="paramname">pr</td><td>右侧压力 </td></tr>
+    <tr><td class="paramname">norm</td><td>单位法向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>通量数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00126">126</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac95437455293638f57fecf0cf143509e" name="ac95437455293638f57fecf0cf143509e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac95437455293638f57fecf0cf143509e">&#9670;&#160;</a></span>HLLCFlux2D2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt; HLLCFlux2D2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算二维HLLC通量（第二种实现） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rl</td><td>左侧密度 </td></tr>
+    <tr><td class="paramname">rr</td><td>右侧密度 </td></tr>
+    <tr><td class="paramname">ul</td><td>左侧速度（x方向） </td></tr>
+    <tr><td class="paramname">ur</td><td>右侧速度（x方向） </td></tr>
+    <tr><td class="paramname">vl</td><td>左侧速度（y方向） </td></tr>
+    <tr><td class="paramname">vr</td><td>右侧速度（y方向） </td></tr>
+    <tr><td class="paramname">pl</td><td>左侧压力 </td></tr>
+    <tr><td class="paramname">pr</td><td>右侧压力 </td></tr>
+    <tr><td class="paramname">norm</td><td>单位法向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>通量数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00228">228</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp_ac95437455293638f57fecf0cf143509e_icgraph.png" border="0" usemap="#aflux_scheme_8hpp_ac95437455293638f57fecf0cf143509e_icgraph" loading="lazy" alt=""/></div>
+<map name="aflux_scheme_8hpp_ac95437455293638f57fecf0cf143509e_icgraph" id="aflux_scheme_8hpp_ac95437455293638f57fecf0cf143509e_icgraph">
+<area shape="rect" title="计算二维HLLC通量（第二种实现）" alt="" coords="103,5,207,32"/>
+<area shape="rect" href="symmetrytest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数" alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af0fccd8af44a93f8ddab0c6808808977" name="af0fccd8af44a93f8ddab0c6808808977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0fccd8af44a93f8ddab0c6808808977">&#9670;&#160;</a></span>roeFlux1D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; roeFlux1D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算一维Roe通量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rl</td><td>左侧密度 </td></tr>
+    <tr><td class="paramname">rr</td><td>右侧密度 </td></tr>
+    <tr><td class="paramname">ul</td><td>左侧速度 </td></tr>
+    <tr><td class="paramname">ur</td><td>右侧速度 </td></tr>
+    <tr><td class="paramname">pl</td><td>左侧压力 </td></tr>
+    <tr><td class="paramname">pr</td><td>右侧压力 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>通量向量 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8cpp_source.html">fluxScheme.cpp</a> 第 <a class="el" href="flux_scheme_8cpp_source.html#l00026">26</a> 行定义.</p>
+
+</div>
+</div>
+<a id="abd346e16076a9a3a3d7a6c6a72127e68" name="abd346e16076a9a3a3d7a6c6a72127e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd346e16076a9a3a3d7a6c6a72127e68">&#9670;&#160;</a></span>roeFlux1D2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; roeFlux1D2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算一维Roe通量（第二种实现） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rl</td><td>左侧密度 </td></tr>
+    <tr><td class="paramname">rr</td><td>右侧密度 </td></tr>
+    <tr><td class="paramname">ul</td><td>左侧速度 </td></tr>
+    <tr><td class="paramname">ur</td><td>右侧速度 </td></tr>
+    <tr><td class="paramname">pl</td><td>左侧压力 </td></tr>
+    <tr><td class="paramname">pr</td><td>右侧压力 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>通量向量 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8cpp_source.html">fluxScheme.cpp</a> 第 <a class="el" href="flux_scheme_8cpp_source.html#l00101">101</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp_abd346e16076a9a3a3d7a6c6a72127e68_icgraph.png" border="0" usemap="#aflux_scheme_8hpp_abd346e16076a9a3a3d7a6c6a72127e68_icgraph" loading="lazy" alt=""/></div>
+<map name="aflux_scheme_8hpp_abd346e16076a9a3a3d7a6c6a72127e68_icgraph" id="aflux_scheme_8hpp_abd346e16076a9a3a3d7a6c6a72127e68_icgraph">
+<area shape="rect" title="计算一维Roe通量（第二种实现）" alt="" coords="424,31,512,57"/>
+<area shape="rect" href="class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2" title="计算一维欧拉方程的界面通量" alt="" coords="201,31,376,57"/>
+<area shape="poly" title=" " alt="" coords="405,44,377,47,376,41,411,44"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="poly" title=" " alt="" coords="183,32,153,30,153,25,188,31"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="poly" title=" " alt="" coords="183,57,151,63,150,58,188,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9f0a825aa1cd23aaa5dbc7227f32d267" name="a9f0a825aa1cd23aaa5dbc7227f32d267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0a825aa1cd23aaa5dbc7227f32d267">&#9670;&#160;</a></span>roeFlux2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt; roeFlux2D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算二维Roe通量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rl</td><td>左侧密度 </td></tr>
+    <tr><td class="paramname">rr</td><td>右侧密度 </td></tr>
+    <tr><td class="paramname">ul</td><td>左侧速度（x方向） </td></tr>
+    <tr><td class="paramname">ur</td><td>右侧速度（x方向） </td></tr>
+    <tr><td class="paramname">vl</td><td>左侧速度（y方向） </td></tr>
+    <tr><td class="paramname">vr</td><td>右侧速度（y方向） </td></tr>
+    <tr><td class="paramname">pl</td><td>左侧压力 </td></tr>
+    <tr><td class="paramname">pr</td><td>右侧压力 </td></tr>
+    <tr><td class="paramname">norm</td><td>单位法向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>通量数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00385">385</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa0fbd8f4c90df1f1b64e3c6c98797d70" name="aa0fbd8f4c90df1f1b64e3c6c98797d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0fbd8f4c90df1f1b64e3c6c98797d70">&#9670;&#160;</a></span>roeFlux2DSym()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 4 &gt; roeFlux2DSym </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>rr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ul</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>ur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>vr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>pr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算二维Roe通量（对称版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rl</td><td>左侧密度 </td></tr>
+    <tr><td class="paramname">rr</td><td>右侧密度 </td></tr>
+    <tr><td class="paramname">ul</td><td>左侧速度（x方向） </td></tr>
+    <tr><td class="paramname">ur</td><td>右侧速度（x方向） </td></tr>
+    <tr><td class="paramname">vl</td><td>左侧速度（y方向） </td></tr>
+    <tr><td class="paramname">vr</td><td>右侧速度（y方向） </td></tr>
+    <tr><td class="paramname">pl</td><td>左侧压力 </td></tr>
+    <tr><td class="paramname">pr</td><td>右侧压力 </td></tr>
+    <tr><td class="paramname">norm</td><td>单位法向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>通量数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a> 第 <a class="el" href="flux_scheme_8hpp_source.html#l00486">486</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="flux_scheme_8hpp_aa0fbd8f4c90df1f1b64e3c6c98797d70_icgraph.png" border="0" usemap="#aflux_scheme_8hpp_aa0fbd8f4c90df1f1b64e3c6c98797d70_icgraph" loading="lazy" alt=""/></div>
+<map name="aflux_scheme_8hpp_aa0fbd8f4c90df1f1b64e3c6c98797d70_icgraph" id="aflux_scheme_8hpp_aa0fbd8f4c90df1f1b64e3c6c98797d70_icgraph">
+<area shape="rect" title="计算二维Roe通量（对称版本）" alt="" coords="420,31,528,57"/>
+<area shape="rect" href="class_space_dis.html#abfe367e73fb15973a560da82a948d32f" title="计算二维欧拉方程的界面通量" alt="" coords="197,5,372,32"/>
+<area shape="poly" title=" " alt="" coords="402,35,373,33,373,28,407,35"/>
+<area shape="rect" href="symmetrytest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数" alt="" coords="260,56,309,83"/>
+<area shape="poly" title=" " alt="" coords="407,53,310,69,309,63,402,53"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,150,21,149,16,184,18"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

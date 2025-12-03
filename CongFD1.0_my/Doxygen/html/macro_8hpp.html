@@ -1,0 +1,953 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/macro.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">macro.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>定义项目中使用的宏、枚举类型和通用函数  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;format&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+macro.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="macro_8hpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2macro_8hpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2macro_8hpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2macro_8hpp">
+<area shape="rect" title="定义项目中使用的宏、枚举类型和通用函数" alt="" coords="379,5,626,80"/>
+<area shape="rect" title=" " alt="" coords="5,128,56,155"/>
+<area shape="poly" title=" " alt="" coords="376,65,236,93,71,130,70,125,234,88,381,63"/>
+<area shape="rect" title=" " alt="" coords="80,128,141,155"/>
+<area shape="poly" title=" " alt="" coords="380,75,156,130,155,124,378,70"/>
+<area shape="rect" title=" " alt="" coords="164,128,236,155"/>
+<area shape="poly" title=" " alt="" coords="390,80,251,127,250,121,385,81"/>
+<area shape="rect" title=" " alt="" coords="259,128,327,155"/>
+<area shape="poly" title=" " alt="" coords="425,80,335,124,334,119,420,81"/>
+<area shape="rect" title=" " alt="" coords="352,128,405,155"/>
+<area shape="poly" title=" " alt="" coords="458,80,408,121,406,116,453,81"/>
+<area shape="rect" title=" " alt="" coords="430,128,487,155"/>
+<area shape="poly" title=" " alt="" coords="488,79,472,116,469,112,484,82"/>
+<area shape="rect" title=" " alt="" coords="511,128,585,155"/>
+<area shape="poly" title=" " alt="" coords="521,78,538,115,533,113,518,83"/>
+<area shape="rect" title=" " alt="" coords="609,128,673,155"/>
+<area shape="poly" title=" " alt="" coords="556,78,613,119,608,118,555,83"/>
+<area shape="rect" title=" " alt="" coords="698,128,755,155"/>
+<area shape="poly" title=" " alt="" coords="588,78,686,122,680,121,587,83"/>
+<area shape="rect" title=" " alt="" coords="779,128,837,155"/>
+<area shape="poly" title=" " alt="" coords="619,78,766,126,761,126,618,83"/>
+<area shape="rect" title=" " alt="" coords="861,128,907,155"/>
+<area shape="poly" title=" " alt="" coords="626,68,848,127,843,127,626,74"/>
+<area shape="rect" title=" " alt="" coords="931,128,991,155"/>
+<area shape="poly" title=" " alt="" coords="626,64,762,91,918,128,913,127,761,96,626,69"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="macro_8hpp__dep__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2macro_8hppdep" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2macro_8hppdep" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2macro_8hppdep">
+<area shape="rect" title="定义项目中使用的宏、枚举类型和通用函数" alt="" coords="2459,5,2705,80"/>
+<area shape="rect" href="cgnsio_8hpp.html" title="定义CGNS输入输出类，用于网格和解数据的CGNS格式读写" alt="" coords="5,373,252,448"/>
+<area shape="poly" title=" " alt="" coords="2440,45,1883,56,1514,67,1129,85,760,111,592,128,440,147,308,169,200,194,121,222,93,237,74,252,66,265,62,280,66,311,80,343,100,372,95,374,75,345,61,312,57,279,61,263,71,249,90,232,119,217,199,189,307,164,439,142,591,122,760,106,1128,80,1513,62,1882,51,2445,44"/>
+<area shape="rect" href="data_8hpp.html" title=" " alt="" coords="1237,128,1484,203"/>
+<area shape="poly" title=" " alt="" coords="2441,59,1485,154,1484,149,2445,56"/>
+<area shape="rect" href="one_d_bnd_8hpp.html" title=" " alt="" coords="1979,251,2225,325"/>
+<area shape="poly" title=" " alt="" coords="2499,86,2175,253,2173,248,2494,88"/>
+<area shape="rect" href="reconstructor_8hpp.html" title="定义重构器类，用于变量重构" alt="" coords="2729,373,2976,448"/>
+<area shape="poly" title=" " alt="" coords="2619,90,2828,374,2823,372,2617,95"/>
+<area shape="rect" href="eigen_system_8hpp.html" title="定义特征系统相关的类，用于欧拉方程的特征分解" alt="" coords="3377,251,3624,325"/>
+<area shape="poly" title=" " alt="" coords="2654,86,2704,126,2721,148,2731,167,2741,185,2761,200,2809,220,2874,237,2952,250,3038,260,3218,275,3380,284,3374,284,3218,280,3038,266,2951,255,2873,242,2807,225,2758,205,2737,188,2726,170,2716,150,2700,130,2653,92"/>
+<area shape="rect" href="info_8hpp.html" title="定义求解器相关信息的类" alt="" coords="1768,128,2014,203"/>
+<area shape="poly" title=" " alt="" coords="2441,69,2015,145,2014,140,2446,67"/>
+<area shape="rect" href="inter_scheme_8hpp.html" title=" " alt="" coords="2459,373,2705,448"/>
+<area shape="poly" title=" " alt="" coords="2584,93,2584,375,2580,372,2580,97"/>
+<area shape="rect" href="flux_scheme_8cpp.html" title="通量格式相关函数的实现文件" alt="" coords="2771,128,3017,203"/>
+<area shape="poly" title=" " alt="" coords="2692,83,2801,127,2796,127,2691,89"/>
+<area shape="rect" href="macro_8cpp.html" title=" " alt="" coords="3041,128,3288,203"/>
+<area shape="poly" title=" " alt="" coords="2721,65,2870,92,3029,125,3043,131,3038,131,3028,131,2869,97,2721,70"/>
+<area shape="rect" href="block_solver_8hpp.html" title=" " alt="" coords="807,741,1053,816"/>
+<area shape="poly" title=" " alt="" coords="124,461,131,519,140,546,156,569,175,586,200,603,266,634,347,663,440,688,634,730,809,760,804,761,633,735,438,694,346,668,264,639,197,608,172,590,152,572,136,548,126,520,123,466"/>
+<area shape="rect" href="cgnsio_8cpp.html" title="CGNS输入输出类的实现文件" alt="" coords="165,496,412,571"/>
+<area shape="poly" title=" " alt="" coords="189,455,242,495,237,496,190,460"/>
+<area shape="rect" href="block_solver_8cpp.html" title="BlockSolver类的实现文件" alt="" coords="807,864,1053,939"/>
+<area shape="poly" title=" " alt="" coords="932,830,932,865,928,862,928,834"/>
+<area shape="rect" href="zone_main_8cpp.html" title="主程序入口文件，用于配置和运行CFD求解器" alt="" coords="2253,864,2500,939"/>
+<area shape="poly" title=" " alt="" coords="1069,814,1237,837,1407,856,1740,881,2032,894,2255,900,2250,900,2032,899,1739,887,1407,861,1236,843,1068,819"/>
+<area shape="poly" title=" " alt="" coords="1220,172,916,185,552,202,241,225,141,239,110,246,96,253,87,265,82,279,83,310,92,342,107,372,102,373,87,344,77,311,77,278,82,263,92,249,108,241,140,233,241,220,552,197,916,179,1225,170"/>
+<area shape="rect" href="_bnds_8hpp.html" title="定义边界条件管理类" alt="" coords="1557,373,1804,448"/>
+<area shape="poly" title=" " alt="" coords="1445,209,1497,249,1513,269,1523,287,1532,304,1548,323,1578,349,1612,373,1607,373,1575,353,1544,327,1528,307,1518,289,1509,272,1493,253,1444,214"/>
+<area shape="rect" href="_source_term_8hpp.html" title=" " alt="" coords="967,251,1213,325"/>
+<area shape="poly" title=" " alt="" coords="1261,211,1174,252,1171,248,1266,208"/>
+<area shape="rect" href="block_8hpp.html" title="定义Block类，用于处理计算网格块的相关数据和操作" alt="" coords="696,251,942,325"/>
+<area shape="poly" title=" " alt="" coords="1220,195,956,253,944,256,942,251,955,248,1224,192"/>
+<area shape="rect" href="differ_8hpp.html" title="定义差分计算类" alt="" coords="1557,251,1804,325"/>
+<area shape="poly" title=" " alt="" coords="1472,206,1585,250,1580,250,1472,211"/>
+<area shape="rect" href="equation_8hpp.html" title="定义方程类，用于处理守恒变量与原始变量之间的转换" alt="" coords="425,251,672,325"/>
+<area shape="poly" title=" " alt="" coords="1219,180,971,209,827,229,685,253,673,256,671,251,684,248,827,223,971,203,1224,177"/>
+<area shape="rect" href="flux_solver_8hpp.html" title="定义通量求解器基类，用于计算数值通量" alt="" coords="1237,251,1484,325"/>
+<area shape="poly" title=" " alt="" coords="1362,216,1363,252,1358,249,1359,221"/>
+<area shape="poly" title=" " alt="" coords="1499,186,1981,266,1976,267,1499,192"/>
+<area shape="poly" title=" " alt="" coords="1499,177,1957,219,2238,248,2256,267,2264,287,2272,306,2289,323,2326,338,2376,349,2497,359,2621,363,2717,371,2732,376,2726,376,2716,376,2621,368,2497,364,2375,354,2325,343,2286,328,2267,309,2259,289,2252,270,2235,253,1957,224,1499,182"/>
+<area shape="rect" href="data_8cpp.html" title="Data类的实现文件" alt="" coords="105,251,352,325"/>
+<area shape="poly" title=" " alt="" coords="1219,172,1050,183,837,198,603,221,370,253,354,256,350,252,369,248,603,215,836,192,1050,177,1224,170"/>
+<area shape="rect" href="initializer_8hpp.html" title="定义初始化器类，用于初始化网格、方程和边界条件" alt="" coords="967,619,1213,693"/>
+<area shape="poly" title=" " alt="" coords="1540,448,1540,451,1495,455,1438,455,1305,454,1239,456,1179,463,1129,476,1110,486,1096,498,1080,525,1074,556,1076,588,1081,619,1076,617,1070,589,1069,556,1075,523,1092,494,1107,481,1127,471,1178,457,1238,451,1305,449,1438,450,1495,449,1539,445,1545,447"/>
+<area shape="rect" href="sp__distributor_8hpp.html" title="定义空间分布器类，用于分发空间离散任务" alt="" coords="1376,496,1622,571"/>
+<area shape="poly" title=" " alt="" coords="1615,456,1555,498,1553,493,1610,458"/>
+<area shape="rect" href="bnds_8cpp.html" title="边界条件管理类的实现文件" alt="" coords="1105,496,1352,571"/>
+<area shape="poly" title=" " alt="" coords="1540,449,1353,502,1352,497,1545,448"/>
+<area shape="poly" title=" " alt="" coords="1031,702,980,743,977,738,1027,704"/>
+<area shape="rect" href="initializer_8cpp.html" title="初始化器类的实现文件" alt="" coords="1077,741,1324,816"/>
+<area shape="poly" title=" " alt="" coords="1135,703,1169,742,1164,740,1133,708"/>
+<area shape="poly" title=" " alt="" coords="1364,574,1214,621,1213,616,1359,576"/>
+<area shape="rect" href="sp__distributor_8cpp.html" title="空间分布器类的实现文件" alt="" coords="1376,619,1622,693"/>
+<area shape="poly" title=" " alt="" coords="1501,584,1501,620,1497,617,1497,589"/>
+<area shape="poly" title=" " alt="" coords="994,333,973,354,957,375,935,421,921,471,912,522,909,574,914,669,924,743,920,740,908,669,904,574,907,522,915,470,930,419,953,372,970,350,990,336"/>
+<area shape="rect" href="source_term_8cpp.html" title="源项类的实现文件" alt="" coords="967,373,1213,448"/>
+<area shape="poly" title=" " alt="" coords="1091,339,1092,374,1088,372,1088,343"/>
+<area shape="poly" title=" " alt="" coords="679,327,564,345,471,352,380,359,265,376,254,378,250,374,264,371,379,354,471,347,563,340,683,324"/>
+<area shape="poly" title=" " alt="" coords="847,337,913,447,956,510,1001,569,1049,619,1043,618,997,572,951,513,909,450,845,342"/>
+<area shape="rect" href="_space_dis_8hpp.html" title=" " alt="" coords="1917,373,2164,448"/>
+<area shape="poly" title=" " alt="" coords="957,323,1088,340,1198,349,1387,354,1576,354,1686,359,1815,371,1919,387,1914,387,1815,376,1686,365,1576,360,1387,359,1198,355,1087,345,958,328"/>
+<area shape="rect" href="block_8cpp.html" title="Block类的实现文件" alt="" coords="596,373,842,448"/>
+<area shape="poly" title=" " alt="" coords="781,336,751,375,748,371,777,339"/>
+<area shape="poly" title=" " alt="" coords="1899,439,1636,499,1624,502,1622,496,1635,493,1905,438"/>
+<area shape="rect" href="_accuracy_test_8cpp.html" title="精度测试程序实现文件" alt="" coords="1647,496,1893,571"/>
+<area shape="poly" title=" " alt="" coords="1946,454,1853,498,1852,493,1941,456"/>
+<area shape="rect" href="_space_dis_8cpp.html" title="空间离散类的实现文件" alt="" coords="2459,496,2705,571"/>
+<area shape="poly" title=" " alt="" coords="2179,446,2315,470,2446,493,2461,499,2455,499,2445,499,2314,475,2179,451"/>
+<area shape="rect" href="sp__difference_8cpp.html" title="空间离散差分计算实现文件" alt="" coords="1917,496,2164,571"/>
+<area shape="poly" title=" " alt="" coords="2042,462,2043,497,2038,494,2039,466"/>
+<area shape="rect" href="sp__flux_8cpp.html" title="空间离散通量计算实现文件" alt="" coords="2729,496,2976,571"/>
+<area shape="poly" title=" " alt="" coords="2179,446,2261,457,2331,464,2450,469,2568,474,2637,481,2717,493,2732,498,2726,498,2716,499,2636,487,2568,480,2449,474,2330,469,2260,463,2179,451"/>
+<area shape="rect" href="sp__recon_8cpp.html" title="空间离散重构计算实现文件" alt="" coords="2188,496,2434,571"/>
+<area shape="poly" title=" " alt="" coords="2137,452,2231,496,2226,495,2137,457"/>
+<area shape="poly" title=" " alt="" coords="549,338,561,395,571,422,587,446,626,486,670,520,719,550,769,574,872,611,969,637,964,637,871,616,767,579,716,554,667,525,622,490,582,450,566,425,555,397,547,343"/>
+<area shape="rect" href="equation_8cpp.html" title="方程类的实现文件" alt="" coords="276,373,522,448"/>
+<area shape="poly" title=" " alt="" coords="489,337,446,375,443,371,493,333"/>
+<area shape="rect" href="flux_solver_8cpp.html" title=" " alt="" coords="1237,373,1484,448"/>
+<area shape="poly" title=" " alt="" coords="1362,339,1363,374,1358,371,1359,343"/>
+<area shape="poly" title=" " alt="" coords="1961,329,1805,377,1803,372,1966,328"/>
+<area shape="poly" title=" " alt="" coords="2078,338,2061,375,2057,371,2074,341"/>
+<area shape="poly" title=" " alt="" coords="2240,322,2244,323,2376,340,2480,346,2584,352,2717,371,2732,376,2726,376,2716,376,2584,358,2480,352,2375,346,2243,328,2240,327"/>
+<area shape="rect" href="one_d_bnd_8cpp.html" title="一维边界条件类的实现文件" alt="" coords="2188,373,2434,448"/>
+<area shape="poly" title=" " alt="" coords="2179,331,2250,373,2245,372,2178,336"/>
+<area shape="rect" href="reconstructor_8cpp.html" title="重构器类的实现文件" alt="" coords="3271,496,3517,571"/>
+<area shape="poly" title=" " alt="" coords="2991,436,3258,493,3273,499,3267,499,3257,499,2991,441"/>
+<area shape="poly" title=" " alt="" coords="3520,338,3545,428,3553,480,3556,532,3556,657,3554,677,3548,696,3523,731,3484,761,3433,787,3371,810,3301,830,3141,861,2967,881,2793,894,2632,901,2500,903,2500,898,2632,895,2792,889,2966,876,3140,855,3300,825,3370,805,3431,783,3481,757,3519,727,3543,694,3549,676,3551,657,3551,532,3548,481,3539,429,3517,342"/>
+<area shape="poly" title=" " alt="" coords="3359,290,3135,296,2839,309,2509,334,2341,352,2177,376,2165,378,2163,373,2176,371,2340,347,2508,328,2839,303,3134,291,3364,289"/>
+<area shape="poly" title=" " alt="" coords="3481,338,3412,497,3408,493,3476,341"/>
+<area shape="rect" href="eigen_system_8cpp.html" title="特征系统类的实现文件" alt="" coords="3591,373,3837,448"/>
+<area shape="poly" title=" " alt="" coords="3579,331,3651,373,3646,372,3578,336"/>
+<area shape="rect" href="symmetrytest_8cpp.html" title="对称性测试程序实现文件" alt="" coords="3861,373,4108,448"/>
+<area shape="poly" title=" " alt="" coords="3639,319,3849,371,3863,377,3858,376,3848,376,3639,325"/>
+<area shape="poly" title=" " alt="" coords="1750,182,1495,205,1290,208,949,210,771,215,610,222,486,235,443,243,415,253,398,269,390,287,382,307,365,327,319,351,254,375,250,371,317,346,362,323,377,305,385,285,393,266,412,248,441,238,485,229,610,217,770,209,949,205,1290,203,1495,200,1755,180"/>
+<area shape="poly" title=" " alt="" coords="1894,216,1886,274,1876,302,1861,327,1833,354,1800,375,1798,370,1830,350,1857,324,1872,300,1881,273,1891,220"/>
+<area shape="poly" title=" " alt="" coords="1875,215,1847,282,1832,310,1817,327,1781,348,1747,357,1714,358,1682,355,1650,351,1618,351,1584,358,1547,375,1531,393,1523,412,1515,432,1497,450,1456,464,1403,469,1274,466,1208,465,1149,468,1100,478,1082,486,1068,498,1059,511,1054,525,1053,556,1060,588,1072,619,1067,617,1055,590,1048,556,1049,524,1054,508,1064,494,1079,482,1098,473,1148,463,1208,460,1274,461,1402,464,1455,459,1494,446,1511,429,1518,410,1526,390,1544,371,1582,353,1617,346,1651,346,1683,349,1714,353,1746,352,1779,343,1813,323,1828,307,1843,280,1871,219"/>
+<area shape="poly" title=" " alt="" coords="1750,180,1507,209,1366,229,1226,253,1214,256,1213,251,1225,248,1365,224,1506,204,1755,178"/>
+<area shape="poly" title=" " alt="" coords="1912,214,1938,269,1969,324,2008,374,2002,372,1965,327,1933,272,1910,219"/>
+<area shape="poly" title=" " alt="" coords="1816,210,1746,252,1744,248,1811,212"/>
+<area shape="poly" title=" " alt="" coords="1750,199,1485,261,1483,256,1755,197"/>
+<area shape="poly" title=" " alt="" coords="1969,208,2040,250,2035,250,1968,213"/>
+<area shape="poly" title=" " alt="" coords="2030,174,2170,186,2321,202,2459,223,2515,235,2557,248,2591,265,2614,283,2635,302,2666,323,2764,373,2759,372,2663,328,2632,307,2610,287,2588,269,2556,253,2513,240,2458,228,2320,208,2169,191,2031,179"/>
+<area shape="rect" href="info_8cpp.html" title="Info类的实现文件" alt="" coords="2299,251,2545,325"/>
+<area shape="poly" title=" " alt="" coords="2029,192,2281,248,2301,255,2296,255,2280,253,2029,198"/>
+<area shape="poly" title=" " alt="" coords="2584,462,2584,497,2580,494,2580,466"/>
+<area shape="poly" title=" " alt="" coords="2679,452,2773,496,2767,495,2678,457"/>
+<area shape="poly" title=" " alt="" coords="2488,454,2395,498,2393,493,2483,456"/>
+<area shape="poly" title=" " alt="" coords="2720,446,2802,457,2872,464,2991,469,3109,474,3178,481,3258,493,3273,498,3268,498,3257,499,3177,487,3109,480,2991,474,2872,469,2802,463,2720,451"/>
+<area shape="rect" href="inter_scheme_8cpp.html" title=" " alt="" coords="3000,496,3246,571"/>
+<area shape="poly" title=" " alt="" coords="2720,446,2856,470,2988,493,3002,499,2997,499,2987,499,2855,475,2720,451"/>
+</map>
+</div>
+</div>
+<p><a href="macro_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a5f5a64ef503db0fc824df8320929b126" id="r_a5f5a64ef503db0fc824df8320929b126"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;&#160;&#160;double</td></tr>
+<tr class="memdesc:a5f5a64ef503db0fc824df8320929b126"><td class="mdescLeft">&#160;</td><td class="mdescRight">实数类型别名  <br /></td></tr>
+<tr class="memitem:a6018bb5457c38a6093da649ca8a7bf83" id="r_a6018bb5457c38a6093da649ca8a7bf83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6018bb5457c38a6093da649ca8a7bf83">ind</a>&#160;&#160;&#160;int</td></tr>
+<tr class="memdesc:a6018bb5457c38a6093da649ca8a7bf83"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数类型别名  <br /></td></tr>
+<tr class="memitem:a8659b9de3e544ff142b153b076f30fd5" id="r_a8659b9de3e544ff142b153b076f30fd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8659b9de3e544ff142b153b076f30fd5">GAMMA</a>&#160;&#160;&#160;1.4</td></tr>
+<tr class="memdesc:a8659b9de3e544ff142b153b076f30fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">比热比常数（其他算例）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a9caf9d72be020631aed818ce77cd8950" id="r_a9caf9d72be020631aed818ce77cd8950"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9caf9d72be020631aed818ce77cd8950">BndType</a> { <br />
+&#160;&#160;<a class="el" href="#a9caf9d72be020631aed818ce77cd8950a7d066f30823d68dafa1f1746027390b5">TYPENULL</a>
+, <a class="el" href="#a9caf9d72be020631aed818ce77cd8950a160b764c36ef84037093c64989f4ec93">PERIODIC1D</a>
+, <a class="el" href="#a9caf9d72be020631aed818ce77cd8950a05e27e4f5e6df02a102406b7b95283e6">SYMMETRY1D</a>
+, <a class="el" href="#a9caf9d72be020631aed818ce77cd8950a06592af41b414337e04f7d9d4ab3188c">DIRICLET</a>
+, <br />
+&#160;&#160;<a class="el" href="#a9caf9d72be020631aed818ce77cd8950abc73df3fd4e7b1936ae23dfbb096b585">DIRICLET_SODL</a>
+, <a class="el" href="#a9caf9d72be020631aed818ce77cd8950a32b4b54c692e9f705460202b44344e2f">DIRICLET_SODR</a>
+, <a class="el" href="#a9caf9d72be020631aed818ce77cd8950a9ba7b0c24750e61d1165396162b3448e">FLUXGHOST</a>
+, <a class="el" href="#a9caf9d72be020631aed818ce77cd8950a055992460a035e6b4c082b6ff03771d1">SUPERSONICOUTLET</a>
+, <br />
+&#160;&#160;<a class="el" href="#a9caf9d72be020631aed818ce77cd8950a697fe5e50e6c68aa01cdcb9785c7682e">SYMMETRYX</a>
+, <a class="el" href="#a9caf9d72be020631aed818ce77cd8950ac70258a7e94c580fd8fb3d961bc9504c">SYMMETRYY</a>
+, <a class="el" href="#a9caf9d72be020631aed818ce77cd8950a9c04a1e31e68d0b581e60acb9ce7f657">DoubleMachUp</a>
+, <a class="el" href="#a9caf9d72be020631aed818ce77cd8950ad29df49264b8964d9217ef9d38a10477">ARDBND</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a9caf9d72be020631aed818ce77cd8950"><td class="mdescLeft">&#160;</td><td class="mdescRight">边界类型枚举  <a href="#a9caf9d72be020631aed818ce77cd8950">更多...</a><br /></td></tr>
+<tr class="memitem:ad67c42f6befa23035412c415ce619b37" id="r_ad67c42f6befa23035412c415ce619b37"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad67c42f6befa23035412c415ce619b37">InterMethod</a> { <br />
+&#160;&#160;<a class="el" href="#ad67c42f6befa23035412c415ce619b37a3e7e9ecb94924acb13e94c0f750d977a">FIRSTORDER</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a181cabe43fb03984143b9d63dcf477b3">MUSCL</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a4efa7a0f77c4df1e92e7c318481a4241">WCNS5</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37abedbc532c0ad2ea0b4f43e46cac59841">WCNSZ5</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad67c42f6befa23035412c415ce619b37a126208770027c0f0df39f1c7bc324eb9">WCNS5Char</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a30d2f2c48ca9dd470c423454050218e0">WCNSZ5Char</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37ac0405f89a80f4b7608f52e0afb66a110">WCNS5CONG</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a40c06cf271491ba02daf198ae9ea3800">TCNSCongA</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad67c42f6befa23035412c415ce619b37a6f4c265b815c5908a238a813c288a966">WCNS5CONGZ</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a11ca4ae7c1ca948df21a0540df95bcbd">WCNS5CONGZCT4</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a3582c1757798ee583b3cd456a3817dc3">WCNS5CONGZCT7</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a3e9f88928959bc95f023f1d49fbbe8d0">TCNS5</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad67c42f6befa23035412c415ce619b37a5162010b148207ed15b0290d85598556">TCNS5CT4</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37aa16548b8a799464dd554573cb80ea90f">TCNS5CT7</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a278dff8d419744a475f5c896c081d875">LINEAR5</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a24ea1d8404ac79ba18eba96a03177d37">NICEST5</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad67c42f6befa23035412c415ce619b37a1879cebccb52b70f910f52d2cfbfc5fc">INTERMAX</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a64c3f6b508fb34a1d1ba87b1501a3bf7">WHFTCNSA</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37ab9321dd4e88e6e9ca95d3df20a4b7d8b">WHFTCNSASF002</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37ac08fc2e605205bb12982750d76d61019">WHFTCNSAH002</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad67c42f6befa23035412c415ce619b37a9b66c74991b1b45d1236753186e7c798">WHFTCNSASF102</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37aa7a47402742fe73491558cd2eb3191bd">WHFTCNSASF103</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a74f489cc8812c6d60f1f84a879d18752">WHFTCNSASF102_reciprocal</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a5b21cbcac96f3a127fd53ba8dc9c21d0">WHFTCNSASF103_reciprocal</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad67c42f6befa23035412c415ce619b37ab23385d1aa953b04f6482bbee3c049f0">WHFTCNSAS_fx</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37ae9707639a71346157d0c0553654b05c4">WHFTCNSAS_initial</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a7fe0bde2441184ae945a6f27135ebf4a">WHFTCNSAS_approx_1</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a01297f6f93e3d4a10812e7dda42143df">WHFTCNSAS_fx_real</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad67c42f6befa23035412c415ce619b37adc0fe7293b5dbc48f803c8f66b25e40a">WHFTCNSAS_approx_2</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a119b3a413b12ff023661eb420f90f373">WHFTCNSASF202_2S</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a19d77b3fe88bc2c194da0b9d5c042317">WHFTCNSASF202_NoS</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a25c64d2737331bb4db12361b6ffaffb5">WHFTCNSASF203_NoS</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad67c42f6befa23035412c415ce619b37aac353449fbe7472d91abfc5e4189f761">temp011</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37a0f86fab387947fc55b42a5460338cfd8">temp012</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37ad8baf6dff250a1612612af182df68eac">temp013</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37ae476714a226ba59d23620c08a714ac58">temp014</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad67c42f6befa23035412c415ce619b37a3a8ef349593cdc1a4da06a778d7b3af0">temp015</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37ab96b6dc92783889599297b7da3e577b3">temp016</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37abf50408d1ee8072e4b4dc6afb2e36e42">temp017</a>
+, <a class="el" href="#ad67c42f6befa23035412c415ce619b37ab814ba7b4ea52d59083f1b31a507a3d3">temp018</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad67c42f6befa23035412c415ce619b37a795c960f9dbcfbba982dc74c4c7ddbca">temp019</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ad67c42f6befa23035412c415ce619b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">插值方法枚举  <a href="#ad67c42f6befa23035412c415ce619b37">更多...</a><br /></td></tr>
+<tr class="memitem:a42aac0a87a6871f720f74d0bc65bc884" id="r_a42aac0a87a6871f720f74d0bc65bc884"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42aac0a87a6871f720f74d0bc65bc884">DiffMethod</a> { <a class="el" href="#a42aac0a87a6871f720f74d0bc65bc884ae6ac3229f5c4ce0e323485900b2cbf58">HDS6</a>
+, <a class="el" href="#a42aac0a87a6871f720f74d0bc65bc884a6d08c629ca9386839622f78181464602">TRAD6</a>
+, <a class="el" href="#a42aac0a87a6871f720f74d0bc65bc884af6484330b234658b101ed20df7505b85">TRAD2</a>
+, <a class="el" href="#a42aac0a87a6871f720f74d0bc65bc884a3cad9f557f9979d750016bb426e38c89">MND6</a>
+ }</td></tr>
+<tr class="memdesc:a42aac0a87a6871f720f74d0bc65bc884"><td class="mdescLeft">&#160;</td><td class="mdescRight">差分方法枚举  <a href="#a42aac0a87a6871f720f74d0bc65bc884">更多...</a><br /></td></tr>
+<tr class="memitem:a6efecf3d755d53d3c4649b100919dca3" id="r_a6efecf3d755d53d3c4649b100919dca3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6efecf3d755d53d3c4649b100919dca3">EquationType</a> { <a class="el" href="#a6efecf3d755d53d3c4649b100919dca3abd7b112f027166222539d9e776f3eb50">LINEARCONV1D</a>
+, <a class="el" href="#a6efecf3d755d53d3c4649b100919dca3aee1023b3f6522178ed2f2a654b578af8">BURGERS1D</a>
+, <a class="el" href="#a6efecf3d755d53d3c4649b100919dca3ab29a294112c9ef5c3c0c7db6363a6d2e">EULER</a>
+, <a class="el" href="#a6efecf3d755d53d3c4649b100919dca3a3fb10c942e83214204ad2f215752d3ca">ACCURACYTEST</a>
+ }</td></tr>
+<tr class="memdesc:a6efecf3d755d53d3c4649b100919dca3"><td class="mdescLeft">&#160;</td><td class="mdescRight">方程类型枚举  <a href="#a6efecf3d755d53d3c4649b100919dca3">更多...</a><br /></td></tr>
+<tr class="memitem:aedef7fe5e84e396e3b1a65875f71d3d4" id="r_aedef7fe5e84e396e3b1a65875f71d3d4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedef7fe5e84e396e3b1a65875f71d3d4">FluxMethod</a> { <a class="el" href="#aedef7fe5e84e396e3b1a65875f71d3d4a7dd8a6d6889105ee1c5c149acb27d3ba">HLLC1D</a>
+, <a class="el" href="#aedef7fe5e84e396e3b1a65875f71d3d4a3e2b4adf8c2f29179d2cb0cf63888a32">ROE1D</a>
+, <a class="el" href="#aedef7fe5e84e396e3b1a65875f71d3d4a10e3627cc9b62d3e207a91b54eaa007a">HLLC2D</a>
+ }</td></tr>
+<tr class="memdesc:aedef7fe5e84e396e3b1a65875f71d3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">通量方法枚举  <a href="#aedef7fe5e84e396e3b1a65875f71d3d4">更多...</a><br /></td></tr>
+<tr class="memitem:a358043ae6b418d48835e9ac9be85d896" id="r_a358043ae6b418d48835e9ac9be85d896"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a358043ae6b418d48835e9ac9be85d896">TimeMethod</a> { <a class="el" href="#a358043ae6b418d48835e9ac9be85d896ae672a0d703868ebfcb0df2ee5bbecaa2">RK3SSP</a>
+, <a class="el" href="#a358043ae6b418d48835e9ac9be85d896a218bf64be45f1537b7485e0d4562cfe6">EulerFront</a>
+ }</td></tr>
+<tr class="memdesc:a358043ae6b418d48835e9ac9be85d896"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间积分方法枚举  <a href="#a358043ae6b418d48835e9ac9be85d896">更多...</a><br /></td></tr>
+<tr class="memitem:a3ae727773c367ac1041d72ac770a0ab1" id="r_a3ae727773c367ac1041d72ac770a0ab1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ae727773c367ac1041d72ac770a0ab1">SourceType</a> { <a class="el" href="#a3ae727773c367ac1041d72ac770a0ab1aef50bc49db861c68bcd94974f4b604e5">SOURCENULL</a>
+, <a class="el" href="#a3ae727773c367ac1041d72ac770a0ab1abbcfb30512c4002f1f7a36b4092cb3fb">GRAVITY</a>
+ }</td></tr>
+<tr class="memdesc:a3ae727773c367ac1041d72ac770a0ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">源项类型枚举  <a href="#a3ae727773c367ac1041d72ac770a0ab1">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a0da3e49c2f90d769ba7f489622b47ef6" id="r_a0da3e49c2f90d769ba7f489622b47ef6"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0da3e49c2f90d769ba7f489622b47ef6">index</a> (int i, int j, int k, std::array&lt; int, 3 &gt; iMax)</td></tr>
+<tr class="memdesc:a0da3e49c2f90d769ba7f489622b47ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算三维数组的线性索引  <br /></td></tr>
+<tr class="memitem:aae8891b6e054c4e14f504dd3f381320a" id="r_aae8891b6e054c4e14f504dd3f381320a"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; int, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae8891b6e054c4e14f504dd3f381320a">calOffset</a> (int idim, int i, int j, std::array&lt; int, 3 &gt; iMax)</td></tr>
+<tr class="memdesc:aae8891b6e054c4e14f504dd3f381320a"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算偏移量  <br /></td></tr>
+<tr class="memitem:a56cabadb0a857e1da7befbabea638357" id="r_a56cabadb0a857e1da7befbabea638357"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; int, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56cabadb0a857e1da7befbabea638357">calOffsetInverse</a> (int idim, int i, int j, std::array&lt; int, 3 &gt; iMax)</td></tr>
+<tr class="memdesc:a56cabadb0a857e1da7befbabea638357"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算逆向偏移量  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ac4420191ae02c6df2289c8cb4cfc9369" id="r_ac4420191ae02c6df2289c8cb4cfc9369"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4420191ae02c6df2289c8cb4cfc9369">timepp</a> = 0</td></tr>
+<tr class="memdesc:ac4420191ae02c6df2289c8cb4cfc9369"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间统计变量  <br /></td></tr>
+<tr class="memitem:ab7906553f3a3cf2e9a1f9f1995ab89ab" id="r_ab7906553f3a3cf2e9a1f9f1995ab89ab"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7906553f3a3cf2e9a1f9f1995ab89ab">timesss</a> = 0</td></tr>
+<tr class="memdesc:ab7906553f3a3cf2e9a1f9f1995ab89ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间统计变量  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>定义项目中使用的宏、枚举类型和通用函数 </p>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 中定义.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">宏定义说明</h2>
+<a id="a8659b9de3e544ff142b153b076f30fd5" name="a8659b9de3e544ff142b153b076f30fd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8659b9de3e544ff142b153b076f30fd5">&#9670;&#160;</a></span>GAMMA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GAMMA&#160;&#160;&#160;1.4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>比热比常数（其他算例） </p>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6018bb5457c38a6093da649ca8a7bf83" name="a6018bb5457c38a6093da649ca8a7bf83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6018bb5457c38a6093da649ca8a7bf83">&#9670;&#160;</a></span>ind</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ind&#160;&#160;&#160;int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>整数类型别名 </p>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00009">9</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5f5a64ef503db0fc824df8320929b126" name="a5f5a64ef503db0fc824df8320929b126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f5a64ef503db0fc824df8320929b126">&#9670;&#160;</a></span>real</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define real&#160;&#160;&#160;double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>实数类型别名 </p>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00008">8</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
+<a id="a9caf9d72be020631aed818ce77cd8950" name="a9caf9d72be020631aed818ce77cd8950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9caf9d72be020631aed818ce77cd8950">&#9670;&#160;</a></span>BndType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a9caf9d72be020631aed818ce77cd8950">BndType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>边界类型枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a9caf9d72be020631aed818ce77cd8950a7d066f30823d68dafa1f1746027390b5" name="a9caf9d72be020631aed818ce77cd8950a7d066f30823d68dafa1f1746027390b5"></a>TYPENULL&#160;</td><td class="fielddoc"><p>空边界类型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9caf9d72be020631aed818ce77cd8950a160b764c36ef84037093c64989f4ec93" name="a9caf9d72be020631aed818ce77cd8950a160b764c36ef84037093c64989f4ec93"></a>PERIODIC1D&#160;</td><td class="fielddoc"><p>一维周期边界 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9caf9d72be020631aed818ce77cd8950a05e27e4f5e6df02a102406b7b95283e6" name="a9caf9d72be020631aed818ce77cd8950a05e27e4f5e6df02a102406b7b95283e6"></a>SYMMETRY1D&#160;</td><td class="fielddoc"><p>一维对称边界 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9caf9d72be020631aed818ce77cd8950a06592af41b414337e04f7d9d4ab3188c" name="a9caf9d72be020631aed818ce77cd8950a06592af41b414337e04f7d9d4ab3188c"></a>DIRICLET&#160;</td><td class="fielddoc"><p>Dirichlet边界 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9caf9d72be020631aed818ce77cd8950abc73df3fd4e7b1936ae23dfbb096b585" name="a9caf9d72be020631aed818ce77cd8950abc73df3fd4e7b1936ae23dfbb096b585"></a>DIRICLET_SODL&#160;</td><td class="fielddoc"><p>Sod问题左边界 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9caf9d72be020631aed818ce77cd8950a32b4b54c692e9f705460202b44344e2f" name="a9caf9d72be020631aed818ce77cd8950a32b4b54c692e9f705460202b44344e2f"></a>DIRICLET_SODR&#160;</td><td class="fielddoc"><p>Sod问题右边界 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9caf9d72be020631aed818ce77cd8950a9ba7b0c24750e61d1165396162b3448e" name="a9caf9d72be020631aed818ce77cd8950a9ba7b0c24750e61d1165396162b3448e"></a>FLUXGHOST&#160;</td><td class="fielddoc"><p>通量Ghost边界 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9caf9d72be020631aed818ce77cd8950a055992460a035e6b4c082b6ff03771d1" name="a9caf9d72be020631aed818ce77cd8950a055992460a035e6b4c082b6ff03771d1"></a>SUPERSONICOUTLET&#160;</td><td class="fielddoc"><p>超声速出口边界 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9caf9d72be020631aed818ce77cd8950a697fe5e50e6c68aa01cdcb9785c7682e" name="a9caf9d72be020631aed818ce77cd8950a697fe5e50e6c68aa01cdcb9785c7682e"></a>SYMMETRYX&#160;</td><td class="fielddoc"><p>X方向对称边界（仅用于2D） </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9caf9d72be020631aed818ce77cd8950ac70258a7e94c580fd8fb3d961bc9504c" name="a9caf9d72be020631aed818ce77cd8950ac70258a7e94c580fd8fb3d961bc9504c"></a>SYMMETRYY&#160;</td><td class="fielddoc"><p>Y方向对称边界（仅用于2D） </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9caf9d72be020631aed818ce77cd8950a9c04a1e31e68d0b581e60acb9ce7f657" name="a9caf9d72be020631aed818ce77cd8950a9c04a1e31e68d0b581e60acb9ce7f657"></a>DoubleMachUp&#160;</td><td class="fielddoc"><p>双马赫反射上边界 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9caf9d72be020631aed818ce77cd8950ad29df49264b8964d9217ef9d38a10477" name="a9caf9d72be020631aed818ce77cd8950ad29df49264b8964d9217ef9d38a10477"></a>ARDBND&#160;</td><td class="fielddoc"><p>ARD边界 </p>
+</td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a42aac0a87a6871f720f74d0bc65bc884" name="a42aac0a87a6871f720f74d0bc65bc884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42aac0a87a6871f720f74d0bc65bc884">&#9670;&#160;</a></span>DiffMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a42aac0a87a6871f720f74d0bc65bc884">DiffMethod</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>差分方法枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a42aac0a87a6871f720f74d0bc65bc884ae6ac3229f5c4ce0e323485900b2cbf58" name="a42aac0a87a6871f720f74d0bc65bc884ae6ac3229f5c4ce0e323485900b2cbf58"></a>HDS6&#160;</td><td class="fielddoc"><p>HDS6差分方法 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a42aac0a87a6871f720f74d0bc65bc884a6d08c629ca9386839622f78181464602" name="a42aac0a87a6871f720f74d0bc65bc884a6d08c629ca9386839622f78181464602"></a>TRAD6&#160;</td><td class="fielddoc"><p>TRAD6差分方法 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a42aac0a87a6871f720f74d0bc65bc884af6484330b234658b101ed20df7505b85" name="a42aac0a87a6871f720f74d0bc65bc884af6484330b234658b101ed20df7505b85"></a>TRAD2&#160;</td><td class="fielddoc"><p>TRAD2差分方法 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a42aac0a87a6871f720f74d0bc65bc884a3cad9f557f9979d750016bb426e38c89" name="a42aac0a87a6871f720f74d0bc65bc884a3cad9f557f9979d750016bb426e38c89"></a>MND6&#160;</td><td class="fielddoc"><p>MND6差分方法 </p>
+</td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00106">106</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6efecf3d755d53d3c4649b100919dca3" name="a6efecf3d755d53d3c4649b100919dca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6efecf3d755d53d3c4649b100919dca3">&#9670;&#160;</a></span>EquationType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a6efecf3d755d53d3c4649b100919dca3">EquationType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>方程类型枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a6efecf3d755d53d3c4649b100919dca3abd7b112f027166222539d9e776f3eb50" name="a6efecf3d755d53d3c4649b100919dca3abd7b112f027166222539d9e776f3eb50"></a>LINEARCONV1D&#160;</td><td class="fielddoc"><p>一维线性对流方程 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6efecf3d755d53d3c4649b100919dca3aee1023b3f6522178ed2f2a654b578af8" name="a6efecf3d755d53d3c4649b100919dca3aee1023b3f6522178ed2f2a654b578af8"></a>BURGERS1D&#160;</td><td class="fielddoc"><p>一维Burgers方程 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6efecf3d755d53d3c4649b100919dca3ab29a294112c9ef5c3c0c7db6363a6d2e" name="a6efecf3d755d53d3c4649b100919dca3ab29a294112c9ef5c3c0c7db6363a6d2e"></a>EULER&#160;</td><td class="fielddoc"><p>欧拉方程 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6efecf3d755d53d3c4649b100919dca3a3fb10c942e83214204ad2f215752d3ca" name="a6efecf3d755d53d3c4649b100919dca3a3fb10c942e83214204ad2f215752d3ca"></a>ACCURACYTEST&#160;</td><td class="fielddoc"><p>精度测试方程 </p>
+</td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00116">116</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aedef7fe5e84e396e3b1a65875f71d3d4" name="aedef7fe5e84e396e3b1a65875f71d3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedef7fe5e84e396e3b1a65875f71d3d4">&#9670;&#160;</a></span>FluxMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aedef7fe5e84e396e3b1a65875f71d3d4">FluxMethod</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通量方法枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="aedef7fe5e84e396e3b1a65875f71d3d4a7dd8a6d6889105ee1c5c149acb27d3ba" name="aedef7fe5e84e396e3b1a65875f71d3d4a7dd8a6d6889105ee1c5c149acb27d3ba"></a>HLLC1D&#160;</td><td class="fielddoc"><p>一维HLLC通量 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedef7fe5e84e396e3b1a65875f71d3d4a3e2b4adf8c2f29179d2cb0cf63888a32" name="aedef7fe5e84e396e3b1a65875f71d3d4a3e2b4adf8c2f29179d2cb0cf63888a32"></a>ROE1D&#160;</td><td class="fielddoc"><p>一维Roe通量 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedef7fe5e84e396e3b1a65875f71d3d4a10e3627cc9b62d3e207a91b54eaa007a" name="aedef7fe5e84e396e3b1a65875f71d3d4a10e3627cc9b62d3e207a91b54eaa007a"></a>HLLC2D&#160;</td><td class="fielddoc"><p>二维HLLC通量 </p>
+</td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00126">126</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad67c42f6befa23035412c415ce619b37" name="ad67c42f6befa23035412c415ce619b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad67c42f6befa23035412c415ce619b37">&#9670;&#160;</a></span>InterMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ad67c42f6befa23035412c415ce619b37">InterMethod</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>插值方法枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a3e7e9ecb94924acb13e94c0f750d977a" name="ad67c42f6befa23035412c415ce619b37a3e7e9ecb94924acb13e94c0f750d977a"></a>FIRSTORDER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a181cabe43fb03984143b9d63dcf477b3" name="ad67c42f6befa23035412c415ce619b37a181cabe43fb03984143b9d63dcf477b3"></a>MUSCL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a4efa7a0f77c4df1e92e7c318481a4241" name="ad67c42f6befa23035412c415ce619b37a4efa7a0f77c4df1e92e7c318481a4241"></a>WCNS5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37abedbc532c0ad2ea0b4f43e46cac59841" name="ad67c42f6befa23035412c415ce619b37abedbc532c0ad2ea0b4f43e46cac59841"></a>WCNSZ5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a126208770027c0f0df39f1c7bc324eb9" name="ad67c42f6befa23035412c415ce619b37a126208770027c0f0df39f1c7bc324eb9"></a>WCNS5Char&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a30d2f2c48ca9dd470c423454050218e0" name="ad67c42f6befa23035412c415ce619b37a30d2f2c48ca9dd470c423454050218e0"></a>WCNSZ5Char&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37ac0405f89a80f4b7608f52e0afb66a110" name="ad67c42f6befa23035412c415ce619b37ac0405f89a80f4b7608f52e0afb66a110"></a>WCNS5CONG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a40c06cf271491ba02daf198ae9ea3800" name="ad67c42f6befa23035412c415ce619b37a40c06cf271491ba02daf198ae9ea3800"></a>TCNSCongA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a6f4c265b815c5908a238a813c288a966" name="ad67c42f6befa23035412c415ce619b37a6f4c265b815c5908a238a813c288a966"></a>WCNS5CONGZ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a11ca4ae7c1ca948df21a0540df95bcbd" name="ad67c42f6befa23035412c415ce619b37a11ca4ae7c1ca948df21a0540df95bcbd"></a>WCNS5CONGZCT4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a3582c1757798ee583b3cd456a3817dc3" name="ad67c42f6befa23035412c415ce619b37a3582c1757798ee583b3cd456a3817dc3"></a>WCNS5CONGZCT7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a3e9f88928959bc95f023f1d49fbbe8d0" name="ad67c42f6befa23035412c415ce619b37a3e9f88928959bc95f023f1d49fbbe8d0"></a>TCNS5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a5162010b148207ed15b0290d85598556" name="ad67c42f6befa23035412c415ce619b37a5162010b148207ed15b0290d85598556"></a>TCNS5CT4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37aa16548b8a799464dd554573cb80ea90f" name="ad67c42f6befa23035412c415ce619b37aa16548b8a799464dd554573cb80ea90f"></a>TCNS5CT7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a278dff8d419744a475f5c896c081d875" name="ad67c42f6befa23035412c415ce619b37a278dff8d419744a475f5c896c081d875"></a>LINEAR5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a24ea1d8404ac79ba18eba96a03177d37" name="ad67c42f6befa23035412c415ce619b37a24ea1d8404ac79ba18eba96a03177d37"></a>NICEST5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a1879cebccb52b70f910f52d2cfbfc5fc" name="ad67c42f6befa23035412c415ce619b37a1879cebccb52b70f910f52d2cfbfc5fc"></a>INTERMAX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a64c3f6b508fb34a1d1ba87b1501a3bf7" name="ad67c42f6befa23035412c415ce619b37a64c3f6b508fb34a1d1ba87b1501a3bf7"></a>WHFTCNSA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37ab9321dd4e88e6e9ca95d3df20a4b7d8b" name="ad67c42f6befa23035412c415ce619b37ab9321dd4e88e6e9ca95d3df20a4b7d8b"></a>WHFTCNSASF002&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37ac08fc2e605205bb12982750d76d61019" name="ad67c42f6befa23035412c415ce619b37ac08fc2e605205bb12982750d76d61019"></a>WHFTCNSAH002&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a9b66c74991b1b45d1236753186e7c798" name="ad67c42f6befa23035412c415ce619b37a9b66c74991b1b45d1236753186e7c798"></a>WHFTCNSASF102&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37aa7a47402742fe73491558cd2eb3191bd" name="ad67c42f6befa23035412c415ce619b37aa7a47402742fe73491558cd2eb3191bd"></a>WHFTCNSASF103&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a74f489cc8812c6d60f1f84a879d18752" name="ad67c42f6befa23035412c415ce619b37a74f489cc8812c6d60f1f84a879d18752"></a>WHFTCNSASF102_reciprocal&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a5b21cbcac96f3a127fd53ba8dc9c21d0" name="ad67c42f6befa23035412c415ce619b37a5b21cbcac96f3a127fd53ba8dc9c21d0"></a>WHFTCNSASF103_reciprocal&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37ab23385d1aa953b04f6482bbee3c049f0" name="ad67c42f6befa23035412c415ce619b37ab23385d1aa953b04f6482bbee3c049f0"></a>WHFTCNSAS_fx&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37ae9707639a71346157d0c0553654b05c4" name="ad67c42f6befa23035412c415ce619b37ae9707639a71346157d0c0553654b05c4"></a>WHFTCNSAS_initial&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a7fe0bde2441184ae945a6f27135ebf4a" name="ad67c42f6befa23035412c415ce619b37a7fe0bde2441184ae945a6f27135ebf4a"></a>WHFTCNSAS_approx_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a01297f6f93e3d4a10812e7dda42143df" name="ad67c42f6befa23035412c415ce619b37a01297f6f93e3d4a10812e7dda42143df"></a>WHFTCNSAS_fx_real&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37adc0fe7293b5dbc48f803c8f66b25e40a" name="ad67c42f6befa23035412c415ce619b37adc0fe7293b5dbc48f803c8f66b25e40a"></a>WHFTCNSAS_approx_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a119b3a413b12ff023661eb420f90f373" name="ad67c42f6befa23035412c415ce619b37a119b3a413b12ff023661eb420f90f373"></a>WHFTCNSASF202_2S&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a19d77b3fe88bc2c194da0b9d5c042317" name="ad67c42f6befa23035412c415ce619b37a19d77b3fe88bc2c194da0b9d5c042317"></a>WHFTCNSASF202_NoS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a25c64d2737331bb4db12361b6ffaffb5" name="ad67c42f6befa23035412c415ce619b37a25c64d2737331bb4db12361b6ffaffb5"></a>WHFTCNSASF203_NoS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37aac353449fbe7472d91abfc5e4189f761" name="ad67c42f6befa23035412c415ce619b37aac353449fbe7472d91abfc5e4189f761"></a>temp011&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a0f86fab387947fc55b42a5460338cfd8" name="ad67c42f6befa23035412c415ce619b37a0f86fab387947fc55b42a5460338cfd8"></a>temp012&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37ad8baf6dff250a1612612af182df68eac" name="ad67c42f6befa23035412c415ce619b37ad8baf6dff250a1612612af182df68eac"></a>temp013&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37ae476714a226ba59d23620c08a714ac58" name="ad67c42f6befa23035412c415ce619b37ae476714a226ba59d23620c08a714ac58"></a>temp014&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a3a8ef349593cdc1a4da06a778d7b3af0" name="ad67c42f6befa23035412c415ce619b37a3a8ef349593cdc1a4da06a778d7b3af0"></a>temp015&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37ab96b6dc92783889599297b7da3e577b3" name="ad67c42f6befa23035412c415ce619b37ab96b6dc92783889599297b7da3e577b3"></a>temp016&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37abf50408d1ee8072e4b4dc6afb2e36e42" name="ad67c42f6befa23035412c415ce619b37abf50408d1ee8072e4b4dc6afb2e36e42"></a>temp017&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37ab814ba7b4ea52d59083f1b31a507a3d3" name="ad67c42f6befa23035412c415ce619b37ab814ba7b4ea52d59083f1b31a507a3d3"></a>temp018&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad67c42f6befa23035412c415ce619b37a795c960f9dbcfbba982dc74c4c7ddbca" name="ad67c42f6befa23035412c415ce619b37a795c960f9dbcfbba982dc74c4c7ddbca"></a>temp019&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00054">54</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a3ae727773c367ac1041d72ac770a0ab1" name="a3ae727773c367ac1041d72ac770a0ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae727773c367ac1041d72ac770a0ab1">&#9670;&#160;</a></span>SourceType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a3ae727773c367ac1041d72ac770a0ab1">SourceType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>源项类型枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a3ae727773c367ac1041d72ac770a0ab1aef50bc49db861c68bcd94974f4b604e5" name="a3ae727773c367ac1041d72ac770a0ab1aef50bc49db861c68bcd94974f4b604e5"></a>SOURCENULL&#160;</td><td class="fielddoc"><p>无源项 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3ae727773c367ac1041d72ac770a0ab1abbcfb30512c4002f1f7a36b4092cb3fb" name="a3ae727773c367ac1041d72ac770a0ab1abbcfb30512c4002f1f7a36b4092cb3fb"></a>GRAVITY&#160;</td><td class="fielddoc"><p>重力源项 </p>
+</td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00143">143</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a358043ae6b418d48835e9ac9be85d896" name="a358043ae6b418d48835e9ac9be85d896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358043ae6b418d48835e9ac9be85d896">&#9670;&#160;</a></span>TimeMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a358043ae6b418d48835e9ac9be85d896">TimeMethod</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>时间积分方法枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a358043ae6b418d48835e9ac9be85d896ae672a0d703868ebfcb0df2ee5bbecaa2" name="a358043ae6b418d48835e9ac9be85d896ae672a0d703868ebfcb0df2ee5bbecaa2"></a>RK3SSP&#160;</td><td class="fielddoc"><p>三阶SSP Runge-Kutta方法 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a358043ae6b418d48835e9ac9be85d896a218bf64be45f1537b7485e0d4562cfe6" name="a358043ae6b418d48835e9ac9be85d896a218bf64be45f1537b7485e0d4562cfe6"></a>EulerFront&#160;</td><td class="fielddoc"><p>欧拉向前积分方法 </p>
+</td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00135">135</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="aae8891b6e054c4e14f504dd3f381320a" name="aae8891b6e054c4e14f504dd3f381320a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae8891b6e054c4e14f504dd3f381320a">&#9670;&#160;</a></span>calOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; int, 2 &gt; calOffset </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>idim</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; int, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>iMax</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算偏移量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idim</td><td>维度 </td></tr>
+    <tr><td class="paramname">i</td><td>第一索引 </td></tr>
+    <tr><td class="paramname">j</td><td>第二索引 </td></tr>
+    <tr><td class="paramname">iMax</td><td>各方向最大索引数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>包含起始索引和偏移量的数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00169">169</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="macro_8hpp_aae8891b6e054c4e14f504dd3f381320a_icgraph.png" border="0" usemap="#amacro_8hpp_aae8891b6e054c4e14f504dd3f381320a_icgraph" loading="lazy" alt=""/></div>
+<map name="amacro_8hpp_aae8891b6e054c4e14f504dd3f381320a_icgraph" id="amacro_8hpp_aae8891b6e054c4e14f504dd3f381320a_icgraph">
+<area shape="rect" title="计算偏移量" alt="" coords="431,31,504,57"/>
+<area shape="rect" href="class_initializer.html#ac79a58b8ad2735b658b66aa7df4686a6" title="初始化边界条件" alt="" coords="5,5,134,32"/>
+<area shape="poly" title=" " alt="" coords="413,26,383,21,317,15,250,12,134,16,134,11,250,7,317,9,383,16,418,26"/>
+<area shape="rect" href="class_initializer.html#af17ef5c544d4e34dd7f87e0cc661c48e" title="初始化双马赫反射问题边界条件" alt="" coords="182,31,383,57"/>
+<area shape="poly" title=" " alt="" coords="413,44,384,47,383,41,418,44"/>
+<area shape="rect" href="class_sp_distributor.html#af7d75f4c83a85db9e4b1e1824e62f238" title="求解右手端" alt="" coords="204,81,360,108"/>
+<area shape="poly" title=" " alt="" coords="419,59,384,72,340,83,339,78,382,67,413,60"/>
+<area shape="poly" title=" " alt="" coords="164,31,134,29,134,24,169,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a56cabadb0a857e1da7befbabea638357" name="a56cabadb0a857e1da7befbabea638357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56cabadb0a857e1da7befbabea638357">&#9670;&#160;</a></span>calOffsetInverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; int, 2 &gt; calOffsetInverse </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>idim</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; int, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>iMax</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算逆向偏移量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idim</td><td>维度 </td></tr>
+    <tr><td class="paramname">i</td><td>第一索引 </td></tr>
+    <tr><td class="paramname">j</td><td>第二索引 </td></tr>
+    <tr><td class="paramname">iMax</td><td>各方向最大索引数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>包含起始索引和偏移量的数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00194">194</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="macro_8hpp_a56cabadb0a857e1da7befbabea638357_icgraph.png" border="0" usemap="#amacro_8hpp_a56cabadb0a857e1da7befbabea638357_icgraph" loading="lazy" alt=""/></div>
+<map name="amacro_8hpp_a56cabadb0a857e1da7befbabea638357_icgraph" id="amacro_8hpp_a56cabadb0a857e1da7befbabea638357_icgraph">
+<area shape="rect" title="计算逆向偏移量" alt="" coords="431,5,547,32"/>
+<area shape="rect" href="class_initializer.html#ac79a58b8ad2735b658b66aa7df4686a6" title="初始化边界条件" alt="" coords="5,5,134,32"/>
+<area shape="poly" title=" " alt="" coords="415,21,134,21,134,16,416,16"/>
+<area shape="rect" href="class_initializer.html#af17ef5c544d4e34dd7f87e0cc661c48e" title="初始化双马赫反射问题边界条件" alt="" coords="182,31,383,57"/>
+<area shape="poly" title=" " alt="" coords="418,27,384,34,383,29,413,28"/>
+<area shape="poly" title=" " alt="" coords="164,30,134,29,134,24,169,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0da3e49c2f90d769ba7f489622b47ef6" name="a0da3e49c2f90d769ba7f489622b47ef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0da3e49c2f90d769ba7f489622b47ef6">&#9670;&#160;</a></span>index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int index </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>k</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; int, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>iMax</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算三维数组的线性索引 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>x方向索引 </td></tr>
+    <tr><td class="paramname">j</td><td>y方向索引 </td></tr>
+    <tr><td class="paramname">k</td><td>z方向索引 </td></tr>
+    <tr><td class="paramname">iMax</td><td>各方向最大索引数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>线性索引 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00156">156</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="macro_8hpp_a0da3e49c2f90d769ba7f489622b47ef6_icgraph.png" border="0" usemap="#amacro_8hpp_a0da3e49c2f90d769ba7f489622b47ef6_icgraph" loading="lazy" alt=""/></div>
+<map name="amacro_8hpp_a0da3e49c2f90d769ba7f489622b47ef6_icgraph" id="amacro_8hpp_a0da3e49c2f90d769ba7f489622b47ef6_icgraph">
+<area shape="rect" title="计算三维数组的线性索引" alt="" coords="219,249,271,276"/>
+<area shape="rect" href="class_bnds.html#af455ed53b0d972d0bc8a9120e86751eb" title="获取指定方向的一维边界" alt="" coords="21,5,155,32"/>
+<area shape="poly" title=" " alt="" coords="239,234,234,193,222,142,201,90,187,67,169,46,155,35,154,30,172,42,191,64,206,88,227,141,239,192,245,235"/>
+<area shape="rect" href="class_initializer.html#af4bb8f4f2e5f9f77b44fd2dfd1cc48e2" title="初始化均匀网格" alt="" coords="16,56,160,99"/>
+<area shape="poly" title=" " alt="" coords="234,234,211,174,193,141,169,113,156,102,155,97,173,109,197,138,216,172,239,234"/>
+<area shape="rect" href="sp__recon_8cpp.html#aae45584dc7664c704660d2d850d4173b" title="最小差值计算函数" alt="" coords="58,123,118,149"/>
+<area shape="poly" title=" " alt="" coords="228,236,204,199,188,180,169,164,144,150,119,143,117,138,146,145,172,159,191,176,208,195,233,235"/>
+<area shape="rect" href="sp__recon_8cpp.html#a1672668e6aa406da91a3c9058420f817" title="最小差值计算函数（二维数组版本）" alt="" coords="58,173,118,200"/>
+<area shape="poly" title=" " alt="" coords="213,241,170,214,119,196,117,191,172,210,218,239"/>
+<area shape="rect" href="sp__recon_8cpp.html#a159cca47f1aadf3aeda39b6a2ac00b01" title="最小差值计算函数（三维数组版本）" alt="" coords="58,224,118,251"/>
+<area shape="poly" title=" " alt="" coords="201,258,119,245,117,239,205,254"/>
+<area shape="rect" href="sp__recon_8cpp.html#ae781fbf04454bd6255a71f6c0a8b14bf" title="最小差值计算函数（另一种三维数组版本）" alt="" coords="55,275,121,301"/>
+<area shape="poly" title=" " alt="" coords="201,271,123,285,121,280,205,267"/>
+<area shape="rect" href="inter_scheme_8hpp.html#aaa3344e62d98ea7851b1ea5623e35801" title=" " alt="" coords="16,325,160,352"/>
+<area shape="poly" title=" " alt="" coords="213,287,172,316,144,327,141,323,169,311,217,284"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a023f7b7f8a72cbb43fe9c12c43e20d4f" title=" " alt="" coords="29,376,147,403"/>
+<area shape="poly" title=" " alt="" coords="232,288,208,330,191,349,172,366,149,379,146,374,169,362,188,346,204,327,229,292"/>
+<area shape="rect" href="inter_scheme_8hpp.html#aeb3b4180ef316ea6cbdd64aaa5dbea76" title=" " alt="" coords="18,427,158,453"/>
+<area shape="poly" title=" " alt="" coords="239,289,217,354,198,388,172,417,154,428,152,424,169,413,194,385,212,352,235,293"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a24949ee442d39eaafce87e9326fce080" title=" " alt="" coords="5,477,171,504"/>
+<area shape="poly" title=" " alt="" coords="243,289,238,331,225,378,204,426,190,448,172,467,155,479,153,474,169,463,186,444,199,423,220,376,232,330,240,294"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">变量说明</h2>
+<a id="ac4420191ae02c6df2289c8cb4cfc9369" name="ac4420191ae02c6df2289c8cb4cfc9369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4420191ae02c6df2289c8cb4cfc9369">&#9670;&#160;</a></span>timepp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long timepp = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>时间统计变量 </p>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab7906553f3a3cf2e9a1f9f1995ab89ab" name="ab7906553f3a3cf2e9a1f9f1995ab89ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7906553f3a3cf2e9a1f9f1995ab89ab">&#9670;&#160;</a></span>timesss</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long timesss = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>时间统计变量 </p>
+
+<p class="definition">在文件 <a class="el" href="macro_8hpp_source.html">macro.hpp</a> 第 <a class="el" href="macro_8hpp_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

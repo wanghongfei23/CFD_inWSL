@@ -1,0 +1,9 @@
+<map id="Linf_norm_error" name="Linf_norm_error">
+<area shape="rect" id="Node000001" title="计算L∞范数误差" alt="" coords="5,31,117,57"/>
+<area shape="rect" id="Node000002" href="$class_ghost_array.html#a44c41fac8c60c62387f8d1dc699a8d0b" title="获取物理域范围" alt="" coords="165,5,302,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,33,152,30,147,32,118,38"/>
+<area shape="rect" id="Node000003" href="$header_8_h.html#aea5366c55fbed763b55297cf942e3b67" title="精确解函数" alt="" coords="181,56,286,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="117,49,168,59,163,60,117,55"/>
+<area shape="rect" id="Node000004" href="$header_8_h.html#aa33afed158244dc30f8b8e0e7322d1eb" title="精确导数函数" alt="" coords="350,56,438,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="286,67,337,69,332,69,287,72"/>
+</map>

@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: fluxSolver类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="classflux_solver-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">fluxSolver类 参考<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>通量求解器基类  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="flux_solver_8hpp_source.html">fluxSolver.hpp</a>&gt;</code></p>
+<div class="dynheader">
+fluxSolver 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classflux_solver__coll__graph.png" border="0" usemap="#aflux_solver_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="aflux_solver_coll__map" id="aflux_solver_coll__map">
+<area shape="rect" title="通量求解器基类" alt="" coords="5,104,85,131"/>
+<area shape="rect" href="class_info.html" title="存储和管理求解器的各种配置参数和状态信息" alt="" coords="23,5,67,32"/>
+<area shape="poly" title=" " alt="" coords="47,47,48,104,42,103,43,49"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af7dd1b8ae1dc2208b038f9a45c77c758" id="r_af7dd1b8ae1dc2208b038f9a45c77c758"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7dd1b8ae1dc2208b038f9a45c77c758">fluxSolver</a> (std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt; valsR_, std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt; <a class="el" href="#a888f4a7fca41aa1b4778b0552d0ce169">fluxes</a>, <a class="el" href="class_info.html">Info</a> *info_, int idim_)</td></tr>
+<tr class="memdesc:af7dd1b8ae1dc2208b038f9a45c77c758"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="memitem:ab8d599babd861e64f46189b0cf6d4494" id="r_ab8d599babd861e64f46189b0cf6d4494"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8d599babd861e64f46189b0cf6d4494">fluxSolve</a> ()=0</td></tr>
+<tr class="memdesc:ab8d599babd861e64f46189b0cf6d4494"><td class="mdescLeft">&#160;</td><td class="mdescRight">通量求解虚函数，需要在派生类中实现  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a807c33bc570b1f58737da289b310e502" id="r_a807c33bc570b1f58737da289b310e502"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a807c33bc570b1f58737da289b310e502">valsR</a></td></tr>
+<tr class="memdesc:a807c33bc570b1f58737da289b310e502"><td class="mdescLeft">&#160;</td><td class="mdescRight">重构后数据指针  <br /></td></tr>
+<tr class="memitem:a888f4a7fca41aa1b4778b0552d0ce169" id="r_a888f4a7fca41aa1b4778b0552d0ce169"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a888f4a7fca41aa1b4778b0552d0ce169">fluxes</a></td></tr>
+<tr class="memdesc:a888f4a7fca41aa1b4778b0552d0ce169"><td class="mdescLeft">&#160;</td><td class="mdescRight">通量数据指针  <br /></td></tr>
+<tr class="memitem:ac9a369623a7623b58f1434e7e99a6583" id="r_ac9a369623a7623b58f1434e7e99a6583"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_info.html">Info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9a369623a7623b58f1434e7e99a6583">info</a></td></tr>
+<tr class="memdesc:ac9a369623a7623b58f1434e7e99a6583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Info对象指针  <br /></td></tr>
+<tr class="memitem:a3dbc0e9a061b583353ea5239c9c0018d" id="r_a3dbc0e9a061b583353ea5239c9c0018d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dbc0e9a061b583353ea5239c9c0018d">idim</a></td></tr>
+<tr class="memdesc:a3dbc0e9a061b583353ea5239c9c0018d"><td class="mdescLeft">&#160;</td><td class="mdescRight">维度索引  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>通量求解器基类 </p>
+<p>该类是所有通量求解器的基类，定义了通量计算的基本接口。 </p>
+
+<p class="definition">在文件 <a class="el" href="flux_solver_8hpp_source.html">fluxSolver.hpp</a> 第 <a class="el" href="flux_solver_8hpp_source.html#l00016">16</a> 行定义.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="af7dd1b8ae1dc2208b038f9a45c77c758" name="af7dd1b8ae1dc2208b038f9a45c77c758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7dd1b8ae1dc2208b038f9a45c77c758">&#9670;&#160;</a></span>fluxSolver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fluxSolver::fluxSolver </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>valsR_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>fluxes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_info.html">Info</a> *</td>          <td class="paramname"><span class="paramname"><em>info_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>idim_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valsR_</td><td>重构后数据指针 </td></tr>
+    <tr><td class="paramname">fluxes_</td><td>通量数据指针 </td></tr>
+    <tr><td class="paramname">info_</td><td>Info对象指针 </td></tr>
+    <tr><td class="paramname">idim_</td><td>维度索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ab8d599babd861e64f46189b0cf6d4494" name="ab8d599babd861e64f46189b0cf6d4494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8d599babd861e64f46189b0cf6d4494">&#9670;&#160;</a></span>fluxSolve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void fluxSolver::fluxSolve </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>通量求解虚函数，需要在派生类中实现 </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a888f4a7fca41aa1b4778b0552d0ce169" name="a888f4a7fca41aa1b4778b0552d0ce169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888f4a7fca41aa1b4778b0552d0ce169">&#9670;&#160;</a></span>fluxes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_data.html">Data</a>&gt; fluxSolver::fluxes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>通量数据指针 </p>
+
+<p class="definition">在文件 <a class="el" href="flux_solver_8hpp_source.html">fluxSolver.hpp</a> 第 <a class="el" href="flux_solver_8hpp_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a3dbc0e9a061b583353ea5239c9c0018d" name="a3dbc0e9a061b583353ea5239c9c0018d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dbc0e9a061b583353ea5239c9c0018d">&#9670;&#160;</a></span>idim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fluxSolver::idim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>维度索引 </p>
+
+<p class="definition">在文件 <a class="el" href="flux_solver_8hpp_source.html">fluxSolver.hpp</a> 第 <a class="el" href="flux_solver_8hpp_source.html#l00037">37</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac9a369623a7623b58f1434e7e99a6583" name="ac9a369623a7623b58f1434e7e99a6583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a369623a7623b58f1434e7e99a6583">&#9670;&#160;</a></span>info</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_info.html">Info</a>* fluxSolver::info</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Info对象指针 </p>
+
+<p class="definition">在文件 <a class="el" href="flux_solver_8hpp_source.html">fluxSolver.hpp</a> 第 <a class="el" href="flux_solver_8hpp_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a807c33bc570b1f58737da289b310e502" name="a807c33bc570b1f58737da289b310e502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a807c33bc570b1f58737da289b310e502">&#9670;&#160;</a></span>valsR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_data.html">Data</a>&gt; fluxSolver::valsR</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重构后数据指针 </p>
+
+<p class="definition">在文件 <a class="el" href="flux_solver_8hpp_source.html">fluxSolver.hpp</a> 第 <a class="el" href="flux_solver_8hpp_source.html#l00034">34</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/<a class="el" href="flux_solver_8hpp_source.html">fluxSolver.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

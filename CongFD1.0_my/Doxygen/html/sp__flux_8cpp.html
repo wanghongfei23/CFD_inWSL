@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/src/sp_flux.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_98cdb10f369f6a3b9149e010b312bf5d.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle"><div class="title">sp_flux.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>空间离散通量计算实现文件  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="flux_scheme_8hpp_source.html">fluxScheme.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+sp_flux.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="sp__flux_8cpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2src_2sp__flux_8cpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2src_2sp__flux_8cpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2src_2sp__flux_8cpp">
+<area shape="rect" title="空间离散通量计算实现文件" alt="" coords="748,5,994,80"/>
+<area shape="rect" href="_space_dis_8hpp.html" title=" " alt="" coords="574,128,677,155"/>
+<area shape="poly" title=" " alt="" coords="775,82,673,124,671,119,780,79"/>
+<area shape="rect" href="flux_scheme_8hpp.html" title="定义通量格式相关的函数和类" alt="" coords="808,352,923,379"/>
+<area shape="poly" title=" " alt="" coords="898,78,926,125,949,183,956,213,959,245,955,276,945,305,928,328,906,346,904,341,924,324,940,303,950,274,953,245,951,214,944,184,921,128,896,83"/>
+<area shape="rect" href="inter_scheme_8hpp.html" title=" " alt="" coords="811,277,930,304"/>
+<area shape="poly" title=" " alt="" coords="873,78,873,263,868,260,869,82"/>
+<area shape="rect" href="block_8hpp.html" title="定义Block类，用于处理计算网格块的相关数据和操作" alt="" coords="515,203,592,229"/>
+<area shape="poly" title=" " alt="" coords="615,154,578,194,575,189,611,157"/>
+<area shape="rect" href="one_d_bnd_8hpp.html" title=" " alt="" coords="390,203,490,229"/>
+<area shape="poly" title=" " alt="" coords="591,156,488,199,486,194,596,154"/>
+<area shape="rect" href="info_8hpp.html" title="定义求解器相关信息的类" alt="" coords="330,277,398,304"/>
+<area shape="poly" title=" " alt="" coords="571,150,462,171,411,186,392,195,379,204,371,217,366,232,363,263,359,261,361,231,366,215,376,201,389,190,409,181,460,165,576,147"/>
+<area shape="rect" title=" " alt="" coords="616,203,779,229"/>
+<area shape="poly" title=" " alt="" coords="639,153,677,192,672,191,637,158"/>
+<area shape="rect" href="eigen_system_8hpp.html" title="定义特征系统相关的类，用于欧拉方程的特征分解" alt="" coords="664,277,787,304"/>
+<area shape="poly" title=" " alt="" coords="677,144,708,150,740,161,769,177,793,201,799,220,792,239,778,256,760,271,757,266,774,252,787,236,793,220,789,204,766,181,738,165,707,155,678,149"/>
+<area shape="rect" href="data_8hpp.html" title=" " alt="" coords="472,277,544,304"/>
+<area shape="poly" title=" " alt="" coords="548,228,526,266,522,262,543,232"/>
+<area shape="rect" title=" " alt="" coords="568,277,641,304"/>
+<area shape="poly" title=" " alt="" coords="563,227,589,265,584,264,561,232"/>
+<area shape="rect" href="macro_8hpp.html" title="定义项目中使用的宏、枚举类型和通用函数" alt="" coords="467,352,549,379"/>
+<area shape="poly" title=" " alt="" coords="510,303,510,338,506,335,506,307"/>
+<area shape="rect" title=" " alt="" coords="940,427,991,453"/>
+<area shape="poly" title=" " alt="" coords="550,368,711,386,816,402,928,427,922,426,815,408,710,391,550,373"/>
+<area shape="rect" title=" " alt="" coords="342,427,402,453"/>
+<area shape="poly" title=" " alt="" coords="487,379,410,422,408,417,482,380"/>
+<area shape="rect" title=" " alt="" coords="426,427,497,453"/>
+<area shape="poly" title=" " alt="" coords="502,378,479,416,476,412,498,380"/>
+<area shape="rect" title=" " alt="" coords="521,427,589,453"/>
+<area shape="poly" title=" " alt="" coords="518,377,541,415,536,413,515,382"/>
+<area shape="rect" title=" " alt="" coords="683,427,736,453"/>
+<area shape="poly" title=" " alt="" coords="544,377,671,424,666,424,543,382"/>
+<area shape="rect" title=" " alt="" coords="761,427,818,453"/>
+<area shape="poly" title=" " alt="" coords="550,374,748,426,743,426,550,379"/>
+<area shape="rect" title=" " alt="" coords="842,427,916,453"/>
+<area shape="poly" title=" " alt="" coords="550,371,671,392,829,426,824,426,670,397,549,376"/>
+<area shape="rect" title=" " alt="" coords="5,427,70,453"/>
+<area shape="poly" title=" " alt="" coords="464,371,304,393,85,429,84,424,303,388,469,370"/>
+<area shape="rect" title=" " alt="" coords="94,427,152,453"/>
+<area shape="poly" title=" " alt="" coords="464,373,337,395,167,429,166,423,336,390,469,372"/>
+<area shape="rect" title=" " alt="" coords="175,427,233,453"/>
+<area shape="poly" title=" " alt="" coords="469,376,249,429,248,423,464,375"/>
+<area shape="rect" title=" " alt="" coords="613,427,659,453"/>
+<area shape="poly" title=" " alt="" coords="531,377,603,419,598,418,530,382"/>
+<area shape="rect" title=" " alt="" coords="258,427,318,453"/>
+<area shape="poly" title=" " alt="" coords="472,379,334,426,333,421,467,380"/>
+<area shape="poly" title=" " alt="" coords="453,227,489,266,483,266,451,232"/>
+<area shape="poly" title=" " alt="" coords="443,227,450,263,463,303,487,341,482,339,458,305,444,265,440,232"/>
+<area shape="poly" title=" " alt="" coords="429,228,390,269,387,264,425,231"/>
+<area shape="poly" title=" " alt="" coords="390,302,472,344,467,345,389,307"/>
+<area shape="poly" title=" " alt="" coords="690,304,561,349,560,344,685,305"/>
+<area shape="poly" title=" " alt="" coords="787,301,874,322,911,335,937,350,956,379,965,413,960,410,951,381,933,354,909,340,872,327,787,306"/>
+<area shape="poly" title=" " alt="" coords="884,377,938,418,933,417,882,382"/>
+<area shape="poly" title=" " alt="" coords="855,378,815,418,812,414,850,380"/>
+<area shape="poly" title=" " alt="" coords="870,377,876,413,872,410,866,381"/>
+<area shape="poly" title=" " alt="" coords="813,303,565,355,564,350,808,304"/>
+<area shape="poly" title=" " alt="" coords="915,302,952,321,968,334,981,351,987,366,988,382,980,414,976,410,982,382,982,367,977,353,964,338,949,325,914,307"/>
+<area shape="rect" href="000__globals_8hpp.html" title=" " alt="" coords="657,352,772,379"/>
+<area shape="poly" title=" " alt="" coords="846,304,757,348,755,343,841,305"/>
+<area shape="poly" title=" " alt="" coords="716,377,714,413,710,409,712,381"/>
+<area shape="poly" title=" " alt="" coords="729,377,769,417,763,415,727,382"/>
+<area shape="poly" title=" " alt="" coords="704,378,662,418,660,414,699,380"/>
+</map>
+</div>
+</div>
+<p><a href="sp__flux_8cpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a9f9522294ebd2a122861bc5d3bf71851" id="r_a9f9522294ebd2a122861bc5d3bf71851"><td class="memItemLeft" align="right" valign="top">typedef std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f9522294ebd2a122861bc5d3bf71851">arr2</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>空间离散通量计算实现文件 </p>
+<p>该文件实现了各种空间离散格式下的数值通量计算方法 </p>
+
+<p class="definition">在文件 <a class="el" href="sp__flux_8cpp_source.html">sp_flux.cpp</a> 中定义.</p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">类型定义说明</h2>
+<a id="a9f9522294ebd2a122861bc5d3bf71851" name="a9f9522294ebd2a122861bc5d3bf71851"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9522294ebd2a122861bc5d3bf71851">&#9670;&#160;</a></span>arr2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::array&lt;<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2&gt; <a class="el" href="flux_scheme_8hpp.html#af8bc7f1334a9adf9902e914309dfefc5">arr2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sp__flux_8cpp_source.html">sp_flux.cpp</a> 第 <a class="el" href="sp__flux_8cpp_source.html#l00098">98</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

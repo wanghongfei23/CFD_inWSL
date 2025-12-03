@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/utils/exactSolBurgers/main2.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a href="dir_41d73644e196e40a513443d5514381f9.html">exactSolBurgers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">main2.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+main2.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main2_8cpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2utils_2exact_sol_burgers_2main2_8cpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2utils_2exact_sol_burgers_2main2_8cpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2utils_2exact_sol_burgers_2main2_8cpp">
+<area shape="rect" title=" " alt="" coords="87,5,334,80"/>
+<area shape="rect" title=" " alt="" coords="5,128,77,155"/>
+<area shape="poly" title=" " alt="" coords="148,82,77,122,75,118,143,79"/>
+<area shape="rect" title=" " alt="" coords="100,128,158,155"/>
+<area shape="poly" title=" " alt="" coords="182,79,151,118,148,114,177,81"/>
+<area shape="rect" title=" " alt="" coords="182,128,239,155"/>
+<area shape="poly" title=" " alt="" coords="212,78,213,114,208,111,208,82"/>
+<area shape="rect" title=" " alt="" coords="263,128,328,155"/>
+<area shape="poly" title=" " alt="" coords="244,78,277,116,272,115,242,83"/>
+<area shape="rect" title=" " alt="" coords="353,128,417,155"/>
+<area shape="poly" title=" " alt="" coords="278,78,351,120,346,120,276,83"/>
+</map>
+</div>
+</div>
+<p><a href="main2_8cpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a8dd2bd912c6237bb1b158a15fec5390e" id="r_a8dd2bd912c6237bb1b158a15fec5390e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dd2bd912c6237bb1b158a15fec5390e">u0</a> (double x, double u, double t)</td></tr>
+<tr class="memitem:ae7b00f67114f339453b99ee6b0fc2984" id="r_ae7b00f67114f339453b99ee6b0fc2984"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7b00f67114f339453b99ee6b0fc2984">du0</a> (double x, double u, double t)</td></tr>
+<tr class="memitem:a37d1e41ac68bbcbb7bbca203e9ffc766" id="r_a37d1e41ac68bbcbb7bbca203e9ffc766"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37d1e41ac68bbcbb7bbca203e9ffc766">f</a> (double x, double u, double t)</td></tr>
+<tr class="memitem:ac8be8a801ea2cd7107430724da5ccb92" id="r_ac8be8a801ea2cd7107430724da5ccb92"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8be8a801ea2cd7107430724da5ccb92">df</a> (double x, double u, double t)</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627" id="r_a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="ac8be8a801ea2cd7107430724da5ccb92" name="ac8be8a801ea2cd7107430724da5ccb92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8be8a801ea2cd7107430724da5ccb92">&#9670;&#160;</a></span>df()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double df </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>u</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="main2_8cpp_source.html">main2.cpp</a> 第 <a class="el" href="main2_8cpp_source.html#l00019">19</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main2_8cpp_ac8be8a801ea2cd7107430724da5ccb92_cgraph.png" border="0" usemap="#amain2_8cpp_ac8be8a801ea2cd7107430724da5ccb92_cgraph" loading="lazy" alt=""/></div>
+<map name="amain2_8cpp_ac8be8a801ea2cd7107430724da5ccb92_cgraph" id="amain2_8cpp_ac8be8a801ea2cd7107430724da5ccb92_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,44,32"/>
+<area shape="rect" href="main2_8cpp.html#ae7b00f67114f339453b99ee6b0fc2984" title=" " alt="" coords="92,5,134,32"/>
+<area shape="poly" title=" " alt="" coords="44,16,79,17,74,20,44,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main2_8cpp_ac8be8a801ea2cd7107430724da5ccb92_icgraph.png" border="0" usemap="#amain2_8cpp_ac8be8a801ea2cd7107430724da5ccb92_icgraph" loading="lazy" alt=""/></div>
+<map name="amain2_8cpp_ac8be8a801ea2cd7107430724da5ccb92_icgraph" id="amain2_8cpp_ac8be8a801ea2cd7107430724da5ccb92_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,141,32"/>
+<area shape="rect" href="main2_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae7b00f67114f339453b99ee6b0fc2984" name="ae7b00f67114f339453b99ee6b0fc2984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7b00f67114f339453b99ee6b0fc2984">&#9670;&#160;</a></span>du0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double du0 </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>u</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="main2_8cpp_source.html">main2.cpp</a> 第 <a class="el" href="main2_8cpp_source.html#l00011">11</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main2_8cpp_ae7b00f67114f339453b99ee6b0fc2984_icgraph.png" border="0" usemap="#amain2_8cpp_ae7b00f67114f339453b99ee6b0fc2984_icgraph" loading="lazy" alt=""/></div>
+<map name="amain2_8cpp_ae7b00f67114f339453b99ee6b0fc2984_icgraph" id="amain2_8cpp_ae7b00f67114f339453b99ee6b0fc2984_icgraph">
+<area shape="rect" title=" " alt="" coords="189,5,231,32"/>
+<area shape="rect" href="main2_8cpp.html#ac8be8a801ea2cd7107430724da5ccb92" title=" " alt="" coords="103,5,141,32"/>
+<area shape="poly" title=" " alt="" coords="171,19,142,21,142,16,176,18"/>
+<area shape="rect" href="main2_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a37d1e41ac68bbcbb7bbca203e9ffc766" name="a37d1e41ac68bbcbb7bbca203e9ffc766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37d1e41ac68bbcbb7bbca203e9ffc766">&#9670;&#160;</a></span>f()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double f </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>u</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="main2_8cpp_source.html">main2.cpp</a> 第 <a class="el" href="main2_8cpp_source.html#l00015">15</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main2_8cpp_a37d1e41ac68bbcbb7bbca203e9ffc766_cgraph.png" border="0" usemap="#amain2_8cpp_a37d1e41ac68bbcbb7bbca203e9ffc766_cgraph" loading="lazy" alt=""/></div>
+<map name="amain2_8cpp_a37d1e41ac68bbcbb7bbca203e9ffc766_cgraph" id="amain2_8cpp_a37d1e41ac68bbcbb7bbca203e9ffc766_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,44,32"/>
+<area shape="rect" href="main2_8cpp.html#a8dd2bd912c6237bb1b158a15fec5390e" title=" " alt="" coords="92,5,130,32"/>
+<area shape="poly" title=" " alt="" coords="44,16,79,17,74,20,44,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main2_8cpp_a37d1e41ac68bbcbb7bbca203e9ffc766_icgraph.png" border="0" usemap="#amain2_8cpp_a37d1e41ac68bbcbb7bbca203e9ffc766_icgraph" loading="lazy" alt=""/></div>
+<map name="amain2_8cpp_a37d1e41ac68bbcbb7bbca203e9ffc766_icgraph" id="amain2_8cpp_a37d1e41ac68bbcbb7bbca203e9ffc766_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,141,32"/>
+<area shape="rect" href="main2_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="main2_8cpp_source.html">main2.cpp</a> 第 <a class="el" href="main2_8cpp_source.html#l00023">23</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main2_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#amain2_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" loading="lazy" alt=""/></div>
+<map name="amain2_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="amain2_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,55,57"/>
+<area shape="rect" href="main2_8cpp.html#ac8be8a801ea2cd7107430724da5ccb92" title=" " alt="" coords="103,5,141,32"/>
+<area shape="poly" title=" " alt="" coords="54,35,90,26,86,30,56,40"/>
+<area shape="rect" href="main2_8cpp.html#a37d1e41ac68bbcbb7bbca203e9ffc766" title=" " alt="" coords="103,56,141,83"/>
+<area shape="poly" title=" " alt="" coords="55,48,90,59,85,61,55,53"/>
+<area shape="rect" href="main2_8cpp.html#ae7b00f67114f339453b99ee6b0fc2984" title=" " alt="" coords="189,5,231,32"/>
+<area shape="poly" title=" " alt="" coords="141,16,177,18,171,19,142,21"/>
+<area shape="rect" href="main2_8cpp.html#a8dd2bd912c6237bb1b158a15fec5390e" title=" " alt="" coords="191,56,229,83"/>
+<area shape="poly" title=" " alt="" coords="141,67,178,69,173,70,141,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8dd2bd912c6237bb1b158a15fec5390e" name="a8dd2bd912c6237bb1b158a15fec5390e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd2bd912c6237bb1b158a15fec5390e">&#9670;&#160;</a></span>u0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double u0 </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>u</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="main2_8cpp_source.html">main2.cpp</a> 第 <a class="el" href="main2_8cpp_source.html#l00007">7</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main2_8cpp_a8dd2bd912c6237bb1b158a15fec5390e_icgraph.png" border="0" usemap="#amain2_8cpp_a8dd2bd912c6237bb1b158a15fec5390e_icgraph" loading="lazy" alt=""/></div>
+<map name="amain2_8cpp_a8dd2bd912c6237bb1b158a15fec5390e_icgraph" id="amain2_8cpp_a8dd2bd912c6237bb1b158a15fec5390e_icgraph">
+<area shape="rect" title=" " alt="" coords="189,5,227,32"/>
+<area shape="rect" href="main2_8cpp.html#a37d1e41ac68bbcbb7bbca203e9ffc766" title=" " alt="" coords="103,5,141,32"/>
+<area shape="poly" title=" " alt="" coords="171,19,141,21,141,16,176,18"/>
+<area shape="rect" href="main2_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,1239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: BlockSolver类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_block_solver-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">BlockSolver类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>区块求解器类  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a>&gt;</code></p>
+<div class="dynheader">
+BlockSolver 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver__coll__graph.png" border="0" usemap="#a_block_solver_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_block_solver_coll__map" id="a_block_solver_coll__map">
+<area shape="rect" title="区块求解器类" alt="" coords="377,264,468,291"/>
+<area shape="rect" href="class_cgns_i_o.html" title="CGNS输入输出类" alt="" coords="5,156,72,183"/>
+<area shape="poly" title=" " alt="" coords="37,195,42,220,53,238,69,245,99,251,188,262,378,273,375,277,187,267,98,257,67,250,49,242,37,221,36,201"/>
+<area shape="rect" href="class_info.html" title="存储和管理求解器的各种配置参数和状态信息" alt="" coords="218,5,262,32"/>
+<area shape="poly" title=" " alt="" coords="207,43,175,73,142,110,131,130,125,151,125,171,133,190,148,205,171,218,236,240,311,256,379,270,374,270,310,262,235,245,169,222,145,209,129,194,120,172,119,150,126,128,138,107,171,69,211,39"/>
+<area shape="rect" href="class_initializer.html" title="初始化器类" alt="" coords="172,156,246,183"/>
+<area shape="poly" title=" " alt="" coords="219,42,213,57,207,83,206,111,209,156,204,155,200,111,202,83,208,55,216,46"/>
+<area shape="rect" href="class_sp_distributor.html" title="空间分布器类" alt="" coords="464,156,562,183"/>
+<area shape="poly" title=" " alt="" coords="277,20,323,30,345,40,366,54,377,71,380,89,382,105,391,121,481,155,475,156,388,125,377,107,374,89,372,73,362,58,343,44,321,35,278,25"/>
+<area shape="rect" href="class_source_term.html" title=" " alt="" coords="270,156,362,183"/>
+<area shape="poly" title=" " alt="" coords="245,44,256,83,273,121,287,139,303,156,297,155,283,143,269,124,251,85,243,49"/>
+<area shape="rect" href="class_block.html" title="Block类，用于管理计算域中的网格块" alt="" coords="386,156,440,183"/>
+<area shape="poly" title=" " alt="" coords="417,196,424,265,419,262,414,200"/>
+<area shape="rect" href="class_data.html" title=" " alt="" coords="530,5,579,32"/>
+<area shape="poly" title=" " alt="" coords="580,42,588,55,599,93,600,125,593,157,577,193,559,222,532,242,501,258,469,269,468,264,499,253,529,238,555,218,572,191,588,155,595,125,593,94,583,57,578,47"/>
+<area shape="poly" title=" " alt="" coords="512,26,482,38,453,58,443,75,433,102,418,157,414,154,428,101,438,73,449,54,480,34,517,24"/>
+<area shape="rect" href="class_equation.html" title="方程类，用于处理不同类型方程的守恒变量与原始变量之间的转换" alt="" coords="670,156,743,183"/>
+<area shape="poly" title=" " alt="" coords="594,31,614,41,631,54,645,71,651,87,657,103,667,121,696,156,691,155,663,124,652,105,647,89,640,74,627,58,611,45,594,36"/>
+<area shape="poly" title=" " alt="" coords="549,46,519,157,515,154,545,49"/>
+<area shape="poly" title=" " alt="" coords="512,22,411,32,363,43,345,50,333,58,319,81,313,107,316,157,311,154,308,107,314,79,329,54,342,45,361,38,410,27,517,20"/>
+<area shape="poly" title=" " alt="" coords="229,192,254,217,282,238,330,257,379,270,374,270,328,262,280,242,250,221,227,197"/>
+<area shape="poly" title=" " alt="" coords="689,194,662,221,630,242,589,258,546,269,469,278,468,273,545,263,588,253,628,238,659,217,684,196"/>
+<area shape="rect" href="class_bnds.html" title="边界条件管理类" alt="" coords="734,5,786,32"/>
+<area shape="poly" title=" " alt="" coords="771,44,774,56,778,89,774,123,768,164,756,196,734,222,700,242,656,255,594,264,468,276,468,271,593,259,655,249,697,238,731,218,751,193,763,163,769,122,772,89,769,56,768,49"/>
+<area shape="poly" title=" " alt="" coords="745,43,738,57,730,77,725,93,718,109,703,125,672,141,645,145,616,144,582,149,551,158,550,153,581,144,616,139,644,139,671,136,700,121,713,106,720,92,724,75,733,55,741,47"/>
+<area shape="poly" title=" " alt="" coords="500,195,466,242,440,266,437,261,462,238,495,197"/>
+<area shape="poly" title=" " alt="" coords="320,196,326,219,338,238,356,253,379,266,374,265,353,257,334,242,322,221,317,200"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae184bae9628dd79ce563c131fa51d8cf" id="r_ae184bae9628dd79ce563c131fa51d8cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae184bae9628dd79ce563c131fa51d8cf">BlockSolver</a> ()</td></tr>
+<tr class="memdesc:ae184bae9628dd79ce563c131fa51d8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造函数  <br /></td></tr>
+<tr class="memitem:a6ef07942b5ef3ed920aa4dc38264f9c4" id="r_a6ef07942b5ef3ed920aa4dc38264f9c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ef07942b5ef3ed920aa4dc38264f9c4">BlockSolver</a> (<a class="el" href="class_info.html">Info</a> *)</td></tr>
+<tr class="memdesc:a6ef07942b5ef3ed920aa4dc38264f9c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">带参数的构造函数  <br /></td></tr>
+<tr class="memitem:ae372dfb8d712322916273f5352d17096" id="r_ae372dfb8d712322916273f5352d17096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae372dfb8d712322916273f5352d17096">solve</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>)</td></tr>
+<tr class="memdesc:ae372dfb8d712322916273f5352d17096"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行求解过程  <br /></td></tr>
+<tr class="memitem:a60c053f7a38083aab6f25dc48515122a" id="r_a60c053f7a38083aab6f25dc48515122a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60c053f7a38083aab6f25dc48515122a">~BlockSolver</a> ()</td></tr>
+<tr class="memdesc:a60c053f7a38083aab6f25dc48515122a"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
+<tr class="memitem:a0f29b8074f5d43e176ac656f084a025d" id="r_a0f29b8074f5d43e176ac656f084a025d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f29b8074f5d43e176ac656f084a025d">outputGrid</a> ()</td></tr>
+<tr class="memdesc:a0f29b8074f5d43e176ac656f084a025d"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出网格信息  <br /></td></tr>
+<tr class="memitem:add03b267a1937f5f9ab38e6e81cc0d7c" id="r_add03b267a1937f5f9ab38e6e81cc0d7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add03b267a1937f5f9ab38e6e81cc0d7c">outputCons</a> ()</td></tr>
+<tr class="memdesc:add03b267a1937f5f9ab38e6e81cc0d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出守恒变量  <br /></td></tr>
+<tr class="memitem:a21dc82d623d574bee297b9a57006a8b4" id="r_a21dc82d623d574bee297b9a57006a8b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21dc82d623d574bee297b9a57006a8b4">outputPrim</a> ()</td></tr>
+<tr class="memdesc:a21dc82d623d574bee297b9a57006a8b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出原始变量  <br /></td></tr>
+<tr class="memitem:a95f73fc2b0bba0b24da3eab91f84ac15" id="r_a95f73fc2b0bba0b24da3eab91f84ac15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95f73fc2b0bba0b24da3eab91f84ac15">stepsLoop</a> ()</td></tr>
+<tr class="memdesc:a95f73fc2b0bba0b24da3eab91f84ac15"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间步循环  <br /></td></tr>
+<tr class="memitem:ae641ab097ce6fd1402bc2a411828ae92" id="r_ae641ab097ce6fd1402bc2a411828ae92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae641ab097ce6fd1402bc2a411828ae92">stepsLoopCFL</a> ()</td></tr>
+<tr class="memdesc:ae641ab097ce6fd1402bc2a411828ae92"><td class="mdescLeft">&#160;</td><td class="mdescRight">基于CFL条件的时间步循环  <br /></td></tr>
+<tr class="memitem:a736738d2e404c1e60714d603303a5004" id="r_a736738d2e404c1e60714d603303a5004"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a736738d2e404c1e60714d603303a5004">stepsLoopDTS</a> ()</td></tr>
+<tr class="memdesc:a736738d2e404c1e60714d603303a5004"><td class="mdescLeft">&#160;</td><td class="mdescRight">基于固定时间步长的时间步循环  <br /></td></tr>
+<tr class="memitem:a105bdac2459eedfccd45c99eb4197c5a" id="r_a105bdac2459eedfccd45c99eb4197c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a105bdac2459eedfccd45c99eb4197c5a">Test</a> ()</td></tr>
+<tr class="memdesc:a105bdac2459eedfccd45c99eb4197c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试函数  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a81fe908d17b9bd8de6ded969206c9391" id="r_a81fe908d17b9bd8de6ded969206c9391"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81fe908d17b9bd8de6ded969206c9391">timesteps</a> =0</td></tr>
+<tr class="memdesc:a81fe908d17b9bd8de6ded969206c9391"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间步数计数器  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a238b1f4f31dc8fdbddfcf890c80fa645" id="r_a238b1f4f31dc8fdbddfcf890c80fa645"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a238b1f4f31dc8fdbddfcf890c80fa645">RK3_SSP</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>)</td></tr>
+<tr class="memdesc:a238b1f4f31dc8fdbddfcf890c80fa645"><td class="mdescLeft">&#160;</td><td class="mdescRight">三阶SSP Runge-Kutta时间积分方法  <br /></td></tr>
+<tr class="memitem:a1069cefb8de82cf97a391762bbc651fe" id="r_a1069cefb8de82cf97a391762bbc651fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1069cefb8de82cf97a391762bbc651fe">RK4_SSP</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>)</td></tr>
+<tr class="memdesc:a1069cefb8de82cf97a391762bbc651fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">四阶SSP Runge-Kutta时间积分方法  <br /></td></tr>
+<tr class="memitem:a7c8af668de7608ff082765bdf1b4278c" id="r_a7c8af668de7608ff082765bdf1b4278c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c8af668de7608ff082765bdf1b4278c">DTS_Euler</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>)</td></tr>
+<tr class="memdesc:a7c8af668de7608ff082765bdf1b4278c"><td class="mdescLeft">&#160;</td><td class="mdescRight">显式欧拉时间积分方法  <br /></td></tr>
+<tr class="memitem:a8306ec4e9850e33c897eac0bf401fe87" id="r_a8306ec4e9850e33c897eac0bf401fe87"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8306ec4e9850e33c897eac0bf401fe87">calLocalCFL</a> ()</td></tr>
+<tr class="memdesc:a8306ec4e9850e33c897eac0bf401fe87"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算局部CFL数  <br /></td></tr>
+<tr class="memitem:aa5ea345e5efaabe2388390c1c1659d71" id="r_aa5ea345e5efaabe2388390c1c1659d71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5ea345e5efaabe2388390c1c1659d71">getTimeIntervalExplicit</a> ()</td></tr>
+<tr class="memdesc:aa5ea345e5efaabe2388390c1c1659d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取显式时间积分的时间间隔  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aed784f77965139a544b51627b2f95d19" id="r_aed784f77965139a544b51627b2f95d19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_cgns_i_o.html">CgnsIO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed784f77965139a544b51627b2f95d19">cgnsIO</a></td></tr>
+<tr class="memdesc:aed784f77965139a544b51627b2f95d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">CGNS输入输出处理对象  <br /></td></tr>
+<tr class="memitem:a92457433d141439d10702bb57f68d51e" id="r_a92457433d141439d10702bb57f68d51e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_info.html">Info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92457433d141439d10702bb57f68d51e">info</a></td></tr>
+<tr class="memdesc:a92457433d141439d10702bb57f68d51e"><td class="mdescLeft">&#160;</td><td class="mdescRight">信息对象指针  <br /></td></tr>
+<tr class="memitem:a72023b0eb96021755ce007894a2ddb4f" id="r_a72023b0eb96021755ce007894a2ddb4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_block.html">Block</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72023b0eb96021755ce007894a2ddb4f">block</a></td></tr>
+<tr class="memdesc:a72023b0eb96021755ce007894a2ddb4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">区块对象指针  <br /></td></tr>
+<tr class="memitem:a848412954b8eb8183602f3a768dc575f" id="r_a848412954b8eb8183602f3a768dc575f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_initializer.html">Initializer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a848412954b8eb8183602f3a768dc575f">initer</a></td></tr>
+<tr class="memdesc:a848412954b8eb8183602f3a768dc575f"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化器对象指针  <br /></td></tr>
+<tr class="memitem:ad166b858c00ed498e3d4bdf214735875" id="r_ad166b858c00ed498e3d4bdf214735875"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_equation.html">Equation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad166b858c00ed498e3d4bdf214735875">eqn</a></td></tr>
+<tr class="memdesc:ad166b858c00ed498e3d4bdf214735875"><td class="mdescLeft">&#160;</td><td class="mdescRight">方程对象指针  <br /></td></tr>
+<tr class="memitem:a19e9d5a7b192bd1bfb5d787c2b974264" id="r_a19e9d5a7b192bd1bfb5d787c2b974264"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bnds.html">Bnds</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19e9d5a7b192bd1bfb5d787c2b974264">bnds</a></td></tr>
+<tr class="memdesc:a19e9d5a7b192bd1bfb5d787c2b974264"><td class="mdescLeft">&#160;</td><td class="mdescRight">边界条件对象指针  <br /></td></tr>
+<tr class="memitem:ad506bd2fa7e49b038f563d01cd7df3a4" id="r_ad506bd2fa7e49b038f563d01cd7df3a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_sp_distributor.html">SpDistributor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad506bd2fa7e49b038f563d01cd7df3a4">spDis</a></td></tr>
+<tr class="memdesc:ad506bd2fa7e49b038f563d01cd7df3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">空间分布器对象指针  <br /></td></tr>
+<tr class="memitem:a326c724ed1012a295ab020c850626c32" id="r_a326c724ed1012a295ab020c850626c32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a326c724ed1012a295ab020c850626c32">cons</a></td></tr>
+<tr class="memitem:afa1f3a68bcf4c9482d525964b86f3181" id="r_afa1f3a68bcf4c9482d525964b86f3181"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa1f3a68bcf4c9482d525964b86f3181">rhs</a></td></tr>
+<tr class="memdesc:afa1f3a68bcf4c9482d525964b86f3181"><td class="mdescLeft">&#160;</td><td class="mdescRight">守恒变量和右端项数据指针  <br /></td></tr>
+<tr class="memitem:a126f520dc4fa284271e8018d26397d0e" id="r_a126f520dc4fa284271e8018d26397d0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_source_term.html">SourceTerm</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a126f520dc4fa284271e8018d26397d0e">sourceTerm</a></td></tr>
+<tr class="memdesc:a126f520dc4fa284271e8018d26397d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">源项对象指针  <br /></td></tr>
+<tr class="memitem:a6cabde1b3e14b55391cb37ad93775e0b" id="r_a6cabde1b3e14b55391cb37ad93775e0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896">TimeMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cabde1b3e14b55391cb37ad93775e0b">timeMethod</a> =<a class="el" href="macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896ae672a0d703868ebfcb0df2ee5bbecaa2">RK3SSP</a></td></tr>
+<tr class="memdesc:a6cabde1b3e14b55391cb37ad93775e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间积分方法，默认为三阶SSP Runge-Kutta方法  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>区块求解器类 </p>
+<p>该类负责管理CFD计算的主要流程，包括初始化、时间推进、输出等核心功能。 它集成了网格读写、方程求解、边界条件处理等功能模块。 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00012">12</a> 行定义.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="ae184bae9628dd79ce563c131fa51d8cf" name="ae184bae9628dd79ce563c131fa51d8cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae184bae9628dd79ce563c131fa51d8cf">&#9670;&#160;</a></span>BlockSolver() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BlockSolver::BlockSolver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>默认构造函数 </p>
+<p>BlockSolver类的默认构造函数</p>
+<p>初始化求解器所需的各个组件，包括：</p><ul>
+<li><a class="el" href="class_info.html" title="存储和管理求解器的各种配置参数和状态信息">Info</a>: 求解器参数信息</li>
+<li><a class="el" href="class_block.html" title="Block类，用于管理计算域中的网格块">Block</a>: 网格数据块</li>
+<li><a class="el" href="class_initializer.html" title="初始化器类">Initializer</a>: 初始化器</li>
+<li><a class="el" href="class_equation.html" title="方程类，用于处理不同类型方程的守恒变量与原始变量之间的转换">Equation</a>: 方程求解器</li>
+<li><a class="el" href="class_bnds.html" title="边界条件管理类">Bnds</a>: 边界条件处理器</li>
+<li><a class="el" href="class_sp_distributor.html" title="空间分布器类">SpDistributor</a>: 空间离散分配器</li>
+<li><a class="el" href="class_source_term.html">SourceTerm</a>: 源项计算器</li>
+</ul>
+<p>并调用初始化器对这些组件进行初始化。 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6ef07942b5ef3ed920aa4dc38264f9c4" name="a6ef07942b5ef3ed920aa4dc38264f9c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef07942b5ef3ed920aa4dc38264f9c4">&#9670;&#160;</a></span>BlockSolver() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BlockSolver::BlockSolver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_info.html">Info</a> *</td>          <td class="paramname"><span class="paramname"><em>info_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>带参数的构造函数 </p>
+<p>BlockSolver类的带参构造函数</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">info</td><td>指向信息对象的指针，包含求解所需的各种参数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>使用传入的Info对象初始化求解器，其余初始化过程与默认构造函数相同。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">info_</td><td>指向Info对象的指针，包含求解器参数信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00048">48</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a60c053f7a38083aab6f25dc48515122a" name="a60c053f7a38083aab6f25dc48515122a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60c053f7a38083aab6f25dc48515122a">&#9670;&#160;</a></span>~BlockSolver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BlockSolver::~BlockSolver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>析构函数 </p>
+<p>BlockSolver类的析构函数</p>
+<p>释放所有动态分配的内存资源。 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00192">192</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a8306ec4e9850e33c897eac0bf401fe87" name="a8306ec4e9850e33c897eac0bf401fe87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8306ec4e9850e33c897eac0bf401fe87">&#9670;&#160;</a></span>calLocalCFL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt; BlockSolver::calLocalCFL </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算局部CFL数 </p>
+<dl class="section return"><dt>返回</dt><dd>包含各点CFL数的向量</dd></dl>
+<p>根据当前流动状态和网格信息计算每个网格点的局部CFL数。</p>
+<dl class="section return"><dt>返回</dt><dd>包含每个网格点CFL数的向量 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00335">335</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a8306ec4e9850e33c897eac0bf401fe87_cgraph.png" border="0" usemap="#aclass_block_solver_a8306ec4e9850e33c897eac0bf401fe87_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a8306ec4e9850e33c897eac0bf401fe87_cgraph" id="aclass_block_solver_a8306ec4e9850e33c897eac0bf401fe87_cgraph">
+<area shape="rect" title="计算局部CFL数" alt="" coords="5,5,178,32"/>
+<area shape="rect" href="class_data.html#abb641c4a4830c60d4396201388dd9faf" title=" " alt="" coords="226,5,311,32"/>
+<area shape="poly" title=" " alt="" coords="178,16,213,19,207,19,178,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a8306ec4e9850e33c897eac0bf401fe87_icgraph.png" border="0" usemap="#aclass_block_solver_a8306ec4e9850e33c897eac0bf401fe87_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a8306ec4e9850e33c897eac0bf401fe87_icgraph" id="aclass_block_solver_a8306ec4e9850e33c897eac0bf401fe87_icgraph">
+<area shape="rect" title="计算局部CFL数" alt="" coords="451,5,623,32"/>
+<area shape="rect" href="class_block_solver.html#a7c8af668de7608ff082765bdf1b4278c" title="显式欧拉时间积分方法" alt="" coords="240,5,403,32"/>
+<area shape="poly" title=" " alt="" coords="432,19,404,21,404,16,438,19"/>
+<area shape="rect" href="class_block_solver.html#a736738d2e404c1e60714d603303a5004" title="基于固定时间步长的时间步循环" alt="" coords="5,5,192,32"/>
+<area shape="poly" title=" " alt="" coords="221,19,192,21,192,16,227,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7c8af668de7608ff082765bdf1b4278c" name="a7c8af668de7608ff082765bdf1b4278c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c8af668de7608ff082765bdf1b4278c">&#9670;&#160;</a></span>DTS_Euler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::DTS_Euler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>显式欧拉时间积分方法 </p>
+<p>使用DTS Euler方法进行时间推进</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>时间步长</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>实现基于对角化时间步长(Diagonalized Time Stepping)的欧拉时间积分方法， 用于隐式时间推进。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>时间步长 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00137">137</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a7c8af668de7608ff082765bdf1b4278c_cgraph.png" border="0" usemap="#aclass_block_solver_a7c8af668de7608ff082765bdf1b4278c_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a7c8af668de7608ff082765bdf1b4278c_cgraph" id="aclass_block_solver_a7c8af668de7608ff082765bdf1b4278c_cgraph">
+<area shape="rect" title="显式欧拉时间积分方法" alt="" coords="5,56,169,83"/>
+<area shape="rect" href="class_block_solver.html#a8306ec4e9850e33c897eac0bf401fe87" title="计算局部CFL数" alt="" coords="217,5,389,32"/>
+<area shape="poly" title=" " alt="" coords="146,53,230,35,226,37,148,58"/>
+<area shape="rect" href="class_data.html#a24c913514c9a6c3dd579d723c4d7f970" title=" " alt="" coords="255,56,351,83"/>
+<area shape="poly" title=" " alt="" coords="169,67,241,69,236,70,169,72"/>
+<area shape="rect" href="class_data.html#a8aa18eb21e69ff516764c1f2da4adea7" title="将数据设置为零" alt="" coords="249,107,357,133"/>
+<area shape="poly" title=" " alt="" coords="147,81,236,103,231,105,147,86"/>
+<area shape="rect" href="class_data.html#abb641c4a4830c60d4396201388dd9faf" title=" " alt="" coords="437,5,522,32"/>
+<area shape="poly" title=" " alt="" coords="389,16,424,18,419,19,390,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a7c8af668de7608ff082765bdf1b4278c_icgraph.png" border="0" usemap="#aclass_block_solver_a7c8af668de7608ff082765bdf1b4278c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a7c8af668de7608ff082765bdf1b4278c_icgraph" id="aclass_block_solver_a7c8af668de7608ff082765bdf1b4278c_icgraph">
+<area shape="rect" title="显式欧拉时间积分方法" alt="" coords="240,5,403,32"/>
+<area shape="rect" href="class_block_solver.html#a736738d2e404c1e60714d603303a5004" title="基于固定时间步长的时间步循环" alt="" coords="5,5,192,32"/>
+<area shape="poly" title=" " alt="" coords="221,19,192,21,192,16,227,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa5ea345e5efaabe2388390c1c1659d71" name="aa5ea345e5efaabe2388390c1c1659d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ea345e5efaabe2388390c1c1659d71">&#9670;&#160;</a></span>getTimeIntervalExplicit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> BlockSolver::getTimeIntervalExplicit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取显式时间积分的时间间隔 </p>
+<p>计算显式时间积分的时间步长</p>
+<dl class="section return"><dt>返回</dt><dd>时间间隔值</dd></dl>
+<p>根据CFL条件和当前流动状态计算满足稳定条件的最大时间步长。</p>
+<dl class="section return"><dt>返回</dt><dd>计算得到的时间步长 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00418">418</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_aa5ea345e5efaabe2388390c1c1659d71_cgraph.png" border="0" usemap="#aclass_block_solver_aa5ea345e5efaabe2388390c1c1659d71_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_aa5ea345e5efaabe2388390c1c1659d71_cgraph" id="aclass_block_solver_aa5ea345e5efaabe2388390c1c1659d71_cgraph">
+<area shape="rect" title="获取显式时间积分的时间间隔" alt="" coords="5,5,195,48"/>
+<area shape="rect" href="class_data.html#abb641c4a4830c60d4396201388dd9faf" title=" " alt="" coords="243,13,328,40"/>
+<area shape="poly" title=" " alt="" coords="195,24,230,26,225,27,195,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_aa5ea345e5efaabe2388390c1c1659d71_icgraph.png" border="0" usemap="#aclass_block_solver_aa5ea345e5efaabe2388390c1c1659d71_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_aa5ea345e5efaabe2388390c1c1659d71_icgraph" id="aclass_block_solver_aa5ea345e5efaabe2388390c1c1659d71_icgraph">
+<area shape="rect" title="获取显式时间积分的时间间隔" alt="" coords="335,5,524,48"/>
+<area shape="rect" href="class_block_solver.html#ae641ab097ce6fd1402bc2a411828ae92" title="基于CFL条件的时间步循环" alt="" coords="103,13,287,40"/>
+<area shape="poly" title=" " alt="" coords="317,27,288,29,288,24,322,27"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数，程序入口点" alt="" coords="5,13,55,40"/>
+<area shape="poly" title=" " alt="" coords="85,28,55,29,55,24,90,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="add03b267a1937f5f9ab38e6e81cc0d7c" name="add03b267a1937f5f9ab38e6e81cc0d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add03b267a1937f5f9ab38e6e81cc0d7c">&#9670;&#160;</a></span>outputCons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::outputCons </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>输出守恒变量 </p>
+<p>输出守恒变量到CGNS文件 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00214">214</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0f29b8074f5d43e176ac656f084a025d" name="a0f29b8074f5d43e176ac656f084a025d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f29b8074f5d43e176ac656f084a025d">&#9670;&#160;</a></span>outputGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::outputGrid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>输出网格信息 </p>
+<p>输出网格信息到CGNS文件 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00206">206</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a0f29b8074f5d43e176ac656f084a025d_icgraph.png" border="0" usemap="#aclass_block_solver_a0f29b8074f5d43e176ac656f084a025d_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a0f29b8074f5d43e176ac656f084a025d_icgraph" id="aclass_block_solver_a0f29b8074f5d43e176ac656f084a025d_icgraph">
+<area shape="rect" title="输出网格信息" alt="" coords="337,81,496,108"/>
+<area shape="rect" href="class_block_solver.html#a95f73fc2b0bba0b24da3eab91f84ac15" title="时间步循环" alt="" coords="116,5,276,32"/>
+<area shape="poly" title=" " alt="" coords="367,75,288,47,251,35,251,30,290,41,372,74"/>
+<area shape="rect" href="class_block_solver.html#ae641ab097ce6fd1402bc2a411828ae92" title="基于CFL条件的时间步循环" alt="" coords="104,56,288,83"/>
+<area shape="poly" title=" " alt="" coords="319,84,289,83,288,77,324,83"/>
+<area shape="rect" href="class_block_solver.html#a736738d2e404c1e60714d603303a5004" title="基于固定时间步长的时间步循环" alt="" coords="103,107,289,133"/>
+<area shape="poly" title=" " alt="" coords="319,106,290,112,289,107,324,105"/>
+<area shape="rect" href="class_block_solver.html#a105bdac2459eedfccd45c99eb4197c5a" title="测试函数" alt="" coords="134,157,258,184"/>
+<area shape="poly" title=" " alt="" coords="372,114,290,148,252,159,251,154,288,143,367,115"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数，程序入口点" alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="99,35,56,43,54,38,103,31"/>
+<area shape="poly" title=" " alt="" coords="88,55,56,50,54,45,92,51"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a21dc82d623d574bee297b9a57006a8b4" name="a21dc82d623d574bee297b9a57006a8b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21dc82d623d574bee297b9a57006a8b4">&#9670;&#160;</a></span>outputPrim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::outputPrim </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>输出原始变量 </p>
+<p>输出原始变量到CGNS文件</p>
+<p>首先将守恒变量转换为原始变量，然后输出到CGNS文件。 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00224">224</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a21dc82d623d574bee297b9a57006a8b4_icgraph.png" border="0" usemap="#aclass_block_solver_a21dc82d623d574bee297b9a57006a8b4_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a21dc82d623d574bee297b9a57006a8b4_icgraph" id="aclass_block_solver_a21dc82d623d574bee297b9a57006a8b4_icgraph">
+<area shape="rect" title="输出原始变量" alt="" coords="337,56,499,83"/>
+<area shape="rect" href="class_block_solver.html#a95f73fc2b0bba0b24da3eab91f84ac15" title="时间步循环" alt="" coords="116,5,276,32"/>
+<area shape="poly" title=" " alt="" coords="339,52,257,35,258,30,344,51"/>
+<area shape="rect" href="class_block_solver.html#ae641ab097ce6fd1402bc2a411828ae92" title="基于CFL条件的时间步循环" alt="" coords="104,56,288,83"/>
+<area shape="poly" title=" " alt="" coords="319,70,289,72,288,67,324,69"/>
+<area shape="rect" href="class_block_solver.html#a736738d2e404c1e60714d603303a5004" title="基于固定时间步长的时间步循环" alt="" coords="103,107,289,133"/>
+<area shape="poly" title=" " alt="" coords="344,86,258,109,257,103,339,87"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数，程序入口点" alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="99,35,56,43,54,38,103,31"/>
+<area shape="poly" title=" " alt="" coords="88,55,56,50,55,45,92,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a238b1f4f31dc8fdbddfcf890c80fa645" name="a238b1f4f31dc8fdbddfcf890c80fa645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a238b1f4f31dc8fdbddfcf890c80fa645">&#9670;&#160;</a></span>RK3_SSP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::RK3_SSP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>三阶SSP Runge-Kutta时间积分方法 </p>
+<p>使用三阶SSP Runge-Kutta方法进行时间推进</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>时间步长</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>实现三阶段的三阶SSP Runge-Kutta时间积分方案：</p><ol type="1">
+<li>第一阶段：计算临时解</li>
+<li>第二阶段：基于第一阶段结果计算</li>
+<li>第三阶段：得到最终解</li>
+</ol>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>时间步长 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00078">78</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a238b1f4f31dc8fdbddfcf890c80fa645_icgraph.png" border="0" usemap="#aclass_block_solver_a238b1f4f31dc8fdbddfcf890c80fa645_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a238b1f4f31dc8fdbddfcf890c80fa645_icgraph" id="aclass_block_solver_a238b1f4f31dc8fdbddfcf890c80fa645_icgraph">
+<area shape="rect" title="三阶SSP Runge&#45;Kutta时间积分方法" alt="" coords="513,56,673,83"/>
+<area shape="rect" href="class_block_solver.html#ae372dfb8d712322916273f5352d17096" title="执行求解过程" alt="" coords="335,31,465,57"/>
+<area shape="poly" title=" " alt="" coords="495,57,465,55,466,50,500,57"/>
+<area shape="rect" href="class_block_solver.html#a105bdac2459eedfccd45c99eb4197c5a" title="测试函数" alt="" coords="338,81,462,108"/>
+<area shape="poly" title=" " alt="" coords="500,82,463,89,462,84,495,82"/>
+<area shape="rect" href="class_block_solver.html#a95f73fc2b0bba0b24da3eab91f84ac15" title="时间步循环" alt="" coords="115,5,274,32"/>
+<area shape="poly" title=" " alt="" coords="317,34,275,31,275,26,322,34"/>
+<area shape="rect" href="class_block_solver.html#ae641ab097ce6fd1402bc2a411828ae92" title="基于CFL条件的时间步循环" alt="" coords="103,56,287,83"/>
+<area shape="poly" title=" " alt="" coords="317,54,288,61,287,55,322,53"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数，程序入口点" alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="98,35,56,43,54,38,102,31"/>
+<area shape="poly" title=" " alt="" coords="87,55,55,50,55,45,92,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1069cefb8de82cf97a391762bbc651fe" name="a1069cefb8de82cf97a391762bbc651fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1069cefb8de82cf97a391762bbc651fe">&#9670;&#160;</a></span>RK4_SSP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::RK4_SSP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>四阶SSP Runge-Kutta时间积分方法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>时间步长 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae372dfb8d712322916273f5352d17096" name="ae372dfb8d712322916273f5352d17096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae372dfb8d712322916273f5352d17096">&#9670;&#160;</a></span>solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::solve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>执行求解过程 </p>
+<p>执行单步时间推进</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>时间步长或相关参数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>根据设定的时间积分方法执行一步时间推进计算。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>时间步长 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00181">181</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ae372dfb8d712322916273f5352d17096_cgraph.png" border="0" usemap="#aclass_block_solver_ae372dfb8d712322916273f5352d17096_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_ae372dfb8d712322916273f5352d17096_cgraph" id="aclass_block_solver_ae372dfb8d712322916273f5352d17096_cgraph">
+<area shape="rect" title="执行求解过程" alt="" coords="5,5,136,32"/>
+<area shape="rect" href="class_block_solver.html#a238b1f4f31dc8fdbddfcf890c80fa645" title="三阶SSP Runge&#45;Kutta时间积分方法" alt="" coords="184,5,343,32"/>
+<area shape="poly" title=" " alt="" coords="136,16,171,18,165,19,136,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ae372dfb8d712322916273f5352d17096_icgraph.png" border="0" usemap="#aclass_block_solver_ae372dfb8d712322916273f5352d17096_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_ae372dfb8d712322916273f5352d17096_icgraph" id="aclass_block_solver_ae372dfb8d712322916273f5352d17096_icgraph">
+<area shape="rect" title="执行求解过程" alt="" coords="335,31,465,57"/>
+<area shape="rect" href="class_block_solver.html#a95f73fc2b0bba0b24da3eab91f84ac15" title="时间步循环" alt="" coords="115,5,274,32"/>
+<area shape="poly" title=" " alt="" coords="317,34,275,31,275,26,322,34"/>
+<area shape="rect" href="class_block_solver.html#ae641ab097ce6fd1402bc2a411828ae92" title="基于CFL条件的时间步循环" alt="" coords="103,56,287,83"/>
+<area shape="poly" title=" " alt="" coords="322,54,288,61,287,55,317,54"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数，程序入口点" alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="98,35,56,43,54,38,102,31"/>
+<area shape="poly" title=" " alt="" coords="87,54,55,50,55,45,92,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a95f73fc2b0bba0b24da3eab91f84ac15" name="a95f73fc2b0bba0b24da3eab91f84ac15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f73fc2b0bba0b24da3eab91f84ac15">&#9670;&#160;</a></span>stepsLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::stepsLoop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>时间步循环 </p>
+<p>基于固定步数的时间步进循环</p>
+<p>按照固定的步数进行时间推进，每隔一定步数输出一次结果。 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00235">235</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_cgraph.png" border="0" usemap="#aclass_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_cgraph" id="aclass_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_cgraph">
+<area shape="rect" title="时间步循环" alt="" coords="5,56,165,83"/>
+<area shape="rect" href="class_block_solver.html#a0f29b8074f5d43e176ac656f084a025d" title="输出网格信息" alt="" coords="214,5,374,32"/>
+<area shape="poly" title=" " alt="" coords="142,53,224,35,219,37,144,58"/>
+<area shape="rect" href="class_block_solver.html#a21dc82d623d574bee297b9a57006a8b4" title="输出原始变量" alt="" coords="213,56,375,83"/>
+<area shape="poly" title=" " alt="" coords="164,67,200,69,194,70,165,72"/>
+<area shape="rect" href="class_block_solver.html#ae372dfb8d712322916273f5352d17096" title="执行求解过程" alt="" coords="229,107,359,133"/>
+<area shape="poly" title=" " alt="" coords="143,81,224,102,219,103,143,86"/>
+<area shape="rect" href="class_block_solver.html#a238b1f4f31dc8fdbddfcf890c80fa645" title="三阶SSP Runge&#45;Kutta时间积分方法" alt="" coords="423,107,582,133"/>
+<area shape="poly" title=" " alt="" coords="359,117,410,120,405,120,359,123"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_icgraph.png" border="0" usemap="#aclass_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_icgraph" id="aclass_block_solver_a95f73fc2b0bba0b24da3eab91f84ac15_icgraph">
+<area shape="rect" title="时间步循环" alt="" coords="103,5,262,32"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数，程序入口点" alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae641ab097ce6fd1402bc2a411828ae92" name="ae641ab097ce6fd1402bc2a411828ae92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae641ab097ce6fd1402bc2a411828ae92">&#9670;&#160;</a></span>stepsLoopCFL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::stepsLoopCFL </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>基于CFL条件的时间步循环 </p>
+<p>基于CFL条件控制时间步长的求解循环</p>
+<p>此函数实现了基于CFL条件的自适应时间步长求解循环。在每次迭代中：</p><ol type="1">
+<li>检查是否需要输出当前结果</li>
+<li>计算满足CFL条件的最大时间步长</li>
+<li>根据输出间隔调整时间步长</li>
+<li>执行一次时间步进求解</li>
+<li>更新时间和步数计数器</li>
+<li>输出当前求解状态信息 循环持续到达到设定的结束步数为止。</li>
+</ol>
+<dl class="section note"><dt>注解</dt><dd>该方法使用可变时间步长，确保数值稳定性 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="#aa5ea345e5efaabe2388390c1c1659d71" title="获取显式时间积分的时间间隔">getTimeIntervalExplicit()</a> 获取满足CFL条件的时间步长 </dd>
+<dd>
+<a class="el" href="#ae372dfb8d712322916273f5352d17096" title="执行求解过程">solve()</a> 执行单步求解 </dd>
+<dd>
+<a class="el" href="#a0f29b8074f5d43e176ac656f084a025d" title="输出网格信息">outputGrid()</a> 输出网格信息 </dd>
+<dd>
+<a class="el" href="#a21dc82d623d574bee297b9a57006a8b4" title="输出原始变量">outputPrim()</a> 输出原始变量 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00272">272</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ae641ab097ce6fd1402bc2a411828ae92_cgraph.png" border="0" usemap="#aclass_block_solver_ae641ab097ce6fd1402bc2a411828ae92_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_ae641ab097ce6fd1402bc2a411828ae92_cgraph" id="aclass_block_solver_ae641ab097ce6fd1402bc2a411828ae92_cgraph">
+<area shape="rect" title="基于CFL条件的时间步循环" alt="" coords="5,97,190,124"/>
+<area shape="rect" href="class_block_solver.html#aa5ea345e5efaabe2388390c1c1659d71" title="获取显式时间积分的时间间隔" alt="" coords="238,5,427,48"/>
+<area shape="poly" title=" " alt="" coords="135,94,237,57,257,53,252,55,239,63,138,99"/>
+<area shape="rect" href="class_block_solver.html#a0f29b8074f5d43e176ac656f084a025d" title="输出网格信息" alt="" coords="253,72,412,99"/>
+<area shape="poly" title=" " alt="" coords="189,98,240,95,235,96,191,103"/>
+<area shape="rect" href="class_block_solver.html#a21dc82d623d574bee297b9a57006a8b4" title="输出原始变量" alt="" coords="251,123,414,149"/>
+<area shape="poly" title=" " alt="" coords="190,118,238,125,233,126,190,123"/>
+<area shape="rect" href="class_block_solver.html#ae372dfb8d712322916273f5352d17096" title="执行求解过程" alt="" coords="267,173,398,200"/>
+<area shape="poly" title=" " alt="" coords="135,122,238,159,265,169,259,169,237,164,134,127"/>
+<area shape="rect" href="class_data.html#abb641c4a4830c60d4396201388dd9faf" title=" " alt="" coords="512,13,597,40"/>
+<area shape="poly" title=" " alt="" coords="427,24,499,26,494,27,428,29"/>
+<area shape="rect" href="class_block_solver.html#a238b1f4f31dc8fdbddfcf890c80fa645" title="三阶SSP Runge&#45;Kutta时间积分方法" alt="" coords="475,173,634,200"/>
+<area shape="poly" title=" " alt="" coords="398,184,462,187,457,187,398,189"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_ae641ab097ce6fd1402bc2a411828ae92_icgraph.png" border="0" usemap="#aclass_block_solver_ae641ab097ce6fd1402bc2a411828ae92_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_ae641ab097ce6fd1402bc2a411828ae92_icgraph" id="aclass_block_solver_ae641ab097ce6fd1402bc2a411828ae92_icgraph">
+<area shape="rect" title="基于CFL条件的时间步循环" alt="" coords="103,5,287,32"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数，程序入口点" alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a736738d2e404c1e60714d603303a5004" name="a736738d2e404c1e60714d603303a5004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a736738d2e404c1e60714d603303a5004">&#9670;&#160;</a></span>stepsLoopDTS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::stepsLoopDTS </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>基于固定时间步长的时间步循环 </p>
+<p>基于DTS方法的时间步进循环</p>
+<p>使用对角化时间步长(DTS)方法进行时间推进。 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00366">366</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a736738d2e404c1e60714d603303a5004_cgraph.png" border="0" usemap="#aclass_block_solver_a736738d2e404c1e60714d603303a5004_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a736738d2e404c1e60714d603303a5004_cgraph" id="aclass_block_solver_a736738d2e404c1e60714d603303a5004_cgraph">
+<area shape="rect" title="基于固定时间步长的时间步循环" alt="" coords="5,183,192,209"/>
+<area shape="rect" href="class_block_solver.html#a7c8af668de7608ff082765bdf1b4278c" title="显式欧拉时间积分方法" alt="" coords="240,81,403,108"/>
+<area shape="poly" title=" " alt="" coords="129,180,277,112,275,117,131,184"/>
+<area shape="rect" href="class_data.html#abb641c4a4830c60d4396201388dd9faf" title=" " alt="" coords="671,81,757,108"/>
+<area shape="poly" title=" " alt="" coords="192,189,426,173,541,159,623,143,653,130,679,118,684,116,655,135,624,148,542,165,427,178,193,194"/>
+<area shape="rect" href="class_block_solver.html#a0f29b8074f5d43e176ac656f084a025d" title="输出网格信息" alt="" coords="242,208,401,235"/>
+<area shape="poly" title=" " alt="" coords="192,204,229,210,223,211,192,209"/>
+<area shape="rect" href="class_block_solver.html#a21dc82d623d574bee297b9a57006a8b4" title="输出原始变量" alt="" coords="240,259,402,285"/>
+<area shape="poly" title=" " alt="" coords="138,207,241,244,263,254,258,253,239,249,137,213"/>
+<area shape="rect" href="class_block_solver.html#a8306ec4e9850e33c897eac0bf401fe87" title="计算局部CFL数" alt="" coords="451,5,623,32"/>
+<area shape="poly" title=" " alt="" coords="355,78,450,41,475,36,470,38,452,47,357,83"/>
+<area shape="rect" href="class_data.html#a24c913514c9a6c3dd579d723c4d7f970" title=" " alt="" coords="489,56,585,83"/>
+<area shape="poly" title=" " alt="" coords="403,83,476,76,471,78,404,88"/>
+<area shape="rect" href="class_data.html#a8aa18eb21e69ff516764c1f2da4adea7" title="将数据设置为零" alt="" coords="483,107,591,133"/>
+<area shape="poly" title=" " alt="" coords="403,102,470,111,465,112,404,107"/>
+<area shape="poly" title=" " alt="" coords="592,30,624,42,681,73,676,73,622,46,592,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a105bdac2459eedfccd45c99eb4197c5a" name="a105bdac2459eedfccd45c99eb4197c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105bdac2459eedfccd45c99eb4197c5a">&#9670;&#160;</a></span>Test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlockSolver::Test </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>测试函数 </p>
+<p>执行简单的测试计算并输出结果。 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a> 第 <a class="el" href="block_solver_8cpp_source.html#l00317">317</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_solver_a105bdac2459eedfccd45c99eb4197c5a_cgraph.png" border="0" usemap="#aclass_block_solver_a105bdac2459eedfccd45c99eb4197c5a_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_block_solver_a105bdac2459eedfccd45c99eb4197c5a_cgraph" id="aclass_block_solver_a105bdac2459eedfccd45c99eb4197c5a_cgraph">
+<area shape="rect" title="测试函数" alt="" coords="5,31,130,57"/>
+<area shape="rect" href="class_block_solver.html#a0f29b8074f5d43e176ac656f084a025d" title="输出网格信息" alt="" coords="178,5,337,32"/>
+<area shape="poly" title=" " alt="" coords="130,33,165,31,160,32,131,38"/>
+<area shape="rect" href="class_block_solver.html#a238b1f4f31dc8fdbddfcf890c80fa645" title="三阶SSP Runge&#45;Kutta时间积分方法" alt="" coords="178,56,337,83"/>
+<area shape="poly" title=" " alt="" coords="130,50,165,56,160,57,130,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a72023b0eb96021755ce007894a2ddb4f" name="a72023b0eb96021755ce007894a2ddb4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72023b0eb96021755ce007894a2ddb4f">&#9670;&#160;</a></span>block</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_block.html">Block</a>* BlockSolver::block</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>区块对象指针 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00079">79</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a19e9d5a7b192bd1bfb5d787c2b974264" name="a19e9d5a7b192bd1bfb5d787c2b974264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19e9d5a7b192bd1bfb5d787c2b974264">&#9670;&#160;</a></span>bnds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bnds.html">Bnds</a>* BlockSolver::bnds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>边界条件对象指针 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00082">82</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aed784f77965139a544b51627b2f95d19" name="aed784f77965139a544b51627b2f95d19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed784f77965139a544b51627b2f95d19">&#9670;&#160;</a></span>cgnsIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cgns_i_o.html">CgnsIO</a> BlockSolver::cgnsIO</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>CGNS输入输出处理对象 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00077">77</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a326c724ed1012a295ab020c850626c32" name="a326c724ed1012a295ab020c850626c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326c724ed1012a295ab020c850626c32">&#9670;&#160;</a></span>cons</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a>* BlockSolver::cons</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00084">84</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad166b858c00ed498e3d4bdf214735875" name="ad166b858c00ed498e3d4bdf214735875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad166b858c00ed498e3d4bdf214735875">&#9670;&#160;</a></span>eqn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_equation.html">Equation</a>* BlockSolver::eqn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>方程对象指针 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00081">81</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a92457433d141439d10702bb57f68d51e" name="a92457433d141439d10702bb57f68d51e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92457433d141439d10702bb57f68d51e">&#9670;&#160;</a></span>info</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_info.html">Info</a>* BlockSolver::info</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>信息对象指针 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00078">78</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a848412954b8eb8183602f3a768dc575f" name="a848412954b8eb8183602f3a768dc575f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a848412954b8eb8183602f3a768dc575f">&#9670;&#160;</a></span>initer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_initializer.html">Initializer</a>* BlockSolver::initer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化器对象指针 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00080">80</a> 行定义.</p>
+
+</div>
+</div>
+<a id="afa1f3a68bcf4c9482d525964b86f3181" name="afa1f3a68bcf4c9482d525964b86f3181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa1f3a68bcf4c9482d525964b86f3181">&#9670;&#160;</a></span>rhs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a> * BlockSolver::rhs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>守恒变量和右端项数据指针 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00084">84</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a126f520dc4fa284271e8018d26397d0e" name="a126f520dc4fa284271e8018d26397d0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126f520dc4fa284271e8018d26397d0e">&#9670;&#160;</a></span>sourceTerm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_source_term.html">SourceTerm</a>* BlockSolver::sourceTerm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>源项对象指针 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00085">85</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad506bd2fa7e49b038f563d01cd7df3a4" name="ad506bd2fa7e49b038f563d01cd7df3a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad506bd2fa7e49b038f563d01cd7df3a4">&#9670;&#160;</a></span>spDis</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sp_distributor.html">SpDistributor</a>* BlockSolver::spDis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>空间分布器对象指针 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00083">83</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6cabde1b3e14b55391cb37ad93775e0b" name="a6cabde1b3e14b55391cb37ad93775e0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cabde1b3e14b55391cb37ad93775e0b">&#9670;&#160;</a></span>timeMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896">TimeMethod</a> BlockSolver::timeMethod =<a class="el" href="macro_8hpp.html#a358043ae6b418d48835e9ac9be85d896ae672a0d703868ebfcb0df2ee5bbecaa2">RK3SSP</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>时间积分方法，默认为三阶SSP Runge-Kutta方法 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00117">117</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a81fe908d17b9bd8de6ded969206c9391" name="a81fe908d17b9bd8de6ded969206c9391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81fe908d17b9bd8de6ded969206c9391">&#9670;&#160;</a></span>timesteps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long BlockSolver::timesteps =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>时间步数计数器 </p>
+
+<p class="definition">在文件 <a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a> 第 <a class="el" href="block_solver_8hpp_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/<a class="el" href="block_solver_8hpp_source.html">blockSolver.hpp</a></li>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/src/<a class="el" href="block_solver_8cpp_source.html">blockSolver.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

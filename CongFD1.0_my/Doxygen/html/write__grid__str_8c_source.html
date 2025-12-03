@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/utils/testcgns/write_grid_str.c 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a href="dir_67f64032f02da812e19d6750f48627b0.html">testcgns</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">write_grid_str.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="write__grid__str_8c.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*   Program write_grid_str.c    */</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">Creates simple 3-D structured grid and writes it to a</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">CGNS file.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"></span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">Example compilation for this program is (change paths if needed!):</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"></span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">cc -I ../.. -c write_grid_str.c</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">cc -o write_grid_str_c write_grid_str.o -L ../../lib -lcgns</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"></span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">(../../lib is the location where the compiled</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">library libcgns.a is located)</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/* cgnslib.h file must be located in directory specified by -I during compile: */</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;cgnslib.h&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#if CGNS_VERSION &lt; 3100</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="write__grid__str_8c.html#ab86b176a3cec104781c26cbf8c73bb33">   21</a></span><span class="preprocessor"># define cgsize_t int</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="write__grid__str_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   24</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="write__grid__str_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">   dimension statements (note that tri-dimensional arrays</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">   x,y,z must be dimensioned exactly as [N][17][21] (N&gt;=9)</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">   for this particular case or else they will be written to</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">   the CGNS file incorrectly!  Other options are to use</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">   cg_coord_general_write, 1-D arrays, use dynamic memory,</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">   or pass index values to a subroutine and dimension exactly</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">   there):</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>   <span class="keywordtype">double</span> x[9][17][21],y[9][17][21],z[9][17][21];</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>   <a class="code hl_define" href="write__grid__str_8c.html#ab86b176a3cec104781c26cbf8c73bb33">cgsize_t</a> isize[3][3];</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   <span class="keywordtype">int</span> ni,nj,nk,i,j,k;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>   <span class="keywordtype">int</span> index_file,icelldim,iphysdim,index_base;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>   <span class="keywordtype">int</span> index_zone,index_coord;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>   <span class="keywordtype">char</span> basename[33],zonename[33];</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>   printf(<span class="stringliteral">&quot;\nProgram write_grid_str\n&quot;</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">/* create gridpoints for simple example: */</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>   ni=21;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>   nj=17;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>   nk=9;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>   <span class="keywordflow">for</span> (k=0; k &lt; nk; ++k)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>   {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>     <span class="keywordflow">for</span> (j=0; j &lt; nj; ++j)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>     {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>       <span class="keywordflow">for</span> (i=0; i &lt; ni; ++i)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>       {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>         x[k][j][i]=i;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>         y[k][j][i]=j;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>         z[k][j][i]=k;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>       }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>     }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>   }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>   printf(<span class="stringliteral">&quot;\ncreated simple 3-D grid points&quot;</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">/* WRITE X, Y, Z GRID POINTS TO CGNS FILE */</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">/* open CGNS file for write */</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>   <span class="keywordflow">if</span> (cg_open(<span class="stringliteral">&quot;grid_c.cgns&quot;</span>,CG_MODE_WRITE,&amp;index_file)) cg_error_exit();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">/* create base (user can give any name) */</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>   strcpy(basename,<span class="stringliteral">&quot;Base&quot;</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>   icelldim=3;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>   iphysdim=3;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>   cg_base_write(index_file,basename,icelldim,iphysdim,&amp;index_base);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">/* define zone name (user can give any name) */</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>   strcpy(zonename,<span class="stringliteral">&quot;Zone  1&quot;</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">/* vertex size */</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>   isize[0][0]=21;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>   isize[0][1]=17;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>   isize[0][2]=9;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">/* cell size */</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>   isize[1][0]=isize[0][0]-1;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>   isize[1][1]=isize[0][1]-1;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>   isize[1][2]=isize[0][2]-1;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">/* boundary vertex size (always zero for structured grids) */</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>   isize[2][0]=0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>   isize[2][1]=0;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>   isize[2][2]=0;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">/* create zone */</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>   cg_zone_write(index_file,index_base,zonename,*isize,CGNS_ENUMV(Structured),&amp;index_zone);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">/* write grid coordinates (user must use SIDS-standard names here) */</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>   cg_coord_write(index_file,index_base,index_zone,CGNS_ENUMV(RealDouble),<span class="stringliteral">&quot;CoordinateX&quot;</span>,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>       x,&amp;index_coord);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>   cg_coord_write(index_file,index_base,index_zone,CGNS_ENUMV(RealDouble),<span class="stringliteral">&quot;CoordinateY&quot;</span>,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>       y,&amp;index_coord);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>   cg_coord_write(index_file,index_base,index_zone,CGNS_ENUMV(RealDouble),<span class="stringliteral">&quot;CoordinateZ&quot;</span>,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>       z,&amp;index_coord);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">/* close CGNS file */</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>   cg_close(index_file);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>   printf(<span class="stringliteral">&quot;\nSuccessfully wrote grid to file grid_c.cgns\n&quot;</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
+</div>
+<div class="ttc" id="awrite__grid__str_8c_html_ab86b176a3cec104781c26cbf8c73bb33"><div class="ttname"><a href="write__grid__str_8c.html#ab86b176a3cec104781c26cbf8c73bb33">cgsize_t</a></div><div class="ttdeci">#define cgsize_t</div><div class="ttdef"><b>定义</b> <a href="#l00021">write_grid_str.c:21</a></div></div>
+<div class="ttc" id="awrite__grid__str_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="write__grid__str_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>定义</b> <a href="#l00024">write_grid_str.c:24</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

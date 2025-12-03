@@ -1,0 +1,10 @@
+<map id="GhostArray::get_domain_size" name="GhostArray::get_domain_size">
+<area shape="rect" id="Node000001" title="获取物理域点数" alt="" coords="255,31,448,57"/>
+<area shape="rect" id="Node000002" href="$header_8_h.html#ae74f59af7424d5daa1e787f7b3af08cc" title="计算L1范数误差" alt="" coords="103,5,207,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,30,207,28,207,23,242,29"/>
+<area shape="rect" id="Node000004" href="$header_8_h.html#a94c20ffe91b962413c718133f8a0290b" title="计算L2范数误差" alt="" coords="103,56,207,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="242,58,208,65,207,60,237,59"/>
+<area shape="rect" id="Node000003" href="$with__time_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数（含时间推进）" alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,34,56,42,54,37,89,31"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="85,57,55,52,55,46,90,54"/>
+</map>

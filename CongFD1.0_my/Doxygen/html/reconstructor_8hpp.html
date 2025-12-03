@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/reconstructor.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a>  </div>
+  <div class="headertitle"><div class="title">reconstructor.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>定义重构器类，用于变量重构  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="macro_8hpp_source.html">macro.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="data_8hpp_source.html">data.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="info_8hpp_source.html">info.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="one_d_bnd_8hpp_source.html">oneDBnd.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+reconstructor.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="reconstructor_8hpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2reconstructor_8hpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2reconstructor_8hpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2reconstructor_8hpp">
+<area shape="rect" title="定义重构器类，用于变量重构" alt="" coords="369,5,615,80"/>
+<area shape="rect" href="macro_8hpp.html" title="定义项目中使用的宏、枚举类型和通用函数" alt="" coords="461,277,544,304"/>
+<area shape="poly" title=" " alt="" coords="461,79,439,114,420,151,412,191,414,210,421,228,438,250,462,270,457,269,435,254,416,231,409,211,407,190,415,150,434,111,457,82"/>
+<area shape="rect" href="data_8hpp.html" title=" " alt="" coords="431,203,502,229"/>
+<area shape="poly" title=" " alt="" coords="484,79,476,128,470,189,465,186,471,128,481,83"/>
+<area shape="rect" href="info_8hpp.html" title="定义求解器相关信息的类" alt="" coords="577,203,644,229"/>
+<area shape="poly" title=" " alt="" coords="555,78,581,100,601,127,612,157,614,189,610,186,606,158,596,129,577,104,554,83"/>
+<area shape="rect" href="one_d_bnd_8hpp.html" title=" " alt="" coords="486,128,586,155"/>
+<area shape="poly" title=" " alt="" coords="509,78,526,114,521,113,508,83"/>
+<area shape="rect" title=" " alt="" coords="5,352,56,379"/>
+<area shape="poly" title=" " alt="" coords="458,296,294,316,185,332,72,354,70,349,184,327,294,311,463,295"/>
+<area shape="rect" title=" " alt="" coords="80,352,141,379"/>
+<area shape="poly" title=" " alt="" coords="459,298,329,320,156,354,155,349,328,315,464,297"/>
+<area shape="rect" title=" " alt="" coords="164,352,236,379"/>
+<area shape="poly" title=" " alt="" coords="463,302,251,354,250,348,458,301"/>
+<area shape="rect" title=" " alt="" coords="259,352,327,379"/>
+<area shape="poly" title=" " alt="" coords="469,304,343,350,341,345,463,305"/>
+<area shape="rect" title=" " alt="" coords="352,352,405,379"/>
+<area shape="poly" title=" " alt="" coords="483,304,414,346,412,342,478,305"/>
+<area shape="rect" title=" " alt="" coords="430,352,487,379"/>
+<area shape="poly" title=" " alt="" coords="497,303,476,341,472,336,493,306"/>
+<area shape="rect" title=" " alt="" coords="511,352,585,379"/>
+<area shape="poly" title=" " alt="" coords="512,302,534,340,529,338,509,307"/>
+<area shape="rect" title=" " alt="" coords="609,352,673,379"/>
+<area shape="poly" title=" " alt="" coords="527,302,606,345,601,344,526,307"/>
+<area shape="rect" title=" " alt="" coords="698,352,755,379"/>
+<area shape="poly" title=" " alt="" coords="542,302,686,350,680,350,541,307"/>
+<area shape="rect" title=" " alt="" coords="779,352,837,379"/>
+<area shape="poly" title=" " alt="" coords="544,298,766,351,761,351,544,303"/>
+<area shape="rect" title=" " alt="" coords="861,352,907,379"/>
+<area shape="poly" title=" " alt="" coords="544,294,675,314,848,351,843,351,675,319,544,300"/>
+<area shape="rect" title=" " alt="" coords="931,352,991,379"/>
+<area shape="poly" title=" " alt="" coords="544,294,704,313,918,352,913,352,703,318,544,299"/>
+<area shape="poly" title=" " alt="" coords="474,228,492,264,487,262,472,232"/>
+<area shape="poly" title=" " alt="" coords="594,229,535,271,533,266,589,231"/>
+<area shape="poly" title=" " alt="" coords="535,153,511,264,507,261,531,157"/>
+<area shape="poly" title=" " alt="" coords="526,154,491,193,488,189,522,157"/>
+<area shape="poly" title=" " alt="" coords="550,153,590,192,584,192,548,158"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="reconstructor_8hpp__dep__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2reconstructor_8hppdep" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2reconstructor_8hppdep" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2reconstructor_8hppdep">
+<area shape="rect" title="定义重构器类，用于变量重构" alt="" coords="5,5,252,80"/>
+<area shape="rect" href="reconstructor_8cpp.html" title="重构器类的实现文件" alt="" coords="5,128,252,203"/>
+<area shape="poly" title=" " alt="" coords="130,94,131,129,126,127,127,98"/>
+</map>
+</div>
+</div>
+<p><a href="reconstructor_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:Reconstructor" id="r_Reconstructor"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reconstructor.html">Reconstructor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">重构器基类  <a href="class_reconstructor.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:ReconEigen1DEuler" id="r_ReconEigen1DEuler"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_recon_eigen1_d_euler.html">ReconEigen1DEuler</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维欧拉方程特征重构器  <a href="class_recon_eigen1_d_euler.html#details">更多...</a><br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>定义重构器类，用于变量重构 </p>
+
+<p class="definition">在文件 <a class="el" href="reconstructor_8hpp_source.html">reconstructor.hpp</a> 中定义.</p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

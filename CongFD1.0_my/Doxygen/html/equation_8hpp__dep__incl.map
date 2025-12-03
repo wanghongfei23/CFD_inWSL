@@ -1,0 +1,15 @@
+<map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/equation.hpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/equation.hpp">
+<area shape="rect" id="Node000001" title="定义方程类，用于处理守恒变量与原始变量之间的转换" alt="" coords="409,5,656,80"/>
+<area shape="rect" id="Node000002" href="$initializer_8hpp.html" title="定义初始化器类，用于初始化网格、方程和边界条件" alt="" coords="275,128,521,203"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="482,89,440,130,437,126,478,92"/>
+<area shape="rect" id="Node000007" href="$equation_8cpp.html" title="方程类的实现文件" alt="" coords="545,128,792,203"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="586,88,630,128,625,127,585,93"/>
+<area shape="rect" id="Node000003" href="$block_solver_8hpp.html" title=" " alt="" coords="140,251,386,325"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="348,212,306,252,302,248,343,215"/>
+<area shape="rect" id="Node000006" href="$initializer_8cpp.html" title="初始化器类的实现文件" alt="" coords="411,251,657,325"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="451,211,495,250,490,250,450,216"/>
+<area shape="rect" id="Node000004" href="$block_solver_8cpp.html" title="BlockSolver类的实现文件" alt="" coords="5,373,252,448"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="213,335,171,375,168,371,208,337"/>
+<area shape="rect" id="Node000005" href="$zone_main_8cpp.html" title="主程序入口文件，用于配置和运行CFD求解器" alt="" coords="276,373,522,448"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="317,334,361,373,355,373,315,339"/>
+</map>

@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/batch_processing 目录参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_1242f034e79c01649acb89d0581141f0.html">batch_processing</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">batch_processing 目录参考</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
+批量处理配置文件说明</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+重要提示</h1>
+<p>配置文件必须严格按照16行格式编写，缺少任何一行都可能导致程序读取错误或运行异常。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+配置文件命名规范</h1>
+<p>配置文件应按照以下格式命名： </p><div class="fragment"><div class="line">info_&quot;算例名称&quot;_&quot;插值方法&quot;.txt</div>
+</div><!-- fragment --><p>例如：</p><ul>
+<li><span class="tt">info_Lax_WCNS5CONGZ.txt</span></li>
+<li><span class="tt">info_Lax_WHFTCNSA.txt</span></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+配置文件内容格式</h1>
+<p>配置文件**必须**包含16行，每行一个参数，顺序如下：</p>
+<ol type="1">
+<li>插值方法编号 (interMethod)</li>
+<li>时间步数 (endStep)</li>
+<li>输出时间间隔 (outputDt)</li>
+<li>CFL数 (CFL)</li>
+<li>算例编号 (nCase)</li>
+<li>计算区域左边界 (calZone[0])</li>
+<li>计算区域右边界 (calZone[1])</li>
+<li>计算区域下边界 (calZone[2])</li>
+<li>计算区域上边界 (calZone[3])</li>
+<li>计算区域z方向起始 (calZone[4])</li>
+<li>计算区域z方向结束 (calZone[5])</li>
+<li>X方向网格点数 (iMax[0])</li>
+<li>Y方向网格点数 (iMax[1])</li>
+<li>Z方向网格点数 (iMax[2])</li>
+<li>维度 (dim)</li>
+<li>线程数 (omp_threads)</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+参数说明</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+1. 插值方法编号 (interMethod)</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">编号  </th><th class="markdownTableHeadNone">插值方法  </th><th class="markdownTableHeadNone">说明  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">0  </td><td class="markdownTableBodyNone">FIRSTORDER  </td><td class="markdownTableBodyNone">一阶迎风格式  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">MUSCL  </td><td class="markdownTableBodyNone">MUSCL格式  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2  </td><td class="markdownTableBodyNone">WCNS5  </td><td class="markdownTableBodyNone">WENO-JS  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">3  </td><td class="markdownTableBodyNone">WCNSZ5  </td><td class="markdownTableBodyNone">WENO-Z  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">4  </td><td class="markdownTableBodyNone">WCNS5Char  </td><td class="markdownTableBodyNone">WCNS5特征重构  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">5  </td><td class="markdownTableBodyNone">WCNSZ5Char  </td><td class="markdownTableBodyNone">WCNSZ5特征重构  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">6  </td><td class="markdownTableBodyNone">WCNS5CONG  </td><td class="markdownTableBodyNone">WCNS5改进格式  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">7  </td><td class="markdownTableBodyNone">TCNSCongA  </td><td class="markdownTableBodyNone">TENO-A格式  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">8  </td><td class="markdownTableBodyNone">WCNS5CONGZ  </td><td class="markdownTableBodyNone">TENO-S  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">9  </td><td class="markdownTableBodyNone">WCNS5CONGZCT4  </td><td class="markdownTableBodyNone">TENO-S CT4版本  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">10  </td><td class="markdownTableBodyNone">WCNS5CONGZCT7  </td><td class="markdownTableBodyNone">TENO-S CT7版本  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">11  </td><td class="markdownTableBodyNone">TCNS5  </td><td class="markdownTableBodyNone">TENO  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">12  </td><td class="markdownTableBodyNone">TCNS5CT4  </td><td class="markdownTableBodyNone">TENO CT4版本  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">13  </td><td class="markdownTableBodyNone">TCNS5CT7  </td><td class="markdownTableBodyNone">TENO CT7版本  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">14  </td><td class="markdownTableBodyNone">LINEAR5  </td><td class="markdownTableBodyNone">五阶线性格式  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">15  </td><td class="markdownTableBodyNone">NICEST5  </td><td class="markdownTableBodyNone">NICEST格式  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">16  </td><td class="markdownTableBodyNone">INTERMAX  </td><td class="markdownTableBodyNone">最大值插值格式  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">17  </td><td class="markdownTableBodyNone">WHFTCNSA  </td><td class="markdownTableBodyNone">TENO-myA  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">18  </td><td class="markdownTableBodyNone">WHFTCNSASF002  </td><td class="markdownTableBodyNone">TENO-AS-myF002  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">19  </td><td class="markdownTableBodyNone">WHFTCNSAH002  </td><td class="markdownTableBodyNone">TENO-AS-myH002  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">20  </td><td class="markdownTableBodyNone">WHFTCNSASF102  </td><td class="markdownTableBodyNone">TENO-AS-myF102  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">21  </td><td class="markdownTableBodyNone">WHFTCNSASF103  </td><td class="markdownTableBodyNone">TENO-AS-myF103  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">22  </td><td class="markdownTableBodyNone">WHFTCNSASF102_reciprocal  </td><td class="markdownTableBodyNone">TENO-AS-myF102_reciprocal  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">23  </td><td class="markdownTableBodyNone">WHFTCNSASF103_reciprocal  </td><td class="markdownTableBodyNone">TENO-AS-myF103_reciprocal  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">24  </td><td class="markdownTableBodyNone">WHFTCNSAS_fx  </td><td class="markdownTableBodyNone">TENO-AS-fx  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">25  </td><td class="markdownTableBodyNone">WHFTCNSAS_initial  </td><td class="markdownTableBodyNone">TENO-AS-initial  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">26  </td><td class="markdownTableBodyNone">WHFTCNSAS_approx_1  </td><td class="markdownTableBodyNone">TENO-AS-approx_1  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">27  </td><td class="markdownTableBodyNone">WHFTCNSAS_fx_real  </td><td class="markdownTableBodyNone">TENO-AS-fx-real  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">28  </td><td class="markdownTableBodyNone">WHFTCNSAS_approx_2  </td><td class="markdownTableBodyNone">TENO-AS-approx_2  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">29  </td><td class="markdownTableBodyNone">WHFTCNSASF202_2S  </td><td class="markdownTableBodyNone">TENO-AS-myF202_2S  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">30  </td><td class="markdownTableBodyNone">WHFTCNSASF202_NoS  </td><td class="markdownTableBodyNone">TENO-AS-myF202_NoS  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">31  </td><td class="markdownTableBodyNone">WHFTCNSASF203_NoS  </td><td class="markdownTableBodyNone">TENO-AS-myF203_NoS  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+2. 算例编号 (nCase)</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+一维算例</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">编号  </th><th class="markdownTableHeadNone">算例名称  </th><th class="markdownTableHeadNone">说明  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">0  </td><td class="markdownTableBodyNone">Sod  </td><td class="markdownTableBodyNone">Sod激波管  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">ShuOsher  </td><td class="markdownTableBodyNone">Shu-Osher问题  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2  </td><td class="markdownTableBodyNone">Lax  </td><td class="markdownTableBodyNone">Lax激波管  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">3  </td><td class="markdownTableBodyNone">sedov  </td><td class="markdownTableBodyNone">Sedov爆炸波  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">4  </td><td class="markdownTableBodyNone">Woodward_Colella  </td><td class="markdownTableBodyNone">Woodward-Colella问题  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">5  </td><td class="markdownTableBodyNone">Double_sparse_wave  </td><td class="markdownTableBodyNone">双稀疏波问题  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+二维算例</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">编号  </th><th class="markdownTableHeadNone">算例名称  </th><th class="markdownTableHeadNone">说明  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">0  </td><td class="markdownTableBodyNone">2D_Riemann_1  </td><td class="markdownTableBodyNone">二维黎曼问题1  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">2D_Riemann_2  </td><td class="markdownTableBodyNone">二维黎曼问题2-涡  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2  </td><td class="markdownTableBodyNone">implosion  </td><td class="markdownTableBodyNone">内爆问题  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">3  </td><td class="markdownTableBodyNone">RTI  </td><td class="markdownTableBodyNone">瑞利-泰勒不稳定性  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">4  </td><td class="markdownTableBodyNone">Double_Mach  </td><td class="markdownTableBodyNone">双马赫反射  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">5  </td><td class="markdownTableBodyNone">2D_Riemann_3  </td><td class="markdownTableBodyNone">二维黎曼问题3  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">6  </td><td class="markdownTableBodyNone">KHI  </td><td class="markdownTableBodyNone">开尔文-亥姆霍兹不稳定性  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+一维与二维问题参数设置差异</h1>
+<p>虽然一维和二维问题使用相同的16行配置文件格式，但在参数设置上有以下区别：</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+一维问题 (dim=1)</h2>
+<ul>
+<li>calZone[2] 到 calZone[5] 应设置为 0</li>
+<li>iMax[1] 和 iMax[2] 通常设置为 2</li>
+<li>示例： <div class="fragment"><div class="line">8        # interMethod</div>
+<div class="line">100      # endStep</div>
+<div class="line">0.01     # outputDt</div>
+<div class="line">0.5      # CFL</div>
+<div class="line">2        # nCase (Lax)</div>
+<div class="line">-0.5     # calZone[0]</div>
+<div class="line">0.5      # calZone[1]</div>
+<div class="line">0        # calZone[2] (unused)</div>
+<div class="line">0        # calZone[3] (unused)</div>
+<div class="line">0        # calZone[4] (unused)</div>
+<div class="line">0        # calZone[5] (unused)</div>
+<div class="line">201      # iMax[0]</div>
+<div class="line">2        # iMax[1] (unused)</div>
+<div class="line">2        # iMax[2] (unused)</div>
+<div class="line">1        # dim</div>
+<div class="line">4        # omp_threads</div>
+</div><!-- fragment --></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+二维问题 (dim=2)</h2>
+<ul>
+<li>calZone[0] 到 calZone[3] 分别表示 x 和 y 方向的边界</li>
+<li>iMax[0] 和 iMax[1] 分别表示 x 和 y 方向的网格点数</li>
+<li>示例： <div class="fragment"><div class="line">2        # interMethod</div>
+<div class="line">100      # endStep</div>
+<div class="line">0.01     # outputDt</div>
+<div class="line">0.5      # CFL</div>
+<div class="line">0        # nCase (2D_Riemann_1)</div>
+<div class="line">-0.5     # calZone[0] (x_min)</div>
+<div class="line">0.5      # calZone[1] (x_max)</div>
+<div class="line">-0.5     # calZone[2] (y_min)</div>
+<div class="line">0.5      # calZone[3] (y_max)</div>
+<div class="line">0        # calZone[4] (unused)</div>
+<div class="line">0        # calZone[5] (unused)</div>
+<div class="line">201      # iMax[0] (x方向网格点数)</div>
+<div class="line">201      # iMax[1] (y方向网格点数)</div>
+<div class="line">2        # iMax[2] (unused)</div>
+<div class="line">2        # dim</div>
+<div class="line">4        # omp_threads</div>
+</div><!-- fragment --></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+批量处理脚本使用方法</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
+run_all_cases.sh 脚本</h2>
+<p>该脚本会自动运行当前目录下所有以 <span class="tt">info_</span> 开头、以 <span class="tt">.txt</span> 结尾的配置文件。</p>
+<p>使用步骤：</p><ol type="1">
+<li>确保所有配置文件按照命名规范放置在 <span class="tt">batch_processing</span> 目录中</li>
+<li>在终端中运行脚本： <div class="fragment"><div class="line">cd batch_processing</div>
+<div class="line">./run_all_cases.sh</div>
+</div><!-- fragment --></li>
+<li>脚本会依次执行每个算例，并在控制台显示执行状态</li>
+</ol>
+<p>注意事项：</p><ul>
+<li>脚本会将当前配置文件复制为 <span class="tt">info.txt</span> 供程序读取</li>
+<li>程序执行结果将保存在 <span class="tt">batch_processing_data</span> 目录中</li>
+<li>确保在运行脚本前已正确编译主程序 (<span class="tt">../build/congFD</span>) </li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

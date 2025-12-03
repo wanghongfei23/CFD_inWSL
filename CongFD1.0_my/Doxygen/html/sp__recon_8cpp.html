@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/src/sp_recon.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_98cdb10f369f6a3b9149e010b312bf5d.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">sp_recon.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>空间离散重构计算实现文件  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+sp_recon.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="sp__recon_8cpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2src_2sp__recon_8cpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2src_2sp__recon_8cpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2src_2sp__recon_8cpp">
+<area shape="rect" title="空间离散重构计算实现文件" alt="" coords="249,5,496,80"/>
+<area shape="rect" href="_space_dis_8hpp.html" title=" " alt="" coords="509,128,612,155"/>
+<area shape="poly" title=" " alt="" coords="444,78,525,120,520,121,444,83"/>
+<area shape="rect" href="inter_scheme_8hpp.html" title=" " alt="" coords="204,277,323,304"/>
+<area shape="poly" title=" " alt="" coords="352,78,322,138,291,204,272,263,267,261,286,202,317,136,349,82"/>
+<area shape="rect" href="block_8hpp.html" title="定义Block类，用于处理计算网格块的相关数据和操作" alt="" coords="300,203,378,229"/>
+<area shape="poly" title=" " alt="" coords="520,156,394,200,392,195,524,154"/>
+<area shape="rect" href="one_d_bnd_8hpp.html" title=" " alt="" coords="589,203,689,229"/>
+<area shape="poly" title=" " alt="" coords="575,153,617,192,612,192,574,158"/>
+<area shape="rect" href="info_8hpp.html" title="定义求解器相关信息的类" alt="" coords="616,277,684,304"/>
+<area shape="poly" title=" " alt="" coords="613,148,663,166,686,181,704,201,709,219,705,237,694,254,680,269,677,265,690,251,700,235,704,219,700,204,682,185,661,171,613,153"/>
+<area shape="rect" title=" " alt="" coords="402,203,565,229"/>
+<area shape="poly" title=" " alt="" coords="549,154,509,194,506,190,545,157"/>
+<area shape="rect" href="eigen_system_8hpp.html" title="定义特征系统相关的类，用于欧拉方程的特征分解" alt="" coords="717,277,839,304"/>
+<area shape="poly" title=" " alt="" coords="612,150,670,169,699,183,725,201,751,230,769,264,764,262,747,233,721,205,696,187,668,174,613,155"/>
+<area shape="rect" href="data_8hpp.html" title=" " alt="" coords="470,277,542,304"/>
+<area shape="poly" title=" " alt="" coords="368,227,465,270,460,271,368,233"/>
+<area shape="rect" title=" " alt="" coords="346,277,420,304"/>
+<area shape="poly" title=" " alt="" coords="348,227,370,264,365,264,346,232"/>
+<area shape="rect" href="macro_8hpp.html" title="定义项目中使用的宏、枚举类型和通用函数" alt="" coords="502,352,584,379"/>
+<area shape="poly" title=" " alt="" coords="514,302,532,339,527,337,511,307"/>
+<area shape="rect" title=" " alt="" coords="942,427,992,453"/>
+<area shape="poly" title=" " alt="" coords="585,368,733,387,828,403,930,427,924,426,827,409,732,393,585,374"/>
+<area shape="rect" title=" " alt="" coords="762,427,823,453"/>
+<area shape="poly" title=" " alt="" coords="585,376,750,426,745,426,584,381"/>
+<area shape="rect" title=" " alt="" coords="846,427,918,453"/>
+<area shape="poly" title=" " alt="" coords="585,372,834,426,828,426,585,377"/>
+<area shape="rect" title=" " alt="" coords="234,427,303,453"/>
+<area shape="poly" title=" " alt="" coords="504,377,318,428,317,423,499,378"/>
+<area shape="rect" title=" " alt="" coords="75,427,128,453"/>
+<area shape="poly" title=" " alt="" coords="499,371,348,392,248,408,144,429,143,424,247,403,347,387,504,370"/>
+<area shape="rect" title=" " alt="" coords="153,427,210,453"/>
+<area shape="poly" title=" " alt="" coords="504,373,382,396,226,429,225,423,381,391,499,373"/>
+<area shape="rect" title=" " alt="" coords="327,427,402,453"/>
+<area shape="poly" title=" " alt="" coords="515,379,411,423,409,418,509,380"/>
+<area shape="rect" title=" " alt="" coords="426,427,490,453"/>
+<area shape="poly" title=" " alt="" coords="531,378,485,419,483,414,526,380"/>
+<area shape="rect" title=" " alt="" coords="514,427,572,453"/>
+<area shape="poly" title=" " alt="" coords="545,377,545,413,541,409,541,381"/>
+<area shape="rect" title=" " alt="" coords="595,427,654,453"/>
+<area shape="poly" title=" " alt="" coords="558,377,602,417,597,416,556,382"/>
+<area shape="rect" title=" " alt="" coords="5,427,52,453"/>
+<area shape="poly" title=" " alt="" coords="499,370,316,388,194,405,67,429,66,424,193,400,316,383,504,368"/>
+<area shape="rect" title=" " alt="" coords="678,427,739,453"/>
+<area shape="poly" title=" " alt="" coords="573,377,668,420,663,420,571,382"/>
+<area shape="poly" title=" " alt="" coords="618,229,543,272,541,267,613,231"/>
+<area shape="poly" title=" " alt="" coords="633,229,561,341,558,337,629,231"/>
+<area shape="poly" title=" " alt="" coords="643,228,648,263,643,261,640,232"/>
+<area shape="poly" title=" " alt="" coords="634,304,576,345,573,340,629,305"/>
+<area shape="poly" title=" " alt="" coords="740,304,599,350,598,344,734,305"/>
+<area shape="poly" title=" " alt="" coords="795,302,942,417,937,417,793,307"/>
+<area shape="poly" title=" " alt="" coords="312,302,489,349,484,350,312,307"/>
+<area shape="poly" title=" " alt="" coords="323,299,597,349,762,383,930,426,924,426,760,388,596,355,323,305"/>
+<area shape="rect" href="000__globals_8hpp.html" title=" " alt="" coords="84,352,200,379"/>
+<area shape="poly" title=" " alt="" coords="240,306,178,346,175,341,244,303"/>
+<area shape="poly" title=" " alt="" coords="137,378,118,415,114,411,133,381"/>
+<area shape="poly" title=" " alt="" coords="150,377,170,413,165,412,147,382"/>
+<area shape="poly" title=" " alt="" coords="124,381,63,420,60,416,121,377"/>
+</map>
+</div>
+</div>
+<p><a href="sp__recon_8cpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aae45584dc7664c704660d2d850d4173b" id="r_aae45584dc7664c704660d2d850d4173b"><td class="memItemLeft" align="right" valign="top">static std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae45584dc7664c704660d2d850d4173b">minDif</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> u1L, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> u2L, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> u1R, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> u2R)</td></tr>
+<tr class="memdesc:aae45584dc7664c704660d2d850d4173b"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小差值计算函数  <br /></td></tr>
+<tr class="memitem:a159cca47f1aadf3aeda39b6a2ac00b01" id="r_a159cca47f1aadf3aeda39b6a2ac00b01"><td class="memItemLeft" align="right" valign="top">static std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a159cca47f1aadf3aeda39b6a2ac00b01">minDif</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; uL, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; uR)</td></tr>
+<tr class="memdesc:a159cca47f1aadf3aeda39b6a2ac00b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小差值计算函数（三维数组版本）  <br /></td></tr>
+<tr class="memitem:a1672668e6aa406da91a3c9058420f817" id="r_a1672668e6aa406da91a3c9058420f817"><td class="memItemLeft" align="right" valign="top">static std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1672668e6aa406da91a3c9058420f817">minDif</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt; uL, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt; uR)</td></tr>
+<tr class="memdesc:a1672668e6aa406da91a3c9058420f817"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小差值计算函数（二维数组版本）  <br /></td></tr>
+<tr class="memitem:ae781fbf04454bd6255a71f6c0a8b14bf" id="r_ae781fbf04454bd6255a71f6c0a8b14bf"><td class="memItemLeft" align="right" valign="top">static std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae781fbf04454bd6255a71f6c0a8b14bf">minDif2</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; uL, std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; uR)</td></tr>
+<tr class="memdesc:ae781fbf04454bd6255a71f6c0a8b14bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小差值计算函数（另一种三维数组版本）  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>空间离散重构计算实现文件 </p>
+
+<p class="definition">在文件 <a class="el" href="sp__recon_8cpp_source.html">sp_recon.cpp</a> 中定义.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="aae45584dc7664c704660d2d850d4173b" name="aae45584dc7664c704660d2d850d4173b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae45584dc7664c704660d2d850d4173b">&#9670;&#160;</a></span>minDif() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt; minDif </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>u1L</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>u2L</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>u1R</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>u2R</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最小差值计算函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">u1L</td><td>左侧第一个值 </td></tr>
+    <tr><td class="paramname">u2L</td><td>左侧第二个值 </td></tr>
+    <tr><td class="paramname">u1R</td><td>右侧第一个值 </td></tr>
+    <tr><td class="paramname">u2R</td><td>右侧第二个值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>包含最小差值的数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="sp__recon_8cpp_source.html">sp_recon.cpp</a> 第 <a class="el" href="sp__recon_8cpp_source.html#l00126">126</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="sp__recon_8cpp_aae45584dc7664c704660d2d850d4173b_cgraph.png" border="0" usemap="#asp__recon_8cpp_aae45584dc7664c704660d2d850d4173b_cgraph" loading="lazy" alt=""/></div>
+<map name="asp__recon_8cpp_aae45584dc7664c704660d2d850d4173b_cgraph" id="asp__recon_8cpp_aae45584dc7664c704660d2d850d4173b_cgraph">
+<area shape="rect" title="最小差值计算函数" alt="" coords="5,5,65,32"/>
+<area shape="rect" href="macro_8hpp.html#a0da3e49c2f90d769ba7f489622b47ef6" title="计算三维数组的线性索引" alt="" coords="113,5,165,32"/>
+<area shape="poly" title=" " alt="" coords="65,16,100,18,95,19,65,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1672668e6aa406da91a3c9058420f817" name="a1672668e6aa406da91a3c9058420f817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1672668e6aa406da91a3c9058420f817">&#9670;&#160;</a></span>minDif() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt; minDif </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt;</td>          <td class="paramname"><span class="paramname"><em>uL</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt;</td>          <td class="paramname"><span class="paramname"><em>uR</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最小差值计算函数（二维数组版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uL</td><td>左侧值数组 </td></tr>
+    <tr><td class="paramname">uR</td><td>右侧值数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>包含最小差值的数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="sp__recon_8cpp_source.html">sp_recon.cpp</a> 第 <a class="el" href="sp__recon_8cpp_source.html#l00164">164</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="sp__recon_8cpp_a1672668e6aa406da91a3c9058420f817_cgraph.png" border="0" usemap="#asp__recon_8cpp_a1672668e6aa406da91a3c9058420f817_cgraph" loading="lazy" alt=""/></div>
+<map name="asp__recon_8cpp_a1672668e6aa406da91a3c9058420f817_cgraph" id="asp__recon_8cpp_a1672668e6aa406da91a3c9058420f817_cgraph">
+<area shape="rect" title="最小差值计算函数（二维数组版本）" alt="" coords="5,5,65,32"/>
+<area shape="rect" href="macro_8hpp.html#a0da3e49c2f90d769ba7f489622b47ef6" title="计算三维数组的线性索引" alt="" coords="113,5,165,32"/>
+<area shape="poly" title=" " alt="" coords="65,16,100,18,95,19,65,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a159cca47f1aadf3aeda39b6a2ac00b01" name="a159cca47f1aadf3aeda39b6a2ac00b01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a159cca47f1aadf3aeda39b6a2ac00b01">&#9670;&#160;</a></span>minDif() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt; minDif </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>uL</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>uR</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最小差值计算函数（三维数组版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uL</td><td>左侧值数组 </td></tr>
+    <tr><td class="paramname">uR</td><td>右侧值数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>包含最小差值的数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="sp__recon_8cpp_source.html">sp_recon.cpp</a> 第 <a class="el" href="sp__recon_8cpp_source.html#l00146">146</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="sp__recon_8cpp_a159cca47f1aadf3aeda39b6a2ac00b01_cgraph.png" border="0" usemap="#asp__recon_8cpp_a159cca47f1aadf3aeda39b6a2ac00b01_cgraph" loading="lazy" alt=""/></div>
+<map name="asp__recon_8cpp_a159cca47f1aadf3aeda39b6a2ac00b01_cgraph" id="asp__recon_8cpp_a159cca47f1aadf3aeda39b6a2ac00b01_cgraph">
+<area shape="rect" title="最小差值计算函数（三维数组版本）" alt="" coords="5,5,65,32"/>
+<area shape="rect" href="macro_8hpp.html#a0da3e49c2f90d769ba7f489622b47ef6" title="计算三维数组的线性索引" alt="" coords="113,5,165,32"/>
+<area shape="poly" title=" " alt="" coords="65,16,100,18,95,19,65,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae781fbf04454bd6255a71f6c0a8b14bf" name="ae781fbf04454bd6255a71f6c0a8b14bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae781fbf04454bd6255a71f6c0a8b14bf">&#9670;&#160;</a></span>minDif2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt; minDif2 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>uL</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;</td>          <td class="paramname"><span class="paramname"><em>uR</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最小差值计算函数（另一种三维数组版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uL</td><td>左侧值数组 </td></tr>
+    <tr><td class="paramname">uR</td><td>右侧值数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>包含最小差值的数组 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="sp__recon_8cpp_source.html">sp_recon.cpp</a> 第 <a class="el" href="sp__recon_8cpp_source.html#l00200">200</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="sp__recon_8cpp_ae781fbf04454bd6255a71f6c0a8b14bf_cgraph.png" border="0" usemap="#asp__recon_8cpp_ae781fbf04454bd6255a71f6c0a8b14bf_cgraph" loading="lazy" alt=""/></div>
+<map name="asp__recon_8cpp_ae781fbf04454bd6255a71f6c0a8b14bf_cgraph" id="asp__recon_8cpp_ae781fbf04454bd6255a71f6c0a8b14bf_cgraph">
+<area shape="rect" title="最小差值计算函数（另一种三维数组版本）" alt="" coords="5,5,72,32"/>
+<area shape="rect" href="macro_8hpp.html#a0da3e49c2f90d769ba7f489622b47ef6" title="计算三维数组的线性索引" alt="" coords="120,5,172,32"/>
+<area shape="poly" title=" " alt="" coords="72,16,106,18,101,19,72,21"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

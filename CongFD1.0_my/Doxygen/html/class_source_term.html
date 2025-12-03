@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: SourceTerm类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="class_source_term-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">SourceTerm类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a>&gt;</code></p>
+<div class="dynheader">
+SourceTerm 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_source_term__coll__graph.png" border="0" usemap="#a_source_term_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_source_term_coll__map" id="a_source_term_coll__map">
+<area shape="rect" title=" " alt="" coords="19,125,110,152"/>
+<area shape="rect" href="class_data.html" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="30,45,34,74,41,100,56,125,50,125,36,102,29,75,29,50"/>
+<area shape="rect" href="class_info.html" title="存储和管理求解器的各种配置参数和状态信息" alt="" coords="79,5,122,32"/>
+<area shape="poly" title=" " alt="" coords="95,47,71,126,66,124,90,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a92c6f62dce0a2d802d4a006d1bd9ad10" id="r_a92c6f62dce0a2d802d4a006d1bd9ad10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92c6f62dce0a2d802d4a006d1bd9ad10">SourceTerm</a> (<a class="el" href="class_data.html">Data</a> *, <a class="el" href="class_data.html">Data</a> *, <a class="el" href="class_info.html">Info</a> *)</td></tr>
+<tr class="memdesc:a92c6f62dce0a2d802d4a006d1bd9ad10"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="memitem:a4a03b4077b3d95ee275dcc381b35d958" id="r_a4a03b4077b3d95ee275dcc381b35d958"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a03b4077b3d95ee275dcc381b35d958">calSource</a> ()</td></tr>
+<tr class="memdesc:a4a03b4077b3d95ee275dcc381b35d958"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算源项  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:acae22126141dd08443a014b918a4b4b0" id="r_acae22126141dd08443a014b918a4b4b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acae22126141dd08443a014b918a4b4b0">calGravitySource</a> ()</td></tr>
+<tr class="memdesc:acae22126141dd08443a014b918a4b4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算重力源项  <br /></td></tr>
+<tr class="memitem:a1650bd02ce0f8f68814e86d68aaebc02" id="r_a1650bd02ce0f8f68814e86d68aaebc02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1650bd02ce0f8f68814e86d68aaebc02">nothingHappened</a> ()</td></tr>
+<tr class="memdesc:a1650bd02ce0f8f68814e86d68aaebc02"><td class="mdescLeft">&#160;</td><td class="mdescRight">空操作函数  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a7e0dbbaf4c7d1873f3f784545acf142d" id="r_a7e0dbbaf4c7d1873f3f784545acf142d"><td class="memItemLeft" align="right" valign="top">void(SourceTerm::*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e0dbbaf4c7d1873f3f784545acf142d">calSourceMethod</a> )() =nullptr</td></tr>
+<tr class="memitem:a19e120a0990a60a0a8f0f0c79b190fbf" id="r_a19e120a0990a60a0a8f0f0c79b190fbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19e120a0990a60a0a8f0f0c79b190fbf">rhs</a></td></tr>
+<tr class="memitem:a71dcca928ea4267875a4270e3909dcb1" id="r_a71dcca928ea4267875a4270e3909dcb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71dcca928ea4267875a4270e3909dcb1">prim</a></td></tr>
+<tr class="memitem:aecb12fe72f68e1b9e81927311921bfef" id="r_aecb12fe72f68e1b9e81927311921bfef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_info.html">Info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecb12fe72f68e1b9e81927311921bfef">info</a></td></tr>
+<tr class="memitem:a579d10131b43f29559987a31f4058901" id="r_a579d10131b43f29559987a31f4058901"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a579d10131b43f29559987a31f4058901">n</a></td></tr>
+<tr class="memitem:acd816be80dfeefbfb6ada1c076657e8e" id="r_acd816be80dfeefbfb6ada1c076657e8e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd816be80dfeefbfb6ada1c076657e8e">nprim</a></td></tr>
+<tr class="memitem:ab19c7e00090628f63f5c95ccc9315afe" id="r_ab19c7e00090628f63f5c95ccc9315afe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab19c7e00090628f63f5c95ccc9315afe">nCons</a></td></tr>
+<tr class="memitem:a12770a318a54dd5e5d6a0ab972f45282" id="r_a12770a318a54dd5e5d6a0ab972f45282"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12770a318a54dd5e5d6a0ab972f45282">type</a> =0</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a5d26a0aa56303737c594b42e7cdad905" id="r_a5d26a0aa56303737c594b42e7cdad905"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d26a0aa56303737c594b42e7cdad905">Initializer</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a> 第 <a class="el" href="_source_term_8hpp_source.html#l00005">5</a> 行定义.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a92c6f62dce0a2d802d4a006d1bd9ad10" name="a92c6f62dce0a2d802d4a006d1bd9ad10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92c6f62dce0a2d802d4a006d1bd9ad10">&#9670;&#160;</a></span>SourceTerm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SourceTerm::SourceTerm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_data.html">Data</a> *</td>          <td class="paramname"><span class="paramname"><em>prim_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_data.html">Data</a> *</td>          <td class="paramname"><span class="paramname"><em>rhs_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_info.html">Info</a> *</td>          <td class="paramname"><span class="paramname"><em>info_</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prim_</td><td>原始变量数据指针 </td></tr>
+    <tr><td class="paramname">rhs_</td><td>右手端数据指针 </td></tr>
+    <tr><td class="paramname">info_</td><td>Info对象指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="source_term_8cpp_source.html">sourceTerm.cpp</a> 第 <a class="el" href="source_term_8cpp_source.html#l00050">50</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_source_term_a92c6f62dce0a2d802d4a006d1bd9ad10_cgraph.png" border="0" usemap="#aclass_source_term_a92c6f62dce0a2d802d4a006d1bd9ad10_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_source_term_a92c6f62dce0a2d802d4a006d1bd9ad10_cgraph" id="aclass_source_term_a92c6f62dce0a2d802d4a006d1bd9ad10_cgraph">
+<area shape="rect" title="构造函数" alt="" coords="5,31,175,57"/>
+<area shape="rect" href="class_source_term.html#acae22126141dd08443a014b918a4b4b0" title="计算重力源项" alt="" coords="223,5,422,32"/>
+<area shape="poly" title=" " alt="" coords="175,32,210,31,205,32,176,37"/>
+<area shape="rect" href="class_source_term.html#a1650bd02ce0f8f68814e86d68aaebc02" title="空操作函数" alt="" coords="223,56,423,83"/>
+<area shape="poly" title=" " alt="" coords="175,51,210,57,204,57,175,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="acae22126141dd08443a014b918a4b4b0" name="acae22126141dd08443a014b918a4b4b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae22126141dd08443a014b918a4b4b0">&#9670;&#160;</a></span>calGravitySource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SourceTerm::calGravitySource </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算重力源项 </p>
+<p>该函数专门用于计算Rayleigh-Taylor不稳定性问题中的重力源项。 </p>
+
+<p class="definition">在文件 <a class="el" href="source_term_8cpp_source.html">sourceTerm.cpp</a> 第 <a class="el" href="source_term_8cpp_source.html#l00013">13</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_source_term_acae22126141dd08443a014b918a4b4b0_icgraph.png" border="0" usemap="#aclass_source_term_acae22126141dd08443a014b918a4b4b0_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_source_term_acae22126141dd08443a014b918a4b4b0_icgraph" id="aclass_source_term_acae22126141dd08443a014b918a4b4b0_icgraph">
+<area shape="rect" title="计算重力源项" alt="" coords="223,5,422,32"/>
+<area shape="rect" href="class_source_term.html#a92c6f62dce0a2d802d4a006d1bd9ad10" title="构造函数" alt="" coords="5,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="204,19,175,21,175,16,210,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4a03b4077b3d95ee275dcc381b35d958" name="a4a03b4077b3d95ee275dcc381b35d958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a03b4077b3d95ee275dcc381b35d958">&#9670;&#160;</a></span>calSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SourceTerm::calSource </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算源项 </p>
+<p>根据初始化时设定的源项类型，调用相应的源项计算函数。 </p>
+
+<p class="definition">在文件 <a class="el" href="source_term_8cpp_source.html">sourceTerm.cpp</a> 第 <a class="el" href="source_term_8cpp_source.html#l00077">77</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1650bd02ce0f8f68814e86d68aaebc02" name="a1650bd02ce0f8f68814e86d68aaebc02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1650bd02ce0f8f68814e86d68aaebc02">&#9670;&#160;</a></span>nothingHappened()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SourceTerm::nothingHappened </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>空操作函数 </p>
+<p>当没有源项需要计算时调用此函数。 </p>
+
+<p class="definition">在文件 <a class="el" href="source_term_8cpp_source.html">sourceTerm.cpp</a> 第 <a class="el" href="source_term_8cpp_source.html#l00038">38</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_source_term_a1650bd02ce0f8f68814e86d68aaebc02_icgraph.png" border="0" usemap="#aclass_source_term_a1650bd02ce0f8f68814e86d68aaebc02_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_source_term_a1650bd02ce0f8f68814e86d68aaebc02_icgraph" id="aclass_source_term_a1650bd02ce0f8f68814e86d68aaebc02_icgraph">
+<area shape="rect" title="空操作函数" alt="" coords="223,5,423,32"/>
+<area shape="rect" href="class_source_term.html#a92c6f62dce0a2d802d4a006d1bd9ad10" title="构造函数" alt="" coords="5,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="204,19,175,21,175,16,210,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
+<a id="a5d26a0aa56303737c594b42e7cdad905" name="a5d26a0aa56303737c594b42e7cdad905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d26a0aa56303737c594b42e7cdad905">&#9670;&#160;</a></span>Initializer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_initializer.html">Initializer</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a> 第 <a class="el" href="_source_term_8hpp_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a7e0dbbaf4c7d1873f3f784545acf142d" name="a7e0dbbaf4c7d1873f3f784545acf142d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0dbbaf4c7d1873f3f784545acf142d">&#9670;&#160;</a></span>calSourceMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(SourceTerm::* SourceTerm::calSourceMethod) () =nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a> 第 <a class="el" href="_source_term_8hpp_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aecb12fe72f68e1b9e81927311921bfef" name="aecb12fe72f68e1b9e81927311921bfef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecb12fe72f68e1b9e81927311921bfef">&#9670;&#160;</a></span>info</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_info.html">Info</a>* SourceTerm::info</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a> 第 <a class="el" href="_source_term_8hpp_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a579d10131b43f29559987a31f4058901" name="a579d10131b43f29559987a31f4058901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a579d10131b43f29559987a31f4058901">&#9670;&#160;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SourceTerm::n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a> 第 <a class="el" href="_source_term_8hpp_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab19c7e00090628f63f5c95ccc9315afe" name="ab19c7e00090628f63f5c95ccc9315afe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19c7e00090628f63f5c95ccc9315afe">&#9670;&#160;</a></span>nCons</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SourceTerm::nCons</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a> 第 <a class="el" href="_source_term_8hpp_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a id="acd816be80dfeefbfb6ada1c076657e8e" name="acd816be80dfeefbfb6ada1c076657e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd816be80dfeefbfb6ada1c076657e8e">&#9670;&#160;</a></span>nprim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SourceTerm::nprim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a> 第 <a class="el" href="_source_term_8hpp_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a71dcca928ea4267875a4270e3909dcb1" name="a71dcca928ea4267875a4270e3909dcb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71dcca928ea4267875a4270e3909dcb1">&#9670;&#160;</a></span>prim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a>* SourceTerm::prim</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a> 第 <a class="el" href="_source_term_8hpp_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a19e120a0990a60a0a8f0f0c79b190fbf" name="a19e120a0990a60a0a8f0f0c79b190fbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19e120a0990a60a0a8f0f0c79b190fbf">&#9670;&#160;</a></span>rhs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data.html">Data</a>* SourceTerm::rhs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a> 第 <a class="el" href="_source_term_8hpp_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a12770a318a54dd5e5d6a0ab972f45282" name="a12770a318a54dd5e5d6a0ab972f45282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12770a318a54dd5e5d6a0ab972f45282">&#9670;&#160;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SourceTerm::type =0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a> 第 <a class="el" href="_source_term_8hpp_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/<a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a></li>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/src/<a class="el" href="source_term_8cpp_source.html">sourceTerm.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

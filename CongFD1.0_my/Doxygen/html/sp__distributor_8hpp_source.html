@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/sp_distributor.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">sp_distributor.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="sp__distributor_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_bnds_8hpp.html">Bnds.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_space_dis_8hpp.html">SpaceDis.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;omp.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_sp_distributor.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sp_distributor.html">SpDistributor</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_sp_distributor.html#af7d75f4c83a85db9e4b1e1824e62f238">rhsSolve</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_sp_distributor.html#a5d26a0aa56303737c594b42e7cdad905">   27</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_sp_distributor.html#a5d26a0aa56303737c594b42e7cdad905">Initializer</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_sp_distributor.html#a11decd197f64baeffe9aff309dfdfa5a">   29</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_sp_distributor.html#a11decd197f64baeffe9aff309dfdfa5a">nCons</a>;              </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_sp_distributor.html#ad2a7ed93dee3114250927dd9f2835d12">   30</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_sp_distributor.html#ad2a7ed93dee3114250927dd9f2835d12">nPrim</a>;              </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_sp_distributor.html#ac81273fd0c432b36efa9f6fb0588a2e2">   31</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_sp_distributor.html#ac81273fd0c432b36efa9f6fb0588a2e2">dim</a>;                </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_sp_distributor.html#a4d72d1966483558228ba5e92c5b40255">   32</a></span>    std::array&lt;int,3&gt; <a class="code hl_variable" href="class_sp_distributor.html#a4d72d1966483558228ba5e92c5b40255">iMax</a>; </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_sp_distributor.html#a577389bf01a50ad4d9194495c640edbc">   33</a></span>    <a class="code hl_class" href="class_data.html">Data</a>* <a class="code hl_variable" href="class_sp_distributor.html#a577389bf01a50ad4d9194495c640edbc">prim</a>;             </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_sp_distributor.html#a7ab2da542bd66f565a7dfc8bcab401b6">   34</a></span>    <a class="code hl_class" href="class_data.html">Data</a>* <a class="code hl_variable" href="class_sp_distributor.html#a7ab2da542bd66f565a7dfc8bcab401b6">cons</a>;             </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_sp_distributor.html#a5b8de696faf3abbfceb2e758c279b7ef">   35</a></span>    <a class="code hl_class" href="class_data.html">Data</a>* <a class="code hl_variable" href="class_sp_distributor.html#a5b8de696faf3abbfceb2e758c279b7ef">rhs</a>;              </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_sp_distributor.html#aca15bba98de1884a8c8f3f4c5e0702db">   36</a></span>    <a class="code hl_class" href="class_bnds.html">Bnds</a>* <a class="code hl_variable" href="class_sp_distributor.html#aca15bba98de1884a8c8f3f4c5e0702db">bnds</a>;             </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_sp_distributor.html#a618127d4f5376b10e6d5ff84d5201be7">   37</a></span>    <a class="code hl_class" href="class_info.html">Info</a>* <a class="code hl_variable" href="class_sp_distributor.html#a618127d4f5376b10e6d5ff84d5201be7">info</a>;             </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+</div>
+<div class="ttc" id="a_bnds_8hpp_html"><div class="ttname"><a href="_bnds_8hpp.html">Bnds.hpp</a></div><div class="ttdoc">定义边界条件管理类</div></div>
+<div class="ttc" id="a_space_dis_8hpp_html"><div class="ttname"><a href="_space_dis_8hpp.html">SpaceDis.hpp</a></div></div>
+<div class="ttc" id="aclass_bnds_html"><div class="ttname"><a href="class_bnds.html">Bnds</a></div><div class="ttdoc">边界条件管理类</div><div class="ttdef"><b>定义</b> <a href="_bnds_8hpp_source.html#l00016">Bnds.hpp:17</a></div></div>
+<div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdef"><b>定义</b> <a href="data_8hpp_source.html#l00004">data.hpp:5</a></div></div>
+<div class="ttc" id="aclass_info_html"><div class="ttname"><a href="class_info.html">Info</a></div><div class="ttdoc">存储和管理求解器的各种配置参数和状态信息</div><div class="ttdef"><b>定义</b> <a href="info_8hpp_source.html#l00017">info.hpp:18</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html"><div class="ttname"><a href="class_sp_distributor.html">SpDistributor</a></div><div class="ttdoc">空间分布器类</div><div class="ttdef"><b>定义</b> <a href="#l00016">sp_distributor.hpp:17</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html_a11decd197f64baeffe9aff309dfdfa5a"><div class="ttname"><a href="class_sp_distributor.html#a11decd197f64baeffe9aff309dfdfa5a">SpDistributor::nCons</a></div><div class="ttdeci">int nCons</div><div class="ttdoc">守恒变量数</div><div class="ttdef"><b>定义</b> <a href="#l00029">sp_distributor.hpp:29</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html_a4d72d1966483558228ba5e92c5b40255"><div class="ttname"><a href="class_sp_distributor.html#a4d72d1966483558228ba5e92c5b40255">SpDistributor::iMax</a></div><div class="ttdeci">std::array&lt; int, 3 &gt; iMax</div><div class="ttdoc">各方向最大索引</div><div class="ttdef"><b>定义</b> <a href="#l00032">sp_distributor.hpp:32</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html_a577389bf01a50ad4d9194495c640edbc"><div class="ttname"><a href="class_sp_distributor.html#a577389bf01a50ad4d9194495c640edbc">SpDistributor::prim</a></div><div class="ttdeci">Data * prim</div><div class="ttdoc">原始变量数据指针</div><div class="ttdef"><b>定义</b> <a href="#l00033">sp_distributor.hpp:33</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html_a5b8de696faf3abbfceb2e758c279b7ef"><div class="ttname"><a href="class_sp_distributor.html#a5b8de696faf3abbfceb2e758c279b7ef">SpDistributor::rhs</a></div><div class="ttdeci">Data * rhs</div><div class="ttdoc">右手端数据指针</div><div class="ttdef"><b>定义</b> <a href="#l00035">sp_distributor.hpp:35</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html_a5d26a0aa56303737c594b42e7cdad905"><div class="ttname"><a href="class_sp_distributor.html#a5d26a0aa56303737c594b42e7cdad905">SpDistributor::Initializer</a></div><div class="ttdeci">friend class Initializer</div><div class="ttdef"><b>定义</b> <a href="#l00027">sp_distributor.hpp:27</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html_a618127d4f5376b10e6d5ff84d5201be7"><div class="ttname"><a href="class_sp_distributor.html#a618127d4f5376b10e6d5ff84d5201be7">SpDistributor::info</a></div><div class="ttdeci">Info * info</div><div class="ttdoc">Info对象指针</div><div class="ttdef"><b>定义</b> <a href="#l00037">sp_distributor.hpp:37</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html_a7ab2da542bd66f565a7dfc8bcab401b6"><div class="ttname"><a href="class_sp_distributor.html#a7ab2da542bd66f565a7dfc8bcab401b6">SpDistributor::cons</a></div><div class="ttdeci">Data * cons</div><div class="ttdoc">守恒变量数据指针</div><div class="ttdef"><b>定义</b> <a href="#l00034">sp_distributor.hpp:34</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html_ac81273fd0c432b36efa9f6fb0588a2e2"><div class="ttname"><a href="class_sp_distributor.html#ac81273fd0c432b36efa9f6fb0588a2e2">SpDistributor::dim</a></div><div class="ttdeci">int dim</div><div class="ttdoc">问题维度</div><div class="ttdef"><b>定义</b> <a href="#l00031">sp_distributor.hpp:31</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html_aca15bba98de1884a8c8f3f4c5e0702db"><div class="ttname"><a href="class_sp_distributor.html#aca15bba98de1884a8c8f3f4c5e0702db">SpDistributor::bnds</a></div><div class="ttdeci">Bnds * bnds</div><div class="ttdoc">边界条件管理器指针</div><div class="ttdef"><b>定义</b> <a href="#l00036">sp_distributor.hpp:36</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html_ad2a7ed93dee3114250927dd9f2835d12"><div class="ttname"><a href="class_sp_distributor.html#ad2a7ed93dee3114250927dd9f2835d12">SpDistributor::nPrim</a></div><div class="ttdeci">int nPrim</div><div class="ttdoc">原始变量数</div><div class="ttdef"><b>定义</b> <a href="#l00030">sp_distributor.hpp:30</a></div></div>
+<div class="ttc" id="aclass_sp_distributor_html_af7d75f4c83a85db9e4b1e1824e62f238"><div class="ttname"><a href="class_sp_distributor.html#af7d75f4c83a85db9e4b1e1824e62f238">SpDistributor::rhsSolve</a></div><div class="ttdeci">void rhsSolve()</div><div class="ttdoc">求解右手端</div><div class="ttdef"><b>定义</b> <a href="sp__distributor_8cpp_source.html#l00014">sp_distributor.cpp:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

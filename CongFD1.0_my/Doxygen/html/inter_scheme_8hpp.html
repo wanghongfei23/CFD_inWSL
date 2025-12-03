@@ -1,0 +1,2284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/interScheme.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">interScheme.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="macro_8hpp_source.html">macro.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="000__globals_8hpp_source.html">000_globals.hpp</a>&quot;</code><br />
+<code>#include &lt;array&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+interScheme.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2inter_scheme_8hpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2inter_scheme_8hpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2inter_scheme_8hpp">
+<area shape="rect" title=" " alt="" coords="367,5,614,80"/>
+<area shape="rect" href="macro_8hpp.html" title="定义项目中使用的宏、枚举类型和通用函数" alt="" coords="449,128,532,155"/>
+<area shape="poly" title=" " alt="" coords="492,78,493,114,488,111,489,82"/>
+<area shape="rect" title=" " alt="" coords="5,203,56,229"/>
+<area shape="poly" title=" " alt="" coords="393,83,72,202,70,197,391,78"/>
+<area shape="rect" href="000__globals_8hpp.html" title=" " alt="" coords="796,128,911,155"/>
+<area shape="poly" title=" " alt="" coords="615,74,794,123,789,124,614,79"/>
+<area shape="poly" title=" " alt="" coords="446,147,287,167,181,183,72,205,70,200,181,178,286,162,451,146"/>
+<area shape="rect" title=" " alt="" coords="416,203,477,229"/>
+<area shape="poly" title=" " alt="" coords="485,154,464,192,460,187,481,157"/>
+<area shape="rect" title=" " alt="" coords="500,203,572,229"/>
+<area shape="poly" title=" " alt="" coords="500,153,522,190,517,188,497,158"/>
+<area shape="rect" title=" " alt="" coords="595,203,663,229"/>
+<area shape="poly" title=" " alt="" coords="515,153,594,195,589,195,514,158"/>
+<area shape="rect" title=" " alt="" coords="786,203,840,229"/>
+<area shape="poly" title=" " alt="" coords="532,148,637,168,774,202,769,202,636,174,532,153"/>
+<area shape="rect" title=" " alt="" coords="864,203,922,229"/>
+<area shape="poly" title=" " alt="" coords="532,145,669,165,852,202,846,202,668,171,532,151"/>
+<area shape="rect" title=" " alt="" coords="688,203,762,229"/>
+<area shape="poly" title=" " alt="" coords="532,153,676,199,670,199,531,158"/>
+<area shape="rect" title=" " alt="" coords="80,203,144,229"/>
+<area shape="poly" title=" " alt="" coords="446,149,324,172,160,205,159,200,323,167,452,148"/>
+<area shape="rect" title=" " alt="" coords="168,203,226,229"/>
+<area shape="poly" title=" " alt="" coords="452,152,241,204,240,199,446,151"/>
+<area shape="rect" title=" " alt="" coords="249,203,308,229"/>
+<area shape="poly" title=" " alt="" coords="456,155,323,202,322,197,451,156"/>
+<area shape="rect" title=" " alt="" coords="946,203,992,229"/>
+<area shape="poly" title=" " alt="" coords="532,143,703,160,815,177,933,202,928,202,814,182,702,165,532,148"/>
+<area shape="rect" title=" " alt="" coords="332,203,393,229"/>
+<area shape="poly" title=" " alt="" coords="471,155,399,197,397,192,466,156"/>
+<area shape="poly" title=" " alt="" coords="848,154,829,191,826,187,844,157"/>
+<area shape="poly" title=" " alt="" coords="861,153,881,190,876,188,859,158"/>
+<area shape="poly" title=" " alt="" coords="874,153,938,194,933,193,873,158"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp__dep__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2inter_scheme_8hppdep" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2inter_scheme_8hppdep" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2inter_scheme_8hppdep">
+<area shape="rect" title=" " alt="" coords="547,5,793,80"/>
+<area shape="rect" href="_space_dis_8cpp.html" title="空间离散类的实现文件" alt="" coords="5,128,252,203"/>
+<area shape="poly" title=" " alt="" coords="530,73,265,131,253,134,252,128,264,125,532,68"/>
+<area shape="rect" href="inter_scheme_8cpp.html" title=" " alt="" coords="276,128,522,203"/>
+<area shape="poly" title=" " alt="" coords="576,86,483,130,481,125,571,88"/>
+<area shape="rect" href="reconstructor_8cpp.html" title="重构器类的实现文件" alt="" coords="547,128,793,203"/>
+<area shape="poly" title=" " alt="" coords="672,94,672,129,668,126,668,98"/>
+<area shape="rect" href="sp__flux_8cpp.html" title="空间离散通量计算实现文件" alt="" coords="817,128,1064,203"/>
+<area shape="poly" title=" " alt="" coords="767,84,861,128,855,127,766,89"/>
+<area shape="rect" href="sp__recon_8cpp.html" title="空间离散重构计算实现文件" alt="" coords="1088,128,1334,203"/>
+<area shape="poly" title=" " alt="" coords="809,68,1076,125,1090,131,1085,131,1075,131,808,73"/>
+</map>
+</div>
+</div>
+<p><a href="inter_scheme_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a35b10e3f194dd60d4837b7e90772efb5" id="r_a35b10e3f194dd60d4837b7e90772efb5"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35b10e3f194dd60d4837b7e90772efb5">u1</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q1, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q2, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q3)</td></tr>
+<tr class="memitem:a4e542c28c34783ae46fe0260bc40f369" id="r_a4e542c28c34783ae46fe0260bc40f369"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e542c28c34783ae46fe0260bc40f369">u2</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q1, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q2, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q3)</td></tr>
+<tr class="memitem:abd26874c74382ce7627b20e0b1040915" id="r_abd26874c74382ce7627b20e0b1040915"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd26874c74382ce7627b20e0b1040915">u3</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q1, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q2, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q3)</td></tr>
+<tr class="memitem:a1004857948f9a53352dafae4d0126e4e" id="r_a1004857948f9a53352dafae4d0126e4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1004857948f9a53352dafae4d0126e4e">weno5_JSchen</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:addb5248da4fa06335d8bd36ee645d763" id="r_addb5248da4fa06335d8bd36ee645d763"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addb5248da4fa06335d8bd36ee645d763">Nicest5</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:aa891b19337b3c2a633095d7e1a7d3250" id="r_aa891b19337b3c2a633095d7e1a7d3250"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa891b19337b3c2a633095d7e1a7d3250">weno5_Cong</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a0f470ee7ab7e7dc95a341c4d987e3341" id="r_a0f470ee7ab7e7dc95a341c4d987e3341"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f470ee7ab7e7dc95a341c4d987e3341">weno5_Z</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a511be3ee79211f3c4ec8675f1d32407e" id="r_a511be3ee79211f3c4ec8675f1d32407e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a511be3ee79211f3c4ec8675f1d32407e">Teno5_ZCT4</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:aa0033d431fc5465d50ba6b6a709c07f7" id="r_aa0033d431fc5465d50ba6b6a709c07f7"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0033d431fc5465d50ba6b6a709c07f7">Teno5_ZCT7</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a9e90c099bcb76c8fc7218f613f8a8bcc" id="r_a9e90c099bcb76c8fc7218f613f8a8bcc"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e90c099bcb76c8fc7218f613f8a8bcc">Teno5_Z</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a5a158eb9bc47381a50dd8d964b120a8c" id="r_a5a158eb9bc47381a50dd8d964b120a8c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a158eb9bc47381a50dd8d964b120a8c">Teno5_ZConvex</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:ad1abfe9e36cfb1b8bdc8610deed12d4d" id="r_ad1abfe9e36cfb1b8bdc8610deed12d4d"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1abfe9e36cfb1b8bdc8610deed12d4d">Teno5_CongZ</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a3f91a5a5b34a4319e012c4d906acffeb" id="r_a3f91a5a5b34a4319e012c4d906acffeb"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f91a5a5b34a4319e012c4d906acffeb">Teno5_CongZCT4</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a59e97f6e11b3adc6752719339f908b0d" id="r_a59e97f6e11b3adc6752719339f908b0d"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59e97f6e11b3adc6752719339f908b0d">Teno5_CongZCT7</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a0bb149e8763fc74c133001751da01d55" id="r_a0bb149e8763fc74c133001751da01d55"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bb149e8763fc74c133001751da01d55">Teno5_CongA</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a4ca54a6c5c4028d46c8c8623b48fb668" id="r_a4ca54a6c5c4028d46c8c8623b48fb668"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ca54a6c5c4028d46c8c8623b48fb668">Teno5_CongC</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a3cfff67f971e8e5a10306ed06033c798" id="r_a3cfff67f971e8e5a10306ed06033c798"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cfff67f971e8e5a10306ed06033c798">Teno5_Cong</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a4b9eb483839b13e1b926905c848b2d88" id="r_a4b9eb483839b13e1b926905c848b2d88"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b9eb483839b13e1b926905c848b2d88">Teno5_Cong2</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a43f7d57541b325468ccc948e4b59a48e" id="r_a43f7d57541b325468ccc948e4b59a48e"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43f7d57541b325468ccc948e4b59a48e">Teno5_BVDCong</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q, bool &amp;flag)</td></tr>
+<tr class="memitem:a7a3d0329b519c29ee99dacc6bc21e1b2" id="r_a7a3d0329b519c29ee99dacc6bc21e1b2"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a3d0329b519c29ee99dacc6bc21e1b2">Teno5_BVDMR</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q, bool &amp;flag)</td></tr>
+<tr class="memitem:a023f7b7f8a72cbb43fe9c12c43e20d4f" id="r_a023f7b7f8a72cbb43fe9c12c43e20d4f"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a023f7b7f8a72cbb43fe9c12c43e20d4f">Teno5_CongSort</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a24949ee442d39eaafce87e9326fce080" id="r_a24949ee442d39eaafce87e9326fce080"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24949ee442d39eaafce87e9326fce080">Teno5_CongSortPositive</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:aeb3b4180ef316ea6cbdd64aaa5dbea76" id="r_aeb3b4180ef316ea6cbdd64aaa5dbea76"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb3b4180ef316ea6cbdd64aaa5dbea76">Teno5_CongSortabs</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:aaa3344e62d98ea7851b1ea5623e35801" id="r_aaa3344e62d98ea7851b1ea5623e35801"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa3344e62d98ea7851b1ea5623e35801">Teno5_CongIncrease</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:aa8233de7c0da5dc2b8fdecf632f50508" id="r_aa8233de7c0da5dc2b8fdecf632f50508"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8233de7c0da5dc2b8fdecf632f50508">musclInterpolation</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q1, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q2, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q3)</td></tr>
+<tr class="memitem:a945946d12d87aac2bd56d616c9755596" id="r_a945946d12d87aac2bd56d616c9755596"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a945946d12d87aac2bd56d616c9755596">THINC</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q1, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q2, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q3)</td></tr>
+<tr class="memitem:a8157e7bc6adf32648092496423936fd3" id="r_a8157e7bc6adf32648092496423936fd3"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8157e7bc6adf32648092496423936fd3">THINC1</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q1, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q2, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> q3)</td></tr>
+<tr class="memitem:aedfcf0263cbfe840c6d304860e8adf0e" id="r_aedfcf0263cbfe840c6d304860e8adf0e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedfcf0263cbfe840c6d304860e8adf0e">Linear5</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:abee316d0da744ad433badd6feca14f40" id="r_abee316d0da744ad433badd6feca14f40"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abee316d0da744ad433badd6feca14f40">whf_TCNS_A</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:ae22e914c24b64385a1cc4bacbda4344e" id="r_ae22e914c24b64385a1cc4bacbda4344e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae22e914c24b64385a1cc4bacbda4344e">whf_TCNS_A_count</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:af65dbcf7106a43999983038c46708f33" id="r_af65dbcf7106a43999983038c46708f33"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af65dbcf7106a43999983038c46708f33">whf_TCNS_AS_myF002</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:aa1df249adc502760a3e1fa32f7538950" id="r_aa1df249adc502760a3e1fa32f7538950"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1df249adc502760a3e1fa32f7538950">whf_TCNS_AS_myH002</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a0395207237c1e1174e43098b4a614ee6" id="r_a0395207237c1e1174e43098b4a614ee6"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0395207237c1e1174e43098b4a614ee6">whf_TCNS_AS_myF102</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:ae6ac9d312311d59bd075cb90be17547d" id="r_ae6ac9d312311d59bd075cb90be17547d"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6ac9d312311d59bd075cb90be17547d">whf_TCNS_AS_myF103</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:af5144084b87279a665e3a14032c1006a" id="r_af5144084b87279a665e3a14032c1006a"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5144084b87279a665e3a14032c1006a">whf_TCNS_AS_myF102_reciprocal</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:ab968fa84751fd9e87573328a742bc3c0" id="r_ab968fa84751fd9e87573328a742bc3c0"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab968fa84751fd9e87573328a742bc3c0">whf_TCNS_AS_myF103_reciprocal</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a4817ba3c884077917283585ea53b1082" id="r_a4817ba3c884077917283585ea53b1082"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4817ba3c884077917283585ea53b1082">whf_TCNS_AS_fx</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a3bbb0228e212dcc81070405c4f0a4b99" id="r_a3bbb0228e212dcc81070405c4f0a4b99"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bbb0228e212dcc81070405c4f0a4b99">whf_TCNS_AS_initial</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a4aff41d8c666e05744a552c35bd7b251" id="r_a4aff41d8c666e05744a552c35bd7b251"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4aff41d8c666e05744a552c35bd7b251">whf_TCNS_AS_approx_1</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:acd6044fe4a5639627a9ba1e1453a4ed8" id="r_acd6044fe4a5639627a9ba1e1453a4ed8"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd6044fe4a5639627a9ba1e1453a4ed8">whf_TCNS_AS_fx_real</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a1d660ba379a048680a3bee2a72dcd626" id="r_a1d660ba379a048680a3bee2a72dcd626"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d660ba379a048680a3bee2a72dcd626">whf_TCNS_AS_approx_2</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a51fb282f9106464f4f42240a6a8b0769" id="r_a51fb282f9106464f4f42240a6a8b0769"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51fb282f9106464f4f42240a6a8b0769">whf_TCNS_AS_myF202_2S</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a07a7a5c9ddccb50c433e1da7141e79dd" id="r_a07a7a5c9ddccb50c433e1da7141e79dd"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07a7a5c9ddccb50c433e1da7141e79dd">whf_TCNS_AS_myF202_NoS</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a1808371f2cb10f7489fa73f8377bf949" id="r_a1808371f2cb10f7489fa73f8377bf949"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1808371f2cb10f7489fa73f8377bf949">whf_TCNS_AS_myF203_NoS</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a57a1bc1dd980ceba1f51f8cf4dc79790" id="r_a57a1bc1dd980ceba1f51f8cf4dc79790"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57a1bc1dd980ceba1f51f8cf4dc79790">temp_011</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:aaf2dba6c463d524270527cd6dc4b2eef" id="r_aaf2dba6c463d524270527cd6dc4b2eef"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf2dba6c463d524270527cd6dc4b2eef">temp_012</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a231b4fa278699dc13054fe6c837bae36" id="r_a231b4fa278699dc13054fe6c837bae36"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a231b4fa278699dc13054fe6c837bae36">temp_013</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a501b574f16911f8c8a814c88bd159033" id="r_a501b574f16911f8c8a814c88bd159033"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a501b574f16911f8c8a814c88bd159033">temp_014</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a4c676b43cdb04b9d8fd412047eacc588" id="r_a4c676b43cdb04b9d8fd412047eacc588"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c676b43cdb04b9d8fd412047eacc588">temp_015</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a07a537296d136b85fb7ba2393075ace2" id="r_a07a537296d136b85fb7ba2393075ace2"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07a537296d136b85fb7ba2393075ace2">temp_016</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:ab854fd9e286e08db07496da63690c737" id="r_ab854fd9e286e08db07496da63690c737"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab854fd9e286e08db07496da63690c737">temp_017</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a065e0282a99993901a6bdcfeb51581c8" id="r_a065e0282a99993901a6bdcfeb51581c8"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a065e0282a99993901a6bdcfeb51581c8">temp_018</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+<tr class="memitem:a281b03a1a6eee83f7e006d7a16da533f" id="r_a281b03a1a6eee83f7e006d7a16da533f"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a281b03a1a6eee83f7e006d7a16da533f">temp_019</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt; q)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a7529f4148aa11bdfb06b73342aa2599e" id="r_a7529f4148aa11bdfb06b73342aa2599e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7529f4148aa11bdfb06b73342aa2599e">CTi</a> = pow(1.5 * 1e-10, 1.0 / 6.0)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="aedfcf0263cbfe840c6d304860e8adf0e" name="aedfcf0263cbfe840c6d304860e8adf0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedfcf0263cbfe840c6d304860e8adf0e">&#9670;&#160;</a></span>Linear5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Linear5 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01473">1473</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_aedfcf0263cbfe840c6d304860e8adf0e_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_aedfcf0263cbfe840c6d304860e8adf0e_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_aedfcf0263cbfe840c6d304860e8adf0e_icgraph" id="ainter_scheme_8hpp_aedfcf0263cbfe840c6d304860e8adf0e_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,260,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa8233de7c0da5dc2b8fdecf632f50508" name="aa8233de7c0da5dc2b8fdecf632f50508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8233de7c0da5dc2b8fdecf632f50508">&#9670;&#160;</a></span>musclInterpolation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> musclInterpolation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q3</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01408">1408</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_aa8233de7c0da5dc2b8fdecf632f50508_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_aa8233de7c0da5dc2b8fdecf632f50508_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_aa8233de7c0da5dc2b8fdecf632f50508_icgraph" id="ainter_scheme_8hpp_aa8233de7c0da5dc2b8fdecf632f50508_icgraph">
+<area shape="rect" title=" " alt="" coords="373,31,500,57"/>
+<area shape="rect" href="class_space_dis.html#acf838179b125789d6b5f43be4c66ca1f" title="左侧界面重构函数" alt="" coords="198,5,324,32"/>
+<area shape="poly" title=" " alt="" coords="355,33,324,30,324,25,360,33"/>
+<area shape="rect" href="class_space_dis.html#a2653ae159a614797e031c5a947a236d4" title="右侧界面重构函数" alt="" coords="197,56,325,83"/>
+<area shape="poly" title=" " alt="" coords="360,55,325,63,325,57,355,56"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,31,149,57"/>
+<area shape="poly" title=" " alt="" coords="180,30,150,37,149,31,185,29"/>
+<area shape="poly" title=" " alt="" coords="178,59,149,57,149,51,184,58"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="addb5248da4fa06335d8bd36ee645d763" name="addb5248da4fa06335d8bd36ee645d763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb5248da4fa06335d8bd36ee645d763">&#9670;&#160;</a></span>Nicest5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Nicest5 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00050">50</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_addb5248da4fa06335d8bd36ee645d763_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_addb5248da4fa06335d8bd36ee645d763_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_addb5248da4fa06335d8bd36ee645d763_icgraph" id="ainter_scheme_8hpp_addb5248da4fa06335d8bd36ee645d763_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,263,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a57a1bc1dd980ceba1f51f8cf4dc79790" name="a57a1bc1dd980ceba1f51f8cf4dc79790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57a1bc1dd980ceba1f51f8cf4dc79790">&#9670;&#160;</a></span>temp_011()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> temp_011 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l03281">3281</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a57a1bc1dd980ceba1f51f8cf4dc79790_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a57a1bc1dd980ceba1f51f8cf4dc79790_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a57a1bc1dd980ceba1f51f8cf4dc79790_icgraph" id="ainter_scheme_8hpp_a57a1bc1dd980ceba1f51f8cf4dc79790_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,274,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaf2dba6c463d524270527cd6dc4b2eef" name="aaf2dba6c463d524270527cd6dc4b2eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf2dba6c463d524270527cd6dc4b2eef">&#9670;&#160;</a></span>temp_012()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> temp_012 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l03383">3383</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_aaf2dba6c463d524270527cd6dc4b2eef_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_aaf2dba6c463d524270527cd6dc4b2eef_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_aaf2dba6c463d524270527cd6dc4b2eef_icgraph" id="ainter_scheme_8hpp_aaf2dba6c463d524270527cd6dc4b2eef_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,275,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a231b4fa278699dc13054fe6c837bae36" name="a231b4fa278699dc13054fe6c837bae36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a231b4fa278699dc13054fe6c837bae36">&#9670;&#160;</a></span>temp_013()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> temp_013 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l03485">3485</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a231b4fa278699dc13054fe6c837bae36_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a231b4fa278699dc13054fe6c837bae36_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a231b4fa278699dc13054fe6c837bae36_icgraph" id="ainter_scheme_8hpp_a231b4fa278699dc13054fe6c837bae36_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,275,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a501b574f16911f8c8a814c88bd159033" name="a501b574f16911f8c8a814c88bd159033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a501b574f16911f8c8a814c88bd159033">&#9670;&#160;</a></span>temp_014()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> temp_014 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l03587">3587</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a501b574f16911f8c8a814c88bd159033_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a501b574f16911f8c8a814c88bd159033_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a501b574f16911f8c8a814c88bd159033_icgraph" id="ainter_scheme_8hpp_a501b574f16911f8c8a814c88bd159033_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,275,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4c676b43cdb04b9d8fd412047eacc588" name="a4c676b43cdb04b9d8fd412047eacc588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c676b43cdb04b9d8fd412047eacc588">&#9670;&#160;</a></span>temp_015()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> temp_015 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l03689">3689</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a4c676b43cdb04b9d8fd412047eacc588_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a4c676b43cdb04b9d8fd412047eacc588_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a4c676b43cdb04b9d8fd412047eacc588_icgraph" id="ainter_scheme_8hpp_a4c676b43cdb04b9d8fd412047eacc588_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,275,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a07a537296d136b85fb7ba2393075ace2" name="a07a537296d136b85fb7ba2393075ace2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07a537296d136b85fb7ba2393075ace2">&#9670;&#160;</a></span>temp_016()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> temp_016 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l03791">3791</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a07a537296d136b85fb7ba2393075ace2_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a07a537296d136b85fb7ba2393075ace2_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a07a537296d136b85fb7ba2393075ace2_icgraph" id="ainter_scheme_8hpp_a07a537296d136b85fb7ba2393075ace2_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,275,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab854fd9e286e08db07496da63690c737" name="ab854fd9e286e08db07496da63690c737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab854fd9e286e08db07496da63690c737">&#9670;&#160;</a></span>temp_017()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> temp_017 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l03893">3893</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_ab854fd9e286e08db07496da63690c737_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_ab854fd9e286e08db07496da63690c737_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_ab854fd9e286e08db07496da63690c737_icgraph" id="ainter_scheme_8hpp_ab854fd9e286e08db07496da63690c737_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,275,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a065e0282a99993901a6bdcfeb51581c8" name="a065e0282a99993901a6bdcfeb51581c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a065e0282a99993901a6bdcfeb51581c8">&#9670;&#160;</a></span>temp_018()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> temp_018 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l03995">3995</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a065e0282a99993901a6bdcfeb51581c8_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a065e0282a99993901a6bdcfeb51581c8_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a065e0282a99993901a6bdcfeb51581c8_icgraph" id="ainter_scheme_8hpp_a065e0282a99993901a6bdcfeb51581c8_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,275,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a281b03a1a6eee83f7e006d7a16da533f" name="a281b03a1a6eee83f7e006d7a16da533f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a281b03a1a6eee83f7e006d7a16da533f">&#9670;&#160;</a></span>temp_019()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> temp_019 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l04097">4097</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a281b03a1a6eee83f7e006d7a16da533f_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a281b03a1a6eee83f7e006d7a16da533f_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a281b03a1a6eee83f7e006d7a16da533f_icgraph" id="ainter_scheme_8hpp_a281b03a1a6eee83f7e006d7a16da533f_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,275,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a43f7d57541b325468ccc948e4b59a48e" name="a43f7d57541b325468ccc948e4b59a48e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43f7d57541b325468ccc948e4b59a48e">&#9670;&#160;</a></span>Teno5_BVDCong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; Teno5_BVDCong </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>flag</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00987">987</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a43f7d57541b325468ccc948e4b59a48e_cgraph.png" border="0" usemap="#ainter_scheme_8hpp_a43f7d57541b325468ccc948e4b59a48e_cgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a43f7d57541b325468ccc948e4b59a48e_cgraph" id="ainter_scheme_8hpp_a43f7d57541b325468ccc948e4b59a48e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,128,83"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a35b10e3f194dd60d4837b7e90772efb5" title=" " alt="" coords="176,5,214,32"/>
+<area shape="poly" title=" " alt="" coords="101,53,163,30,159,33,104,58"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a4e542c28c34783ae46fe0260bc40f369" title=" " alt="" coords="176,56,214,83"/>
+<area shape="poly" title=" " alt="" coords="128,67,163,69,157,70,129,72"/>
+<area shape="rect" href="inter_scheme_8hpp.html#abd26874c74382ce7627b20e0b1040915" title=" " alt="" coords="176,107,214,133"/>
+<area shape="poly" title=" " alt="" coords="103,81,164,106,159,108,102,86"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7a3d0329b519c29ee99dacc6bc21e1b2" name="a7a3d0329b519c29ee99dacc6bc21e1b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a3d0329b519c29ee99dacc6bc21e1b2">&#9670;&#160;</a></span>Teno5_BVDMR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; Teno5_BVDMR </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>flag</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01044">1044</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a3cfff67f971e8e5a10306ed06033c798" name="a3cfff67f971e8e5a10306ed06033c798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cfff67f971e8e5a10306ed06033c798">&#9670;&#160;</a></span>Teno5_Cong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_Cong </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00895">895</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a3cfff67f971e8e5a10306ed06033c798_cgraph.png" border="0" usemap="#ainter_scheme_8hpp_a3cfff67f971e8e5a10306ed06033c798_cgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a3cfff67f971e8e5a10306ed06033c798_cgraph" id="ainter_scheme_8hpp_a3cfff67f971e8e5a10306ed06033c798_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,100,83"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a35b10e3f194dd60d4837b7e90772efb5" title=" " alt="" coords="148,5,186,32"/>
+<area shape="poly" title=" " alt="" coords="83,53,136,31,132,35,86,58"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a4e542c28c34783ae46fe0260bc40f369" title=" " alt="" coords="148,56,186,83"/>
+<area shape="poly" title=" " alt="" coords="99,67,134,68,130,70,100,72"/>
+<area shape="rect" href="inter_scheme_8hpp.html#abd26874c74382ce7627b20e0b1040915" title=" " alt="" coords="148,107,186,133"/>
+<area shape="poly" title=" " alt="" coords="85,81,136,105,131,106,84,86"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a3cfff67f971e8e5a10306ed06033c798_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a3cfff67f971e8e5a10306ed06033c798_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a3cfff67f971e8e5a10306ed06033c798_icgraph" id="ainter_scheme_8hpp_a3cfff67f971e8e5a10306ed06033c798_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,291,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4b9eb483839b13e1b926905c848b2d88" name="a4b9eb483839b13e1b926905c848b2d88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b9eb483839b13e1b926905c848b2d88">&#9670;&#160;</a></span>Teno5_Cong2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_Cong2 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00925">925</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0bb149e8763fc74c133001751da01d55" name="a0bb149e8763fc74c133001751da01d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb149e8763fc74c133001751da01d55">&#9670;&#160;</a></span>Teno5_CongA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_CongA </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00767">767</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a0bb149e8763fc74c133001751da01d55_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a0bb149e8763fc74c133001751da01d55_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a0bb149e8763fc74c133001751da01d55_icgraph" id="ainter_scheme_8hpp_a0bb149e8763fc74c133001751da01d55_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,300,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4ca54a6c5c4028d46c8c8623b48fb668" name="a4ca54a6c5c4028d46c8c8623b48fb668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca54a6c5c4028d46c8c8623b48fb668">&#9670;&#160;</a></span>Teno5_CongC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_CongC </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00847">847</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aaa3344e62d98ea7851b1ea5623e35801" name="aaa3344e62d98ea7851b1ea5623e35801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa3344e62d98ea7851b1ea5623e35801">&#9670;&#160;</a></span>Teno5_CongIncrease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_CongIncrease </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01351">1351</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_aaa3344e62d98ea7851b1ea5623e35801_cgraph.png" border="0" usemap="#ainter_scheme_8hpp_aaa3344e62d98ea7851b1ea5623e35801_cgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_aaa3344e62d98ea7851b1ea5623e35801_cgraph" id="ainter_scheme_8hpp_aaa3344e62d98ea7851b1ea5623e35801_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,150,57"/>
+<area shape="rect" href="macro_8hpp.html#a0da3e49c2f90d769ba7f489622b47ef6" title="计算三维数组的线性索引" alt="" coords="198,5,250,32"/>
+<area shape="poly" title=" " alt="" coords="150,29,185,25,180,26,151,34"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#af503194182429c20a0abdf6573b2320e" title=" " alt="" coords="205,56,243,83"/>
+<area shape="poly" title=" " alt="" coords="150,54,192,63,186,64,150,59"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a023f7b7f8a72cbb43fe9c12c43e20d4f" name="a023f7b7f8a72cbb43fe9c12c43e20d4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a023f7b7f8a72cbb43fe9c12c43e20d4f">&#9670;&#160;</a></span>Teno5_CongSort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_CongSort </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01147">1147</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a023f7b7f8a72cbb43fe9c12c43e20d4f_cgraph.png" border="0" usemap="#ainter_scheme_8hpp_a023f7b7f8a72cbb43fe9c12c43e20d4f_cgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a023f7b7f8a72cbb43fe9c12c43e20d4f_cgraph" id="ainter_scheme_8hpp_a023f7b7f8a72cbb43fe9c12c43e20d4f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,81,124,108"/>
+<area shape="rect" href="macro_8hpp.html#a0da3e49c2f90d769ba7f489622b47ef6" title="计算三维数组的线性索引" alt="" coords="172,5,224,32"/>
+<area shape="poly" title=" " alt="" coords="88,79,161,38,158,42,91,83"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a35b10e3f194dd60d4837b7e90772efb5" title=" " alt="" coords="179,56,217,83"/>
+<area shape="poly" title=" " alt="" coords="123,81,166,74,161,77,125,86"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a4e542c28c34783ae46fe0260bc40f369" title=" " alt="" coords="179,107,217,133"/>
+<area shape="poly" title=" " alt="" coords="124,103,166,113,161,114,124,109"/>
+<area shape="rect" href="inter_scheme_8hpp.html#abd26874c74382ce7627b20e0b1040915" title=" " alt="" coords="179,157,217,184"/>
+<area shape="poly" title=" " alt="" coords="91,106,167,151,163,154,89,111"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeb3b4180ef316ea6cbdd64aaa5dbea76" name="aeb3b4180ef316ea6cbdd64aaa5dbea76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb3b4180ef316ea6cbdd64aaa5dbea76">&#9670;&#160;</a></span>Teno5_CongSortabs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_CongSortabs </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01288">1288</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_aeb3b4180ef316ea6cbdd64aaa5dbea76_cgraph.png" border="0" usemap="#ainter_scheme_8hpp_aeb3b4180ef316ea6cbdd64aaa5dbea76_cgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_aeb3b4180ef316ea6cbdd64aaa5dbea76_cgraph" id="ainter_scheme_8hpp_aeb3b4180ef316ea6cbdd64aaa5dbea76_cgraph">
+<area shape="rect" title=" " alt="" coords="5,81,145,108"/>
+<area shape="rect" href="macro_8hpp.html#a0da3e49c2f90d769ba7f489622b47ef6" title="计算三维数组的线性索引" alt="" coords="193,5,245,32"/>
+<area shape="poly" title=" " alt="" coords="101,78,180,37,177,42,104,83"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a35b10e3f194dd60d4837b7e90772efb5" title=" " alt="" coords="200,56,238,83"/>
+<area shape="poly" title=" " alt="" coords="144,80,186,74,182,77,146,85"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a4e542c28c34783ae46fe0260bc40f369" title=" " alt="" coords="200,107,238,133"/>
+<area shape="poly" title=" " alt="" coords="145,104,187,113,181,115,145,110"/>
+<area shape="rect" href="inter_scheme_8hpp.html#abd26874c74382ce7627b20e0b1040915" title=" " alt="" coords="200,157,238,184"/>
+<area shape="poly" title=" " alt="" coords="103,106,188,152,183,155,102,111"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a24949ee442d39eaafce87e9326fce080" name="a24949ee442d39eaafce87e9326fce080"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24949ee442d39eaafce87e9326fce080">&#9670;&#160;</a></span>Teno5_CongSortPositive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_CongSortPositive </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01222">1222</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a24949ee442d39eaafce87e9326fce080_cgraph.png" border="0" usemap="#ainter_scheme_8hpp_a24949ee442d39eaafce87e9326fce080_cgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a24949ee442d39eaafce87e9326fce080_cgraph" id="ainter_scheme_8hpp_a24949ee442d39eaafce87e9326fce080_cgraph">
+<area shape="rect" title=" " alt="" coords="5,81,171,108"/>
+<area shape="rect" href="macro_8hpp.html#a0da3e49c2f90d769ba7f489622b47ef6" title="计算三维数组的线性索引" alt="" coords="219,5,271,32"/>
+<area shape="poly" title=" " alt="" coords="116,78,207,36,203,40,119,83"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a35b10e3f194dd60d4837b7e90772efb5" title=" " alt="" coords="226,56,264,83"/>
+<area shape="poly" title=" " alt="" coords="170,79,213,74,208,76,172,84"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a4e542c28c34783ae46fe0260bc40f369" title=" " alt="" coords="226,107,264,133"/>
+<area shape="poly" title=" " alt="" coords="171,105,213,114,208,115,171,111"/>
+<area shape="rect" href="inter_scheme_8hpp.html#abd26874c74382ce7627b20e0b1040915" title=" " alt="" coords="226,157,264,184"/>
+<area shape="poly" title=" " alt="" coords="118,106,214,154,209,156,117,111"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad1abfe9e36cfb1b8bdc8610deed12d4d" name="ad1abfe9e36cfb1b8bdc8610deed12d4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1abfe9e36cfb1b8bdc8610deed12d4d">&#9670;&#160;</a></span>Teno5_CongZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_CongZ </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00557">557</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_ad1abfe9e36cfb1b8bdc8610deed12d4d_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_ad1abfe9e36cfb1b8bdc8610deed12d4d_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_ad1abfe9e36cfb1b8bdc8610deed12d4d_icgraph" id="ainter_scheme_8hpp_ad1abfe9e36cfb1b8bdc8610deed12d4d_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,299,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,183,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3f91a5a5b34a4319e012c4d906acffeb" name="a3f91a5a5b34a4319e012c4d906acffeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f91a5a5b34a4319e012c4d906acffeb">&#9670;&#160;</a></span>Teno5_CongZCT4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_CongZCT4 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00626">626</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a3f91a5a5b34a4319e012c4d906acffeb_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a3f91a5a5b34a4319e012c4d906acffeb_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a3f91a5a5b34a4319e012c4d906acffeb_icgraph" id="ainter_scheme_8hpp_a3f91a5a5b34a4319e012c4d906acffeb_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,324,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a59e97f6e11b3adc6752719339f908b0d" name="a59e97f6e11b3adc6752719339f908b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e97f6e11b3adc6752719339f908b0d">&#9670;&#160;</a></span>Teno5_CongZCT7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_CongZCT7 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00696">696</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a59e97f6e11b3adc6752719339f908b0d_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a59e97f6e11b3adc6752719339f908b0d_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a59e97f6e11b3adc6752719339f908b0d_icgraph" id="ainter_scheme_8hpp_a59e97f6e11b3adc6752719339f908b0d_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,324,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9e90c099bcb76c8fc7218f613f8a8bcc" name="a9e90c099bcb76c8fc7218f613f8a8bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e90c099bcb76c8fc7218f613f8a8bcc">&#9670;&#160;</a></span>Teno5_Z()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_Z </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00382">382</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a9e90c099bcb76c8fc7218f613f8a8bcc_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a9e90c099bcb76c8fc7218f613f8a8bcc_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a9e90c099bcb76c8fc7218f613f8a8bcc_icgraph" id="ainter_scheme_8hpp_a9e90c099bcb76c8fc7218f613f8a8bcc_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,268,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5a158eb9bc47381a50dd8d964b120a8c" name="a5a158eb9bc47381a50dd8d964b120a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a158eb9bc47381a50dd8d964b120a8c">&#9670;&#160;</a></span>Teno5_ZConvex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_ZConvex </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00514">514</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a511be3ee79211f3c4ec8675f1d32407e" name="a511be3ee79211f3c4ec8675f1d32407e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a511be3ee79211f3c4ec8675f1d32407e">&#9670;&#160;</a></span>Teno5_ZCT4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_ZCT4 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00250">250</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a511be3ee79211f3c4ec8675f1d32407e_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a511be3ee79211f3c4ec8675f1d32407e_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a511be3ee79211f3c4ec8675f1d32407e_icgraph" id="ainter_scheme_8hpp_a511be3ee79211f3c4ec8675f1d32407e_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,293,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa0033d431fc5465d50ba6b6a709c07f7" name="aa0033d431fc5465d50ba6b6a709c07f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0033d431fc5465d50ba6b6a709c07f7">&#9670;&#160;</a></span>Teno5_ZCT7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> Teno5_ZCT7 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00316">316</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_aa0033d431fc5465d50ba6b6a709c07f7_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_aa0033d431fc5465d50ba6b6a709c07f7_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_aa0033d431fc5465d50ba6b6a709c07f7_icgraph" id="ainter_scheme_8hpp_aa0033d431fc5465d50ba6b6a709c07f7_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,293,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a945946d12d87aac2bd56d616c9755596" name="a945946d12d87aac2bd56d616c9755596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a945946d12d87aac2bd56d616c9755596">&#9670;&#160;</a></span>THINC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 2 &gt; THINC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q3</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01426">1426</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a945946d12d87aac2bd56d616c9755596_cgraph.png" border="0" usemap="#ainter_scheme_8hpp_a945946d12d87aac2bd56d616c9755596_cgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a945946d12d87aac2bd56d616c9755596_cgraph" id="ainter_scheme_8hpp_a945946d12d87aac2bd56d616c9755596_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,69,32"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#a0ccf2c2ad9f3225b701704972316dd3a" title=" " alt="" coords="117,5,155,32"/>
+<area shape="poly" title=" " alt="" coords="69,16,104,18,99,19,69,21"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#af503194182429c20a0abdf6573b2320e" title=" " alt="" coords="203,5,241,32"/>
+<area shape="poly" title=" " alt="" coords="155,16,190,19,185,19,155,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8157e7bc6adf32648092496423936fd3" name="a8157e7bc6adf32648092496423936fd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8157e7bc6adf32648092496423936fd3">&#9670;&#160;</a></span>THINC1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> THINC1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q3</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01451">1451</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a8157e7bc6adf32648092496423936fd3_cgraph.png" border="0" usemap="#ainter_scheme_8hpp_a8157e7bc6adf32648092496423936fd3_cgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a8157e7bc6adf32648092496423936fd3_cgraph" id="ainter_scheme_8hpp_a8157e7bc6adf32648092496423936fd3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,76,32"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#a0ccf2c2ad9f3225b701704972316dd3a" title=" " alt="" coords="124,5,162,32"/>
+<area shape="poly" title=" " alt="" coords="76,16,111,18,105,19,76,21"/>
+<area shape="rect" href="exact_sol_burgers_2main_8cpp.html#af503194182429c20a0abdf6573b2320e" title=" " alt="" coords="210,5,248,32"/>
+<area shape="poly" title=" " alt="" coords="162,16,197,19,192,19,162,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35b10e3f194dd60d4837b7e90772efb5" name="a35b10e3f194dd60d4837b7e90772efb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b10e3f194dd60d4837b7e90772efb5">&#9670;&#160;</a></span>u1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> u1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q3</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00006">6</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a35b10e3f194dd60d4837b7e90772efb5_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a35b10e3f194dd60d4837b7e90772efb5_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a35b10e3f194dd60d4837b7e90772efb5_icgraph" id="ainter_scheme_8hpp_a35b10e3f194dd60d4837b7e90772efb5_icgraph">
+<area shape="rect" title=" " alt="" coords="410,107,448,133"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a43f7d57541b325468ccc948e4b59a48e" title=" " alt="" coords="218,5,340,32"/>
+<area shape="poly" title=" " alt="" coords="408,93,387,69,361,46,339,35,339,30,363,42,391,66,413,94"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a3cfff67f971e8e5a10306ed06033c798" title=" " alt="" coords="232,56,326,83"/>
+<area shape="poly" title=" " alt="" coords="393,107,361,97,327,86,327,80,363,92,398,107"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a023f7b7f8a72cbb43fe9c12c43e20d4f" title=" " alt="" coords="220,107,338,133"/>
+<area shape="poly" title=" " alt="" coords="392,121,339,123,339,117,397,119"/>
+<area shape="rect" href="inter_scheme_8hpp.html#aeb3b4180ef316ea6cbdd64aaa5dbea76" title=" " alt="" coords="210,157,349,184"/>
+<area shape="poly" title=" " alt="" coords="398,132,363,148,328,159,327,154,361,143,393,134"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a24949ee442d39eaafce87e9326fce080" title=" " alt="" coords="197,208,362,235"/>
+<area shape="poly" title=" " alt="" coords="413,145,391,174,363,198,340,210,339,205,361,194,387,171,408,148"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,56,149,83"/>
+<area shape="poly" title=" " alt="" coords="214,71,150,72,148,67,219,68"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4e542c28c34783ae46fe0260bc40f369" name="a4e542c28c34783ae46fe0260bc40f369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e542c28c34783ae46fe0260bc40f369">&#9670;&#160;</a></span>u2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> u2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q3</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00010">10</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a4e542c28c34783ae46fe0260bc40f369_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a4e542c28c34783ae46fe0260bc40f369_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a4e542c28c34783ae46fe0260bc40f369_icgraph" id="ainter_scheme_8hpp_a4e542c28c34783ae46fe0260bc40f369_icgraph">
+<area shape="rect" title=" " alt="" coords="410,107,448,133"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a43f7d57541b325468ccc948e4b59a48e" title=" " alt="" coords="218,5,340,32"/>
+<area shape="poly" title=" " alt="" coords="408,93,387,69,361,46,339,35,339,30,363,42,391,66,413,94"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a3cfff67f971e8e5a10306ed06033c798" title=" " alt="" coords="232,56,326,83"/>
+<area shape="poly" title=" " alt="" coords="393,107,361,97,327,86,327,80,363,92,398,107"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a023f7b7f8a72cbb43fe9c12c43e20d4f" title=" " alt="" coords="220,107,338,133"/>
+<area shape="poly" title=" " alt="" coords="392,121,339,123,339,117,397,119"/>
+<area shape="rect" href="inter_scheme_8hpp.html#aeb3b4180ef316ea6cbdd64aaa5dbea76" title=" " alt="" coords="210,157,349,184"/>
+<area shape="poly" title=" " alt="" coords="398,132,363,148,328,159,327,154,361,143,393,134"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a24949ee442d39eaafce87e9326fce080" title=" " alt="" coords="197,208,362,235"/>
+<area shape="poly" title=" " alt="" coords="413,145,391,174,363,198,340,210,339,205,361,194,387,171,408,148"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,56,149,83"/>
+<area shape="poly" title=" " alt="" coords="214,71,150,72,148,67,219,68"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abd26874c74382ce7627b20e0b1040915" name="abd26874c74382ce7627b20e0b1040915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd26874c74382ce7627b20e0b1040915">&#9670;&#160;</a></span>u3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> u3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>q3</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00014">14</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_abd26874c74382ce7627b20e0b1040915_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_abd26874c74382ce7627b20e0b1040915_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_abd26874c74382ce7627b20e0b1040915_icgraph" id="ainter_scheme_8hpp_abd26874c74382ce7627b20e0b1040915_icgraph">
+<area shape="rect" title=" " alt="" coords="410,107,448,133"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a43f7d57541b325468ccc948e4b59a48e" title=" " alt="" coords="218,5,340,32"/>
+<area shape="poly" title=" " alt="" coords="408,93,387,69,361,46,339,35,339,30,363,42,391,66,413,94"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a3cfff67f971e8e5a10306ed06033c798" title=" " alt="" coords="232,56,326,83"/>
+<area shape="poly" title=" " alt="" coords="393,107,361,97,327,86,327,80,363,92,398,107"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a023f7b7f8a72cbb43fe9c12c43e20d4f" title=" " alt="" coords="220,107,338,133"/>
+<area shape="poly" title=" " alt="" coords="392,121,339,123,339,117,397,119"/>
+<area shape="rect" href="inter_scheme_8hpp.html#aeb3b4180ef316ea6cbdd64aaa5dbea76" title=" " alt="" coords="210,157,349,184"/>
+<area shape="poly" title=" " alt="" coords="398,132,363,148,328,159,327,154,361,143,393,134"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a24949ee442d39eaafce87e9326fce080" title=" " alt="" coords="197,208,362,235"/>
+<area shape="poly" title=" " alt="" coords="413,145,391,174,363,198,340,210,339,205,361,194,387,171,408,148"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,56,149,83"/>
+<area shape="poly" title=" " alt="" coords="214,71,150,72,148,67,219,68"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa891b19337b3c2a633095d7e1a7d3250" name="aa891b19337b3c2a633095d7e1a7d3250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa891b19337b3c2a633095d7e1a7d3250">&#9670;&#160;</a></span>weno5_Cong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> weno5_Cong </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00185">185</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1004857948f9a53352dafae4d0126e4e" name="a1004857948f9a53352dafae4d0126e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1004857948f9a53352dafae4d0126e4e">&#9670;&#160;</a></span>weno5_JSchen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> weno5_JSchen </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00019">19</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a1004857948f9a53352dafae4d0126e4e_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a1004857948f9a53352dafae4d0126e4e_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a1004857948f9a53352dafae4d0126e4e_icgraph" id="ainter_scheme_8hpp_a1004857948f9a53352dafae4d0126e4e_icgraph">
+<area shape="rect" title=" " alt="" coords="201,43,311,69"/>
+<area shape="rect" href="class_recon_eigen1_d_euler.html#aa7525b33fe35b40c6c09d56d33706cea" title="实现特征重构方法" alt="" coords="5,5,153,48"/>
+<area shape="poly" title=" " alt="" coords="183,45,153,42,153,36,188,44"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,72,151,99"/>
+<area shape="poly" title=" " alt="" coords="183,68,152,76,151,71,188,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f470ee7ab7e7dc95a341c4d987e3341" name="a0f470ee7ab7e7dc95a341c4d987e3341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f470ee7ab7e7dc95a341c4d987e3341">&#9670;&#160;</a></span>weno5_Z()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> weno5_Z </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00218">218</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a0f470ee7ab7e7dc95a341c4d987e3341_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a0f470ee7ab7e7dc95a341c4d987e3341_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a0f470ee7ab7e7dc95a341c4d987e3341_icgraph" id="ainter_scheme_8hpp_a0f470ee7ab7e7dc95a341c4d987e3341_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,271,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abee316d0da744ad433badd6feca14f40" name="abee316d0da744ad433badd6feca14f40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abee316d0da744ad433badd6feca14f40">&#9670;&#160;</a></span>whf_TCNS_A()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_A </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01480">1480</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_abee316d0da744ad433badd6feca14f40_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_abee316d0da744ad433badd6feca14f40_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_abee316d0da744ad433badd6feca14f40_icgraph" id="ainter_scheme_8hpp_abee316d0da744ad433badd6feca14f40_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,299,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,183,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae22e914c24b64385a1cc4bacbda4344e" name="ae22e914c24b64385a1cc4bacbda4344e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae22e914c24b64385a1cc4bacbda4344e">&#9670;&#160;</a></span>whf_TCNS_A_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_A_count </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01595">1595</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4aff41d8c666e05744a552c35bd7b251" name="a4aff41d8c666e05744a552c35bd7b251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aff41d8c666e05744a552c35bd7b251">&#9670;&#160;</a></span>whf_TCNS_AS_approx_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_approx_1 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l02607">2607</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a4aff41d8c666e05744a552c35bd7b251_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a4aff41d8c666e05744a552c35bd7b251_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a4aff41d8c666e05744a552c35bd7b251_icgraph" id="ainter_scheme_8hpp_a4aff41d8c666e05744a552c35bd7b251_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,368,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1d660ba379a048680a3bee2a72dcd626" name="a1d660ba379a048680a3bee2a72dcd626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d660ba379a048680a3bee2a72dcd626">&#9670;&#160;</a></span>whf_TCNS_AS_approx_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_approx_2 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l02841">2841</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a1d660ba379a048680a3bee2a72dcd626_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a1d660ba379a048680a3bee2a72dcd626_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a1d660ba379a048680a3bee2a72dcd626_icgraph" id="ainter_scheme_8hpp_a1d660ba379a048680a3bee2a72dcd626_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,368,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4817ba3c884077917283585ea53b1082" name="a4817ba3c884077917283585ea53b1082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4817ba3c884077917283585ea53b1082">&#9670;&#160;</a></span>whf_TCNS_AS_fx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_fx </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l02378">2378</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a4817ba3c884077917283585ea53b1082_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a4817ba3c884077917283585ea53b1082_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a4817ba3c884077917283585ea53b1082_icgraph" id="ainter_scheme_8hpp_a4817ba3c884077917283585ea53b1082_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,326,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acd6044fe4a5639627a9ba1e1453a4ed8" name="acd6044fe4a5639627a9ba1e1453a4ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd6044fe4a5639627a9ba1e1453a4ed8">&#9670;&#160;</a></span>whf_TCNS_AS_fx_real()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_fx_real </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l02734">2734</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_acd6044fe4a5639627a9ba1e1453a4ed8_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_acd6044fe4a5639627a9ba1e1453a4ed8_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_acd6044fe4a5639627a9ba1e1453a4ed8_icgraph" id="ainter_scheme_8hpp_acd6044fe4a5639627a9ba1e1453a4ed8_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,354,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3bbb0228e212dcc81070405c4f0a4b99" name="a3bbb0228e212dcc81070405c4f0a4b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bbb0228e212dcc81070405c4f0a4b99">&#9670;&#160;</a></span>whf_TCNS_AS_initial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_initial </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l02480">2480</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a3bbb0228e212dcc81070405c4f0a4b99_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a3bbb0228e212dcc81070405c4f0a4b99_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a3bbb0228e212dcc81070405c4f0a4b99_icgraph" id="ainter_scheme_8hpp_a3bbb0228e212dcc81070405c4f0a4b99_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,345,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,183,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af65dbcf7106a43999983038c46708f33" name="af65dbcf7106a43999983038c46708f33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af65dbcf7106a43999983038c46708f33">&#9670;&#160;</a></span>whf_TCNS_AS_myF002()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_myF002 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01715">1715</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_af65dbcf7106a43999983038c46708f33_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_af65dbcf7106a43999983038c46708f33_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_af65dbcf7106a43999983038c46708f33_icgraph" id="ainter_scheme_8hpp_af65dbcf7106a43999983038c46708f33_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,362,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0395207237c1e1174e43098b4a614ee6" name="a0395207237c1e1174e43098b4a614ee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0395207237c1e1174e43098b4a614ee6">&#9670;&#160;</a></span>whf_TCNS_AS_myF102()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_myF102 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01940">1940</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a0395207237c1e1174e43098b4a614ee6_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a0395207237c1e1174e43098b4a614ee6_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a0395207237c1e1174e43098b4a614ee6_icgraph" id="ainter_scheme_8hpp_a0395207237c1e1174e43098b4a614ee6_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,362,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af5144084b87279a665e3a14032c1006a" name="af5144084b87279a665e3a14032c1006a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5144084b87279a665e3a14032c1006a">&#9670;&#160;</a></span>whf_TCNS_AS_myF102_reciprocal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_myF102_reciprocal </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l02167">2167</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_af5144084b87279a665e3a14032c1006a_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_af5144084b87279a665e3a14032c1006a_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_af5144084b87279a665e3a14032c1006a_icgraph" id="ainter_scheme_8hpp_af5144084b87279a665e3a14032c1006a_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,362,48"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,13,149,40"/>
+<area shape="poly" title=" " alt="" coords="178,27,149,29,149,24,184,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae6ac9d312311d59bd075cb90be17547d" name="ae6ac9d312311d59bd075cb90be17547d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6ac9d312311d59bd075cb90be17547d">&#9670;&#160;</a></span>whf_TCNS_AS_myF103()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_myF103 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l02055">2055</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_ae6ac9d312311d59bd075cb90be17547d_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_ae6ac9d312311d59bd075cb90be17547d_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_ae6ac9d312311d59bd075cb90be17547d_icgraph" id="ainter_scheme_8hpp_ae6ac9d312311d59bd075cb90be17547d_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,362,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab968fa84751fd9e87573328a742bc3c0" name="ab968fa84751fd9e87573328a742bc3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab968fa84751fd9e87573328a742bc3c0">&#9670;&#160;</a></span>whf_TCNS_AS_myF103_reciprocal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_myF103_reciprocal </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l02273">2273</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_ab968fa84751fd9e87573328a742bc3c0_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_ab968fa84751fd9e87573328a742bc3c0_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_ab968fa84751fd9e87573328a742bc3c0_icgraph" id="ainter_scheme_8hpp_ab968fa84751fd9e87573328a742bc3c0_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,362,48"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,13,149,40"/>
+<area shape="poly" title=" " alt="" coords="178,27,149,29,149,24,184,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a51fb282f9106464f4f42240a6a8b0769" name="a51fb282f9106464f4f42240a6a8b0769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51fb282f9106464f4f42240a6a8b0769">&#9670;&#160;</a></span>whf_TCNS_AS_myF202_2S()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_myF202_2S </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l02958">2958</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a51fb282f9106464f4f42240a6a8b0769_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a51fb282f9106464f4f42240a6a8b0769_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a51fb282f9106464f4f42240a6a8b0769_icgraph" id="ainter_scheme_8hpp_a51fb282f9106464f4f42240a6a8b0769_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,385,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a07a7a5c9ddccb50c433e1da7141e79dd" name="a07a7a5c9ddccb50c433e1da7141e79dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07a7a5c9ddccb50c433e1da7141e79dd">&#9670;&#160;</a></span>whf_TCNS_AS_myF202_NoS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_myF202_NoS </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l03064">3064</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a07a7a5c9ddccb50c433e1da7141e79dd_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a07a7a5c9ddccb50c433e1da7141e79dd_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a07a7a5c9ddccb50c433e1da7141e79dd_icgraph" id="ainter_scheme_8hpp_a07a7a5c9ddccb50c433e1da7141e79dd_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,395,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1808371f2cb10f7489fa73f8377bf949" name="a1808371f2cb10f7489fa73f8377bf949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1808371f2cb10f7489fa73f8377bf949">&#9670;&#160;</a></span>whf_TCNS_AS_myF203_NoS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_myF203_NoS </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l03170">3170</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_a1808371f2cb10f7489fa73f8377bf949_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_a1808371f2cb10f7489fa73f8377bf949_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_a1808371f2cb10f7489fa73f8377bf949_icgraph" id="ainter_scheme_8hpp_a1808371f2cb10f7489fa73f8377bf949_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,395,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa1df249adc502760a3e1fa32f7538950" name="aa1df249adc502760a3e1fa32f7538950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1df249adc502760a3e1fa32f7538950">&#9670;&#160;</a></span>whf_TCNS_AS_myH002()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> whf_TCNS_AS_myH002 </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l01819">1819</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="inter_scheme_8hpp_aa1df249adc502760a3e1fa32f7538950_icgraph.png" border="0" usemap="#ainter_scheme_8hpp_aa1df249adc502760a3e1fa32f7538950_icgraph" loading="lazy" alt=""/></div>
+<map name="ainter_scheme_8hpp_aa1df249adc502760a3e1fa32f7538950_icgraph" id="ainter_scheme_8hpp_aa1df249adc502760a3e1fa32f7538950_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,364,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">变量说明</h2>
+<a id="a7529f4148aa11bdfb06b73342aa2599e" name="a7529f4148aa11bdfb06b73342aa2599e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7529f4148aa11bdfb06b73342aa2599e">&#9670;&#160;</a></span>CTi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> CTi = pow(1.5 * 1e-10, 1.0 / 6.0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="inter_scheme_8hpp_source.html">interScheme.hpp</a> 第 <a class="el" href="inter_scheme_8hpp_source.html#l00555">555</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

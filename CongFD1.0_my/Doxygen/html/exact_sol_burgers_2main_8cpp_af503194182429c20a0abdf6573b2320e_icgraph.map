@@ -1,0 +1,14 @@
+<map id="u0" name="u0">
+<area shape="rect" id="Node000001" title=" " alt="" coords="316,56,354,83"/>
+<area shape="rect" id="Node000002" href="$exact_sol_burgers_2main_8cpp.html#a0ccf2c2ad9f3225b701704972316dd3a" title=" " alt="" coords="177,56,215,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="298,70,216,72,215,67,303,69"/>
+<area shape="rect" id="Node000003" href="$exact_sol_burgers_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="16,5,65,32"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="299,55,267,47,211,36,155,28,66,22,65,17,155,23,212,30,269,41,305,55"/>
+<area shape="rect" id="Node000006" href="$inter_scheme_8hpp.html#aaa3344e62d98ea7851b1ea5623e35801" title=" " alt="" coords="124,107,268,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="304,81,269,97,237,109,236,104,267,92,299,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="160,60,65,29,66,24,164,57"/>
+<area shape="rect" id="Node000004" href="$inter_scheme_8hpp.html#a945946d12d87aac2bd56d616c9755596" title=" " alt="" coords="9,56,72,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="160,71,73,72,72,67,163,67"/>
+<area shape="rect" id="Node000005" href="$inter_scheme_8hpp.html#a8157e7bc6adf32648092496423936fd3" title=" " alt="" coords="5,107,76,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="163,83,77,111,75,106,161,78"/>
+</map>

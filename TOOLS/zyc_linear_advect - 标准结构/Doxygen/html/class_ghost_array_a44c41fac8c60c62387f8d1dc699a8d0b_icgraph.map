@@ -1,0 +1,25 @@
+<map id="GhostArray::domain" name="GhostArray::domain">
+<area shape="rect" id="Node000001" title="获取物理域范围" alt="" coords="440,157,578,184"/>
+<area shape="rect" id="Node000002" href="$header_8_h.html#acfb7e8f2005d220ec0e3a356a4940934" title="计算右端项（WCNS5空间离散）" alt="" coords="292,56,388,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="469,149,364,86,364,80,475,148"/>
+<area shape="rect" id="Node000003" href="$header_8_h.html#a90b0c394018d4743e6dd908cbdef16b9" title="时间演化函数（三阶Runge&#45;Kutta方法）" alt="" coords="142,5,201,32"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="489,144,450,93,422,67,391,46,342,28,290,19,241,17,203,18,200,13,241,12,290,14,343,23,394,42,426,63,454,90,495,145"/>
+<area shape="rect" id="Node000004" href="$with__time_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数（含时间推进）" alt="" coords="5,183,55,209"/>
+<area shape="poly" id="edge12_Node000001_Node000004" title=" " alt="" coords="438,154,392,148,310,141,246,140,183,149,103,168,57,186,54,182,102,163,182,144,246,135,311,135,393,143,444,153"/>
+<area shape="rect" id="Node000006" href="$header_8_h.html#ae74f59af7424d5daa1e787f7b3af08cc" title="计算L1范数误差" alt="" coords="288,157,392,184"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="422,171,393,173,392,168,428,170"/>
+<area shape="rect" id="Node000007" href="$header_8_h.html#a94c20ffe91b962413c718133f8a0290b" title="计算L2范数误差" alt="" coords="288,208,392,235"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="445,190,388,210,386,205,450,188"/>
+<area shape="rect" id="Node000008" href="$header_8_h.html#afa2d1de0ea98d9df18410a295c4643f3" title="计算L∞范数误差" alt="" coords="116,259,227,285"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="483,193,442,225,393,249,351,261,307,269,228,275,227,270,306,264,350,256,391,244,439,220,478,195"/>
+<area shape="rect" id="Node000009" href="$with__time_8cpp.html#a5324c8485845c1e64373ec9c80042c6f" title="将计算结果写入Tecplot可视化文件" alt="" coords="103,309,240,336"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="489,194,447,238,422,259,394,276,356,292,316,304,241,319,240,314,315,299,354,287,391,271,418,254,444,234,484,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="276,52,202,30,201,25,281,50"/>
+<area shape="rect" id="Node000005" href="$without__time_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数（不含时间推进）" alt="" coords="147,56,196,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="274,71,197,72,196,67,279,68"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="125,31,104,46,77,79,57,118,37,183,32,181,53,116,73,77,101,42,128,27"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="272,179,56,197,55,191,273,174"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="271,218,55,201,55,195,274,213"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="123,252,101,242,52,212,52,207,104,238,128,251"/>
+<area shape="poly" id="edge14_Node000009_Node000004" title=" " alt="" coords="106,302,101,299,79,278,60,254,37,212,38,207,65,251,83,275,104,295,112,302"/>
+</map>

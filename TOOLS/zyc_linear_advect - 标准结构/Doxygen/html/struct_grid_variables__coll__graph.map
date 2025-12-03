@@ -1,0 +1,5 @@
+<map id="GridVariables" name="GridVariables">
+<area shape="rect" id="Node000001" title="网格变量结构体" alt="" coords="5,189,104,216"/>
+<area shape="rect" id="Node000002" href="$class_ghost_array.html" title="带虚拟点的数组类" alt="" coords="11,5,98,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,47,57,189,52,189,52,48"/>
+</map>

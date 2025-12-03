@@ -1,0 +1,13 @@
+<map id="exact_solution" name="exact_solution">
+<area shape="rect" id="Node000001" title="精确解函数" alt="" coords="262,56,367,83"/>
+<area shape="rect" id="Node000002" href="$header_8_h.html#ae74f59af7424d5daa1e787f7b3af08cc" title="计算L1范数误差" alt="" coords="106,5,210,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="254,51,202,35,202,30,259,50"/>
+<area shape="rect" id="Node000004" href="$header_8_h.html#a94c20ffe91b962413c718133f8a0290b" title="计算L2范数误差" alt="" coords="106,56,210,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="244,70,211,72,211,67,249,69"/>
+<area shape="rect" id="Node000005" href="$header_8_h.html#afa2d1de0ea98d9df18410a295c4643f3" title="计算L∞范数误差" alt="" coords="103,107,214,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="259,87,203,109,201,103,254,88"/>
+<area shape="rect" id="Node000003" href="$with__time_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数（含时间推进）" alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,41,56,62,54,57,110,36"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="88,71,55,72,54,67,93,68"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="106,102,55,82,56,76,110,99"/>
+</map>

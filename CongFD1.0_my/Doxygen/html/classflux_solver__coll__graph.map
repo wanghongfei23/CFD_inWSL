@@ -1,0 +1,5 @@
+<map id="fluxSolver" name="fluxSolver">
+<area shape="rect" id="Node000001" title="通量求解器基类" alt="" coords="5,104,85,131"/>
+<area shape="rect" id="Node000002" href="$class_info.html" title="存储和管理求解器的各种配置参数和状态信息" alt="" coords="23,5,67,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,47,48,104,42,103,43,49"/>
+</map>

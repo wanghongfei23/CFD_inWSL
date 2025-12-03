@@ -1,0 +1,5 @@
+<map id="write_to_tecplot_file" name="write_to_tecplot_file">
+<area shape="rect" id="Node000001" title="将计算结果写入Tecplot可视化文件" alt="" coords="5,5,143,32"/>
+<area shape="rect" id="Node000002" href="$class_ghost_array.html#a44c41fac8c60c62387f8d1dc699a8d0b" title="获取物理域范围" alt="" coords="191,5,328,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,16,178,18,172,19,143,21"/>
+</map>

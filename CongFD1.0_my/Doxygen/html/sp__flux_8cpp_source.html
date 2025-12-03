@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/src/sp_flux.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_98cdb10f369f6a3b9149e010b312bf5d.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">sp_flux.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="sp__flux_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_space_dis_8hpp.html">SpaceDis.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="flux_scheme_8hpp.html">fluxScheme.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="inter_scheme_8hpp.html">interScheme.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_space_dis.html#ae19ef12b12b2a4bf0f37ed8519391de2">   18</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_space_dis.html#ae19ef12b12b2a4bf0f37ed8519391de2">SpaceDis::calFluxConv</a>(<span class="keywordtype">int</span> i)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">/*for u_t + a * u_x == 0*/</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> a = 1.0;  <span class="comment">// 对流速度</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, ur;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// 使用重构方法获取左右界面值</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    ul = (this-&gt;*<a class="code hl_variable" href="class_space_dis.html#a729d29ea9612005d7b9fa207a828e16c">reconLMethod</a>)(i).at(0);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    ur = (this-&gt;*<a class="code hl_variable" href="class_space_dis.html#ae47bd370844f8417abbffa0d7c6c8b1b">reconRMethod</a>)(i).at(0);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// 另一种简单的通量计算方式（根据特征线方向选择）</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">    ul=data(i-1,0);</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">    ur=data(i,0);*/</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">/*if (a&gt;0)</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    {</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">        flux(i,0)=a*ul;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    }</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">    else</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">    {</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        flux(i,0)=a*ur;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">    }*/</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// 使用Lax-Friedrichs数值通量公式计算界面通量</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// 公式: 0.5*(a*ul + a*ur - |a|*(ur-ul))</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// 这是一种守恒型的数值通量格式，具有良好的稳定性</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c">fluxAt</a>(i, 0) = 0.5 * (a * ul + a * ur - std::abs(a) * (ur - ul));</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_space_dis.html#a4fd8182286483d87980e1e35453d9230">   52</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_space_dis.html#a4fd8182286483d87980e1e35453d9230">SpaceDis::calFluxAccuracyTest</a>(<span class="keywordtype">int</span> i)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">/*for u_t + a * u_x == 0*/</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> a = 1.0;  <span class="comment">// 波速</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, ur;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// 获取左界面重构值</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    ul = (this-&gt;*<a class="code hl_variable" href="class_space_dis.html#a729d29ea9612005d7b9fa207a828e16c">reconLMethod</a>)(i).at(0);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// 精度测试中直接使用左界面值作为通量</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// 这种简单的通量计算方式便于分析数值方法的精度特性</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_function" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c">fluxAt</a>(i, 0) = ul;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_space_dis.html#aa123d38e0a2f5b844c4948c02cf53834">   70</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_space_dis.html#aa123d38e0a2f5b844c4948c02cf53834">SpaceDis::calFluxBurgers</a>(<span class="keywordtype">int</span> i)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">/*for u_t + a * u_x == 0*/</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, ur, aLF;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// 获取数据中的最大元素值作为LF通量的速度参数</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// 这是为了保证数值格式的CFL条件稳定</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    aLF = <a class="code hl_variable" href="class_space_dis.html#a168218854263acf5d2c661a3a098989b">data</a>-&gt;maxElement(0);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// 获取左右界面的重构值</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    ul = (this-&gt;*<a class="code hl_variable" href="class_space_dis.html#a729d29ea9612005d7b9fa207a828e16c">reconLMethod</a>)(i).at(0);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    ur = (this-&gt;*<a class="code hl_variable" href="class_space_dis.html#ae47bd370844f8417abbffa0d7c6c8b1b">reconRMethod</a>)(i).at(0);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// ul=data(i-1,0);</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// ur=data(i,0);</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// L-F flux</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> al, ar;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">// 计算左右界面的绝对值</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    al = std::abs(ul);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    ar = std::abs(ur);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// real a=std::max(ar,ar);</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">// real a=(al+ar)/2;</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> a = aLF;  <span class="comment">// 使用最大速度作为通量参数</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">// 使用Lax-Friedrichs格式计算Burgers方程的界面通量</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// 公式: 0.5*(f(ul)+f(ur)-a*(ur-ul)), 其中f(u)=u^2/2</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_function" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c">fluxAt</a>(i, 0) = 0.5 * (ul * ul / 2 + ur * ur / 2 - a * (ur - ul));</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="sp__flux_8cpp.html#a9f9522294ebd2a122861bc5d3bf71851">   98</a></span><span class="keyword">typedef</span> std::array&lt;real, 2&gt; <a class="code hl_typedef" href="flux_scheme_8hpp.html#af8bc7f1334a9adf9902e914309dfefc5">arr2</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">// 计算一维欧拉方程的界面通量函数（旧版实现方式，已被注释）</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">// void SpaceDis::calFluxEuler1D(int i)</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">// {</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">//     /*for u_t + a * u_x == 0*/</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">//     auto WL=(this-&gt;*reconLMethod)(i);</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">//     auto WR=(this-&gt;*reconRMethod)(i);</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">//     enum{R,U,P};</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">//     if (WL[P]&lt;0||WL[R]&lt;0)</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">//     {</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">//         WL[R]=at(i-1,R);</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">//         WL[U]=at(i-1,U);</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">//         WL[P]=at(i-1,P);</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">//         std::cout&lt;&lt;&quot;SpaceDis error: negative pressure/Density \n&quot;;</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">//     }</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">//     if (WR[P]&lt;0||WR[R]&lt;0)</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">//     {</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">//         WR[R]=at(i,R);</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">//         WR[U]=at(i,U);</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">//         WR[P]=at(i,P);</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">//         std::cout&lt;&lt;&quot;SpaceDis error: negative pressure/Density \n&quot;;</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">//     }</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">//     std::vector&lt;real&gt; iflux=roeFlux1D2(WL[0],WR[0],WL[1],WR[1],WL[2],WR[2]);</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">//     //auto iflux=HLLCFlux1D(WL[0],WR[0],WL[1],WR[1],WL[2],WR[2]);</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">//     //std::vector&lt;real&gt; iflux2=roeFlux1D(r,u,p,H,RT);</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">//     for (int ivar = 0; ivar &lt; 3; ivar++)</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">//     {</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">//         fluxAt(i,ivar)=iflux[ivar];</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">//     }</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">// }</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
+<div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2">  135</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2">SpaceDis::calFluxEuler1D</a>(<span class="keywordtype">int</span> i)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>{</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="comment">/*for u_t + a * u_x == 0*/</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="comment">// 使用一阶重构方法获取界面左右状态</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keyword">auto</span> W = this-&gt;<a class="code hl_function" href="class_space_dis.html#a4d9c00d172d821da6583d22e63e63f45">recon1DFaceCenter</a>(i);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="comment">// 定义变量索引常量</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keyword">enum</span> { <a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae">R</a>,  <span class="comment">// 密度</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        U,     <span class="comment">// 速度</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        P      <span class="comment">// 压力</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    };</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="comment">// 检查左界面状态是否合理（密度和压力必须为正）</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">if</span> (W[0] &lt; 0 || W[2] &lt; 0) {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        W[0] = <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i - 1, <a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae">R</a>);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        W[1] = <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i - 1, U);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        W[2] = <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i - 1, P);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;SpaceDis error: negative pressure/Density \n&quot;</span>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="comment">// 检查右界面状态是否合理（密度和压力必须为正）</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordflow">if</span> (W[3] &lt; 0 || W[5] &lt; 0) {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        W[3] = <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i, <a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae">R</a>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        W[4] = <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i, U);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        W[5] = <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i, P);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;SpaceDis error: negative pressure/Density \n&quot;</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="comment">// 使用Roe平均方法计算欧拉方程的界面通量</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    std::vector&lt;real&gt; iflux = <a class="code hl_function" href="flux_scheme_8hpp.html#abd346e16076a9a3a3d7a6c6a72127e68">roeFlux1D2</a>(W[0], W[3], W[1], W[4], W[2], W[5]);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="comment">// 另一种可选的HLLC通量计算方法（被注释）</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="comment">// auto iflux=HLLCFlux1D(W[0],W[3],W[1],W[4],W[2],W[5]);</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="comment">// std::vector&lt;real&gt; iflux2=roeFlux1D(r,u,p,H,RT);</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="comment">// 将计算得到的通量赋值给各守恒变量</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ivar = 0; ivar &lt; 3; ivar++) {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <a class="code hl_function" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c">fluxAt</a>(i, ivar) = iflux[ivar];</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>}</div>
+</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span></div>
+<div class="foldopen" id="foldopen00178" data-start="{" data-end="}">
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="class_space_dis.html#abfe367e73fb15973a560da82a948d32f">  178</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_space_dis.html#abfe367e73fb15973a560da82a948d32f">SpaceDis::calFluxEuler2D</a>(<span class="keywordtype">int</span> i)</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>{</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="comment">/*for u_t + a * u_x == 0*/</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="comment">// auto WL=(this-&gt;*reconLMethod)(i);</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="comment">// auto WR=(this-&gt;*reconRMethod)(i);</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="comment">// 使用二阶重构方法获取界面左右状态</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keyword">auto</span> W = this-&gt;<a class="code hl_function" href="class_space_dis.html#a6e1c94eedce7ef2512bb2a9ba0fbe248">recon2DFaceCenter</a>(i);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="comment">// 检查左界面状态的合理性（密度和压力必须为正）</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="comment">// 注：这里的检查包含了更复杂的调试信息输出代码，但现在被简化了</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordflow">if</span> (W[3] &lt; 0 || W[0] &lt; 0) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="comment">// int ivar=(WL[3]&lt;0||isnan(WL[3]))? 3:0;</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="comment">// std::array&lt;real,5&gt; q={at(i-3,ivar),at(i-2,ivar),at(i-1,ivar),at(i,ivar),at(i+1,ivar)};</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="comment">// std::array&lt;real,3&gt; beta;</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="comment">// unsigned flag=0;</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="comment">// beta[0]= 1.0/1.0 *pow(1.0*q[0]-2.0*q[1]+1.0*q[2],2)</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="comment">//     + 1.0/4.0 *pow(1.0*q[0]-4.0*q[1]+3.0*q[2],2);</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="comment">// beta[1]= 1.0/1.0  *pow(1.0*q[1]-2.0*q[2]+1.0*q[3],2)</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="comment">//     + 1.0/4.0 *pow(1.0*q[1]+0.0*q[2]-1.0*q[3],2);</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="comment">// beta[2]= 1.0/1.0 *pow(1.0*q[2]-2.0*q[3]+1.0*q[4],2)</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="comment">//     + 1.0/4.0*pow(3.0*q[2]-4.0*q[3]+1.0*q[4],2);</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="comment">// auto minBeta=std::min_element(beta.begin(),beta.end())-beta.begin();</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="comment">// //if (beta[minBeta]&lt;eps) return q[2];</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="comment">// real CT=CTi,sumGamma=0;</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="comment">// real tau=std::abs(beta[2]-beta[0]),KK=CT*(beta[minBeta]+tau);</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="comment">// real eps=1e-8;</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="comment">// if (minBeta==0||(beta[0]+tau)*beta[minBeta]&gt;KK*beta[0]+eps)</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <span class="comment">// {</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="comment">//     flag+=1;</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="comment">// }</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <span class="comment">// if (minBeta==1||(beta[1]+tau)*beta[minBeta]&gt;KK*beta[1]+eps)</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="comment">// {</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="comment">//     flag+=2;</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="comment">// }</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="comment">// if (minBeta==2||(beta[2]+tau)*beta[minBeta]&gt;KK*beta[2]+eps)</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="comment">// {</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="comment">//     flag+=4;</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="comment">// }</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <span class="comment">// std::cout&lt;&lt;std::format(&quot;SpaceDis error L: negative pressure i={} WLR={} WRR={} WLP={} WRP={} \</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="comment">        //                         WSR={:.4f} {:.4f} {:.4f} {:.4f} {:.4f} \</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="comment">        //                         WSU={:.4f} {:.4f} {:.4f} {:.4f} {:.4f} \</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment">        //                         WSV={:.4f} {:.4f} {:.4f} {:.4f} {:.4f} \</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment">        //                         WSP={:.4f} {:.4f} {:.4f} {:.4f} {:.4f} \</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment">        //                         beta={:.4f} {:.4f} {:.4f} flag={}\n&quot;</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="comment">//                       ,i,WL[0],WR[0],WL[3],WR[3]</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="comment">//                       ,at(i-3,0),at(i-2,0),at(i-1,0),at(i,0),at(i+1,0)</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="comment">//                       ,at(i-3,1),at(i-2,1),at(i-1,1),at(i,1),at(i+1,1)</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="comment">//                       ,at(i-3,2),at(i-2,2),at(i-1,2),at(i,2),at(i+1,2)</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="comment">//                       ,at(i-3,3),at(i-2,3),at(i-1,3),at(i,3),at(i+1,3)</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="comment">//                       ,beta[0],beta[1],beta[2],flag);</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        std::cout &lt;&lt; std::format(<span class="stringliteral">&quot;SpaceDis error L: negative pressure i={}\n&quot;</span>, i);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <span class="comment">// 如果不合理，则使用原始数据点的值进行修正</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        W = { <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i - 1, 0), <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i - 1, 1), <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i - 1, 2), <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i - 1, 3), W[4], W[5], W[6], W[7] };</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keyword">auto</span> WX = (this-&gt;*<a class="code hl_variable" href="class_space_dis.html#a729d29ea9612005d7b9fa207a828e16c">reconLMethod</a>)(i);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="comment">// 检查右界面状态的合理性（密度和压力必须为正）</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="comment">// 注：这里的检查也包含了复杂调试信息输出代码，但现在被简化了</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordflow">if</span> (W[3 + 4] &lt; 0 || W[0 + 4] &lt; 0) <span class="comment">//||isnan(WR[3])||isnan(WR[0]))</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <span class="comment">// std::array&lt;real,5&gt; q={at(i+2,3),at(i+1,3),at(i,3),at(i-1,3),at(i-2,3)};</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="comment">// std::array&lt;real,3&gt; beta;</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="comment">// beta[0]= 1.0/1.0 *pow(1.0*q[0]-2.0*q[1]+1.0*q[2],2)</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        <span class="comment">//     + 1.0/4.0 *pow(1.0*q[0]-4.0*q[1]+3.0*q[2],2);</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        <span class="comment">// beta[1]= 1.0/1.0  *pow(1.0*q[1]-2.0*q[2]+1.0*q[3],2)</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="comment">//     + 1.0/4.0 *pow(1.0*q[1]+0.0*q[2]-1.0*q[3],2);</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        <span class="comment">// beta[2]= 1.0/1.0 *pow(1.0*q[2]-2.0*q[3]+1.0*q[4],2)</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <span class="comment">//     + 1.0/4.0*pow(3.0*q[2]-4.0*q[3]+1.0*q[4],2);</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="comment">// std::cout&lt;&lt;std::format(&quot;SpaceDis error R: negative pressure i={} WLR={} WRR={} WLP={} WRP={} WS={:.4f} {:.4f} {:.4f} {:.4f} {:.4f} beta={:.4f} {:.4f} {:.4f}\n&quot;</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="comment">//                       ,i,WL[0],WR[0],WL[3],WR[3],at(i-2,3),at(i-1,3),at(i,3),at(i+1,3),at(i+2,3),beta[0],beta[1],beta[2]);</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        std::cout &lt;&lt; std::format(<span class="stringliteral">&quot;SpaceDis error R: negative pressure i={}\n&quot;</span>, i);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="comment">// 如果不合理，则使用原始数据点的值进行修正</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        W = { W[0], W[1], W[2], W[3], <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i, 0), <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i, 1), <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i, 2), <a class="code hl_function" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">at</a>(i, 3) };</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <span class="comment">// auto WX=(this-&gt;*reconRMethod)(i);</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    }</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="comment">// 使用Roe平均方法计算二维欧拉方程的界面通量</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keyword">auto</span> iflux = <a class="code hl_function" href="flux_scheme_8hpp.html#aa0fbd8f4c90df1f1b64e3c6c98797d70">roeFlux2DSym</a>(W[0], W[4], W[1], W[5], W[2], W[6], W[3], W[7], <a class="code hl_variable" href="class_space_dis.html#aed0825c7ebdc0499cfab567b1a60198a">norm</a>);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="comment">// 另一种可选的HLLC通量计算方法（被注释）</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">//  auto iflux=HLLCFlux2D2(W[0],W[4],W[1],W[5],W[2],W[6],W[3],W[7],norm);</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="comment">// std::vector&lt;real&gt; iflux2=roeFlux1D(r,u,p,H,RT);</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="comment">// 将计算得到的通量赋值给各守恒变量</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ivar = 0; ivar &lt; 4; ivar++) {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <a class="code hl_function" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c">fluxAt</a>(i, ivar) = iflux[ivar];</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    }</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>}</div>
+</div>
+<div class="ttc" id="a_space_dis_8hpp_html"><div class="ttname"><a href="_space_dis_8hpp.html">SpaceDis.hpp</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_a168218854263acf5d2c661a3a098989b"><div class="ttname"><a href="class_space_dis.html#a168218854263acf5d2c661a3a098989b">SpaceDis::data</a></div><div class="ttdeci">Data * data</div><div class="ttdef"><b>定义</b> <a href="_space_dis_8hpp_source.html#l00032">SpaceDis.hpp:32</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_a2b534c94da5065fd7abbfc3fea7042f2"><div class="ttname"><a href="class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2">SpaceDis::calFluxEuler1D</a></div><div class="ttdeci">void calFluxEuler1D(int)</div><div class="ttdoc">计算一维欧拉方程的界面通量</div><div class="ttdef"><b>定义</b> <a href="#l00135">sp_flux.cpp:135</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_a4d9c00d172d821da6583d22e63e63f45"><div class="ttname"><a href="class_space_dis.html#a4d9c00d172d821da6583d22e63e63f45">SpaceDis::recon1DFaceCenter</a></div><div class="ttdeci">std::vector&lt; real &gt; recon1DFaceCenter(int i)</div><div class="ttdoc">一维界面中心重构函数</div><div class="ttdef"><b>定义</b> <a href="sp__recon_8cpp_source.html#l00218">sp_recon.cpp:218</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_a4fd8182286483d87980e1e35453d9230"><div class="ttname"><a href="class_space_dis.html#a4fd8182286483d87980e1e35453d9230">SpaceDis::calFluxAccuracyTest</a></div><div class="ttdeci">void calFluxAccuracyTest(int i)</div><div class="ttdoc">计算精度测试问题的通量</div><div class="ttdef"><b>定义</b> <a href="#l00052">sp_flux.cpp:52</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_a6e1c94eedce7ef2512bb2a9ba0fbe248"><div class="ttname"><a href="class_space_dis.html#a6e1c94eedce7ef2512bb2a9ba0fbe248">SpaceDis::recon2DFaceCenter</a></div><div class="ttdeci">std::vector&lt; real &gt; recon2DFaceCenter(int i)</div><div class="ttdoc">二维界面中心重构函数</div><div class="ttdef"><b>定义</b> <a href="sp__recon_8cpp_source.html#l00281">sp_recon.cpp:281</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_a729d29ea9612005d7b9fa207a828e16c"><div class="ttname"><a href="class_space_dis.html#a729d29ea9612005d7b9fa207a828e16c">SpaceDis::reconLMethod</a></div><div class="ttdeci">std::vector&lt; real &gt;(SpaceDis::* reconLMethod)(int i)</div><div class="ttdef"><b>定义</b> <a href="_space_dis_8hpp_source.html#l00046">SpaceDis.hpp:47</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_a74b086f51297b06aadf206c123fc7670"><div class="ttname"><a href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670">SpaceDis::at</a></div><div class="ttdeci">real &amp; at(int, int)</div><div class="ttdef"><b>定义</b> <a href="_space_dis_8cpp_source.html#l00589">SpaceDis.cpp:589</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_a838cc5cbae33c24a30efd237898cc02c"><div class="ttname"><a href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c">SpaceDis::fluxAt</a></div><div class="ttdeci">real &amp; fluxAt(int, int)</div><div class="ttdef"><b>定义</b> <a href="_space_dis_8cpp_source.html#l00601">SpaceDis.cpp:601</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_aa123d38e0a2f5b844c4948c02cf53834"><div class="ttname"><a href="class_space_dis.html#aa123d38e0a2f5b844c4948c02cf53834">SpaceDis::calFluxBurgers</a></div><div class="ttdeci">void calFluxBurgers(int)</div><div class="ttdoc">计算Burgers方程的通量</div><div class="ttdef"><b>定义</b> <a href="#l00070">sp_flux.cpp:70</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_abfe367e73fb15973a560da82a948d32f"><div class="ttname"><a href="class_space_dis.html#abfe367e73fb15973a560da82a948d32f">SpaceDis::calFluxEuler2D</a></div><div class="ttdeci">void calFluxEuler2D(int)</div><div class="ttdoc">计算二维欧拉方程的界面通量</div><div class="ttdef"><b>定义</b> <a href="#l00178">sp_flux.cpp:178</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_ae19ef12b12b2a4bf0f37ed8519391de2"><div class="ttname"><a href="class_space_dis.html#ae19ef12b12b2a4bf0f37ed8519391de2">SpaceDis::calFluxConv</a></div><div class="ttdeci">void calFluxConv(int)</div><div class="ttdoc">计算对流项通量</div><div class="ttdef"><b>定义</b> <a href="#l00018">sp_flux.cpp:18</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_ae47bd370844f8417abbffa0d7c6c8b1b"><div class="ttname"><a href="class_space_dis.html#ae47bd370844f8417abbffa0d7c6c8b1b">SpaceDis::reconRMethod</a></div><div class="ttdeci">std::vector&lt; real &gt;(SpaceDis::* reconRMethod)(int i)</div><div class="ttdef"><b>定义</b> <a href="_space_dis_8hpp_source.html#l00046">SpaceDis.hpp:48</a></div></div>
+<div class="ttc" id="aclass_space_dis_html_aed0825c7ebdc0499cfab567b1a60198a"><div class="ttname"><a href="class_space_dis.html#aed0825c7ebdc0499cfab567b1a60198a">SpaceDis::norm</a></div><div class="ttdeci">std::array&lt; real, 3 &gt; norm</div><div class="ttdef"><b>定义</b> <a href="_space_dis_8hpp_source.html#l00079">SpaceDis.hpp:79</a></div></div>
+<div class="ttc" id="aflux_scheme_8cpp_html_a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae"><div class="ttname"><a href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae">R</a></div><div class="ttdeci">@ R</div><div class="ttdef"><b>定义</b> <a href="flux_scheme_8cpp_source.html#l00013">fluxScheme.cpp:13</a></div></div>
+<div class="ttc" id="aflux_scheme_8hpp_html"><div class="ttname"><a href="flux_scheme_8hpp.html">fluxScheme.hpp</a></div><div class="ttdoc">定义通量格式相关的函数和类</div></div>
+<div class="ttc" id="aflux_scheme_8hpp_html_aa0fbd8f4c90df1f1b64e3c6c98797d70"><div class="ttname"><a href="flux_scheme_8hpp.html#aa0fbd8f4c90df1f1b64e3c6c98797d70">roeFlux2DSym</a></div><div class="ttdeci">constexpr std::array&lt; real, 4 &gt; roeFlux2DSym(real rl, real rr, real ul, real ur, real vl, real vr, real pl, real pr, std::array&lt; real, 3 &gt; norm)</div><div class="ttdoc">计算二维Roe通量（对称版本）</div><div class="ttdef"><b>定义</b> <a href="flux_scheme_8hpp_source.html#l00486">fluxScheme.hpp:486</a></div></div>
+<div class="ttc" id="aflux_scheme_8hpp_html_abd346e16076a9a3a3d7a6c6a72127e68"><div class="ttname"><a href="flux_scheme_8hpp.html#abd346e16076a9a3a3d7a6c6a72127e68">roeFlux1D2</a></div><div class="ttdeci">std::vector&lt; real &gt; roeFlux1D2(real rl, real rr, real ul, real ur, real pl, real pr)</div><div class="ttdoc">计算一维Roe通量（第二种实现）</div><div class="ttdef"><b>定义</b> <a href="flux_scheme_8cpp_source.html#l00101">fluxScheme.cpp:101</a></div></div>
+<div class="ttc" id="aflux_scheme_8hpp_html_af8bc7f1334a9adf9902e914309dfefc5"><div class="ttname"><a href="flux_scheme_8hpp.html#af8bc7f1334a9adf9902e914309dfefc5">arr2</a></div><div class="ttdeci">std::array&lt; real, 2 &gt; arr2</div><div class="ttdef"><b>定义</b> <a href="flux_scheme_8hpp_source.html#l00015">fluxScheme.hpp:15</a></div></div>
+<div class="ttc" id="ainter_scheme_8hpp_html"><div class="ttname"><a href="inter_scheme_8hpp.html">interScheme.hpp</a></div></div>
+<div class="ttc" id="amacro_8hpp_html_a5f5a64ef503db0fc824df8320929b126"><div class="ttname"><a href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></div><div class="ttdeci">#define real</div><div class="ttdoc">实数类型别名</div><div class="ttdef"><b>定义</b> <a href="macro_8hpp_source.html#l00008">macro.hpp:8</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

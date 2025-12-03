@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/blockSolver.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a>  </div>
+  <div class="headertitle"><div class="title">blockSolver.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="initializer_8hpp_source.html">initializer.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cgnsio_8hpp_source.html">cgnsio.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_source_term_8hpp_source.html">SourceTerm.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+blockSolver.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="block_solver_8hpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2block_solver_8hpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2block_solver_8hpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2block_solver_8hpp">
+<area shape="rect" title=" " alt="" coords="643,5,890,80"/>
+<area shape="rect" href="initializer_8hpp.html" title="定义初始化器类，用于初始化网格、方程和边界条件" alt="" coords="534,128,631,155"/>
+<area shape="poly" title=" " alt="" coords="694,82,621,123,619,118,699,79"/>
+<area shape="rect" href="cgnsio_8hpp.html" title="定义CGNS输入输出类，用于网格和解数据的CGNS格式读写" alt="" coords="888,277,973,304"/>
+<area shape="poly" title=" " alt="" coords="792,78,917,265,911,264,790,83"/>
+<area shape="rect" href="_source_term_8hpp.html" title=" " alt="" coords="708,352,825,379"/>
+<area shape="poly" title=" " alt="" coords="768,78,769,337,764,335,765,82"/>
+<area shape="rect" href="block_8hpp.html" title="定义Block类，用于处理计算网格块的相关数据和操作" alt="" coords="849,352,926,379"/>
+<area shape="poly" title=" " alt="" coords="606,153,687,200,786,275,865,342,860,341,783,279,684,205,606,158"/>
+<area shape="rect" href="info_8hpp.html" title="定义求解器相关信息的类" alt="" coords="477,427,544,453"/>
+<area shape="poly" title=" " alt="" coords="531,149,441,166,385,181,326,201,269,227,216,261,169,303,133,353,128,366,133,377,154,393,188,406,277,424,377,433,464,438,459,439,376,438,277,429,186,411,152,398,128,380,123,366,128,351,165,299,212,257,266,223,324,196,383,176,440,161,536,146"/>
+<area shape="rect" href="equation_8hpp.html" title="定义方程类，用于处理守恒变量与原始变量之间的转换" alt="" coords="578,203,673,229"/>
+<area shape="poly" title=" " alt="" coords="591,153,613,190,608,189,589,158"/>
+<area shape="rect" href="_bnds_8hpp.html" title="定义边界条件管理类" alt="" coords="495,277,571,304"/>
+<area shape="poly" title=" " alt="" coords="580,153,544,264,540,261,577,157"/>
+<area shape="rect" href="sp__distributor_8hpp.html" title="定义空间分布器类，用于分发空间离散任务" alt="" coords="378,203,502,229"/>
+<area shape="poly" title=" " alt="" coords="555,157,480,197,477,193,560,154"/>
+<area shape="rect" href="data_8hpp.html" title=" " alt="" coords="584,427,656,453"/>
+<area shape="poly" title=" " alt="" coords="851,376,671,428,670,423,846,378"/>
+<area shape="rect" title=" " alt="" coords="902,427,975,453"/>
+<area shape="poly" title=" " alt="" coords="898,377,924,415,919,413,896,382"/>
+<area shape="rect" href="macro_8hpp.html" title="定义项目中使用的宏、枚举类型和通用函数" alt="" coords="469,501,552,528"/>
+<area shape="poly" title=" " alt="" coords="603,453,543,495,541,490,598,455"/>
+<area shape="rect" title=" " alt="" coords="41,576,92,603"/>
+<area shape="poly" title=" " alt="" coords="466,520,314,541,213,557,107,578,106,573,212,552,313,536,472,519"/>
+<area shape="rect" title=" " alt="" coords="872,576,933,603"/>
+<area shape="poly" title=" " alt="" coords="552,519,685,539,860,575,855,575,684,544,552,524"/>
+<area shape="rect" title=" " alt="" coords="956,576,1028,603"/>
+<area shape="poly" title=" " alt="" coords="552,517,719,537,944,575,938,575,718,543,552,523"/>
+<area shape="rect" title=" " alt="" coords="116,576,185,603"/>
+<area shape="poly" title=" " alt="" coords="471,523,352,547,200,578,199,573,351,542,466,524"/>
+<area shape="rect" title=" " alt="" coords="209,576,262,603"/>
+<area shape="poly" title=" " alt="" coords="472,526,278,578,277,573,466,526"/>
+<area shape="rect" title=" " alt="" coords="287,576,344,603"/>
+<area shape="poly" title=" " alt="" coords="479,528,360,575,358,569,474,529"/>
+<area shape="rect" title=" " alt="" coords="368,576,442,603"/>
+<area shape="poly" title=" " alt="" coords="495,528,437,569,435,564,490,529"/>
+<area shape="rect" title=" " alt="" coords="466,576,531,603"/>
+<area shape="poly" title=" " alt="" coords="510,527,505,563,501,559,506,530"/>
+<area shape="rect" title=" " alt="" coords="555,576,612,603"/>
+<area shape="poly" title=" " alt="" coords="524,526,563,566,558,564,522,531"/>
+<area shape="rect" title=" " alt="" coords="636,576,694,603"/>
+<area shape="poly" title=" " alt="" coords="538,526,627,569,622,569,537,531"/>
+<area shape="rect" title=" " alt="" coords="718,576,764,603"/>
+<area shape="poly" title=" " alt="" coords="553,526,705,575,700,575,552,531"/>
+<area shape="rect" title=" " alt="" coords="788,576,849,603"/>
+<area shape="poly" title=" " alt="" coords="552,522,776,575,771,576,552,527"/>
+<area shape="poly" title=" " alt="" coords="512,452,513,487,508,484,509,456"/>
+<area shape="poly" title=" " alt="" coords="627,228,623,413,618,410,623,232"/>
+<area shape="poly" title=" " alt="" coords="542,302,607,414,602,413,539,307"/>
+<area shape="poly" title=" " alt="" coords="533,303,517,413,512,410,529,306"/>
+<area shape="rect" href="one_d_bnd_8hpp.html" title=" " alt="" coords="380,352,481,379"/>
+<area shape="poly" title=" " alt="" coords="518,303,463,345,460,340,513,306"/>
+<area shape="poly" title=" " alt="" coords="464,377,575,420,570,421,463,382"/>
+<area shape="poly" title=" " alt="" coords="435,377,449,412,467,452,492,490,487,488,463,455,444,414,433,381"/>
+<area shape="poly" title=" " alt="" coords="445,377,488,417,483,416,444,382"/>
+<area shape="poly" title=" " alt="" coords="456,227,508,268,503,268,456,233"/>
+<area shape="rect" href="_space_dis_8hpp.html" title=" " alt="" coords="287,277,390,304"/>
+<area shape="poly" title=" " alt="" coords="420,232,370,270,367,266,424,228"/>
+<area shape="rect" title=" " alt="" coords="414,277,471,304"/>
+<area shape="poly" title=" " alt="" coords="441,227,444,263,439,261,439,232"/>
+<area shape="poly" title=" " alt="" coords="390,299,403,301,522,316,617,324,713,332,837,351,831,352,712,337,617,329,522,321,402,307,391,305"/>
+<area shape="poly" title=" " alt="" coords="341,302,350,340,358,359,370,377,390,394,414,408,464,429,459,429,411,413,387,399,366,380,353,362,345,341,338,307"/>
+<area shape="poly" title=" " alt="" coords="355,302,406,342,400,343,354,307"/>
+<area shape="rect" title=" " alt="" coords="142,352,306,379"/>
+<area shape="poly" title=" " alt="" coords="317,306,258,345,255,341,321,303"/>
+<area shape="rect" href="eigen_system_8hpp.html" title="定义特征系统相关的类，用于欧拉方程的特征分解" alt="" coords="5,427,128,453"/>
+<area shape="poly" title=" " alt="" coords="284,299,210,318,169,333,132,354,103,383,82,414,77,411,99,379,129,350,167,328,208,313,288,296"/>
+<area shape="poly" title=" " alt="" coords="128,449,456,502,453,507,128,454"/>
+<area shape="poly" title=" " alt="" coords="69,453,69,561,64,560,64,455"/>
+<area shape="poly" title=" " alt="" coords="925,303,905,341,901,337,921,306"/>
+<area shape="poly" title=" " alt="" coords="938,302,950,340,949,361,941,380,922,395,895,407,823,424,743,434,672,439,671,434,742,429,822,418,893,402,919,390,936,377,944,360,944,341,935,307"/>
+<area shape="poly" title=" " alt="" coords="955,302,983,322,1005,351,1010,377,1007,408,1000,437,990,455,958,474,913,489,859,500,798,508,672,515,567,517,567,512,672,510,797,502,858,495,912,484,956,470,986,451,995,435,1002,407,1005,377,1000,353,979,326,954,307"/>
+<area shape="poly" title=" " alt="" coords="947,302,968,323,985,351,988,369,983,386,964,417,961,413,979,384,982,369,980,353,964,327,945,307"/>
+<area shape="poly" title=" " alt="" coords="885,301,799,324,697,355,616,388,548,422,546,417,614,383,695,349,798,319,890,300"/>
+<area shape="poly" title=" " alt="" coords="743,378,660,422,658,417,738,380"/>
+<area shape="poly" title=" " alt="" coords="719,380,560,428,558,422,724,378"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="block_solver_8hpp__dep__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2block_solver_8hppdep" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2block_solver_8hppdep" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2block_solver_8hppdep">
+<area shape="rect" title=" " alt="" coords="140,5,386,80"/>
+<area shape="rect" href="block_solver_8cpp.html" title="BlockSolver类的实现文件" alt="" coords="5,128,252,203"/>
+<area shape="poly" title=" " alt="" coords="213,89,171,130,168,125,208,92"/>
+<area shape="rect" href="zone_main_8cpp.html" title="主程序入口文件，用于配置和运行CFD求解器" alt="" coords="276,128,522,203"/>
+<area shape="poly" title=" " alt="" coords="317,88,361,128,355,127,315,93"/>
+</map>
+</div>
+</div>
+<p><a href="block_solver_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:BlockSolver" id="r_BlockSolver"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block_solver.html">BlockSolver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">区块求解器类  <a href="class_block_solver.html#details">更多...</a><br /></td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

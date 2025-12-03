@@ -1,0 +1,11 @@
+<map id="L1_norm_error" name="L1_norm_error">
+<area shape="rect" id="Node000001" title="计算L1范数误差" alt="" coords="5,56,110,83"/>
+<area shape="rect" id="Node000002" href="$class_ghost_array.html#a44c41fac8c60c62387f8d1dc699a8d0b" title="获取物理域范围" alt="" coords="186,5,323,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,54,187,35,183,38,111,59"/>
+<area shape="rect" id="Node000003" href="$header_8_h.html#aea5366c55fbed763b55297cf942e3b67" title="精确解函数" alt="" coords="202,56,307,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,67,188,68,184,71,110,72"/>
+<area shape="rect" id="Node000005" href="$class_ghost_array.html#ae7fbe39f7e8c1e6222310f156da871b8" title="获取物理域点数" alt="" coords="158,107,351,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="110,80,187,101,183,103,110,85"/>
+<area shape="rect" id="Node000004" href="$header_8_h.html#aa33afed158244dc30f8b8e0e7322d1eb" title="精确导数函数" alt="" coords="399,56,487,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="307,67,386,69,380,70,308,72"/>
+</map>

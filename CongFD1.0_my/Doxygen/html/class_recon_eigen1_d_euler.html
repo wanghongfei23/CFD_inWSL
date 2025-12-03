@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: ReconEigen1DEuler类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="class_recon_eigen1_d_euler-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">ReconEigen1DEuler类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>一维欧拉方程特征重构器  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="reconstructor_8hpp_source.html">reconstructor.hpp</a>&gt;</code></p>
+<div class="dynheader">
+类 ReconEigen1DEuler 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_recon_eigen1_d_euler__inherit__graph.png" border="0" usemap="#a_recon_eigen1_d_euler_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_recon_eigen1_d_euler_inherit__map" id="a_recon_eigen1_d_euler_inherit__map">
+<area shape="rect" title="一维欧拉方程特征重构器" alt="" coords="5,80,145,107"/>
+<area shape="rect" href="class_reconstructor.html" title="重构器基类" alt="" coords="23,5,127,32"/>
+<area shape="poly" title=" " alt="" coords="77,46,78,80,72,79,73,50"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+ReconEigen1DEuler 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_recon_eigen1_d_euler__coll__graph.png" border="0" usemap="#a_recon_eigen1_d_euler_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_recon_eigen1_d_euler_coll__map" id="a_recon_eigen1_d_euler_coll__map">
+<area shape="rect" title="一维欧拉方程特征重构器" alt="" coords="5,180,145,207"/>
+<area shape="rect" href="class_reconstructor.html" title="重构器基类" alt="" coords="23,104,127,131"/>
+<area shape="poly" title=" " alt="" coords="77,144,78,180,72,179,73,148"/>
+<area shape="rect" href="class_data.html" title=" " alt="" coords="16,5,65,32"/>
+<area shape="poly" title=" " alt="" coords="42,45,52,79,67,103,61,104,47,81,42,50"/>
+<area shape="rect" href="class_info.html" title="存储和管理求解器的各种配置参数和状态信息" alt="" coords="89,5,133,32"/>
+<area shape="poly" title=" " alt="" coords="103,44,82,105,77,103,99,49"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa7525b33fe35b40c6c09d56d33706cea" id="r_aa7525b33fe35b40c6c09d56d33706cea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7525b33fe35b40c6c09d56d33706cea">recon</a> () override</td></tr>
+<tr class="memdesc:aa7525b33fe35b40c6c09d56d33706cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">实现特征重构方法  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_reconstructor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_reconstructor')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="class_reconstructor.html">Reconstructor</a></td></tr>
+<tr class="memitem:a743a1cfa612b9e98988c1d9003620ee0 inherit pub_methods_class_reconstructor" id="r_a743a1cfa612b9e98988c1d9003620ee0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reconstructor.html#a743a1cfa612b9e98988c1d9003620ee0">Reconstructor</a> (int n_, <a class="el" href="class_data.html">Data</a> *vals_, std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt; valsR_, std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt; bndL_, std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt; bndR_, <a class="el" href="class_info.html">Info</a> *info_, int i0_, int offset_)</td></tr>
+<tr class="memdesc:a743a1cfa612b9e98988c1d9003620ee0 inherit pub_methods_class_reconstructor"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_attribs_class_reconstructor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_reconstructor')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 属性 继承自 <a class="el" href="class_reconstructor.html">Reconstructor</a></td></tr>
+<tr class="memitem:ac8d039f44ff11c999eda990a0f19e410 inherit pub_attribs_class_reconstructor" id="r_ac8d039f44ff11c999eda990a0f19e410"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reconstructor.html#ac8d039f44ff11c999eda990a0f19e410">valsR</a></td></tr>
+<tr class="memdesc:ac8d039f44ff11c999eda990a0f19e410 inherit pub_attribs_class_reconstructor"><td class="mdescLeft">&#160;</td><td class="mdescRight">重构后数据指针  <br /></td></tr>
+<tr class="inherit_header pro_methods_class_reconstructor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_reconstructor')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 成员函数 继承自 <a class="el" href="class_reconstructor.html">Reconstructor</a></td></tr>
+<tr class="memitem:a8b25b73462e102db3ddd116d4b166968 inherit pro_methods_class_reconstructor" id="r_a8b25b73462e102db3ddd116d4b166968"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reconstructor.html#a8b25b73462e102db3ddd116d4b166968">at</a> (int i, int ivar)</td></tr>
+<tr class="memdesc:a8b25b73462e102db3ddd116d4b166968 inherit pro_methods_class_reconstructor"><td class="mdescLeft">&#160;</td><td class="mdescRight">访问指定位置的数据  <br /></td></tr>
+<tr class="inherit_header pro_attribs_class_reconstructor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_reconstructor')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="class_reconstructor.html">Reconstructor</a></td></tr>
+<tr class="memitem:a66c6198fa5176182649607fc8aab07a6 inherit pro_attribs_class_reconstructor" id="r_a66c6198fa5176182649607fc8aab07a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reconstructor.html#a66c6198fa5176182649607fc8aab07a6">vals</a></td></tr>
+<tr class="memdesc:a66c6198fa5176182649607fc8aab07a6 inherit pro_attribs_class_reconstructor"><td class="mdescLeft">&#160;</td><td class="mdescRight">原始数据指针  <br /></td></tr>
+<tr class="memitem:a9bb276ff67294319787f772283ea0ae2 inherit pro_attribs_class_reconstructor" id="r_a9bb276ff67294319787f772283ea0ae2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reconstructor.html#a9bb276ff67294319787f772283ea0ae2">i0</a></td></tr>
+<tr class="memdesc:a9bb276ff67294319787f772283ea0ae2 inherit pro_attribs_class_reconstructor"><td class="mdescLeft">&#160;</td><td class="mdescRight">起始索引  <br /></td></tr>
+<tr class="memitem:ac2430c439f9a6875df2e494ca7888e67 inherit pro_attribs_class_reconstructor" id="r_ac2430c439f9a6875df2e494ca7888e67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reconstructor.html#ac2430c439f9a6875df2e494ca7888e67">offset</a></td></tr>
+<tr class="memdesc:ac2430c439f9a6875df2e494ca7888e67 inherit pro_attribs_class_reconstructor"><td class="mdescLeft">&#160;</td><td class="mdescRight">偏移量  <br /></td></tr>
+<tr class="memitem:ab202475bfe240bb142c24f6a7d80cfd1 inherit pro_attribs_class_reconstructor" id="r_ab202475bfe240bb142c24f6a7d80cfd1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reconstructor.html#ab202475bfe240bb142c24f6a7d80cfd1">bndL</a></td></tr>
+<tr class="memdesc:ab202475bfe240bb142c24f6a7d80cfd1 inherit pro_attribs_class_reconstructor"><td class="mdescLeft">&#160;</td><td class="mdescRight">左边界数据指针  <br /></td></tr>
+<tr class="memitem:a8894e1ab90f4717369e61a16baf8cb90 inherit pro_attribs_class_reconstructor" id="r_a8894e1ab90f4717369e61a16baf8cb90"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reconstructor.html#a8894e1ab90f4717369e61a16baf8cb90">bndR</a></td></tr>
+<tr class="memdesc:a8894e1ab90f4717369e61a16baf8cb90 inherit pro_attribs_class_reconstructor"><td class="mdescLeft">&#160;</td><td class="mdescRight">右边界数据指针  <br /></td></tr>
+<tr class="memitem:aad0483c1732f4208dc81a5d5e2c2e562 inherit pro_attribs_class_reconstructor" id="r_aad0483c1732f4208dc81a5d5e2c2e562"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_info.html">Info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reconstructor.html#aad0483c1732f4208dc81a5d5e2c2e562">info</a></td></tr>
+<tr class="memdesc:aad0483c1732f4208dc81a5d5e2c2e562 inherit pro_attribs_class_reconstructor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Info对象指针  <br /></td></tr>
+<tr class="memitem:a4324084761bcca779531effbaf8dcac8 inherit pro_attribs_class_reconstructor" id="r_a4324084761bcca779531effbaf8dcac8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reconstructor.html#a4324084761bcca779531effbaf8dcac8">n</a></td></tr>
+<tr class="memdesc:a4324084761bcca779531effbaf8dcac8 inherit pro_attribs_class_reconstructor"><td class="mdescLeft">&#160;</td><td class="mdescRight">网格点数  <br /></td></tr>
+<tr class="memitem:abec90adb5e2747714752bfcfe505116e inherit pro_attribs_class_reconstructor" id="r_abec90adb5e2747714752bfcfe505116e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reconstructor.html#abec90adb5e2747714752bfcfe505116e">nval</a></td></tr>
+<tr class="memdesc:abec90adb5e2747714752bfcfe505116e inherit pro_attribs_class_reconstructor"><td class="mdescLeft">&#160;</td><td class="mdescRight">变量数  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>一维欧拉方程特征重构器 </p>
+<p>该类实现了一维欧拉方程的特征重构方法。 </p>
+
+<p class="definition">在文件 <a class="el" href="reconstructor_8hpp_source.html">reconstructor.hpp</a> 第 <a class="el" href="reconstructor_8hpp_source.html#l00063">63</a> 行定义.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="aa7525b33fe35b40c6c09d56d33706cea" name="aa7525b33fe35b40c6c09d56d33706cea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7525b33fe35b40c6c09d56d33706cea">&#9670;&#160;</a></span>recon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReconEigen1DEuler::recon </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现特征重构方法 </p>
+<p>对一维欧拉方程进行特征重构，使用WENO5方法。 </p>
+
+<p>实现了 <a class="el" href="class_reconstructor.html#abf689d43976910d2c97fe2880362adf6">Reconstructor</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="reconstructor_8cpp_source.html">reconstructor.cpp</a> 第 <a class="el" href="reconstructor_8cpp_source.html#l00058">58</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_recon_eigen1_d_euler_aa7525b33fe35b40c6c09d56d33706cea_cgraph.png" border="0" usemap="#aclass_recon_eigen1_d_euler_aa7525b33fe35b40c6c09d56d33706cea_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_recon_eigen1_d_euler_aa7525b33fe35b40c6c09d56d33706cea_cgraph" id="aclass_recon_eigen1_d_euler_aa7525b33fe35b40c6c09d56d33706cea_cgraph">
+<area shape="rect" title="实现特征重构方法" alt="" coords="5,89,153,132"/>
+<area shape="rect" href="class_reconstructor.html#a8b25b73462e102db3ddd116d4b166968" title="访问指定位置的数据" alt="" coords="211,5,333,32"/>
+<area shape="poly" title=" " alt="" coords="115,86,200,42,217,37,212,40,202,46,118,91"/>
+<area shape="rect" href="classeigensystem_euler1_d.html#abb845806e1b40826070c360c68c06cf9" title="将特征变量转换为原始变量" alt="" coords="201,56,343,99"/>
+<area shape="poly" title=" " alt="" coords="152,95,188,91,183,93,154,100"/>
+<area shape="rect" href="classeigensystem_euler1_d.html#a431139e75e5790ebbc9e0708f18de130" title="将原始变量转换为特征变量" alt="" coords="201,123,343,165"/>
+<area shape="poly" title=" " alt="" coords="153,121,188,128,183,130,154,126"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a1004857948f9a53352dafae4d0126e4e" title=" " alt="" coords="217,189,327,216"/>
+<area shape="poly" title=" " alt="" coords="117,130,202,175,217,183,212,183,200,180,116,135"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/<a class="el" href="reconstructor_8hpp_source.html">reconstructor.hpp</a></li>
+<li>//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/src/<a class="el" href="reconstructor_8cpp_source.html">reconstructor.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
