@@ -77,46 +77,6 @@ static std::map<InterMethod,std::string> disStr={
 };
 
 /**
- * @brief 算例选择菜单
- */
-void displayMenu() {
-    std::cout << "\n=== CFD Solver Case Selection ===\n";
-    std::cout << "1D Cases:\n";
-    std::cout << "  0 - Sod\n";
-    std::cout << "  1 - ShuOsher\n";
-    std::cout << "  2 - Lax\n";
-    std::cout << "  3 - Sedov\n";
-    std::cout << "  4 - Woodward_Colella\n";
-    std::cout << "  5 - Double_sparse_wave\n\n";
-    
-    std::cout << "2D Cases:\n";
-    std::cout << "  10 - 2D_Riemann_1\n";
-    std::cout << "  11 - 2D_Riemann_2\n";
-    std::cout << "  12 - implosion\n";
-    std::cout << "  13 - RTI\n";
-    std::cout << "  14 - Double_Mach\n";
-    std::cout << "  15 - 2D_Riemann_3\n";
-    std::cout << "  16 - KHI\n\n";
-    
-    std::cout << "Enter your choice (0-5 for 1D, 10-16 for 2D): ";
-}
-
-/**
- * @brief 获取用户选择的算例
- * @return 用户选择的算例编号
- */
-int getUserChoice() {
-    int choice;
-    while (!(std::cin >> choice) || 
-           (choice < 0 || (choice > 5 && choice < 10) || choice > 16)) {
-        std::cout << "Invalid input. Please enter a valid choice (0-5 for 1D, 10-16 for 2D): ";
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    }
-    return choice;
-}
-
-/**
  * @brief 根据用户选择配置算例参数
  * @param[in,out] info Info对象指针
  * @param[in] choice 用户选择的算例编号
@@ -292,13 +252,13 @@ int main()
     // --------------------------- 差分方法选项 --------------------------- 
     info->diffMethod = MND6;
     // info->diffMethod = TRAD6;
+    // --------------------------- 源项类型选项 --------------------------- 
+    // info->sourceType=GRAVITY;
     // --------------------------- 插值方法选项 --------------------------- 
     // info->interMethod=LINEAR5;
     // info->interMethod=WCNSZ5Char;
-    // info->BVD=true;
     // info->interMethod = NICEST5;
     // info->interMethod=WCNS5CONG;
-    // info->sourceType=GRAVITY;
 
     // info->interMethod = WCNS5; //weno5_JSchen
     // info->interMethod = WCNSZ5; //weno5_Z
@@ -332,7 +292,6 @@ int main()
     // info->interMethod = TCNSCongA;
 
     // --------------------------- 算例选项 --------------------------- 
-    // 算例选择 - 修改这里来选择不同的算例
     const int presetCase = 
         // 0;  // Sod
         // 1;  // ShuOsher
