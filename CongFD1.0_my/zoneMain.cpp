@@ -262,8 +262,8 @@ int main()
 
     // info->interMethod = WCNS5; //weno5_JSchen
     // info->interMethod = WCNSZ5; //weno5_Z
-    info->interMethod = TCNS5; //Teno5_Z
-    // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
+    // info->interMethod = TCNS5; //Teno5_Z
+    info->interMethod = WCNS5CONGZ;//Teno5_CongZ
     // info->interMethod = WHFTCNSA;
     // info->interMethod = WHFTCNSASF002;
     // info->interMethod = WHFTCNSAH002;
@@ -295,15 +295,16 @@ int main()
     const int presetCase = 
         // 0;  // Sod
         // 1;  // ShuOsher
-        2;  // Lax
+        // 2;  // Lax
         // 3;  // Sedov
         // 4;  // Woodward_Colella
         // 5;  // Double_sparse_wave
+
         // 10; // 2D_Riemann_1
         // 11; // 2D_Riemann_2
         // 12; // implosion
         // 13; // RTI
-        // 14; // Double_Mach
+        14; // Double_Mach
         // 15; // 2D_Riemann_3
         // 16; // KHI
     

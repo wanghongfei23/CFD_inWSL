@@ -183,6 +183,11 @@ void SolverType::initReconer()
                 Recon5OrderFaceCenter<whf_TCNS_AS_myF203_NoS>());
             break;
 
+        case new_WHFTCNSASF202_NoS:
+            reconer = pro::make_proxy<ProxyDataManipulator>(
+                Recon5OrderFaceCenter<whf_TCNS_AS_myF202_NoS>());
+            break;
+
 
 
 
@@ -363,6 +368,11 @@ void SolverType::initReconer()
             case new_WHFTCNSASF203_NoS:
                 reconer = pro::make_proxy<ProxyDataManipulator>(
                     Recon5Order1DEulerEig<whf_TCNS_AS_myF203_NoS>());
+                break;
+
+            case new_WHFTCNSASF202_NoS:
+                reconer = pro::make_proxy<ProxyDataManipulator>(
+                    Recon5Order1DEulerEig<whf_TCNS_AS_myF202_NoS>());
                 break;
 
 
@@ -546,6 +556,11 @@ void SolverType::initReconer()
             case new_WHFTCNSASF203_NoS:
                 reconer = pro::make_proxy<ProxyDataManipulator>(
                     Recon5Order2DEulerEig<whf_TCNS_AS_myF203_NoS>());
+                break;
+
+            case new_WHFTCNSASF202_NoS:
+                reconer = pro::make_proxy<ProxyDataManipulator>(
+                    Recon5Order2DEulerEig<whf_TCNS_AS_myF202_NoS>());
                 break;
 
 

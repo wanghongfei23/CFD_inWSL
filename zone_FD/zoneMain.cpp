@@ -71,10 +71,11 @@ int main()
     // 【王鸿飞】end插值格式（4.0）手搓及优化
 
     // 【王鸿飞】begin插值格式（F203）)手搓及优化
-    info->interMethod= new_TCNS5 ;
+    // info->interMethod= new_TCNS5 ;
     // info->interMethod= new_WHFTCNSA ;
-    // info->interMethod= new_WCNS5CONGZ ;
+    info->interMethod= new_WCNS5CONGZ ;
     // info->interMethod= new_WHFTCNSASF203_NoS ;
+    // info->interMethod= new_WHFTCNSASF202_NoS ;
 
     // 【王鸿飞】end插值格式（F203）)手搓及优化
 

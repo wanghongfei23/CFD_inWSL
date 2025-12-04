@@ -195,7 +195,8 @@ static std::map<InterMethod,std::string> disStr={
     {new_TCNS5,"TENO"},
     {new_WHFTCNSA,"TENO-A"},
     {new_WCNS5CONGZ,"TENO-S"},
-    {new_WHFTCNSASF203_NoS,"TENO-AS-myF203_NoS"}
+    {new_WHFTCNSASF203_NoS,"TENO-AS-myF203_NoS"},
+    {new_WHFTCNSASF202_NoS,"TENO-AS-myF202_NoS"}
 };
 // 定义静态映射表，将算例映射到字符串
 static std::map<int,std::string> exampleStr1D={

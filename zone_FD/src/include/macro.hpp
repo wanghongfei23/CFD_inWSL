@@ -73,7 +73,8 @@ enum InterMethod {FIRSTORDER,
     new_TCNS5,
     new_WHFTCNSA,
     new_WCNS5CONGZ,
-    new_WHFTCNSASF203_NoS
+    new_WHFTCNSASF203_NoS,
+    new_WHFTCNSASF202_NoS
 }; 
 // 【王鸿飞】end
 

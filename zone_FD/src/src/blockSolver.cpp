@@ -208,24 +208,24 @@ void BlockSolver::stepsLoopCFL()
         // 【王鸿飞】begin辅助工具
         
         // 将相同信息写入txt文件，使用与CGNS文件相同的命名方式，但不包含时间戳
-        // std::string base_filename = info->filename();
-        // // 移除时间戳部分（从最后一个" - t="开始的部分）
-        // size_t pos = base_filename.rfind(" - t=");
-        // if (pos != std::string::npos) {
-        //     base_filename = base_filename.substr(0, pos) + ".txt";
-        // } else {
-        //     // 如果没有找到时间戳模式，则直接替换扩展名
-        //     pos = base_filename.find(".cgns");
-        //     if (pos != std::string::npos) {
-        //         base_filename.replace(pos, 5, ".txt");
-        //     }
-        // }
+        std::string base_filename = info->filename();
+        // 移除时间戳部分（从最后一个" - t="开始的部分）
+        size_t pos = base_filename.rfind(" - t=");
+        if (pos != std::string::npos) {
+            base_filename = base_filename.substr(0, pos) + " - rholinf.txt";
+        } else {
+            // 如果没有找到时间戳模式，则直接替换扩展名
+            pos = base_filename.find(".cgns");
+            if (pos != std::string::npos) {
+                base_filename.replace(pos, 5, ".txt");
+            }
+        }
         
-        // std::ofstream log_file(base_filename, std::ios::app);
-        // if (log_file.is_open()) {
-        //     log_file << output_str;
-        //     log_file.close();
-        // }
+        std::ofstream log_file(base_filename, std::ios::app);
+        if (log_file.is_open()) {
+            log_file << output_str;
+            log_file.close();
+        }
         // 【王鸿飞】end辅助工具
     }
     

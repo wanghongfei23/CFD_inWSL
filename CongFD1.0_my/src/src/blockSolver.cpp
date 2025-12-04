@@ -4,6 +4,7 @@
  */
 
 #include "blockSolver.hpp"
+#include <fstream>
 
 /**
  * @brief BlockSolver类的默认构造函数
@@ -164,8 +165,11 @@ void BlockSolver::DTS_Euler(real dt)
             (*cons)[i]=(*cons)[i]+tempRhs[i];
         }
         maxres=tempRhs.getLinf(0);
-        std::cout<<std::format("time = {:.4f} dt={:.10f} imStep={} rhoL2 = {}  \n"
-                                ,info->t,dt,imStep,maxres);
+        // 修复：使用传统的iostream方式替代std::format以避免编译错误
+        std::cout << "time = " << std::fixed << std::setprecision(4) << info->t 
+                  << " dt=" << std::setprecision(10) << dt 
+                  << " imStep=" << imStep 
+                  << " rhoL2 = " << std::setprecision(4) << maxres << "  \n";
     }while(imStep++<info->maxImplicitStep && maxres>1e-7);
 
 
@@ -245,7 +249,9 @@ void BlockSolver::stepsLoop()
         real dt=info->dt;
         solve(dt);
         timesteps++;
-        std::cout<<std::format("time = {:.4f}  rhoL2 = {:.4f}  \n",info->t,rhs->getL2(0));
+        // 修复：使用传统的iostream方式替代std::format以避免编译错误
+        std::cout << "time = " << std::fixed << std::setprecision(4) << info->t 
+                  << "  rhoL2 = " << rhs->getL2(0) << "  \n";
     }
     outputGrid();
     outputPrim();
@@ -302,7 +308,40 @@ void BlockSolver::stepsLoopCFL()
         timesteps++;                                                          // 时间步数计数器增加
 
         // 输出当前时间、时间步长和密度Linf范数
-        std::cout<<std::format("time = {:.4f} dt={:.10f}  rhoLinf = {:.4f}  \n",info->t,dt,rhs->getLinf(0)); // 输出当前时间、时间步长和守恒变量第0个分量的Linf范数
+        // std::cout<<std::format("time = {:.4f} dt={:.10f}  rhoLinf = {:.4f}  \n",info->t,dt,rhs->getLinf(0)); // 输出当前时间、时间步长和守恒变量第0个分量的Linf范数
+        
+        // 修复：使用传统的ostringstream方式替代std::format以避免编译错误
+        std::ostringstream oss;
+        oss << std::fixed << std::setprecision(4) << "time = " << info->t 
+            << " dt=" << std::setprecision(10) << dt 
+            << "  rhoLinf = " << std::setprecision(4) << rhs->getLinf(0) << "  \n";
+        std::string output_str = oss.str();
+        std::cout << output_str;
+
+        // // 【王鸿飞】begin辅助工具
+        
+        // // 将相同信息写入txt文件，使用与CGNS文件相同的命名方式，但不包含时间戳
+        // std::string base_filename = info->filename();
+        // // 移除时间戳部分（从最后一个" - t="开始的部分）
+        // size_t pos = base_filename.rfind(" - t=");
+        // if (pos != std::string::npos) {
+        //     // 修复：使用构造函数替代直接赋值以避免consteval错误
+        //     base_filename = std::string(base_filename.begin(), base_filename.begin() + pos) + " - rholinf.txt";
+        // } else {
+        //     // 如果没有找到时间戳模式，则直接替换扩展名
+        //     pos = base_filename.find(".cgns");
+        //     if (pos != std::string::npos) {
+        //         base_filename.replace(pos, 5, ".txt");
+        //     }
+        // }
+        
+        // std::ofstream log_file(base_filename, std::ios::app);
+        // if (log_file.is_open()) {
+        //     log_file << output_str;
+        //     log_file.close();
+        // }
+        // // 【王鸿飞】end辅助工具
+
     }
     // 求解完成后输出最终结果
     outputGrid();                                                             // 求解完成后输出最终网格信息
