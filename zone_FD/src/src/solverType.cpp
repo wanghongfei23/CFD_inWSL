@@ -1,4 +1,9 @@
 #include "solverType.hpp"
+
+/**
+ * @brief 拷贝构造函数实现
+ * @param origin 被拷贝的SolverType对象
+ */
 SolverType::SolverType(const SolverType& origin)
 {
     info = origin.info;
@@ -8,6 +13,10 @@ SolverType::SolverType(const SolverType& origin)
     differ = origin.differ;
 }
 
+/**
+ * @brief 带参数的构造函数实现
+ * @param info_ 指向Info对象的指针，包含求解器配置信息
+ */
 SolverType::SolverType(Info* info_)
 {
     info = info_;
@@ -17,6 +26,11 @@ SolverType::SolverType(Info* info_)
     initDiffer();
 }
 
+/**
+ * @brief 初始化重构器的实现
+ * 
+ * 根据方程类型和插值方法选择合适的重构器进行初始化
+ */
 void SolverType::initReconer()
 {
     switch (info->eqType) {

@@ -8,21 +8,32 @@
 #include "reconstructor5order.hpp"
 #include "solvePointFlux.hpp"
 
-/*for ProxyDataManipulator*/
+/// @brief 定义求解器的Solve方法调度
 PRO_DEF_MEM_DISPATCH(Solve, solve);
+
+/// @brief 定义求解器的Init方法调度
 PRO_DEF_MEM_DISPATCH(Init, init);
+
+/// @brief 定义设置法向量常量的方法调度
 PRO_DEF_MEM_DISPATCH(SetConstNorm, setConstNorm);
+
+/// @brief 定义获取数据的方法调度
 PRO_DEF_MEM_DISPATCH(GetData, getData);
+
+/// @brief 定义检查方法的调度
 PRO_DEF_MEM_DISPATCH(Check, check);
 
-/*for ProxySolvePointSolver additionally*/
+/// @brief 定义设置NlNr的方法调度
 PRO_DEF_MEM_DISPATCH(SetNlNr, setNlNr);
 
-/*for ProxyFluxPointSolver*/
-
-/*for ProxyDiffer*/
+/// @brief 定义设置常量H的方法调度
 PRO_DEF_MEM_DISPATCH(SetConstantH, setConstantH);
 
+/**
+ * @brief 数据操作代理结构体
+ * 
+ * 定义了数据操作代理的接口，包括求解、初始化、设置法向量等操作
+ */
 struct ProxyDataManipulator
     : pro::facade_builder ::add_convention<Solve, void()>::
           add_convention<Check, void()>::
@@ -31,6 +42,11 @@ struct ProxyDataManipulator
                       add_convention<GetData, std::shared_ptr<Data>()>::
                           support_copy<pro::constraint_level::nontrivial>::build { };
 
+/**
+ * @brief 求解点求解器代理结构体
+ * 
+ * 定义了求解点求解器代理的接口，扩展了ProxyDataManipulator的功能
+ */
 struct ProxySolvePointSolver
     : pro::facade_builder ::add_convention<Solve, void()>::
           add_convention<Check, void()>::
@@ -40,6 +56,11 @@ struct ProxySolvePointSolver
                           add_convention<GetData, std::shared_ptr<Data>()>::
                               support_copy<pro::constraint_level::nontrivial>::build { };
 
+/**
+ * @brief 差分代理结构体
+ * 
+ * 定义了差分代理的接口，用于处理数据差分操作
+ */
 struct ProxyDiffer
     : pro::facade_builder ::
           add_convention<Check, void()>::
@@ -48,6 +69,11 @@ struct ProxyDiffer
                       add_convention<Solve, void()>::
                           support_copy<pro::constraint_level::nontrivial>::build { };
 
+/**
+ * @brief 通量点求解器代理结构体
+ * 
+ * 定义了通量点求解器代理的接口
+ */
 struct ProxyFluxPointSolver
     : pro::facade_builder ::
           add_convention<Check, void()>::
@@ -57,21 +83,57 @@ struct ProxyFluxPointSolver
                           add_convention<GetData, std::shared_ptr<Data>()>::
                               support_copy<pro::constraint_level::nontrivial>::build { };
 
+/**
+ * @brief 求解器类型类
+ * 
+ * SolverType类负责管理不同类型的求解器组件，包括重构器、求解点求解器、
+ * 通量点求解器和差分器，并根据配置信息初始化这些组件。
+ */
 class SolverType {
 public:
+    /**
+     * @brief 带参数的构造函数
+     * @param info_ 指向Info对象的指针，包含求解器配置信息
+     */
     SolverType(Info* info_);
+    
+    /**
+     * @brief 默认构造函数
+     */
     SolverType() {};
-    SolverType(const SolverType&);
-    pro::proxy<ProxyDataManipulator> reconer;
-    pro::proxy<ProxySolvePointSolver> solvePointSolver;
-    pro::proxy<ProxyFluxPointSolver> fluxPointSolver;
-    pro::proxy<ProxyDiffer> differ;
+    
+    /**
+     * @brief 拷贝构造函数
+     * @param origin 被拷贝的SolverType对象
+     */
+    SolverType(const SolverType& origin);
+    
+    pro::proxy<ProxyDataManipulator> reconer;          ///< 重构器代理
+    pro::proxy<ProxySolvePointSolver> solvePointSolver; ///< 求解点求解器代理
+    pro::proxy<ProxyFluxPointSolver> fluxPointSolver;   ///< 通量点求解器代理
+    pro::proxy<ProxyDiffer> differ;                     ///< 差分器代理
 
 private:
-    Info* info;
+    Info* info; ///< 指向Info对象的指针，包含求解器配置信息
+    
+    /**
+     * @brief 初始化重构器
+     */
     void initReconer();
+    
+    /**
+     * @brief 初始化求解点求解器
+     */
     void initSolvePointSolver();
+    
+    /**
+     * @brief 初始化通量点求解器
+     */
     void initFluxPointSolver();
+    
+    /**
+     * @brief 初始化差分器
+     */
     void initDiffer();
 };
 

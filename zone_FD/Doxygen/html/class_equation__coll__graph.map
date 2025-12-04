@@ -1,5 +1,5 @@
 <map id="Equation" name="Equation">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,147,78,173"/>
-<area shape="rect" id="Node000002" href="$class_data.html" title=" " alt="" coords="17,5,66,32"/>
+<area shape="rect" id="Node000001" title="方程类，用于处理守恒变量和基本变量之间的转换" alt="" coords="5,147,78,173"/>
+<area shape="rect" id="Node000002" href="$class_data.html" title="数据管理类，用于存储和操作计算数据" alt="" coords="17,5,66,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,47,44,146,39,146,39,48"/>
 </map>

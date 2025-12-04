@@ -65,7 +65,7 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSASF202_2S,"TENO-AS-myF202_2S"},
     {WHFTCNSASF202_NoS,"TENO-AS-myF202_NoS"},
     {WHFTCNSASF203_NoS,"TENO-AS-myF203_NoS"},
-    {temp011,"temp_name_011"},
+    {WHFTCNSASF213_NoS,"TENO-AS-myF213_NoS"},
     {temp012,"temp_name_012"},
     {temp013,"temp_name_013"},
     {temp014,"temp_name_014"},
@@ -262,7 +262,7 @@ int main()
 
     // info->interMethod = WCNS5; //weno5_JSchen
     // info->interMethod = WCNSZ5; //weno5_Z
-    info->interMethod = TCNS5; //Teno5_Z
+    // info->interMethod = TCNS5; //Teno5_Z
     // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
     // info->interMethod = WHFTCNSA;
     // info->interMethod = WHFTCNSASF002;
@@ -280,7 +280,7 @@ int main()
     // info->interMethod = WHFTCNSASF202_2S;
     // info->interMethod = WHFTCNSASF202_NoS;
     // info->interMethod = WHFTCNSASF203_NoS;
-    // info->interMethod = temp011;
+    info->interMethod = WHFTCNSASF213_NoS;
     // info->interMethod = temp012;
     // info->interMethod = temp013;
     // info->interMethod = temp014;
@@ -304,8 +304,8 @@ int main()
         // 11; // 2D_Riemann_2
         // 12; // implosion
         // 13; // RTI
-        14; // Double_Mach
-        // 15; // 2D_Riemann_3
+        // 14; // Double_Mach
+        15; // 2D_Riemann_3
         // 16; // KHI
     
     // 移除交互式选择，直接使用预设的算例编号
@@ -412,5 +412,6 @@ int main()
     timeinfo << "timesteps= " << bSolver.timesteps << "   Finish\n";
     timeinfo << "solvertime= " << timesss << '\n';
 
-    output_CTA();
+    // output_CTA();
+
 }

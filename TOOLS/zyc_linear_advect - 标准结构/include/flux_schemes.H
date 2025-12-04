@@ -289,6 +289,104 @@ inline real_t Linear_5th(std::array<real_t, 5> q)
 }
 
 
+inline real_t whf_TcnsN_myASF213_NoS(std::array<real_t, 5> q) 
+{
+    global_string = "whf_TcnsN_myASF213_NoS";
+
+    // 常量定义
+    constexpr real_t xi = 1e-3;           // 小参数
+    constexpr real_t Cr = 0.24;           // 切换参数
+    constexpr real_t C = 1.0;             // 常数
+    constexpr real_t epsilon_A = (0.9 * Cr) / (1 - 0.9 * Cr) * xi * xi;  // 自适应参数ε_A
+
+    // 解包输入值
+    real_t q_im2 = q[0]; // q_{i-2}
+    real_t q_im1 = q[1]; // q_{i-1}
+    real_t q_i   = q[2]; // q_i
+    real_t q_ip1 = q[3]; // q_{i+1}
+    real_t q_ip2 = q[4]; // q_{i+2}
+
+    // 计算差分值
+    real_t dq_im3_2 = q_im1 - q_im2; // Δq_{i-3/2}
+    real_t dq_im1_2 = q_i - q_im1;   // Δq_{i-1/2}
+    real_t dq_ip1_2 = q_ip1 - q_i;   // Δq_{i+1/2}
+    real_t dq_ip3_2 = q_ip2 - q_ip1; // Δq_{i+3/2}
+
+    // 计算局部光滑因子
+    real_t beta0 = powq(q_im2 - 2*q_im1 + q_i, 2) + 
+                 0.25 * powq(q_im2 - 4*q_im1 + 3*q_i, 2);
+    
+    real_t beta1 = powq(q_im1 - 2*q_i + q_ip1, 2) + 
+                 0.25 * powq(q_im1 - q_ip1, 2);
+    
+    real_t beta2 = powq(q_i - 2*q_ip1 + q_ip2, 2) + 
+                 0.25 * powq(3*q_i - 4*q_ip1 + q_ip2, 2);
+
+    // 计算全局光滑因子
+    real_t tau = std::abs(beta2 - beta0);
+
+    // 计算η值
+    real_t eta_im1 = (std::abs(2*dq_im1_2*dq_im3_2) + epsilon_A) / 
+                   (powq(dq_im1_2, 2) + powq(dq_im3_2, 2) + epsilon_A);
+    
+    real_t eta_i = (std::abs(2*dq_ip1_2*dq_im1_2) + epsilon_A) / 
+                 (powq(dq_ip1_2, 2) + powq(dq_im1_2, 2) + epsilon_A);
+    
+    real_t eta_ip1 = (std::abs(2*dq_ip3_2*dq_ip1_2) + epsilon_A) / 
+                   (powq(dq_ip3_2, 2) + powq(dq_ip1_2, 2) + epsilon_A);
+    
+    real_t eta_min = std::min({eta_im1, eta_i, eta_ip1});
+
+    // 计算m参数
+    real_t min = std::min(1.0Q, eta_min / Cr);
+    real_t m = 1.0Q - min;
+
+    // 计算C_T_prime（自适应阈值参数）
+    real_t C_T_prime = -0.370178*m*m*m + 0.454387*m*m - 0.033595*m + 0.030802;
+
+    // 确定β_j
+    real_t beta_j = std::min({beta0, beta1, beta2});
+
+    // 计算δ_k
+    int delta0 = (beta_j * tau < (C_T_prime * tau - C * (1 - C_T_prime) * beta_j) * beta0) ? 0 : 1;
+    int delta1 = (beta_j * tau < (C_T_prime * tau - C * (1 - C_T_prime) * beta_j) * beta1) ? 0 : 1;
+    int delta2 = (beta_j * tau < (C_T_prime * tau - C * (1 - C_T_prime) * beta_j) * beta2) ? 0 : 1;
+
+    // 根据δ值选择插值系数
+    real_t a0, a1, a2, a3, a4;
+    
+    if (delta0 == 1 && delta1 == 1 && delta2 == 1) {
+        a0 = 3.0/128; a1 = -5.0/32; a2 = 45.0/64; a3 = 15.0/32; a4 = -5.0/128;
+    } 
+    else if (delta0 == 0 && delta1 == 1 && delta2 == 1) {
+        a0 = 0; a1 = -1.0/16; a2 = 9.0/16; a3 = 9.0/16; a4 = -1.0/16;
+    } 
+    else if ((delta0 == 1 && delta1 == 0 && delta2 == 1) || 
+             (delta0 == 0 && delta1 == 0 && delta2 == 1)) {
+        a0 = 0; a1 = 0; a2 = 3.0/8; a3 = 3.0/4; a4 = -1.0/8;
+    } 
+    else if (delta0 == 1 && delta1 == 1 && delta2 == 0) {
+        a0 = 1.0/16; a1 = -5.0/16; a2 = 15.0/16; a3 = 5.0/16; a4 = 0;
+    } 
+    else if (delta0 == 0 && delta1 == 1 && delta2 == 0) {
+        a0 = 0; a1 = -1.0/8; a2 = 3.0/4; a3 = 3.0/8; a4 = 0;
+    } 
+    else if (delta0 == 1 && delta1 == 0 && delta2 == 0) {
+        a0 = 3.0/8; a1 = -5.0/4; a2 = 15.0/8; a3 = 0; a4 = 0;
+    } 
+    else { // (0,0,0)
+        a0 = 0; a1 = 0; a2 = 1; a3 = 0; a4 = 0;
+    }
+
+    // 计算最终插值结果
+    return a0*q_im2 + a1*q_im1 + a2*q_i + a3*q_ip1 + a4*q_ip2;
+}
+
+
+
+
+
+
 
 
 

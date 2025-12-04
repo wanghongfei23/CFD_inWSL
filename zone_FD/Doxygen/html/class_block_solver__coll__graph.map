@@ -8,16 +8,16 @@
 <area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="369,181,418,150,477,123,543,106,609,95,720,89,716,91,610,100,544,111,479,128,421,155,372,185"/>
 <area shape="rect" id="Node000009" href="$class_sp_distributor.html" title=" " alt="" coords="816,610,913,636"/>
 <area shape="poly" id="edge13_Node000009_Node000003" title=" " alt="" coords="355,230,408,309,489,413,539,467,594,518,655,564,720,602,768,617,818,624,813,625,767,622,718,607,652,569,591,522,535,470,485,416,404,312,355,235"/>
-<area shape="rect" id="Node000010" href="$class_solver_type.html" title=" " alt="" coords="608,702,695,728"/>
+<area shape="rect" id="Node000010" href="$class_solver_type.html" title="求解器类型类" alt="" coords="608,702,695,728"/>
 <area shape="poly" id="edge23_Node000010_Node000003" title=" " alt="" coords="340,232,347,317,354,372,366,431,384,492,408,552,440,608,480,657,504,674,527,679,553,680,585,687,618,701,613,701,584,692,553,686,527,684,502,679,477,661,435,611,403,554,379,494,361,432,349,373,342,318,339,237"/>
 <area shape="rect" id="Node000019" href="$class_source_term.html" title=" " alt="" coords="819,240,910,267"/>
 <area shape="poly" id="edge27_Node000019_Node000003" title=" " alt="" coords="374,201,589,191,707,193,756,197,793,204,824,219,851,240,846,240,822,224,791,210,755,203,707,198,590,197,377,206"/>
-<area shape="rect" id="Node000004" href="$class_block.html" title=" " alt="" coords="838,338,892,364"/>
+<area shape="rect" id="Node000004" href="$class_block.html" title="网格块类，用于存储和操作计算网格信息" alt="" coords="838,338,892,364"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="907,348,1040,350,1034,352,908,354"/>
-<area shape="rect" id="Node000005" href="$class_data.html" title=" " alt="" coords="627,435,676,462"/>
+<area shape="rect" id="Node000005" href="$class_data.html" title="数据管理类，用于存储和操作计算数据" alt="" coords="627,435,676,462"/>
 <area shape="poly" id="edge24_Node000001_Node000005" title=" " alt="" coords="690,460,737,474,793,484,854,487,884,484,912,476,962,453,1006,422,1043,389,1068,366,1072,363,1046,393,1009,426,965,458,914,482,884,489,854,492,792,490,736,479,691,465"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="670,421,691,398,717,378,748,365,780,356,840,351,835,353,781,362,750,370,720,383,694,402,673,425"/>
-<area shape="rect" id="Node000007" href="$class_equation.html" title=" " alt="" coords="828,395,901,422"/>
+<area shape="rect" id="Node000007" href="$class_equation.html" title="方程类，用于处理守恒变量和基本变量之间的转换" alt="" coords="828,395,901,422"/>
 <area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="691,450,740,451,791,444,819,434,846,421,842,424,821,439,793,450,740,457,692,455"/>
 <area shape="poly" id="edge11_Node000009_Node000005" title=" " alt="" coords="661,474,683,527,700,553,720,576,760,594,818,612,813,612,758,599,717,580,695,556,679,529,659,479"/>
 <area shape="poly" id="edge26_Node000019_Node000005" title=" " alt="" coords="654,418,660,387,672,351,690,314,717,284,740,269,767,259,821,252,816,254,768,264,743,273,720,288,695,317,677,353,665,389,659,421"/>

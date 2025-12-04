@@ -1,5 +1,5 @@
 <map id="Data::getLinf" name="Data::getLinf">
-<area shape="rect" id="Node000001" title=" " alt="" coords="451,5,547,32"/>
+<area shape="rect" id="Node000001" title="计算指定变量的L∞范数" alt="" coords="451,5,547,32"/>
 <area shape="rect" id="Node000002" href="$class_block_solver.html#a7c8af668de7608ff082765bdf1b4278c" title=" " alt="" coords="240,5,403,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="433,19,404,21,403,16,438,19"/>
 <area shape="rect" id="Node000003" href="$class_block_solver.html#a736738d2e404c1e60714d603303a5004" title=" " alt="" coords="5,5,192,32"/>

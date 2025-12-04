@@ -4,45 +4,89 @@
 #include <vector>
 #include <algorithm>
 
-// 一维Roe通量计算相关类型定义
+/// @brief 一维Roe通量计算相关类型定义
 typedef std::array<real,2> arr2;
 
-// 一维Roe通量计算函数
+/**
+ * @brief 一维Roe通量计算函数
+ * 
+ * 使用Roe平均方法计算一维Euler方程的数值通量
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧速度
+ * @param ur 右侧速度
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @return 数值通量数组
+ */
 std::vector<real> roeFlux1D(real rl,real rr,real ul,real ur,real pl,real pr);
+
+/**
+ * @brief 一维Roe通量计算函数（第二种实现）
+ * 
+ * 使用另一种方法实现的一维Roe数值通量计算
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧速度
+ * @param ur 右侧速度
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @return 数值通量数组
+ */
 std::vector<real> roeFlux1D2(real rl,real rr,real ul,real ur,real pl,real pr);
 
-// 一维HLLC通量计算函数
+/**
+ * @brief 一维HLLC通量计算函数
+ * 
+ * 使用HLLC（Harten-Lax-van Leer-Contact）黎曼求解器计算一维Euler方程的数值通量
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧速度
+ * @param ur 右侧速度
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @return 数值通量数组
+ */
 constexpr std::array<real,3> HLLCFlux1D(real rl,real rr,real ul,real ur,real pl,real pr)
 {
     //reference:https://zhuanlan.zhihu.com/p/583555029
     enum{
-    L,
-    R
+    L, ///< 左状态标识
+    R  ///< 右状态标识
     };
+    
+    /// @brief 总焓值数组
     arr2 H={pl/rl*GAMMA/(GAMMA-1)+(ul*ul)/2
            ,pr/rr*GAMMA/(GAMMA-1)+(ur*ur)/2};
+           
+    /// @brief 气体常数乘以温度数组
     arr2 RT={pl/rl
            ,pr/rr};
+           
+    /// @brief 结果数组
     std::array<real,3> res;
     real gamma=GAMMA;
-    real cl=std::sqrt(gamma*RT[L]);
-    real cr=std::sqrt(gamma*RT[R]);
+    real cl=std::sqrt(gamma*RT[L]); ///< 左侧声速
+    real cr=std::sqrt(gamma*RT[R]); ///< 右侧声速
 
     real uBar=(ul+ur)/2,cBar=(cl+cr)/2;
-    real SL=std::min(ur-cr,ul-cl);
-    real SR=std::max(ul+cl,ur+cr);
+    real SL=std::min(ur-cr,ul-cl);  ///< 左特征速度
+    real SR=std::max(ul+cl,ur+cr);  ///< 右特征速度
 
     real Sstar=((pr-pl)
                 +(rl*ul*(SL-ul)-rr*ur*(SR-ur)))/
-               (rl*(SL-ul)-rr*(SR-ur));
+               (rl*(SL-ul)-rr*(SR-ur)); ///< 接触间断速度
+               
     if (SL>=0)
     {
+        // 左状态完全控制通量
         res[0]=rl*ul;
         res[1]=rl*ul*ul+pl;
         res[2]=rl*H[L]*ul;
     }
     else if (Sstar>=0)
     {
+        // 左星状态控制通量
         real pStar=pl+rl*(SL-ul)*(Sstar-ul);
         real U[3]={rl,rl*ul,pl/(gamma-1)+rl*ul*ul/2};
         real F[3]={rl*ul,rl*ul*ul+pl,rl*H[L]*ul};
@@ -55,6 +99,7 @@ constexpr std::array<real,3> HLLCFlux1D(real rl,real rr,real ul,real ur,real pl,
     }
     else if (SR>=0)
     {
+        // 右星状态控制通量
         real pStar=pr+rr*(SR-ur)*(Sstar-ur);
         real U[3]={rr,rr*ur,pr/(gamma-1)+rr*ur*ur/2};
         real F[3]={rr*ur,rr*ur*ur+pr,rr*H[R]*ur};
@@ -66,6 +111,7 @@ constexpr std::array<real,3> HLLCFlux1D(real rl,real rr,real ul,real ur,real pl,
     }
     else
     {
+        // 右状态完全控制通量
         res[0]=rr*ur;
         res[1]=rr*ur*ur+pr;
         res[2]=rr*H[R]*ur;
@@ -73,12 +119,26 @@ constexpr std::array<real,3> HLLCFlux1D(real rl,real rr,real ul,real ur,real pl,
     return res;
 }
 
-// 二维HLLC通量计算函数
+/**
+ * @brief 二维HLLC通量计算函数
+ * 
+ * 使用HLLC（Harten-Lax-van Leer-Contact）黎曼求解器计算二维Euler方程的数值通量
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧x方向速度
+ * @param ur 右侧x方向速度
+ * @param vl 左侧y方向速度
+ * @param vr 右侧y方向速度
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @param norm 法向量数组
+ * @return 数值通量数组
+ */
 constexpr std::array<real,4> HLLCFlux2D(real rl,real rr,real ul,real ur,real vl,real vr,real pl,real pr,std::array<real,3> norm)
 {
     enum{
-    L,
-    R
+    L, ///< 左状态标识
+    R  ///< 右状态标识
     };
     //reference:https://zhuanlan.zhihu.com/p/583555029
     std::array<real,4> res;
@@ -87,27 +147,31 @@ constexpr std::array<real,4> HLLCFlux2D(real rl,real rr,real ul,real ur,real vl,
     //     std::cout<<"fluxScheme error: positivity break\n";
     // }
 
+     /// @brief 总焓值数组
      arr2 H;
      H[L]=(ul*ul+vl*vl)/2+pl/rl*GAMMA/(GAMMA-1);
      H[R]=(ur*ur+vr*vr)/2+pr/rr*GAMMA/(GAMMA-1);
 
+     /// @brief 法向速度数组
     arr2 Vn={(norm[1]>norm[0])?vl:ul,(norm[1]>norm[0])?vr:ur};
     real gamma=GAMMA;
-    real cl=std::sqrt((gamma-1)*pl/rl*GAMMA/(GAMMA-1));
-    real cr=std::sqrt((gamma-1)*pr/rr*GAMMA/(GAMMA-1));
+    real cl=std::sqrt((gamma-1)*pl/rl*GAMMA/(GAMMA-1)); ///< 左侧声速
+    real cr=std::sqrt((gamma-1)*pr/rr*GAMMA/(GAMMA-1)); ///< 右侧声速
 
     real uBar=(Vn[L]+Vn[R])/2,cBar=(cl+cr)/2;
     // real SL=std::min(uBar-cBar,Vn[L]-cl);
     // real SR=std::max(uBar+cBar,Vn[R]+cr);
 
-    real SL=std::min(Vn[R]-cr,Vn[L]-cl);
-    real SR=std::max(Vn[L]+cl,Vn[R]+cr);
+    real SL=std::min(Vn[R]-cr,Vn[L]-cl); ///< 左特征速度
+    real SR=std::max(Vn[L]+cl,Vn[R]+cr); ///< 右特征速度
 
     real Sstar=((pr-pl)+(rl*Vn[L]*(SL-Vn[L])
                 -rr*Vn[R]*(SR-Vn[R])))/
-               (rl*(SL-Vn[L])-rr*(SR-Vn[R]));
+               (rl*(SL-Vn[L])-rr*(SR-Vn[R])); ///< 接触间断速度
+               
     if (SL>0)
         {
+            // 左状态完全控制通量
             res[0]=rl         *Vn[L];
             res[1]=ul*Vn[L]*rl+pl*norm[0];
             res[2]=vl*Vn[L]*rl+pl*norm[1];
@@ -115,6 +179,7 @@ constexpr std::array<real,4> HLLCFlux2D(real rl,real rr,real ul,real ur,real vl,
         }
     else if (Sstar>0)
     {
+        // 左星状态控制通量
         real pStar=pl+rl*(SL-Vn[L])*(Sstar-Vn[L]);
         real U[4]={rl,
                 rl*ul,
@@ -133,6 +198,7 @@ constexpr std::array<real,4> HLLCFlux2D(real rl,real rr,real ul,real ur,real vl,
     }
     else if (SR>0)
     {
+        // 右星状态控制通量
         real pStar=pr+rr*(SR-Vn[R])*(Sstar-Vn[R]);
         real U[4]={rr
                 ,rr*ur
@@ -154,6 +220,7 @@ constexpr std::array<real,4> HLLCFlux2D(real rl,real rr,real ul,real ur,real vl,
     }
     else
     {
+        // 右状态完全控制通量
         res[0]=rr     *Vn[R];
         res[1]=ur*Vn[R]*rr+pr*norm[0];
         res[2]=vr*Vn[R]*rr+pr*norm[1];
@@ -163,12 +230,26 @@ constexpr std::array<real,4> HLLCFlux2D(real rl,real rr,real ul,real ur,real vl,
     return res;
 }
 
-// 二维HLLC通量计算函数（第二种实现）
+/**
+ * @brief 二维HLLC通量计算函数（第二种实现）
+ * 
+ * 使用另一种方法实现的二维HLLC数值通量计算
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧x方向速度
+ * @param ur 右侧x方向速度
+ * @param vl 左侧y方向速度
+ * @param vr 右侧y方向速度
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @param norm 法向量数组
+ * @return 数值通量数组
+ */
 constexpr std::array<real,4> HLLCFlux2D2(real rl,real rr,real ul,real ur,real vl,real vr,real pl,real pr,std::array<real,3> norm)
 {
     enum{
-    L,
-    R
+    L, ///< 左状态标识
+    R  ///< 右状态标识
     };
     std::array<real,4> res;
     // if(pl<0 || pr<0 || rr<0 || rl<0)
@@ -176,20 +257,23 @@ constexpr std::array<real,4> HLLCFlux2D2(real rl,real rr,real ul,real ur,real vl
     //     std::cout<<"fluxScheme error: positivity break\n";
     // }
 
+     /// @brief 总焓值数组
      arr2 H;
      H[L]=(ul*ul+vl*vl)/2+pl/rl*GAMMA/(GAMMA-1);
      H[R]=(ur*ur+vr*vr)/2+pr/rr*GAMMA/(GAMMA-1);
 
+     /// @brief 法向速度数组
     arr2 Vn={(norm[1]>norm[0])?vl:ul,(norm[1]>norm[0])?vr:ur};
     real gamma=GAMMA;
-    real cl=std::sqrt(pl/rl*gamma);
-    real cr=std::sqrt(pr/rr*gamma);
+    real cl=std::sqrt(pl/rl*gamma); ///< 左侧声速
+    real cr=std::sqrt(pr/rr*gamma); ///< 右侧声速
     
     real rBar=(rl+rr)/2,cBar=(cl+cr)/2;
     real ps=std::max(0.0,(pl+pr)/2-rBar*cBar*(Vn[R]-Vn[L])/2);
     real ql=(ps<=pl)? 1.0 : std::sqrt(1.0+(gamma+1.0)/(2.0*gamma)*(ps/pl-1.0));
     real qr=(ps<=pr)? 1.0 : std::sqrt(1.0+(gamma+1.0)/(2.0*gamma)*(ps/pr-1.0));
-    real SL=Vn[L]-cl*ql,SR=Vn[R]+cr*qr;
+    real SL=Vn[L]-cl*ql; ///< 左特征速度
+    real SR=Vn[R]+cr*qr; ///< 右特征速度
 
     // real uBar=(Vn[L]+Vn[R])/2,cBar=(cl+cr)/2;
     // real SL=std::min(uBar-cBar,Vn[L]-cl);
@@ -308,12 +392,26 @@ constexpr std::array<real,4> HLLCFlux2D2(real rl,real rr,real ul,real ur,real vl
     return res;
 }
 
-// 二维Roe通量计算函数
+/**
+ * @brief 二维Roe通量计算函数
+ * 
+ * 使用Roe平均方法计算二维Euler方程的数值通量
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧x方向速度
+ * @param ur 右侧x方向速度
+ * @param vl 左侧y方向速度
+ * @param vr 右侧y方向速度
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @param norm 法向量数组
+ * @return 数值通量数组
+ */
 constexpr std::array<real,4> roeFlux2D(real rl,real rr,real ul,real ur,real vl,real vr,real pl,real pr,std::array<real,3> norm)
 {
     enum{
-    L,
-    R
+    L, ///< 左状态标识
+    R  ///< 右状态标识
     };
     std::array<real,4> FcL,FcR;
     std::array<real,4> result;
@@ -397,12 +495,26 @@ constexpr std::array<real,4> roeFlux2D(real rl,real rr,real ul,real ur,real vl,r
     return result;
 }
 
-// 二维Roe通量计算函数（对称版本）
+/**
+ * @brief 二维Roe通量计算函数（对称版本）
+ * 
+ * 使用另一种方法实现的二维Roe数值通量计算
+ * @param rl 左侧密度
+ * @param rr 右侧密度
+ * @param ul 左侧x方向速度
+ * @param ur 右侧x方向速度
+ * @param vl 左侧y方向速度
+ * @param vr 右侧y方向速度
+ * @param pl 左侧压力
+ * @param pr 右侧压力
+ * @param norm 法向量数组
+ * @return 数值通量数组
+ */
 constexpr std::array<real,4> roeFlux2DSym(real rl,real rr,real ul,real ur,real vl,real vr,real pl,real pr,std::array<real,3> norm)
 {
     enum{
-    L,
-    R
+    L, ///< 左状态标识
+    R  ///< 右状态标识
     };
     std::array<real,4> FcL,FcR;
     std::array<real,4> result;
@@ -496,7 +608,14 @@ constexpr std::array<real,4> roeFlux2DSym(real rl,real rr,real ul,real ur,real v
     return result;
 }
 
-// 二维欧拉方程通量函数
+/**
+ * @brief 二维欧拉方程通量函数
+ * 
+ * 计算二维Euler方程的数值通量
+ * @param q 保守变量数组
+ * @param norm 法向量数组
+ * @return 数值通量数组
+ */
 constexpr std::vector<real> fEuler2D(const std::vector<real>& q ,std::array<real,3> norm)
 {
     real r=q[0],u=q[1],v=q[2],p=q[3];
@@ -513,7 +632,14 @@ constexpr std::vector<real> fEuler2D(const std::vector<real>& q ,std::array<real
     return res;
 }
 
-// 一维欧拉方程通量函数
+/**
+ * @brief 一维欧拉方程通量函数
+ * 
+ * 计算一维Euler方程的数值通量
+ * @param q 保守变量数组
+ * @param norm 法向量数组
+ * @return 数值通量数组
+ */
 constexpr std::vector<real> fEuler1D(const std::vector<real>& q ,std::array<real,3> norm)
 {
     real r=q[0],u=q[1],p=q[2];
@@ -526,7 +652,14 @@ constexpr std::vector<real> fEuler1D(const std::vector<real>& q ,std::array<real
     return res;
 }
 
-// 默认通量函数
+/**
+ * @brief 默认通量函数
+ * 
+ * 默认的数值通量计算函数
+ * @param q 保守变量数组
+ * @param norm 法向量数组
+ * @return 数值通量数组
+ */
 constexpr std::vector<real> fDefault(const std::vector<real>& q ,std::array<real,3> norm)
 {
     return {q[0]};

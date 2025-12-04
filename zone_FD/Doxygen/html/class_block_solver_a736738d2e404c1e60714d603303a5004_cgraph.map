@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,183,192,209"/>
 <area shape="rect" id="Node000002" href="$class_block_solver.html#a7c8af668de7608ff082765bdf1b4278c" title=" " alt="" coords="240,81,403,108"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,180,277,112,275,117,131,184"/>
-<area shape="rect" id="Node000004" href="$class_data.html#abb641c4a4830c60d4396201388dd9faf" title=" " alt="" coords="671,81,757,108"/>
+<area shape="rect" id="Node000004" href="$class_data.html#abb641c4a4830c60d4396201388dd9faf" title="获取网格点数量" alt="" coords="671,81,757,108"/>
 <area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="192,189,426,173,541,159,623,143,653,130,679,118,684,116,655,135,624,148,542,165,427,178,193,194"/>
 <area shape="rect" id="Node000007" href="$class_block_solver.html#a0f29b8074f5d43e176ac656f084a025d" title=" " alt="" coords="242,208,401,235"/>
 <area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="192,204,229,210,223,211,192,209"/>
@@ -10,9 +10,9 @@
 <area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="138,207,241,244,263,254,258,253,239,249,137,213"/>
 <area shape="rect" id="Node000003" href="$class_block_solver.html#a8306ec4e9850e33c897eac0bf401fe87" title=" " alt="" coords="451,5,623,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="355,78,450,41,475,36,470,38,452,47,357,83"/>
-<area shape="rect" id="Node000005" href="$class_data.html#a24c913514c9a6c3dd579d723c4d7f970" title=" " alt="" coords="489,56,585,83"/>
+<area shape="rect" id="Node000005" href="$class_data.html#a24c913514c9a6c3dd579d723c4d7f970" title="计算指定变量的L∞范数" alt="" coords="489,56,585,83"/>
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="403,83,476,76,471,78,404,88"/>
-<area shape="rect" id="Node000006" href="$class_data.html#a8aa18eb21e69ff516764c1f2da4adea7" title=" " alt="" coords="483,107,591,133"/>
+<area shape="rect" id="Node000006" href="$class_data.html#a8aa18eb21e69ff516764c1f2da4adea7" title="将所有数据设置为零" alt="" coords="483,107,591,133"/>
 <area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="403,102,470,111,465,112,404,107"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="592,30,624,42,681,73,676,73,622,46,592,35"/>
 </map>

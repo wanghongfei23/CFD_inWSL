@@ -1,6 +1,11 @@
 #include"block.hpp"
 
-
+/**
+ * @brief 输出网格为CGNS格式文件的实现
+ * 
+ * 将当前网格信息写入CGNS格式文件，便于后续可视化或与其他软件交互。
+ * 文件名为"grid_c.cgns"，使用Structured网格类型。
+ */
 void Block::outputCgns()
 {
    cgsize_t isize[3][dim];
@@ -51,29 +56,51 @@ void Block::outputCgns()
    cg_close(index_file);
 }
 
-
+/**
+ * @brief 获取单元中心坐标的实现
+ * 
+ * 通过索引获取指定单元中心的坐标值
+ * @param ic 单元索引
+ * @param idim 坐标维度索引（0:x, 1:y, 2:z）
+ * @return 指定单元在指定维度上的坐标值
+ */
 real Block::operator()(int ic,int idim)
 {
     return coorCel(ic,idim);
 }
 
-
+/**
+ * @brief 获取内部单元最大索引数组的实现
+ * @return 包含各维度内部单元最大索引的数组
+ */
 std::array<int,3> Block::getICMax()
 {
    return icMax;
 }
 
+/**
+ * @brief 获取网格最大索引数组的实现
+ * @return 包含各维度网格最大索引的数组
+ */
 std::array<int,3> Block::getIMax()
 {
    return iMax;
 }
 
-
+/**
+ * @brief 获取网格维度的实现
+ * @return 网格维度（1、2或3维）
+ */
 int Block::getDim()
 {
    return dim;
 }
 
+/**
+ * @brief 获取单元中心坐标数据的实现
+ * @param idim 坐标维度索引（0:x, 1:y, 2:z）
+ * @return 包含所有单元在指定维度上坐标值的向量
+ */
 std::vector<real> Block::getCellCoor(int idim)
 {
    assert(idim<=dim);
@@ -86,6 +113,12 @@ std::vector<real> Block::getCellCoor(int idim)
    return res;
    
 }
+
+/**
+ * @brief 获取顶点坐标数据的实现
+ * @param idim 坐标维度索引（0:x, 1:y, 2:z）
+ * @return 包含所有顶点在指定维度上坐标值的向量
+ */
 std::vector<real> Block::getVertexCoor(int idim)
 {
    std::vector<real> res;

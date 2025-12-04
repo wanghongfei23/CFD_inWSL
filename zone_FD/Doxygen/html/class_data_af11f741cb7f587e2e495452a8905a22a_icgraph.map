@@ -1,5 +1,5 @@
 <map id="Data::Data" name="Data::Data">
-<area shape="rect" id="Node000001" title=" " alt="" coords="139,5,224,32"/>
-<area shape="rect" id="Node000002" href="$class_data.html#aa7a5bd3a55e7e04904169e19d2d8c260" title=" " alt="" coords="5,5,91,32"/>
+<area shape="rect" id="Node000001" title="默认构造函数" alt="" coords="139,5,224,32"/>
+<area shape="rect" id="Node000002" href="$class_data.html#a97a934453f0247f44163fdea87356d92" title="拷贝构造函数" alt="" coords="5,5,91,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,19,91,21,91,16,126,18"/>
 </map>

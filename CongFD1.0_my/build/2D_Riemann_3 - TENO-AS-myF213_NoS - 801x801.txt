@@ -1,0 +1,5 @@
+32
+totaltime= 738677   Finish
+time= 1.60841e+06   Finish
+timesteps= 1946   Finish
+solvertime= 699584

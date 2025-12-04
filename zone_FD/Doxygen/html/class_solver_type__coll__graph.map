@@ -1,5 +1,5 @@
 <map id="SolverType" name="SolverType">
-<area shape="rect" id="Node000001" title=" " alt="" coords="608,183,695,209"/>
+<area shape="rect" id="Node000001" title="求解器类型类" alt="" coords="608,183,695,209"/>
 <area shape="rect" id="Node000002" href="$classpro_1_1proxy.html" title=" " alt="" coords="222,29,454,56"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="452,57,521,78,554,93,586,111,605,127,622,146,645,183,640,181,618,149,601,131,583,116,552,98,519,83,452,63"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="8,5,170,64"/>

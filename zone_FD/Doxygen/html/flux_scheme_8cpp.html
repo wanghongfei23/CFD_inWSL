@@ -137,7 +137,9 @@ fluxScheme.cpp 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:af0fccd8af44a93f8ddab0c6808808977" id="r_af0fccd8af44a93f8ddab0c6808808977"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0fccd8af44a93f8ddab0c6808808977">roeFlux1D</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr)</td></tr>
+<tr class="memdesc:af0fccd8af44a93f8ddab0c6808808977"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维Roe通量计算函数  <br /></td></tr>
 <tr class="memitem:abd346e16076a9a3a3d7a6c6a72127e68" id="r_abd346e16076a9a3a3d7a6c6a72127e68"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd346e16076a9a3a3d7a6c6a72127e68">roeFlux1D2</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rr, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ul, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> ur, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pl, <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> pr)</td></tr>
+<tr class="memdesc:abd346e16076a9a3a3d7a6c6a72127e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维Roe通量计算函数（第二种实现）  <br /></td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
 <a id="a896a24d7b296481089656376b763af56" name="a896a24d7b296481089656376b763af56"></a>
@@ -200,6 +202,20 @@ fluxScheme.cpp 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>一维Roe通量计算函数 </p>
+<p>使用Roe平均方法计算一维Euler方程的数值通量 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rl</td><td>左侧密度 </td></tr>
+    <tr><td class="paramname">rr</td><td>右侧密度 </td></tr>
+    <tr><td class="paramname">ul</td><td>左侧速度 </td></tr>
+    <tr><td class="paramname">ur</td><td>右侧速度 </td></tr>
+    <tr><td class="paramname">pl</td><td>左侧压力 </td></tr>
+    <tr><td class="paramname">pr</td><td>右侧压力 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>数值通量数组 </dd></dl>
+
 <p class="definition">在文件 <a class="el" href="flux_scheme_8cpp_source.html">fluxScheme.cpp</a> 第 <a class="el" href="flux_scheme_8cpp_source.html#l00012">12</a> 行定义.</p>
 
 </div>
@@ -242,6 +258,20 @@ fluxScheme.cpp 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>一维Roe通量计算函数（第二种实现） </p>
+<p>使用另一种方法实现的一维Roe数值通量计算 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rl</td><td>左侧密度 </td></tr>
+    <tr><td class="paramname">rr</td><td>右侧密度 </td></tr>
+    <tr><td class="paramname">ul</td><td>左侧速度 </td></tr>
+    <tr><td class="paramname">ur</td><td>右侧速度 </td></tr>
+    <tr><td class="paramname">pl</td><td>左侧压力 </td></tr>
+    <tr><td class="paramname">pr</td><td>右侧压力 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>数值通量数组 </dd></dl>
 
 <p class="definition">在文件 <a class="el" href="flux_scheme_8cpp_source.html">fluxScheme.cpp</a> 第 <a class="el" href="flux_scheme_8cpp_source.html#l00077">77</a> 行定义.</p>
 

@@ -186,7 +186,7 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSASF202_2S,"TENO-AS-myF202_2S"},
     {WHFTCNSASF202_NoS,"TENO-AS-myF202_NoS"},
     {WHFTCNSASF203_NoS,"TENO-AS-myF203_NoS"},
-    {temp011,"temp_name_011"},
+    {WHFTCNSASF213_NoS,"TENO-AS-myF213_NoS"},
     {temp012,"temp_name_012"},
     {temp013,"temp_name_013"},
     {temp014,"temp_name_014"},

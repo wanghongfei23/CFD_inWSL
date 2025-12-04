@@ -1,11 +1,11 @@
 <map id="Initializer::initEqution" name="Initializer::initEqution">
 <area shape="rect" id="Node000001" title="初始化方程求解器 设置方程的网格信息、守恒变量和原始变量等" alt="" coords="5,31,148,57"/>
-<area shape="rect" id="Node000002" href="$class_data.html#acd4c4d14cfe2200e56facebaa90e23cc" title=" " alt="" coords="196,5,324,32"/>
+<area shape="rect" id="Node000002" href="$class_data.html#a26aec5d0cf46d9a216e59f7ffdfd59a6" title="设置变量名称" alt="" coords="196,5,324,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,32,183,29,178,31,149,37"/>
 <area shape="rect" id="Node000003" href="$class_initializer.html#aef20d88cde205c951030f8729571b887" title="初始化网格和解数据 根据不同的方程类型和测试案例设置初始条件" alt="" coords="202,56,318,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,51,189,59,184,60,148,57"/>
-<area shape="rect" id="Node000004" href="$class_data.html#a790be2b9e906588d66cbe38a7517ad7e" title=" " alt="" coords="372,31,479,57"/>
+<area shape="rect" id="Node000004" href="$class_data.html#a7a58af4c9e90bf447c8b2306c28e7655" title="设置数据值" alt="" coords="372,31,479,57"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="318,58,354,55,359,54,319,63"/>
-<area shape="rect" id="Node000005" href="$class_data.html#a8f649131b0965c4f66c036dcc50f1173" title=" " alt="" coords="385,81,466,108"/>
+<area shape="rect" id="Node000005" href="$class_data.html#a8f649131b0965c4f66c036dcc50f1173" title="获取数据总大小" alt="" coords="385,81,466,108"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="318,76,372,86,367,86,318,81"/>
 </map>

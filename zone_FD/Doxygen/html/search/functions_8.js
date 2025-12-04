@@ -4,7 +4,7 @@ var searchData=
   ['index_1',['index',['../macro_8hpp.html#acbdeb8f60ef3c1554f0b86541676e6d2',1,'macro.hpp']]],
   ['indirect_5fconv_5fdispatcher_2',['indirect_conv_dispatcher',['../namespacepro_1_1details.html#a18062591d2fa3ffa1e5045a9ad82e3a7',1,'pro::details']]],
   ['info_3',['Info',['../class_info.html#a89823cdd427a9dfdf3d2e43d938222bd',1,'Info']]],
-  ['init_4',['init',['../class_data.html#a2f36c0fe368a68ca3f952304b65538ed',1,'Data::init()'],['../class_data_manipulater.html#a0646649c555d2cdfb04cee8865db4e3d',1,'DataManipulater::init()'],['../class_differ.html#ac224b3a3646d2ddb1b3c8dc57c7df556',1,'Differ::init()'],['../class_flux_point_solver.html#aa2cb01b92387db38d74b494186099b18',1,'FluxPointSolver::init()']]],
+  ['init_4',['init',['../class_data.html#a5f20f4c04493df0e5103357561e9e6b5',1,'Data::init()'],['../class_data_manipulater.html#a0646649c555d2cdfb04cee8865db4e3d',1,'DataManipulater::init()'],['../class_differ.html#ac224b3a3646d2ddb1b3c8dc57c7df556',1,'Differ::init()'],['../class_flux_point_solver.html#aa2cb01b92387db38d74b494186099b18',1,'FluxPointSolver::init()']]],
   ['initbnds_5',['initBnds',['../class_initializer.html#ac79a58b8ad2735b658b66aa7df4686a6',1,'Initializer']]],
   ['initdiffer_6',['initDiffer',['../class_solver_type.html#a71d2de3c57798bf93a663a91555838e0',1,'SolverType']]],
   ['initdoublemachbnds_7',['initDoubleMachBnds',['../class_initializer.html#af17ef5c544d4e34dd7f87e0cc661c48e',1,'Initializer']]],

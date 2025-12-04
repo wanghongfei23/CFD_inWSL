@@ -1,5 +1,5 @@
 <map id="类继承关系图" name="类继承关系图">
 <area shape="rect" id="Node000000" title=" " alt="" coords="5,5,200,112"/>
-<area shape="rect" id="Node000001" href="$struct_proxy_flux_point_solver.html" title=" " alt="" coords="248,45,395,72"/>
+<area shape="rect" id="Node000001" href="$struct_proxy_flux_point_solver.html" title="通量点求解器代理结构体" alt="" coords="248,45,395,72"/>
 <area shape="poly" id="edge105_Node000000_Node000001" title=" " alt="" coords="215,56,250,58,245,59,215,61"/>
 </map>

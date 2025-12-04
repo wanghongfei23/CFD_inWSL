@@ -81,14 +81,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>数据读取器类，用于访问Data类中的特定数据  
+ <a href="#details">更多...</a></p>
+
 <p><code>#include &lt;<a class="el" href="data_8hpp_source.html">data.hpp</a>&gt;</code></p>
 <div class="dynheader">
 DataReader 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_data_reader__coll__graph.png" border="0" usemap="#a_data_reader_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_data_reader_coll__map" id="a_data_reader_coll__map">
-<area shape="rect" title=" " alt="" coords="5,104,97,131"/>
-<area shape="rect" href="class_data.html" title=" " alt="" coords="26,5,76,32"/>
+<area shape="rect" title="数据读取器类，用于访问Data类中的特定数据" alt="" coords="5,104,97,131"/>
+<area shape="rect" href="class_data.html" title="数据管理类，用于存储和操作计算数据" alt="" coords="26,5,76,32"/>
 <area shape="poly" title=" " alt="" coords="53,46,54,104,48,103,49,49"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
@@ -96,26 +99,39 @@ DataReader 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:ab9c8558242d6739e2fec90c6e493e91e" id="r_ab9c8558242d6739e2fec90c6e493e91e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9c8558242d6739e2fec90c6e493e91e">DataReader</a> ()</td></tr>
+<tr class="memdesc:ab9c8558242d6739e2fec90c6e493e91e"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造函数  <br /></td></tr>
 <tr class="memitem:a9db9805527fe7386c613440b57a4e2ec" id="r_a9db9805527fe7386c613440b57a4e2ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9db9805527fe7386c613440b57a4e2ec">DataReader</a> (int n_, int i0_, int offset_, int idim_, <a class="el" href="class_data.html">Data</a> *data_)</td></tr>
+<tr class="memdesc:a9db9805527fe7386c613440b57a4e2ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">带参数的构造函数  <br /></td></tr>
 <tr class="memitem:a4972b3378bf8140c15da03f2faef74ec" id="r_a4972b3378bf8140c15da03f2faef74ec"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4972b3378bf8140c15da03f2faef74ec">operator()</a> (int i)</td></tr>
+<tr class="memdesc:a4972b3378bf8140c15da03f2faef74ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">重载函数调用操作符，用于获取指定网格点的迭代器  <br /></td></tr>
 <tr class="memitem:a0cbc7959cf0cb0f39bb2a0ca39df79da" id="r_a0cbc7959cf0cb0f39bb2a0ca39df79da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cbc7959cf0cb0f39bb2a0ca39df79da">getN</a> ()</td></tr>
+<tr class="memdesc:a0cbc7959cf0cb0f39bb2a0ca39df79da"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取网格点数量  <br /></td></tr>
 <tr class="memitem:aac40958db21b54da821cdb172ea3657d" id="r_aac40958db21b54da821cdb172ea3657d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac40958db21b54da821cdb172ea3657d">getNVar</a> ()</td></tr>
+<tr class="memdesc:aac40958db21b54da821cdb172ea3657d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取变量数量  <br /></td></tr>
 <tr class="memitem:a736c2671c79a93e69da88e61dd09fd1b" id="r_a736c2671c79a93e69da88e61dd09fd1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a736c2671c79a93e69da88e61dd09fd1b">getOffset</a> ()</td></tr>
+<tr class="memdesc:a736c2671c79a93e69da88e61dd09fd1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取偏移量  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
 <tr class="memitem:ab77643ddcd23678aaf40b03f90345f84" id="r_ab77643ddcd23678aaf40b03f90345f84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab77643ddcd23678aaf40b03f90345f84">idim</a></td></tr>
+<tr class="memdesc:ab77643ddcd23678aaf40b03f90345f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">维度标识  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
 <tr class="memitem:ace72920ba3032b5dfdb7fbd435c3aca2" id="r_ace72920ba3032b5dfdb7fbd435c3aca2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace72920ba3032b5dfdb7fbd435c3aca2">n</a></td></tr>
+<tr class="memdesc:ace72920ba3032b5dfdb7fbd435c3aca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">网格点数量  <br /></td></tr>
 <tr class="memitem:a1098ff921deb6ec920911be86ae03cf9" id="r_a1098ff921deb6ec920911be86ae03cf9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1098ff921deb6ec920911be86ae03cf9">i0</a></td></tr>
+<tr class="memdesc:a1098ff921deb6ec920911be86ae03cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">起始索引  <br /></td></tr>
 <tr class="memitem:a5e7b9a9d24effd483195323503423448" id="r_a5e7b9a9d24effd483195323503423448"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e7b9a9d24effd483195323503423448">offset</a></td></tr>
+<tr class="memdesc:a5e7b9a9d24effd483195323503423448"><td class="mdescLeft">&#160;</td><td class="mdescRight">偏移量  <br /></td></tr>
 <tr class="memitem:abb8d7979b06325a8a738ace01da50f1e" id="r_abb8d7979b06325a8a738ace01da50f1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb8d7979b06325a8a738ace01da50f1e">data</a></td></tr>
+<tr class="memdesc:abb8d7979b06325a8a738ace01da50f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">指向Data对象的指针  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00057">57</a> 行定义.</p>
+<div class="textblock"><p>数据读取器类，用于访问Data类中的特定数据 </p>
+<p>DataReader类提供了一个接口，用于从Data对象中读取特定部分的数据， 主要用于处理多维数据或特定方向的数据切片。 </p>
+
+<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00162">162</a> 行定义.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="ab9c8558242d6739e2fec90c6e493e91e" name="ab9c8558242d6739e2fec90c6e493e91e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9c8558242d6739e2fec90c6e493e91e">&#9670;&#160;</a></span>DataReader() <span class="overload">[1/2]</span></h2>
@@ -140,7 +156,9 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00060">60</a> 行定义.</p>
+<p>默认构造函数 </p>
+
+<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00167">167</a> 行定义.</p>
 
 </div>
 </div>
@@ -186,7 +204,19 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00061">61</a> 行定义.</p>
+<p>带参数的构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n_</td><td>网格点数量 </td></tr>
+    <tr><td class="paramname">i0_</td><td>起始索引 </td></tr>
+    <tr><td class="paramname">offset_</td><td>偏移量 </td></tr>
+    <tr><td class="paramname">idim_</td><td>维度标识 </td></tr>
+    <tr><td class="paramname">data_</td><td>指向Data对象的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00177">177</a> 行定义.</p>
 
 </div>
 </div>
@@ -214,7 +244,10 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00077">77</a> 行定义.</p>
+<p>获取网格点数量 </p>
+<dl class="section return"><dt>返回</dt><dd>网格点数量 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00200">200</a> 行定义.</p>
 
 </div>
 </div>
@@ -241,7 +274,10 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00078">78</a> 行定义.</p>
+<p>获取变量数量 </p>
+<dl class="section return"><dt>返回</dt><dd>变量数量 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00206">206</a> 行定义.</p>
 
 </div>
 </div>
@@ -268,7 +304,10 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00079">79</a> 行定义.</p>
+<p>获取偏移量 </p>
+<dl class="section return"><dt>返回</dt><dd>偏移量乘以变量数量 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00212">212</a> 行定义.</p>
 
 </div>
 </div>
@@ -295,7 +334,16 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00071">71</a> 行定义.</p>
+<p>重载函数调用操作符，用于获取指定网格点的迭代器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>指向第i个网格点数据的迭代器 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00191">191</a> 行定义.</p>
 
 </div>
 </div>
@@ -320,7 +368,9 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00085">85</a> 行定义.</p>
+<p>指向Data对象的指针 </p>
+
+<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00220">220</a> 行定义.</p>
 
 </div>
 </div>
@@ -344,7 +394,9 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00084">84</a> 行定义.</p>
+<p>起始索引 </p>
+
+<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00218">218</a> 行定义.</p>
 
 </div>
 </div>
@@ -360,7 +412,9 @@ Protected 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00080">80</a> 行定义.</p>
+<p>维度标识 </p>
+
+<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00214">214</a> 行定义.</p>
 
 </div>
 </div>
@@ -384,7 +438,9 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00084">84</a> 行定义.</p>
+<p>网格点数量 </p>
+
+<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00217">217</a> 行定义.</p>
 
 </div>
 </div>
@@ -408,7 +464,9 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00084">84</a> 行定义.</p>
+<p>偏移量 </p>
+
+<p class="definition">在文件 <a class="el" href="data_8hpp_source.html">data.hpp</a> 第 <a class="el" href="data_8hpp_source.html#l00219">219</a> 行定义.</p>
 
 </div>
 </div>

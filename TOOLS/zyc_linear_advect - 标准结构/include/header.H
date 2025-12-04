@@ -346,9 +346,11 @@ real_t exact_initial_solution(real_t x, real_t /*t*/)
     // Exact solution for a Gaussian function
     // u(x, t) = e^(-300 * (x - x_c)^2) where x_c = 0.5
 
+    // 02 - 线性平流问题-Linear advection problem
     real_t x_c = 0.5Q;
     return expq(-300.0Q * (x - x_c) * (x - x_c));
 
+    // 01 - 代数测试函数-Algebraic function test
     // return x * x * expq(0.75Q * (x - 1.0Q));
 
     // return x;
@@ -454,8 +456,10 @@ void compute_rhs(GhostArray& rhs, GhostArray& u, GhostArray& flux, real_t dx)
         // real_t u_right = whf_TcnsN_A(q_right);
         // real_t u_left = whf_TcnsN_myASF203_NoS(q_left);
         // real_t u_right = whf_TcnsN_myASF203_NoS(q_right);
-        real_t u_left = Linear_5th(q_left);
-        real_t u_right = Linear_5th(q_right);
+        real_t u_left = whf_TcnsN_myASF213_NoS(q_left);
+        real_t u_right = whf_TcnsN_myASF213_NoS(q_right);
+        // real_t u_left = Linear_5th(q_left);
+        // real_t u_right = Linear_5th(q_right);
 
         // 一阶插值:取左右平均值
         // if (c > 0) {

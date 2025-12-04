@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data_0',['Data',['../class_data.html#af11f741cb7f587e2e495452a8905a22a',1,'Data::Data()'],['../class_data.html#a3aacaba634a528d011fcb79cea1a1293',1,'Data::Data(int, int)'],['../class_data.html#aa7a5bd3a55e7e04904169e19d2d8c260',1,'Data::Data(const Data &amp;)']]],
+  ['data_0',['Data',['../class_data.html#af11f741cb7f587e2e495452a8905a22a',1,'Data::Data()'],['../class_data.html#a8be8ca9706d9b46c53b0c644641949b1',1,'Data::Data(int n_, int nVar_)'],['../class_data.html#a97a934453f0247f44163fdea87356d92',1,'Data::Data(const Data &amp;origin_)']]],
   ['datamanipulater_1',['DataManipulater',['../class_data_manipulater.html#ad962f9c942a8588f182c05d7032d9e98',1,'DataManipulater::DataManipulater()'],['../class_data_manipulater.html#a561d223e202ab2f567103978febba40c',1,'DataManipulater::DataManipulater(DataReader varsReader_, std::shared_ptr&lt; OneDBnd &gt; bndL_, std::shared_ptr&lt; OneDBnd &gt; bndR_)']]],
   ['datareader_2',['DataReader',['../class_data_reader.html#ab9c8558242d6739e2fec90c6e493e91e',1,'DataReader::DataReader()'],['../class_data_reader.html#a9db9805527fe7386c613440b57a4e2ec',1,'DataReader::DataReader(int n_, int i0_, int offset_, int idim_, Data *data_)']]],
   ['default_5fconv_5fdispatcher_3',['default_conv_dispatcher',['../namespacepro_1_1details.html#a2049f711f8ad7e5efe67a802944ec531',1,'pro::details']]],

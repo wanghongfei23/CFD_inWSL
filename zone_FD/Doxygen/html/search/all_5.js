@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data_0',['Data',['../class_data.html',1,'Data'],['../class_data.html#af11f741cb7f587e2e495452a8905a22a',1,'Data::Data()'],['../class_data.html#a3aacaba634a528d011fcb79cea1a1293',1,'Data::Data(int, int)'],['../class_data.html#aa7a5bd3a55e7e04904169e19d2d8c260',1,'Data::Data(const Data &amp;)']]],
+  ['data_0',['Data',['../class_data.html',1,'Data'],['../class_data.html#af11f741cb7f587e2e495452a8905a22a',1,'Data::Data()'],['../class_data.html#a8be8ca9706d9b46c53b0c644641949b1',1,'Data::Data(int n_, int nVar_)'],['../class_data.html#a97a934453f0247f44163fdea87356d92',1,'Data::Data(const Data &amp;origin_)']]],
   ['data_1',['data',['../class_data.html#af9dc26e8b3cdada8c899d68091f62c53',1,'Data::data'],['../class_data_reader.html#abb8d7979b06325a8a738ace01da50f1e',1,'DataReader::data'],['../class_data_manipulater.html#a6c51830a38519c386b8b6f86ae0ab0d8',1,'DataManipulater::data'],['../class_one_d_bnd.html#ad8579253ee283c3606059be9f313c6e6',1,'OneDBnd::data']]],
   ['data_2ecpp_2',['data.cpp',['../data_8cpp.html',1,'']]],
   ['data_2ecpp_2eo_2ed_3',['data.cpp.o.d',['../data_8cpp_8o_8d.html',1,'']]],

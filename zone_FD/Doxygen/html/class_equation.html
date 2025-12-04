@@ -76,11 +76,13 @@ $(function() {
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pro-methods">Protected 成员函数</a> &#124;
 <a href="#pro-attribs">Protected 属性</a> &#124;
-<a href="#friends">友元</a> &#124;
 <a href="class_equation-members.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">Equation类 参考</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>方程类，用于处理守恒变量和基本变量之间的转换  
+ <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="equation_8hpp_source.html">equation.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -88,8 +90,8 @@ Equation 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_equation__coll__graph.png" border="0" usemap="#a_equation_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_equation_coll__map" id="a_equation_coll__map">
-<area shape="rect" title=" " alt="" coords="5,147,78,173"/>
-<area shape="rect" href="class_data.html" title=" " alt="" coords="17,5,66,32"/>
+<area shape="rect" title="方程类，用于处理守恒变量和基本变量之间的转换" alt="" coords="5,147,78,173"/>
+<area shape="rect" href="class_data.html" title="数据管理类，用于存储和操作计算数据" alt="" coords="17,5,66,32"/>
 <area shape="poly" title=" " alt="" coords="44,47,44,146,39,146,39,48"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
@@ -97,35 +99,45 @@ Equation 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a68511fc719250ed80f86c50de9136733" id="r_a68511fc719250ed80f86c50de9136733"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68511fc719250ed80f86c50de9136733">Equation</a> ()</td></tr>
+<tr class="memdesc:a68511fc719250ed80f86c50de9136733"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
 <tr class="memitem:aaa33ed39d27eddf58fa0026e790f638b" id="r_aaa33ed39d27eddf58fa0026e790f638b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa33ed39d27eddf58fa0026e790f638b">consToPrim</a> ()</td></tr>
+<tr class="memdesc:aaa33ed39d27eddf58fa0026e790f638b"><td class="mdescLeft">&#160;</td><td class="mdescRight">变量转换函数  <br /></td></tr>
 <tr class="memitem:a2f42b340d4587efa6924c7171ea381f4" id="r_a2f42b340d4587efa6924c7171ea381f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f42b340d4587efa6924c7171ea381f4">getCons</a> ()</td></tr>
+<tr class="memdesc:a2f42b340d4587efa6924c7171ea381f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取守恒变量数据指针  <br /></td></tr>
 <tr class="memitem:ae465be9838f011b8b96e345655238489" id="r_ae465be9838f011b8b96e345655238489"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae465be9838f011b8b96e345655238489">getPrim</a> ()</td></tr>
+<tr class="memdesc:ae465be9838f011b8b96e345655238489"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取基本变量数据指针  <br /></td></tr>
 <tr class="memitem:a5bc5e65d311e373ef7dc7aff99cc1d53" id="r_a5bc5e65d311e373ef7dc7aff99cc1d53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bc5e65d311e373ef7dc7aff99cc1d53">getRhs</a> ()</td></tr>
+<tr class="memdesc:a5bc5e65d311e373ef7dc7aff99cc1d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取右手端(RHS)数据指针  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected 成员函数</h2></td></tr>
 <tr class="memitem:ae22b2778464abbf88007d42762cfdd6c" id="r_ae22b2778464abbf88007d42762cfdd6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae22b2778464abbf88007d42762cfdd6c">consToPrimEuler1D</a> ()</td></tr>
+<tr class="memdesc:ae22b2778464abbf88007d42762cfdd6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维Euler方程变量转换实现函数  <br /></td></tr>
 <tr class="memitem:a6724298495842e0839d9a2576d1ef3c6" id="r_a6724298495842e0839d9a2576d1ef3c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6724298495842e0839d9a2576d1ef3c6">consToPrimEuler2D</a> ()</td></tr>
+<tr class="memdesc:a6724298495842e0839d9a2576d1ef3c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">二维Euler方程变量转换实现函数  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
 <tr class="memitem:ae3b30d86058af618935e96e3c471f2a1" id="r_ae3b30d86058af618935e96e3c471f2a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3b30d86058af618935e96e3c471f2a1">inited</a> =false</td></tr>
+<tr class="memdesc:ae3b30d86058af618935e96e3c471f2a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化标志  <br /></td></tr>
 <tr class="memitem:a9c83273b9c9e80377380c6c230f00547" id="r_a9c83273b9c9e80377380c6c230f00547"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c83273b9c9e80377380c6c230f00547">n</a></td></tr>
 <tr class="memitem:a8a9aa10e16deb9a819824b0d66c8e106" id="r_a8a9aa10e16deb9a819824b0d66c8e106"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a9aa10e16deb9a819824b0d66c8e106">nCons</a></td></tr>
 <tr class="memitem:abd85fdfd794398da6f6b4aeccc821a7b" id="r_abd85fdfd794398da6f6b4aeccc821a7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd85fdfd794398da6f6b4aeccc821a7b">nPrim</a></td></tr>
+<tr class="memdesc:abd85fdfd794398da6f6b4aeccc821a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">网格点数、守恒变量数、基本变量数  <br /></td></tr>
 <tr class="memitem:a0ba1350ce32a877e0645f9ebbeace8d2" id="r_a0ba1350ce32a877e0645f9ebbeace8d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ba1350ce32a877e0645f9ebbeace8d2">dim</a></td></tr>
+<tr class="memdesc:a0ba1350ce32a877e0645f9ebbeace8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">问题维度  <br /></td></tr>
 <tr class="memitem:aa8fff7bd4f523108faf10c6e2fa4a0b6" id="r_aa8fff7bd4f523108faf10c6e2fa4a0b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8fff7bd4f523108faf10c6e2fa4a0b6">cons</a></td></tr>
 <tr class="memitem:ae1062c8b55c6e5d7227b436dcea4f892" id="r_ae1062c8b55c6e5d7227b436dcea4f892"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1062c8b55c6e5d7227b436dcea4f892">rhs</a></td></tr>
 <tr class="memitem:ae51899c3da57bff8b73eee055707c6d9" id="r_ae51899c3da57bff8b73eee055707c6d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae51899c3da57bff8b73eee055707c6d9">prim</a></td></tr>
+<tr class="memdesc:ae51899c3da57bff8b73eee055707c6d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">守恒变量、右手端、基本变量数据指针  <br /></td></tr>
 <tr class="memitem:a4fe780082036365183478c01ca732046" id="r_a4fe780082036365183478c01ca732046"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a6efecf3d755d53d3c4649b100919dca3">EquationType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fe780082036365183478c01ca732046">type</a></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
-友元</h2></td></tr>
-<tr class="memitem:a5d26a0aa56303737c594b42e7cdad905" id="r_a5d26a0aa56303737c594b42e7cdad905"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d26a0aa56303737c594b42e7cdad905">Initializer</a></td></tr>
+<tr class="memdesc:a4fe780082036365183478c01ca732046"><td class="mdescLeft">&#160;</td><td class="mdescRight">方程类型  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00006">6</a> 行定义.</p>
+<div class="textblock"><p>方程类，用于处理守恒变量和基本变量之间的转换 </p>
+<p>Equation类提供了在守恒变量（conserved variables）和基本变量（primitive variables） 之间的相互转换功能，这是计算流体力学中常见的操作。该类支持多种类型的方程，包括线性对流、 Burgers方程和Euler方程等。 </p>
+
+<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00012">12</a> 行定义.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a68511fc719250ed80f86c50de9136733" name="a68511fc719250ed80f86c50de9136733"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a68511fc719250ed80f86c50de9136733">&#9670;&#160;</a></span>Equation()</h2>
@@ -150,7 +162,9 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00010">10</a> 行定义.</p>
+<p>构造函数 </p>
+
+<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00018">18</a> 行定义.</p>
 
 </div>
 </div>
@@ -170,16 +184,20 @@ Protected 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8cpp_source.html">equation.cpp</a> 第 <a class="el" href="equation_8cpp_source.html#l00003">3</a> 行定义.</p>
+<p>变量转换函数 </p>
+<p>变量转换函数的实现</p>
+<p>根据方程类型调用相应的变量转换方法，将守恒变量转换为基本变量 </p>
+
+<p class="definition">在文件 <a class="el" href="equation_8cpp_source.html">equation.cpp</a> 第 <a class="el" href="equation_8cpp_source.html#l00008">8</a> 行定义.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_equation_aaa33ed39d27eddf58fa0026e790f638b_cgraph.png" border="0" usemap="#aclass_equation_aaa33ed39d27eddf58fa0026e790f638b_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_equation_aaa33ed39d27eddf58fa0026e790f638b_cgraph" id="aclass_equation_aaa33ed39d27eddf58fa0026e790f638b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,155,57"/>
-<area shape="rect" href="class_equation.html#ae22b2778464abbf88007d42762cfdd6c" title=" " alt="" coords="203,5,399,32"/>
+<area shape="rect" title="变量转换函数" alt="" coords="5,31,155,57"/>
+<area shape="rect" href="class_equation.html#ae22b2778464abbf88007d42762cfdd6c" title="一维Euler方程变量转换实现函数" alt="" coords="203,5,399,32"/>
 <area shape="poly" title=" " alt="" coords="155,33,190,31,184,32,156,38"/>
-<area shape="rect" href="class_equation.html#a6724298495842e0839d9a2576d1ef3c6" title=" " alt="" coords="203,56,399,83"/>
+<area shape="rect" href="class_equation.html#a6724298495842e0839d9a2576d1ef3c6" title="二维Euler方程变量转换实现函数" alt="" coords="203,56,399,83"/>
 <area shape="poly" title=" " alt="" coords="155,50,190,56,184,56,155,55"/>
 </map>
 </div>
@@ -209,14 +227,19 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8cpp_source.html">equation.cpp</a> 第 <a class="el" href="equation_8cpp_source.html#l00026">26</a> 行定义.</p>
+<p>一维Euler方程变量转换实现函数 </p>
+<p>一维Euler方程变量转换的具体实现</p>
+<p>将一维Euler方程的守恒变量转换为基本变量</p>
+<p>将一维Euler方程的守恒变量(r, ru, rE)转换为基本变量(r, u, p) 其中r是密度，u是速度，p是压力，E是总能 </p>
+
+<p class="definition">在文件 <a class="el" href="equation_8cpp_source.html">equation.cpp</a> 第 <a class="el" href="equation_8cpp_source.html#l00037">37</a> 行定义.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_equation_ae22b2778464abbf88007d42762cfdd6c_icgraph.png" border="0" usemap="#aclass_equation_ae22b2778464abbf88007d42762cfdd6c_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_equation_ae22b2778464abbf88007d42762cfdd6c_icgraph" id="aclass_equation_ae22b2778464abbf88007d42762cfdd6c_icgraph">
-<area shape="rect" title=" " alt="" coords="203,5,399,32"/>
-<area shape="rect" href="class_equation.html#aaa33ed39d27eddf58fa0026e790f638b" title=" " alt="" coords="5,5,155,32"/>
+<area shape="rect" title="一维Euler方程变量转换实现函数" alt="" coords="203,5,399,32"/>
+<area shape="rect" href="class_equation.html#aaa33ed39d27eddf58fa0026e790f638b" title="变量转换函数" alt="" coords="5,5,155,32"/>
 <area shape="poly" title=" " alt="" coords="185,19,155,21,155,16,190,19"/>
 </map>
 </div>
@@ -246,14 +269,19 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8cpp_source.html">equation.cpp</a> 第 <a class="el" href="equation_8cpp_source.html#l00050">50</a> 行定义.</p>
+<p>二维Euler方程变量转换实现函数 </p>
+<p>二维Euler方程变量转换的具体实现</p>
+<p>将二维Euler方程的守恒变量转换为基本变量</p>
+<p>将二维Euler方程的守恒变量(r, ru, rv, rE)转换为基本变量(r, u, v, p) 其中r是密度，u和v是x和y方向的速度，p是压力，E是总能 </p>
+
+<p class="definition">在文件 <a class="el" href="equation_8cpp_source.html">equation.cpp</a> 第 <a class="el" href="equation_8cpp_source.html#l00067">67</a> 行定义.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_equation_a6724298495842e0839d9a2576d1ef3c6_icgraph.png" border="0" usemap="#aclass_equation_a6724298495842e0839d9a2576d1ef3c6_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_equation_a6724298495842e0839d9a2576d1ef3c6_icgraph" id="aclass_equation_a6724298495842e0839d9a2576d1ef3c6_icgraph">
-<area shape="rect" title=" " alt="" coords="203,5,399,32"/>
-<area shape="rect" href="class_equation.html#aaa33ed39d27eddf58fa0026e790f638b" title=" " alt="" coords="5,5,155,32"/>
+<area shape="rect" title="二维Euler方程变量转换实现函数" alt="" coords="203,5,399,32"/>
+<area shape="rect" href="class_equation.html#aaa33ed39d27eddf58fa0026e790f638b" title="变量转换函数" alt="" coords="5,5,155,32"/>
 <area shape="poly" title=" " alt="" coords="185,19,155,21,155,16,190,19"/>
 </map>
 </div>
@@ -275,7 +303,10 @@ Protected 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8cpp_source.html">equation.cpp</a> 第 <a class="el" href="equation_8cpp_source.html#l00084">84</a> 行定义.</p>
+<p>获取守恒变量数据指针 </p>
+<dl class="section return"><dt>返回</dt><dd>指向守恒变量数据的指针 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="equation_8cpp_source.html">equation.cpp</a> 第 <a class="el" href="equation_8cpp_source.html#l00109">109</a> 行定义.</p>
 
 </div>
 </div>
@@ -294,7 +325,10 @@ Protected 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8cpp_source.html">equation.cpp</a> 第 <a class="el" href="equation_8cpp_source.html#l00079">79</a> 行定义.</p>
+<p>获取基本变量数据指针 </p>
+<dl class="section return"><dt>返回</dt><dd>指向基本变量数据的指针 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="equation_8cpp_source.html">equation.cpp</a> 第 <a class="el" href="equation_8cpp_source.html#l00100">100</a> 行定义.</p>
 
 </div>
 </div>
@@ -313,32 +347,10 @@ Protected 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8cpp_source.html">equation.cpp</a> 第 <a class="el" href="equation_8cpp_source.html#l00089">89</a> 行定义.</p>
+<p>获取右手端(RHS)数据指针 </p>
+<dl class="section return"><dt>返回</dt><dd>指向右手端数据的指针 </dd></dl>
 
-</div>
-</div>
-<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
-<a id="a5d26a0aa56303737c594b42e7cdad905" name="a5d26a0aa56303737c594b42e7cdad905"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d26a0aa56303737c594b42e7cdad905">&#9670;&#160;</a></span>Initializer</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class <a class="el" href="class_initializer.html">Initializer</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00022">22</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="equation_8cpp_source.html">equation.cpp</a> 第 <a class="el" href="equation_8cpp_source.html#l00118">118</a> 行定义.</p>
 
 </div>
 </div>
@@ -363,7 +375,7 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00032">32</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00069">69</a> 行定义.</p>
 
 </div>
 </div>
@@ -387,7 +399,9 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00031">31</a> 行定义.</p>
+<p>问题维度 </p>
+
+<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00068">68</a> 行定义.</p>
 
 </div>
 </div>
@@ -411,7 +425,9 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00029">29</a> 行定义.</p>
+<p>初始化标志 </p>
+
+<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00066">66</a> 行定义.</p>
 
 </div>
 </div>
@@ -435,7 +451,7 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00030">30</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00067">67</a> 行定义.</p>
 
 </div>
 </div>
@@ -459,7 +475,7 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00030">30</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00067">67</a> 行定义.</p>
 
 </div>
 </div>
@@ -483,7 +499,9 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00030">30</a> 行定义.</p>
+<p>网格点数、守恒变量数、基本变量数 </p>
+
+<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00067">67</a> 行定义.</p>
 
 </div>
 </div>
@@ -507,7 +525,9 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00032">32</a> 行定义.</p>
+<p>守恒变量、右手端、基本变量数据指针 </p>
+
+<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00069">69</a> 行定义.</p>
 
 </div>
 </div>
@@ -531,7 +551,7 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00032">32</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00069">69</a> 行定义.</p>
 
 </div>
 </div>
@@ -555,7 +575,9 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00033">33</a> 行定义.</p>
+<p>方程类型 </p>
+
+<p class="definition">在文件 <a class="el" href="equation_8hpp_source.html">equation.hpp</a> 第 <a class="el" href="equation_8hpp_source.html#l00070">70</a> 行定义.</p>
 
 </div>
 </div>

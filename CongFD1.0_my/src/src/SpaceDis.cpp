@@ -410,9 +410,9 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
         }
         break;
 
-    case temp011:
-        inter5 = &temp_011;
-        inter5Positive = &temp_011;
+    case WHFTCNSASF213_NoS:
+        inter5 = &whf_TCNS_AS_myF213_NoS;
+        inter5Positive = &whf_TCNS_AS_myF213_NoS;
         if (fluxType == EULER) {
             reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
             reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
