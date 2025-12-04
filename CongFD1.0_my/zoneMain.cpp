@@ -5,7 +5,7 @@
 
 #include "blockSolver.hpp"
 #include "eigenSystem.hpp"
-#include "000_globals.hpp"
+#include "000_statistics_CTA.hpp"
 #include <fstream>
 #include <map>
 #include <string>
@@ -262,8 +262,8 @@ int main()
 
     // info->interMethod = WCNS5; //weno5_JSchen
     // info->interMethod = WCNSZ5; //weno5_Z
-    // info->interMethod = TCNS5; //Teno5_Z
-    info->interMethod = WCNS5CONGZ;//Teno5_CongZ
+    info->interMethod = TCNS5; //Teno5_Z
+    // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
     // info->interMethod = WHFTCNSA;
     // info->interMethod = WHFTCNSASF002;
     // info->interMethod = WHFTCNSAH002;
@@ -411,30 +411,6 @@ int main()
     timeinfo << "time= " << timepp / 1e6 << "   Finish\n";
     timeinfo << "timesteps= " << bSolver.timesteps << "   Finish\n";
     timeinfo << "solvertime= " << timesss << '\n';
-    
 
-    /// @brief 统计不同CT值的数量并输出到文件
-    /// @details 当存在任何CT值计数时，将统计信息写入独立的文本文件
-    if (global_counter_5 || global_counter_6 || global_counter_7 || global_counter_8 || global_counter_9 || global_counter_10) {
-        std::string statFileName = caseName + " - " + disStr[info->interMethod] + " - " + gridInfo + "_CT-A_counter.txt";
-        std::ofstream statFile(statFileName);
-        statFile << "CT Value Statistics:\n";
-        statFile << "CT=1e-05 count: " << global_counter_5 << "\n";
-        statFile << "CT=1e-06 count: " << global_counter_6 << "\n";
-        statFile << "CT=1e-07 count: " << global_counter_7 << "\n";
-        statFile << "CT=1e-08 count: " << global_counter_8 << "\n";
-        statFile << "CT=1e-09 count: " << global_counter_9 << "\n";
-        statFile << "CT=1e-10 count: " << global_counter_10 << "\n";
-        statFile.close();
-    }
-    /// @brief 检查是否存在非预期范围的CT值
-    /// @details 如果pandaun_001为true，表示存在超出-5到-10范围的CT值
-    if (pandaun_001)
-    {
-        std::cout << "有 非-5到-10的预期值" << "\n";
-    }
-    else
-    {
-        std::cout << "无 非-5到-10的预期值" << "\n";
-    }
+    output_CTA();
 }

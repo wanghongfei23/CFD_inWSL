@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/000_statistics_CTA.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">000_statistics_CTA.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+000_statistics_CTA.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="000__statistics___c_t_a_8hpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2000__statistics___c_t_a_8hpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2000__statistics___c_t_a_8hpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2000__statistics___c_t_a_8hpp">
+<area shape="rect" title=" " alt="" coords="96,5,353,80"/>
+<area shape="rect" title=" " alt="" coords="5,128,63,155"/>
+<area shape="poly" title=" " alt="" coords="153,83,73,123,71,118,151,78"/>
+<area shape="rect" title=" " alt="" coords="87,128,133,155"/>
+<area shape="poly" title=" " alt="" coords="184,79,138,120,135,115,179,81"/>
+<area shape="rect" title=" " alt="" coords="157,128,210,155"/>
+<area shape="poly" title=" " alt="" coords="211,79,197,115,193,112,207,82"/>
+<area shape="rect" title=" " alt="" coords="235,128,300,155"/>
+<area shape="poly" title=" " alt="" coords="242,78,258,114,253,112,239,83"/>
+<area shape="rect" title=" " alt="" coords="324,128,395,155"/>
+<area shape="poly" title=" " alt="" coords="277,78,332,119,327,119,275,83"/>
+<area shape="rect" title=" " alt="" coords="419,128,500,155"/>
+<area shape="poly" title=" " alt="" coords="315,78,417,122,412,122,314,83"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="000__statistics___c_t_a_8hpp__dep__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2000__statistics___c_t_a_8hppdep" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2000__statistics___c_t_a_8hppdep" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_2_c_f_d__codes__tools_2_cong_f_d1_80__my_2src_2include_2000__statistics___c_t_a_8hppdep">
+<area shape="rect" title=" " alt="" coords="676,5,933,80"/>
+<area shape="rect" href="inter_scheme_8hpp.html" title=" " alt="" coords="547,128,793,203"/>
+<area shape="poly" title=" " alt="" coords="754,89,712,130,709,125,750,92"/>
+<area shape="rect" href="zone_main_8cpp.html" title="主程序入口文件，用于配置和运行CFD求解器" alt="" coords="817,128,1064,203"/>
+<area shape="poly" title=" " alt="" coords="858,88,902,128,897,127,857,93"/>
+<area shape="rect" href="_space_dis_8cpp.html" title="空间离散类的实现文件" alt="" coords="5,251,252,325"/>
+<area shape="poly" title=" " alt="" coords="530,196,265,253,253,256,252,251,264,248,532,191"/>
+<area shape="rect" href="inter_scheme_8cpp.html" title=" " alt="" coords="276,251,522,325"/>
+<area shape="poly" title=" " alt="" coords="576,209,483,253,481,248,571,210"/>
+<area shape="rect" href="reconstructor_8cpp.html" title="重构器类的实现文件" alt="" coords="547,251,793,325"/>
+<area shape="poly" title=" " alt="" coords="672,217,672,252,668,249,668,220"/>
+<area shape="rect" href="sp__flux_8cpp.html" title="空间离散通量计算实现文件" alt="" coords="817,251,1064,325"/>
+<area shape="poly" title=" " alt="" coords="767,207,861,250,855,250,766,212"/>
+<area shape="rect" href="sp__recon_8cpp.html" title="空间离散重构计算实现文件" alt="" coords="1088,251,1334,325"/>
+<area shape="poly" title=" " alt="" coords="809,200,944,224,1076,248,1090,254,1085,253,1075,253,943,230,808,206"/>
+</map>
+</div>
+</div>
+<p><a href="000__statistics___c_t_a_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a206fa9c45e3b83e3a573c37977694320" id="r_a206fa9c45e3b83e3a573c37977694320"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a206fa9c45e3b83e3a573c37977694320">output_CTA</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ae9082f709cf9a53938ca3b52e5c3a91c" id="r_ae9082f709cf9a53938ca3b52e5c3a91c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9082f709cf9a53938ca3b52e5c3a91c">global_counter_5</a> = 0</td></tr>
+<tr class="memitem:accdf7e81d41454c811dcef48095d2cd9" id="r_accdf7e81d41454c811dcef48095d2cd9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accdf7e81d41454c811dcef48095d2cd9">global_counter_6</a> = 0</td></tr>
+<tr class="memitem:af97bdf80f2f413766f274f77129ec041" id="r_af97bdf80f2f413766f274f77129ec041"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af97bdf80f2f413766f274f77129ec041">global_counter_7</a> = 0</td></tr>
+<tr class="memitem:a1b7ffc8bd57dbbf9f597328f7feab64d" id="r_a1b7ffc8bd57dbbf9f597328f7feab64d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b7ffc8bd57dbbf9f597328f7feab64d">global_counter_8</a> = 0</td></tr>
+<tr class="memitem:a31c39ae3c6cf78ac07a23e583d16874a" id="r_a31c39ae3c6cf78ac07a23e583d16874a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31c39ae3c6cf78ac07a23e583d16874a">global_counter_9</a> = 0</td></tr>
+<tr class="memitem:a7571e671e5bb883df89582603ef6347a" id="r_a7571e671e5bb883df89582603ef6347a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7571e671e5bb883df89582603ef6347a">global_counter_10</a> = 0</td></tr>
+<tr class="memitem:aa398dba53d75bf94ff9d41dee009a175" id="r_aa398dba53d75bf94ff9d41dee009a175"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa398dba53d75bf94ff9d41dee009a175">pandaun_001</a> = false</td></tr>
+<tr class="memitem:a736eaa08112f9c372701c5cb036b4b05" id="r_a736eaa08112f9c372701c5cb036b4b05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a736eaa08112f9c372701c5cb036b4b05">CTA_counter_on_off</a> = false</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="a206fa9c45e3b83e3a573c37977694320" name="a206fa9c45e3b83e3a573c37977694320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206fa9c45e3b83e3a573c37977694320">&#9670;&#160;</a></span>output_CTA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void output_CTA </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="000__statistics___c_t_a_8hpp_source.html">000_statistics_CTA.hpp</a> 第 <a class="el" href="000__statistics___c_t_a_8hpp_source.html#l00025">25</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="000__statistics___c_t_a_8hpp_a206fa9c45e3b83e3a573c37977694320_icgraph.png" border="0" usemap="#a000__statistics___c_t_a_8hpp_a206fa9c45e3b83e3a573c37977694320_icgraph" loading="lazy" alt=""/></div>
+<map name="a000__statistics___c_t_a_8hpp_a206fa9c45e3b83e3a573c37977694320_icgraph" id="a000__statistics___c_t_a_8hpp_a206fa9c45e3b83e3a573c37977694320_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,193,32"/>
+<area shape="rect" href="zone_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数，程序入口点" alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="85,19,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">变量说明</h2>
+<a id="a736eaa08112f9c372701c5cb036b4b05" name="a736eaa08112f9c372701c5cb036b4b05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a736eaa08112f9c372701c5cb036b4b05">&#9670;&#160;</a></span>CTA_counter_on_off</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CTA_counter_on_off = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="000__statistics___c_t_a_8hpp_source.html">000_statistics_CTA.hpp</a> 第 <a class="el" href="000__statistics___c_t_a_8hpp_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7571e671e5bb883df89582603ef6347a" name="a7571e671e5bb883df89582603ef6347a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7571e671e5bb883df89582603ef6347a">&#9670;&#160;</a></span>global_counter_10</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_counter_10 = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="000__statistics___c_t_a_8hpp_source.html">000_statistics_CTA.hpp</a> 第 <a class="el" href="000__statistics___c_t_a_8hpp_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae9082f709cf9a53938ca3b52e5c3a91c" name="ae9082f709cf9a53938ca3b52e5c3a91c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9082f709cf9a53938ca3b52e5c3a91c">&#9670;&#160;</a></span>global_counter_5</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_counter_5 = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="000__statistics___c_t_a_8hpp_source.html">000_statistics_CTA.hpp</a> 第 <a class="el" href="000__statistics___c_t_a_8hpp_source.html#l00011">11</a> 行定义.</p>
+
+</div>
+</div>
+<a id="accdf7e81d41454c811dcef48095d2cd9" name="accdf7e81d41454c811dcef48095d2cd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accdf7e81d41454c811dcef48095d2cd9">&#9670;&#160;</a></span>global_counter_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_counter_6 = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="000__statistics___c_t_a_8hpp_source.html">000_statistics_CTA.hpp</a> 第 <a class="el" href="000__statistics___c_t_a_8hpp_source.html#l00012">12</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af97bdf80f2f413766f274f77129ec041" name="af97bdf80f2f413766f274f77129ec041"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af97bdf80f2f413766f274f77129ec041">&#9670;&#160;</a></span>global_counter_7</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_counter_7 = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="000__statistics___c_t_a_8hpp_source.html">000_statistics_CTA.hpp</a> 第 <a class="el" href="000__statistics___c_t_a_8hpp_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1b7ffc8bd57dbbf9f597328f7feab64d" name="a1b7ffc8bd57dbbf9f597328f7feab64d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b7ffc8bd57dbbf9f597328f7feab64d">&#9670;&#160;</a></span>global_counter_8</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_counter_8 = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="000__statistics___c_t_a_8hpp_source.html">000_statistics_CTA.hpp</a> 第 <a class="el" href="000__statistics___c_t_a_8hpp_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a31c39ae3c6cf78ac07a23e583d16874a" name="a31c39ae3c6cf78ac07a23e583d16874a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c39ae3c6cf78ac07a23e583d16874a">&#9670;&#160;</a></span>global_counter_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_counter_9 = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="000__statistics___c_t_a_8hpp_source.html">000_statistics_CTA.hpp</a> 第 <a class="el" href="000__statistics___c_t_a_8hpp_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa398dba53d75bf94ff9d41dee009a175" name="aa398dba53d75bf94ff9d41dee009a175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa398dba53d75bf94ff9d41dee009a175">&#9670;&#160;</a></span>pandaun_001</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pandaun_001 = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="000__statistics___c_t_a_8hpp_source.html">000_statistics_CTA.hpp</a> 第 <a class="el" href="000__statistics___c_t_a_8hpp_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

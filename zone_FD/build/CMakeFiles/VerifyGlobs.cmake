@@ -4,6 +4,7 @@
 # SRCS at src/CMakeLists.txt:2 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/*.hpp")
 set(OLD_GLOB
+  "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/000_statistics_CTA.hpp"
   "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/EulerEquation1D.hpp"
   "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/SourceTerm.hpp"
   "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/block.hpp"

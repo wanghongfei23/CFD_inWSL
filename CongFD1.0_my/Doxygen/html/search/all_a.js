@@ -26,11 +26,11 @@ var searchData=
   ['getvarnamelistrhs_23',['getVarNameListRhs',['../class_info.html#a6e64d300782d61d1cb2b3739b6ab8cd9',1,'Info']]],
   ['getvertexcoor_24',['getVertexCoor',['../class_block.html#ab0ce0fd0e8a9c4073c326e514e03e252',1,'Block']]],
   ['gkx_25',['gkx',['../_accuracy_test_8cpp.html#a09658b07218fdb123135467122823cc9',1,'AccuracyTest.cpp']]],
-  ['global_5fcounter_5f10_26',['global_counter_10',['../000__globals_8hpp.html#a7571e671e5bb883df89582603ef6347a',1,'000_globals.hpp']]],
-  ['global_5fcounter_5f5_27',['global_counter_5',['../000__globals_8hpp.html#ae9082f709cf9a53938ca3b52e5c3a91c',1,'000_globals.hpp']]],
-  ['global_5fcounter_5f6_28',['global_counter_6',['../000__globals_8hpp.html#accdf7e81d41454c811dcef48095d2cd9',1,'000_globals.hpp']]],
-  ['global_5fcounter_5f7_29',['global_counter_7',['../000__globals_8hpp.html#af97bdf80f2f413766f274f77129ec041',1,'000_globals.hpp']]],
-  ['global_5fcounter_5f8_30',['global_counter_8',['../000__globals_8hpp.html#a1b7ffc8bd57dbbf9f597328f7feab64d',1,'000_globals.hpp']]],
-  ['global_5fcounter_5f9_31',['global_counter_9',['../000__globals_8hpp.html#a31c39ae3c6cf78ac07a23e583d16874a',1,'000_globals.hpp']]],
+  ['global_5fcounter_5f10_26',['global_counter_10',['../000__statistics___c_t_a_8hpp.html#a7571e671e5bb883df89582603ef6347a',1,'000_statistics_CTA.hpp']]],
+  ['global_5fcounter_5f5_27',['global_counter_5',['../000__statistics___c_t_a_8hpp.html#ae9082f709cf9a53938ca3b52e5c3a91c',1,'000_statistics_CTA.hpp']]],
+  ['global_5fcounter_5f6_28',['global_counter_6',['../000__statistics___c_t_a_8hpp.html#accdf7e81d41454c811dcef48095d2cd9',1,'000_statistics_CTA.hpp']]],
+  ['global_5fcounter_5f7_29',['global_counter_7',['../000__statistics___c_t_a_8hpp.html#af97bdf80f2f413766f274f77129ec041',1,'000_statistics_CTA.hpp']]],
+  ['global_5fcounter_5f8_30',['global_counter_8',['../000__statistics___c_t_a_8hpp.html#a1b7ffc8bd57dbbf9f597328f7feab64d',1,'000_statistics_CTA.hpp']]],
+  ['global_5fcounter_5f9_31',['global_counter_9',['../000__statistics___c_t_a_8hpp.html#a31c39ae3c6cf78ac07a23e583d16874a',1,'000_statistics_CTA.hpp']]],
   ['gravity_32',['GRAVITY',['../macro_8hpp.html#a3ae727773c367ac1041d72ac770a0ab1abbcfb30512c4002f1f7a36b4092cb3fb',1,'macro.hpp']]]
 ];

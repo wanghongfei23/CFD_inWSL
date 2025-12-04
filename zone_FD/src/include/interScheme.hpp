@@ -1,6 +1,8 @@
 #pragma once
 #include "macro.hpp"
+#include "000_statistics_CTA.hpp"
 #include <array>
+
 // inline real weno5_JSchen(std::array<real, 5>);
 inline real u1(real q1, real q2, real q3) {
   return 3.0 / 8.0 * q1 - 5.0 / 4.0 * q2 + 15.0 / 8.0 * q3;
@@ -3937,6 +3939,20 @@ inline real new_whf_TCNS_A(std::array<real, 5> q)
     break;
     }
     
+
+    if (CTA_counter_on_off)
+    {
+      switch(beta_A) {
+      case 5: global_counter_5++; break;
+      case 6: global_counter_6++; break;
+      case 7: global_counter_7++; break;
+      case 8: global_counter_8++; break;
+      case 9: global_counter_9++; break;
+      case 10: global_counter_10++; break;
+      }
+    }
+    
+
     real rr= CT_A*gamma_sum;
     // 构造截止函数
     unsigned short flag = 0;

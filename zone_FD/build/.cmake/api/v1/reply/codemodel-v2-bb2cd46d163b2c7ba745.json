@@ -1,0 +1,137 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenMP::OpenMP_C::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenMP__OpenMP_C-Debug-35f61fcce8d75822f8bf.json",
+					"name" : "OpenMP::OpenMP_C",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenMP::OpenMP_CXX::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenMP__OpenMP_CXX-Debug-0041858e6273bed41c66.json",
+					"name" : "OpenMP::OpenMP_CXX",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1
+					],
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-9ad1a58d4644cf6543fa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				},
+				{
+					"build" : "src",
+					"jsonFile" : "directory-src-Debug-c61fb49069c3d1aa76de.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "utils",
+					"jsonFile" : "directory-utils-Debug-d74268aecb551596a19c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "utils"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "congFD",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "congFD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-congFD-Debug-a5b31931419a5ecc387b.json",
+					"name" : "congFD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "libcongFD::@145eef247bfb46b6828c",
+					"jsonFile" : "target-libcongFD-Debug-698a70e518e8db562f62.json",
+					"name" : "libcongFD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "symmetrytest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-symmetrytest-Debug-1da56bdf4b3fd0cea1a6.json",
+					"name" : "symmetrytest",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/build",
+		"source" : "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	}
+}

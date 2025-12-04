@@ -2,6 +2,7 @@
 #include "blockSolver.hpp"    // 自定义求解器核心
 #include "eigenSystem.hpp"    // 特征系统计算
 #include <fstream>            // 文件输入输出流
+#include "000_statistics_CTA.hpp"
 
 int main()
 {
@@ -71,9 +72,9 @@ int main()
     // 【王鸿飞】end插值格式（4.0）手搓及优化
 
     // 【王鸿飞】begin插值格式（F203）)手搓及优化
-    // info->interMethod= new_TCNS5 ;
+    info->interMethod= new_TCNS5 ;
     // info->interMethod= new_WHFTCNSA ;
-    info->interMethod= new_WCNS5CONGZ ;
+    // info->interMethod= new_WCNS5CONGZ ;
     // info->interMethod= new_WHFTCNSASF203_NoS ;
     // info->interMethod= new_WHFTCNSASF202_NoS ;
 
@@ -219,11 +220,11 @@ int main()
 
     // Double Mach
 
-    info->endStep=20;
-    info->outputDt=0.01;
+    // info->endStep=20;
+    // info->outputDt=0.01;
     
-    // info->endStep=2;
-    // info->outputDt=0.1;
+    info->endStep=2;
+    info->outputDt=0.1;
     
     info->CFL=0.5;
     info->nCase=4;
@@ -358,4 +359,7 @@ int main()
     timeinfo << "time= " << timepp / 1e6 << "   Finish\n";
     timeinfo << "timesteps= " << bSolver.timesteps << "   Finish\n";
     timeinfo << "solvertime= " << timesss << '\n';
+
+    output_CTA();
+
 }

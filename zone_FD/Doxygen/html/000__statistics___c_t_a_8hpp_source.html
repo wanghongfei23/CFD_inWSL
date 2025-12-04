@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>zoneFD: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include/000_statistics_CTA.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">zoneFD<span id="projectnumber">&#160;v1</span>
+   </div>
+   <div id="projectbrief">no</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">000_statistics_CTA.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="000__statistics___c_t_a_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;filesystem&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// 在这里声明全局变量</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// 示例：</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="000__statistics___c_t_a_8hpp.html#ae9082f709cf9a53938ca3b52e5c3a91c">   11</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#ae9082f709cf9a53938ca3b52e5c3a91c">global_counter_5</a> = 0;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="000__statistics___c_t_a_8hpp.html#accdf7e81d41454c811dcef48095d2cd9">   12</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#accdf7e81d41454c811dcef48095d2cd9">global_counter_6</a> = 0;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="000__statistics___c_t_a_8hpp.html#af97bdf80f2f413766f274f77129ec041">   13</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#af97bdf80f2f413766f274f77129ec041">global_counter_7</a> = 0;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="000__statistics___c_t_a_8hpp.html#a1b7ffc8bd57dbbf9f597328f7feab64d">   14</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#a1b7ffc8bd57dbbf9f597328f7feab64d">global_counter_8</a> = 0;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="000__statistics___c_t_a_8hpp.html#a31c39ae3c6cf78ac07a23e583d16874a">   15</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#a31c39ae3c6cf78ac07a23e583d16874a">global_counter_9</a> = 0;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="000__statistics___c_t_a_8hpp.html#a7571e671e5bb883df89582603ef6347a">   16</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#a7571e671e5bb883df89582603ef6347a">global_counter_10</a> = 0;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="000__statistics___c_t_a_8hpp.html#aa398dba53d75bf94ff9d41dee009a175">   18</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#aa398dba53d75bf94ff9d41dee009a175">pandaun_001</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="000__statistics___c_t_a_8hpp.html#a736eaa08112f9c372701c5cb036b4b05">   20</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#a736eaa08112f9c372701c5cb036b4b05">CTA_counter_on_off</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// inline bool CTA_counter_on_off = true;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// 注意：使用 inline 关键字确保在多个编译单元中只有一个实例</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="000__statistics___c_t_a_8hpp.html#a206fa9c45e3b83e3a573c37977694320">   25</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="000__statistics___c_t_a_8hpp.html#a206fa9c45e3b83e3a573c37977694320">output_CTA</a>(){</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#ae9082f709cf9a53938ca3b52e5c3a91c">global_counter_5</a> || <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#accdf7e81d41454c811dcef48095d2cd9">global_counter_6</a> || <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#af97bdf80f2f413766f274f77129ec041">global_counter_7</a> || <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#a1b7ffc8bd57dbbf9f597328f7feab64d">global_counter_8</a> || <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#a31c39ae3c6cf78ac07a23e583d16874a">global_counter_9</a> || <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#a7571e671e5bb883df89582603ef6347a">global_counter_10</a>) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        std::string statFileName = <span class="stringliteral">&quot;CT-A_counter.txt&quot;</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="comment">// 检查文件是否存在，如果存在则创建带编号的文件</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">int</span> counter = 1;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        std::string newStatFileName = statFileName;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">while</span> (std::filesystem::exists(newStatFileName)) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordtype">size_t</span> dotPos = statFileName.find_last_of(<span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">if</span> (dotPos != std::string::npos) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="comment">// 在扩展名前插入编号</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                newStatFileName = statFileName.substr(0, dotPos) + <span class="stringliteral">&quot;_&quot;</span> + std::to_string(counter) + statFileName.substr(dotPos);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <span class="comment">// 没有扩展名的情况</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                newStatFileName = statFileName + <span class="stringliteral">&quot;_&quot;</span> + std::to_string(counter);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            counter++;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        std::ofstream statFile(newStatFileName);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        statFile &lt;&lt; <span class="stringliteral">&quot;CT Value Statistics:\n&quot;</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        statFile &lt;&lt; <span class="stringliteral">&quot;CT=1e-05 count: &quot;</span> &lt;&lt; <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#ae9082f709cf9a53938ca3b52e5c3a91c">global_counter_5</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        statFile &lt;&lt; <span class="stringliteral">&quot;CT=1e-06 count: &quot;</span> &lt;&lt; <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#accdf7e81d41454c811dcef48095d2cd9">global_counter_6</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        statFile &lt;&lt; <span class="stringliteral">&quot;CT=1e-07 count: &quot;</span> &lt;&lt; <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#af97bdf80f2f413766f274f77129ec041">global_counter_7</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        statFile &lt;&lt; <span class="stringliteral">&quot;CT=1e-08 count: &quot;</span> &lt;&lt; <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#a1b7ffc8bd57dbbf9f597328f7feab64d">global_counter_8</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        statFile &lt;&lt; <span class="stringliteral">&quot;CT=1e-09 count: &quot;</span> &lt;&lt; <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#a31c39ae3c6cf78ac07a23e583d16874a">global_counter_9</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        statFile &lt;&lt; <span class="stringliteral">&quot;CT=1e-10 count: &quot;</span> &lt;&lt; <a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#a7571e671e5bb883df89582603ef6347a">global_counter_10</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        statFile.close();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="000__statistics___c_t_a_8hpp.html#aa398dba53d75bf94ff9d41dee009a175">pandaun_001</a>)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;有 非-5到-10的预期值&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;无 非-5到-10的预期值&quot;</span> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+</div>
+<div class="ttc" id="a000__statistics___c_t_a_8hpp_html_a1b7ffc8bd57dbbf9f597328f7feab64d"><div class="ttname"><a href="000__statistics___c_t_a_8hpp.html#a1b7ffc8bd57dbbf9f597328f7feab64d">global_counter_8</a></div><div class="ttdeci">int global_counter_8</div><div class="ttdef"><b>定义</b> <a href="#l00014">000_statistics_CTA.hpp:14</a></div></div>
+<div class="ttc" id="a000__statistics___c_t_a_8hpp_html_a206fa9c45e3b83e3a573c37977694320"><div class="ttname"><a href="000__statistics___c_t_a_8hpp.html#a206fa9c45e3b83e3a573c37977694320">output_CTA</a></div><div class="ttdeci">void output_CTA()</div><div class="ttdef"><b>定义</b> <a href="#l00025">000_statistics_CTA.hpp:25</a></div></div>
+<div class="ttc" id="a000__statistics___c_t_a_8hpp_html_a31c39ae3c6cf78ac07a23e583d16874a"><div class="ttname"><a href="000__statistics___c_t_a_8hpp.html#a31c39ae3c6cf78ac07a23e583d16874a">global_counter_9</a></div><div class="ttdeci">int global_counter_9</div><div class="ttdef"><b>定义</b> <a href="#l00015">000_statistics_CTA.hpp:15</a></div></div>
+<div class="ttc" id="a000__statistics___c_t_a_8hpp_html_a736eaa08112f9c372701c5cb036b4b05"><div class="ttname"><a href="000__statistics___c_t_a_8hpp.html#a736eaa08112f9c372701c5cb036b4b05">CTA_counter_on_off</a></div><div class="ttdeci">bool CTA_counter_on_off</div><div class="ttdef"><b>定义</b> <a href="#l00020">000_statistics_CTA.hpp:20</a></div></div>
+<div class="ttc" id="a000__statistics___c_t_a_8hpp_html_a7571e671e5bb883df89582603ef6347a"><div class="ttname"><a href="000__statistics___c_t_a_8hpp.html#a7571e671e5bb883df89582603ef6347a">global_counter_10</a></div><div class="ttdeci">int global_counter_10</div><div class="ttdef"><b>定义</b> <a href="#l00016">000_statistics_CTA.hpp:16</a></div></div>
+<div class="ttc" id="a000__statistics___c_t_a_8hpp_html_aa398dba53d75bf94ff9d41dee009a175"><div class="ttname"><a href="000__statistics___c_t_a_8hpp.html#aa398dba53d75bf94ff9d41dee009a175">pandaun_001</a></div><div class="ttdeci">bool pandaun_001</div><div class="ttdef"><b>定义</b> <a href="#l00018">000_statistics_CTA.hpp:18</a></div></div>
+<div class="ttc" id="a000__statistics___c_t_a_8hpp_html_accdf7e81d41454c811dcef48095d2cd9"><div class="ttname"><a href="000__statistics___c_t_a_8hpp.html#accdf7e81d41454c811dcef48095d2cd9">global_counter_6</a></div><div class="ttdeci">int global_counter_6</div><div class="ttdef"><b>定义</b> <a href="#l00012">000_statistics_CTA.hpp:12</a></div></div>
+<div class="ttc" id="a000__statistics___c_t_a_8hpp_html_ae9082f709cf9a53938ca3b52e5c3a91c"><div class="ttname"><a href="000__statistics___c_t_a_8hpp.html#ae9082f709cf9a53938ca3b52e5c3a91c">global_counter_5</a></div><div class="ttdeci">int global_counter_5</div><div class="ttdef"><b>定义</b> <a href="#l00011">000_statistics_CTA.hpp:11</a></div></div>
+<div class="ttc" id="a000__statistics___c_t_a_8hpp_html_af97bdf80f2f413766f274f77129ec041"><div class="ttname"><a href="000__statistics___c_t_a_8hpp.html#af97bdf80f2f413766f274f77129ec041">global_counter_7</a></div><div class="ttdeci">int global_counter_7</div><div class="ttdef"><b>定义</b> <a href="#l00013">000_statistics_CTA.hpp:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

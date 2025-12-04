@@ -14,5 +14,6 @@ var searchData=
   ['coorcel_11',['coorCel',['../class_block.html#a2b4f8bd0ada32d96c0e1252890c6b7fc',1,'Block']]],
   ['coorver_12',['coorVer',['../class_block.html#ade4d9d18efadff1dc56f339e63f0349e',1,'Block']]],
   ['copyability_13',['copyability',['../structpro_1_1proxiable__ptr__constraints.html#ae903fab1b7453ea27b4a678d40921901',1,'pro::proxiable_ptr_constraints']]],
-  ['cti_14',['CTi',['../inter_scheme_8hpp.html#a7529f4148aa11bdfb06b73342aa2599e',1,'interScheme.hpp']]]
+  ['cta_5fcounter_5fon_5foff_14',['CTA_counter_on_off',['../000__statistics___c_t_a_8hpp.html#a736eaa08112f9c372701c5cb036b4b05',1,'000_statistics_CTA.hpp']]],
+  ['cti_15',['CTi',['../inter_scheme_8hpp.html#a7529f4148aa11bdfb06b73342aa2599e',1,'interScheme.hpp']]]
 ];

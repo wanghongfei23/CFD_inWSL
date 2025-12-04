@@ -1,6 +1,6 @@
 #pragma once
 #include "macro.hpp"
-#include "000_globals.hpp"
+#include "000_statistics_CTA.hpp"
 #include <array>
 
 constexpr real u1(real q1, real q2, real q3)
@@ -1561,124 +1561,17 @@ constexpr real whf_TCNS_A(std::array<real, 5> q)
     default: pandaun_001 = true ;
     break;
     }
-    
-    real rr= CT_A*gamma_sum;
-    // 构造截止函数
-    unsigned short flag = 0;
-    if (gamma[0] < rr) flag += 1;
-    if (gamma[1] < rr) flag += 2;
-    if (gamma[2] < rr) flag += 4;
 
-    // 插值
-    switch (flag) {
-    case 0:  // 111
-        return 3.0/128.0 * q[0] - 5.0/32.0 * q[1] + 45.0/64.0 * q[2] + 15.0/32.0 * q[3] - 5.0/128.0 * q[4];
-    case 1:  // 011
-        return -1.0/16.0 * q[1] + 9.0/16.0 * q[2] + 9.0/16.0 * q[3] - 1.0/16.0 * q[4];
-    case 2:  // 101
-    case 3:  // 001
-        return 3.0/8.0 * q[2] + 3.0/4.0 * q[3] - 1.0/8.0 * q[4];
-    case 4:  // 110
-        return 1.0/16.0 * q[0] - 5.0/16.0 * q[1] + 15.0/16.0 * q[2] + 5.0/16.0 * q[3];
-    case 5:  // 010
-        return -1.0/8.0 * q[1] + 3.0/4.0 * q[2] + 3.0/8.0 * q[3];
-    case 6:  // 100
-        return 3.0/8.0 * q[0] - 5.0/4.0 * q[1] + 15.0/8.0 * q[2];
-    default: // 000: 强间断区(直接取值)
-        return q[2];
-    }
-}
-
-
-
-    // 王鸿飞统计CT_A
-constexpr real whf_TCNS_A_count(std::array<real, 5> q)
-{
-    // 局部光滑因子β
-    std::array<real, 3> beta;
-    beta[0] = 1.0/1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
-              1.0/4.0 * pow(1.0 * q[0] - 4.0 * q[1] + 3.0 * q[2], 2);
-    beta[1] = 1.0/1.0 * pow(1.0 * q[1] - 2.0 * q[2] + 1.0 * q[3], 2) + 
-              1.0/4.0 * pow(1.0 * q[1] + 0.0 * q[2] - 1.0 * q[3], 2);
-    beta[2] = 1.0/1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) + 
-              1.0/4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2);
-    // 全局光滑因子τ
-    real tau = std::abs(beta[2] - beta[0]);
-
-    // 计算自适应阈值CT_A
-    real alpha1 = 10.0, alpha2 = 5.0;  //参数
-    // real xi = 1e-3, C_r = 0.24;
-    // real epsilon_A = (0.9*C_r)/(1.0 - 0.9*C_r)*xi*xi;
-    real epsilon_A = 2.7551*1e-7;
-
-    std::array<real, 4> delta_q;
-    delta_q[0] = q[0] - q[1];
-    delta_q[1] = q[1] - q[2];
-    delta_q[2] = q[2] - q[3];
-    delta_q[3] = q[3] - q[4];
-
-    std::array<real, 3> eta;
-        eta[0] = (std::abs(2.0 * delta_q[0] * delta_q[1]) + epsilon_A)
-              / (delta_q[0] * delta_q[0] + delta_q[1] * delta_q[1] + epsilon_A);
-        eta[1] = (std::abs(2.0 * delta_q[1] * delta_q[2]) + epsilon_A)
-              / (delta_q[1] * delta_q[1] + delta_q[2] * delta_q[2] + epsilon_A);
-        eta[2] = (std::abs(2.0 * delta_q[2] * delta_q[3]) + epsilon_A)
-              / (delta_q[2] * delta_q[2] + delta_q[3] * delta_q[3] + epsilon_A);
-    
-    // 计算η_min值
-    real eta_min = std::min({eta[0],eta[1],eta[2]});
-
-    real min = std::min(1.0, 4.1666667 * eta_min);
-    
-    real g_m = min*min*min*min*(5.0 - 4*min);
-
-    int beta_A = std::floor(alpha1 - alpha2*(1.0 - g_m));
-
-    real CT_A;
-
-    // 求光滑度量gamma
-    const real C = 1.0;
-    const real eps = 1e-40;
-
-    std::array<real, 3> gamma;
-
-    gamma[0] = C + tau/(beta[0] + eps);
-    gamma[1] = C + tau/(beta[1] + eps);
-    gamma[2] = C + tau/(beta[2] + eps);
-
-    gamma[0] = gamma[0]*gamma[0];
-    gamma[1] = gamma[1]*gamma[1];
-    gamma[2] = gamma[2]*gamma[2];
-
-    gamma[0] = gamma[0]*gamma[0]*gamma[0];
-    gamma[1] = gamma[1]*gamma[1]*gamma[1];
-    gamma[2] = gamma[2]*gamma[2]*gamma[2];
-
-    real gamma_sum = gamma[0] + gamma[1] + gamma[2];
-    
-    switch(beta_A) {
-    case 5: CT_A = 1e-5; 
-    break;
-    case 6: CT_A = 1e-6;
-    break;
-    case 7: CT_A = 1e-7;
-    break;
-    case 8: CT_A = 1e-8;
-    break;
-    case 9: CT_A = 1e-9;
-    break;
-    case 10: CT_A = 1e-10;
-    break;
-    }
-    
-    // 统计CT_A值的分布
-    switch(beta_A) {
-    case 5: global_counter_5++; break;
-    case 6: global_counter_6++; break;
-    case 7: global_counter_7++; break;
-    case 8: global_counter_8++; break;
-    case 9: global_counter_9++; break;
-    case 10: global_counter_10++; break;
+    if (CTA_counter_on_off)
+    {
+      switch(beta_A) {
+      case 5: global_counter_5++; break;
+      case 6: global_counter_6++; break;
+      case 7: global_counter_7++; break;
+      case 8: global_counter_8++; break;
+      case 9: global_counter_9++; break;
+      case 10: global_counter_10++; break;
+      }
     }
     
     real rr= CT_A*gamma_sum;
@@ -1707,8 +1600,6 @@ constexpr real whf_TCNS_A_count(std::array<real, 5> q)
         return q[2];
     }
 }
-
-
 
 
 
