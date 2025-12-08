@@ -151,8 +151,8 @@
 //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect - 标准结构/include/header.H 文件参考\par \pard\plain 
 {\tc\tcl2 \v //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect - 标准结构/include/header.H}
 {\xe \v //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect - 标准结构/include/header.H}
-{\bkmkstart AAAAAAAACQ}
-{\bkmkend AAAAAAAACQ}
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
 {
 \pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <algorithm>}\par
 {\f2 #include <array>}\par
@@ -284,8 +284,8 @@ void {\b evolve} ({\b GhostArray} &u, {\b GhostArray} &u_prev, {\b GhostArray} &
 static bool {\b is_periodic} = true\par
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
-{\bkmkstart AAAAAAAACR}
-{\bkmkend AAAAAAAACR}
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 函数说明\par
 \pard\plain 
@@ -295,8 +295,8 @@ static bool {\b is_periodic} = true\par
 {\b 
 void compute_rhs ({\b GhostArray} & rhs, {\b GhostArray} & u, {\b GhostArray} & flux, {\b real_t} dx)}}
 \par
-{\bkmkstart AAAAAAAACS}
-{\bkmkend AAAAAAAACS}
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -334,7 +334,7 @@ void compute_rhs ({\b GhostArray} & rhs, {\b GhostArray} & u, {\b GhostArray} & 
 }
 该函数实现了WCNS5（Weighted Compact Nonlinear Scheme）格式的空间离散， 计算线性对流方程的右端项 \par
 }{
-在文件 {\b header.H} 第 {\b 434} 行定义.}\par
+在文件 {\b header.H} 第 {\b 436} 行定义.}\par
 函数调用图:{
 \pard\plain 
 \par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "header_8_h_acfb7e8f2005d220ec0e3a356a4940934_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
@@ -350,8 +350,8 @@ void compute_rhs ({\b GhostArray} & rhs, {\b GhostArray} & u, {\b GhostArray} & 
 {\b 
 void evolve ({\b GhostArray} & u, {\b GhostArray} & u_prev, {\b GhostArray} & flux, {\b GhostArray} & rhs, {\b real_t} dt, {\b real_t} dx)}}
 \par
-{\bkmkstart AAAAAAAACT}
-{\bkmkend AAAAAAAACT}
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -401,7 +401,7 @@ void evolve ({\b GhostArray} & u, {\b GhostArray} & u_prev, {\b GhostArray} & fl
 }
 该函数使用三阶Runge-Kutta方法推进时间步， 实现线性对流方程的时间积分 \par
 }{
-在文件 {\b header.H} 第 {\b 501} 行定义.}\par
+在文件 {\b header.H} 第 {\b 505} 行定义.}\par
 函数调用图:{
 \pard\plain 
 \par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "header_8_h_a90b0c394018d4743e6dd908cbdef16b9_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
@@ -417,8 +417,8 @@ void evolve ({\b GhostArray} & u, {\b GhostArray} & u_prev, {\b GhostArray} & fl
 {\b 
 {\b real_t} exact_deriv ({\b real_t} x, {\b real_t} )}}
 \par
-{\bkmkstart AAAAAAAACU}
-{\bkmkend AAAAAAAACU}
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -447,7 +447,7 @@ void evolve ({\b GhostArray} & u, {\b GhostArray} & u_prev, {\b GhostArray} & fl
 对应位置和时间的精确导数\par
 }}该函数定义了线性对流方程解的导数 \par
 }{
-在文件 {\b header.H} 第 {\b 365} 行定义.}\par
+在文件 {\b header.H} 第 {\b 367} 行定义.}\par
 这是这个函数的调用关系图:{
 \pard\plain 
 \par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "header_8_h_aa33afed158244dc30f8b8e0e7322d1eb_icgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
@@ -459,8 +459,8 @@ void evolve ({\b GhostArray} & u, {\b GhostArray} & u_prev, {\b GhostArray} & fl
 {\b 
 {\b real_t} exact_initial_solution ({\b real_t} x, {\b real_t} )}}
 \par
-{\bkmkstart AAAAAAAACV}
-{\bkmkend AAAAAAAACV}
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -501,8 +501,8 @@ void evolve ({\b GhostArray} & u, {\b GhostArray} & u_prev, {\b GhostArray} & fl
 {\b 
 {\b real_t} exact_solution ({\b real_t} x, {\b real_t} )}}
 \par
-{\bkmkstart AAAAAAAACW}
-{\bkmkend AAAAAAAACW}
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -531,7 +531,7 @@ void evolve ({\b GhostArray} & u, {\b GhostArray} & u_prev, {\b GhostArray} & fl
 对应位置和时间的精确解\par
 }}该函数返回线性对流方程的精确解 \par
 }{
-在文件 {\b header.H} 第 {\b 381} 行定义.}\par
+在文件 {\b header.H} 第 {\b 383} 行定义.}\par
 函数调用图:{
 \pard\plain 
 \par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "header_8_h_aea5366c55fbed763b55297cf942e3b67_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
@@ -547,8 +547,8 @@ void evolve ({\b GhostArray} & u, {\b GhostArray} & u_prev, {\b GhostArray} & fl
 {\b 
 {\b real_t} L1_norm_error (const {\b GhostArray} & u, const {\b GhostArray} & x, {\b real_t} t){\f2 [inline]}}}
 \par
-{\bkmkstart AAAAAAAACX}
-{\bkmkend AAAAAAAACX}
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -583,7 +583,7 @@ void evolve ({\b GhostArray} & u, {\b GhostArray} & u_prev, {\b GhostArray} & fl
 L1范数误差\par
 }}该函数计算数值解与精确解之间的L1范数误差 \par
 }{
-在文件 {\b header.H} 第 {\b 536} 行定义.}\par
+在文件 {\b header.H} 第 {\b 540} 行定义.}\par
 函数调用图:{
 \pard\plain 
 \par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "header_8_h_ae74f59af7424d5daa1e787f7b3af08cc_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
@@ -599,8 +599,8 @@ L1范数误差\par
 {\b 
 {\b real_t} L2_norm_error (const {\b GhostArray} & u, const {\b GhostArray} & x, {\b real_t} t){\f2 [inline]}}}
 \par
-{\bkmkstart AAAAAAAACY}
-{\bkmkend AAAAAAAACY}
+{\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -635,7 +635,7 @@ L1范数误差\par
 L2范数误差\par
 }}该函数计算数值解与精确解之间的L2范数误差 \par
 }{
-在文件 {\b header.H} 第 {\b 555} 行定义.}\par
+在文件 {\b header.H} 第 {\b 559} 行定义.}\par
 函数调用图:{
 \pard\plain 
 \par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "header_8_h_a94c20ffe91b962413c718133f8a0290b_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
@@ -651,8 +651,8 @@ L2范数误差\par
 {\b 
 {\b real_t} Linf_norm_error (const {\b GhostArray} & u, const {\b GhostArray} & x, {\b real_t} t){\f2 [inline]}}}
 \par
-{\bkmkstart AAAAAAAACZ}
-{\bkmkend AAAAAAAACZ}
+{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -687,7 +687,7 @@ L2范数误差\par
 L∞范数误差\par
 }}该函数计算数值解与精确解之间的L∞范数误差（最大误差） \par
 }{
-在文件 {\b header.H} 第 {\b 574} 行定义.}\par
+在文件 {\b header.H} 第 {\b 578} 行定义.}\par
 函数调用图:{
 \pard\plain 
 \par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "header_8_h_afa2d1de0ea98d9df18410a295c4643f3_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
@@ -703,8 +703,8 @@ L∞范数误差\par
 {\b 
 std::ostream & operator<< (std::ostream & os, const {\b real_t} & value)}}
 \par
-{\bkmkstart AAAAAAAADA}
-{\bkmkend AAAAAAAADA}
+{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -733,7 +733,7 @@ std::ostream & operator<< (std::ostream & os, const {\b real_t} & value)}}
 输出流引用\par
 }}该函数允许直接将real_t类型的值输出到流中 \par
 }{
-在文件 {\b header.H} 第 {\b 413} 行定义.}\par
+在文件 {\b header.H} 第 {\b 415} 行定义.}\par
 }
 {\xe \v print_real\:header.H}
 {\xe \v header.H\:print_real}
@@ -741,8 +741,8 @@ std::ostream & operator<< (std::ostream & os, const {\b real_t} & value)}}
 {\b 
 void print_real ({\b real_t} value)}}
 \par
-{\bkmkstart AAAAAAAADB}
-{\bkmkend AAAAAAAADB}
+{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -762,11 +762,11 @@ void print_real ({\b real_t} value)}}
 }
 该函数将__float128类型的数值转换为字符串并打印 \par
 }{
-在文件 {\b header.H} 第 {\b 393} 行定义.}\par
+在文件 {\b header.H} 第 {\b 395} 行定义.}\par
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
-{\bkmkstart AAAAAAAADC}
-{\bkmkend AAAAAAAADC}
+{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 变量说明\par
 \pard\plain 
@@ -776,12 +776,12 @@ void print_real ({\b real_t} value)}}
 {\b 
 bool is_periodic = true{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAADD}
-{\bkmkend AAAAAAAADD}
+{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
 {
-在文件 {\b header.H} 第 {\b 422} 行定义.}\par
+在文件 {\b header.H} 第 {\b 424} 行定义.}\par
 }
 }

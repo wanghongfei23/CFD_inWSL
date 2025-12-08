@@ -21,6 +21,6 @@ var searchData=
   ['whftcnsasf103_18',['WHFTCNSASF103',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37aa7a47402742fe73491558cd2eb3191bd',1,'macro.hpp']]],
   ['whftcnsasf103_5freciprocal_19',['WHFTCNSASF103_reciprocal',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a5b21cbcac96f3a127fd53ba8dc9c21d0',1,'macro.hpp']]],
   ['whftcnsasf202_5f2s_20',['WHFTCNSASF202_2S',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a119b3a413b12ff023661eb420f90f373',1,'macro.hpp']]],
-  ['whftcnsasf202_5fnos_21',['WHFTCNSASF202_NoS',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a19d77b3fe88bc2c194da0b9d5c042317',1,'macro.hpp']]],
-  ['whftcnsasf203_5fnos_22',['WHFTCNSASF203_NoS',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a25c64d2737331bb4db12361b6ffaffb5',1,'macro.hpp']]]
+  ['whftcnsasf202_5fnos_21',['WHFTCNSASF202',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a19d77b3fe88bc2c194da0b9d5c042317',1,'macro.hpp']]],
+  ['whftcnsasFf_5_10_5fnos_22',['WHFTCNSASFf_5_10',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a25c64d2737331bb4db12361b6ffaffb5',1,'macro.hpp']]]
 ];

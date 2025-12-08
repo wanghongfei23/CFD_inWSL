@@ -63,12 +63,12 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSAS_fx_real,"TENO-AS-fx-real"},
     {WHFTCNSAS_approx_2,"TENO-AS-approx_2"},
     {WHFTCNSASF202_2S,"TENO-AS-myF202_2S"},
-    {WHFTCNSASF202_NoS,"TENO-AS-myF202_NoS"},
-    {WHFTCNSASF203_NoS,"TENO-AS-myF203_NoS"},
-    {WHFTCNSASF213_NoS,"TENO-AS-myF213_NoS"},
-    {temp012,"temp_name_012"},
-    {temp013,"temp_name_013"},
-    {temp014,"temp_name_014"},
+    {WHFTCNSASF202,"TENO-AS-myF202"},
+    {WHFTCNSASFf_5_10,"TENO-AS-myFf_5_10"},
+    {WHFTCNSASFf_5_9,"TENO-AS-myFf_5_9"},
+    {WHFTCNSASFf2_test,"TENO-AS-myFf2_test"},
+    {WHFTCNSASFf3_test,"TENO-AS-myFf3_test"},
+    {WHFTCNSASFf3_5_9_time_improve,"TENO-AS-myFf3_5_9_time_improve"},
     {temp015,"temp_name_015"},
     {temp016,"temp_name_016"},
     {temp017,"temp_name_017"},
@@ -260,6 +260,7 @@ int main()
     // info->interMethod = NICEST5;
     // info->interMethod=WCNS5CONG;
 
+    // info->interMethod = TCNSCongA; //Teno5_CongA
     // info->interMethod = WCNS5; //weno5_JSchen
     // info->interMethod = WCNSZ5; //weno5_Z
     // info->interMethod = TCNS5; //Teno5_Z
@@ -278,24 +279,23 @@ int main()
     // info->interMethod = WHFTCNSAS_approx_2; // 具体代入，叠加A和S，分母近似掉-1
 
     // info->interMethod = WHFTCNSASF202_2S;
-    // info->interMethod = WHFTCNSASF202_NoS;
-    // info->interMethod = WHFTCNSASF203_NoS;
-    info->interMethod = WHFTCNSASF213_NoS;
-    // info->interMethod = temp012;
-    // info->interMethod = temp013;
-    // info->interMethod = temp014;
+    // info->interMethod = WHFTCNSASF202;
+    // info->interMethod = WHFTCNSASFf_5_10;
+    // info->interMethod = WHFTCNSASFf_5_9;
+    // info->interMethod = WHFTCNSASFf2_test;
+    info->interMethod = WHFTCNSASFf3_test;
+    // info->interMethod = WHFTCNSASFf3_5_9_time_improve;
     // info->interMethod = temp015;
     // info->interMethod = temp016;
     // info->interMethod = temp017;
     // info->interMethod = temp018;
     // info->interMethod = temp019;
-    // info->interMethod = TCNSCongA;
 
     // --------------------------- 算例选项 --------------------------- 
     const int presetCase = 
         // 0;  // Sod
         // 1;  // ShuOsher
-        // 2;  // Lax
+        2;  // Lax
         // 3;  // Sedov
         // 4;  // Woodward_Colella
         // 5;  // Double_sparse_wave
@@ -305,7 +305,7 @@ int main()
         // 12; // implosion
         // 13; // RTI
         // 14; // Double_Mach
-        15; // 2D_Riemann_3
+        // 15; // 2D_Riemann_3
         // 16; // KHI
     
     // 移除交互式选择，直接使用预设的算例编号

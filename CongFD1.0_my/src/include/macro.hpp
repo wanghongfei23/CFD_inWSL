@@ -86,13 +86,13 @@ enum InterMethod {
     WHFTCNSAS_fx_real,     // 27
     WHFTCNSAS_approx_2,     // 28
     WHFTCNSASF202_2S,     // 29
-    WHFTCNSASF202_NoS,     // 30
+    WHFTCNSASF202,     // 30
     // 31-40
-    WHFTCNSASF203_NoS,     // 31
-    WHFTCNSASF213_NoS,     // 32
-    temp012,     // 33
-    temp013,     // 34
-    temp014,     // 35
+    WHFTCNSASFf_5_10,     // 31
+    WHFTCNSASFf_5_9,     // 32
+    WHFTCNSASFf2_test,     // 33
+    WHFTCNSASFf3_test,     // 34
+    WHFTCNSASFf3_5_9_time_improve,     // 35
     temp015,     // 36
     temp016,     // 37
     temp017,     // 38

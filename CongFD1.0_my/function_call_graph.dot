@@ -467,9 +467,9 @@ digraph FunctionCallGraph {
   "interScheme" -> "real" [color=blue];
   "interScheme" -> "sort" [color=blue];
   "interScheme" -> "temp_011" [color=blue];
-  "interScheme" -> "temp_012" [color=blue];
-  "interScheme" -> "temp_013" [color=blue];
-  "interScheme" -> "temp_014" [color=blue];
+  "interScheme" -> "whf_TCNS_AS_myFf2_test" [color=blue];
+  "interScheme" -> "whf_TCNS_AS_myFf3_test" [color=blue];
+  "interScheme" -> "whf_TCNS_AS_myFf3_5_9_time_improve" [color=blue];
   "interScheme" -> "temp_015" [color=blue];
   "interScheme" -> "temp_016" [color=blue];
   "interScheme" -> "temp_017" [color=blue];
@@ -490,8 +490,8 @@ digraph FunctionCallGraph {
   "interScheme" -> "whf_TCNS_AS_myF103" [color=blue];
   "interScheme" -> "whf_TCNS_AS_myF103_reciprocal" [color=blue];
   "interScheme" -> "whf_TCNS_AS_myF202_2S" [color=blue];
-  "interScheme" -> "whf_TCNS_AS_myF202_NoS" [color=blue];
-  "interScheme" -> "whf_TCNS_AS_myF203_NoS" [color=blue];
+  "interScheme" -> "whf_TCNS_AS_myF202" [color=blue];
+  "interScheme" -> "whf_TCNS_AS_myFf_5_10" [color=blue];
   "interScheme" -> "whf_TCNS_AS_myH002" [color=blue];
   "interScheme" -> "whf_TCNS_A_count" [color=blue];
 

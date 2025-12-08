@@ -447,9 +447,107 @@ flux_schemes.H\par \pard\plain
 00289 \}\par
 00290 \par
 00291 \par
-00292 \par
-00293 \par
-00294 \par
-00295 {\cf21 #endif }{\cf20 // FLUX_SCHEMES_H}\par
+00292 {\cf17 inline} real_t whf_TcnsN_myASF213_NoS(std::array<real_t, 5> q) \par
+00293 \{\par
+00294     global_string = {\cf22 "whf_TcnsN_myASF213_NoS"};\par
+00295 \par
+00296     {\cf20 // 常量定义}\par
+00297     {\cf17 constexpr} real_t xi = 1e-3;           {\cf20 // 小参数}\par
+00298     {\cf17 constexpr} real_t Cr = 0.24;           {\cf20 // 切换参数}\par
+00299     {\cf17 constexpr} real_t C = 1.0;             {\cf20 // 常数}\par
+00300     {\cf17 constexpr} real_t epsilon_A = (0.9 * Cr) / (1 - 0.9 * Cr) * xi * xi;  {\cf20 // 自适应参数ε_A}\par
+00301 \par
+00302     {\cf20 // 解包输入值}\par
+00303     real_t q_im2 = q[0]; {\cf20 // q_\{i-2\}}\par
+00304     real_t q_im1 = q[1]; {\cf20 // q_\{i-1\}}\par
+00305     real_t q_i   = q[2]; {\cf20 // q_i}\par
+00306     real_t q_ip1 = q[3]; {\cf20 // q_\{i+1\}}\par
+00307     real_t q_ip2 = q[4]; {\cf20 // q_\{i+2\}}\par
+00308 \par
+00309     {\cf20 // 计算差分值}\par
+00310     real_t dq_im3_2 = q_im1 - q_im2; {\cf20 // Δq_\{i-3/2\}}\par
+00311     real_t dq_im1_2 = q_i - q_im1;   {\cf20 // Δq_\{i-1/2\}}\par
+00312     real_t dq_ip1_2 = q_ip1 - q_i;   {\cf20 // Δq_\{i+1/2\}}\par
+00313     real_t dq_ip3_2 = q_ip2 - q_ip1; {\cf20 // Δq_\{i+3/2\}}\par
+00314 \par
+00315     {\cf20 // 计算局部光滑因子}\par
+00316     real_t beta0 = powq(q_im2 - 2*q_im1 + q_i, 2) + \par
+00317                  0.25 * powq(q_im2 - 4*q_im1 + 3*q_i, 2);\par
+00318     \par
+00319     real_t beta1 = powq(q_im1 - 2*q_i + q_ip1, 2) + \par
+00320                  0.25 * powq(q_im1 - q_ip1, 2);\par
+00321     \par
+00322     real_t beta2 = powq(q_i - 2*q_ip1 + q_ip2, 2) + \par
+00323                  0.25 * powq(3*q_i - 4*q_ip1 + q_ip2, 2);\par
+00324 \par
+00325     {\cf20 // 计算全局光滑因子}\par
+00326     real_t tau = std::abs(beta2 - beta0);\par
+00327 \par
+00328     {\cf20 // 计算η值}\par
+00329     real_t eta_im1 = (std::abs(2*dq_im1_2*dq_im3_2) + epsilon_A) / \par
+00330                    (powq(dq_im1_2, 2) + powq(dq_im3_2, 2) + epsilon_A);\par
+00331     \par
+00332     real_t eta_i = (std::abs(2*dq_ip1_2*dq_im1_2) + epsilon_A) / \par
+00333                  (powq(dq_ip1_2, 2) + powq(dq_im1_2, 2) + epsilon_A);\par
+00334     \par
+00335     real_t eta_ip1 = (std::abs(2*dq_ip3_2*dq_ip1_2) + epsilon_A) / \par
+00336                    (powq(dq_ip3_2, 2) + powq(dq_ip1_2, 2) + epsilon_A);\par
+00337     \par
+00338     real_t eta_min = std::min(\{eta_im1, eta_i, eta_ip1\});\par
+00339 \par
+00340     {\cf20 // 计算m参数}\par
+00341     real_t min = std::min(1.0Q, eta_min / Cr);\par
+00342     real_t m = 1.0Q - min;\par
+00343 \par
+00344     {\cf20 // 计算C_T_prime（自适应阈值参数）}\par
+00345     real_t C_T_prime = -0.370178*m*m*m + 0.454387*m*m - 0.033595*m + 0.030802;\par
+00346 \par
+00347     {\cf20 // 确定β_j}\par
+00348     real_t beta_j = std::min(\{beta0, beta1, beta2\});\par
+00349 \par
+00350     {\cf20 // 计算δ_k}\par
+00351     {\cf18 int} delta0 = (beta_j * tau < (C_T_prime * tau - C * (1 - C_T_prime) * beta_j) * beta0) ? 0 : 1;\par
+00352     {\cf18 int} delta1 = (beta_j * tau < (C_T_prime * tau - C * (1 - C_T_prime) * beta_j) * beta1) ? 0 : 1;\par
+00353     {\cf18 int} delta2 = (beta_j * tau < (C_T_prime * tau - C * (1 - C_T_prime) * beta_j) * beta2) ? 0 : 1;\par
+00354 \par
+00355     {\cf20 // 根据δ值选择插值系数}\par
+00356     real_t a0, a1, a2, a3, a4;\par
+00357     \par
+00358     {\cf19 if} (delta0 == 1 && delta1 == 1 && delta2 == 1) \{\par
+00359         a0 = 3.0/128; a1 = -5.0/32; a2 = 45.0/64; a3 = 15.0/32; a4 = -5.0/128;\par
+00360     \} \par
+00361     {\cf19 else} {\cf19 if} (delta0 == 0 && delta1 == 1 && delta2 == 1) \{\par
+00362         a0 = 0; a1 = -1.0/16; a2 = 9.0/16; a3 = 9.0/16; a4 = -1.0/16;\par
+00363     \} \par
+00364     {\cf19 else} {\cf19 if} ((delta0 == 1 && delta1 == 0 && delta2 == 1) || \par
+00365              (delta0 == 0 && delta1 == 0 && delta2 == 1)) \{\par
+00366         a0 = 0; a1 = 0; a2 = 3.0/8; a3 = 3.0/4; a4 = -1.0/8;\par
+00367     \} \par
+00368     {\cf19 else} {\cf19 if} (delta0 == 1 && delta1 == 1 && delta2 == 0) \{\par
+00369         a0 = 1.0/16; a1 = -5.0/16; a2 = 15.0/16; a3 = 5.0/16; a4 = 0;\par
+00370     \} \par
+00371     {\cf19 else} {\cf19 if} (delta0 == 0 && delta1 == 1 && delta2 == 0) \{\par
+00372         a0 = 0; a1 = -1.0/8; a2 = 3.0/4; a3 = 3.0/8; a4 = 0;\par
+00373     \} \par
+00374     {\cf19 else} {\cf19 if} (delta0 == 1 && delta1 == 0 && delta2 == 0) \{\par
+00375         a0 = 3.0/8; a1 = -5.0/4; a2 = 15.0/8; a3 = 0; a4 = 0;\par
+00376     \} \par
+00377     {\cf19 else} \{ {\cf20 // (0,0,0)}\par
+00378         a0 = 0; a1 = 0; a2 = 1; a3 = 0; a4 = 0;\par
+00379     \}\par
+00380 \par
+00381     {\cf20 // 计算最终插值结果}\par
+00382     {\cf19 return} a0*q_im2 + a1*q_im1 + a2*q_i + a3*q_ip1 + a4*q_ip2;\par
+00383 \}\par
+00384 \par
+00385 \par
+00386 \par
+00387 \par
+00388 \par
+00389 \par
+00390 \par
+00391 \par
+00392 \par
+00393 {\cf21 #endif }{\cf20 // FLUX_SCHEMES_H}\par
 }
 }

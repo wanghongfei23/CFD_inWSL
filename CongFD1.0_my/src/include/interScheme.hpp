@@ -2887,7 +2887,7 @@ constexpr real whf_TCNS_AS_myF202_2S(std::array<real, 5> q) {
 }
 
 
-constexpr real whf_TCNS_AS_myF202_NoS(std::array<real, 5> q) {
+constexpr real whf_TCNS_AS_myF202(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
   std::array<real, 3> beta = {
       1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
@@ -2993,7 +2993,7 @@ constexpr real whf_TCNS_AS_myF202_NoS(std::array<real, 5> q) {
 }
 
 
-constexpr real whf_TCNS_AS_myF203_NoS(std::array<real, 5> q) {
+constexpr real whf_TCNS_AS_myFf_5_10(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
   std::array<real, 3> beta = {
       1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
@@ -3104,7 +3104,7 @@ constexpr real whf_TCNS_AS_myF203_NoS(std::array<real, 5> q) {
 }
 
 
-constexpr real whf_TCNS_AS_myF213_NoS(std::array<real, 5> q) {
+constexpr real whf_TCNS_AS_myFf_5_9(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
   std::array<real, 3> beta = {
       1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
@@ -3146,9 +3146,11 @@ constexpr real whf_TCNS_AS_myF213_NoS(std::array<real, 5> q) {
   real eta_min = std::min({eta_im1, eta_i, eta_ip1});
 
   // 计算min
-  real min = std::min(0.24, eta_min);
+  real min = std::min(1.0, 4.166667*eta_min);
+  real m = 1 - min;
   
-  real m = 1 - min/0.24;
+  // real min = std::min(0.24, eta_min);
+  // real m = 1 - min/0.24;
 
   // 计算C_T_prime
 
@@ -3213,7 +3215,7 @@ constexpr real whf_TCNS_AS_myF213_NoS(std::array<real, 5> q) {
 }
 
 
-constexpr real temp_012(std::array<real, 5> q) {
+constexpr real whf_TCNS_AS_myFf2_test(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
   std::array<real, 3> beta = {
       1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
@@ -3255,11 +3257,25 @@ constexpr real temp_012(std::array<real, 5> q) {
   real eta_min = std::min({eta_im1, eta_i, eta_ip1});
 
   // 计算min
-  real min = std::min(0.24, eta_min);
+  // real min = std::min(1.0, 4.166667*eta_min);
+  // real m = 1 - min;
   
+  real min = std::min(0.24, eta_min);
+  real m = 1 - min/0.24;
+
   // 计算C_T_prime
-  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
-  //CT adapt end
+  real mm=m*m;
+
+  // // 二次拟合
+  // // Ff2_5_10
+  // real C_T = -0.088182*mm + 0.259395*m - 0.000616;
+  // // Ff2_5_9
+  // real C_T = -0.100880*mm + 0.255691*m - 0.012299;
+  // // Ff2_4_10
+  // real C_T = -0.107048*mm + 0.379631*m - 0.016103;
+  // // Ff2_4_9
+  real C_T = -0.133901*mm + 0.388500*m - 0.003449;
+  // //CT adapt end
   
   real CT_1 = 1 - C_T;
   real tau = std::abs(beta[2] -
@@ -3315,7 +3331,7 @@ constexpr real temp_012(std::array<real, 5> q) {
 }
 
 
-constexpr real temp_013(std::array<real, 5> q) {
+constexpr real whf_TCNS_AS_myFf3_test(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
   std::array<real, 3> beta = {
       1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
@@ -3357,11 +3373,25 @@ constexpr real temp_013(std::array<real, 5> q) {
   real eta_min = std::min({eta_im1, eta_i, eta_ip1});
 
   // 计算min
-  real min = std::min(0.24, eta_min);
+  // real min = std::min(1.0, 4.166667*eta_min);
+  // real m = 1 - min;
   
+  real min = std::min(0.24, eta_min);
+  real m = 1 - min/0.24;
+
   // 计算C_T_prime
-  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
-  //CT adapt end
+  real mm=m*m;
+  real mmm=m*mm;
+  // // 三次拟合
+  // // Ff3_5_10
+  // real C_T = -0.452662*mmm + 0.590811*mm - 0.012189*m + 0.022010;
+  // // Ff3_5_9
+  real C_T = -0.370178*mmm + 0.454387*mm + 0.033595*m + 0.030802;
+  // // Ff3_4_10
+  // real C_T = -0.790337*mmm + 1.078457*mm - 0.099243*m + 0.025750;
+  // // Ff3_4_9
+  // real C_T = -0.681181*mmm + 0.887870*mm - 0.024235*m + 0.032624;
+  // //CT adapt end
   
   real CT_1 = 1 - C_T;
   real tau = std::abs(beta[2] -
@@ -3417,7 +3447,7 @@ constexpr real temp_013(std::array<real, 5> q) {
 }
 
 
-constexpr real temp_014(std::array<real, 5> q) {
+constexpr real whf_TCNS_AS_myFf3_5_9_time_improve(std::array<real, 5> q) {
   real eps = 1e-40; // 1e-10;
   std::array<real, 3> beta = {
       1.0 / 1.0 * pow(1.0 * q[0] - 2.0 * q[1] + 1.0 * q[2], 2) +
@@ -3459,11 +3489,22 @@ constexpr real temp_014(std::array<real, 5> q) {
   real eta_min = std::min({eta_im1, eta_i, eta_ip1});
 
   // 计算min
-  real min = std::min(0.24, eta_min);
+  // real min = std::min(1.0, 4.166667*eta_min);
+  // real m = 1 - min;
   
+  real x = std::min(0.24, eta_min);
+
   // 计算C_T_prime
-  real C_T = 1.0/(4068.43*min*min*min - 208.997*min*min - 11.9427*min + 6.81529);
-  //CT adapt end
+  real xx=x*x;
+  real xxx=x*xx;
+  // // 三次拟合
+  // // Ff3_5_10
+
+  // // Ff3_5_9
+  real C_T = 26.778*xxx - 11.3915*xx + 0.700688*x + 0.148606;
+  // // Ff3_4_10
+  // // Ff3_4_9
+  // //CT adapt end
   
   real CT_1 = 1 - C_T;
   real tau = std::abs(beta[2] -

@@ -15,7 +15,7 @@ var searchData=
   ['whf_5ftcns_5fas_5fmyf103_12',['whf_TCNS_AS_myF103',['../inter_scheme_8hpp.html#ae6ac9d312311d59bd075cb90be17547d',1,'interScheme.hpp']]],
   ['whf_5ftcns_5fas_5fmyf103_5freciprocal_13',['whf_TCNS_AS_myF103_reciprocal',['../inter_scheme_8hpp.html#ab968fa84751fd9e87573328a742bc3c0',1,'interScheme.hpp']]],
   ['whf_5ftcns_5fas_5fmyf202_5f2s_14',['whf_TCNS_AS_myF202_2S',['../inter_scheme_8hpp.html#a51fb282f9106464f4f42240a6a8b0769',1,'interScheme.hpp']]],
-  ['whf_5ftcns_5fas_5fmyf202_5fnos_15',['whf_TCNS_AS_myF202_NoS',['../inter_scheme_8hpp.html#a07a7a5c9ddccb50c433e1da7141e79dd',1,'interScheme.hpp']]],
-  ['whf_5ftcns_5fas_5fmyf203_5fnos_16',['whf_TCNS_AS_myF203_NoS',['../inter_scheme_8hpp.html#a1808371f2cb10f7489fa73f8377bf949',1,'interScheme.hpp']]],
+  ['whf_5ftcns_5fas_5fmyf202_5fnos_15',['whf_TCNS_AS_myF202',['../inter_scheme_8hpp.html#a07a7a5c9ddccb50c433e1da7141e79dd',1,'interScheme.hpp']]],
+  ['whf_5ftcns_5fas_5fmyFf_5_10_5fnos_16',['whf_TCNS_AS_myFf_5_10',['../inter_scheme_8hpp.html#a1808371f2cb10f7489fa73f8377bf949',1,'interScheme.hpp']]],
   ['whf_5ftcns_5fas_5fmyh002_17',['whf_TCNS_AS_myH002',['../inter_scheme_8hpp.html#aa1df249adc502760a3e1fa32f7538950',1,'interScheme.hpp']]]
 ];

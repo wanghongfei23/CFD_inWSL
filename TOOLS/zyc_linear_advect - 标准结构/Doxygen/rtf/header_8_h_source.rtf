@@ -341,163 +341,167 @@ header.H\par \pard\plain
 00346     {\cf20 // Exact solution for a Gaussian function}\par
 00347     {\cf20 // u(x, t) = e^(-300 * (x - x_c)^2) where x_c = 0.5}\par
 00348 \par
-00349     real_t x_c = 0.5Q;\par
-00350     {\cf19 return} expq(-300.0Q * (x - x_c) * (x - x_c));\par
-00351 \par
-00352     {\cf20 // return x * x * expq(0.75Q * (x - 1.0Q));}\par
-00353 \par
-00354     {\cf20 // return x;}\par
-00355 \}\par
-00356 \par
-00365 real_t exact_deriv(real_t x, real_t {\cf20 /*t*/})\par
-00366 \{\par
-00367     {\cf20 // real_t x_c = 0.5Q;}\par
-00368     {\cf20 // return 600.0Q * (x - x_c) * expq(-300.0Q * (x - x_c) * (x - x_c));}\par
-00369     {\cf20 // return -1.Q;}\par
-00370     {\cf19 return} -expq(0.75Q * (x - 1.0Q)) * (2.0Q * x + 0.75Q * x * x);\par
-00371 \}\par
-00372 \par
-00381 real_t exact_solution(real_t x, real_t {\cf20 /*t*/})\par
-00382 \{\par
-00383     {\cf20 // return exact_initial_solution(x, 0.0Q);}\par
-00384     {\cf19 return} exact_deriv(x, 0.0Q);\par
-00385 \}\par
-00386 \par
-00393 {\cf18 void} print_real(real_t value)\par
-00394 \{\par
-00395     {\cf20 // Buffer for quadmath conversion}\par
-00396     {\cf18 char} buf[128];\par
-00397 \par
-00398     {\cf20 // Convert quad precision to string with 10 decimal places}\par
-00399     quadmath_snprintf(buf, {\cf17 sizeof}(buf), {\cf22 "%.10Qf"}, value);\par
-00400 \par
-00401     {\cf20 // Print to standard output}\par
-00402     std::cout << buf;\par
-00403 \}\par
-00404 \par
-00413 std::ostream& operator<<(std::ostream& os, {\cf17 const} real_t& value)\par
-00414 \{\par
-00415     {\cf18 char} buffer[128];\par
-00416     quadmath_snprintf(buffer, {\cf17 sizeof}(buffer), {\cf22 "%.30Qg"}, value);\par
-00417     os << buffer;\par
-00418     {\cf19 return} os;\par
-00419 \}\par
-00420 \par
-00421 {\cf20 // 全局变量：是否使用周期边界条件}\par
-00422 {\cf17 static} {\cf18 bool} is_periodic = {\cf17 true};\par
-00423 \par
-00434 {\cf18 void} compute_rhs(GhostArray& rhs, GhostArray& u, GhostArray& flux, real_t dx)\par
-00435 \{\par
-00436     {\cf17 const} real_t c = 1.0Q; {\cf20 // 波速}\par
-00437     {\cf19 if} (is_periodic)\par
-00438         u.fill_periodic();\par
-00439 \par
-00440     {\cf20 // 1. 一阶插值计算界面通量 (i+1/2位置)}\par
-00441 {\cf20 // #pragma omp parallel for}\par
-00442     {\cf19 for} ({\cf18 int} i : flux.full_range()) \{\par
-00443         {\cf20 // 提取左值和右值}\par
-00444         {\cf20 // real_t u_left = u[i - 1];}\par
-00445         {\cf20 // real_t u_right = u[i];}\par
-00446         std::array<real_t, 5> q_left = \{ u[i - 3], u[i - 2], u[i - 1], u[i], u[i + 1] \};\par
-00447         std::array<real_t, 5> q_right = \{ u[i + 2], u[i + 1], u[i], u[i - 1], u[i - 2] \};\par
-00448 \par
-00449         {\cf20 // }\par
-00450         {\cf20 // 使用高阶插值得到左值和右值}\par
-00451         \par
-00452         {\cf20 // 【王鸿飞】插值格式更换处}\par
-00453         {\cf20 // real_t u_left = whf_TcnsN_A(q_left);}\par
-00454         {\cf20 // real_t u_right = whf_TcnsN_A(q_right);}\par
-00455         {\cf20 // real_t u_left = whf_TcnsN_myASF203_NoS(q_left);}\par
-00456         {\cf20 // real_t u_right = whf_TcnsN_myASF203_NoS(q_right);}\par
-00457         real_t u_left = Linear_5th(q_left);\par
-00458         real_t u_right = Linear_5th(q_right);\par
-00459 \par
-00460         {\cf20 // 一阶插值:取左右平均值}\par
-00461         {\cf20 // if (c > 0) \{}\par
-00462         {\cf20 //     // c > 0, 使用前向差分}\par
-00463         {\cf20 //     flux[i] = c * u_left;}\par
-00464         {\cf20 // \} else \{}\par
-00465         {\cf20 //     // c <= 0, 使用后向差分}\par
-00466         {\cf20 //     flux[i] = c * u_right;}\par
-00467         {\cf20 // \}}\par
-00468 \par
-00469         real_t F_left = c * u_left;\par
-00470         real_t F_right = c * u_right;\par
-00471         flux[i] = (F_left + F_right) / 2.0Q - (c / 2.0Q) * (u_right - u_left);\par
-00472     \}\par
-00473     {\cf19 if} (is_periodic)\par
-00474         flux.fill_periodic();\par
-00475     std::array<real_t, 3> w = \{ 3.0Q / 2.0Q, -3.0Q / 10.0Q, 1.0Q / 30.0Q \};\par
-00476 {\cf20 // std::array<real_t, 3> w = \{ 4.0Q / 3.0Q, -1.0Q / 6.0Q, 0.0Q \};}\par
-00477 {\cf20 // std::array<real_t, 3> w = \{ 1.0Q, 0.0Q, 0.0Q \};}\par
-00478 {\cf20 // 2. 二阶中心差分计算右端项}\par
-00479 {\cf20 // #pragma omp parallel for}\par
-00480     {\cf19 for} ({\cf18 int} i : rhs.domain()) \{\par
-00481         {\cf20 // 二阶差分: (flux[i+1] - flux[i]) / dx}\par
-00482         {\cf20 // rhs[i] = -1.0Q / dx * (flux[i + 1] - flux[i]);}\par
-00483         rhs[i] = -w[0] / dx * (flux[i + 1] - flux[i])\par
-00484             - w[1] / dx * (u[i + 1] - u[i - 1])\par
-00485             - w[2] / dx * (flux[i + 2] - flux[i - 1]);\par
-00486     \}\par
-00487 \}\par
-00488 \par
-00501 {\cf18 void} evolve(GhostArray& u, GhostArray& u_prev, GhostArray& flux, GhostArray& rhs,\par
-00502     real_t dt, real_t dx) {\cf20 // 添加dx参数}\par
-00503 \{\par
-00504     {\cf20 // 阶段1}\par
-00505     compute_rhs(rhs, u_prev, flux, dx); {\cf20 // 现在dx已定义}\par
-00506 {\cf20 // #pragma omp parallel for}\par
-00507     {\cf19 for} ({\cf18 int} i : u.domain()) \{\par
-00508         u[i] = u_prev[i] + dt * rhs[i];\par
-00509     \}\par
-00510 \par
-00511     {\cf20 // 阶段2}\par
-00512     GhostArray temp(u);\par
-00513     compute_rhs(rhs, u, flux, dx); {\cf20 // 传递dx}\par
-00514 {\cf20 // #pragma omp parallel for}\par
-00515     {\cf19 for} ({\cf18 int} i : u.domain()) \{\par
-00516         temp[i] = 0.75Q * u_prev[i] + 0.25Q * (u[i] + dt * rhs[i]);\par
-00517     \}\par
-00518 \par
-00519     {\cf20 // 阶段3}\par
-00520     compute_rhs(rhs, temp, flux, dx); {\cf20 // 传递dx}\par
-00521 {\cf20 // #pragma omp parallel for}\par
-00522     {\cf19 for} ({\cf18 int} i : u.domain()) \{\par
-00523         u[i] = (1.0Q / 3.0Q) * u_prev[i] + (2.0Q / 3.0Q) * (temp[i] + dt * rhs[i]);\par
-00524     \}\par
-00525 \}\par
-00526 \par
-00536 {\cf17 inline} real_t L1_norm_error({\cf17 const} GhostArray& u, {\cf17 const} GhostArray& x, real_t t)\par
-00537 \{\par
-00538     real_t error = 0.0Q;\par
-00539     {\cf19 for} ({\cf18 int} i : u.domain()) \{\par
-00540         real_t xi = x[i];\par
-00541         error += fabsq(u[i] - exact_solution(xi, t));\par
-00542     \}\par
-00543     {\cf19 return} error / u.get_domain_size();\par
-00544 \}\par
-00545 \par
-00555 {\cf17 inline} real_t L2_norm_error({\cf17 const} GhostArray& u, {\cf17 const} GhostArray& x, real_t t)\par
-00556 \{\par
-00557     real_t error = 0.0Q;\par
-00558     {\cf19 for} ({\cf18 int} i : u.domain()) \{\par
-00559         real_t xi = x[i];\par
-00560         error += powq(u[i] - exact_solution(xi, t), 2);\par
-00561     \}\par
-00562     {\cf19 return} sqrtq(error / u.get_domain_size());\par
-00563 \}\par
-00564 \par
-00574 {\cf17 inline} real_t Linf_norm_error({\cf17 const} GhostArray& u, {\cf17 const} GhostArray& x, real_t t)\par
-00575 \{\par
-00576     real_t max_error = 0.0Q;\par
-00577     {\cf19 for} ({\cf18 int} i : u.domain()) \{\par
-00578         real_t xi = x[i];\par
-00579         real_t error = fabsq(u[i] - exact_solution(xi, t));\par
-00580         {\cf19 if} (error > max_error) \{\par
-00581             max_error = error;\par
-00582         \}\par
-00583     \}\par
-00584     {\cf19 return} max_error;\par
-00585 \}\par
+00349     {\cf20 // 02 - 线性平流问题-Linear advection problem}\par
+00350     real_t x_c = 0.5Q;\par
+00351     {\cf19 return} expq(-300.0Q * (x - x_c) * (x - x_c));\par
+00352 \par
+00353     {\cf20 // 01 - 代数测试函数-Algebraic function test}\par
+00354     {\cf20 // return x * x * expq(0.75Q * (x - 1.0Q));}\par
+00355 \par
+00356     {\cf20 // return x;}\par
+00357 \}\par
+00358 \par
+00367 real_t exact_deriv(real_t x, real_t {\cf20 /*t*/})\par
+00368 \{\par
+00369     {\cf20 // real_t x_c = 0.5Q;}\par
+00370     {\cf20 // return 600.0Q * (x - x_c) * expq(-300.0Q * (x - x_c) * (x - x_c));}\par
+00371     {\cf20 // return -1.Q;}\par
+00372     {\cf19 return} -expq(0.75Q * (x - 1.0Q)) * (2.0Q * x + 0.75Q * x * x);\par
+00373 \}\par
+00374 \par
+00383 real_t exact_solution(real_t x, real_t {\cf20 /*t*/})\par
+00384 \{\par
+00385     {\cf20 // return exact_initial_solution(x, 0.0Q);}\par
+00386     {\cf19 return} exact_deriv(x, 0.0Q);\par
+00387 \}\par
+00388 \par
+00395 {\cf18 void} print_real(real_t value)\par
+00396 \{\par
+00397     {\cf20 // Buffer for quadmath conversion}\par
+00398     {\cf18 char} buf[128];\par
+00399 \par
+00400     {\cf20 // Convert quad precision to string with 10 decimal places}\par
+00401     quadmath_snprintf(buf, {\cf17 sizeof}(buf), {\cf22 "%.10Qf"}, value);\par
+00402 \par
+00403     {\cf20 // Print to standard output}\par
+00404     std::cout << buf;\par
+00405 \}\par
+00406 \par
+00415 std::ostream& operator<<(std::ostream& os, {\cf17 const} real_t& value)\par
+00416 \{\par
+00417     {\cf18 char} buffer[128];\par
+00418     quadmath_snprintf(buffer, {\cf17 sizeof}(buffer), {\cf22 "%.30Qg"}, value);\par
+00419     os << buffer;\par
+00420     {\cf19 return} os;\par
+00421 \}\par
+00422 \par
+00423 {\cf20 // 全局变量：是否使用周期边界条件}\par
+00424 {\cf17 static} {\cf18 bool} is_periodic = {\cf17 true};\par
+00425 \par
+00436 {\cf18 void} compute_rhs(GhostArray& rhs, GhostArray& u, GhostArray& flux, real_t dx)\par
+00437 \{\par
+00438     {\cf17 const} real_t c = 1.0Q; {\cf20 // 波速}\par
+00439     {\cf19 if} (is_periodic)\par
+00440         u.fill_periodic();\par
+00441 \par
+00442     {\cf20 // 1. 一阶插值计算界面通量 (i+1/2位置)}\par
+00443 {\cf20 // #pragma omp parallel for}\par
+00444     {\cf19 for} ({\cf18 int} i : flux.full_range()) \{\par
+00445         {\cf20 // 提取左值和右值}\par
+00446         {\cf20 // real_t u_left = u[i - 1];}\par
+00447         {\cf20 // real_t u_right = u[i];}\par
+00448         std::array<real_t, 5> q_left = \{ u[i - 3], u[i - 2], u[i - 1], u[i], u[i + 1] \};\par
+00449         std::array<real_t, 5> q_right = \{ u[i + 2], u[i + 1], u[i], u[i - 1], u[i - 2] \};\par
+00450 \par
+00451         {\cf20 // }\par
+00452         {\cf20 // 使用高阶插值得到左值和右值}\par
+00453         \par
+00454         {\cf20 // 【王鸿飞】插值格式更换处}\par
+00455         {\cf20 // real_t u_left = whf_TcnsN_A(q_left);}\par
+00456         {\cf20 // real_t u_right = whf_TcnsN_A(q_right);}\par
+00457         {\cf20 // real_t u_left = whf_TcnsN_myASF203_NoS(q_left);}\par
+00458         {\cf20 // real_t u_right = whf_TcnsN_myASF203_NoS(q_right);}\par
+00459         real_t u_left = whf_TcnsN_myASF213_NoS(q_left);\par
+00460         real_t u_right = whf_TcnsN_myASF213_NoS(q_right);\par
+00461         {\cf20 // real_t u_left = Linear_5th(q_left);}\par
+00462         {\cf20 // real_t u_right = Linear_5th(q_right);}\par
+00463 \par
+00464         {\cf20 // 一阶插值:取左右平均值}\par
+00465         {\cf20 // if (c > 0) \{}\par
+00466         {\cf20 //     // c > 0, 使用前向差分}\par
+00467         {\cf20 //     flux[i] = c * u_left;}\par
+00468         {\cf20 // \} else \{}\par
+00469         {\cf20 //     // c <= 0, 使用后向差分}\par
+00470         {\cf20 //     flux[i] = c * u_right;}\par
+00471         {\cf20 // \}}\par
+00472 \par
+00473         real_t F_left = c * u_left;\par
+00474         real_t F_right = c * u_right;\par
+00475         flux[i] = (F_left + F_right) / 2.0Q - (c / 2.0Q) * (u_right - u_left);\par
+00476     \}\par
+00477     {\cf19 if} (is_periodic)\par
+00478         flux.fill_periodic();\par
+00479     std::array<real_t, 3> w = \{ 3.0Q / 2.0Q, -3.0Q / 10.0Q, 1.0Q / 30.0Q \};\par
+00480 {\cf20 // std::array<real_t, 3> w = \{ 4.0Q / 3.0Q, -1.0Q / 6.0Q, 0.0Q \};}\par
+00481 {\cf20 // std::array<real_t, 3> w = \{ 1.0Q, 0.0Q, 0.0Q \};}\par
+00482 {\cf20 // 2. 二阶中心差分计算右端项}\par
+00483 {\cf20 // #pragma omp parallel for}\par
+00484     {\cf19 for} ({\cf18 int} i : rhs.domain()) \{\par
+00485         {\cf20 // 二阶差分: (flux[i+1] - flux[i]) / dx}\par
+00486         {\cf20 // rhs[i] = -1.0Q / dx * (flux[i + 1] - flux[i]);}\par
+00487         rhs[i] = -w[0] / dx * (flux[i + 1] - flux[i])\par
+00488             - w[1] / dx * (u[i + 1] - u[i - 1])\par
+00489             - w[2] / dx * (flux[i + 2] - flux[i - 1]);\par
+00490     \}\par
+00491 \}\par
+00492 \par
+00505 {\cf18 void} evolve(GhostArray& u, GhostArray& u_prev, GhostArray& flux, GhostArray& rhs,\par
+00506     real_t dt, real_t dx) {\cf20 // 添加dx参数}\par
+00507 \{\par
+00508     {\cf20 // 阶段1}\par
+00509     compute_rhs(rhs, u_prev, flux, dx); {\cf20 // 现在dx已定义}\par
+00510 {\cf20 // #pragma omp parallel for}\par
+00511     {\cf19 for} ({\cf18 int} i : u.domain()) \{\par
+00512         u[i] = u_prev[i] + dt * rhs[i];\par
+00513     \}\par
+00514 \par
+00515     {\cf20 // 阶段2}\par
+00516     GhostArray temp(u);\par
+00517     compute_rhs(rhs, u, flux, dx); {\cf20 // 传递dx}\par
+00518 {\cf20 // #pragma omp parallel for}\par
+00519     {\cf19 for} ({\cf18 int} i : u.domain()) \{\par
+00520         temp[i] = 0.75Q * u_prev[i] + 0.25Q * (u[i] + dt * rhs[i]);\par
+00521     \}\par
+00522 \par
+00523     {\cf20 // 阶段3}\par
+00524     compute_rhs(rhs, temp, flux, dx); {\cf20 // 传递dx}\par
+00525 {\cf20 // #pragma omp parallel for}\par
+00526     {\cf19 for} ({\cf18 int} i : u.domain()) \{\par
+00527         u[i] = (1.0Q / 3.0Q) * u_prev[i] + (2.0Q / 3.0Q) * (temp[i] + dt * rhs[i]);\par
+00528     \}\par
+00529 \}\par
+00530 \par
+00540 {\cf17 inline} real_t L1_norm_error({\cf17 const} GhostArray& u, {\cf17 const} GhostArray& x, real_t t)\par
+00541 \{\par
+00542     real_t error = 0.0Q;\par
+00543     {\cf19 for} ({\cf18 int} i : u.domain()) \{\par
+00544         real_t xi = x[i];\par
+00545         error += fabsq(u[i] - exact_solution(xi, t));\par
+00546     \}\par
+00547     {\cf19 return} error / u.get_domain_size();\par
+00548 \}\par
+00549 \par
+00559 {\cf17 inline} real_t L2_norm_error({\cf17 const} GhostArray& u, {\cf17 const} GhostArray& x, real_t t)\par
+00560 \{\par
+00561     real_t error = 0.0Q;\par
+00562     {\cf19 for} ({\cf18 int} i : u.domain()) \{\par
+00563         real_t xi = x[i];\par
+00564         error += powq(u[i] - exact_solution(xi, t), 2);\par
+00565     \}\par
+00566     {\cf19 return} sqrtq(error / u.get_domain_size());\par
+00567 \}\par
+00568 \par
+00578 {\cf17 inline} real_t Linf_norm_error({\cf17 const} GhostArray& u, {\cf17 const} GhostArray& x, real_t t)\par
+00579 \{\par
+00580     real_t max_error = 0.0Q;\par
+00581     {\cf19 for} ({\cf18 int} i : u.domain()) \{\par
+00582         real_t xi = x[i];\par
+00583         real_t error = fabsq(u[i] - exact_solution(xi, t));\par
+00584         {\cf19 if} (error > max_error) \{\par
+00585             max_error = error;\par
+00586         \}\par
+00587     \}\par
+00588     {\cf19 return} max_error;\par
+00589 \}\par
 }
 }

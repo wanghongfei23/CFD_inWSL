@@ -255,10 +255,17 @@ void SpaceDis::calFluxEuler2D(int i)
         // auto WX=(this->*reconRMethod)(i);
     }
 
-    // 使用Roe平均方法计算二维欧拉方程的界面通量
-    auto iflux = roeFlux2DSym(W[0], W[4], W[1], W[5], W[2], W[6], W[3], W[7], norm);
-    // 另一种可选的HLLC通量计算方法
-    //  auto iflux=HLLCFlux2D2(W[0],W[4],W[1],W[5],W[2],W[6],W[3],W[7],norm);
+    // 根据算例类型选择通量方法
+    // 只有当是二维Double Mach算例(dim==2且nCase==4)时使用HLLC通量，其他算例使用Roe通量
+    std::array<real, 4> iflux;
+    if (info->dim == 2 && info->nCase == 4) {
+        // 使用HLLC通量计算方法（针对Double Mach算例）
+        iflux = HLLCFlux2D2(W[0], W[4], W[1], W[5], W[2], W[6], W[3], W[7], norm);
+    } else {
+        // 使用Roe平均方法计算二维欧拉方程的界面通量（默认方法）
+        iflux = roeFlux2DSym(W[0], W[4], W[1], W[5], W[2], W[6], W[3], W[7], norm);
+    }
+    
     // std::vector<real> iflux2=roeFlux1D(r,u,p,H,RT);
     // 将计算得到的通量赋值给各守恒变量
     for (int ivar = 0; ivar < 4; ivar++) {
