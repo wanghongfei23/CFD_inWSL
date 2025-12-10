@@ -40,6 +40,7 @@ class Info
     DiffMethod diffMethod=TRAD6;                   ///< 差分方法
     InterMethod interMethod=WCNS5;                 ///< 插值方法
     SourceType sourceType=SOURCENULL;              ///< 源项类型
+    // SourceType sourceType=GRAVITY;                 ///< RTI的重力源项
 
     std::array<int,3> iMax{201,201,2};             ///< 网格在各方向上的节点数
     std::array<double,6> calZone{0,0.3,0,0.3,0,2}; ///< 计算域范围[xmin,xmax,ymin,ymax,zmin,zmax]

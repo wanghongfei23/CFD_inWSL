@@ -1,5 +1,0 @@
-4
-totaltime= 760846   Finish
-time= 188942   Finish
-timesteps= 3124   Finish
-solvertime= 731881

@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenMP::OpenMP_CXX::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenMP__OpenMP_CXX-Debug-d4fec943ec4180adb389.json",
+					"name" : "OpenMP::OpenMP_CXX",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0
+					],
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-9ad1a58d4644cf6543fa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "WCNS_Convection",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "wcns_convection::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wcns_convection-Debug-fb99cdd959fecb952623.json",
+					"name" : "wcns_convection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wcns_convection_without_time::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wcns_convection_without_time-Debug-fb95314333e17c274bb8.json",
+					"name" : "wcns_convection_without_time",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect/build",
+		"source" : "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	}
+}

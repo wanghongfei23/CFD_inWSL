@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/zyc_linear_advect/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

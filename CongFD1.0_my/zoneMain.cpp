@@ -133,7 +133,8 @@ void configureCase(Info* info, int choice) {
             info->CFL = 0.1;
             info->nCase = 4;
             info->calZone = { 0, 1, 0, 0, 0, 0 };
-            info->iMax = { 401, 2, 2 };
+            // info->iMax = { 401, 2, 2 };
+            info->iMax = { 2001, 2, 2 };
             info->dim = 1;
             std::cout << "Configured: Woodward-Colella problem\n";
             break;
@@ -238,8 +239,8 @@ int main()
 // =============================================================================
 //                                omp线程数设置                                =
 // =============================================================================
-    omp_set_num_threads(10);
-    // omp_set_num_threads(1);
+    // omp_set_num_threads(10);
+    omp_set_num_threads(1);
 
 // =============================================================================
 //                                 Info 初始化                                 =
@@ -261,7 +262,7 @@ int main()
     // info->interMethod=WCNS5CONG;
 
     // info->interMethod = TCNSCongA; //Teno5_CongA
-    // info->interMethod = WCNS5; //weno5_JSchen
+    info->interMethod = WCNS5; //weno5_JSchen
     // info->interMethod = WCNSZ5; //weno5_Z
     // info->interMethod = TCNS5; //Teno5_Z
     // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
@@ -283,7 +284,7 @@ int main()
     // info->interMethod = WHFTCNSASFf_5_10;
     // info->interMethod = WHFTCNSASFf_5_9;
     // info->interMethod = WHFTCNSASFf2_test;
-    info->interMethod = WHFTCNSASFf3_test;
+    // info->interMethod = WHFTCNSASFf3_test;
     // info->interMethod = WHFTCNSASFf3_5_9_time_improve;
     // info->interMethod = temp015;
     // info->interMethod = temp016;
@@ -295,7 +296,7 @@ int main()
     const int presetCase = 
         // 0;  // Sod
         // 1;  // ShuOsher
-        2;  // Lax
+        // 2;  // Lax
         // 3;  // Sedov
         // 4;  // Woodward_Colella
         // 5;  // Double_sparse_wave
@@ -303,7 +304,7 @@ int main()
         // 10; // 2D_Riemann_1
         // 11; // 2D_Riemann_2
         // 12; // implosion
-        // 13; // RTI
+        13; // RTI
         // 14; // Double_Mach
         // 15; // 2D_Riemann_3
         // 16; // KHI

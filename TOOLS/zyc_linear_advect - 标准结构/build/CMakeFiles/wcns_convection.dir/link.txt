@@ -1,1 +1,0 @@
-/usr/sbin/c++ -Wl,--dependency-file=CMakeFiles/wcns_convection.dir/link.d CMakeFiles/wcns_convection.dir/src/with_time.cpp.o -o "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/zyc_linear_advect - 标准结构/bin/wcns_convection"  /usr/lib/libquadmath.so -lstdc++ -lm /usr/lib/libgomp.so /usr/lib/libpthread.a
