@@ -2,15 +2,15 @@
 <area shape="rect" id="Node000001" title="将特征变量转换为原始变量" alt="" coords="671,73,814,116"/>
 <area shape="rect" id="Node000002" href="$symmetrytest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="主函数" alt="" coords="497,5,546,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="679,67,623,47,547,26,547,21,624,41,684,67"/>
-<area shape="rect" id="Node000003" href="$class_space_dis.html#a6e1c94eedce7ef2512bb2a9ba0fbe248" title="二维界面中心重构函数" alt="" coords="420,56,623,83"/>
+<area shape="rect" id="Node000003" href="$class_space_dis.html#a6e1c94eedce7ef2512bb2a9ba0fbe248" title="二维界面中心重构方法" alt="" coords="420,56,623,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="653,85,624,84,624,78,658,85"/>
-<area shape="rect" id="Node000006" href="$class_space_dis.html#a06e3d6ec4cca1314507f4358f38fab35" title="二维特征重构左侧函数" alt="" coords="199,107,370,133"/>
+<area shape="rect" id="Node000006" href="$class_space_dis.html#a06e3d6ec4cca1314507f4358f38fab35" title="二维左界面特征重构方法" alt="" coords="199,107,370,133"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="653,100,370,118,370,113,658,99"/>
-<area shape="rect" id="Node000007" href="$class_space_dis.html#acb3aba24b24f9ef5bc8b22694ce4e8b3" title="二维特征重构右侧函数" alt="" coords="198,157,371,184"/>
+<area shape="rect" id="Node000007" href="$class_space_dis.html#acb3aba24b24f9ef5bc8b22694ce4e8b3" title="二维右界面特征重构方法" alt="" coords="198,157,371,184"/>
 <area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="659,111,624,120,372,161,371,155,623,115,653,112"/>
-<area shape="rect" id="Node000004" href="$class_space_dis.html#abfe367e73fb15973a560da82a948d32f" title="计算二维欧拉方程的界面通量" alt="" coords="197,56,372,83"/>
+<area shape="rect" id="Node000004" href="$class_space_dis.html#abfe367e73fb15973a560da82a948d32f" title="计算二维欧拉方程通量" alt="" coords="197,56,372,83"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="402,70,373,72,372,67,407,69"/>
-<area shape="rect" id="Node000005" href="$class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,107,149,133"/>
+<area shape="rect" id="Node000005" href="$class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,107,149,133"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="209,88,135,109,134,104,214,86"/>
 <area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="181,121,149,123,149,117,186,119"/>
 <area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="209,154,134,137,135,131,214,152"/>

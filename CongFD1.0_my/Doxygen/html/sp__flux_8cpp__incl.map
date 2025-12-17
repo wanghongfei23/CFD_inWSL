@@ -1,6 +1,6 @@
 <map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/src/sp_flux.cpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/src/sp_flux.cpp">
 <area shape="rect" id="Node000001" title="空间离散通量计算实现文件" alt="" coords="446,5,692,80"/>
-<area shape="rect" id="Node000002" href="$_space_dis_8hpp.html" title=" " alt="" coords="290,128,393,155"/>
+<area shape="rect" id="Node000002" href="$_space_dis_8hpp.html" title="空间离散类定义文件" alt="" coords="290,128,393,155"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="480,82,386,124,384,119,485,79"/>
 <area shape="rect" id="Node000023" href="$flux_scheme_8hpp.html" title="定义通量格式相关的函数和类" alt="" coords="257,352,372,379"/>
 <area shape="poly" id="edge28_Node000001_Node000023" title=" " alt="" coords="577,78,582,130,579,190,565,251,552,280,534,306,510,322,474,335,388,355,387,350,472,330,508,317,530,302,547,277,560,250,574,189,577,130,574,83"/>

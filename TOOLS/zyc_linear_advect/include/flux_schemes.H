@@ -187,9 +187,9 @@ inline real_t whf_TcnsN_A(std::array<real_t, 5> q)
 }
 
 
-inline real_t whf_TcnsN_myASF203_NoS(std::array<real_t, 5> q) 
+inline real_t whf_TcnsN_myASF3_5_10_noTimeDev(std::array<real_t, 5> q) 
 {
-    global_string = "whf_TcnsN_myASF203_NoS";
+    global_string = "whf_TcnsN_myASF3_5_10_noTimeDev";
 
     // 常量定义
     constexpr real_t xi = 1e-3;           // 小参数
@@ -289,9 +289,9 @@ inline real_t Linear_5th(std::array<real_t, 5> q)
 }
 
 
-inline real_t whf_TcnsN_myASF213_NoS(std::array<real_t, 5> q) 
+inline real_t whf_TcnsN_myASF3_5_9(std::array<real_t, 5> q) 
 {
-    global_string = "whf_TcnsN_myASF213_NoS";
+    global_string = "whf_TcnsN_myASF3_5_9";
 
     // 常量定义
     constexpr real_t xi = 1e-3;           // 小参数
@@ -338,11 +338,10 @@ inline real_t whf_TcnsN_myASF213_NoS(std::array<real_t, 5> q)
     real_t eta_min = std::min({eta_im1, eta_i, eta_ip1});
 
     // 计算m参数
-    real_t min = std::min(1.0Q, eta_min / Cr);
-    real_t m = 1.0Q - min;
+    real_t x = std::min(Cr, eta_min);
 
     // 计算C_T_prime（自适应阈值参数）
-    real_t C_T_prime = -0.370178*m*m*m + 0.454387*m*m - 0.033595*m + 0.030802;
+    real_t C_T_prime = 26.778*x*x*x - 11.3915*x*x + 0.700688*x + 0.148606;
 
     // 确定β_j
     real_t beta_j = std::min({beta0, beta1, beta2});

@@ -20,7 +20,11 @@ var searchData=
   ['whftcnsasf102_5freciprocal_17',['WHFTCNSASF102_reciprocal',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a74f489cc8812c6d60f1f84a879d18752',1,'macro.hpp']]],
   ['whftcnsasf103_18',['WHFTCNSASF103',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37aa7a47402742fe73491558cd2eb3191bd',1,'macro.hpp']]],
   ['whftcnsasf103_5freciprocal_19',['WHFTCNSASF103_reciprocal',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a5b21cbcac96f3a127fd53ba8dc9c21d0',1,'macro.hpp']]],
-  ['whftcnsasf202_5f2s_20',['WHFTCNSASF202_2S',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a119b3a413b12ff023661eb420f90f373',1,'macro.hpp']]],
-  ['whftcnsasf202_5fnos_21',['WHFTCNSASF202',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a19d77b3fe88bc2c194da0b9d5c042317',1,'macro.hpp']]],
-  ['whftcnsasFf_5_10_5fnos_22',['WHFTCNSASFf_5_10',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a25c64d2737331bb4db12361b6ffaffb5',1,'macro.hpp']]]
+  ['whftcnsasf202_20',['WHFTCNSASF202',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37ab4161d3fad05e2288786a0e89e5ccd0b',1,'macro.hpp']]],
+  ['whftcnsasf202_5f2s_21',['WHFTCNSASF202_2S',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a119b3a413b12ff023661eb420f90f373',1,'macro.hpp']]],
+  ['whftcnsasff2_5ftest_22',['WHFTCNSASFf2_test',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37ace4bb3e25fa2ac8f59ce7eb7ad2c4e2e',1,'macro.hpp']]],
+  ['whftcnsasff3_5f5_5f9_5ftime_5fimprove_23',['WHFTCNSASFf3_5_9_time_improve',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37afc4f482f9d13ae6c2f72835f99e2a9dc',1,'macro.hpp']]],
+  ['whftcnsasff3_5ftest_24',['WHFTCNSASFf3_test',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37ab2e1b1eaaab9c11cc952c351d8b65747',1,'macro.hpp']]],
+  ['whftcnsasff_5f5_5f10_25',['WHFTCNSASFf_5_10',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a35d9ade80ff4d7928dec30b3f7a8bc5a',1,'macro.hpp']]],
+  ['whftcnsasff_5f5_5f9_26',['WHFTCNSASFf_5_9',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37ae59be1f19c0171644a9ff7d590c371ab',1,'macro.hpp']]]
 ];

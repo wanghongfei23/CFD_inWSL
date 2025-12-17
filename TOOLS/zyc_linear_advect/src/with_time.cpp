@@ -77,7 +77,7 @@ void write_to_tecplot_file(const GridVariables& grid, real_t current_time, const
 int main()
 {
     // 设置OpenMP线程数
-    omp_set_num_threads(16);
+    omp_set_num_threads(10);
     // 网格密度序列（用于收敛性分析）
     std::vector<int> grid_densities = { 50, 100, 150, 200, 300, 400, 500 };
     // std::vector<int> grid_densities = { 50, 100};

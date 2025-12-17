@@ -82,13 +82,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>空间离散类，用于处理计算流体力学中的空间离散化  
+ <a href="#details">更多...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a>&gt;</code></p>
 <div class="dynheader">
 SpaceDis 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis__coll__graph.png" border="0" usemap="#a_space_dis_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_space_dis_coll__map" id="a_space_dis_coll__map">
-<area shape="rect" title=" " alt="" coords="26,125,104,152"/>
+<area shape="rect" title="空间离散类，用于处理计算流体力学中的空间离散化" alt="" coords="26,125,104,152"/>
 <area shape="rect" href="class_data.html" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="30,45,34,74,41,100,56,125,50,125,36,102,29,75,29,50"/>
 <area shape="rect" href="class_info.html" title="存储和管理求解器的各种配置参数和状态信息" alt="" coords="79,5,122,32"/>
@@ -99,94 +102,134 @@ SpaceDis 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a029a40d99047525707051bba57280a8c" id="r_a029a40d99047525707051bba57280a8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a029a40d99047525707051bba57280a8c">SpaceDis</a> (int n_, <a class="el" href="class_data.html">Data</a> *data_, <a class="el" href="class_data.html">Data</a> *rhs_, std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt; bndL_, std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt; bndR_, <a class="el" href="class_info.html">Info</a> *<a class="el" href="#ab02e20d6968df1ef4686d7b845764680">info</a>)</td></tr>
-<tr class="memdesc:a029a40d99047525707051bba57280a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="memdesc:a029a40d99047525707051bba57280a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，初始化空间离散对象  <br /></td></tr>
 <tr class="memitem:a68bc4e026309a3c9543bff8bef5414d6" id="r_a68bc4e026309a3c9543bff8bef5414d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68bc4e026309a3c9543bff8bef5414d6">SpaceDis</a> ()</td></tr>
 <tr class="memdesc:a68bc4e026309a3c9543bff8bef5414d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造函数  <br /></td></tr>
 <tr class="memitem:a3c563bda4d46190cc899af410bdc0cf7" id="r_a3c563bda4d46190cc899af410bdc0cf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c563bda4d46190cc899af410bdc0cf7">difference</a> ()</td></tr>
+<tr class="memdesc:a3c563bda4d46190cc899af410bdc0cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行差分计算  <br /></td></tr>
 <tr class="memitem:a66a9a5ec5989dabd9a1e50962cdac7bc" id="r_a66a9a5ec5989dabd9a1e50962cdac7bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66a9a5ec5989dabd9a1e50962cdac7bc">setOffset</a> (int, int)</td></tr>
+<tr class="memdesc:a66a9a5ec5989dabd9a1e50962cdac7bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置偏移量  <br /></td></tr>
 <tr class="memitem:ad89fa3b3b880edf2ad8c46355fbf1ec4" id="r_ad89fa3b3b880edf2ad8c46355fbf1ec4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad89fa3b3b880edf2ad8c46355fbf1ec4">setMethod</a> (<a class="el" href="macro_8hpp.html#a6efecf3d755d53d3c4649b100919dca3">EquationType</a>, <a class="el" href="macro_8hpp.html#a42aac0a87a6871f720f74d0bc65bc884">DiffMethod</a>)</td></tr>
+<tr class="memdesc:ad89fa3b3b880edf2ad8c46355fbf1ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置方程类型和差分方法  <br /></td></tr>
 <tr class="memitem:a6aabd30875fee7bf06b59bc5ad4f6855" id="r_a6aabd30875fee7bf06b59bc5ad4f6855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6aabd30875fee7bf06b59bc5ad4f6855">setIDim</a> (int)</td></tr>
+<tr class="memdesc:a6aabd30875fee7bf06b59bc5ad4f6855"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置空间维度  <br /></td></tr>
 <tr class="memitem:a7cefe594270b1fc5a3932fac4948f145" id="r_a7cefe594270b1fc5a3932fac4948f145"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cefe594270b1fc5a3932fac4948f145">setConstNorm</a> (std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt; &amp;&amp;)</td></tr>
+<tr class="memdesc:a7cefe594270b1fc5a3932fac4948f145"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置法向量  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
 <tr class="memitem:a3538bfc8f7f037d1c0c66bf76a2bd150" id="r_a3538bfc8f7f037d1c0c66bf76a2bd150"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3538bfc8f7f037d1c0c66bf76a2bd150">timep</a> =0</td></tr>
+<tr class="memdesc:a3538bfc8f7f037d1c0c66bf76a2bd150"><td class="mdescLeft">&#160;</td><td class="mdescRight">计时相关变量  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private 成员函数</h2></td></tr>
 <tr class="memitem:a27c27a8844a4473abed20206941a009d" id="r_a27c27a8844a4473abed20206941a009d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27c27a8844a4473abed20206941a009d">calFlux</a> ()</td></tr>
+<tr class="memdesc:a27c27a8844a4473abed20206941a009d"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算通量  <br /></td></tr>
 <tr class="memitem:ae19ef12b12b2a4bf0f37ed8519391de2" id="r_ae19ef12b12b2a4bf0f37ed8519391de2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae19ef12b12b2a4bf0f37ed8519391de2">calFluxConv</a> (int)</td></tr>
-<tr class="memdesc:ae19ef12b12b2a4bf0f37ed8519391de2"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算对流项通量  <br /></td></tr>
+<tr class="memdesc:ae19ef12b12b2a4bf0f37ed8519391de2"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算对流通量  <br /></td></tr>
 <tr class="memitem:aa123d38e0a2f5b844c4948c02cf53834" id="r_aa123d38e0a2f5b844c4948c02cf53834"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa123d38e0a2f5b844c4948c02cf53834">calFluxBurgers</a> (int)</td></tr>
-<tr class="memdesc:aa123d38e0a2f5b844c4948c02cf53834"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算Burgers方程的通量  <br /></td></tr>
+<tr class="memdesc:aa123d38e0a2f5b844c4948c02cf53834"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算Burgers方程通量  <br /></td></tr>
 <tr class="memitem:a2b534c94da5065fd7abbfc3fea7042f2" id="r_a2b534c94da5065fd7abbfc3fea7042f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b534c94da5065fd7abbfc3fea7042f2">calFluxEuler1D</a> (int)</td></tr>
-<tr class="memdesc:a2b534c94da5065fd7abbfc3fea7042f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算一维欧拉方程的界面通量  <br /></td></tr>
+<tr class="memdesc:a2b534c94da5065fd7abbfc3fea7042f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算一维欧拉方程通量  <br /></td></tr>
 <tr class="memitem:abfe367e73fb15973a560da82a948d32f" id="r_abfe367e73fb15973a560da82a948d32f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfe367e73fb15973a560da82a948d32f">calFluxEuler2D</a> (int)</td></tr>
-<tr class="memdesc:abfe367e73fb15973a560da82a948d32f"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算二维欧拉方程的界面通量  <br /></td></tr>
+<tr class="memdesc:abfe367e73fb15973a560da82a948d32f"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算二维欧拉方程通量  <br /></td></tr>
 <tr class="memitem:a4fd8182286483d87980e1e35453d9230" id="r_a4fd8182286483d87980e1e35453d9230"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fd8182286483d87980e1e35453d9230">calFluxAccuracyTest</a> (int i)</td></tr>
-<tr class="memdesc:a4fd8182286483d87980e1e35453d9230"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算精度测试问题的通量  <br /></td></tr>
+<tr class="memdesc:a4fd8182286483d87980e1e35453d9230"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算精度测试通量  <br /></td></tr>
 <tr class="memitem:a74b086f51297b06aadf206c123fc7670" id="r_a74b086f51297b06aadf206c123fc7670"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74b086f51297b06aadf206c123fc7670">at</a> (int, int)</td></tr>
+<tr class="memdesc:a74b086f51297b06aadf206c123fc7670"><td class="mdescLeft">&#160;</td><td class="mdescRight">访问数据元素  <br /></td></tr>
 <tr class="memitem:a838cc5cbae33c24a30efd237898cc02c" id="r_a838cc5cbae33c24a30efd237898cc02c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a838cc5cbae33c24a30efd237898cc02c">fluxAt</a> (int, int)</td></tr>
+<tr class="memdesc:a838cc5cbae33c24a30efd237898cc02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">访问通量数据元素  <br /></td></tr>
 <tr class="memitem:acf838179b125789d6b5f43be4c66ca1f" id="r_acf838179b125789d6b5f43be4c66ca1f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf838179b125789d6b5f43be4c66ca1f">reconL</a> (int)</td></tr>
-<tr class="memdesc:acf838179b125789d6b5f43be4c66ca1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">左侧界面重构函数  <br /></td></tr>
+<tr class="memdesc:acf838179b125789d6b5f43be4c66ca1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">左界面重构方法  <br /></td></tr>
 <tr class="memitem:a9401b0035cd6ee9b73cc196d44e8c055" id="r_a9401b0035cd6ee9b73cc196d44e8c055"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9401b0035cd6ee9b73cc196d44e8c055">reconLprim</a> (int)</td></tr>
-<tr class="memdesc:a9401b0035cd6ee9b73cc196d44e8c055"><td class="mdescLeft">&#160;</td><td class="mdescRight">左侧原始变量重构函数  <br /></td></tr>
+<tr class="memdesc:a9401b0035cd6ee9b73cc196d44e8c055"><td class="mdescLeft">&#160;</td><td class="mdescRight">左界面原始变量重构方法  <br /></td></tr>
 <tr class="memitem:a5bce22d87800856705aa10b970bfc747" id="r_a5bce22d87800856705aa10b970bfc747"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bce22d87800856705aa10b970bfc747">reconLChar1D</a> (int i)</td></tr>
-<tr class="memdesc:a5bce22d87800856705aa10b970bfc747"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维特征重构左侧函数  <br /></td></tr>
+<tr class="memdesc:a5bce22d87800856705aa10b970bfc747"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维左界面特征重构方法  <br /></td></tr>
 <tr class="memitem:a06e3d6ec4cca1314507f4358f38fab35" id="r_a06e3d6ec4cca1314507f4358f38fab35"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06e3d6ec4cca1314507f4358f38fab35">reconLChar2D</a> (int i)</td></tr>
-<tr class="memdesc:a06e3d6ec4cca1314507f4358f38fab35"><td class="mdescLeft">&#160;</td><td class="mdescRight">二维特征重构左侧函数  <br /></td></tr>
+<tr class="memdesc:a06e3d6ec4cca1314507f4358f38fab35"><td class="mdescLeft">&#160;</td><td class="mdescRight">二维左界面特征重构方法  <br /></td></tr>
 <tr class="memitem:a2653ae159a614797e031c5a947a236d4" id="r_a2653ae159a614797e031c5a947a236d4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2653ae159a614797e031c5a947a236d4">reconR</a> (int)</td></tr>
-<tr class="memdesc:a2653ae159a614797e031c5a947a236d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">右侧界面重构函数  <br /></td></tr>
+<tr class="memdesc:a2653ae159a614797e031c5a947a236d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">右界面重构方法  <br /></td></tr>
 <tr class="memitem:ac7d45fbd9d625ec495429bf7f22a9297" id="r_ac7d45fbd9d625ec495429bf7f22a9297"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7d45fbd9d625ec495429bf7f22a9297">reconRprim</a> (int)</td></tr>
-<tr class="memdesc:ac7d45fbd9d625ec495429bf7f22a9297"><td class="mdescLeft">&#160;</td><td class="mdescRight">右侧原始变量重构函数  <br /></td></tr>
+<tr class="memdesc:ac7d45fbd9d625ec495429bf7f22a9297"><td class="mdescLeft">&#160;</td><td class="mdescRight">右界面原始变量重构方法  <br /></td></tr>
 <tr class="memitem:a1d4f501a38121c0aed89e685f46e7e5f" id="r_a1d4f501a38121c0aed89e685f46e7e5f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d4f501a38121c0aed89e685f46e7e5f">reconRChar1D</a> (int i)</td></tr>
-<tr class="memdesc:a1d4f501a38121c0aed89e685f46e7e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维特征重构右侧函数  <br /></td></tr>
+<tr class="memdesc:a1d4f501a38121c0aed89e685f46e7e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维右界面特征重构方法  <br /></td></tr>
 <tr class="memitem:acb3aba24b24f9ef5bc8b22694ce4e8b3" id="r_acb3aba24b24f9ef5bc8b22694ce4e8b3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb3aba24b24f9ef5bc8b22694ce4e8b3">reconRChar2D</a> (int i)</td></tr>
-<tr class="memdesc:acb3aba24b24f9ef5bc8b22694ce4e8b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">二维特征重构右侧函数  <br /></td></tr>
+<tr class="memdesc:acb3aba24b24f9ef5bc8b22694ce4e8b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">二维右界面特征重构方法  <br /></td></tr>
 <tr class="memitem:a4d9c00d172d821da6583d22e63e63f45" id="r_a4d9c00d172d821da6583d22e63e63f45"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d9c00d172d821da6583d22e63e63f45">recon1DFaceCenter</a> (int i)</td></tr>
-<tr class="memdesc:a4d9c00d172d821da6583d22e63e63f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维界面中心重构函数  <br /></td></tr>
+<tr class="memdesc:a4d9c00d172d821da6583d22e63e63f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维界面中心重构方法  <br /></td></tr>
 <tr class="memitem:a6e1c94eedce7ef2512bb2a9ba0fbe248" id="r_a6e1c94eedce7ef2512bb2a9ba0fbe248"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e1c94eedce7ef2512bb2a9ba0fbe248">recon2DFaceCenter</a> (int i)</td></tr>
-<tr class="memdesc:a6e1c94eedce7ef2512bb2a9ba0fbe248"><td class="mdescLeft">&#160;</td><td class="mdescRight">二维界面中心重构函数  <br /></td></tr>
+<tr class="memdesc:a6e1c94eedce7ef2512bb2a9ba0fbe248"><td class="mdescLeft">&#160;</td><td class="mdescRight">二维界面中心重构方法  <br /></td></tr>
 <tr class="memitem:ae25c0de65811d18361cd2dd9a73a8a33" id="r_ae25c0de65811d18361cd2dd9a73a8a33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae25c0de65811d18361cd2dd9a73a8a33">difHCS</a> ()</td></tr>
-<tr class="memdesc:ae25c0de65811d18361cd2dd9a73a8a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">HCS格式差分计算  <br /></td></tr>
+<tr class="memdesc:ae25c0de65811d18361cd2dd9a73a8a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">HCS差分方法  <br /></td></tr>
 <tr class="memitem:a993154aab67998dcb51d1af2ae1fc2fd" id="r_a993154aab67998dcb51d1af2ae1fc2fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a993154aab67998dcb51d1af2ae1fc2fd">difTraditional6</a> ()</td></tr>
+<tr class="memdesc:a993154aab67998dcb51d1af2ae1fc2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">传统六阶差分方法  <br /></td></tr>
 <tr class="memitem:a01ab79d30caa15227bd817a6ca38ef47" id="r_a01ab79d30caa15227bd817a6ca38ef47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01ab79d30caa15227bd817a6ca38ef47">dif2Order</a> ()</td></tr>
+<tr class="memdesc:a01ab79d30caa15227bd817a6ca38ef47"><td class="mdescLeft">&#160;</td><td class="mdescRight">二阶差分方法  <br /></td></tr>
 <tr class="memitem:a4567c73c0c323760216c40a5a6ea7ff6" id="r_a4567c73c0c323760216c40a5a6ea7ff6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4567c73c0c323760216c40a5a6ea7ff6">difMND6</a> ()</td></tr>
-<tr class="memdesc:a4567c73c0c323760216c40a5a6ea7ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">MND6格式差分计算  <br /></td></tr>
+<tr class="memdesc:a4567c73c0c323760216c40a5a6ea7ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">MND6差分方法  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private 属性</h2></td></tr>
 <tr class="memitem:a168218854263acf5d2c661a3a098989b" id="r_a168218854263acf5d2c661a3a098989b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a168218854263acf5d2c661a3a098989b">data</a></td></tr>
+<tr class="memdesc:a168218854263acf5d2c661a3a098989b"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据指针  <br /></td></tr>
 <tr class="memitem:ac98717f5459b849009cd58b78442844f" id="r_ac98717f5459b849009cd58b78442844f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data.html">Data</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac98717f5459b849009cd58b78442844f">rhs</a></td></tr>
+<tr class="memdesc:ac98717f5459b849009cd58b78442844f"><td class="mdescLeft">&#160;</td><td class="mdescRight">右-hand side数据指针  <br /></td></tr>
 <tr class="memitem:ab02e20d6968df1ef4686d7b845764680" id="r_ab02e20d6968df1ef4686d7b845764680"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_info.html">Info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab02e20d6968df1ef4686d7b845764680">info</a></td></tr>
+<tr class="memdesc:ab02e20d6968df1ef4686d7b845764680"><td class="mdescLeft">&#160;</td><td class="mdescRight">信息对象指针  <br /></td></tr>
 <tr class="memitem:ad00f84915d2cbf49455870054db12e2b" id="r_ad00f84915d2cbf49455870054db12e2b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad00f84915d2cbf49455870054db12e2b">bndL</a></td></tr>
+<tr class="memdesc:ad00f84915d2cbf49455870054db12e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">左边界条件  <br /></td></tr>
 <tr class="memitem:a95f1afbe28ddee3c4ceab2f7acb10f75" id="r_a95f1afbe28ddee3c4ceab2f7acb10f75"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95f1afbe28ddee3c4ceab2f7acb10f75">bndR</a></td></tr>
+<tr class="memdesc:a95f1afbe28ddee3c4ceab2f7acb10f75"><td class="mdescLeft">&#160;</td><td class="mdescRight">右边界条件  <br /></td></tr>
 <tr class="memitem:a6bf901659742f31c51bdddf575416f39" id="r_a6bf901659742f31c51bdddf575416f39"><td class="memItemLeft" align="right" valign="top">void(SpaceDis::*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bf901659742f31c51bdddf575416f39">calTypeFlux</a> )(int)</td></tr>
+<tr class="memdesc:a6bf901659742f31c51bdddf575416f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">函数指针，指向特定类型的通量计算函数  <br /></td></tr>
 <tr class="memitem:a729d29ea9612005d7b9fa207a828e16c" id="r_a729d29ea9612005d7b9fa207a828e16c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;(SpaceDis::*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a729d29ea9612005d7b9fa207a828e16c">reconLMethod</a> )(int i)</td></tr>
+<tr class="memdesc:a729d29ea9612005d7b9fa207a828e16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">函数指针，指向左界面重构方法  <br /></td></tr>
 <tr class="memitem:ae47bd370844f8417abbffa0d7c6c8b1b" id="r_ae47bd370844f8417abbffa0d7c6c8b1b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> &gt;(SpaceDis::*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae47bd370844f8417abbffa0d7c6c8b1b">reconRMethod</a> )(int i)</td></tr>
+<tr class="memdesc:ae47bd370844f8417abbffa0d7c6c8b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">函数指针，指向右界面重构方法  <br /></td></tr>
 <tr class="memitem:ab07fff8b114e719f4c0de2346997b1cd" id="r_ab07fff8b114e719f4c0de2346997b1cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab07fff8b114e719f4c0de2346997b1cd">inter5</a> )(std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;) =nullptr</td></tr>
+<tr class="memdesc:ab07fff8b114e719f4c0de2346997b1cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">五点插值函数指针  <br /></td></tr>
 <tr class="memitem:ab5ffb17ae4d122e42156c1ec924917b7" id="r_ab5ffb17ae4d122e42156c1ec924917b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5ffb17ae4d122e42156c1ec924917b7">inter5Positive</a> )(std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 5 &gt;) =nullptr</td></tr>
+<tr class="memdesc:ab5ffb17ae4d122e42156c1ec924917b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">正五点插值函数指针  <br /></td></tr>
 <tr class="memitem:ae82bc41e7adad1c4003b002f412e2209" id="r_ae82bc41e7adad1c4003b002f412e2209"><td class="memItemLeft" align="right" valign="top">void(SpaceDis::*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae82bc41e7adad1c4003b002f412e2209">difMethod</a> )()</td></tr>
+<tr class="memdesc:ae82bc41e7adad1c4003b002f412e2209"><td class="mdescLeft">&#160;</td><td class="mdescRight">函数指针，指向具体的差分方法实现  <br /></td></tr>
 <tr class="memitem:a329cb12f7e814c6f6eb7dc15952eb5de" id="r_a329cb12f7e814c6f6eb7dc15952eb5de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a329cb12f7e814c6f6eb7dc15952eb5de">n</a></td></tr>
+<tr class="memdesc:a329cb12f7e814c6f6eb7dc15952eb5de"><td class="mdescLeft">&#160;</td><td class="mdescRight">网格点数量  <br /></td></tr>
 <tr class="memitem:a81d9aae18b619ed890aec8bea51a8d51" id="r_a81d9aae18b619ed890aec8bea51a8d51"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81d9aae18b619ed890aec8bea51a8d51">nVar</a></td></tr>
+<tr class="memdesc:a81d9aae18b619ed890aec8bea51a8d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">变量数量  <br /></td></tr>
 <tr class="memitem:a1ced8b9e54f318f86e1d3cd56bcaed8c" id="r_a1ced8b9e54f318f86e1d3cd56bcaed8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ced8b9e54f318f86e1d3cd56bcaed8c">nPrim</a></td></tr>
+<tr class="memdesc:a1ced8b9e54f318f86e1d3cd56bcaed8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">原始变量数量  <br /></td></tr>
 <tr class="memitem:a27539c525e8d6f2048489458d66b0179" id="r_a27539c525e8d6f2048489458d66b0179"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27539c525e8d6f2048489458d66b0179">idim</a></td></tr>
+<tr class="memdesc:a27539c525e8d6f2048489458d66b0179"><td class="mdescLeft">&#160;</td><td class="mdescRight">空间维度索引  <br /></td></tr>
 <tr class="memitem:ae29bdcb784175ab1d1c3dbdf91ce7067" id="r_ae29bdcb784175ab1d1c3dbdf91ce7067"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae29bdcb784175ab1d1c3dbdf91ce7067">i0</a> =0</td></tr>
+<tr class="memdesc:ae29bdcb784175ab1d1c3dbdf91ce7067"><td class="mdescLeft">&#160;</td><td class="mdescRight">起始索引，默认为0  <br /></td></tr>
 <tr class="memitem:a53f29d1b77fc53096c952d913630cde6" id="r_a53f29d1b77fc53096c952d913630cde6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53f29d1b77fc53096c952d913630cde6">offset</a> =1</td></tr>
+<tr class="memdesc:a53f29d1b77fc53096c952d913630cde6"><td class="mdescLeft">&#160;</td><td class="mdescRight">偏移值，默认为1  <br /></td></tr>
 <tr class="memitem:a5f3ea982deabb9342f93e0537e6bd420" id="r_a5f3ea982deabb9342f93e0537e6bd420"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f3ea982deabb9342f93e0537e6bd420">center</a> =0</td></tr>
+<tr class="memdesc:a5f3ea982deabb9342f93e0537e6bd420"><td class="mdescLeft">&#160;</td><td class="mdescRight">中心索引，默认为0  <br /></td></tr>
 <tr class="memitem:a9f4812c8f5257f41f2bc33e092192cc1" id="r_a9f4812c8f5257f41f2bc33e092192cc1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f4812c8f5257f41f2bc33e092192cc1">centerOffset</a> =1</td></tr>
+<tr class="memdesc:a9f4812c8f5257f41f2bc33e092192cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">中心偏移值，默认为1  <br /></td></tr>
 <tr class="memitem:adeeeb77e5d86e21ade46f5a61df1a28a" id="r_adeeeb77e5d86e21ade46f5a61df1a28a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adeeeb77e5d86e21ade46f5a61df1a28a">nHalf</a></td></tr>
+<tr class="memdesc:adeeeb77e5d86e21ade46f5a61df1a28a"><td class="mdescLeft">&#160;</td><td class="mdescRight">半网格点数  <br /></td></tr>
 <tr class="memitem:aed0825c7ebdc0499cfab567b1a60198a" id="r_aed0825c7ebdc0499cfab567b1a60198a"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed0825c7ebdc0499cfab567b1a60198a">norm</a></td></tr>
+<tr class="memdesc:aed0825c7ebdc0499cfab567b1a60198a"><td class="mdescLeft">&#160;</td><td class="mdescRight">法向量  <br /></td></tr>
 <tr class="memitem:a2bd9c8aa05b9a288c36a996d343a9d35" id="r_a2bd9c8aa05b9a288c36a996d343a9d35"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_data.html">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bd9c8aa05b9a288c36a996d343a9d35">flux_d</a></td></tr>
+<tr class="memdesc:a2bd9c8aa05b9a288c36a996d343a9d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">通量数据  <br /></td></tr>
 <tr class="memitem:a8991e3af1288140496dc0079f1c434ba" id="r_a8991e3af1288140496dc0079f1c434ba"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8991e3af1288140496dc0079f1c434ba">fBndL</a></td></tr>
+<tr class="memdesc:a8991e3af1288140496dc0079f1c434ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">左边界通量  <br /></td></tr>
 <tr class="memitem:a3e6cdfb5b8e8ce05cb9ec85044005b48" id="r_a3e6cdfb5b8e8ce05cb9ec85044005b48"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_one_d_bnd.html">OneDBnd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e6cdfb5b8e8ce05cb9ec85044005b48">fBndR</a></td></tr>
+<tr class="memdesc:a3e6cdfb5b8e8ce05cb9ec85044005b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">右边界通量  <br /></td></tr>
 <tr class="memitem:a27425ef9ec3db01b0264982f0e2a3349" id="r_a27425ef9ec3db01b0264982f0e2a3349"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a6efecf3d755d53d3c4649b100919dca3">EquationType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27425ef9ec3db01b0264982f0e2a3349">fluxType</a></td></tr>
+<tr class="memdesc:a27425ef9ec3db01b0264982f0e2a3349"><td class="mdescLeft">&#160;</td><td class="mdescRight">通量类型  <br /></td></tr>
 <tr class="memitem:ae9e15801b871c60a33e5ca7b6bcec234" id="r_ae9e15801b871c60a33e5ca7b6bcec234"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a42aac0a87a6871f720f74d0bc65bc884">DiffMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9e15801b871c60a33e5ca7b6bcec234">diffMethod</a> =<a class="el" href="macro_8hpp.html#a42aac0a87a6871f720f74d0bc65bc884af6484330b234658b101ed20df7505b85">TRAD2</a></td></tr>
+<tr class="memdesc:ae9e15801b871c60a33e5ca7b6bcec234"><td class="mdescLeft">&#160;</td><td class="mdescRight">差分方法，默认为TRAD2  <br /></td></tr>
 <tr class="memitem:aaa536144b50e925761886b22952e94f1" id="r_aaa536144b50e925761886b22952e94f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#ad67c42f6befa23035412c415ce619b37">InterMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa536144b50e925761886b22952e94f1">interMethod</a> =<a class="el" href="macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a3e7e9ecb94924acb13e94c0f750d977a">FIRSTORDER</a></td></tr>
+<tr class="memdesc:aaa536144b50e925761886b22952e94f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">插值方法，默认为FIRSTORDER  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock">
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00012">12</a> 行定义.</p>
+<div class="textblock"><p>空间离散类，用于处理计算流体力学中的空间离散化 </p>
+<p>该类负责执行空间离散化操作，包括通量计算、重构方法以及不同的离散格式。 支持多种方程类型和差分方法。 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00021">21</a> 行定义.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a029a40d99047525707051bba57280a8c" name="a029a40d99047525707051bba57280a8c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a029a40d99047525707051bba57280a8c">&#9670;&#160;</a></span>SpaceDis() <span class="overload">[1/2]</span></h2>
@@ -227,9 +270,16 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>构造函数 </p>
+<p>构造函数，初始化空间离散对象 </p>
+<p>构造函数</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
+    <tr><td class="paramname">n_</td><td>网格点数量 </td></tr>
+    <tr><td class="paramname">data_</td><td>数据指针 </td></tr>
+    <tr><td class="paramname">rhs_</td><td>右-hand side数据指针 </td></tr>
+    <tr><td class="paramname">bndL_</td><td>左边界条件 </td></tr>
+    <tr><td class="paramname">bndR_</td><td>右边界条件 </td></tr>
+    <tr><td class="paramname">info_</td><td>信息对象指针</td></tr>
     <tr><td class="paramname">n_</td><td>网格点数 </td></tr>
     <tr><td class="paramname">data_</td><td>数据指针 </td></tr>
     <tr><td class="paramname">rhs_</td><td>右手端数据指针 </td></tr>
@@ -293,44 +343,54 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00589">589</a> 行定义.</p>
+<p>访问数据元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>第一个索引 </td></tr>
+    <tr><td class="paramname">j</td><td>第二个索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>对应位置的数据引用 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00595">595</a> 行定义.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a74b086f51297b06aadf206c123fc7670_icgraph.png" border="0" usemap="#aclass_space_dis_a74b086f51297b06aadf206c123fc7670_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a74b086f51297b06aadf206c123fc7670_icgraph" id="aclass_space_dis_a74b086f51297b06aadf206c123fc7670_icgraph">
-<area shape="rect" title=" " alt="" coords="675,330,773,357"/>
-<area shape="rect" href="class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2" title="计算一维欧拉方程的界面通量" alt="" coords="201,51,376,78"/>
+<area shape="rect" title="访问数据元素" alt="" coords="675,330,773,357"/>
+<area shape="rect" href="class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2" title="计算一维欧拉方程通量" alt="" coords="201,51,376,78"/>
 <area shape="poly" title=" " alt="" coords="721,313,719,255,706,179,694,140,678,102,655,69,626,42,589,22,548,11,505,8,462,12,382,30,321,53,318,49,380,25,462,6,505,3,549,6,591,17,629,37,659,66,682,100,699,138,712,177,724,254,726,316"/>
-<area shape="rect" href="class_space_dis.html#abfe367e73fb15973a560da82a948d32f" title="计算二维欧拉方程的界面通量" alt="" coords="201,254,376,281"/>
+<area shape="rect" href="class_space_dis.html#abfe367e73fb15973a560da82a948d32f" title="计算二维欧拉方程通量" alt="" coords="201,254,376,281"/>
 <area shape="poly" title=" " alt="" coords="704,317,672,278,651,259,626,245,587,232,547,225,505,224,464,226,388,239,329,256,326,251,387,234,463,221,505,218,547,220,589,227,628,240,654,255,676,274,709,317"/>
-<area shape="rect" href="class_space_dis.html#ae25c0de65811d18361cd2dd9a73a8a33" title="HCS格式差分计算" alt="" coords="224,102,353,129"/>
+<area shape="rect" href="class_space_dis.html#ae25c0de65811d18361cd2dd9a73a8a33" title="HCS差分方法" alt="" coords="224,102,353,129"/>
 <area shape="poly" title=" " alt="" coords="713,315,702,282,684,242,659,203,626,171,594,152,559,137,486,119,415,112,354,112,352,107,415,107,487,114,561,132,596,147,629,167,663,200,689,239,707,280,718,316"/>
-<area shape="rect" href="class_space_dis.html#a4567c73c0c323760216c40a5a6ea7ff6" title="MND6格式差分计算" alt="" coords="219,153,358,179"/>
+<area shape="rect" href="class_space_dis.html#a4567c73c0c323760216c40a5a6ea7ff6" title="MND6差分方法" alt="" coords="219,153,358,179"/>
 <area shape="poly" title=" " alt="" coords="708,315,676,263,653,237,626,215,594,199,560,186,488,170,418,163,359,163,356,158,419,158,489,164,561,181,596,194,629,211,657,233,681,260,713,316"/>
-<area shape="rect" href="class_space_dis.html#a4d9c00d172d821da6583d22e63e63f45" title="一维界面中心重构函数" alt="" coords="424,51,627,78"/>
+<area shape="rect" href="class_space_dis.html#a4d9c00d172d821da6583d22e63e63f45" title="一维界面中心重构方法" alt="" coords="424,51,627,78"/>
 <area shape="poly" title=" " alt="" coords="717,314,709,268,692,210,665,150,647,123,626,99,599,81,598,76,629,95,651,120,670,148,697,208,714,267,722,316"/>
-<area shape="rect" href="class_space_dis.html#a6e1c94eedce7ef2512bb2a9ba0fbe248" title="二维界面中心重构函数" alt="" coords="424,254,627,281"/>
+<area shape="rect" href="class_space_dis.html#a6e1c94eedce7ef2512bb2a9ba0fbe248" title="二维界面中心重构方法" alt="" coords="424,254,627,281"/>
 <area shape="poly" title=" " alt="" coords="685,322,626,295,592,284,592,279,628,290,690,322"/>
-<area shape="rect" href="class_space_dis.html#acf838179b125789d6b5f43be4c66ca1f" title="左侧界面重构函数" alt="" coords="463,305,588,331"/>
+<area shape="rect" href="class_space_dis.html#acf838179b125789d6b5f43be4c66ca1f" title="左界面重构方法" alt="" coords="463,305,588,331"/>
 <area shape="poly" title=" " alt="" coords="657,336,589,329,588,323,662,335"/>
-<area shape="rect" href="class_space_dis.html#a5bce22d87800856705aa10b970bfc747" title="一维特征重构左侧函数" alt="" coords="440,355,611,382"/>
+<area shape="rect" href="class_space_dis.html#a5bce22d87800856705aa10b970bfc747" title="一维左界面特征重构方法" alt="" coords="440,355,611,382"/>
 <area shape="poly" title=" " alt="" coords="657,352,612,360,611,355,662,351"/>
-<area shape="rect" href="class_space_dis.html#a06e3d6ec4cca1314507f4358f38fab35" title="二维特征重构左侧函数" alt="" coords="440,406,611,433"/>
+<area shape="rect" href="class_space_dis.html#a06e3d6ec4cca1314507f4358f38fab35" title="二维左界面特征重构方法" alt="" coords="440,406,611,433"/>
 <area shape="poly" title=" " alt="" coords="685,366,628,397,593,408,591,403,626,392,690,364"/>
-<area shape="rect" href="class_space_dis.html#a9401b0035cd6ee9b73cc196d44e8c055" title="左侧原始变量重构函数" alt="" coords="450,457,601,483"/>
+<area shape="rect" href="class_space_dis.html#a9401b0035cd6ee9b73cc196d44e8c055" title="左界面原始变量重构方法" alt="" coords="450,457,601,483"/>
 <area shape="poly" title=" " alt="" coords="707,368,674,411,652,430,629,447,602,459,600,454,626,442,649,426,670,407,703,371"/>
-<area shape="rect" href="class_space_dis.html#a2653ae159a614797e031c5a947a236d4" title="右侧界面重构函数" alt="" coords="462,507,590,534"/>
+<area shape="rect" href="class_space_dis.html#a2653ae159a614797e031c5a947a236d4" title="右界面重构方法" alt="" coords="462,507,590,534"/>
 <area shape="poly" title=" " alt="" coords="715,370,683,436,659,469,629,498,591,515,589,510,626,493,655,466,679,433,711,373"/>
-<area shape="rect" href="class_space_dis.html#a1d4f501a38121c0aed89e685f46e7e5f" title="一维特征重构右侧函数" alt="" coords="202,558,375,585"/>
+<area shape="rect" href="class_space_dis.html#a1d4f501a38121c0aed89e685f46e7e5f" title="一维右界面特征重构方法" alt="" coords="202,558,375,585"/>
 <area shape="poly" title=" " alt="" coords="720,370,712,413,694,462,668,510,650,531,629,548,597,566,563,579,492,593,422,594,360,588,360,583,422,589,491,587,562,574,595,561,626,544,646,527,663,507,690,460,706,412,717,374"/>
-<area shape="rect" href="class_space_dis.html#acb3aba24b24f9ef5bc8b22694ce4e8b3" title="二维特征重构右侧函数" alt="" coords="202,609,375,635"/>
+<area shape="rect" href="class_space_dis.html#acb3aba24b24f9ef5bc8b22694ce4e8b3" title="二维右界面特征重构方法" alt="" coords="202,609,375,635"/>
 <area shape="poly" title=" " alt="" coords="723,371,718,424,702,486,690,518,674,548,654,576,629,599,597,618,562,632,526,641,488,646,416,646,353,639,353,633,416,641,488,641,525,636,561,627,595,614,626,595,650,572,670,545,685,515,697,484,712,423,720,375"/>
-<area shape="rect" href="class_space_dis.html#ac7d45fbd9d625ec495429bf7f22a9297" title="右侧原始变量重构函数" alt="" coords="212,659,365,686"/>
+<area shape="rect" href="class_space_dis.html#ac7d45fbd9d625ec495429bf7f22a9297" title="右界面原始变量重构方法" alt="" coords="212,659,365,686"/>
 <area shape="poly" title=" " alt="" coords="725,371,723,433,711,510,698,550,681,588,658,623,629,652,596,673,561,687,523,696,484,700,409,699,346,689,346,684,410,693,484,695,522,691,559,682,594,668,626,648,654,619,677,585,693,548,705,509,718,432,722,375"/>
-<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,102,153,129"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title="设置方程类型和差分方法" alt="" coords="5,102,153,129"/>
 <area shape="poly" title=" " alt="" coords="214,84,139,104,135,99,217,80"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,381,151,407"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="7,381,151,407"/>
 <area shape="poly" title=" " alt="" coords="204,89,203,92,172,126,147,165,127,207,112,249,92,327,84,381,79,380,87,326,107,247,122,205,142,162,168,123,199,88,207,84"/>
 <area shape="poly" title=" " alt="" coords="225,289,202,302,142,343,97,382,93,379,139,339,199,297,229,285"/>
 <area shape="poly" title=" " alt="" coords="206,117,155,118,152,113,210,114"/>
@@ -375,14 +435,16 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>计算通量 </p>
+
 <p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00542">542</a> 行定义.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a27c27a8844a4473abed20206941a009d_icgraph.png" border="0" usemap="#aclass_space_dis_a27c27a8844a4473abed20206941a009d_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a27c27a8844a4473abed20206941a009d_icgraph" id="aclass_space_dis_a27c27a8844a4473abed20206941a009d_icgraph">
-<area shape="rect" title=" " alt="" coords="497,31,626,57"/>
-<area shape="rect" href="class_space_dis.html#a3c563bda4d46190cc899af410bdc0cf7" title=" " alt="" coords="307,31,449,57"/>
+<area shape="rect" title="计算通量" alt="" coords="497,31,626,57"/>
+<area shape="rect" href="class_space_dis.html#a3c563bda4d46190cc899af410bdc0cf7" title="执行差分计算" alt="" coords="307,31,449,57"/>
 <area shape="poly" title=" " alt="" coords="479,44,450,47,450,41,484,44"/>
 <area shape="rect" href="_accuracy_test_8cpp.html#a44d0ab4b73566e46a9530dc0a54eb897" title="计算误差" alt="" coords="147,5,214,32"/>
 <area shape="poly" title=" " alt="" coords="289,33,215,26,215,20,294,32"/>
@@ -418,9 +480,11 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>计算精度测试问题的通量 </p>
+<p>计算精度测试通量 </p>
+<p>计算精度测试问题的通量</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
+    <tr><td class="paramname">i</td><td>网格点索引</td></tr>
     <tr><td class="paramname">i</td><td>网格点索引</td></tr>
   </table>
   </dd>
@@ -433,8 +497,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a4fd8182286483d87980e1e35453d9230_cgraph.png" border="0" usemap="#aclass_space_dis_a4fd8182286483d87980e1e35453d9230_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a4fd8182286483d87980e1e35453d9230_cgraph" id="aclass_space_dis_a4fd8182286483d87980e1e35453d9230_cgraph">
-<area shape="rect" title="计算精度测试问题的通量" alt="" coords="5,5,214,32"/>
-<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="262,5,382,32"/>
+<area shape="rect" title="计算精度测试通量" alt="" coords="5,5,214,32"/>
+<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="262,5,382,32"/>
 <area shape="poly" title=" " alt="" coords="214,16,249,19,244,19,214,21"/>
 </map>
 </div>
@@ -443,8 +507,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a4fd8182286483d87980e1e35453d9230_icgraph.png" border="0" usemap="#aclass_space_dis_a4fd8182286483d87980e1e35453d9230_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a4fd8182286483d87980e1e35453d9230_icgraph" id="aclass_space_dis_a4fd8182286483d87980e1e35453d9230_icgraph">
-<area shape="rect" title="计算精度测试问题的通量" alt="" coords="197,5,405,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="rect" title="计算精度测试通量" alt="" coords="197,5,405,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
 </map>
 </div>
@@ -474,9 +538,11 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>计算Burgers方程的通量 </p>
+<p>计算Burgers方程通量 </p>
+<p>计算Burgers方程的通量</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
+    <tr><td class="paramname">i</td><td>网格点索引</td></tr>
     <tr><td class="paramname">i</td><td>网格点索引</td></tr>
   </table>
   </dd>
@@ -489,8 +555,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_aa123d38e0a2f5b844c4948c02cf53834_cgraph.png" border="0" usemap="#aclass_space_dis_aa123d38e0a2f5b844c4948c02cf53834_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_aa123d38e0a2f5b844c4948c02cf53834_cgraph" id="aclass_space_dis_aa123d38e0a2f5b844c4948c02cf53834_cgraph">
-<area shape="rect" title="计算Burgers方程的通量" alt="" coords="5,5,179,32"/>
-<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="227,5,347,32"/>
+<area shape="rect" title="计算Burgers方程通量" alt="" coords="5,5,179,32"/>
+<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="227,5,347,32"/>
 <area shape="poly" title=" " alt="" coords="179,16,213,19,208,19,179,21"/>
 </map>
 </div>
@@ -499,10 +565,10 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_aa123d38e0a2f5b844c4948c02cf53834_icgraph.png" border="0" usemap="#aclass_space_dis_aa123d38e0a2f5b844c4948c02cf53834_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_aa123d38e0a2f5b844c4948c02cf53834_icgraph" id="aclass_space_dis_aa123d38e0a2f5b844c4948c02cf53834_icgraph">
-<area shape="rect" title="计算Burgers方程的通量" alt="" coords="201,31,374,57"/>
-<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" title="计算Burgers方程通量" alt="" coords="201,31,374,57"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title="设置方程类型和差分方法" alt="" coords="5,5,153,32"/>
 <area shape="poly" title=" " alt="" coords="183,32,153,30,153,25,188,31"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="7,56,151,83"/>
 <area shape="poly" title=" " alt="" coords="183,57,151,63,150,58,188,56"/>
 </map>
 </div>
@@ -532,9 +598,11 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>计算对流项通量 </p>
+<p>计算对流通量 </p>
+<p>计算对流项通量</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
+    <tr><td class="paramname">i</td><td>网格点索引</td></tr>
     <tr><td class="paramname">i</td><td>网格点索引</td></tr>
   </table>
   </dd>
@@ -547,8 +615,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_ae19ef12b12b2a4bf0f37ed8519391de2_cgraph.png" border="0" usemap="#aclass_space_dis_ae19ef12b12b2a4bf0f37ed8519391de2_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_ae19ef12b12b2a4bf0f37ed8519391de2_cgraph" id="aclass_space_dis_ae19ef12b12b2a4bf0f37ed8519391de2_cgraph">
-<area shape="rect" title="计算对流项通量" alt="" coords="5,5,165,32"/>
-<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="213,5,333,32"/>
+<area shape="rect" title="计算对流通量" alt="" coords="5,5,165,32"/>
+<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="213,5,333,32"/>
 <area shape="poly" title=" " alt="" coords="165,16,200,19,195,19,165,21"/>
 </map>
 </div>
@@ -557,10 +625,10 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_ae19ef12b12b2a4bf0f37ed8519391de2_icgraph.png" border="0" usemap="#aclass_space_dis_ae19ef12b12b2a4bf0f37ed8519391de2_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_ae19ef12b12b2a4bf0f37ed8519391de2_icgraph" id="aclass_space_dis_ae19ef12b12b2a4bf0f37ed8519391de2_icgraph">
-<area shape="rect" title="计算对流项通量" alt="" coords="201,31,360,57"/>
-<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" title="计算对流通量" alt="" coords="201,31,360,57"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title="设置方程类型和差分方法" alt="" coords="5,5,153,32"/>
 <area shape="poly" title=" " alt="" coords="183,33,153,31,153,25,188,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="7,56,151,83"/>
 <area shape="poly" title=" " alt="" coords="183,56,152,63,151,58,188,56"/>
 </map>
 </div>
@@ -590,7 +658,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>计算一维欧拉方程的界面通量 </p>
+<p>计算一维欧拉方程通量 </p>
+<p>计算一维欧拉方程的界面通量</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
@@ -604,12 +673,12 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a2b534c94da5065fd7abbfc3fea7042f2_cgraph.png" border="0" usemap="#aclass_space_dis_a2b534c94da5065fd7abbfc3fea7042f2_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a2b534c94da5065fd7abbfc3fea7042f2_cgraph" id="aclass_space_dis_a2b534c94da5065fd7abbfc3fea7042f2_cgraph">
-<area shape="rect" title="计算一维欧拉方程的界面通量" alt="" coords="5,71,181,97"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="502,5,600,32"/>
+<area shape="rect" title="计算一维欧拉方程通量" alt="" coords="5,71,181,97"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="502,5,600,32"/>
 <area shape="poly" title=" " alt="" coords="122,68,171,48,228,31,297,20,366,14,489,15,484,17,366,20,297,25,229,36,172,53,124,73"/>
-<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="270,45,390,72"/>
+<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="270,45,390,72"/>
 <area shape="poly" title=" " alt="" coords="180,72,257,66,252,68,182,77"/>
-<area shape="rect" href="class_space_dis.html#a4d9c00d172d821da6583d22e63e63f45" title="一维界面中心重构函数" alt="" coords="229,96,432,123"/>
+<area shape="rect" href="class_space_dis.html#a4d9c00d172d821da6583d22e63e63f45" title="一维界面中心重构方法" alt="" coords="229,96,432,123"/>
 <area shape="poly" title=" " alt="" coords="181,91,216,96,211,97,181,96"/>
 <area shape="rect" href="flux_scheme_8cpp.html#abd346e16076a9a3a3d7a6c6a72127e68" title="计算一维Roe通量（第二种实现）" alt="" coords="286,147,374,173"/>
 <area shape="poly" title=" " alt="" coords="129,95,229,132,274,146,268,147,228,137,128,101"/>
@@ -625,10 +694,10 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a2b534c94da5065fd7abbfc3fea7042f2_icgraph.png" border="0" usemap="#aclass_space_dis_a2b534c94da5065fd7abbfc3fea7042f2_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a2b534c94da5065fd7abbfc3fea7042f2_icgraph" id="aclass_space_dis_a2b534c94da5065fd7abbfc3fea7042f2_icgraph">
-<area shape="rect" title="计算一维欧拉方程的界面通量" alt="" coords="201,31,376,57"/>
-<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" title="计算一维欧拉方程通量" alt="" coords="201,31,376,57"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title="设置方程类型和差分方法" alt="" coords="5,5,153,32"/>
 <area shape="poly" title=" " alt="" coords="183,32,153,30,153,25,188,31"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="7,56,151,83"/>
 <area shape="poly" title=" " alt="" coords="183,57,151,63,150,58,188,56"/>
 </map>
 </div>
@@ -658,7 +727,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>计算二维欧拉方程的界面通量 </p>
+<p>计算二维欧拉方程通量 </p>
+<p>计算二维欧拉方程的界面通量</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
@@ -672,20 +742,22 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_abfe367e73fb15973a560da82a948d32f_cgraph.png" border="0" usemap="#aclass_space_dis_abfe367e73fb15973a560da82a948d32f_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_abfe367e73fb15973a560da82a948d32f_cgraph" id="aclass_space_dis_abfe367e73fb15973a560da82a948d32f_cgraph">
-<area shape="rect" title="计算二维欧拉方程的界面通量" alt="" coords="5,71,181,97"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="502,5,600,32"/>
-<area shape="poly" title=" " alt="" coords="122,68,171,48,228,31,297,20,366,14,489,15,484,17,366,20,297,25,229,36,172,53,124,73"/>
-<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="270,45,390,72"/>
-<area shape="poly" title=" " alt="" coords="180,72,257,66,252,68,182,77"/>
-<area shape="rect" href="class_space_dis.html#a6e1c94eedce7ef2512bb2a9ba0fbe248" title="二维界面中心重构函数" alt="" coords="229,96,432,123"/>
-<area shape="poly" title=" " alt="" coords="181,91,216,96,211,97,181,96"/>
-<area shape="rect" href="flux_scheme_8hpp.html#aa0fbd8f4c90df1f1b64e3c6c98797d70" title="计算二维Roe通量（对称版本）" alt="" coords="276,147,384,173"/>
-<area shape="poly" title=" " alt="" coords="129,95,229,132,264,144,258,144,228,137,128,101"/>
-<area shape="poly" title=" " alt="" coords="396,93,431,82,476,61,514,41,519,39,478,65,433,86,398,98"/>
-<area shape="rect" href="classeigensystem_euler2_d.html#a1fd30896a9fce8178242de2cb1d1ec53" title="将特征变量转换为原始变量" alt="" coords="480,77,622,120"/>
-<area shape="poly" title=" " alt="" coords="432,102,467,103,462,103,433,107"/>
-<area shape="rect" href="classeigensystem_euler2_d.html#a879dd9157179a09e866c6003822d84d6" title="将原始变量转换为特征变量" alt="" coords="480,144,622,187"/>
-<area shape="poly" title=" " alt="" coords="388,121,433,132,467,143,462,143,431,137,387,126"/>
+<area shape="rect" title="计算二维欧拉方程通量" alt="" coords="5,85,181,112"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="502,8,600,34"/>
+<area shape="poly" title=" " alt="" coords="110,82,161,49,193,32,228,20,296,7,366,3,431,5,490,11,484,12,431,10,366,8,297,12,229,25,196,37,164,53,113,87"/>
+<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="270,34,390,61"/>
+<area shape="poly" title=" " alt="" coords="158,82,257,62,253,65,160,87"/>
+<area shape="rect" href="flux_scheme_8hpp.html#ac95437455293638f57fecf0cf143509e" title="计算二维HLLC通量（第二种实现）" alt="" coords="278,85,382,112"/>
+<area shape="poly" title=" " alt="" coords="181,96,265,97,260,99,181,101"/>
+<area shape="rect" href="class_space_dis.html#a6e1c94eedce7ef2512bb2a9ba0fbe248" title="二维界面中心重构方法" alt="" coords="229,136,432,162"/>
+<area shape="poly" title=" " alt="" coords="159,110,252,131,247,133,159,115"/>
+<area shape="rect" href="flux_scheme_8hpp.html#aa0fbd8f4c90df1f1b64e3c6c98797d70" title="计算二维Roe通量（对称版本）" alt="" coords="276,186,384,213"/>
+<area shape="poly" title=" " alt="" coords="115,110,167,141,230,172,264,185,258,185,228,177,164,145,114,115"/>
+<area shape="poly" title=" " alt="" coords="403,132,431,121,458,104,484,84,525,47,530,45,488,88,461,109,433,126,405,138"/>
+<area shape="rect" href="classeigensystem_euler2_d.html#a1fd30896a9fce8178242de2cb1d1ec53" title="将特征变量转换为原始变量" alt="" coords="480,105,622,148"/>
+<area shape="poly" title=" " alt="" coords="432,136,467,135,462,135,433,141"/>
+<area shape="rect" href="classeigensystem_euler2_d.html#a879dd9157179a09e866c6003822d84d6" title="将原始变量转换为特征变量" alt="" coords="480,172,622,214"/>
+<area shape="poly" title=" " alt="" coords="401,160,468,176,462,176,400,165"/>
 </map>
 </div>
 <div class="dynheader">
@@ -693,8 +765,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_abfe367e73fb15973a560da82a948d32f_icgraph.png" border="0" usemap="#aclass_space_dis_abfe367e73fb15973a560da82a948d32f_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_abfe367e73fb15973a560da82a948d32f_icgraph" id="aclass_space_dis_abfe367e73fb15973a560da82a948d32f_icgraph">
-<area shape="rect" title="计算二维欧拉方程的界面通量" alt="" coords="197,5,372,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="rect" title="计算二维欧拉方程通量" alt="" coords="197,5,372,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
 </map>
 </div>
@@ -724,14 +796,16 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>二阶差分方法 </p>
+
 <p class="definition">在文件 <a class="el" href="sp__difference_8cpp_source.html">sp_difference.cpp</a> 第 <a class="el" href="sp__difference_8cpp_source.html#l00165">165</a> 行定义.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a01ab79d30caa15227bd817a6ca38ef47_cgraph.png" border="0" usemap="#aclass_space_dis_a01ab79d30caa15227bd817a6ca38ef47_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a01ab79d30caa15227bd817a6ca38ef47_cgraph" id="aclass_space_dis_a01ab79d30caa15227bd817a6ca38ef47_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,145,32"/>
-<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="193,5,313,32"/>
+<area shape="rect" title="二阶差分方法" alt="" coords="5,5,145,32"/>
+<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="193,5,313,32"/>
 <area shape="poly" title=" " alt="" coords="145,16,180,19,174,19,145,21"/>
 </map>
 </div>
@@ -740,10 +814,10 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a01ab79d30caa15227bd817a6ca38ef47_icgraph.png" border="0" usemap="#aclass_space_dis_a01ab79d30caa15227bd817a6ca38ef47_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a01ab79d30caa15227bd817a6ca38ef47_icgraph" id="aclass_space_dis_a01ab79d30caa15227bd817a6ca38ef47_icgraph">
-<area shape="rect" title=" " alt="" coords="201,31,340,57"/>
-<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" title="二阶差分方法" alt="" coords="201,31,340,57"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title="设置方程类型和差分方法" alt="" coords="5,5,153,32"/>
 <area shape="poly" title=" " alt="" coords="183,33,153,31,153,26,188,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="7,56,151,83"/>
 <area shape="poly" title=" " alt="" coords="183,56,152,62,151,57,188,55"/>
 </map>
 </div>
@@ -765,14 +839,16 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>执行差分计算 </p>
+
 <p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00537">537</a> 行定义.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a3c563bda4d46190cc899af410bdc0cf7_cgraph.png" border="0" usemap="#aclass_space_dis_a3c563bda4d46190cc899af410bdc0cf7_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a3c563bda4d46190cc899af410bdc0cf7_cgraph" id="aclass_space_dis_a3c563bda4d46190cc899af410bdc0cf7_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,148,32"/>
-<area shape="rect" href="class_space_dis.html#a27c27a8844a4473abed20206941a009d" title=" " alt="" coords="196,5,324,32"/>
+<area shape="rect" title="执行差分计算" alt="" coords="5,5,148,32"/>
+<area shape="rect" href="class_space_dis.html#a27c27a8844a4473abed20206941a009d" title="计算通量" alt="" coords="196,5,324,32"/>
 <area shape="poly" title=" " alt="" coords="148,16,183,19,177,19,148,21"/>
 </map>
 </div>
@@ -781,7 +857,7 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a3c563bda4d46190cc899af410bdc0cf7_icgraph.png" border="0" usemap="#aclass_space_dis_a3c563bda4d46190cc899af410bdc0cf7_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a3c563bda4d46190cc899af410bdc0cf7_icgraph" id="aclass_space_dis_a3c563bda4d46190cc899af410bdc0cf7_icgraph">
-<area shape="rect" title=" " alt="" coords="307,31,449,57"/>
+<area shape="rect" title="执行差分计算" alt="" coords="307,31,449,57"/>
 <area shape="rect" href="_accuracy_test_8cpp.html#a44d0ab4b73566e46a9530dc0a54eb897" title="计算误差" alt="" coords="147,5,214,32"/>
 <area shape="poly" title=" " alt="" coords="289,33,215,26,215,20,294,32"/>
 <area shape="rect" href="class_sp_distributor.html#af7d75f4c83a85db9e4b1e1824e62f238" title="求解右手端" alt="" coords="103,56,259,83"/>
@@ -816,7 +892,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>HCS格式差分计算 </p>
+<p>HCS差分方法 </p>
+<p>HCS格式差分计算</p>
 <p>使用HCS(High-order Central Scheme)格式进行差分计算 </p>
 
 <p class="definition">在文件 <a class="el" href="sp__difference_8cpp_source.html">sp_difference.cpp</a> 第 <a class="el" href="sp__difference_8cpp_source.html#l00014">14</a> 行定义.</p>
@@ -825,8 +902,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_ae25c0de65811d18361cd2dd9a73a8a33_cgraph.png" border="0" usemap="#aclass_space_dis_ae25c0de65811d18361cd2dd9a73a8a33_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_ae25c0de65811d18361cd2dd9a73a8a33_cgraph" id="aclass_space_dis_ae25c0de65811d18361cd2dd9a73a8a33_cgraph">
-<area shape="rect" title="HCS格式差分计算" alt="" coords="5,107,135,133"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="194,5,292,32"/>
+<area shape="rect" title="HCS差分方法" alt="" coords="5,107,135,133"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="194,5,292,32"/>
 <area shape="poly" title=" " alt="" coords="87,104,129,74,181,42,194,37,190,41,184,46,132,78,91,108"/>
 <area shape="rect" href="flux_scheme_8hpp.html#a799190b7d5984a67aab31b3b8c2075f8" title="默认通量计算函数" alt="" coords="209,56,276,83"/>
 <area shape="poly" title=" " alt="" coords="117,104,196,82,192,85,119,108"/>
@@ -834,7 +911,7 @@ Private 属性</h2></td></tr>
 <area shape="poly" title=" " alt="" coords="135,117,193,119,189,121,136,123"/>
 <area shape="rect" href="flux_scheme_8hpp.html#ac2b94b39b57264ca988713d2b1e4109c" title="计算二维Euler方程通量" alt="" coords="207,157,279,184"/>
 <area shape="poly" title=" " alt="" coords="118,131,194,155,189,157,118,137"/>
-<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="183,208,303,235"/>
+<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="183,208,303,235"/>
 <area shape="poly" title=" " alt="" coords="90,131,132,162,184,194,195,201,190,201,181,198,129,166,89,136"/>
 </map>
 </div>
@@ -843,10 +920,10 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_ae25c0de65811d18361cd2dd9a73a8a33_icgraph.png" border="0" usemap="#aclass_space_dis_ae25c0de65811d18361cd2dd9a73a8a33_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_ae25c0de65811d18361cd2dd9a73a8a33_icgraph" id="aclass_space_dis_ae25c0de65811d18361cd2dd9a73a8a33_icgraph">
-<area shape="rect" title="HCS格式差分计算" alt="" coords="201,31,330,57"/>
-<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" title="HCS差分方法" alt="" coords="201,31,330,57"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title="设置方程类型和差分方法" alt="" coords="5,5,153,32"/>
 <area shape="poly" title=" " alt="" coords="183,34,153,31,153,26,188,33"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="7,56,151,83"/>
 <area shape="poly" title=" " alt="" coords="183,55,151,62,150,57,188,54"/>
 </map>
 </div>
@@ -876,7 +953,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>MND6格式差分计算 </p>
+<p>MND6差分方法 </p>
+<p>MND6格式差分计算</p>
 <p>使用MND6(Modified Nonlinear Dispersion)格式进行差分计算 </p>
 
 <p class="definition">在文件 <a class="el" href="sp__difference_8cpp_source.html">sp_difference.cpp</a> 第 <a class="el" href="sp__difference_8cpp_source.html#l00111">111</a> 行定义.</p>
@@ -885,8 +963,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a4567c73c0c323760216c40a5a6ea7ff6_cgraph.png" border="0" usemap="#aclass_space_dis_a4567c73c0c323760216c40a5a6ea7ff6_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a4567c73c0c323760216c40a5a6ea7ff6_cgraph" id="aclass_space_dis_a4567c73c0c323760216c40a5a6ea7ff6_cgraph">
-<area shape="rect" title="MND6格式差分计算" alt="" coords="5,107,144,133"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="203,5,300,32"/>
+<area shape="rect" title="MND6差分方法" alt="" coords="5,107,144,133"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="203,5,300,32"/>
 <area shape="poly" title=" " alt="" coords="93,104,137,74,190,42,204,37,200,40,193,46,140,78,97,108"/>
 <area shape="rect" href="flux_scheme_8hpp.html#a799190b7d5984a67aab31b3b8c2075f8" title="默认通量计算函数" alt="" coords="218,56,286,83"/>
 <area shape="poly" title=" " alt="" coords="123,104,205,81,201,85,125,108"/>
@@ -894,7 +972,7 @@ Private 属性</h2></td></tr>
 <area shape="poly" title=" " alt="" coords="143,117,202,119,197,121,144,123"/>
 <area shape="rect" href="flux_scheme_8hpp.html#ac2b94b39b57264ca988713d2b1e4109c" title="计算二维Euler方程通量" alt="" coords="216,157,288,184"/>
 <area shape="poly" title=" " alt="" coords="124,131,203,155,198,157,124,137"/>
-<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="192,208,312,235"/>
+<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="192,208,312,235"/>
 <area shape="poly" title=" " alt="" coords="95,131,140,162,193,194,205,202,199,201,190,198,137,166,94,137"/>
 </map>
 </div>
@@ -903,10 +981,10 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a4567c73c0c323760216c40a5a6ea7ff6_icgraph.png" border="0" usemap="#aclass_space_dis_a4567c73c0c323760216c40a5a6ea7ff6_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a4567c73c0c323760216c40a5a6ea7ff6_icgraph" id="aclass_space_dis_a4567c73c0c323760216c40a5a6ea7ff6_icgraph">
-<area shape="rect" title="MND6格式差分计算" alt="" coords="201,31,339,57"/>
-<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" title="MND6差分方法" alt="" coords="201,31,339,57"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title="设置方程类型和差分方法" alt="" coords="5,5,153,32"/>
 <area shape="poly" title=" " alt="" coords="182,33,153,31,153,26,188,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="7,56,151,83"/>
 <area shape="poly" title=" " alt="" coords="183,56,151,62,151,57,188,55"/>
 </map>
 </div>
@@ -936,14 +1014,16 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>传统六阶差分方法 </p>
+
 <p class="definition">在文件 <a class="el" href="sp__difference_8cpp_source.html">sp_difference.cpp</a> 第 <a class="el" href="sp__difference_8cpp_source.html#l00153">153</a> 行定义.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a993154aab67998dcb51d1af2ae1fc2fd_cgraph.png" border="0" usemap="#aclass_space_dis_a993154aab67998dcb51d1af2ae1fc2fd_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a993154aab67998dcb51d1af2ae1fc2fd_cgraph" id="aclass_space_dis_a993154aab67998dcb51d1af2ae1fc2fd_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,173,32"/>
-<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="221,5,341,32"/>
+<area shape="rect" title="传统六阶差分方法" alt="" coords="5,5,173,32"/>
+<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="221,5,341,32"/>
 <area shape="poly" title=" " alt="" coords="173,16,208,19,203,19,173,21"/>
 </map>
 </div>
@@ -952,10 +1032,10 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a993154aab67998dcb51d1af2ae1fc2fd_icgraph.png" border="0" usemap="#aclass_space_dis_a993154aab67998dcb51d1af2ae1fc2fd_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a993154aab67998dcb51d1af2ae1fc2fd_icgraph" id="aclass_space_dis_a993154aab67998dcb51d1af2ae1fc2fd_icgraph">
-<area shape="rect" title=" " alt="" coords="201,31,368,57"/>
-<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" title="传统六阶差分方法" alt="" coords="201,31,368,57"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title="设置方程类型和差分方法" alt="" coords="5,5,153,32"/>
 <area shape="poly" title=" " alt="" coords="183,32,153,30,153,25,188,31"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="7,56,151,83"/>
 <area shape="poly" title=" " alt="" coords="183,57,151,63,151,58,188,56"/>
 </map>
 </div>
@@ -989,35 +1069,45 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00601">601</a> 行定义.</p>
+<p>访问通量数据元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>第一个索引 </td></tr>
+    <tr><td class="paramname">j</td><td>第二个索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>对应位置的通量数据引用 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00607">607</a> 行定义.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a838cc5cbae33c24a30efd237898cc02c_icgraph.png" border="0" usemap="#aclass_space_dis_a838cc5cbae33c24a30efd237898cc02c_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a838cc5cbae33c24a30efd237898cc02c_icgraph" id="aclass_space_dis_a838cc5cbae33c24a30efd237898cc02c_icgraph">
-<area shape="rect" title=" " alt="" coords="457,208,577,235"/>
-<area shape="rect" href="class_space_dis.html#a4fd8182286483d87980e1e35453d9230" title="计算精度测试问题的通量" alt="" coords="201,56,409,83"/>
+<area shape="rect" title="访问通量数据元素" alt="" coords="457,208,577,235"/>
+<area shape="rect" href="class_space_dis.html#a4fd8182286483d87980e1e35453d9230" title="计算精度测试通量" alt="" coords="201,56,409,83"/>
 <area shape="poly" title=" " alt="" coords="498,194,461,145,436,119,408,97,385,86,385,81,410,92,440,115,465,141,503,195"/>
-<area shape="rect" href="class_space_dis.html#aa123d38e0a2f5b844c4948c02cf53834" title="计算Burgers方程的通量" alt="" coords="218,360,392,387"/>
+<area shape="rect" href="class_space_dis.html#aa123d38e0a2f5b844c4948c02cf53834" title="计算Burgers方程通量" alt="" coords="218,360,392,387"/>
 <area shape="poly" title=" " alt="" coords="503,247,465,301,440,328,410,350,386,362,384,357,408,346,436,324,461,298,498,249"/>
-<area shape="rect" href="class_space_dis.html#ae19ef12b12b2a4bf0f37ed8519391de2" title="计算对流项通量" alt="" coords="225,411,384,437"/>
+<area shape="rect" href="class_space_dis.html#ae19ef12b12b2a4bf0f37ed8519391de2" title="计算对流通量" alt="" coords="225,411,384,437"/>
 <area shape="poly" title=" " alt="" coords="509,248,495,285,474,326,446,366,411,401,386,414,384,409,407,397,442,363,470,323,490,283,505,251"/>
-<area shape="rect" href="class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2" title="计算一维欧拉方程的界面通量" alt="" coords="217,107,392,133"/>
+<area shape="rect" href="class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2" title="计算一维欧拉方程通量" alt="" coords="217,107,392,133"/>
 <area shape="poly" title=" " alt="" coords="486,198,451,172,408,148,378,137,377,131,410,143,454,168,491,198"/>
-<area shape="rect" href="class_space_dis.html#abfe367e73fb15973a560da82a948d32f" title="计算二维欧拉方程的界面通量" alt="" coords="217,5,392,32"/>
+<area shape="rect" href="class_space_dis.html#abfe367e73fb15973a560da82a948d32f" title="计算二维欧拉方程通量" alt="" coords="217,5,392,32"/>
 <area shape="poly" title=" " alt="" coords="504,193,490,160,470,120,442,80,407,46,389,35,388,30,411,42,446,76,474,117,495,158,509,194"/>
-<area shape="rect" href="class_space_dis.html#a01ab79d30caa15227bd817a6ca38ef47" title=" " alt="" coords="235,157,374,184"/>
+<area shape="rect" href="class_space_dis.html#a01ab79d30caa15227bd817a6ca38ef47" title="二阶差分方法" alt="" coords="235,157,374,184"/>
 <area shape="poly" title=" " alt="" coords="441,204,364,187,364,182,446,203"/>
-<area shape="rect" href="class_space_dis.html#ae25c0de65811d18361cd2dd9a73a8a33" title="HCS格式差分计算" alt="" coords="240,208,370,235"/>
+<area shape="rect" href="class_space_dis.html#ae25c0de65811d18361cd2dd9a73a8a33" title="HCS差分方法" alt="" coords="240,208,370,235"/>
 <area shape="poly" title=" " alt="" coords="439,222,370,224,369,219,444,220"/>
-<area shape="rect" href="class_space_dis.html#a4567c73c0c323760216c40a5a6ea7ff6" title="MND6格式差分计算" alt="" coords="236,259,374,285"/>
+<area shape="rect" href="class_space_dis.html#a4567c73c0c323760216c40a5a6ea7ff6" title="MND6差分方法" alt="" coords="236,259,374,285"/>
 <area shape="poly" title=" " alt="" coords="441,240,365,261,363,256,446,238"/>
-<area shape="rect" href="class_space_dis.html#a993154aab67998dcb51d1af2ae1fc2fd" title=" " alt="" coords="221,309,388,336"/>
+<area shape="rect" href="class_space_dis.html#a993154aab67998dcb51d1af2ae1fc2fd" title="传统六阶差分方法" alt="" coords="221,309,388,336"/>
 <area shape="poly" title=" " alt="" coords="491,244,454,275,410,300,379,311,377,306,408,295,451,270,486,246"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,208,151,235"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="7,208,151,235"/>
 <area shape="poly" title=" " alt="" coords="210,91,202,97,166,123,135,154,92,209,87,206,131,150,163,119,199,92,214,87"/>
 <area shape="poly" title=" " alt="" coords="203,352,199,350,187,338,180,325,173,299,168,273,162,261,151,249,136,238,135,233,154,245,166,258,173,271,179,297,185,323,191,334,202,346,209,352"/>
-<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,259,153,285"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title="设置方程类型和差分方法" alt="" coords="5,259,153,285"/>
 <area shape="poly" title=" " alt="" coords="217,355,200,350,142,319,98,288,98,283,145,315,202,346,222,355"/>
 <area shape="poly" title=" " alt="" coords="209,406,199,401,183,382,176,362,173,324,171,286,164,267,151,249,137,238,137,233,155,245,169,265,176,285,178,323,181,361,188,379,203,397,214,407"/>
 <area shape="poly" title=" " alt="" coords="210,404,199,401,163,374,131,343,89,288,90,283,135,339,166,370,202,396,215,405"/>
@@ -1060,7 +1150,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>一维界面中心重构函数 </p>
+<p>一维界面中心重构方法 </p>
+<p>一维界面中心重构函数</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
@@ -1075,8 +1166,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a4d9c00d172d821da6583d22e63e63f45_cgraph.png" border="0" usemap="#aclass_space_dis_a4d9c00d172d821da6583d22e63e63f45_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a4d9c00d172d821da6583d22e63e63f45_cgraph" id="aclass_space_dis_a4d9c00d172d821da6583d22e63e63f45_cgraph">
-<area shape="rect" title="一维界面中心重构函数" alt="" coords="5,64,209,91"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="279,5,376,32"/>
+<area shape="rect" title="一维界面中心重构方法" alt="" coords="5,64,209,91"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="279,5,376,32"/>
 <area shape="poly" title=" " alt="" coords="159,61,266,34,262,37,161,66"/>
 <area shape="rect" href="classeigensystem_euler1_d.html#abb845806e1b40826070c360c68c06cf9" title="将特征变量转换为原始变量" alt="" coords="257,56,399,99"/>
 <area shape="poly" title=" " alt="" coords="209,75,244,77,238,78,210,80"/>
@@ -1089,12 +1180,12 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a4d9c00d172d821da6583d22e63e63f45_icgraph.png" border="0" usemap="#aclass_space_dis_a4d9c00d172d821da6583d22e63e63f45_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a4d9c00d172d821da6583d22e63e63f45_icgraph" id="aclass_space_dis_a4d9c00d172d821da6583d22e63e63f45_icgraph">
-<area shape="rect" title="一维界面中心重构函数" alt="" coords="424,31,627,57"/>
-<area shape="rect" href="class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2" title="计算一维欧拉方程的界面通量" alt="" coords="201,31,376,57"/>
+<area shape="rect" title="一维界面中心重构方法" alt="" coords="424,31,627,57"/>
+<area shape="rect" href="class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2" title="计算一维欧拉方程通量" alt="" coords="201,31,376,57"/>
 <area shape="poly" title=" " alt="" coords="406,44,377,47,376,41,411,44"/>
-<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" href="class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title="设置方程类型和差分方法" alt="" coords="5,5,153,32"/>
 <area shape="poly" title=" " alt="" coords="183,32,153,30,153,25,188,31"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="7,56,151,83"/>
 <area shape="poly" title=" " alt="" coords="183,57,151,63,150,58,188,56"/>
 </map>
 </div>
@@ -1124,7 +1215,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>二维界面中心重构函数 </p>
+<p>二维界面中心重构方法 </p>
+<p>二维界面中心重构函数</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
@@ -1139,8 +1231,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a6e1c94eedce7ef2512bb2a9ba0fbe248_cgraph.png" border="0" usemap="#aclass_space_dis_a6e1c94eedce7ef2512bb2a9ba0fbe248_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a6e1c94eedce7ef2512bb2a9ba0fbe248_cgraph" id="aclass_space_dis_a6e1c94eedce7ef2512bb2a9ba0fbe248_cgraph">
-<area shape="rect" title="二维界面中心重构函数" alt="" coords="5,64,209,91"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="279,5,376,32"/>
+<area shape="rect" title="二维界面中心重构方法" alt="" coords="5,64,209,91"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="279,5,376,32"/>
 <area shape="poly" title=" " alt="" coords="159,61,266,34,262,37,161,66"/>
 <area shape="rect" href="classeigensystem_euler2_d.html#a1fd30896a9fce8178242de2cb1d1ec53" title="将特征变量转换为原始变量" alt="" coords="257,56,399,99"/>
 <area shape="poly" title=" " alt="" coords="209,75,244,77,238,78,210,80"/>
@@ -1153,10 +1245,10 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a6e1c94eedce7ef2512bb2a9ba0fbe248_icgraph.png" border="0" usemap="#aclass_space_dis_a6e1c94eedce7ef2512bb2a9ba0fbe248_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a6e1c94eedce7ef2512bb2a9ba0fbe248_icgraph" id="aclass_space_dis_a6e1c94eedce7ef2512bb2a9ba0fbe248_icgraph">
-<area shape="rect" title="二维界面中心重构函数" alt="" coords="420,5,623,32"/>
-<area shape="rect" href="class_space_dis.html#abfe367e73fb15973a560da82a948d32f" title="计算二维欧拉方程的界面通量" alt="" coords="197,5,372,32"/>
+<area shape="rect" title="二维界面中心重构方法" alt="" coords="420,5,623,32"/>
+<area shape="rect" href="class_space_dis.html#abfe367e73fb15973a560da82a948d32f" title="计算二维欧拉方程通量" alt="" coords="197,5,372,32"/>
 <area shape="poly" title=" " alt="" coords="402,19,372,21,372,16,407,19"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
 </map>
 </div>
@@ -1186,7 +1278,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>左侧界面重构函数 </p>
+<p>左界面重构方法 </p>
+<p>左侧界面重构函数</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
@@ -1201,8 +1294,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_acf838179b125789d6b5f43be4c66ca1f_cgraph.png" border="0" usemap="#aclass_space_dis_acf838179b125789d6b5f43be4c66ca1f_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_acf838179b125789d6b5f43be4c66ca1f_cgraph" id="aclass_space_dis_acf838179b125789d6b5f43be4c66ca1f_cgraph">
-<area shape="rect" title="左侧界面重构函数" alt="" coords="5,31,131,57"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="194,5,291,32"/>
+<area shape="rect" title="左界面重构方法" alt="" coords="5,31,131,57"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="194,5,291,32"/>
 <area shape="poly" title=" " alt="" coords="131,32,181,27,176,29,132,37"/>
 <area shape="rect" href="inter_scheme_8hpp.html#aa8233de7c0da5dc2b8fdecf632f50508" title=" " alt="" coords="179,56,306,83"/>
 <area shape="poly" title=" " alt="" coords="131,50,166,58,161,58,131,56"/>
@@ -1213,8 +1306,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_acf838179b125789d6b5f43be4c66ca1f_icgraph.png" border="0" usemap="#aclass_space_dis_acf838179b125789d6b5f43be4c66ca1f_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_acf838179b125789d6b5f43be4c66ca1f_icgraph" id="aclass_space_dis_acf838179b125789d6b5f43be4c66ca1f_icgraph">
-<area shape="rect" title="左侧界面重构函数" alt="" coords="197,5,322,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="rect" title="左界面重构方法" alt="" coords="197,5,322,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
 </map>
 </div>
@@ -1244,7 +1337,15 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>一维特征重构左侧函数 </p>
+<p>一维左界面特征重构方法 </p>
+<p>一维特征重构左侧函数</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>重构后的特征变量值向量</dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
@@ -1259,8 +1360,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a5bce22d87800856705aa10b970bfc747_cgraph.png" border="0" usemap="#aclass_space_dis_a5bce22d87800856705aa10b970bfc747_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a5bce22d87800856705aa10b970bfc747_cgraph" id="aclass_space_dis_a5bce22d87800856705aa10b970bfc747_cgraph">
-<area shape="rect" title="一维特征重构左侧函数" alt="" coords="5,5,176,32"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="224,5,321,32"/>
+<area shape="rect" title="一维左界面特征重构方法" alt="" coords="5,5,176,32"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="224,5,321,32"/>
 <area shape="poly" title=" " alt="" coords="176,16,211,19,205,19,176,21"/>
 </map>
 </div>
@@ -1269,8 +1370,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a5bce22d87800856705aa10b970bfc747_icgraph.png" border="0" usemap="#aclass_space_dis_a5bce22d87800856705aa10b970bfc747_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a5bce22d87800856705aa10b970bfc747_icgraph" id="aclass_space_dis_a5bce22d87800856705aa10b970bfc747_icgraph">
-<area shape="rect" title="一维特征重构左侧函数" alt="" coords="197,5,367,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="rect" title="一维左界面特征重构方法" alt="" coords="197,5,367,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
 </map>
 </div>
@@ -1300,7 +1401,15 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>二维特征重构左侧函数 </p>
+<p>二维左界面特征重构方法 </p>
+<p>二维特征重构左侧函数</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>重构后的特征变量值向量</dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
@@ -1315,8 +1424,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a06e3d6ec4cca1314507f4358f38fab35_cgraph.png" border="0" usemap="#aclass_space_dis_a06e3d6ec4cca1314507f4358f38fab35_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a06e3d6ec4cca1314507f4358f38fab35_cgraph" id="aclass_space_dis_a06e3d6ec4cca1314507f4358f38fab35_cgraph">
-<area shape="rect" title="二维特征重构左侧函数" alt="" coords="5,64,176,91"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="246,5,344,32"/>
+<area shape="rect" title="二维左界面特征重构方法" alt="" coords="5,64,176,91"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="246,5,344,32"/>
 <area shape="poly" title=" " alt="" coords="139,61,233,35,229,38,141,66"/>
 <area shape="rect" href="classeigensystem_euler2_d.html#a1fd30896a9fce8178242de2cb1d1ec53" title="将特征变量转换为原始变量" alt="" coords="224,56,366,99"/>
 <area shape="poly" title=" " alt="" coords="176,75,211,77,206,78,177,80"/>
@@ -1329,8 +1438,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a06e3d6ec4cca1314507f4358f38fab35_icgraph.png" border="0" usemap="#aclass_space_dis_a06e3d6ec4cca1314507f4358f38fab35_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a06e3d6ec4cca1314507f4358f38fab35_icgraph" id="aclass_space_dis_a06e3d6ec4cca1314507f4358f38fab35_icgraph">
-<area shape="rect" title="二维特征重构左侧函数" alt="" coords="197,5,367,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="rect" title="二维左界面特征重构方法" alt="" coords="197,5,367,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
 </map>
 </div>
@@ -1360,7 +1469,15 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>左侧原始变量重构函数 </p>
+<p>左界面原始变量重构方法 </p>
+<p>左侧原始变量重构函数</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>重构后的原始变量值向量</dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
@@ -1375,8 +1492,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a9401b0035cd6ee9b73cc196d44e8c055_cgraph.png" border="0" usemap="#aclass_space_dis_a9401b0035cd6ee9b73cc196d44e8c055_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a9401b0035cd6ee9b73cc196d44e8c055_cgraph" id="aclass_space_dis_a9401b0035cd6ee9b73cc196d44e8c055_cgraph">
-<area shape="rect" title="左侧原始变量重构函数" alt="" coords="5,5,156,32"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="204,5,301,32"/>
+<area shape="rect" title="左界面原始变量重构方法" alt="" coords="5,5,156,32"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="204,5,301,32"/>
 <area shape="poly" title=" " alt="" coords="156,16,191,19,185,19,156,21"/>
 </map>
 </div>
@@ -1385,8 +1502,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a9401b0035cd6ee9b73cc196d44e8c055_icgraph.png" border="0" usemap="#aclass_space_dis_a9401b0035cd6ee9b73cc196d44e8c055_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a9401b0035cd6ee9b73cc196d44e8c055_icgraph" id="aclass_space_dis_a9401b0035cd6ee9b73cc196d44e8c055_icgraph">
-<area shape="rect" title="左侧原始变量重构函数" alt="" coords="197,5,347,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="rect" title="左界面原始变量重构方法" alt="" coords="197,5,347,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
 </map>
 </div>
@@ -1416,7 +1533,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>右侧界面重构函数 </p>
+<p>右界面重构方法 </p>
+<p>右侧界面重构函数</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
@@ -1431,8 +1549,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a2653ae159a614797e031c5a947a236d4_cgraph.png" border="0" usemap="#aclass_space_dis_a2653ae159a614797e031c5a947a236d4_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a2653ae159a614797e031c5a947a236d4_cgraph" id="aclass_space_dis_a2653ae159a614797e031c5a947a236d4_cgraph">
-<area shape="rect" title="右侧界面重构函数" alt="" coords="5,31,134,57"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="197,5,294,32"/>
+<area shape="rect" title="右界面重构方法" alt="" coords="5,31,134,57"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="197,5,294,32"/>
 <area shape="poly" title=" " alt="" coords="134,32,184,27,179,29,135,37"/>
 <area shape="rect" href="inter_scheme_8hpp.html#aa8233de7c0da5dc2b8fdecf632f50508" title=" " alt="" coords="182,56,309,83"/>
 <area shape="poly" title=" " alt="" coords="134,51,169,58,164,58,134,56"/>
@@ -1443,8 +1561,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a2653ae159a614797e031c5a947a236d4_icgraph.png" border="0" usemap="#aclass_space_dis_a2653ae159a614797e031c5a947a236d4_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a2653ae159a614797e031c5a947a236d4_icgraph" id="aclass_space_dis_a2653ae159a614797e031c5a947a236d4_icgraph">
-<area shape="rect" title="右侧界面重构函数" alt="" coords="197,5,325,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="rect" title="右界面重构方法" alt="" coords="197,5,325,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
 </map>
 </div>
@@ -1474,7 +1592,15 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>一维特征重构右侧函数 </p>
+<p>一维右界面特征重构方法 </p>
+<p>一维特征重构右侧函数</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>重构后的特征变量值向量</dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
@@ -1489,8 +1615,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a1d4f501a38121c0aed89e685f46e7e5f_cgraph.png" border="0" usemap="#aclass_space_dis_a1d4f501a38121c0aed89e685f46e7e5f_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a1d4f501a38121c0aed89e685f46e7e5f_cgraph" id="aclass_space_dis_a1d4f501a38121c0aed89e685f46e7e5f_cgraph">
-<area shape="rect" title="一维特征重构右侧函数" alt="" coords="5,5,179,32"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="227,5,324,32"/>
+<area shape="rect" title="一维右界面特征重构方法" alt="" coords="5,5,179,32"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="227,5,324,32"/>
 <area shape="poly" title=" " alt="" coords="179,16,214,19,208,19,179,21"/>
 </map>
 </div>
@@ -1499,8 +1625,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a1d4f501a38121c0aed89e685f46e7e5f_icgraph.png" border="0" usemap="#aclass_space_dis_a1d4f501a38121c0aed89e685f46e7e5f_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a1d4f501a38121c0aed89e685f46e7e5f_icgraph" id="aclass_space_dis_a1d4f501a38121c0aed89e685f46e7e5f_icgraph">
-<area shape="rect" title="一维特征重构右侧函数" alt="" coords="197,5,370,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="rect" title="一维右界面特征重构方法" alt="" coords="197,5,370,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
 </map>
 </div>
@@ -1530,7 +1656,15 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>二维特征重构右侧函数 </p>
+<p>二维右界面特征重构方法 </p>
+<p>二维特征重构右侧函数</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>重构后的特征变量值向量</dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
@@ -1545,8 +1679,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_acb3aba24b24f9ef5bc8b22694ce4e8b3_cgraph.png" border="0" usemap="#aclass_space_dis_acb3aba24b24f9ef5bc8b22694ce4e8b3_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_acb3aba24b24f9ef5bc8b22694ce4e8b3_cgraph" id="aclass_space_dis_acb3aba24b24f9ef5bc8b22694ce4e8b3_cgraph">
-<area shape="rect" title="二维特征重构右侧函数" alt="" coords="5,64,179,91"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="249,5,346,32"/>
+<area shape="rect" title="二维右界面特征重构方法" alt="" coords="5,64,179,91"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="249,5,346,32"/>
 <area shape="poly" title=" " alt="" coords="141,61,236,35,232,38,142,66"/>
 <area shape="rect" href="classeigensystem_euler2_d.html#a1fd30896a9fce8178242de2cb1d1ec53" title="将特征变量转换为原始变量" alt="" coords="227,56,369,99"/>
 <area shape="poly" title=" " alt="" coords="178,75,214,77,209,78,179,80"/>
@@ -1559,8 +1693,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_acb3aba24b24f9ef5bc8b22694ce4e8b3_icgraph.png" border="0" usemap="#aclass_space_dis_acb3aba24b24f9ef5bc8b22694ce4e8b3_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_acb3aba24b24f9ef5bc8b22694ce4e8b3_icgraph" id="aclass_space_dis_acb3aba24b24f9ef5bc8b22694ce4e8b3_icgraph">
-<area shape="rect" title="二维特征重构右侧函数" alt="" coords="197,5,370,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="rect" title="二维右界面特征重构方法" alt="" coords="197,5,370,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
 </map>
 </div>
@@ -1590,7 +1724,15 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>右侧原始变量重构函数 </p>
+<p>右界面原始变量重构方法 </p>
+<p>右侧原始变量重构函数</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>重构后的原始变量值向量</dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>网格点索引 </td></tr>
@@ -1605,8 +1747,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_ac7d45fbd9d625ec495429bf7f22a9297_cgraph.png" border="0" usemap="#aclass_space_dis_ac7d45fbd9d625ec495429bf7f22a9297_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_ac7d45fbd9d625ec495429bf7f22a9297_cgraph" id="aclass_space_dis_ac7d45fbd9d625ec495429bf7f22a9297_cgraph">
-<area shape="rect" title="右侧原始变量重构函数" alt="" coords="5,5,159,32"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="207,5,304,32"/>
+<area shape="rect" title="右界面原始变量重构方法" alt="" coords="5,5,159,32"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="207,5,304,32"/>
 <area shape="poly" title=" " alt="" coords="159,16,194,19,188,19,159,21"/>
 </map>
 </div>
@@ -1615,8 +1757,8 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_ac7d45fbd9d625ec495429bf7f22a9297_icgraph.png" border="0" usemap="#aclass_space_dis_ac7d45fbd9d625ec495429bf7f22a9297_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_ac7d45fbd9d625ec495429bf7f22a9297_icgraph" id="aclass_space_dis_ac7d45fbd9d625ec495429bf7f22a9297_icgraph">
-<area shape="rect" title="右侧原始变量重构函数" alt="" coords="197,5,350,32"/>
-<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="5,5,149,32"/>
+<area shape="rect" title="右界面原始变量重构方法" alt="" coords="197,5,350,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
 <area shape="poly" title=" " alt="" coords="178,19,149,21,149,16,184,19"/>
 </map>
 </div>
@@ -1638,13 +1780,21 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00612">612</a> 行定义.</p>
+<p>设置法向量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">norm</td><td>法向量数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00618">618</a> 行定义.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a7cefe594270b1fc5a3932fac4948f145_icgraph.png" border="0" usemap="#aclass_space_dis_a7cefe594270b1fc5a3932fac4948f145_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a7cefe594270b1fc5a3932fac4948f145_icgraph" id="aclass_space_dis_a7cefe594270b1fc5a3932fac4948f145_icgraph">
-<area shape="rect" title=" " alt="" coords="307,31,478,57"/>
+<area shape="rect" title="设置法向量" alt="" coords="307,31,478,57"/>
 <area shape="rect" href="_accuracy_test_8cpp.html#a44d0ab4b73566e46a9530dc0a54eb897" title="计算误差" alt="" coords="147,5,214,32"/>
 <area shape="poly" title=" " alt="" coords="289,32,215,25,215,20,295,31"/>
 <area shape="rect" href="class_sp_distributor.html#af7d75f4c83a85db9e4b1e1824e62f238" title="求解右手端" alt="" coords="103,56,259,83"/>
@@ -1671,13 +1821,21 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00617">617</a> 行定义.</p>
+<p>设置空间维度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idim</td><td>空间维度索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00623">623</a> 行定义.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a6aabd30875fee7bf06b59bc5ad4f6855_icgraph.png" border="0" usemap="#aclass_space_dis_a6aabd30875fee7bf06b59bc5ad4f6855_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a6aabd30875fee7bf06b59bc5ad4f6855_icgraph" id="aclass_space_dis_a6aabd30875fee7bf06b59bc5ad4f6855_icgraph">
-<area shape="rect" title=" " alt="" coords="307,31,439,57"/>
+<area shape="rect" title="设置空间维度" alt="" coords="307,31,439,57"/>
 <area shape="rect" href="_accuracy_test_8cpp.html#a44d0ab4b73566e46a9530dc0a54eb897" title="计算误差" alt="" coords="147,5,214,32"/>
 <area shape="poly" title=" " alt="" coords="289,34,215,26,215,20,294,33"/>
 <area shape="rect" href="class_sp_distributor.html#af7d75f4c83a85db9e4b1e1824e62f238" title="求解右手端" alt="" coords="103,56,259,83"/>
@@ -1708,34 +1866,43 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00551">551</a> 行定义.</p>
+<p>设置方程类型和差分方法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eqType</td><td>方程类型 </td></tr>
+    <tr><td class="paramname">diffMethod</td><td>差分方法 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00557">557</a> 行定义.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_ad89fa3b3b880edf2ad8c46355fbf1ec4_cgraph.png" border="0" usemap="#aclass_space_dis_ad89fa3b3b880edf2ad8c46355fbf1ec4_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_ad89fa3b3b880edf2ad8c46355fbf1ec4_cgraph" id="aclass_space_dis_ad89fa3b3b880edf2ad8c46355fbf1ec4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,157,153,184"/>
-<area shape="rect" href="class_space_dis.html#aa123d38e0a2f5b844c4948c02cf53834" title="计算Burgers方程的通量" alt="" coords="202,56,375,83"/>
+<area shape="rect" title="设置方程类型和差分方法" alt="" coords="5,157,153,184"/>
+<area shape="rect" href="class_space_dis.html#aa123d38e0a2f5b844c4948c02cf53834" title="计算Burgers方程通量" alt="" coords="202,56,375,83"/>
 <area shape="poly" title=" " alt="" coords="97,155,142,124,200,92,218,86,215,90,202,97,145,128,101,159"/>
-<area shape="rect" href="class_space_dis.html#ae19ef12b12b2a4bf0f37ed8519391de2" title="计算对流项通量" alt="" coords="209,107,368,133"/>
+<area shape="rect" href="class_space_dis.html#ae19ef12b12b2a4bf0f37ed8519391de2" title="计算对流通量" alt="" coords="209,107,368,133"/>
 <area shape="poly" title=" " alt="" coords="136,154,217,136,214,139,139,159"/>
-<area shape="rect" href="class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2" title="计算一维欧拉方程的界面通量" alt="" coords="201,208,376,235"/>
+<area shape="rect" href="class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2" title="计算一维欧拉方程通量" alt="" coords="201,208,376,235"/>
 <area shape="poly" title=" " alt="" coords="137,182,218,202,213,205,138,187"/>
-<area shape="rect" href="class_space_dis.html#a01ab79d30caa15227bd817a6ca38ef47" title=" " alt="" coords="219,157,358,184"/>
+<area shape="rect" href="class_space_dis.html#a01ab79d30caa15227bd817a6ca38ef47" title="二阶差分方法" alt="" coords="219,157,358,184"/>
 <area shape="poly" title=" " alt="" coords="152,168,205,169,201,172,154,173"/>
-<area shape="rect" href="class_space_dis.html#ae25c0de65811d18361cd2dd9a73a8a33" title="HCS格式差分计算" alt="" coords="224,284,353,311"/>
+<area shape="rect" href="class_space_dis.html#ae25c0de65811d18361cd2dd9a73a8a33" title="HCS差分方法" alt="" coords="224,284,353,311"/>
 <area shape="poly" title=" " alt="" coords="102,182,202,244,252,275,247,276,199,249,102,187"/>
-<area shape="rect" href="class_space_dis.html#a4567c73c0c323760216c40a5a6ea7ff6" title="MND6格式差分计算" alt="" coords="219,347,358,373"/>
+<area shape="rect" href="class_space_dis.html#a4567c73c0c323760216c40a5a6ea7ff6" title="MND6差分方法" alt="" coords="219,347,358,373"/>
 <area shape="poly" title=" " alt="" coords="88,182,133,248,165,286,202,321,232,340,227,340,199,325,161,290,129,251,88,187"/>
-<area shape="rect" href="class_space_dis.html#a993154aab67998dcb51d1af2ae1fc2fd" title=" " alt="" coords="205,5,372,32"/>
+<area shape="rect" href="class_space_dis.html#a993154aab67998dcb51d1af2ae1fc2fd" title="传统六阶差分方法" alt="" coords="205,5,372,32"/>
 <area shape="poly" title=" " alt="" coords="87,156,131,100,163,69,199,42,213,36,209,40,202,46,167,73,135,104,92,158"/>
-<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="466,68,586,95"/>
+<area shape="rect" href="class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="466,68,586,95"/>
 <area shape="poly" title=" " alt="" coords="374,71,452,76,447,79,376,76"/>
 <area shape="poly" title=" " alt="" coords="367,105,452,92,448,95,370,109"/>
 <area shape="poly" title=" " alt="" coords="355,205,374,194,391,173,397,150,404,127,422,105,453,91,448,94,426,109,409,130,402,152,396,175,378,198,358,210"/>
-<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="698,224,795,251"/>
+<area shape="rect" href="class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="698,224,795,251"/>
 <area shape="poly" title=" " alt="" coords="376,208,496,200,562,200,628,205,689,219,683,220,627,211,562,206,496,205,377,213"/>
-<area shape="rect" href="class_space_dis.html#a4d9c00d172d821da6583d22e63e63f45" title="一维界面中心重构函数" alt="" coords="424,119,627,145"/>
+<area shape="rect" href="class_space_dis.html#a4d9c00d172d821da6583d22e63e63f45" title="一维界面中心重构方法" alt="" coords="424,119,627,145"/>
 <area shape="poly" title=" " alt="" coords="345,205,375,194,399,178,423,162,459,149,454,152,425,166,402,182,377,198,348,210"/>
 <area shape="rect" href="flux_scheme_8cpp.html#abd346e16076a9a3a3d7a6c6a72127e68" title="计算一维Roe通量（第二种实现）" alt="" coords="482,220,570,247"/>
 <area shape="poly" title=" " alt="" coords="376,223,469,229,464,231,377,228"/>
@@ -1783,13 +1950,22 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>设置偏移量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i0</td><td>起始索引 </td></tr>
+    <tr><td class="paramname">offset</td><td>偏移值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">在文件 <a class="el" href="_space_dis_8cpp_source.html">SpaceDis.cpp</a> 第 <a class="el" href="_space_dis_8cpp_source.html#l00531">531</a> 行定义.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_space_dis_a66a9a5ec5989dabd9a1e50962cdac7bc_icgraph.png" border="0" usemap="#aclass_space_dis_a66a9a5ec5989dabd9a1e50962cdac7bc_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_space_dis_a66a9a5ec5989dabd9a1e50962cdac7bc_icgraph" id="aclass_space_dis_a66a9a5ec5989dabd9a1e50962cdac7bc_icgraph">
-<area shape="rect" title=" " alt="" coords="307,31,446,57"/>
+<area shape="rect" title="设置偏移量" alt="" coords="307,31,446,57"/>
 <area shape="rect" href="_accuracy_test_8cpp.html#a44d0ab4b73566e46a9530dc0a54eb897" title="计算误差" alt="" coords="147,5,214,32"/>
 <area shape="poly" title=" " alt="" coords="289,34,215,26,215,20,294,33"/>
 <area shape="rect" href="class_sp_distributor.html#af7d75f4c83a85db9e4b1e1824e62f238" title="求解右手端" alt="" coords="103,56,259,83"/>
@@ -1822,7 +1998,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00035">35</a> 行定义.</p>
+<p>左边界条件 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00080">80</a> 行定义.</p>
 
 </div>
 </div>
@@ -1846,7 +2024,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00035">35</a> 行定义.</p>
+<p>右边界条件 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00081">81</a> 行定义.</p>
 
 </div>
 </div>
@@ -1870,7 +2050,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00043">43</a> 行定义.</p>
+<p>函数指针，指向特定类型的通量计算函数 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00119">119</a> 行定义.</p>
 
 </div>
 </div>
@@ -1894,7 +2076,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00076">76</a> 行定义.</p>
+<p>中心索引，默认为0 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00248">248</a> 行定义.</p>
 
 </div>
 </div>
@@ -1918,7 +2102,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00076">76</a> 行定义.</p>
+<p>中心偏移值，默认为1 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00249">249</a> 行定义.</p>
 
 </div>
 </div>
@@ -1942,7 +2128,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00032">32</a> 行定义.</p>
+<p>数据指针 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00077">77</a> 行定义.</p>
 
 </div>
 </div>
@@ -1966,7 +2154,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00084">84</a> 行定义.</p>
+<p>差分方法，默认为TRAD2 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00258">258</a> 行定义.</p>
 
 </div>
 </div>
@@ -1990,7 +2180,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00071">71</a> 行定义.</p>
+<p>函数指针，指向具体的差分方法实现 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00240">240</a> 行定义.</p>
 
 </div>
 </div>
@@ -2014,7 +2206,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00082">82</a> 行定义.</p>
+<p>左边界通量 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00255">255</a> 行定义.</p>
 
 </div>
 </div>
@@ -2038,7 +2232,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00082">82</a> 行定义.</p>
+<p>右边界通量 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00256">256</a> 行定义.</p>
 
 </div>
 </div>
@@ -2062,7 +2258,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00081">81</a> 行定义.</p>
+<p>通量数据 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00254">254</a> 行定义.</p>
 
 </div>
 </div>
@@ -2086,7 +2284,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00083">83</a> 行定义.</p>
+<p>通量类型 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00257">257</a> 行定义.</p>
 
 </div>
 </div>
@@ -2110,7 +2310,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00075">75</a> 行定义.</p>
+<p>起始索引，默认为0 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00246">246</a> 行定义.</p>
 
 </div>
 </div>
@@ -2134,7 +2336,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00074">74</a> 行定义.</p>
+<p>空间维度索引 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00245">245</a> 行定义.</p>
 
 </div>
 </div>
@@ -2158,7 +2362,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00034">34</a> 行定义.</p>
+<p>信息对象指针 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00079">79</a> 行定义.</p>
 
 </div>
 </div>
@@ -2182,7 +2388,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00063">63</a> 行定义.</p>
+<p>五点插值函数指针 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00214">214</a> 行定义.</p>
 
 </div>
 </div>
@@ -2206,7 +2414,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00064">64</a> 行定义.</p>
+<p>正五点插值函数指针 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00217">217</a> 行定义.</p>
 
 </div>
 </div>
@@ -2230,7 +2440,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00085">85</a> 行定义.</p>
+<p>插值方法，默认为FIRSTORDER </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00259">259</a> 行定义.</p>
 
 </div>
 </div>
@@ -2254,7 +2466,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00073">73</a> 行定义.</p>
+<p>网格点数量 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00242">242</a> 行定义.</p>
 
 </div>
 </div>
@@ -2278,7 +2492,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00077">77</a> 行定义.</p>
+<p>半网格点数 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00250">250</a> 行定义.</p>
 
 </div>
 </div>
@@ -2302,7 +2518,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00079">79</a> 行定义.</p>
+<p>法向量 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00252">252</a> 行定义.</p>
 
 </div>
 </div>
@@ -2326,7 +2544,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00073">73</a> 行定义.</p>
+<p>原始变量数量 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00244">244</a> 行定义.</p>
 
 </div>
 </div>
@@ -2350,7 +2570,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00073">73</a> 行定义.</p>
+<p>变量数量 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00243">243</a> 行定义.</p>
 
 </div>
 </div>
@@ -2374,7 +2596,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00075">75</a> 行定义.</p>
+<p>偏移值，默认为1 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00247">247</a> 行定义.</p>
 
 </div>
 </div>
@@ -2398,7 +2622,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00046">46</a> 行定义.</p>
+<p>函数指针，指向左界面重构方法 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00135">135</a> 行定义.</p>
 
 </div>
 </div>
@@ -2422,7 +2648,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00046">46</a> 行定义.</p>
+<p>函数指针，指向右界面重构方法 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00135">135</a> 行定义.</p>
 
 </div>
 </div>
@@ -2446,7 +2674,9 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00033">33</a> 行定义.</p>
+<p>右-hand side数据指针 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00078">78</a> 行定义.</p>
 
 </div>
 </div>
@@ -2462,7 +2692,9 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00026">26</a> 行定义.</p>
+<p>计时相关变量 </p>
+
+<p class="definition">在文件 <a class="el" href="_space_dis_8hpp_source.html">SpaceDis.hpp</a> 第 <a class="el" href="_space_dis_8hpp_source.html#l00073">73</a> 行定义.</p>
 
 </div>
 </div>

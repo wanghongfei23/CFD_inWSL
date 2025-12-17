@@ -1,5 +1,5 @@
 <map id="SpaceDis::dif2Order" name="SpaceDis::dif2Order">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,145,32"/>
-<area shape="rect" id="Node000002" href="$class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="193,5,313,32"/>
+<area shape="rect" id="Node000001" title="二阶差分方法" alt="" coords="5,5,145,32"/>
+<area shape="rect" id="Node000002" href="$class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="193,5,313,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,16,180,19,174,19,145,21"/>
 </map>

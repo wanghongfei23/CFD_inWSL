@@ -19,7 +19,7 @@ class SpDistributor
     /**
      * @brief 求解右手端
      * 
-     * 对各个维度分别进行空间离散计算，得到右手端项。
+     * 对各个维度分别进行空间离散计算，得到右端项。
      */
     void rhsSolve();
 

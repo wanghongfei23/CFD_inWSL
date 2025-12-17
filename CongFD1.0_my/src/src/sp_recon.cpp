@@ -280,50 +280,79 @@ std::vector<real> SpaceDis::recon1DFaceCenter(int i)
  */
 std::vector<real> SpaceDis::recon2DFaceCenter(int i)
 {
+    // 定义左右两侧的原始变量数组，用于特征变换系统计算
     std::array<real, 4> primL, primR;
+    // 复制左侧相邻单元格的变量值到primL
     memcpy(&primL[0], &at(i - 1, 0), nVar * sizeof(real));
+    // 复制当前单元格的变量值到primR
     memcpy(&primR[0], &at(i, 0), nVar * sizeof(real));
+    
+    // 基于左右两侧单元格的变量值和法向量norm构造欧拉方程的特征系统
     eigensystemEuler2D eig = eigensystemEuler2D(primL, primR, norm);
+    
+    // 定义用于左右两侧特征变量插值的数组，每个数组存储5个点的数据
     std::array<real, 5> q1L, q2L, q3L, q4L, q1R, q2R, q3R, q4R;
+    
+    // 遍历从i-3到i+2的单元格，提取特征变量用于插值计算
     for (int j = i - 3; j < i + 3; j++) {
-        enum { R,
-            U,
-            V,
-            P };
+        // 定义变量索引枚举，方便访问不同物理量
+        enum { R,     // 密度
+            U,        // x方向速度
+            V,        // y方向速度
+            P };      // 压力
+        
+        // 将物理变量转换为特征变量
         auto charTemp = eig.primToChar({ at(j, R), at(j, U), at(j, V), at(j, P) });
 
+        // 计算左侧相关索引（相对于当前面i）
         int iLocal = j - i + 3;
+        // 如果索引有效，则将特征变量存储到左侧数组中
         if (iLocal < 5) {
-            q1L[iLocal] = charTemp[0];
-            q2L[iLocal] = charTemp[1];
-            q3L[iLocal] = charTemp[2];
-            q4L[iLocal] = charTemp[3];
+            q1L[iLocal] = charTemp[0];  // 第一个特征变量
+            q2L[iLocal] = charTemp[1];  // 第二个特征变量
+            q3L[iLocal] = charTemp[2];  // 第三个特征变量
+            q4L[iLocal] = charTemp[3];  // 第四个特征变量
         }
 
+        // 计算右侧相关索引（相对于当前面i，镜像处理）
         iLocal = i + 2 - j;
+        // 如果索引有效，则将特征变量存储到右侧数组中
         if (iLocal < 5) {
-            q1R[iLocal] = charTemp[0];
-            q2R[iLocal] = charTemp[1];
-            q3R[iLocal] = charTemp[2];
-            q4R[iLocal] = charTemp[3];
+            q1R[iLocal] = charTemp[0];  // 第一个特征变量
+            q2R[iLocal] = charTemp[1];  // 第二个特征变量
+            q3R[iLocal] = charTemp[2];  // 第三个特征变量
+            q4R[iLocal] = charTemp[3];  // 第四个特征变量
         }
     }
+    
+    // 声明标志变量，虽然在此段代码中声明了但并未使用
     bool flagL1, flagR1, flagL2, flagR2, flagL3, flagR3, flagL4, flagR4;
+    
+    // 记录插值计算开始时间
     auto start = std::chrono::steady_clock::now();
-    auto Q1LL = inter5(q1L);
-    auto Q1RR = inter5(q1R);
-    auto Q2LL = inter5(q2L);
-    auto Q2RR = inter5(q2R);
-    auto Q3LL = inter5(q3L);
-    auto Q3RR = inter5(q3R);
-    auto Q4LL = inter5(q4L);
-    auto Q4RR = inter5(q4R);
+    
+    // 对左右两侧的四个特征变量分别进行5点插值计算
+    auto Q1LL = inter5(q1L);  // 左侧第一个特征变量的插值结果
+    auto Q1RR = inter5(q1R);  // 右侧第一个特征变量的插值结果
+    auto Q2LL = inter5(q2L);  // 左侧第二个特征变量的插值结果
+    auto Q2RR = inter5(q2R);  // 右侧第二个特征变量的插值结果
+    auto Q3LL = inter5(q3L);  // 左侧第三个特征变量的插值结果
+    auto Q3RR = inter5(q3R);  // 右侧第三个特征变量的插值结果
+    auto Q4LL = inter5(q4L);  // 左侧第四个特征变量的插值结果
+    auto Q4RR = inter5(q4R);  // 右侧第四个特征变量的插值结果
+    
+    // 记录插值计算结束时间
     auto stop = std::chrono::steady_clock::now();
+    // 计算插值计算耗时并累加到timep变量中
     auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start).count();
     timep += duration;
 
+    // 将左侧插值得到的特征变量转换回物理变量
     auto resTempL = eig.charToPrim({ Q1LL, Q2LL, Q3LL, Q4LL });
+    // 将右侧插值得到的特征变量转换回物理变量
     auto resTempR = eig.charToPrim({ Q1RR, Q2RR, Q3RR, Q4RR });
+    
+    // 返回左右两侧的物理变量值，共8个值（每侧4个变量：密度、x速度、y速度、压力）
     return { resTempL[0], resTempL[1], resTempL[2], resTempL[3], resTempR[0], resTempR[1], resTempR[2], resTempR[3] };
 }
 /**

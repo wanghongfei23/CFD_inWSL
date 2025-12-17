@@ -1,5 +1,5 @@
 <map id="SpaceDis::reconRChar1D" name="SpaceDis::reconRChar1D">
-<area shape="rect" id="Node000001" title="一维特征重构右侧函数" alt="" coords="5,5,179,32"/>
-<area shape="rect" id="Node000002" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="227,5,324,32"/>
+<area shape="rect" id="Node000001" title="一维右界面特征重构方法" alt="" coords="5,5,179,32"/>
+<area shape="rect" id="Node000002" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="227,5,324,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,16,214,19,208,19,179,21"/>
 </map>

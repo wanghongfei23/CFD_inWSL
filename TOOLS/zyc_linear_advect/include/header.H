@@ -331,10 +331,9 @@ public:
  * @param t 时间
  * @return 对应位置和时间的精确解
  * 
- * 该函数定义了线性对流方程的初始条件
  */
 
-//  【王鸿飞】改函数
+// 【王鸿飞】改初始条件
 real_t exact_initial_solution(real_t x, real_t /*t*/)
 {
     // Example: exact solution for a periodic sine function
@@ -362,8 +361,8 @@ real_t exact_initial_solution(real_t x, real_t /*t*/)
  * @param t 时间
  * @return 对应位置和时间的精确导数
  * 
- * 该函数定义了线性对流方程解的导数
  */
+// 【王鸿飞】
 real_t exact_deriv(real_t x, real_t /*t*/)
 {
     // real_t x_c = 0.5Q;
@@ -378,12 +377,14 @@ real_t exact_deriv(real_t x, real_t /*t*/)
  * @param t 时间
  * @return 对应位置和时间的精确解
  * 
- * 该函数返回线性对流方程的精确解
  */
+// 【王鸿飞】精确解
 real_t exact_solution(real_t x, real_t /*t*/)
 {
-    // return exact_initial_solution(x, 0.0Q);
-    return exact_deriv(x, 0.0Q);
+    // 002
+    return exact_initial_solution(x, 0.0Q);
+    // 001
+    // return exact_deriv(x, 0.0Q);
 }
 
 /**
@@ -451,15 +452,16 @@ void compute_rhs(GhostArray& rhs, GhostArray& u, GhostArray& flux, real_t dx)
         // 
         // 使用高阶插值得到左值和右值
         
-        // 【王鸿飞】插值格式更换处
+        // 【王鸿飞】插值格式更换
+
         // real_t u_left = whf_TcnsN_A(q_left);
         // real_t u_right = whf_TcnsN_A(q_right);
-        // real_t u_left = whf_TcnsN_myASF203_NoS(q_left);
-        // real_t u_right = whf_TcnsN_myASF203_NoS(q_right);
-        real_t u_left = whf_TcnsN_myASF213_NoS(q_left);
-        real_t u_right = whf_TcnsN_myASF213_NoS(q_right);
-        // real_t u_left = Linear_5th(q_left);
-        // real_t u_right = Linear_5th(q_right);
+        // real_t u_left = whf_TcnsN_myASF3_5_10_noTimeDev(q_left);
+        // real_t u_right = whf_TcnsN_myASF3_5_10_noTimeDev(q_right);
+        // real_t u_left = whf_TcnsN_myASF3_5_9(q_left);
+        // real_t u_right = whf_TcnsN_myASF3_5_9(q_right);
+        real_t u_left = Linear_5th(q_left);
+        real_t u_right = Linear_5th(q_right);
 
         // 一阶插值:取左右平均值
         // if (c > 0) {

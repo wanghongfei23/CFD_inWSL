@@ -1,6 +1,6 @@
 <map id="SpaceDis::reconL" name="SpaceDis::reconL">
-<area shape="rect" id="Node000001" title="左侧界面重构函数" alt="" coords="5,31,131,57"/>
-<area shape="rect" id="Node000002" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="194,5,291,32"/>
+<area shape="rect" id="Node000001" title="左界面重构方法" alt="" coords="5,31,131,57"/>
+<area shape="rect" id="Node000002" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="194,5,291,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,32,181,27,176,29,132,37"/>
 <area shape="rect" id="Node000003" href="$inter_scheme_8hpp.html#aa8233de7c0da5dc2b8fdecf632f50508" title=" " alt="" coords="179,56,306,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,50,166,58,161,58,131,56"/>

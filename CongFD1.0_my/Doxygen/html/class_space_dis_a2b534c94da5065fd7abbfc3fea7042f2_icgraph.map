@@ -1,7 +1,7 @@
 <map id="SpaceDis::calFluxEuler1D" name="SpaceDis::calFluxEuler1D">
-<area shape="rect" id="Node000001" title="计算一维欧拉方程的界面通量" alt="" coords="201,31,376,57"/>
-<area shape="rect" id="Node000002" href="$class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" id="Node000001" title="计算一维欧拉方程通量" alt="" coords="201,31,376,57"/>
+<area shape="rect" id="Node000002" href="$class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title="设置方程类型和差分方法" alt="" coords="5,5,153,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,32,153,30,153,25,188,31"/>
-<area shape="rect" id="Node000003" href="$class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="rect" id="Node000003" href="$class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="7,56,151,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,57,151,63,150,58,188,56"/>
 </map>

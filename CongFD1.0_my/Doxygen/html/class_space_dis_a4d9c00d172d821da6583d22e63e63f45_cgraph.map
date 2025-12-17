@@ -1,6 +1,6 @@
 <map id="SpaceDis::recon1DFaceCenter" name="SpaceDis::recon1DFaceCenter">
-<area shape="rect" id="Node000001" title="一维界面中心重构函数" alt="" coords="5,64,209,91"/>
-<area shape="rect" id="Node000002" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="279,5,376,32"/>
+<area shape="rect" id="Node000001" title="一维界面中心重构方法" alt="" coords="5,64,209,91"/>
+<area shape="rect" id="Node000002" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="279,5,376,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,61,266,34,262,37,161,66"/>
 <area shape="rect" id="Node000003" href="$classeigensystem_euler1_d.html#abb845806e1b40826070c360c68c06cf9" title="将特征变量转换为原始变量" alt="" coords="257,56,399,99"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,75,244,77,238,78,210,80"/>

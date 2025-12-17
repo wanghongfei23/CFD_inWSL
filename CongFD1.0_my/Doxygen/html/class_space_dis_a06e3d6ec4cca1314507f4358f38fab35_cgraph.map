@@ -1,6 +1,6 @@
 <map id="SpaceDis::reconLChar2D" name="SpaceDis::reconLChar2D">
-<area shape="rect" id="Node000001" title="二维特征重构左侧函数" alt="" coords="5,64,176,91"/>
-<area shape="rect" id="Node000002" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="246,5,344,32"/>
+<area shape="rect" id="Node000001" title="二维左界面特征重构方法" alt="" coords="5,64,176,91"/>
+<area shape="rect" id="Node000002" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="246,5,344,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,61,233,35,229,38,141,66"/>
 <area shape="rect" id="Node000003" href="$classeigensystem_euler2_d.html#a1fd30896a9fce8178242de2cb1d1ec53" title="将特征变量转换为原始变量" alt="" coords="224,56,366,99"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,75,211,77,206,78,177,80"/>

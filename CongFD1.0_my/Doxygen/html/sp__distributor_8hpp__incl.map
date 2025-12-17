@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="定义空间分布器类，用于分发空间离散任务" alt="" coords="596,5,842,80"/>
 <area shape="rect" id="Node000002" href="$_bnds_8hpp.html" title="定义边界条件管理类" alt="" coords="543,128,620,155"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="669,79,613,121,610,117,664,82"/>
-<area shape="rect" id="Node000019" href="$_space_dis_8hpp.html" title=" " alt="" coords="667,128,770,155"/>
+<area shape="rect" id="Node000019" href="$_space_dis_8hpp.html" title="空间离散类定义文件" alt="" coords="667,128,770,155"/>
 <area shape="poly" id="edge22_Node000001_Node000019" title=" " alt="" coords="720,78,721,114,716,111,717,83"/>
 <area shape="rect" id="Node000024" title=" " alt="" coords="794,128,851,155"/>
 <area shape="poly" id="edge32_Node000001_Node000024" title=" " alt="" coords="759,78,801,118,795,117,757,83"/>

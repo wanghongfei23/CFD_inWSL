@@ -14,11 +14,11 @@ void Equation::consToPrim()
 {
     switch (type)
     {
-    case LINEARCONV1D:
-    case BURGERS1D:
+    case LINEARCONV1D:  //一维线性对流方程
+    case BURGERS1D:  //一维burgers方程
         std::copy(cons->begin(),cons->end(),prim->begin());
         break;
-    case EULER:
+    case EULER:  //欧拉方程
         {
             if (dim==1) consToPrimEuler1D();
             else if(dim==2) 

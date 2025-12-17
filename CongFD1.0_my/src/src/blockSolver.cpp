@@ -83,12 +83,17 @@ void BlockSolver::RK3_SSP(real dt)
     int n=cons->size();
     
 
-    //third order RK
-    //stage 1
+    // third order RK
+    // stage 1
+    // 将右端项(rhs)重置为零，为新一轮计算做准备
     rhs->setZeros();
+    // 将守恒变量转换为原始变量（密度、速度、压力等），用于后续的通量计算
     eqn->consToPrim();
+    // 更新所有边界条件，确保边界上的值反映最新的内部流场状态
     bnds->update();
+    // 计算空间离散项，即对流项的数值导数，贡献到右端项中
     spDis->rhsSolve();
+    // 计算物理源项（如体积力、化学反应等）并将其贡献添加到右端项中
     sourceTerm->calSource();
     // cgnsIO.BlockCgnsOutput(block,info);
     // cgnsIO.solCgnsOutput(rhs,info);
@@ -100,10 +105,15 @@ void BlockSolver::RK3_SSP(real dt)
     info->t+=dt;
 
     //stage 2
+    // 将右端项重置为零，开始新的时间步计算
     rhs->setZeros();
+    // 将守恒变量转换为原始变量，用于计算通量
     eqn->consToPrim();
+    // 更新边界条件，确保边界值是最新的
     bnds->update();
+    // 计算空间离散项，得到对流项的数值导数贡献
     spDis->rhsSolve();
+    // 计算源项（如体积力、能量源等）并添加到右端项中
     sourceTerm->calSource();
     #pragma omp parallel for
     for(int i=0;i<n;i++)
@@ -149,10 +159,15 @@ void BlockSolver::DTS_Euler(real dt)
     {
         
         auto dtau=calLocalCFL();
+        // 将右端项(rhs)重置为零，开始新的隐式迭代计算
         rhs->setZeros();
+        // 将当前守恒变量转换为原始变量，用于计算通量和雅可比矩阵
         eqn->consToPrim();
+        // 更新边界条件，确保在迭代过程中边界值保持最新
         bnds->update();
+        // 计算空间离散项（对流项的数值导数），贡献到右端项中
         spDis->rhsSolve();
+        // 计算源项（如粘性、热传导等）并添加到右端项中
         sourceTerm->calSource();
         // cgnsIO.BlockCgnsOutput(block,info);
         // cgnsIO.solCgnsOutput(rhs,info);
@@ -376,10 +391,12 @@ std::vector<real> BlockSolver::calLocalCFL()
    
     real dt,lambda=0;
     
-    Data* prim=eqn->getPrim();
-    int n=prim->getN();
+    Data* prim = eqn->getPrim();
+    int n = prim->getN();
     std::vector<real> res(n);
+    // 将守恒变量转换为原始变量，以便计算局部CFL数
     eqn->consToPrim();
+    // 并行计算每个网格点的局部CFL时间步长
     #pragma omp parallel for reduction(max:lambda)
     for(int i=0;i<n;i++)
     {
@@ -413,10 +430,12 @@ void BlockSolver::stepsLoopDTS()
             outputPrim(); 
         }
 
-        real dt,lambda=0;
-        Data* prim=eqn->getPrim();
-        int n=prim->getN();
+        real dt, lambda = 0;
+        Data* prim = eqn->getPrim();
+        int n = prim->getN();
+        // 将守恒变量转换为原始变量，以便计算局部波速
         eqn->consToPrim();
+        // 并行计算全局最大特征值（lambda），用于确定稳定的时间步长
         #pragma omp parallel for reduction(max:lambda)
         for(int i=0;i<n;i++)
         {
@@ -458,10 +477,11 @@ real BlockSolver::getTimeIntervalExplicit()
 {
     real dt,lambda=0;
     int dim=info->dim;
-    if(info->eqType==EULER)
+    if(info->eqType == EULER)
     {
-        Data* prim=eqn->getPrim();
-        int n=prim->getN();
+        Data* prim = eqn->getPrim();
+        int n = prim->getN();
+        // 将守恒变量转换为原始变量，用于计算声速和流动速度
         eqn->consToPrim();
         std::vector<real> lambdas(dim);
         for(int idim=0;idim<dim;idim++)

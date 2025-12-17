@@ -1,5 +1,5 @@
 <map id="SpaceDis" name="SpaceDis">
-<area shape="rect" id="Node000001" title=" " alt="" coords="26,125,104,152"/>
+<area shape="rect" id="Node000001" title="空间离散类，用于处理计算流体力学中的空间离散化" alt="" coords="26,125,104,152"/>
 <area shape="rect" id="Node000002" href="$class_data.html" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="30,45,34,74,41,100,56,125,50,125,36,102,29,75,29,50"/>
 <area shape="rect" id="Node000003" href="$class_info.html" title="存储和管理求解器的各种配置参数和状态信息" alt="" coords="79,5,122,32"/>

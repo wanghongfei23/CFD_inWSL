@@ -90,6 +90,7 @@ void configureCase(Info* info, int choice) {
             info->nCase = 0;
             info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
             info->iMax = { 201, 2, 2 };
+            // info->iMax = { 2001, 2, 2 };
             info->dim = 1;
             std::cout << "Configured: Sod tube problem\n";
             break;
@@ -101,6 +102,7 @@ void configureCase(Info* info, int choice) {
             info->nCase = 1;
             info->calZone = {0, 10.0, 0, 0, 0, 0};
             info->iMax = {201, 2, 2};
+            // info->iMax = {2001, 2, 2};
             info->dim = 1;
             std::cout << "Configured: Shu-Osher problem\n";
             break;
@@ -111,7 +113,8 @@ void configureCase(Info* info, int choice) {
             info->CFL = 0.5;
             info->nCase = 2;
             info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
-            info->iMax = { 201, 2, 2 };
+            // info->iMax = { 201, 2, 2 };
+            info->iMax = { 2001, 2, 2 };
             info->dim = 1;
             std::cout << "Configured: Lax problem\n";
             break;
@@ -134,7 +137,7 @@ void configureCase(Info* info, int choice) {
             info->nCase = 4;
             info->calZone = { 0, 1, 0, 0, 0, 0 };
             // info->iMax = { 401, 2, 2 };
-            info->iMax = { 2001, 2, 2 };
+            info->iMax = { 4001, 2, 2 };
             info->dim = 1;
             std::cout << "Configured: Woodward-Colella problem\n";
             break;
@@ -173,12 +176,15 @@ void configureCase(Info* info, int choice) {
             break;
             
         case 12: // Implosion
-            info->endStep = 25;
-            info->outputDt = 0.1;
+            // info->endStep = 25;
+            // info->outputDt = 0.1;
+            info->endStep = 1;
+            info->outputDt = 2.5;
             info->CFL = 0.5;
             info->nCase = 2;
             info->calZone = { -0.3, 0.3, -0.3, 0.3, 0, 0 };
-            info->iMax = { 401, 401, 2 };
+            // info->iMax = { 401, 401, 2 };
+            info->iMax = { 101, 101, 2 };
             info->dim = 2;
             std::cout << "Configured: Implosion problem\n";
             break;
@@ -239,8 +245,8 @@ int main()
 // =============================================================================
 //                                omp线程数设置                                =
 // =============================================================================
-    // omp_set_num_threads(10);
-    omp_set_num_threads(1);
+    omp_set_num_threads(10);
+    // omp_set_num_threads(1);
 
 // =============================================================================
 //                                 Info 初始化                                 =
@@ -262,7 +268,7 @@ int main()
     // info->interMethod=WCNS5CONG;
 
     // info->interMethod = TCNSCongA; //Teno5_CongA
-    info->interMethod = WCNS5; //weno5_JSchen
+    // info->interMethod = WCNS5; //weno5_JSchen
     // info->interMethod = WCNSZ5; //weno5_Z
     // info->interMethod = TCNS5; //Teno5_Z
     // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
@@ -285,7 +291,7 @@ int main()
     // info->interMethod = WHFTCNSASFf_5_9;
     // info->interMethod = WHFTCNSASFf2_test;
     // info->interMethod = WHFTCNSASFf3_test;
-    // info->interMethod = WHFTCNSASFf3_5_9_time_improve;
+    info->interMethod = WHFTCNSASFf3_5_9_time_improve;
     // info->interMethod = temp015;
     // info->interMethod = temp016;
     // info->interMethod = temp017;
@@ -298,13 +304,13 @@ int main()
         // 1;  // ShuOsher
         // 2;  // Lax
         // 3;  // Sedov
-        // 4;  // Woodward_Colella
+        4;  // Woodward_Colella
         // 5;  // Double_sparse_wave
 
         // 10; // 2D_Riemann_1
         // 11; // 2D_Riemann_2
         // 12; // implosion
-        13; // RTI
+        // 13; // RTI
         // 14; // Double_Mach
         // 15; // 2D_Riemann_3
         // 16; // KHI

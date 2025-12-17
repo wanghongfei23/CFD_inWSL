@@ -1,16 +1,18 @@
 <map id="SpaceDis::calFluxEuler2D" name="SpaceDis::calFluxEuler2D">
-<area shape="rect" id="Node000001" title="计算二维欧拉方程的界面通量" alt="" coords="5,71,181,97"/>
-<area shape="rect" id="Node000002" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="502,5,600,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,68,171,48,228,31,297,20,366,14,489,15,484,17,366,20,297,25,229,36,172,53,124,73"/>
-<area shape="rect" id="Node000003" href="$class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="270,45,390,72"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,72,257,66,252,68,182,77"/>
-<area shape="rect" id="Node000004" href="$class_space_dis.html#a6e1c94eedce7ef2512bb2a9ba0fbe248" title="二维界面中心重构函数" alt="" coords="229,96,432,123"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="181,91,216,96,211,97,181,96"/>
-<area shape="rect" id="Node000007" href="$flux_scheme_8hpp.html#aa0fbd8f4c90df1f1b64e3c6c98797d70" title="计算二维Roe通量（对称版本）" alt="" coords="276,147,384,173"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="129,95,229,132,264,144,258,144,228,137,128,101"/>
-<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="396,93,431,82,476,61,514,41,519,39,478,65,433,86,398,98"/>
-<area shape="rect" id="Node000005" href="$classeigensystem_euler2_d.html#a1fd30896a9fce8178242de2cb1d1ec53" title="将特征变量转换为原始变量" alt="" coords="480,77,622,120"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="432,102,467,103,462,103,433,107"/>
-<area shape="rect" id="Node000006" href="$classeigensystem_euler2_d.html#a879dd9157179a09e866c6003822d84d6" title="将原始变量转换为特征变量" alt="" coords="480,144,622,187"/>
-<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="388,121,433,132,467,143,462,143,431,137,387,126"/>
+<area shape="rect" id="Node000001" title="计算二维欧拉方程通量" alt="" coords="5,85,181,112"/>
+<area shape="rect" id="Node000002" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="502,8,600,34"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,82,161,49,193,32,228,20,296,7,366,3,431,5,490,11,484,12,431,10,366,8,297,12,229,25,196,37,164,53,113,87"/>
+<area shape="rect" id="Node000003" href="$class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="270,34,390,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,82,257,62,253,65,160,87"/>
+<area shape="rect" id="Node000004" href="$flux_scheme_8hpp.html#ac95437455293638f57fecf0cf143509e" title="计算二维HLLC通量（第二种实现）" alt="" coords="278,85,382,112"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="181,96,265,97,260,99,181,101"/>
+<area shape="rect" id="Node000005" href="$class_space_dis.html#a6e1c94eedce7ef2512bb2a9ba0fbe248" title="二维界面中心重构方法" alt="" coords="229,136,432,162"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="159,110,252,131,247,133,159,115"/>
+<area shape="rect" id="Node000008" href="$flux_scheme_8hpp.html#aa0fbd8f4c90df1f1b64e3c6c98797d70" title="计算二维Roe通量（对称版本）" alt="" coords="276,186,384,213"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="115,110,167,141,230,172,264,185,258,185,228,177,164,145,114,115"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="403,132,431,121,458,104,484,84,525,47,530,45,488,88,461,109,433,126,405,138"/>
+<area shape="rect" id="Node000006" href="$classeigensystem_euler2_d.html#a1fd30896a9fce8178242de2cb1d1ec53" title="将特征变量转换为原始变量" alt="" coords="480,105,622,148"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="432,136,467,135,462,135,433,141"/>
+<area shape="rect" id="Node000007" href="$classeigensystem_euler2_d.html#a879dd9157179a09e866c6003822d84d6" title="将原始变量转换为特征变量" alt="" coords="480,172,622,214"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="401,160,468,176,462,176,400,165"/>
 </map>

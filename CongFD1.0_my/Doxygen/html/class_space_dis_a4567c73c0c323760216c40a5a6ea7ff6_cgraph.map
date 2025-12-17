@@ -1,6 +1,6 @@
 <map id="SpaceDis::difMND6" name="SpaceDis::difMND6">
-<area shape="rect" id="Node000001" title="MND6格式差分计算" alt="" coords="5,107,144,133"/>
-<area shape="rect" id="Node000002" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="203,5,300,32"/>
+<area shape="rect" id="Node000001" title="MND6差分方法" alt="" coords="5,107,144,133"/>
+<area shape="rect" id="Node000002" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="203,5,300,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,104,137,74,190,42,204,37,200,40,193,46,140,78,97,108"/>
 <area shape="rect" id="Node000003" href="$flux_scheme_8hpp.html#a799190b7d5984a67aab31b3b8c2075f8" title="默认通量计算函数" alt="" coords="218,56,286,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,104,205,81,201,85,125,108"/>
@@ -8,6 +8,6 @@
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="143,117,202,119,197,121,144,123"/>
 <area shape="rect" id="Node000005" href="$flux_scheme_8hpp.html#ac2b94b39b57264ca988713d2b1e4109c" title="计算二维Euler方程通量" alt="" coords="216,157,288,184"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="124,131,203,155,198,157,124,137"/>
-<area shape="rect" id="Node000006" href="$class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="192,208,312,235"/>
+<area shape="rect" id="Node000006" href="$class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="192,208,312,235"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="95,131,140,162,193,194,205,202,199,201,190,198,137,166,94,137"/>
 </map>

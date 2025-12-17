@@ -1,5 +1,5 @@
 <map id="SpaceDis::difTraditional6" name="SpaceDis::difTraditional6">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,173,32"/>
-<area shape="rect" id="Node000002" href="$class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="221,5,341,32"/>
+<area shape="rect" id="Node000001" title="传统六阶差分方法" alt="" coords="5,5,173,32"/>
+<area shape="rect" id="Node000002" href="$class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="221,5,341,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,16,208,19,203,19,173,21"/>
 </map>

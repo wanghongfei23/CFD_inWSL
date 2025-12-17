@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="720,78,721,114,716,111,717,83"/>
 <area shape="rect" id="Node000003" href="$_bnds_8hpp.html" title="定义边界条件管理类" alt="" coords="543,203,620,229"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="692,156,620,197,618,193,697,154"/>
-<area shape="rect" id="Node000020" href="$_space_dis_8hpp.html" title=" " alt="" coords="667,203,770,229"/>
+<area shape="rect" id="Node000020" href="$_space_dis_8hpp.html" title="空间离散类定义文件" alt="" coords="667,203,770,229"/>
 <area shape="poly" id="edge23_Node000002_Node000020" title=" " alt="" coords="720,153,721,188,716,186,717,157"/>
 <area shape="rect" id="Node000025" title=" " alt="" coords="794,203,851,229"/>
 <area shape="poly" id="edge33_Node000002_Node000025" title=" " alt="" coords="737,153,795,194,790,194,736,158"/>

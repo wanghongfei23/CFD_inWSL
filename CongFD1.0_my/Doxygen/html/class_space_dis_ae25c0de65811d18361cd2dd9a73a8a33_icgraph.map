@@ -1,7 +1,7 @@
 <map id="SpaceDis::difHCS" name="SpaceDis::difHCS">
-<area shape="rect" id="Node000001" title="HCS格式差分计算" alt="" coords="201,31,330,57"/>
-<area shape="rect" id="Node000002" href="$class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" id="Node000001" title="HCS差分方法" alt="" coords="201,31,330,57"/>
+<area shape="rect" id="Node000002" href="$class_space_dis.html#ad89fa3b3b880edf2ad8c46355fbf1ec4" title="设置方程类型和差分方法" alt="" coords="5,5,153,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,34,153,31,153,26,188,33"/>
-<area shape="rect" id="Node000003" href="$class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数" alt="" coords="7,56,151,83"/>
+<area shape="rect" id="Node000003" href="$class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="7,56,151,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,55,151,62,150,57,188,54"/>
 </map>

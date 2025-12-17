@@ -98,7 +98,7 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
         inter5Positive = &weno5_JSchen;
         reconLMethod = &SpaceDis::reconLprim;
         reconRMethod = &SpaceDis::reconRprim;
-        break;
+        break; 
     case WCNSZ5:
         inter5 = &weno5_Z;
         inter5Positive = &weno5_Z;
@@ -186,7 +186,7 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
         // WCNS5CONGZCT4
     case WCNS5CONGZCT4:
         inter5 = &Teno5_CongZCT4;
-        inter5Positive = &Teno5_CongZCT4;
+        inter5Positive = &Teno5_CongZCT4; 
         if (fluxType == EULER) {
             reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
             reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
@@ -209,7 +209,7 @@ SpaceDis::SpaceDis(int n_, Data* data_, Data* rhs_, std::shared_ptr<OneDBnd> bnd
     case LINEAR5:
         inter5 = &Linear5;
         inter5Positive = &Linear5;
-        if (fluxType == EULER) {
+        if (fluxType == EULER) { 
             reconLMethod = (info->dim == 1) ? (&SpaceDis::reconLChar1D) : (&SpaceDis::reconLChar2D);
             reconRMethod = (info->dim == 1) ? (&SpaceDis::reconRChar1D) : (&SpaceDis::reconRChar2D);
         } else {
@@ -536,14 +536,20 @@ void SpaceDis::setOffset(int i0_, int offset_)
 
 void SpaceDis::difference()
 {
-    calFlux();
-    (this->*difMethod)();
+    calFlux();             //计算通量
+    (this->*difMethod)();  // 差分
 }
 void SpaceDis::calFlux()
 {
+    // 获取左边界和右边界ghost cell的数量，用于确定计算范围
     int fGhostL = fBndL->getN(), fGhostR = fBndR->getN();
+    // 将通量数组初始化为零
     flux_d->setZeros();
+    // 在包括ghost cells在内的所有单元格面上计算通量
+    // 计算范围从最左边的ghost cell面(索引为0-fGhostL)到最右边的ghost cell面(索引为nHalf+fGhostR-1)
     for (int i = 0 - fGhostL; i < nHalf + fGhostR; i++) {
+        // 使用函数指针调用相应方程类型的通量计算方法
+        // 根据问题类型(calTypeFlux)调用对应的通量计算函数
         (this->*calTypeFlux)(i);
     }
 }

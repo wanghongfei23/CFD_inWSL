@@ -1,26 +1,26 @@
 <map id="SpaceDis::setMethod" name="SpaceDis::setMethod">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,157,153,184"/>
-<area shape="rect" id="Node000002" href="$class_space_dis.html#aa123d38e0a2f5b844c4948c02cf53834" title="计算Burgers方程的通量" alt="" coords="202,56,375,83"/>
+<area shape="rect" id="Node000001" title="设置方程类型和差分方法" alt="" coords="5,157,153,184"/>
+<area shape="rect" id="Node000002" href="$class_space_dis.html#aa123d38e0a2f5b844c4948c02cf53834" title="计算Burgers方程通量" alt="" coords="202,56,375,83"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,155,142,124,200,92,218,86,215,90,202,97,145,128,101,159"/>
-<area shape="rect" id="Node000004" href="$class_space_dis.html#ae19ef12b12b2a4bf0f37ed8519391de2" title="计算对流项通量" alt="" coords="209,107,368,133"/>
+<area shape="rect" id="Node000004" href="$class_space_dis.html#ae19ef12b12b2a4bf0f37ed8519391de2" title="计算对流通量" alt="" coords="209,107,368,133"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="136,154,217,136,214,139,139,159"/>
-<area shape="rect" id="Node000005" href="$class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2" title="计算一维欧拉方程的界面通量" alt="" coords="201,208,376,235"/>
+<area shape="rect" id="Node000005" href="$class_space_dis.html#a2b534c94da5065fd7abbfc3fea7042f2" title="计算一维欧拉方程通量" alt="" coords="201,208,376,235"/>
 <area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="137,182,218,202,213,205,138,187"/>
-<area shape="rect" id="Node000011" href="$class_space_dis.html#a01ab79d30caa15227bd817a6ca38ef47" title=" " alt="" coords="219,157,358,184"/>
+<area shape="rect" id="Node000011" href="$class_space_dis.html#a01ab79d30caa15227bd817a6ca38ef47" title="二阶差分方法" alt="" coords="219,157,358,184"/>
 <area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="152,168,205,169,201,172,154,173"/>
-<area shape="rect" id="Node000012" href="$class_space_dis.html#ae25c0de65811d18361cd2dd9a73a8a33" title="HCS格式差分计算" alt="" coords="224,284,353,311"/>
+<area shape="rect" id="Node000012" href="$class_space_dis.html#ae25c0de65811d18361cd2dd9a73a8a33" title="HCS差分方法" alt="" coords="224,284,353,311"/>
 <area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="102,182,202,244,252,275,247,276,199,249,102,187"/>
-<area shape="rect" id="Node000016" href="$class_space_dis.html#a4567c73c0c323760216c40a5a6ea7ff6" title="MND6格式差分计算" alt="" coords="219,347,358,373"/>
+<area shape="rect" id="Node000016" href="$class_space_dis.html#a4567c73c0c323760216c40a5a6ea7ff6" title="MND6差分方法" alt="" coords="219,347,358,373"/>
 <area shape="poly" id="edge21_Node000001_Node000016" title=" " alt="" coords="88,182,133,248,165,286,202,321,232,340,227,340,199,325,161,290,129,251,88,187"/>
-<area shape="rect" id="Node000017" href="$class_space_dis.html#a993154aab67998dcb51d1af2ae1fc2fd" title=" " alt="" coords="205,5,372,32"/>
+<area shape="rect" id="Node000017" href="$class_space_dis.html#a993154aab67998dcb51d1af2ae1fc2fd" title="传统六阶差分方法" alt="" coords="205,5,372,32"/>
 <area shape="poly" id="edge27_Node000001_Node000017" title=" " alt="" coords="87,156,131,100,163,69,199,42,213,36,209,40,202,46,167,73,135,104,92,158"/>
-<area shape="rect" id="Node000003" href="$class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title=" " alt="" coords="466,68,586,95"/>
+<area shape="rect" id="Node000003" href="$class_space_dis.html#a838cc5cbae33c24a30efd237898cc02c" title="访问通量数据元素" alt="" coords="466,68,586,95"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="374,71,452,76,447,79,376,76"/>
 <area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="367,105,452,92,448,95,370,109"/>
 <area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="355,205,374,194,391,173,397,150,404,127,422,105,453,91,448,94,426,109,409,130,402,152,396,175,378,198,358,210"/>
-<area shape="rect" id="Node000006" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title=" " alt="" coords="698,224,795,251"/>
+<area shape="rect" id="Node000006" href="$class_space_dis.html#a74b086f51297b06aadf206c123fc7670" title="访问数据元素" alt="" coords="698,224,795,251"/>
 <area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="376,208,496,200,562,200,628,205,689,219,683,220,627,211,562,206,496,205,377,213"/>
-<area shape="rect" id="Node000007" href="$class_space_dis.html#a4d9c00d172d821da6583d22e63e63f45" title="一维界面中心重构函数" alt="" coords="424,119,627,145"/>
+<area shape="rect" id="Node000007" href="$class_space_dis.html#a4d9c00d172d821da6583d22e63e63f45" title="一维界面中心重构方法" alt="" coords="424,119,627,145"/>
 <area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="345,205,375,194,399,178,423,162,459,149,454,152,425,166,402,182,377,198,348,210"/>
 <area shape="rect" id="Node000010" href="$flux_scheme_8cpp.html#abd346e16076a9a3a3d7a6c6a72127e68" title="计算一维Roe通量（第二种实现）" alt="" coords="482,220,570,247"/>
 <area shape="poly" id="edge12_Node000005_Node000010" title=" " alt="" coords="376,223,469,229,464,231,377,228"/>
