@@ -471,8 +471,8 @@ digraph FunctionCallGraph {
   "interScheme" -> "whf_TCNS_AS_myFf3_test" [color=blue];
   "interScheme" -> "whf_TCNS_AS_myFf3_5_9_time_improve" [color=blue];
   "interScheme" -> "temp_015" [color=blue];
-  "interScheme" -> "temp_016" [color=blue];
-  "interScheme" -> "temp_017" [color=blue];
+  "interScheme" -> "whf_TCNS_LADS_myFf2_5_10" [color=blue];
+  "interScheme" -> "whf_TCNS_LAD" [color=blue];
   "interScheme" -> "temp_018" [color=blue];
   "interScheme" -> "temp_019" [color=blue];
   "interScheme" -> "weno5_Cong" [color=blue];

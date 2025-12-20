@@ -59,7 +59,7 @@ info_"算例名称"_"插值方法".txt
 | 14   | LINEAR5        | 五阶线性格式      |
 | 15   | NICEST5        | NICEST格式        |
 | 16   | INTERMAX       | 最大值插值格式    |
-| 17   | WHFTCNSA       | TENO-myA        |
+| 17   | WHFTCNSA       | TENO-A        |
 | 18   | WHFTCNSASF002   | TENO-AS-myF002   |
 | 19   | WHFTCNSAH002   | TENO-AS-myH002   |
 | 20   | WHFTCNSASF102   | TENO-AS-myF102   |

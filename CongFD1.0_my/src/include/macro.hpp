@@ -30,6 +30,7 @@ inline long timesss = 0;        ///< 时间统计变量
 // 【王鸿飞】注意gamma
 #define GAMMA 1.4               ///< 比热比常数（其他算例）
 // #define GAMMA 5.0/3.0        ///< 比热比常数（RTI算例）
+
 /**
  * @brief 边界类型枚举
  */
@@ -94,8 +95,8 @@ enum InterMethod {
     WHFTCNSASFf3_test,     // 34
     WHFTCNSASFf3_5_9_time_improve,     // 35
     temp015,     // 36
-    temp016,     // 37
-    temp017,     // 38
+    WHFTCNSLADSFf2_5_10,     // 37
+    WHFTCNSLAD,     // 38
     temp018,     // 39
     temp019     // 40
 };

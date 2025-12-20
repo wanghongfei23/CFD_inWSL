@@ -171,7 +171,7 @@ static std::map<InterMethod,std::string> disStr={
     {WCNSZ5,"WENO-Z"},
     {TCNS5,"TENO"},
     {WCNS5CONGZ,"TENO-S"},
-    {WHFTCNSA,"TENO-myA"},
+    {WHFTCNSA,"TENO-A"},
     {WHFTCNSASF002,"TENO-AS-myF002"},
     {WHFTCNSAH002,"TENO-AS-myH002"},
     {WHFTCNSASF102,"TENO-AS-myF102"},
@@ -191,8 +191,8 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSASFf3_test,"TENO-AS-myFf3_test"},
     {WHFTCNSASFf3_5_9_time_improve,"TENO-AS-myFf3_5_9_time_improve"},
     {temp015,"temp_name_015"},
-    {temp016,"temp_name_016"},
-    {temp017,"temp_name_017"},
+    {WHFTCNSLADSFf2_5_10,"TENO-LADS-myFf2_5_10"},
+    {WHFTCNSLAD,"TENO-LAD"},
     {temp018,"temp_name_018"},
     {temp019,"temp_name_019"}
     // 【王鸿飞】end-1命名

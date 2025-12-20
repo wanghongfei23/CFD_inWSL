@@ -50,7 +50,7 @@ static std::map<InterMethod,std::string> disStr={
     {WCNSZ5,"WENO-Z"},
     {TCNS5,"TENO"},
     {WCNS5CONGZ,"TENO-S"},
-    {WHFTCNSA,"TENO-myA"},
+    {WHFTCNSA,"TENO-A"},
     {WHFTCNSASF002,"TENO-AS-myF002"},
     {WHFTCNSAH002,"TENO-AS-myH002"},
     {WHFTCNSASF102,"TENO-AS-myF102"},
@@ -70,8 +70,8 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSASFf3_test,"TENO-AS-myFf3_test"},
     {WHFTCNSASFf3_5_9_time_improve,"TENO-AS-myFf3_5_9_time_improve"},
     {temp015,"temp_name_015"},
-    {temp016,"temp_name_016"},
-    {temp017,"temp_name_017"},
+    {WHFTCNSLADSFf2_5_10,"TENO-LADS-myFf2_5_10"},
+    {WHFTCNSLAD,"TENO-LAD"},
     {temp018,"temp_name_018"},
     {temp019,"temp_name_019"}
 };
@@ -84,8 +84,10 @@ static std::map<InterMethod,std::string> disStr={
 void configureCase(Info* info, int choice) {
     switch(choice) {
         case 0: // Sod tube
-            info->endStep = 20;
-            info->outputDt = 0.01;
+            // info->endStep = 20;
+            // info->outputDt = 0.01;
+            info->endStep = 1;
+            info->outputDt = 0.2;
             info->CFL = 0.5;
             info->nCase = 0;
             info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
@@ -108,13 +110,15 @@ void configureCase(Info* info, int choice) {
             break;
             
         case 2: // Lax
-            info->endStep = 14;
-            info->outputDt = 0.01;
+            // info->endStep = 14;
+            // info->outputDt = 0.01;
+            info->endStep = 1;
+            info->outputDt = 0.14;
             info->CFL = 0.5;
             info->nCase = 2;
             info->calZone = { -0.5, 0.5, 0, 0, 0, 0 };
-            // info->iMax = { 201, 2, 2 };
-            info->iMax = { 2001, 2, 2 };
+            info->iMax = { 201, 2, 2 };
+            // info->iMax = { 2001, 2, 2 };
             info->dim = 1;
             std::cout << "Configured: Lax problem\n";
             break;
@@ -136,8 +140,8 @@ void configureCase(Info* info, int choice) {
             info->CFL = 0.1;
             info->nCase = 4;
             info->calZone = { 0, 1, 0, 0, 0, 0 };
-            // info->iMax = { 401, 2, 2 };
-            info->iMax = { 4001, 2, 2 };
+            info->iMax = { 401, 2, 2 };
+            // info->iMax = { 4001, 2, 2 };
             info->dim = 1;
             std::cout << "Configured: Woodward-Colella problem\n";
             break;
@@ -202,8 +206,10 @@ void configureCase(Info* info, int choice) {
             break;
             
         case 14: // Double Mach
-            info->endStep = 20;
-            info->outputDt = 0.01;
+            // info->endStep = 20;
+            // info->outputDt = 0.01;
+            info->endStep = 1;
+            info->outputDt = 0.2;
             info->CFL = 0.5;
             info->nCase = 4;
             info->calZone = { 0, 4, 0, 1, 0, 0 };
@@ -270,9 +276,11 @@ int main()
     // info->interMethod = TCNSCongA; //Teno5_CongA
     // info->interMethod = WCNS5; //weno5_JSchen
     // info->interMethod = WCNSZ5; //weno5_Z
-    // info->interMethod = TCNS5; //Teno5_Z
-    // info->interMethod = WCNS5CONGZ;//Teno5_CongZ
-    // info->interMethod = WHFTCNSA;
+
+    // info->interMethod = TCNS5; //【TENO】 Teno5_Z
+
+    // info->interMethod = WCNS5CONGZ;//【TENO-S】   Teno5_CongZ
+    // info->interMethod = WHFTCNSA; //【TENO-A】TENO-A
     // info->interMethod = WHFTCNSASF002;
     // info->interMethod = WHFTCNSAH002;
     // info->interMethod = WHFTCNSASF102;
@@ -291,10 +299,14 @@ int main()
     // info->interMethod = WHFTCNSASFf_5_9;
     // info->interMethod = WHFTCNSASFf2_test;
     // info->interMethod = WHFTCNSASFf3_test;
-    info->interMethod = WHFTCNSASFf3_5_9_time_improve;
-    // info->interMethod = temp015;
-    // info->interMethod = temp016;
-    // info->interMethod = temp017;
+    // info->interMethod = WHFTCNSASFf3_5_9_time_improve; //A的 【present】
+
+    // 【注意】下面这个目前不能挂机算，会炸内存！！！！！！！！！！！！！
+    // info->interMethod = temp015; //3_5_9的插值加上记录max chi的值
+
+    // LAD
+    info->interMethod = WHFTCNSLADSFf2_5_10; //
+    // info->interMethod = WHFTCNSLAD;
     // info->interMethod = temp018;
     // info->interMethod = temp019;
 
@@ -304,10 +316,10 @@ int main()
         // 1;  // ShuOsher
         // 2;  // Lax
         // 3;  // Sedov
-        4;  // Woodward_Colella
+        // 4;  // Woodward_Colella
         // 5;  // Double_sparse_wave
 
-        // 10; // 2D_Riemann_1
+        10; // 2D_Riemann_1
         // 11; // 2D_Riemann_2
         // 12; // implosion
         // 13; // RTI

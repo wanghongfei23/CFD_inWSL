@@ -4,8 +4,8 @@
 # SRCS at src/CMakeLists.txt:2 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/*.hpp")
 set(OLD_GLOB
-  "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/000_compare_for_DM.hpp"
   "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/000_statistics_CTA.hpp"
+  "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/100_LAD_for_beta0_1_2.hpp"
   "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/Bnds.hpp"
   "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/SourceTerm.hpp"
   "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/SpaceDis.hpp"
