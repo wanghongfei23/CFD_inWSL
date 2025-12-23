@@ -64,15 +64,15 @@ static std::map<InterMethod,std::string> disStr={
     {WHFTCNSAS_approx_2,"TENO-AS-approx_2"},
     {WHFTCNSASF202_2S,"TENO-AS-myF202_2S"},
     {WHFTCNSASF202,"TENO-AS-myF202"},
-    {WHFTCNSASFf_5_10,"TENO-AS-myFf_5_10"},
-    {WHFTCNSASFf_5_9,"TENO-AS-myFf_5_9"},
-    {WHFTCNSASFf2_test,"TENO-AS-myFf2_test"},
-    {WHFTCNSASFf3_test,"TENO-AS-myFf3_test"},
-    {WHFTCNSASFf3_5_9_time_improve,"TENO-AS-myFf3_5_9_time_improve"},
+    {WHFTCNSASFf_5_10,"TENO-AS-Ff_5_10"},
+    {WHFTCNSASFf_5_9,"TENO-AS-Ff_5_9"},
+    {WHFTCNSASFf2_test,"TENO-AS-Ff2_test"},
+    {WHFTCNSASFf3_test,"TENO-AS-Ff3_test"},
+    {WHFTCNSASFf3_5_9_time_improve,"TENO-AS-Ff3_5_9_time_improve"},
     {temp015,"temp_name_015"},
-    {WHFTCNSLADSFf2_5_10,"TENO-LADS-myFf2_5_10"},
+    {WHFTCNSLADSFf2_5_10,"TENO-LADS-Ff2_5_10"},
     {WHFTCNSLAD,"TENO-LAD"},
-    {temp018,"temp_name_018"},
+    {WHFTCNSLADS_g1,"TENO-LADS-g1"},
     {temp019,"temp_name_019"}
 };
 
@@ -187,8 +187,8 @@ void configureCase(Info* info, int choice) {
             info->CFL = 0.5;
             info->nCase = 2;
             info->calZone = { -0.3, 0.3, -0.3, 0.3, 0, 0 };
-            // info->iMax = { 401, 401, 2 };
-            info->iMax = { 101, 101, 2 };
+            info->iMax = { 401, 401, 2 };
+            // info->iMax = { 101, 101, 2 };
             info->dim = 2;
             std::cout << "Configured: Implosion problem\n";
             break;
@@ -251,7 +251,8 @@ int main()
 // =============================================================================
 //                                omp线程数设置                                =
 // =============================================================================
-    omp_set_num_threads(10);
+    omp_set_num_threads(14);
+    // omp_set_num_threads(10);
     // omp_set_num_threads(1);
 
 // =============================================================================
@@ -304,22 +305,32 @@ int main()
     // 【注意】下面这个目前不能挂机算，会炸内存！！！！！！！！！！！！！
     // info->interMethod = temp015; //3_5_9的插值加上记录max chi的值
 
-    // LAD
+    // LAD 
     info->interMethod = WHFTCNSLADSFf2_5_10; //
     // info->interMethod = WHFTCNSLAD;
-    // info->interMethod = temp018;
+    // info->interMethod = WHFTCNSLADS_g1; //是没进行优化的WHFTCNSLAD
     // info->interMethod = temp019;
+    // info->interMethod = temp020;
+    // info->interMethod = temp021;
+    // info->interMethod = temp022;
+    // info->interMethod = temp023;
+    // info->interMethod = temp024;
+    // info->interMethod = temp025;
+    // info->interMethod = temp026;
+    // info->interMethod = temp027;
+    // info->interMethod = temp028;
+    // info->interMethod = temp029;
 
     // --------------------------- 算例选项 --------------------------- 
     const int presetCase = 
         // 0;  // Sod
         // 1;  // ShuOsher
-        // 2;  // Lax
+        2;  // Lax
         // 3;  // Sedov
         // 4;  // Woodward_Colella
         // 5;  // Double_sparse_wave
 
-        10; // 2D_Riemann_1
+        // 10; // 2D_Riemann_1
         // 11; // 2D_Riemann_2
         // 12; // implosion
         // 13; // RTI
@@ -336,7 +347,7 @@ int main()
         int n;
         real nf;
         file >> n;                                    // 01. 读取插值方法类型，并检查有效性
-        // if (n < temp019)
+        // if (n < temp029)
             info->interMethod = (InterMethod)n;
         file >> n;                                    // 02. 设置结束时间步
             info->endStep = n;

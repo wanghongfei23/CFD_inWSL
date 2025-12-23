@@ -73,7 +73,7 @@ info_"算例名称"_"插值方法".txt
 | 28   | WHFTCNSAS_approx_2 | TENO-AS-approx_2 |
 | 29   | WHFTCNSASF202_2S | TENO-AS-myF202_2S |
 | 30   | WHFTCNSASF202 | TENO-AS-myF202 |
-| 31   | WHFTCNSASFf_5_10 | TENO-AS-myFf_5_10 |
+| 31   | WHFTCNSASFf_5_10 | TENO-AS-Ff_5_10 |
 
 ### 2. 算例编号 (nCase)
 

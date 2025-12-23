@@ -97,8 +97,18 @@ enum InterMethod {
     temp015,     // 36
     WHFTCNSLADSFf2_5_10,     // 37
     WHFTCNSLAD,     // 38
-    temp018,     // 39
-    temp019     // 40
+    WHFTCNSLADS_g1,     // 39
+    temp019,     // 40
+    temp020,     // 41
+    temp021,     // 42
+    temp022,     // 43
+    temp023,     // 44
+    temp024,     // 45
+    temp025,     // 46
+    temp026,     // 47
+    temp027,     // 48
+    temp028,     // 49
+    temp029     // 50
 };
 
 /**

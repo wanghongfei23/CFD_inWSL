@@ -39,6 +39,7 @@ class Info
 
     DiffMethod diffMethod=TRAD6;                   ///< 差分方法
     InterMethod interMethod=WCNS5;                 ///< 插值方法
+    // 王鸿飞 默认设置处  RIT重力源项
     SourceType sourceType=SOURCENULL;              ///< 源项类型
     // SourceType sourceType=GRAVITY;                 ///< RTI的重力源项
 

@@ -8,6 +8,7 @@
 #include <limits>     // 添加这一行以支持 std::numeric_limits
 #include <algorithm>  // 添加这一行以支持 std::signbit
 #include <cmath>      // 添加这一行以支持 std::isnan
+#include "macro.hpp"  // 添加这一行以支持 real 类型定义
 
 // 在这里声明全局变量
 // 示例：
@@ -27,7 +28,7 @@ inline real global_theta = 0.0;
 inline real tau = 0.0;
 
 // 小量保护
-inline real epsilon = 1e-14;
+inline real epsilon = 1e-40;
 
 // 注意：使用 inline 关键字确保在多个编译单元中只有一个实例
 
