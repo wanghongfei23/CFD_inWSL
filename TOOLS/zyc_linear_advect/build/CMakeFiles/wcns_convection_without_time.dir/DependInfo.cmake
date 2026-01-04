@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/zyc_linear_advect/src/without_time.cpp" "CMakeFiles/wcns_convection_without_time.dir/src/without_time.cpp.o" "gcc" "CMakeFiles/wcns_convection_without_time.dir/src/without_time.cpp.o.d"
-  "" "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/zyc_linear_advect/bin/wcns_convection_without_time" "gcc" "CMakeFiles/wcns_convection_without_time.dir/link.d"
+  "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/tools_CFD/zyc_linear_advect/src/without_time.cpp" "CMakeFiles/wcns_convection_without_time.dir/src/without_time.cpp.o" "gcc" "CMakeFiles/wcns_convection_without_time.dir/src/without_time.cpp.o.d"
+  "" "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/tools_CFD/zyc_linear_advect/bin/wcns_convection_without_time" "gcc" "CMakeFiles/wcns_convection_without_time.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

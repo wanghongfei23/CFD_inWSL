@@ -125,7 +125,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect -B/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect/build
+  command = /usr/bin/cmake --regenerate-during-build -S/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/TOOLS/zyc_linear_advect -B/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/TOOLS/zyc_linear_advect/build
   description = Re-running CMake...
   generator = 1
 

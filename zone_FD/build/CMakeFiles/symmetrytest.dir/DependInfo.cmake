@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/symmetrytest.cpp" "CMakeFiles/symmetrytest.dir/symmetrytest.cpp.o" "gcc" "CMakeFiles/symmetrytest.dir/symmetrytest.cpp.o.d"
+  "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/zone_FD/symmetrytest.cpp" "CMakeFiles/symmetrytest.dir/symmetrytest.cpp.o" "gcc" "CMakeFiles/symmetrytest.dir/symmetrytest.cpp.o.d"
   "" "symmetrytest" "gcc" "CMakeFiles/symmetrytest.dir/link.d"
   )
 

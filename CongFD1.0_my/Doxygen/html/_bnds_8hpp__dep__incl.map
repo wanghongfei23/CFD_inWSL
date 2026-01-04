@@ -1,4 +1,4 @@
-<map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/Bnds.hpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/Bnds.hpp">
+<map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/include/Bnds.hpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/include/Bnds.hpp">
 <area shape="rect" id="Node000001" title="定义边界条件管理类" alt="" coords="435,5,681,80"/>
 <area shape="rect" id="Node000002" href="$initializer_8hpp.html" title="定义初始化器类，用于初始化网格、方程和边界条件" alt="" coords="275,251,521,325"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="461,91,443,109,425,129,411,159,403,190,398,251,393,249,397,189,406,157,421,127,439,105,464,87"/>

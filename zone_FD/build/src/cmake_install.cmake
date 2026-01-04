@@ -1,4 +1,4 @@
-# Install script for directory: /home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src
+# Install script for directory: /home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/zone_FD/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,6 +45,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/build/src/install_local_manifest.txt"
+  file(WRITE "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/zone_FD/build/src/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

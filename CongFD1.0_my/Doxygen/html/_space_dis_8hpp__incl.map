@@ -1,4 +1,4 @@
-<map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/SpaceDis.hpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/SpaceDis.hpp">
+<map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/include/SpaceDis.hpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/include/SpaceDis.hpp">
 <area shape="rect" id="Node000001" title="空间离散类定义文件" alt="" coords="522,5,768,80"/>
 <area shape="rect" id="Node000002" href="$block_8hpp.html" title="定义Block类，用于处理计算网格块的相关数据和操作" alt="" coords="405,128,482,155"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="566,82,485,123,482,119,571,79"/>

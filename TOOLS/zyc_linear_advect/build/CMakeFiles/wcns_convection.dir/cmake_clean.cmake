@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/zyc_linear_advect/bin/wcns_convection"
-  "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/zyc_linear_advect/bin/wcns_convection.pdb"
+  "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/tools_CFD/zyc_linear_advect/bin/wcns_convection"
+  "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/tools_CFD/zyc_linear_advect/bin/wcns_convection.pdb"
   "CMakeFiles/wcns_convection.dir/link.d"
   "CMakeFiles/wcns_convection.dir/src/with_time.cpp.o"
   "CMakeFiles/wcns_convection.dir/src/with_time.cpp.o.d"

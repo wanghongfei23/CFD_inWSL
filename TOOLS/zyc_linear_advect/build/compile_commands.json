@@ -1,14 +1,14 @@
 [
 {
-  "directory": "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect/build",
-  "command": "/usr/sbin/g++ -DHAVE_QUADMATH_H -I/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect/include -g -std=gnu++23 -Wall -Wextra -O0 -march=native -fopenmp -o CMakeFiles/wcns_convection.dir/src/with_time.cpp.o -c /home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect/src/with_time.cpp",
-  "file": "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect/src/with_time.cpp",
-  "output": "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect/build/CMakeFiles/wcns_convection.dir/src/with_time.cpp.o"
+  "directory": "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/TOOLS/zyc_linear_advect/build",
+  "command": "/usr/sbin/g++ -DHAVE_QUADMATH_H -I/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/TOOLS/zyc_linear_advect/include -g -std=gnu++23 -Wall -Wextra -O0 -march=native -fopenmp -o CMakeFiles/wcns_convection.dir/src/with_time.cpp.o -c /home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/TOOLS/zyc_linear_advect/src/with_time.cpp",
+  "file": "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/TOOLS/zyc_linear_advect/src/with_time.cpp",
+  "output": "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/TOOLS/zyc_linear_advect/build/CMakeFiles/wcns_convection.dir/src/with_time.cpp.o"
 },
 {
-  "directory": "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect/build",
-  "command": "/usr/sbin/g++ -DHAVE_QUADMATH_H -I/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect/include -g -std=gnu++23 -Wall -Wextra -O0 -march=native -fopenmp -o CMakeFiles/wcns_convection_without_time.dir/src/without_time.cpp.o -c /home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect/src/without_time.cpp",
-  "file": "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect/src/without_time.cpp",
-  "output": "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/TOOLS/zyc_linear_advect/build/CMakeFiles/wcns_convection_without_time.dir/src/without_time.cpp.o"
+  "directory": "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/TOOLS/zyc_linear_advect/build",
+  "command": "/usr/sbin/g++ -DHAVE_QUADMATH_H -I/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/TOOLS/zyc_linear_advect/include -g -std=gnu++23 -Wall -Wextra -O0 -march=native -fopenmp -o CMakeFiles/wcns_convection_without_time.dir/src/without_time.cpp.o -c /home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/TOOLS/zyc_linear_advect/src/without_time.cpp",
+  "file": "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/TOOLS/zyc_linear_advect/src/without_time.cpp",
+  "output": "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/TOOLS/zyc_linear_advect/build/CMakeFiles/wcns_convection_without_time.dir/src/without_time.cpp.o"
 }
 ]

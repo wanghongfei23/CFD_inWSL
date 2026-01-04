@@ -1,4 +1,4 @@
-<map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/initializer.hpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/include/initializer.hpp">
+<map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/include/initializer.hpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/include/initializer.hpp">
 <area shape="rect" id="Node000001" title="定义初始化器类，用于初始化网格、方程和边界条件" alt="" coords="275,5,521,80"/>
 <area shape="rect" id="Node000002" href="$block_solver_8hpp.html" title=" " alt="" coords="140,128,386,203"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="348,89,306,130,302,125,343,92"/>

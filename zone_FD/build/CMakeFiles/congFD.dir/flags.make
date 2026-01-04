@@ -4,7 +4,7 @@
 # compile CXX with /usr/sbin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/src/include
+CXX_INCLUDES = -I/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/zone_FD/src/include
 
 CXX_FLAGS =  -g -w -O0 -std=gnu++23 -fopenmp
 

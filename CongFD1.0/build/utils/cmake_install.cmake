@@ -1,4 +1,4 @@
-# Install script for directory: /home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0/utils
+# Install script for directory: /home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0/utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,6 +45,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0/build/utils/install_local_manifest.txt"
+  file(WRITE "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0/build/utils/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

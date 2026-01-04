@@ -1,4 +1,4 @@
-<map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/src/block.cpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/CongFD1.0_my/src/src/block.cpp">
+<map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/src/block.cpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/src/block.cpp">
 <area shape="rect" id="Node000001" title="Block类的实现文件" alt="" coords="427,5,674,80"/>
 <area shape="rect" id="Node000002" href="$block_8hpp.html" title="定义Block类，用于处理计算网格块的相关数据和操作" alt="" coords="512,128,589,155"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="552,78,553,114,548,111,549,83"/>

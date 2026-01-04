@@ -4,7 +4,7 @@
 # compile CXX with /usr/sbin/c++
 CXX_DEFINES = -DHAVE_QUADMATH_H
 
-CXX_INCLUDES = -I"/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/tools_CFD/zyc_linear_advect/include"
+CXX_INCLUDES = -I"/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/tools_CFD/zyc_linear_advect/include"
 
 CXX_FLAGS = -std=gnu++23 -Wall -Wextra -O0 -march=native -fopenmp
 

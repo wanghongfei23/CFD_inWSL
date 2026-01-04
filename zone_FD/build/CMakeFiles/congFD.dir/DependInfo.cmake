@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/archwanghongfei/Documents/GitHub/CFD_codes_tools/zone_FD/zoneMain.cpp" "CMakeFiles/congFD.dir/zoneMain.cpp.o" "gcc" "CMakeFiles/congFD.dir/zoneMain.cpp.o.d"
+  "/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/zone_FD/zoneMain.cpp" "CMakeFiles/congFD.dir/zoneMain.cpp.o" "gcc" "CMakeFiles/congFD.dir/zoneMain.cpp.o.d"
   "" "congFD" "gcc" "CMakeFiles/congFD.dir/link.d"
   )
 
