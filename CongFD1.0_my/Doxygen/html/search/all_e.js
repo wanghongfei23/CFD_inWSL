@@ -7,11 +7,12 @@ var searchData=
   ['main_2ecpp_4',['main.cpp',['../exact_sol_burgers_2main_8cpp.html',1,'(全局命名空间)'],['../roefluxtest_2main_8cpp.html',1,'(全局命名空间)'],['../to_tec1_d_2main_8cpp.html',1,'(全局命名空间)']]],
   ['main2_2ecpp_5',['main2.cpp',['../main2_8cpp.html',1,'']]],
   ['max_6',['max',['../roefluxtest_2main_8cpp.html#a98d705fa2f3a5e7566f99fc26d1573de',1,'main.cpp']]],
-  ['maxelement_7',['maxElement',['../class_data.html#aee43ea1c4f65f6fbe02ba5e06d20d777',1,'Data']]],
-  ['maximplicitstep_8',['maxImplicitStep',['../class_info.html#a8cbdda34bff63b0cb030abefe2f73606',1,'Info']]],
-  ['mindif_9',['minDif',['../sp__recon_8cpp.html#aae45584dc7664c704660d2d850d4173b',1,'minDif(real u1L, real u2L, real u1R, real u2R):&#160;sp_recon.cpp'],['../sp__recon_8cpp.html#a159cca47f1aadf3aeda39b6a2ac00b01',1,'minDif(std::array&lt; real, 3 &gt; uL, std::array&lt; real, 3 &gt; uR):&#160;sp_recon.cpp'],['../sp__recon_8cpp.html#a1672668e6aa406da91a3c9058420f817',1,'minDif(std::array&lt; real, 2 &gt; uL, std::array&lt; real, 2 &gt; uR):&#160;sp_recon.cpp']]],
-  ['mindif2_10',['minDif2',['../sp__recon_8cpp.html#ae781fbf04454bd6255a71f6c0a8b14bf',1,'sp_recon.cpp']]],
-  ['mnd6_11',['MND6',['../macro_8hpp.html#a42aac0a87a6871f720f74d0bc65bc884a3cad9f557f9979d750016bb426e38c89',1,'macro.hpp']]],
-  ['muscl_12',['MUSCL',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a181cabe43fb03984143b9d63dcf477b3',1,'macro.hpp']]],
-  ['musclinterpolation_13',['musclInterpolation',['../inter_scheme_8hpp.html#aa8233de7c0da5dc2b8fdecf632f50508',1,'interScheme.hpp']]]
+  ['max_5fchi_7',['max_chi',['../100___l_a_d__for__beta0__1__2_8hpp.html#ad5b4fc061f75ff92f0542b85f0684d9e',1,'100_LAD_for_beta0_1_2.hpp']]],
+  ['maxelement_8',['maxElement',['../class_data.html#aee43ea1c4f65f6fbe02ba5e06d20d777',1,'Data']]],
+  ['maximplicitstep_9',['maxImplicitStep',['../class_info.html#a8cbdda34bff63b0cb030abefe2f73606',1,'Info']]],
+  ['mindif_10',['minDif',['../sp__recon_8cpp.html#aae45584dc7664c704660d2d850d4173b',1,'minDif(real u1L, real u2L, real u1R, real u2R):&#160;sp_recon.cpp'],['../sp__recon_8cpp.html#a159cca47f1aadf3aeda39b6a2ac00b01',1,'minDif(std::array&lt; real, 3 &gt; uL, std::array&lt; real, 3 &gt; uR):&#160;sp_recon.cpp'],['../sp__recon_8cpp.html#a1672668e6aa406da91a3c9058420f817',1,'minDif(std::array&lt; real, 2 &gt; uL, std::array&lt; real, 2 &gt; uR):&#160;sp_recon.cpp']]],
+  ['mindif2_11',['minDif2',['../sp__recon_8cpp.html#ae781fbf04454bd6255a71f6c0a8b14bf',1,'sp_recon.cpp']]],
+  ['mnd6_12',['MND6',['../macro_8hpp.html#a42aac0a87a6871f720f74d0bc65bc884a3cad9f557f9979d750016bb426e38c89',1,'macro.hpp']]],
+  ['muscl_13',['MUSCL',['../macro_8hpp.html#ad67c42f6befa23035412c415ce619b37a181cabe43fb03984143b9d63dcf477b3',1,'macro.hpp']]],
+  ['musclinterpolation_14',['musclInterpolation',['../inter_scheme_8hpp.html#aa8233de7c0da5dc2b8fdecf632f50508',1,'interScheme.hpp']]]
 ];

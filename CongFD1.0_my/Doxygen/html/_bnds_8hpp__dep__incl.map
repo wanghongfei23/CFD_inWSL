@@ -1,20 +1,20 @@
 <map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/include/Bnds.hpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/include/Bnds.hpp">
-<area shape="rect" id="Node000001" title="定义边界条件管理类" alt="" coords="435,5,681,80"/>
-<area shape="rect" id="Node000002" href="$initializer_8hpp.html" title="定义初始化器类，用于初始化网格、方程和边界条件" alt="" coords="275,251,521,325"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="461,91,443,109,425,129,411,159,403,190,398,251,393,249,397,189,406,157,421,127,439,105,464,87"/>
-<area shape="rect" id="Node000007" href="$sp__distributor_8hpp.html" title="定义空间分布器类，用于分发空间离散任务" alt="" coords="435,128,681,203"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="559,94,560,129,555,126,557,98"/>
-<area shape="rect" id="Node000009" href="$bnds_8cpp.html" title="边界条件管理类的实现文件" alt="" coords="705,128,952,203"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="654,84,748,127,743,128,655,90"/>
-<area shape="rect" id="Node000003" href="$block_solver_8hpp.html" title=" " alt="" coords="140,373,386,448"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="348,334,306,375,302,371,343,338"/>
-<area shape="rect" id="Node000006" href="$initializer_8cpp.html" title="初始化器类的实现文件" alt="" coords="411,373,657,448"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="451,333,495,373,490,373,450,339"/>
-<area shape="rect" id="Node000004" href="$block_solver_8cpp.html" title="BlockSolver类的实现文件" alt="" coords="5,496,252,571"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="213,457,171,498,168,493,208,460"/>
-<area shape="rect" id="Node000005" href="$zone_main_8cpp.html" title="主程序入口文件，用于配置和运行CFD求解器" alt="" coords="276,496,522,571"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="317,456,361,496,355,495,315,461"/>
-<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="499,211,448,252,445,248,495,214"/>
-<area shape="rect" id="Node000008" href="$sp__distributor_8cpp.html" title="空间分布器类的实现文件" alt="" coords="545,251,792,325"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="602,212,638,251,632,250,601,217"/>
+<area shape="rect" id="Node000001" title="定义边界条件管理类" alt="" coords="432,5,676,80"/>
+<area shape="rect" id="Node000002" href="$initializer_8hpp.html" title="定义初始化器类，用于初始化网格、方程和边界条件" alt="" coords="272,251,516,325"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="457,91,439,109,422,129,407,159,399,190,394,251,389,249,394,189,402,157,417,127,435,105,461,87"/>
+<area shape="rect" id="Node000007" href="$sp__distributor_8hpp.html" title="定义空间分布器类，用于分发空间离散任务" alt="" coords="432,128,676,203"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="555,93,557,129,552,126,553,98"/>
+<area shape="rect" id="Node000009" href="$bnds_8cpp.html" title="边界条件管理类的实现文件" alt="" coords="700,128,944,203"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="650,84,743,127,738,128,650,90"/>
+<area shape="rect" id="Node000003" href="$block_solver_8hpp.html" title=" " alt="" coords="139,373,383,448"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="344,334,303,375,300,371,340,338"/>
+<area shape="rect" id="Node000006" href="$initializer_8cpp.html" title="初始化器类的实现文件" alt="" coords="407,373,651,448"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="447,333,491,373,485,373,446,339"/>
+<area shape="rect" id="Node000004" href="$block_solver_8cpp.html" title="BlockSolver类的实现文件" alt="" coords="5,496,250,571"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="211,457,170,498,166,493,207,460"/>
+<area shape="rect" id="Node000005" href="$zone_main_8cpp.html" title="主程序入口文件，用于配置和运行CFD求解器" alt="" coords="273,496,518,571"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="314,456,357,496,352,495,312,461"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="496,211,444,252,441,248,491,214"/>
+<area shape="rect" id="Node000008" href="$sp__distributor_8cpp.html" title="空间分布器类的实现文件" alt="" coords="540,251,784,325"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="598,212,632,251,627,250,597,217"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/src/bnds.cpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/src/bnds.cpp">
-<area shape="rect" id="Node000001" title="边界条件管理类的实现文件" alt="" coords="379,5,626,80"/>
+<area shape="rect" id="Node000001" title="边界条件管理类的实现文件" alt="" coords="380,5,625,80"/>
 <area shape="rect" id="Node000002" href="$_bnds_8hpp.html" title="定义边界条件管理类" alt="" coords="464,128,541,155"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="504,78,505,113,500,111,501,83"/>
 <area shape="rect" id="Node000003" href="$info_8hpp.html" title="定义求解器相关信息的类" alt="" coords="398,277,466,304"/>

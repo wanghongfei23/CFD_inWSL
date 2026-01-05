@@ -1,7 +1,7 @@
 <map id="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/include/blockSolver.hpp" name="//wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/include/blockSolver.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="140,5,386,80"/>
-<area shape="rect" id="Node000002" href="$block_solver_8cpp.html" title="BlockSolver类的实现文件" alt="" coords="5,128,252,203"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,89,171,130,168,125,208,92"/>
-<area shape="rect" id="Node000003" href="$zone_main_8cpp.html" title="主程序入口文件，用于配置和运行CFD求解器" alt="" coords="276,128,522,203"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="317,88,361,128,355,127,315,93"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="139,5,383,80"/>
+<area shape="rect" id="Node000002" href="$block_solver_8cpp.html" title="BlockSolver类的实现文件" alt="" coords="5,128,250,203"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,89,170,130,166,125,207,92"/>
+<area shape="rect" id="Node000003" href="$zone_main_8cpp.html" title="主程序入口文件，用于配置和运行CFD求解器" alt="" coords="273,128,518,203"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="314,88,357,128,352,127,312,93"/>
 </map>

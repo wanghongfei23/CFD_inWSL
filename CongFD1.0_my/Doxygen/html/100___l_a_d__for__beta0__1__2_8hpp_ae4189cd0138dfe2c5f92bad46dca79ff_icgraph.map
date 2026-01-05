@@ -1,0 +1,12 @@
+<map id="check_and_warn_nan" name="check_and_warn_nan">
+<area shape="rect" id="Node000001" title=" " alt="" coords="497,31,645,57"/>
+<area shape="rect" id="Node000002" href="$100___l_a_d__for__beta0__1__2_8hpp.html#afd157ab5b462964ca6f253814c4ccb73" title=" " alt="" coords="323,5,449,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="480,32,450,30,450,25,485,32"/>
+<area shape="rect" id="Node000005" href="$100___l_a_d__for__beta0__1__2_8hpp.html#af883eac994f33bd8d1b95ad80bdf27b8" title=" " alt="" coords="324,56,449,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="485,56,449,63,449,58,479,56"/>
+<area shape="rect" id="Node000003" href="$inter_scheme_8hpp.html#a4c676b43cdb04b9d8fd412047eacc588" title=" " alt="" coords="197,31,275,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,31,276,40,275,35,305,32"/>
+<area shape="rect" id="Node000004" href="$class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,31,149,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="179,44,149,47,149,41,184,44"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="306,56,275,53,276,48,311,56"/>
+</map>

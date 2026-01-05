@@ -3573,16 +3573,17 @@ constexpr real temp_015(std::array<real, 5> q) {
       1.0 / 1.0 * pow(1.0 * q[2] - 2.0 * q[3] + 1.0 * q[4], 2) +
           1.0 / 4.0 * pow(3.0 * q[2] - 4.0 * q[3] + 1.0 * q[4], 2)};
 
-  global_beta_0 = beta[0];
-  global_beta_1 = beta[1];
-  global_beta_2 = beta[2];
+// 不用时候要关闭，会炸内存
+  // global_beta_0 = beta[0];
+  // global_beta_1 = beta[1];
+  // global_beta_2 = beta[2];
+  // global_write_y1y2();
+  // global_write_theta();
 
-  global_write_y1y2();
-  global_write_theta();
 
   // int minBeta=(beta[0]>beta[1])? ((beta[2]>beta[1])? 1:
   // 2):((beta[2]>beta[0])? 0 : 2);
-  unsigned short minBeta =
+  unsigned short minBeta = 
       std::min_element(beta.begin(), beta.end()) - beta.begin();
   //CT adapt begin
   // real xi = 1e-3;

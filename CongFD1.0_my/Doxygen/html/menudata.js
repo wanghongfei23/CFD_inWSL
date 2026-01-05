@@ -138,6 +138,7 @@ var menudata={children:[
 {text:"f",url:"globals_vars.html#index_f"},
 {text:"g",url:"globals_vars.html#index_g"},
 {text:"i",url:"globals_vars.html#index_i"},
+{text:"m",url:"globals_vars.html#index_m"},
 {text:"p",url:"globals_vars.html#index_p"},
 {text:"t",url:"globals_vars.html#index_t"}]},
 {text:"类型定义",url:"globals_type.html"},

@@ -23,5 +23,7 @@ var searchData=
   ['getvarnamelistprim_20',['getVarNameListPrim',['../class_info.html#ae33f06b39c43b0b638c42726167f67a0',1,'Info']]],
   ['getvarnamelistrhs_21',['getVarNameListRhs',['../class_info.html#a6e64d300782d61d1cb2b3739b6ab8cd9',1,'Info']]],
   ['getvertexcoor_22',['getVertexCoor',['../class_block.html#ab0ce0fd0e8a9c4073c326e514e03e252',1,'Block']]],
-  ['gkx_23',['gkx',['../_accuracy_test_8cpp.html#a09658b07218fdb123135467122823cc9',1,'AccuracyTest.cpp']]]
+  ['gkx_23',['gkx',['../_accuracy_test_8cpp.html#a09658b07218fdb123135467122823cc9',1,'AccuracyTest.cpp']]],
+  ['global_5fwrite_5ftheta_24',['global_write_theta',['../100___l_a_d__for__beta0__1__2_8hpp.html#afd157ab5b462964ca6f253814c4ccb73',1,'100_LAD_for_beta0_1_2.hpp']]],
+  ['global_5fwrite_5fy1y2_25',['global_write_y1y2',['../100___l_a_d__for__beta0__1__2_8hpp.html#af883eac994f33bd8d1b95ad80bdf27b8',1,'100_LAD_for_beta0_1_2.hpp']]]
 ];

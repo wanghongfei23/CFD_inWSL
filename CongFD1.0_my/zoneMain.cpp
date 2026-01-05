@@ -324,8 +324,8 @@ int main()
     // --------------------------- 算例选项 --------------------------- 
     const int presetCase = 
         // 0;  // Sod
-        // 1;  // ShuOsher
-        2;  // Lax
+        1;  // ShuOsher
+        // 2;  // Lax
         // 3;  // Sedov
         // 4;  // Woodward_Colella
         // 5;  // Double_sparse_wave

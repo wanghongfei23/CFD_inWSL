@@ -2,7 +2,7 @@ var indexSectionsWithContent =
 {
   0: "012_abcdefghilmnoprstuvwxyz~一二参批插算脚配重",
   1: "bcdefiors",
-  2: "0abcdefhilmorswz",
+  2: "01abcdefhilmorswz",
   3: "abcdefghilmnoprstuw~",
   4: "bcdefghilmnoprstuvx",
   5: "a",

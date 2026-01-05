@@ -1,0 +1,628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>congFDmy1.0: //wsl.localhost/archlinux/home/archwanghongfei/Documents/GitHubWSL/CFD_inWSL/CongFD1.0_my/src/include/100_LAD_for_beta0_1_2.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">congFDmy1.0<span id="projectnumber">&#160;v2.3.2</span>
+   </div>
+   <div id="projectbrief">test</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">100_LAD_for_beta0_1_2.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &quot;<a class="el" href="macro_8hpp_source.html">macro.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+100_LAD_for_beta0_1_2.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="100___l_a_d__for__beta0__1__2_8hpp__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_w_s_l_2_c_f_d__in_w_s_l_2_cong_f_d1_80__my_2src_2include_2100___l_a_d__for__beta0__1__2_8hpp" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_w_s_l_2_c_f_d__in_w_s_l_2_cong_f_d1_80__my_2src_2include_2100___l_a_d__for__beta0__1__2_8hpp" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_w_s_l_2_c_f_d__in_w_s_l_2_cong_f_d1_80__my_2src_2include_2100___l_a_d__for__beta0__1__2_8hpp">
+<area shape="rect" title=" " alt="" coords="207,5,493,80"/>
+<area shape="rect" title=" " alt="" coords="5,203,63,229"/>
+<area shape="poly" title=" " alt="" coords="276,82,190,130,70,197,68,192,187,126,281,79"/>
+<area shape="rect" title=" " alt="" coords="87,203,133,229"/>
+<area shape="poly" title=" " alt="" coords="301,82,141,196,138,191,296,79"/>
+<area shape="rect" title=" " alt="" coords="157,203,210,229"/>
+<area shape="poly" title=" " alt="" coords="317,80,208,194,204,189,312,81"/>
+<area shape="rect" title=" " alt="" coords="519,128,584,155"/>
+<area shape="poly" title=" " alt="" coords="427,78,514,121,509,121,426,83"/>
+<area shape="rect" title=" " alt="" coords="234,203,306,229"/>
+<area shape="poly" title=" " alt="" coords="335,80,284,190,280,187,330,82"/>
+<area shape="rect" title=" " alt="" coords="608,128,689,155"/>
+<area shape="poly" title=" " alt="" coords="464,78,598,123,593,123,463,83"/>
+<area shape="rect" title=" " alt="" coords="713,128,766,155"/>
+<area shape="poly" title=" " alt="" coords="493,73,701,127,696,128,493,78"/>
+<area shape="rect" title=" " alt="" coords="330,203,404,229"/>
+<area shape="poly" title=" " alt="" coords="353,79,359,154,364,189,360,186,354,155,349,82"/>
+<area shape="rect" title=" " alt="" coords="428,203,485,229"/>
+<area shape="poly" title=" " alt="" coords="364,78,382,116,403,153,435,193,430,191,398,156,377,118,362,83"/>
+<area shape="rect" href="macro_8hpp.html" title="定义项目中使用的宏、枚举类型和通用函数" alt="" coords="413,128,495,155"/>
+<area shape="poly" title=" " alt="" coords="390,78,432,118,427,117,389,83"/>
+<area shape="poly" title=" " alt="" coords="410,148,269,170,79,205,78,200,268,165,415,147"/>
+<area shape="poly" title=" " alt="" coords="410,149,297,171,149,205,147,200,296,166,415,148"/>
+<area shape="poly" title=" " alt="" coords="415,153,226,205,224,199,410,152"/>
+<area shape="poly" title=" " alt="" coords="425,155,317,199,315,194,419,156"/>
+<area shape="poly" title=" " alt="" coords="441,154,395,195,393,190,436,156"/>
+<area shape="poly" title=" " alt="" coords="456,153,458,189,454,185,453,157"/>
+<area shape="rect" title=" " alt="" coords="509,203,559,229"/>
+<area shape="poly" title=" " alt="" coords="469,153,512,193,507,192,467,158"/>
+<area shape="rect" title=" " alt="" coords="584,203,644,229"/>
+<area shape="poly" title=" " alt="" coords="482,153,575,196,570,196,481,158"/>
+<area shape="rect" title=" " alt="" coords="668,203,736,229"/>
+<area shape="poly" title=" " alt="" coords="496,152,655,200,650,200,495,157"/>
+<area shape="rect" title=" " alt="" coords="760,203,825,229"/>
+<area shape="poly" title=" " alt="" coords="495,149,508,152,626,175,748,202,743,202,625,180,507,157,495,155"/>
+<area shape="rect" title=" " alt="" coords="849,203,907,229"/>
+<area shape="poly" title=" " alt="" coords="495,150,508,152,598,166,670,174,742,183,836,202,831,202,741,188,669,180,597,171,507,157,495,155"/>
+<area shape="rect" title=" " alt="" coords="932,203,992,229"/>
+<area shape="poly" title=" " alt="" coords="495,150,508,152,621,167,711,174,801,182,919,203,914,202,801,187,710,180,620,173,507,157,495,155"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="100___l_a_d__for__beta0__1__2_8hpp__dep__incl.png" border="0" usemap="#a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_w_s_l_2_c_f_d__in_w_s_l_2_cong_f_d1_80__my_2src_2include_2100___l_a_d__for__beta0__1__2_8hppdep" loading="lazy" alt=""/></div>
+<map name="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_w_s_l_2_c_f_d__in_w_s_l_2_cong_f_d1_80__my_2src_2include_2100___l_a_d__for__beta0__1__2_8hppdep" id="a_2_2wsl_8localhost_2archlinux_2home_2archwanghongfei_2_documents_2_git_hub_w_s_l_2_c_f_d__in_w_s_l_2_cong_f_d1_80__my_2src_2include_2100___l_a_d__for__beta0__1__2_8hppdep">
+<area shape="rect" title=" " alt="" coords="521,5,806,80"/>
+<area shape="rect" href="inter_scheme_8hpp.html" title=" " alt="" coords="541,128,786,203"/>
+<area shape="poly" title=" " alt="" coords="665,94,666,129,661,126,662,98"/>
+<area shape="rect" href="_space_dis_8cpp.html" title="空间离散类的实现文件" alt="" coords="5,251,250,325"/>
+<area shape="poly" title=" " alt="" coords="525,196,261,253,251,256,250,251,260,248,527,191"/>
+<area shape="rect" href="inter_scheme_8cpp.html" title=" " alt="" coords="273,251,518,325"/>
+<area shape="poly" title=" " alt="" coords="570,209,478,253,476,248,565,210"/>
+<area shape="rect" href="reconstructor_8cpp.html" title="重构器类的实现文件" alt="" coords="541,251,786,325"/>
+<area shape="poly" title=" " alt="" coords="665,217,666,252,661,249,662,220"/>
+<area shape="rect" href="sp__flux_8cpp.html" title="空间离散通量计算实现文件" alt="" coords="809,251,1054,325"/>
+<area shape="poly" title=" " alt="" coords="760,207,852,250,847,250,759,212"/>
+<area shape="rect" href="sp__recon_8cpp.html" title="空间离散重构计算实现文件" alt="" coords="1077,251,1322,325"/>
+<area shape="poly" title=" " alt="" coords="801,191,1067,248,1079,253,1074,253,1066,253,800,196"/>
+</map>
+</div>
+</div>
+<p><a href="100___l_a_d__for__beta0__1__2_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ae4189cd0138dfe2c5f92bad46dca79ff" id="r_ae4189cd0138dfe2c5f92bad46dca79ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4189cd0138dfe2c5f92bad46dca79ff">check_and_warn_nan</a> (<a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> value, const std::string &amp;name)</td></tr>
+<tr class="memitem:af883eac994f33bd8d1b95ad80bdf27b8" id="r_af883eac994f33bd8d1b95ad80bdf27b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af883eac994f33bd8d1b95ad80bdf27b8">global_write_y1y2</a> ()</td></tr>
+<tr class="memitem:afd157ab5b462964ca6f253814c4ccb73" id="r_afd157ab5b462964ca6f253814c4ccb73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd157ab5b462964ca6f253814c4ccb73">global_write_theta</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a382b254fc96e91f1c39c680b91e56ad4" id="r_a382b254fc96e91f1c39c680b91e56ad4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a382b254fc96e91f1c39c680b91e56ad4">global_beta_0</a> = 0.0</td></tr>
+<tr class="memitem:a96c03d8e8a03975d07d33aab86139109" id="r_a96c03d8e8a03975d07d33aab86139109"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96c03d8e8a03975d07d33aab86139109">global_beta_1</a> = 0.0</td></tr>
+<tr class="memitem:a2788f27b7dd66c753537a0c7d7fcbbf1" id="r_a2788f27b7dd66c753537a0c7d7fcbbf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2788f27b7dd66c753537a0c7d7fcbbf1">global_beta_2</a> = 0.0</td></tr>
+<tr class="memitem:a78d8bd319470905be019031ea2ca7621" id="r_a78d8bd319470905be019031ea2ca7621"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78d8bd319470905be019031ea2ca7621">chi_0</a> = 0.0</td></tr>
+<tr class="memitem:a022e679028abb8b06a0b1b57fa2bdc7a" id="r_a022e679028abb8b06a0b1b57fa2bdc7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a022e679028abb8b06a0b1b57fa2bdc7a">chi_1</a> = 0.0</td></tr>
+<tr class="memitem:acbc1d7fb7ef8e6d145adcf6fe7d5e964" id="r_acbc1d7fb7ef8e6d145adcf6fe7d5e964"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbc1d7fb7ef8e6d145adcf6fe7d5e964">chi_2</a> = 0.0</td></tr>
+<tr class="memitem:ad5b4fc061f75ff92f0542b85f0684d9e" id="r_ad5b4fc061f75ff92f0542b85f0684d9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5b4fc061f75ff92f0542b85f0684d9e">max_chi</a> = 0.0</td></tr>
+<tr class="memitem:ab701980278a7b432e7acaa81b1cd29b7" id="r_ab701980278a7b432e7acaa81b1cd29b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab701980278a7b432e7acaa81b1cd29b7">global_y1</a> = 0.0</td></tr>
+<tr class="memitem:ac3871ea7539287cd376c26c5bf80b78b" id="r_ac3871ea7539287cd376c26c5bf80b78b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3871ea7539287cd376c26c5bf80b78b">global_y2</a> = 0.0</td></tr>
+<tr class="memitem:a7072d43a6cbeb5006780cbef30e3e361" id="r_a7072d43a6cbeb5006780cbef30e3e361"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7072d43a6cbeb5006780cbef30e3e361">global_theta</a> = 0.0</td></tr>
+<tr class="memitem:aa9dc8603e813078d876ecb73058fadf9" id="r_aa9dc8603e813078d876ecb73058fadf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9dc8603e813078d876ecb73058fadf9">tau</a> = 0.0</td></tr>
+<tr class="memitem:a3ec4d4518a7b5cb7cba8a12cf4dff084" id="r_a3ec4d4518a7b5cb7cba8a12cf4dff084"><td class="memItemLeft" align="right" valign="top"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ec4d4518a7b5cb7cba8a12cf4dff084">epsilon</a> = 1e-40</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="ae4189cd0138dfe2c5f92bad46dca79ff" name="ae4189cd0138dfe2c5f92bad46dca79ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4189cd0138dfe2c5f92bad46dca79ff">&#9670;&#160;</a></span>check_and_warn_nan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void check_and_warn_nan </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00036">36</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="100___l_a_d__for__beta0__1__2_8hpp_ae4189cd0138dfe2c5f92bad46dca79ff_icgraph.png" border="0" usemap="#a100___l_a_d__for__beta0__1__2_8hpp_ae4189cd0138dfe2c5f92bad46dca79ff_icgraph" loading="lazy" alt=""/></div>
+<map name="a100___l_a_d__for__beta0__1__2_8hpp_ae4189cd0138dfe2c5f92bad46dca79ff_icgraph" id="a100___l_a_d__for__beta0__1__2_8hpp_ae4189cd0138dfe2c5f92bad46dca79ff_icgraph">
+<area shape="rect" title=" " alt="" coords="497,31,645,57"/>
+<area shape="rect" href="100___l_a_d__for__beta0__1__2_8hpp.html#afd157ab5b462964ca6f253814c4ccb73" title=" " alt="" coords="323,5,449,32"/>
+<area shape="poly" title=" " alt="" coords="480,32,450,30,450,25,485,32"/>
+<area shape="rect" href="100___l_a_d__for__beta0__1__2_8hpp.html#af883eac994f33bd8d1b95ad80bdf27b8" title=" " alt="" coords="324,56,449,83"/>
+<area shape="poly" title=" " alt="" coords="485,56,449,63,449,58,479,56"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a4c676b43cdb04b9d8fd412047eacc588" title=" " alt="" coords="197,31,275,57"/>
+<area shape="poly" title=" " alt="" coords="310,31,276,40,275,35,305,32"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,31,149,57"/>
+<area shape="poly" title=" " alt="" coords="179,44,149,47,149,41,184,44"/>
+<area shape="poly" title=" " alt="" coords="306,56,275,53,276,48,311,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afd157ab5b462964ca6f253814c4ccb73" name="afd157ab5b462964ca6f253814c4ccb73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd157ab5b462964ca6f253814c4ccb73">&#9670;&#160;</a></span>global_write_theta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void global_write_theta </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00066">66</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="100___l_a_d__for__beta0__1__2_8hpp_afd157ab5b462964ca6f253814c4ccb73_cgraph.png" border="0" usemap="#a100___l_a_d__for__beta0__1__2_8hpp_afd157ab5b462964ca6f253814c4ccb73_cgraph" loading="lazy" alt=""/></div>
+<map name="a100___l_a_d__for__beta0__1__2_8hpp_afd157ab5b462964ca6f253814c4ccb73_cgraph" id="a100___l_a_d__for__beta0__1__2_8hpp_afd157ab5b462964ca6f253814c4ccb73_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,132,32"/>
+<area shape="rect" href="100___l_a_d__for__beta0__1__2_8hpp.html#ae4189cd0138dfe2c5f92bad46dca79ff" title=" " alt="" coords="180,5,327,32"/>
+<area shape="poly" title=" " alt="" coords="132,16,167,18,162,19,132,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="100___l_a_d__for__beta0__1__2_8hpp_afd157ab5b462964ca6f253814c4ccb73_icgraph.png" border="0" usemap="#a100___l_a_d__for__beta0__1__2_8hpp_afd157ab5b462964ca6f253814c4ccb73_icgraph" loading="lazy" alt=""/></div>
+<map name="a100___l_a_d__for__beta0__1__2_8hpp_afd157ab5b462964ca6f253814c4ccb73_icgraph" id="a100___l_a_d__for__beta0__1__2_8hpp_afd157ab5b462964ca6f253814c4ccb73_icgraph">
+<area shape="rect" title=" " alt="" coords="323,5,449,32"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a4c676b43cdb04b9d8fd412047eacc588" title=" " alt="" coords="197,5,275,32"/>
+<area shape="poly" title=" " alt="" coords="305,19,275,21,275,16,310,19"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af883eac994f33bd8d1b95ad80bdf27b8" name="af883eac994f33bd8d1b95ad80bdf27b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af883eac994f33bd8d1b95ad80bdf27b8">&#9670;&#160;</a></span>global_write_y1y2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void global_write_y1y2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00042">42</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="100___l_a_d__for__beta0__1__2_8hpp_af883eac994f33bd8d1b95ad80bdf27b8_cgraph.png" border="0" usemap="#a100___l_a_d__for__beta0__1__2_8hpp_af883eac994f33bd8d1b95ad80bdf27b8_cgraph" loading="lazy" alt=""/></div>
+<map name="a100___l_a_d__for__beta0__1__2_8hpp_af883eac994f33bd8d1b95ad80bdf27b8_cgraph" id="a100___l_a_d__for__beta0__1__2_8hpp_af883eac994f33bd8d1b95ad80bdf27b8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,131,32"/>
+<area shape="rect" href="100___l_a_d__for__beta0__1__2_8hpp.html#ae4189cd0138dfe2c5f92bad46dca79ff" title=" " alt="" coords="179,5,326,32"/>
+<area shape="poly" title=" " alt="" coords="131,16,166,18,160,19,131,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="100___l_a_d__for__beta0__1__2_8hpp_af883eac994f33bd8d1b95ad80bdf27b8_icgraph.png" border="0" usemap="#a100___l_a_d__for__beta0__1__2_8hpp_af883eac994f33bd8d1b95ad80bdf27b8_icgraph" loading="lazy" alt=""/></div>
+<map name="a100___l_a_d__for__beta0__1__2_8hpp_af883eac994f33bd8d1b95ad80bdf27b8_icgraph" id="a100___l_a_d__for__beta0__1__2_8hpp_af883eac994f33bd8d1b95ad80bdf27b8_icgraph">
+<area shape="rect" title=" " alt="" coords="323,5,448,32"/>
+<area shape="rect" href="inter_scheme_8hpp.html#a4c676b43cdb04b9d8fd412047eacc588" title=" " alt="" coords="197,5,275,32"/>
+<area shape="poly" title=" " alt="" coords="305,19,276,21,276,16,310,19"/>
+<area shape="rect" href="class_space_dis.html#a029a40d99047525707051bba57280a8c" title="构造函数，初始化空间离散对象" alt="" coords="5,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="179,19,149,21,149,16,184,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">变量说明</h2>
+<a id="a78d8bd319470905be019031ea2ca7621" name="a78d8bd319470905be019031ea2ca7621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78d8bd319470905be019031ea2ca7621">&#9670;&#160;</a></span>chi_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> chi_0 = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a022e679028abb8b06a0b1b57fa2bdc7a" name="a022e679028abb8b06a0b1b57fa2bdc7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a022e679028abb8b06a0b1b57fa2bdc7a">&#9670;&#160;</a></span>chi_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> chi_1 = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a id="acbc1d7fb7ef8e6d145adcf6fe7d5e964" name="acbc1d7fb7ef8e6d145adcf6fe7d5e964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbc1d7fb7ef8e6d145adcf6fe7d5e964">&#9670;&#160;</a></span>chi_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> chi_2 = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a3ec4d4518a7b5cb7cba8a12cf4dff084" name="a3ec4d4518a7b5cb7cba8a12cf4dff084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ec4d4518a7b5cb7cba8a12cf4dff084">&#9670;&#160;</a></span>epsilon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> epsilon = 1e-40</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a382b254fc96e91f1c39c680b91e56ad4" name="a382b254fc96e91f1c39c680b91e56ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a382b254fc96e91f1c39c680b91e56ad4">&#9670;&#160;</a></span>global_beta_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> global_beta_0 = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a96c03d8e8a03975d07d33aab86139109" name="a96c03d8e8a03975d07d33aab86139109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c03d8e8a03975d07d33aab86139109">&#9670;&#160;</a></span>global_beta_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> global_beta_1 = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a2788f27b7dd66c753537a0c7d7fcbbf1" name="a2788f27b7dd66c753537a0c7d7fcbbf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2788f27b7dd66c753537a0c7d7fcbbf1">&#9670;&#160;</a></span>global_beta_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> global_beta_2 = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7072d43a6cbeb5006780cbef30e3e361" name="a7072d43a6cbeb5006780cbef30e3e361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7072d43a6cbeb5006780cbef30e3e361">&#9670;&#160;</a></span>global_theta</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> global_theta = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00026">26</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab701980278a7b432e7acaa81b1cd29b7" name="ab701980278a7b432e7acaa81b1cd29b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab701980278a7b432e7acaa81b1cd29b7">&#9670;&#160;</a></span>global_y1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> global_y1 = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac3871ea7539287cd376c26c5bf80b78b" name="ac3871ea7539287cd376c26c5bf80b78b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3871ea7539287cd376c26c5bf80b78b">&#9670;&#160;</a></span>global_y2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> global_y2 = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad5b4fc061f75ff92f0542b85f0684d9e" name="ad5b4fc061f75ff92f0542b85f0684d9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5b4fc061f75ff92f0542b85f0684d9e">&#9670;&#160;</a></span>max_chi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> max_chi = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa9dc8603e813078d876ecb73058fadf9" name="aa9dc8603e813078d876ecb73058fadf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9dc8603e813078d876ecb73058fadf9">&#9670;&#160;</a></span>tau</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> tau = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html">100_LAD_for_beta0_1_2.hpp</a> 第 <a class="el" href="100___l_a_d__for__beta0__1__2_8hpp_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -12,8 +12,9 @@ var searchData=
   ['caloffsetinverse_9',['calOffsetInverse',['../macro_8hpp.html#a56cabadb0a857e1da7befbabea638357',1,'macro.hpp']]],
   ['calsource_10',['calSource',['../class_source_term.html#a4a03b4077b3d95ee275dcc381b35d958',1,'SourceTerm']]],
   ['chartoprim_11',['charToPrim',['../classeigensystem_euler2_d.html#a1fd30896a9fce8178242de2cb1d1ec53',1,'eigensystemEuler2D::charToPrim()'],['../classeigensystem_euler1_d.html#abb845806e1b40826070c360c68c06cf9',1,'eigensystemEuler1D::charToPrim()']]],
-  ['configurecase_12',['configureCase',['../zone_main_8cpp.html#a78344a6de16b442adf802990b2f7a62f',1,'zoneMain.cpp']]],
-  ['constoprim_13',['consToPrim',['../class_equation.html#aaa33ed39d27eddf58fa0026e790f638b',1,'Equation']]],
-  ['constoprimeuler1d_14',['consToPrimEuler1D',['../class_equation.html#ae22b2778464abbf88007d42762cfdd6c',1,'Equation']]],
-  ['constoprimeuler2d_15',['consToPrimEuler2D',['../class_equation.html#a6724298495842e0839d9a2576d1ef3c6',1,'Equation']]]
+  ['check_5fand_5fwarn_5fnan_12',['check_and_warn_nan',['../100___l_a_d__for__beta0__1__2_8hpp.html#ae4189cd0138dfe2c5f92bad46dca79ff',1,'100_LAD_for_beta0_1_2.hpp']]],
+  ['configurecase_13',['configureCase',['../zone_main_8cpp.html#a78344a6de16b442adf802990b2f7a62f',1,'zoneMain.cpp']]],
+  ['constoprim_14',['consToPrim',['../class_equation.html#aaa33ed39d27eddf58fa0026e790f638b',1,'Equation']]],
+  ['constoprimeuler1d_15',['consToPrimEuler1D',['../class_equation.html#ae22b2778464abbf88007d42762cfdd6c',1,'Equation']]],
+  ['constoprimeuler2d_16',['consToPrimEuler2D',['../class_equation.html#a6724298495842e0839d9a2576d1ef3c6',1,'Equation']]]
 ];

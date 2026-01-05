@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['accuracytest_2ecpp_0',['AccuracyTest.cpp',['../_accuracy_test_8cpp.html',1,'']]],
-  ['accuracytest_2ecpp_2eo_2ed_1',['accuracyTest.cpp.o.d',['../accuracy_test_8cpp_8o_8d.html',1,'']]]
+  ['100_5flad_5ffor_5fbeta0_5f1_5f2_2ehpp_0',['100_LAD_for_beta0_1_2.hpp',['../100___l_a_d__for__beta0__1__2_8hpp.html',1,'']]]
 ];

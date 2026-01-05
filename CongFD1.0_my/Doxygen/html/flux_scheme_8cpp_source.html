@@ -87,8 +87,8 @@ $(function() {
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">enum</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714aef31cc6fe9479955961311ee18ac205f">   12</a></span>    <a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714aef31cc6fe9479955961311ee18ac205f">L</a>,</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae">   13</a></span>    <a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae">R</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfaef31cc6fe9479955961311ee18ac205f">   12</a></span>    <a class="code hl_enumvalue" href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfaef31cc6fe9479955961311ee18ac205f">L</a>,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfa1784b1a3d7cbd43c45ff82c72d05e4ae">   13</a></span>    <a class="code hl_enumvalue" href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfa1784b1a3d7cbd43c45ff82c72d05e4ae">R</a></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>};</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
 <div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
@@ -103,7 +103,7 @@ $(function() {
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rBar=std::sqrt(rl*rr);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> uBar=(ul*std::sqrt(rl)+ur*std::sqrt(rr))/(std::sqrt(rl)+std::sqrt(rr));</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> HBar=(H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714aef31cc6fe9479955961311ee18ac205f">L</a>]*std::sqrt(rl)+H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae">R</a>]*std::sqrt(rr))/(std::sqrt(rl)+std::sqrt(rr));</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> HBar=(H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfaef31cc6fe9479955961311ee18ac205f">L</a>]*std::sqrt(rl)+H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfa1784b1a3d7cbd43c45ff82c72d05e4ae">R</a>]*std::sqrt(rr))/(std::sqrt(rl)+std::sqrt(rr));</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> cBar=std::sqrt((gamma-1)*(HBar-uBar*uBar/2));</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> cBar2=(gamma-1)*(HBar-uBar*uBar/2);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
@@ -136,12 +136,12 @@ $(function() {
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> FL[3]={</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        rl*ul,</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        rl*ul*ul+pl,</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        rl*H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714aef31cc6fe9479955961311ee18ac205f">L</a>]*ul</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        rl*H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfaef31cc6fe9479955961311ee18ac205f">L</a>]*ul</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    };</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> FR[3]={</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        rr*ur,</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        rr*ur*ur+pr,</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        rr*H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae">R</a>]*ur</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        rr*H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfa1784b1a3d7cbd43c45ff82c72d05e4ae">R</a>]*ur</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    };</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)</div>
@@ -172,7 +172,7 @@ $(function() {
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> rBar=std::sqrt(rl*rr);</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> uBar=(ul*std::sqrt(rl)+ur*std::sqrt(rr))/(std::sqrt(rl)+std::sqrt(rr));</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> HBar=(H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714aef31cc6fe9479955961311ee18ac205f">L</a>]*std::sqrt(rl)+H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae">R</a>]*std::sqrt(rr))/(std::sqrt(rl)+std::sqrt(rr));</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> HBar=(H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfaef31cc6fe9479955961311ee18ac205f">L</a>]*std::sqrt(rl)+H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfa1784b1a3d7cbd43c45ff82c72d05e4ae">R</a>]*std::sqrt(rr))/(std::sqrt(rl)+std::sqrt(rr));</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> cBar=std::sqrt((gamma-1)*(HBar-uBar*uBar/2));</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> cBar2=(gamma-1)*(HBar-uBar*uBar/2);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
@@ -209,12 +209,12 @@ $(function() {
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> FL[3]={</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        rl*ul,</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        rl*ul*ul+pl,</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        rl*H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714aef31cc6fe9479955961311ee18ac205f">L</a>]*ul</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        rl*H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfaef31cc6fe9479955961311ee18ac205f">L</a>]*ul</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    };</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_define" href="macro_8hpp.html#a5f5a64ef503db0fc824df8320929b126">real</a> FR[3]={</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        rr*ur,</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        rr*ur*ur+pr,</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        rr*H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae">R</a>]*ur</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        rr*H[<a class="code hl_enumvalue" href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfa1784b1a3d7cbd43c45ff82c72d05e4ae">R</a>]*ur</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    };</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)</div>
@@ -232,8 +232,8 @@ $(function() {
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>}</div>
 </div>
-<div class="ttc" id="aflux_scheme_8cpp_html_a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae"><div class="ttname"><a href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714a1784b1a3d7cbd43c45ff82c72d05e4ae">R</a></div><div class="ttdeci">@ R</div><div class="ttdef"><b>定义</b> <a href="#l00013">fluxScheme.cpp:13</a></div></div>
-<div class="ttc" id="aflux_scheme_8cpp_html_a406faeb7a545c1746cfc3282c01ea714aef31cc6fe9479955961311ee18ac205f"><div class="ttname"><a href="flux_scheme_8cpp.html#a406faeb7a545c1746cfc3282c01ea714aef31cc6fe9479955961311ee18ac205f">L</a></div><div class="ttdeci">@ L</div><div class="ttdef"><b>定义</b> <a href="#l00012">fluxScheme.cpp:12</a></div></div>
+<div class="ttc" id="aflux_scheme_8cpp_html_aa637595a2e8307ba0a7687971b73f3dfa1784b1a3d7cbd43c45ff82c72d05e4ae"><div class="ttname"><a href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfa1784b1a3d7cbd43c45ff82c72d05e4ae">R</a></div><div class="ttdeci">@ R</div><div class="ttdef"><b>定义</b> <a href="#l00013">fluxScheme.cpp:13</a></div></div>
+<div class="ttc" id="aflux_scheme_8cpp_html_aa637595a2e8307ba0a7687971b73f3dfaef31cc6fe9479955961311ee18ac205f"><div class="ttname"><a href="flux_scheme_8cpp.html#aa637595a2e8307ba0a7687971b73f3dfaef31cc6fe9479955961311ee18ac205f">L</a></div><div class="ttdeci">@ L</div><div class="ttdef"><b>定义</b> <a href="#l00012">fluxScheme.cpp:12</a></div></div>
 <div class="ttc" id="aflux_scheme_8cpp_html_abd346e16076a9a3a3d7a6c6a72127e68"><div class="ttname"><a href="flux_scheme_8cpp.html#abd346e16076a9a3a3d7a6c6a72127e68">roeFlux1D2</a></div><div class="ttdeci">std::vector&lt; real &gt; roeFlux1D2(real rl, real rr, real ul, real ur, real pl, real pr)</div><div class="ttdoc">计算一维Roe通量（第二种实现）</div><div class="ttdef"><b>定义</b> <a href="#l00101">fluxScheme.cpp:101</a></div></div>
 <div class="ttc" id="aflux_scheme_8cpp_html_af0fccd8af44a93f8ddab0c6808808977"><div class="ttname"><a href="flux_scheme_8cpp.html#af0fccd8af44a93f8ddab0c6808808977">roeFlux1D</a></div><div class="ttdeci">std::vector&lt; real &gt; roeFlux1D(real rl, real rr, real ul, real ur, real pl, real pr)</div><div class="ttdoc">计算一维Roe通量</div><div class="ttdef"><b>定义</b> <a href="#l00026">fluxScheme.cpp:26</a></div></div>
 <div class="ttc" id="aflux_scheme_8hpp_html"><div class="ttname"><a href="flux_scheme_8hpp.html">fluxScheme.hpp</a></div><div class="ttdoc">定义通量格式相关的函数和类</div></div>
